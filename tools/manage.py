@@ -73,6 +73,9 @@ def main(action):
  try:
   binary=build_server(ctl) if action=='build' else None
   update_server(ctl,binary)
+  if binary:
+   # Keep the verified build on subsequent Play/sync runs and in the next commit.
+   shutil.copy2(binary,ROOT/'server-bin/LAQIA_GameServer')
   if action=='play':
    import family_launcher
    family_launcher.main('local')

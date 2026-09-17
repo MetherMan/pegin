@@ -41,7 +41,7 @@ cd LAQIA-THE-LEGEND
 
 **`Build-Model.cmd`**: 블러드나이트 모델을 재생성하고 `client-overlay/`에 넣습니다. Node·NumPy·Pillow는 초기 설정에 포함됩니다. ImageGen 재생성에는 별도의 이미지 생성 도구가 필요하며, API 키는 저장소에 포함하지 않습니다.
 
-**`Build-Server.cmd`**: VM 안에서 현재 서버 수정 모듈을 빌드하고 로컬 개발 서버에 적용합니다. 빌드 결과는 `runtime/build/LAQIA_GameServer`입니다. 배포할 변경을 검증한 뒤 `server-bin/LAQIA_GameServer`로 복사하고 commit합니다. 기존 컴파일 객체를 사용하는 레거시 빌드이며, 모든 서버 원본을 처음부터 다시 빌드하는 도구는 아닙니다.
+**`Build-Server.cmd`**: VM 안에서 현재 서버 수정 모듈을 빌드하고 로컬 개발 서버에 적용합니다. 서버 시작에 성공하면 결과를 `runtime/build/LAQIA_GameServer`와 Git에서 관리하는 `server-bin/LAQIA_GameServer`에 보관하므로 다음 실행에도 유지됩니다. 변경을 검증한 뒤 소스와 실행 파일을 함께 commit합니다. 기존 컴파일 객체를 사용하는 레거시 빌드이며, 모든 서버 원본을 처음부터 다시 빌드하는 도구는 아닙니다.
 
 클라이언트 C++ 소스는 참고·수정용으로 보존했습니다. 현재 DLL 전체를 다시 빌드하려면 구형 Visual C++/DirectX 환경을 별도로 맞춰야 합니다. 이 저장소의 초기 설정은 해당 클라이언트 컴파일 환경까지 설치하지 않습니다.
 
