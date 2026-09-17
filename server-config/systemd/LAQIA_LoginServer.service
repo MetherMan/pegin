@@ -1,0 +1,19 @@
+# /etc/systemd/system/LAQIA_LoginServer.service
+[Unit]
+After=mariadb.service
+[Service]
+Type=simple
+User=laqia
+WorkingDirectory=/opt/laqia/server/LAQIA_LoginServer
+Environment=LD_LIBRARY_PATH=/opt/laqia/legacy/usr/lib
+LimitNOFILE=16384
+ExecStart=/opt/laqia/server/LAQIA_LoginServer/LAQIA_LoginServer
+StandardOutput=append:/opt/laqia/LAQIA_LoginServer.stdout.log
+StandardError=append:/opt/laqia/LAQIA_LoginServer.stderr.log
+
+# /etc/systemd/system/LAQIA_LoginServer.service.d/local.conf
+[Unit]
+Requires=mariadb.service laqia-loopback-only.service
+After=mariadb.service laqia-loopback-only.service
+[Install]
+WantedBy=multi-user.target

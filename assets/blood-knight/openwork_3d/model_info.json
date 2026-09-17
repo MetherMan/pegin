@@ -1,0 +1,317 @@
+{
+  "name": "Bloodfang Openwork Spear",
+  "triangles": 60138,
+  "mesh_objects": 76,
+  "chain_links": 30,
+  "fur_strands": 2300,
+  "source": "../sketch_concept/blood_beast_spear_openwork_v3.png",
+  "construction": "New reference-guided 3D geometry. Pierced extruded blade with thickness and bevels, raised heraldry, toroidal chain links, circular haft and dimensional tapered fur strands.",
+  "surface": "Blade uses projected concept texture; some original lighting/detail is baked into this texture. Back uses mirrored front appearance. Other components have PBR materials.",
+  "not_in_game": true,
+  "parts": [
+    {
+      "name": "01 | pierced main blade",
+      "triangles": 936
+    },
+    {
+      "name": "02 | inner silver bevel",
+      "triangles": 1140
+    },
+    {
+      "name": "03 | outer cutting edge",
+      "triangles": 1080
+    },
+    {
+      "name": "04 | round leather-wrapped haft",
+      "triangles": 128
+    },
+    {
+      "name": "05 | spiral leather binding",
+      "triangles": 11000
+    },
+    {
+      "name": "06 | bronze shaft collar",
+      "triangles": 96
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "06 | bronze shaft collar",
+      "triangles": 96
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "06 | bronze shaft collar",
+      "triangles": 96
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "06 | bronze shaft collar",
+      "triangles": 96
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "06 | bronze shaft collar",
+      "triangles": 96
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "06 | bronze shaft collar",
+      "triangles": 96
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "collar border",
+      "triangles": 384
+    },
+    {
+      "name": "07 | butt spike",
+      "triangles": 140
+    },
+    {
+      "name": "08 | raised fang crest 0",
+      "triangles": 80
+    },
+    {
+      "name": "08 | raised fang crest 1",
+      "triangles": 68
+    },
+    {
+      "name": "08 | raised fang crest 0",
+      "triangles": 80
+    },
+    {
+      "name": "08 | raised fang crest 1",
+      "triangles": 68
+    },
+    {
+      "name": "09 | crest claw slash 0",
+      "triangles": 2
+    },
+    {
+      "name": "09 | crest claw slash 1",
+      "triangles": 2
+    },
+    {
+      "name": "09 | crest claw slash 2",
+      "triangles": 2
+    },
+    {
+      "name": "10 | dark blood-drop crest core",
+      "triangles": 44
+    },
+    {
+      "name": "11 | chain link 01",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 02",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 03",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 04",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 05",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 06",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 07",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 08",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 09",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 10",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 11",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 12",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 13",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 14",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 15",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 16",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 17",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 18",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 19",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 20",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 21",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 22",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 23",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 24",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 25",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 26",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 27",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 28",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 29",
+      "triangles": 512
+    },
+    {
+      "name": "11 | chain link 30",
+      "triangles": 512
+    },
+    {
+      "name": "12 | chain anchor ring",
+      "triangles": 640
+    },
+    {
+      "name": "12 | chain anchor ring",
+      "triangles": 640
+    },
+    {
+      "name": "12 | riveted upper chain eyelet",
+      "triangles": 48
+    },
+    {
+      "name": "13 | dimensional fur strands 0",
+      "triangles": 5678
+    },
+    {
+      "name": "13 | dimensional fur strands 1",
+      "triangles": 7896
+    },
+    {
+      "name": "13 | dimensional fur strands 2",
+      "triangles": 3034
+    },
+    {
+      "name": "13 | dimensional fur strands 3",
+      "triangles": 4848
+    },
+    {
+      "name": "13 | dimensional fur strands 4",
+      "triangles": 1544
+    },
+    {
+      "name": "14 | fur leather binding",
+      "triangles": 96
+    },
+    {
+      "name": "fur binding rivet",
+      "triangles": 80
+    },
+    {
+      "name": "fur binding rivet",
+      "triangles": 80
+    },
+    {
+      "name": "fur binding rivet",
+      "triangles": 80
+    },
+    {
+      "name": "fur binding rivet",
+      "triangles": 80
+    },
+    {
+      "name": "fur binding rivet",
+      "triangles": 80
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+/**
+ * 이벤트 코드 정의 파일.
+ *
+ * Copyright (c) 2002-2003 팀메이, All rights reserved.
+ *
+ * @author	파란~*
+ * @date	$Date: 03-05-16 3:27p $
+ * @version	$Revision: 9 $
+ *
+ * <HR>
+ * $Log: /Engine/Inc/W3DEventCode.h $
+ * 
+ * 9     03-05-16 3:27p Ahastudio
+ * <HR>
+ *
+ * @file	W3DEventCode.h
+ */
+
+
+#ifndef __Wind3D_Engine_EventCode_Header__
+#define __Wind3D_Engine_EventCode_Header__
+
+
+typedef int		UIEVENT;
+
+
+const UIEVENT	EVENT_BUTTON				= 201;
+const UIEVENT	EVENT_EDITTEXTCLICK			= 202;
+const UIEVENT	EVENT_PICTUREBOXCLICK		= 203;
+const UIEVENT	EVENT_RETURNKEY				= 204;
+const UIEVENT	EVENT_TABKEY				= 205;
+const UIEVENT	EVENT_EDITTEXTNEW			= 206;		///< 에디트 박스 입력 완료
+const UIEVENT	EVENT_KEYDOWN				= 207;
+
+const UIEVENT	EVENT_ITEM_INSERTINVENTORY	= 300;
+const UIEVENT	EVENT_ITEM_HOLDING			= 301;
+const UIEVENT	EVENT_ITEM_CHANGEHAND		= 302;
+const UIEVENT	EVENT_ITEM_MOVE				= 303;
+const UIEVENT	EVENT_ITEM_DROP				= 304;
+const UIEVENT	EVENT_ITEM_INSERTEQUIP		= 305;
+const UIEVENT	EVENT_ITEM_REMOVEQUIP		= 306;
+const UIEVENT	EVENT_ITEM_TOMAP			= 307;
+const UIEVENT	EVENT_SPELL_MOVE			= 308;
+const UIEVENT	EVENT_CAST_ITEM				= 309;
+
+const UIEVENT	EVENT_SETMAINSKILL			= 400;
+const UIEVENT	EVENT_TALK_REQUEST			= 401;
+const UIEVENT	EVENT_SMITH_REQUEST			= 402;
+const UIEVENT	EVENT_SMITH_ADDITEM			= 403;
+const UIEVENT	EVENT_SMITH_ENCHENT			= 404;
+const UIEVENT	EVENT_SMITH_REMOVEITEM		= 405;
+const UIEVENT	EVENT_CARDSUM				= 406;
+const UIEVENT	EVENT_CARDUNDONPC			= 407;
+const UIEVENT	EVENT_CARDUNDO				= 408;
+
+const UIEVENT	EVENT_ITEM_BUY				= 500;
+const UIEVENT	EVENT_ITEM_SELL				= 501;
+const UIEVENT	EVENT_SHOP_REQUEST			= 502;
+
+const UIEVENT	EVENT_DEAL_ADDITEM			= 550;
+const UIEVENT	EVENT_DEAL_DELETEITEM		= 551;
+const UIEVENT	EVENT_DEAL_ADDMONEY			= 552;
+const UIEVENT	EVENT_DEAL_CHECKIN			= 553;
+const UIEVENT	EVENT_DEAL_SUBMITOK			= 554;
+const UIEVENT	EVENT_DEAL_CANCEL			= 555;
+const UIEVENT	EVENT_DEAL_REQUEST			= 556;
+
+const UIEVENT   EVENT_PARTY_CREATE			= 600;
+const UIEVENT   EVENT_PARTY_DESTROY			= 601;
+const UIEVENT   EVENT_PARTY_REQUEST			= 602;
+const UIEVENT   EVENT_PARTY_BANISH			= 603;
+const UIEVENT   EVENT_PARTY_OUT				= 605;
+
+
+
+#endif // #ifndef __Wind3D_Engine_EventCode_Header__

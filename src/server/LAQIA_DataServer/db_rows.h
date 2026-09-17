@@ -1,0 +1,75 @@
+/*
+	Copyright (c) 2003 ∆¿∏ﬁ¿Ã, All rights reserved.
+
+	Author	sk8snow
+
+	File	db_rows.cpp
+
+	Build log...
+*/
+
+#ifndef __DB_ROWS__
+#define __DB_ROWS__
+
+enum
+{
+  dDB_CHAR_IDX		= 0,
+  dDB_CHAR_ID,					
+  dDB_CHAR_NAME,				
+  dDB_CHAR_MONEY,				
+  dDB_CHAR_SEX,				
+  dDB_CHAR_MAPNUM,				
+  dDB_CHAR_POSX,				
+  dDB_CHAR_POSY,			
+  dDB_CHAR_HP,					
+  dDB_CHAR_MP,					
+  dDB_CHAR_STR,					
+  dDB_CHAR_INT,					
+  dDB_CHAR_DEX,				
+  dDB_CHAR_SKILLEXP0,				
+  dDB_CHAR_SKILLEXP1,				
+  dDB_CHAR_SKILLEXP2,				
+  dDB_CHAR_SKILLEXP3,				
+  dDB_CHAR_SKILL_LEVEL0,			
+  dDB_CHAR_SKILL_LEVEL1,		
+  dDB_CHAR_SKILL_LEVEL2,			
+  dDB_CHAR_SKILL_LEVEL3,			
+  dDB_CHAR_LASTLOGIN,				
+  dDB_CHAR_LASTLOGOUT,				
+  dDB_CHAR_CHARPOS,				
+  dDB_CHAR_HEADSTYLE,				
+  dDB_CHAR_FACESTYLE,				
+  dDB_CHAR_EQUIPHEAD,				
+  dDB_CHAR_EQUIPJACKET,			
+  dDB_CHAR_EQUIPPANTS,				
+  dDB_CHAR_EQUIPFOOT,				
+  dDB_CHAR_EQUIPHAND,				
+  dDB_CHAR_STREXP,					
+  dDB_CHAR_INTEXP,					
+  dDB_CHAR_DEXEXP,					
+  dDB_CHAR_MAX_HP,				
+  dDB_CHAR_MAX_MP,				
+  dDB_CHAR_MERCTYPE,
+  dDB_CHAR_MERCLEVEL,
+  dDB_CHAR_MERCEXP,	
+  dDB_CHAR_POSLAYER,
+  dDB_CHAR_CHA,
+  dDB_CHAR_MAPKIND,
+  dDB_CHAR_STRADD,
+  dDB_CHAR_INTADD,
+  dDB_CHAR_DEXADD,
+  dDB_CHAR_GUILDNO,
+  dDB_CHAR_GUILDLEVEL,
+  dDB_CHAR_PREVMAPNUM,
+  dDB_CHAR_PREVPOSX,
+  dDB_CHAR_PREVPOSY,
+  dDB_CHAR_LASTSKILL,
+  dDB_CHAR_ISNEWCHARACTER,
+  dDB_CHAR_CHARCLASS,
+  dDB_CHAR_TEMP_GUILD
+};
+
+#endif
+
+
+

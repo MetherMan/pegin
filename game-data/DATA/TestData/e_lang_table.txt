@@ -1,0 +1,290 @@
+You can not attack in this area.
+You are lack of MP.
+That name has already taken. 
+Now you are blocking the chatting. 
+Now you are blocking the whispering 
+This player has blocked the whispering. 
+You can not get rid of this item. 
+You can not get red of Bridle of Horse that you are riding 
+%s can have the item.
+Get %d shild!!
+Get '%s' item!!
+Not enough the inventory space.
+Player who have not enough GE points can not use the shop 
+This player has blocked the trade.
+'%s' already has confirmed the trade 
+You can not trade the Bridle of Horse that you are riding.
+You can not trade this item.
+The player does not have enough inventory space. 
+'%s' has confirmed the trade.
+Not enough the inventory space.
+You can not keep this item.
+You can not use this ability in the house. 
+You are already in the party. 
+Your party already has registered at the party forum.
+Your party has registered at the party forum.
+You can not PK in this area.
+This player has blocked the party.
+This player is the member of other party.
+This player is already in the other party.
+%s has declined party invitation.
+Remove the block friend.
+Set up the block friend.
+Remove the block chatting.
+Set up the block chatting.
+Remove the block whispering.
+Set up the block whispering.
+Remove the block party.
+Set up the block party.
+Remove the block trade.
+Set up the block trade.
+You have done this quest. 
+You are already doing other quest.
+Close attack level should be over %d, when you do this quest.
+Range attack level should be over %d, when you do this quest.
+Dark magic level should be over %d, when you do this quest.
+White magic level should be over %d, when you do this quest.
+Strength should be over %d, when you do this quest.
+Intelligent should be over %d, when you do this quest.
+Dexterity should be over %d, when you do this quest.
+Charisma should be over %d, when you do this quest.
+You need %d space in your inventory.
+This shop is not open today.
+You can not trade the Bridle of Horse that you are riding.
+You can not sell this item..
+You can not have more then one Bridle of horse.
+Close attack level up %d.
+Range attack level up %d.
+Dark magic level up %d.
+White magic level up %d.
+Intelligent goes up %d.
+Strength goes up %d.
+Dexterity goes up %d.
+You can not use magic skill at the house.
+Close attack level should be over %d, when you use this skill.
+Range attack level should be over %d, when you use this skill
+Dark magic level should be over %d, when you use this skill
+White magic level should be over %d, when you use this skill
+'%s' got event item.
+You are already in anther guild. 
+Now you are working as a mercenary. 
+You can not pick up this item.
+You can not trade with yourself. 
+You already have confirm the trade
+Confirm the trade, waiting for other player¡¯s confirm. 
+Your inventory is full.
+The name is too long. 
+You have created mercenary group. 
+You are not belonging to any group.
+Only master can disband.
+Your close attack level is not enough to wear this item.
+Your range attack level is not enough to wear this item. 
+Your dark magic level is not enough to wear this item. 
+Your white magic level is not enough to wear this item. 
+Only close attack class can wear this item. 
+Only range attack class can wear this item. 
+Only magician class can wear this item. 
+You can not use it in the house. 
+You can not use it, while riding a horse. 
+You only can use this skill for yourself.
+You can not use it for yourself. 
+You can not use it for yourself. 
+You can not use it from this distance.
+Wear one-handed sword class weapon.
+Absorb %d vitality form %s
+You only can use this skill in the range attack skill state.
+Wear long-bow class weapon.
+Wear short-bow class weapon.
+Wear staff class weapon.
+Wear blunt weapon or staff class weapon.
+Wear two-handed sword or lance class weapon.
+You already use this skill.
+Wear axe class weapon.
+You can not use this skill at this moment.
+Wear blunt weapon class weapon.
+Wear short-bow or one-handed sword class weapon.
+%s has get the %s event item, in it¡¯s raining gift event. 
+You get treasure box, and why you can get something rare, try again. Get %d shild.
+You can register %d friends.
+You can not do that when you are dead. 
+That player is not on the game.
+You have sent massage to %s
+%s declines your guild invitation.
+You have joined %s guild.
+%s has joined the guild. 
+Can not find the player. 
+You do not have authority.
+This player is the member of other guild.
+You are removed from %s guild.
+%s has been removed from the guild. 
+That player is already the member of other guild or a mercenary.
+You can not secede at this grade.
+You have leaved the guild.
+You should be over total 25 level to do this. 
+You need %d shild to create guild.
+It has disbanded. 
+You should be over level 50 to ride block horse. 
+You should be over level 75 to ride white horse.
+You already have other pet.
+You can not keep the horse certification that you are riding.
+It has disbanded.
+Your pet level up %d
+Now you have the pet.
+Drop the pet, because of lack of inventory.
+%s beat you down.
+You should be over total level 25, to do PK.
+Your PK target should be over total level 26.
+You can not build a base camp.
+Only mercenary grope can build a base camp.
+You can not build a base camp in this area.
+All base camp has been built.
+You already built other base camp. 
+On every Saturday, player can built base camp between 9~10GMT time.
+You have to wear %s item.
+That player is connecting or loading the game. 
+%s location : %s map %d / %d
+This player can not be resurrected.
+Should have more the 50% HP. 
+You should use close attack class skill. 
+You should use range attack class skill. 
+You can use it again after %ld second. 
+Only over %d level can enter this map.
+You authorize to %s guild master. 
+%s has authorized guild master to you.
+This player is already second guild master. 
+This player is not second guild master. 
+You can use it after %d second. 
+You should be over %d level to use this ability.
+Need %d shild.
+Erased guild massage. 
+The name is too short.
+The name is too long. 
+You can not add more item, when you sell items. 
+Selling price should be over 0 shild.
+You can not remove item form the selling list, when you sell items. 
+You do not have any item that can sell.
+This is not opened user shop. 
+It is already sold out.
+You get %s item for %d shild form %s user shop.
+You have sold %s item for %d(tax %d) shild to %s
+You are expelled from the guild. 
+You collect user shop tax %d shild.
+You should use close attack class skill. 
+Wear close attack class weapon.
+You should use range attack class skill. 
+Wear range attack class weapon.
+You should use dark magic class skill. 
+You should use white magic class skill.
+Wear close attack class weapon(one-headed).
+Wear close attack class weapon(two-headed).
+Your inventory is too heavy.
+You can not have item anymore, because your inventory is too heavy.
+The player doesn¡¯t have enough inventory space for trade. 
+The player¡¯s inventory is too heavy, so the trade can not be completed.
+You can not use this skill to this player.
+All base camp are already built, please built base came next time.
+You have built base camp. 
+The information of war.
+%s castle attack: %s defense : NPC
+%s castle attack: %s defense : %s
+%s castle war end : %s win!!
+The guild which owns castle can not be disbanded. 
+The guild in war can not be disbanded.
+Guild can have %d second guild masters. 
+The guild which owns castle can not built base camp. 
+Get %s castle.
+%s that is attacking %s castle has %d war point.
+You are disconnected because of unstable internet line. 
+You can not use this ability during the war. 
+The guild which has second guild master can not be disbanded. 
+The warehouse is closed. 
+%s's user shop.
+User shop can be opened at the trade map. 
+%s(%d) map attack castle : %s(%d) -> %s(%d)
+You can not ride horse at the trade map. 
+%s : %s remained.
+You are using no cash items. 
+You already have the effect of weight drink.
+The effect of HP drink is still remained.
+The effect of Potion of Haste is still remained.
+You have to join the party first. 
+Only party leader can use this item.
+The effect of group HP drink is still remained.
+Only the guild member player can use this cash item.
+You can use it again after %d minute. 
+There is no one that you can use it. 
+The effect of minus is still remained.
+You already have the effect of Warmth of Araim.
+You can not use it while you are using Premium zone plus. 
+You already have the effect of item of Araim.
+You already have the effect of God bless.
+You can use Premium zone 30days item after your previous Premium zone period has expired.
+You can use Premium zone plus 30 days item after your previous Premium zone plus period has expired. 
+You need a shout pill.
+The player under the level 10 can not whisper. 
+You cannot get rid of cash items. 
+Trade registered item can not be moved. 
+The price of trade registered item can not be changed.
+You need a guild massage pill 
+Enchant has failed, enchant card has vanished.
+Enchant has failed, you get -1 at our item ability.
+Enchant has failed, you get -2 at our item ability.
+You can not make a party with the player who has 26 level differences. 
+Only the player who uses Premium zone service can enter Premium zone. 
+You can not enter the trade map when you are riding a horse.
+This item can not trade.
+Not enough changes.
+None occupied this castle.
+'%s' Army occupied %s castle.
+Only the Army Master who occupied the castle can use this function.
+This area is not occupied territory of your guild.
+Tax Rate can be changed 5 ~ 50%.
+This item is not inchanted item.
+Not enough inventory space.
+You can not find that.
+Your attempt has failed because the player had Item Proteciton.
+%s's Item Information
+Necklace : %s
+Bow : %s
+Gloves : %s
+Weapon : %s
+Helmet : %s
+Upper Armor : %s
+Belt : %s
+Pants : %s
+Earring : %s
+Ring : %s
+Shield : %s
+Boots : %s
+Your attempt has failed because the player had Level Protection.
+%s's Level Information
+Slose:%d Range:%d Dark Magic:%d White Magic:%d STR:%d DEX:%d INT:%d
+You already use this item.
+%s : HaHaHa !! I will kill you all!!
+More than 30 level player only can enter the gourse map.
+This area is %d%% tax added area occupied by %s Army.
+You can not sell premium item.
+You should learn %s skill before do this. 
+There is '%s' effect already.
+Close attack level should be over %d.
+Range attack level should be over %d.
+Dark magic level should be over %d.
+White magic level should be over %d.
+You need to be more than 50 level to set a Secure Base.
+You need more than 20 guild members to set a Secure Base.
+You got the %d shild after the victory of castle battle.
+You spent %d shild.
+Plese 'restart' after make your inventory %d space.
+You need more inchant card.
+You need more inchant card or more shild.
+This item is a kind of item can not be inchanted.
+There is no space at blacksmith's inventory.
+There is no item.
+%d bundle and %d shild is needed at inchant box.
+You can not put this item on because your grade is too low.
+Can't delete Guild Master.
+You can not PK others because your G/E point is below -30,000
+%s has been added to your friend list.
+%s has been deleted from your friend list.
+%s Logged In.
+%s Logged Out.

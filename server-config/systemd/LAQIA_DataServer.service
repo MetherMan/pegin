@@ -1,0 +1,19 @@
+# /etc/systemd/system/LAQIA_DataServer.service
+[Unit]
+After=mariadb.service
+[Service]
+Type=simple
+User=laqia
+WorkingDirectory=/opt/laqia/server/LAQIA_DataServer
+Environment=LD_LIBRARY_PATH=/opt/laqia/legacy/usr/lib
+LimitNOFILE=16384
+ExecStart=/opt/laqia/server/LAQIA_DataServer/LAQIA_DataServer
+StandardOutput=append:/opt/laqia/LAQIA_DataServer.stdout.log
+StandardError=append:/opt/laqia/LAQIA_DataServer.stderr.log
+
+# /etc/systemd/system/LAQIA_DataServer.service.d/local.conf
+[Unit]
+Requires=mariadb.service laqia-loopback-only.service
+After=mariadb.service laqia-loopback-only.service
+[Install]
+WantedBy=multi-user.target

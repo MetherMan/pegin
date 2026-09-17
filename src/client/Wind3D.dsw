@@ -1,0 +1,166 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Common"=".\Common\Common.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Common", BAAAAAAA
+    .\common
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Engine"=".\Engine\Engine.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Engine", GCAAAAAA
+    .\engine
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "GameClient"=".\GameClient\GameClient.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/GameClient", QEAAAAAA
+    .\gameclient
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Launcher"=".\Launcher\Launcher.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Launcher", GUQAAAAA
+    .\launcher
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Launcher_"=".\Launcher_China\Launcher_.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Launcher_China", EKRAAAAA
+    .\launcher_china
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Media"=".\Media\Media.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Media", BAAAAAAA
+    .\media
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Render"=".\Render\Render.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Render", JCAAAAAA
+    .\render
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "UInterface"=".\UInterface\UInterface.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/UInterface", RLQAAAAA
+    .\uinterface
+    end source code control
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Common
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

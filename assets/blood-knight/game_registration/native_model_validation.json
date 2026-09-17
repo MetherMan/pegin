@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "triangles": 35316,
+  "meshes": 14,
+  "bounds": [
+    [
+      -0.7091112732887268,
+      -0.2552347779273987,
+      -0.06430921703577042
+    ],
+    [
+      2.1818389892578125,
+      0.2721594274044037,
+      0.11084767431020737
+    ]
+  ],
+  "original_winding_sign": 1.0,
+  "bytes": 3815900,
+  "parts": [
+    {
+      "texture": "bn_surface.bmp",
+      "vertices": 4632,
+      "triangles": 1544
+    },
+    {
+      "texture": "bn_mat_01.bmp",
+      "vertices": 3492,
+      "triangles": 1164
+    },
+    {
+      "texture": "bn_mat_02.bmp",
+      "vertices": 144,
+      "triangles": 48
+    },
+    {
+      "texture": "bn_mat_03.bmp",
+      "vertices": 24000,
+      "triangles": 8000
+    },
+    {
+      "texture": "bn_mat_03.bmp",
+      "vertices": 10560,
+      "triangles": 3520
+    },
+    {
+      "texture": "bn_mat_04.bmp",
+      "vertices": 5808,
+      "triangles": 1936
+    },
+    {
+      "texture": "bn_mat_05.bmp",
+      "vertices": 288,
+      "triangles": 96
+    },
+    {
+      "texture": "bn_mat_06.bmp",
+      "vertices": 13200,
+      "triangles": 4400
+    },
+    {
+      "texture": "bn_mat_08.bmp",
+      "vertices": 13824,
+      "triangles": 4608
+    },
+    {
+      "texture": "bn_mat_09.bmp",
+      "vertices": 6852,
+      "triangles": 2284
+    },
+    {
+      "texture": "bn_mat_10.bmp",
+      "vertices": 10476,
+      "triangles": 3492
+    },
+    {
+      "texture": "bn_mat_11.bmp",
+      "vertices": 4056,
+      "triangles": 1352
+    },
+    {
+      "texture": "bn_mat_12.bmp",
+      "vertices": 6564,
+      "triangles": 2188
+    },
+    {
+      "texture": "bn_mat_13.bmp",
+      "vertices": 2052,
+      "triangles": 684
+    }
+  ]
+}

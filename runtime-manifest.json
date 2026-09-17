@@ -1,0 +1,36 @@
+{
+  "repository": "MetherMan/LAQIA-THE-LEGEND",
+  "tag": "dev-runtime-20260917",
+  "assets": [
+    {
+      "name": "laqia-dev-runtime-01.zip",
+      "bytes": 228239191,
+      "sha256": "77b7793af47f4f87411d7b4aa610e2c7fca704b5a32182b49ad91bbf6d3ea8ed"
+    },
+    {
+      "name": "laqia-dev-runtime-02.zip",
+      "bytes": 514275647,
+      "sha256": "1c0a732fd42b1178554704537650bb88b313125ce968497d2749d7f9b345c9da"
+    },
+    {
+      "name": "laqia-dev-runtime-03.zip",
+      "bytes": 406683765,
+      "sha256": "75c8db76a17337ef3e3f50c1e9b3db33ca29721c8256e644d89d0614915491ca"
+    },
+    {
+      "name": "laqia-dev-runtime-04.zip",
+      "bytes": 434055838,
+      "sha256": "a584d8420859682da07b064c2240b00ae093fd3c99b95be648f0b8d5ae59410e"
+    },
+    {
+      "name": "laqia-dev-model-tools.zip",
+      "bytes": 60620875,
+      "sha256": "82fc4c46b9da757239e1405a6f8bc06a6bd2b0a128f7eb4eaef9d0b67c0bdcdd"
+    },
+    {
+      "name": "laqia-dev-server-maps.zip",
+      "bytes": 2863040,
+      "sha256": "8d3a2031ab813bb133d528da0b8c822f5dd820c3a92d5cc99d3e23f54224e063"
+    }
+  ]
+}
