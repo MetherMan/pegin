@@ -3,6 +3,7 @@
 Windows에서 별도 개발 폴더와 새 Debian VM을 만들어 확인했습니다. 기존 게임의 캐릭터 DB를 사용하지 않았습니다.
 
 - 새 SSH 키, 새 DB 비밀번호, `developer` 계정으로 초기화 성공
+- GitHub에서 새 clone 후 비공개 릴리스 6개 파일 다운로드·SHA-256 검증·압축 해제 성공
 - DataServer, GameServer, LoginServer 시작 및 정상 종료 성공
 - 초기 설정 재실행 시 기존 개발 VM과 캐릭터 유지
 - 번들 Node/Python/NumPy/Pillow로 무기 모델 재생성 성공: 게임용 MOD 35,316 삼각형, 14개 메시
