@@ -5,7 +5,7 @@ Rank 9 / 양손검 / 무게 0 / 착용 능력치 제한 없음. 이름 #72CFFF, 
 
 ## 현재 모델
 
-흩날리는 붕대·실·천 장식을 제거하고 손잡이를 짙은 가죽으로 변경했습니다. 주 칼날의 넓은 절삭부를 손잡이 방향으로 연장했으며, 달 문양과 돌출 초승달의 정렬을 유지합니다. 날끝·손잡이 위치와 전체 길이는 그대로입니다. 총 12,990 삼각형입니다.
+흩날리는 붕대·실·천 장식을 제거하고 손잡이를 짙은 가죽으로 변경했습니다. 주 칼날의 넓은 절삭부를 손잡이 방향으로 연장했으며, 달 문양과 돌출 초승달의 정렬을 유지합니다. 날끝·손잡이 위치와 전체 길이는 그대로입니다. 편집 모델은 12,990 삼각형입니다. 게임용 모델은 재질을 하나의 아틀라스로 묶으며 반복 UV 경계를 나눈 15,010 삼각형·메시 1개입니다. 외형과 길이는 유지합니다.
 
 게임 좌표상 전체 길이 2.0973, 비교 대상 블랙나이트 스피어는 2.2121입니다. 손에서 날끝까지는 둘 다 1.6058입니다. `size_spec.json`의 72.9143% 배율을 유지합니다.
 
@@ -21,8 +21,8 @@ Node로 `build_model.mjs`, NumPy/Pillow Python으로 `convert_native.py`를 실�
 칼날은 `concept_texture.png`, 옆면은 `moonsteel_side_albedo.png`를 사용합니다. 인벤토리 아이콘은 칼날 상단을 담은 `inventory_icon_imagegen.png`입니다.
 `blade_revision_validation.json`, `native_model_validation.json`, `asset_validation.json`에 현재 검증 결과를 보관합니다. `live_validation.json`은 등록 시 지급·강화·재접속 확인 기록입니다.
 
-게임 모델과 로컬 Git 작업 폴더에 반영했습니다. GitHub commit/push는 하지 않았습니다. 실제 게임 전투 화면은 별도 확인이 필요합니다.
+게임의 무기 애니메이션은 메시 0만 움직입니다. 재질별 5개 메시에서 일부가 캐릭터 원점에 남는 문제를 피하도록 모든 표면을 메시 0으로 합쳤습니다. `verify_native_animation.py --client <GameClient 폴더>`로 오리지널 대기 애니메이션과 세 LOD의 연결을 검증합니다. 실제 게임 화면에서의 확인은 별도입니다.
 
 ## 사용자 확정 색상
 
-`game_appearance.json`의 #2962DB / 채도 69% / 밝기 43%, 금속 #AAABC0 / 거칠기 100%를 게임 텍스처에 구웠습니다. 원본 GLB와 원본 그림은 색 재조절을 위해 유지합니다. `convert_native.py`는 이후 재생성에도 이 설정을 적용합니다. 구형 게임의 금속 반사는 끈 상태입니다. 인벤토리 아이콘은 내장 ImageGen으로 같은 색감·검은 배경·금색 테두리에 맞춰 새로 제작했습니다. 프롬프트는 `icon_user_colors_prompt.txt`, 검증은 `appearance_validation.json`에 있습니다.
+`game_appearance.json`의 #5C8FFF / 채도 126% / 밝기 174%, 금속 #FFFFFF / 거칠기 100%를 게임 텍스처에 구웠습니다. 원본 GLB와 원본 그림은 색 재조절을 위해 유지합니다. `convert_native.py`는 이후 재생성에도 이 설정을 적용합니다. 구형 게임의 금속 반사는 끈 상태입니다. 인벤토리 아이콘은 이전 확정 색감으로 내장 ImageGen에서 제작한 검은 배경·금색 테두리 버전을 유지합니다. 프롬프트는 `icon_user_colors_prompt.txt`, 검증은 `appearance_validation.json`에 있습니다.

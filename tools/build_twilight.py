@@ -7,6 +7,7 @@ runpy.run_path(str(O/'convert_native.py'),run_name='__main__')
 dest=ROOT/'client-overlay'
 for p in (O/'payload').glob('mt_twilight_*.mod'):shutil.copy2(p,dest/'Equip'/p.name)
 for p in (O/'payload').glob('mt_mat_*.wtm'):shutil.copy2(p,dest/'Texture/Equip'/p.name)
+shutil.copy2(O/'payload/mt_twilight_atlas.wtm',dest/'Texture/Equip/mt_twilight_atlas.wtm')
 shutil.copy2(O/'payload/mt_mat_00.wtm',dest/'Texture/Body/mt_twilight_icon.wtm')
 scale=json.loads((O/'size_spec.json').read_text())['scale'];trace=dest/'Equip/Trace.txt';lines=trace.read_bytes().decode('cp949').splitlines()
 for i,line in enumerate(lines):

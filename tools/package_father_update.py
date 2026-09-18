@@ -16,14 +16,15 @@ def main():
     for kind,path,source in [('server','LAQIA_GameServer','server-bin/LAQIA_GameServer'),('updater','update/father_update.py','distribution/father_update.py')]:
         p=ROOT/source
         files.append(dict(kind=kind,path=path,source=source,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
-    manifest=dict(format=1,repository='MetherMan/pegin',version='2026-09-18-twilight-enchant20',files=files)
+    manifest=dict(format=1,repository='MetherMan/pegin',version='2026-09-18-twilight-animation-colors',files=files)
     (ROOT/'distribution/update-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     output=ROOT.parent/'아버지_자동업뎃.zip'
     cmd='''@echo off
 chcp 65001 >nul
 cd /d "%~dp0"
 if not exist "work\\laqia-runtime\\python\\python.exe" (
- echo [오류] 이 파일은 기존 라키아 폴더 안에 넣어 주세요.
+ echo [오류] outputs와 work 두 폴더가 함께 보이는 곳에 넣어 주세요.
+ echo outputs 안이나 work 안에 넣으면 안 됩니다. 적용방법.txt를 확인해 주세요.
  pause
  exit /b 1
 )
@@ -35,17 +36,40 @@ if errorlevel 1 (
 )
 pause
 '''.replace('\n','\r\n').encode('utf-8')
-    note='''1. 게임을 종료합니다.
-2. 이 압축 안의 라키아 폴더를 기존 라키아 폴더에 합쳐 덮어씌웁니다.
-   기존 라키아 폴더에는 outputs와 work 폴더가 있습니다.
-3. 라키아/자동업데이트.cmd를 더블클릭합니다.
-4. 업데이트 완료 문구가 나오면 기존 게임 실행 버튼을 누릅니다.
+    note='''[처음 한 번만 따라 하세요]
 
-앞으로도 자동업데이트.cmd만 누르면 됩니다. Git 설치나 GitHub 로그인은 필요 없습니다.
-업데이트할 때 MetherMan/pegin 저장소가 public 상태여야 합니다.
-private이거나 인터넷 연결에 실패하면 업데이트를 중단합니다. 이미 받은 게임은 계속 사용할 수 있습니다.
-계정, 캐릭터, 장비, DB, VM 디스크, 가족 연결 설정은 교체하지 않습니다.
-변경한 파일은 work/laqia-runtime/backups/auto-update-*에 백업합니다.
+1. 게임을 끕니다.
+
+2. 아버지_자동업뎃.zip의 압축을 풀고, 그 안의 '라키아' 폴더를 엽니다.
+   여기 있는 아래 두 개만 복사합니다.
+
+   - 자동업데이트.cmd 파일
+   - update 폴더
+
+3. 원래 게임이 있는 '라키아-아버지용-최종-20260915' 폴더를 엽니다.
+   그 안의 '라키아' 폴더를 한 번 더 엽니다.
+   'outputs'와 'work' 두 폴더가 함께 보이면 맞는 곳입니다.
+
+   outputs나 work 안으로 들어가지 마세요!
+   바로 이 화면의 빈 곳에, 복사한 두 개를 붙여넣으세요.
+   같은 파일이 있다고 나오면 '덮어쓰기' 또는 '파일 바꾸기'를 선택하세요.
+
+4. 붙여넣고 나면 아래처럼 네 개가 같은 위치에 있어야 합니다.
+
+   라키아-아버지용-최종-20260915
+   └─ 라키아
+      ├─ outputs             ← 원래 있던 폴더
+      ├─ work                ← 원래 있던 폴더
+      ├─ update              ← 방금 넣은 폴더
+      └─ 자동업데이트.cmd    ← 방금 넣은 파일. 이것을 더블클릭!
+
+5. '자동업데이트.cmd'를 더블클릭합니다.
+   '업데이트 완료!'가 나오면 창을 닫고, 평소 쓰던 버튼으로 게임을 켭니다.
+
+[다음부터는]
+게임을 끈 뒤 '자동업데이트.cmd'만 더블클릭하면 됩니다.
+인터넷에 연결되어 있어야 합니다. 계정·캐릭터·장비는 그대로 유지됩니다.
+'업데이트 중단'이 나오면 창의 내용을 아들에게 알려 주세요.
 '''
     with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as z:
         z.writestr('라키아/자동업데이트.cmd',cmd)

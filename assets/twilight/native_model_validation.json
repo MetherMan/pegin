@@ -1,7 +1,7 @@
 {
   "passed": true,
-  "triangles": 12990,
-  "meshes": 5,
+  "triangles": 15010,
+  "meshes": 1,
   "bounds": [
     [
       -0.49148011207580566,
@@ -15,32 +15,53 @@
     ]
   ],
   "original_winding_sign": 1.0,
-  "bytes": 1403576,
+  "bytes": 1169728,
   "parts": [
     {
-      "texture": "mt_mat_00.bmp",
-      "vertices": 4068,
-      "triangles": 1356
-    },
-    {
-      "texture": "mt_mat_01.bmp",
-      "vertices": 14670,
-      "triangles": 4890
-    },
-    {
-      "texture": "mt_mat_05.bmp",
-      "vertices": 12888,
-      "triangles": 4296
-    },
-    {
-      "texture": "mt_mat_06.bmp",
-      "vertices": 3024,
-      "triangles": 1008
-    },
-    {
-      "texture": "mt_mat_07.bmp",
-      "vertices": 4320,
-      "triangles": 1440
+      "texture": "mt_twilight_atlas.bmp",
+      "vertices": 7404,
+      "triangles": 15010
     }
-  ]
+  ],
+  "atlas": {
+    "atlas_size": 2048,
+    "unique_tiles": 4,
+    "material_tiles": {
+      "0": 0,
+      "1": 1,
+      "5": 2,
+      "6": 3,
+      "7": 1
+    },
+    "triangles_by_material": {
+      "0": 1292,
+      "1": 6974,
+      "5": 4296,
+      "6": 1008,
+      "7": 1440
+    },
+    "surface_area_by_material": {
+      "0": {
+        "source": 0.7298839750460658,
+        "atlas": 0.7298839750460658
+      },
+      "1": {
+        "source": 0.3043455015246263,
+        "atlas": 0.3043455017693145
+      },
+      "5": {
+        "source": 0.07605236612927253,
+        "atlas": 0.07605236612927253
+      },
+      "6": {
+        "source": 0.001448572444905191,
+        "atlas": 0.001448572444905191
+      },
+      "7": {
+        "source": 0.025768367427058608,
+        "atlas": 0.025768367427058608
+      }
+    }
+  },
+  "one_animation_mesh": true
 }

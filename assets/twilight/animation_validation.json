@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "reference_meshes": 1,
+  "animations": {
+    "m_all_pe_std_81_weA.ani": {
+      "frames": 82,
+      "mesh_tracks": [
+        0
+      ]
+    },
+    "w_all_pe_std_61_weA.ani": {
+      "frames": 64,
+      "mesh_tracks": [
+        0
+      ]
+    },
+    "female_twohand_pe_we.ani": {
+      "frames": 789,
+      "mesh_tracks": [
+        0
+      ]
+    }
+  },
+  "lods": [
+    {
+      "lod": 1,
+      "meshes": 1,
+      "unanimated_parts": 0,
+      "texture": "mt_twilight_atlas.bmp"
+    },
+    {
+      "lod": 2,
+      "meshes": 1,
+      "unanimated_parts": 0,
+      "texture": "mt_twilight_atlas.bmp"
+    },
+    {
+      "lod": 3,
+      "meshes": 1,
+      "unanimated_parts": 0,
+      "texture": "mt_twilight_atlas.bmp"
+    }
+  ],
+  "visual_in_game_checked": false
+}
