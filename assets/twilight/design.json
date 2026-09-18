@@ -4,7 +4,7 @@
   "weapon_type": 2,
   "weapon_class": "양손검",
   "name_color": "#72CFFF",
-  "rank_color": "#348BFF",
+  "rank_color": "#72CFFF",
   "inventory_style": "black background, antique gold border",
   "damage": {
     "0": [

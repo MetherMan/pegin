@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-18-twilight-edge-colors",
+  "version": "2026-09-18-twilight-rank-color",
   "files": [
     {
       "kind": "client",
@@ -29,7 +29,7 @@
       "path": "Engine.dll",
       "source": "client-overlay/Engine.dll",
       "bytes": 311296,
-      "sha256": "f04c55e9d5720be7c7bdca636088dd31213aa7934f104aa9148c6789a200c5d0"
+      "sha256": "d767f98ac4467311dcf6d9137c8bc0037940534e90aff8448d9a1bb63783533d"
     },
     {
       "kind": "client",

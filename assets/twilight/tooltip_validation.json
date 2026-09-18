@@ -1,12 +1,12 @@
 {
   "passed": true,
   "cases": 280,
-  "rank_color": "#348BFF",
+  "rank_color": "#72CFFF",
   "name_color": "#72CFFF",
   "item_range": [
     19030,
     19050
   ],
   "two_image_bases": true,
-  "sha256": "f04c55e9d5720be7c7bdca636088dd31213aa7934f104aa9148c6789a200c5d0"
+  "sha256": "d767f98ac4467311dcf6d9137c8bc0037940534e90aff8448d9a1bb63783533d"
 }
