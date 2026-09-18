@@ -16,7 +16,7 @@ def main():
     for kind,path,source in [('server','LAQIA_GameServer','server-bin/LAQIA_GameServer'),('updater','update/father_update.py','distribution/father_update.py')]:
         p=ROOT/source
         files.append(dict(kind=kind,path=path,source=source,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
-    manifest=dict(format=1,repository='MetherMan/LAQIA-THE-LEGEND',version='2026-09-18-twilight-enchant20',files=files)
+    manifest=dict(format=1,repository='MetherMan/pegin',version='2026-09-18-twilight-enchant20',files=files)
     (ROOT/'distribution/update-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     output=ROOT.parent/'아버지_자동업뎃.zip'
     cmd='''@echo off
@@ -42,7 +42,7 @@ pause
 4. 업데이트 완료 문구가 나오면 기존 게임 실행 버튼을 누릅니다.
 
 앞으로도 자동업데이트.cmd만 누르면 됩니다. Git 설치나 GitHub 로그인은 필요 없습니다.
-업데이트할 때 MetherMan/LAQIA-THE-LEGEND 저장소가 public 상태여야 합니다.
+업데이트할 때 MetherMan/pegin 저장소가 public 상태여야 합니다.
 private이거나 인터넷 연결에 실패하면 업데이트를 중단합니다. 이미 받은 게임은 계속 사용할 수 있습니다.
 계정, 캐릭터, 장비, DB, VM 디스크, 가족 연결 설정은 교체하지 않습니다.
 변경한 파일은 work/laqia-runtime/backups/auto-update-*에 백업합니다.

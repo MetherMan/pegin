@@ -7,7 +7,7 @@ from pathlib import Path, PurePosixPath
 import argparse, hashlib, json, os, shutil, subprocess, sys, time, uuid
 import urllib.request, urllib.error, urllib.parse
 
-REPOSITORY = 'MetherMan/LAQIA-THE-LEGEND'
+REPOSITORY = 'MetherMan/pegin'
 MANIFEST = 'distribution/update-manifest.json'
 SERVER = '/opt/laqia/server/LAQIA_GameServer'
 

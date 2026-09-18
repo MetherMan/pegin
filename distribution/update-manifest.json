@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "repository": "MetherMan/LAQIA-THE-LEGEND",
+  "repository": "MetherMan/pegin",
   "version": "2026-09-18-twilight-enchant20",
   "files": [
     {
@@ -553,8 +553,8 @@
       "kind": "updater",
       "path": "update/father_update.py",
       "source": "distribution/father_update.py",
-      "bytes": 13035,
-      "sha256": "acaf0f6334a3131d9eec41521d0b3599a21fcccdc25dd7ecf81d19b2634fea92"
+      "bytes": 13024,
+      "sha256": "ffc21f44f243c02addd0f3c23a614a6ed0f2066544041d45a2deafbc76233157"
     }
   ]
 }
