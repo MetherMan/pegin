@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "cases": 280,
+  "rank_color": "#348BFF",
+  "name_color": "#72CFFF",
+  "item_range": [
+    19030,
+    19050
+  ],
+  "two_image_bases": true,
+  "sha256": "f04c55e9d5720be7c7bdca636088dd31213aa7934f104aa9148c6789a200c5d0"
+}

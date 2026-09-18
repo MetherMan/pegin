@@ -73,6 +73,7 @@
 #include "player.h"
 #include "monster.h"
 #include "item.h"
+#include "enchant_rates.h"
 #include "fight.h"
 #include "skill.h"
 
@@ -3877,6 +3878,10 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 		return 1;
 	}
 
+    // Reject capped items before consuming either the item or the card.
+    // Contiguous IDs after +20 can belong to an entirely different family.
+    if (GET_ITEM_UNIQ2(pItem->itemNum) >= 20) return 1;
+
 	int enchantNum = pItem->itemNum+1;
 	
 	if( !IS_VALID_ITEM( enchantNum ) )
@@ -4003,111 +4008,14 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 	{
 		//		BYTE rndNum = number( 0, 2 ); ÀÎÃ¾Æ®·ü
 
-		int rndMaxValue = 1;
-
-		if( GET_ITEM_UNIQ2( enchantNum ) <= 6 )
-		{
-			rndMaxValue = 1;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 7 )
-		{
-			rndMaxValue = 2;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 8 )
-		{
-			rndMaxValue = 4;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 9 )
-		{
-			rndMaxValue = 8;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 10 )
-		{
-			rndMaxValue = 8;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 11 )
-		{
-			rndMaxValue = 10;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 12 )
-		{
-			rndMaxValue = 16;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 13 )
-		{
-			rndMaxValue = 32;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 14 )
-		{
-			rndMaxValue = 34;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 15 )
-		{
-			rndMaxValue = 46;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 16 )
-		{
-			rndMaxValue = 52;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 17 )
-		{
-			rndMaxValue = 64;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 18 )
-		{
-			rndMaxValue = 74;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 19 )
-		{
-			rndMaxValue = 194;
-		}
-		else if( GET_ITEM_UNIQ2( enchantNum ) == 20 )
-		{
-			rndMaxValue = 264;
-		}
-
-		
-		BYTE successRnd = number( 0, rndMaxValue );
-
-		if( successRnd != 1 )
-			successRnd = 0;
-
-
-		switch( GET_ITEM_TYPE2( enchantNum ) )
-		{
-		case	dITEMTYPE_SHORTBOW	:
-		case	dITEMTYPE_LONGBOW:
-		case	dITEMTYPE_DDABALBOW:
-		case	dITEMTYPE_CROSSBOW:
-		case	dITEMTYPE_ARROW:
-			if (GET_ITEM_UNIQ2( enchantNum ) >= 15&&enchantNum>=11655)
-				successRnd = 0;
-			else if (GET_ITEM_UNIQ2( enchantNum ) >= 15&&enchantNum>=3529)
-				successRnd = 0;
-			break;
-		case dITEMTYPE_STAFF:		//"1.ÇÑ¼Õ°Ë",
-			if (GET_ITEM_UNIQ2( enchantNum ) >= 15)
-				successRnd = 0;
-			break;
-		case	dITEMTYPE_ONEHANDSWORD:
-		case	dITEMTYPE_TWOHANDSWORD:
-		case	dITEMTYPE_DUALSWORD:
-		case	dITEMTYPE_ONEHANDAXE:
-		case	dITEMTYPE_TWOHANDAXE:
-		case	dITEMTYPE_DUALAXE:
-		case	dITEMTYPE_ONEHANDBLUNT:
-		case 	dITEMTYPE_TWOHANDBLUNT:
-		case	dITEMTYPE_DUALBLUNT:
-		case	dITEMTYPE_DONPA :
-		case	dITEMTYPE_SPHERE :
-			if (GET_ITEM_UNIQ2( enchantNum ) >= 15)
-				successRnd = 0;
-			break;
-		default:
-			if (GET_ITEM_UNIQ2( enchantNum ) >= 15)
-				successRnd = 0;
-			break;
-		}
+        // Published new-card success rates. Keep the roll as an int:
+        // the old BYTE conversion could wrap random values above 255.
+        const bool enchantWeapon = IS_WEAPON(GET_ITEM_TYPE(pItem));
+        const int targetLevel = GET_ITEM_UNIQ2(enchantNum);
+        const int successRoll = number(1, 100);
+        const BYTE successRnd = LaqiaEnchantRollSucceeds(
+            enchantWeapon, targetLevel, successRoll) ? 1 : 0;
+        // No per-weapon or armour forced-failure gate above +14.
 
 		// ¼º°ø 
 		if( successRnd == 1 )

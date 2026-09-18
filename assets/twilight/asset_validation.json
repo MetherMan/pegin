@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "all_original_items_preserved": true,
+  "all_21_stats_synced": true,
+  "tooltip_names_fit_32_byte_buffer": true,
+  "all_three_models_valid": true,
+  "triangles": 12990,
+  "cloth_geometry_removed": true,
+  "mapped_side_textures": true,
+  "original_traces_unchanged": true,
+  "custom_trace_models": 3,
+  "blue_texture_mean_rgb": [
+    16.36846923828125,
+    30.32769775390625,
+    57.03131103515625
+  ],
+  "repository_payload_matches_installed_game": true
+}

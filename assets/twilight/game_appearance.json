@@ -1,0 +1,17 @@
+{
+  "format": "twilight-appearance",
+  "version": 1,
+  "weapon": "푸른달의 트와일라잇 양손검",
+  "source": "User-adjusted controls in the v15 Codex preview tab, 2026-09-18",
+  "settings": {
+    "blueColor": "#2962db",
+    "blueSaturation": 0.69,
+    "blueBrightness": 0.43,
+    "metalColor": "#aaabc0",
+    "metalRoughness": 1,
+    "clothColor": "#3b3b3a",
+    "clothBrightness": 1.8,
+    "clothRoughness": 1,
+    "clothWeave": 1
+  }
+}

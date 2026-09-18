@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "settings": {
+    "blueColor": "#2962db",
+    "blueSaturation": 0.69,
+    "blueBrightness": 0.43,
+    "metalColor": "#aaabc0",
+    "metalRoughness": 1,
+    "clothColor": "#3b3b3a",
+    "clothBrightness": 1.8,
+    "clothRoughness": 1,
+    "clothWeave": 1
+  },
+  "geometry_uv_and_indices_unchanged": true,
+  "matte_specular_disabled": true,
+  "material_records": [
+    {
+      "texture": "mt_mat_00.bmp",
+      "material": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "mt_mat_01.bmp",
+      "material": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "texture": "mt_mat_05.bmp",
+      "material": [
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.20000000298023224
+      ]
+    },
+    {
+      "texture": "mt_mat_06.bmp",
+      "material": [
+        0.11999999731779099,
+        0.11999999731779099,
+        0.11999999731779099,
+        0.20000000298023224
+      ]
+    },
+    {
+      "texture": "mt_mat_07.bmp",
+      "material": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "texture_changes": [
+    {
+      "material": 0,
+      "old_mean": [
+        49.94861125946045,
+        50.6687593460083,
+        53.70732879638672
+      ],
+      "new_mean": [
+        45.71135711669922,
+        45.24185371398926,
+        47.24558353424072
+      ]
+    },
+    {
+      "material": 1,
+      "old_mean": [
+        136.39619541168213,
+        135.28949451446533,
+        135.513277053833
+      ],
+      "new_mean": [
+        89.00568675994873,
+        88.81993293762207,
+        100.60934257507324
+      ]
+    },
+    {
+      "material": 7,
+      "old_mean": [
+        136.39619541168213,
+        135.28949451446533,
+        135.513277053833
+      ],
+      "new_mean": [
+        89.00568675994873,
+        88.81993293762207,
+        100.60934257507324
+      ]
+    }
+  ],
+  "icon_size": [
+    28,
+    28
+  ],
+  "icon_generation": "built-in image_gen",
+  "icon_sha256": "70188b0d1d0f405ea1f2f39789c6d839e9c356356eb18ad450e22179414f3d08",
+  "installed_files": 8
+}

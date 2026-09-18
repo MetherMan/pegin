@@ -1,0 +1,5 @@
+payload/
+__pycache__/
+*.obj
+*.mtl
+모델_돌려보기.html

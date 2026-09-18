@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "triangles": 12990,
+  "meshes": 5,
+  "bounds": [
+    [
+      -0.49148011207580566,
+      -0.4455905556678772,
+      -0.024061720818281174
+    ],
+    [
+      1.605823040008545,
+      0.3708050847053528,
+      0.024061720818281174
+    ]
+  ],
+  "original_winding_sign": 1.0,
+  "bytes": 1403576,
+  "parts": [
+    {
+      "texture": "mt_mat_00.bmp",
+      "vertices": 4068,
+      "triangles": 1356
+    },
+    {
+      "texture": "mt_mat_01.bmp",
+      "vertices": 14670,
+      "triangles": 4890
+    },
+    {
+      "texture": "mt_mat_05.bmp",
+      "vertices": 12888,
+      "triangles": 4296
+    },
+    {
+      "texture": "mt_mat_06.bmp",
+      "vertices": 3024,
+      "triangles": 1008
+    },
+    {
+      "texture": "mt_mat_07.bmp",
+      "vertices": 4320,
+      "triangles": 1440
+    }
+  ]
+}

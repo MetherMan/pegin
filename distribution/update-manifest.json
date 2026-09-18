@@ -1,0 +1,560 @@
+{
+  "format": 1,
+  "repository": "MetherMan/LAQIA-THE-LEGEND",
+  "version": "2026-09-18-twilight-enchant20",
+  "files": [
+    {
+      "kind": "client",
+      "path": "Common.dll",
+      "source": "client-overlay/Common.dll",
+      "bytes": 139264,
+      "sha256": "a96743ea3f4cdaeafb930db6703206f3fb1cb9b5bfd87a4f34eb9e837d876431"
+    },
+    {
+      "kind": "client",
+      "path": "DeicideOnline.exe",
+      "source": "client-overlay/DeicideOnline.exe",
+      "bytes": 503808,
+      "sha256": "1782d86586a7998f2ead36dfdbc70787e4ea5b9839a6b6cb0937af389fe09a0b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/trace.tdf",
+      "source": "client-overlay/Effect/trace.tdf",
+      "bytes": 597,
+      "sha256": "30d814cc61520bf6dcc43ae6e3ae984c2b9d99730ed56adc50deb417ec9bf195"
+    },
+    {
+      "kind": "client",
+      "path": "Engine.dll",
+      "source": "client-overlay/Engine.dll",
+      "bytes": 311296,
+      "sha256": "f04c55e9d5720be7c7bdca636088dd31213aa7934f104aa9148c6789a200c5d0"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/bn_blood_1.mod",
+      "source": "client-overlay/Equip/bn_blood_1.mod",
+      "bytes": 3815900,
+      "sha256": "97bf824e27ae00db472884ac32f49eacf5dbea89a96e6895dc38c94072bdd000"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/bn_blood_2.mod",
+      "source": "client-overlay/Equip/bn_blood_2.mod",
+      "bytes": 3815900,
+      "sha256": "97bf824e27ae00db472884ac32f49eacf5dbea89a96e6895dc38c94072bdd000"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/bn_blood_3.mod",
+      "source": "client-overlay/Equip/bn_blood_3.mod",
+      "bytes": 3815900,
+      "sha256": "97bf824e27ae00db472884ac32f49eacf5dbea89a96e6895dc38c94072bdd000"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/mt_twilight_1.mod",
+      "source": "client-overlay/Equip/mt_twilight_1.mod",
+      "bytes": 1403576,
+      "sha256": "a1d55dbac301da2098b310f1c28bf64b6d43b3165802e0c41bcc28c137f1a10d"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/mt_twilight_2.mod",
+      "source": "client-overlay/Equip/mt_twilight_2.mod",
+      "bytes": 1403576,
+      "sha256": "a1d55dbac301da2098b310f1c28bf64b6d43b3165802e0c41bcc28c137f1a10d"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/mt_twilight_3.mod",
+      "source": "client-overlay/Equip/mt_twilight_3.mod",
+      "bytes": 1403576,
+      "sha256": "a1d55dbac301da2098b310f1c28bf64b6d43b3165802e0c41bcc28c137f1a10d"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/Trace.txt",
+      "source": "client-overlay/Equip/Trace.txt",
+      "bytes": 26869,
+      "sha256": "6ff9b65dcbec97c8074fa5bc65b0d93641fb4e90f63a434313626a56d836d353"
+    },
+    {
+      "kind": "client",
+      "path": "Interface/item.dat",
+      "source": "client-overlay/Interface/item.dat",
+      "bytes": 373067,
+      "sha256": "deb644a966ea814b7d7f64ccb03c195431ea783f11a5644f9047eb69ec6baf3a"
+    },
+    {
+      "kind": "client",
+      "path": "Interface/ui.ini",
+      "source": "client-overlay/Interface/ui.ini",
+      "bytes": 59176,
+      "sha256": "51193433699476bacedeb8d6379f4af136011549f45d04ca164165eb7efceb75"
+    },
+    {
+      "kind": "client",
+      "path": "Item/bn_blood.wtm",
+      "source": "client-overlay/Item/bn_blood.wtm",
+      "bytes": 1415,
+      "sha256": "575cfa6cb14a9a9e6c69b33daa5f134e88628513712ba797bcda5381b4bb5661"
+    },
+    {
+      "kind": "client",
+      "path": "Item/ITEM.dat",
+      "source": "client-overlay/Item/ITEM.dat",
+      "bytes": 4181237,
+      "sha256": "e92841a686adda77ea8e69ae5aa4d930dd5be31ddf5525e60a366a355537f2a9"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_twilight_icon.wtm",
+      "source": "client-overlay/Item/mt_twilight_icon.wtm",
+      "bytes": 1334,
+      "sha256": "1bacf9aaa6e8d3a7c968d0d555847f3058ada8bda43c5496f8aa950bb78e6eae"
+    },
+    {
+      "kind": "client",
+      "path": "Item/Skill.dat",
+      "source": "client-overlay/Item/Skill.dat",
+      "bytes": 25981,
+      "sha256": "497be82b049cf670516f29927c6d270d5bb04ffce0aa1ad05689111dcf327af1"
+    },
+    {
+      "kind": "client",
+      "path": "Media.dll",
+      "source": "client-overlay/Media.dll",
+      "bytes": 49152,
+      "sha256": "08938c93231a2c28832c3552d86721a664fc6216bc6a84fbf57ce6a84ab93f51"
+    },
+    {
+      "kind": "client",
+      "path": "Render.dll",
+      "source": "client-overlay/Render.dll",
+      "bytes": 598016,
+      "sha256": "1361ad946b6657635e24c9432017115e4d23fa22213af7caf672e0c98327ce50"
+    },
+    {
+      "kind": "client",
+      "path": "Sound.dll",
+      "source": "client-overlay/Sound.dll",
+      "bytes": 106496,
+      "sha256": "ea1fb3a1ea9e36bc11f6378ca1ef936cfb239ee1edce3945eef58fc9bc672528"
+    },
+    {
+      "kind": "client",
+      "path": "start.lua",
+      "source": "client-overlay/start.lua",
+      "bytes": 409,
+      "sha256": "699027e80da6e371891e27a6be1b4c54869f13e1a2fd54b34c00f7d34eb6c40e"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/bn_blood.wtm",
+      "source": "client-overlay/Texture/Body/bn_blood.wtm",
+      "bytes": 2304894,
+      "sha256": "6a185927b050e62ae251921021e3dc1bb650ec6457f48e07941c75ba4687d0c2"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/mt_twilight_icon.wtm",
+      "source": "client-overlay/Texture/Body/mt_twilight_icon.wtm",
+      "bytes": 1249111,
+      "sha256": "83a44c000fe08768517c05c3708cab6a9a9c32298a47e9f8d2c21e4621b956b3"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mt_twilight_trail.wtm",
+      "source": "client-overlay/Texture/Effect/mt_twilight_trail.wtm",
+      "bytes": 13736,
+      "sha256": "048f91d58622ba7f2fdc71ce48413584560741fcbb0453753fe336f64b5acab2"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_01.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_01.wtm",
+      "bytes": 52,
+      "sha256": "6aaf1f528a4ac086971a2779750d82d96fe40acb93fad26cedb8bc097c30c517"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_02.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_02.wtm",
+      "bytes": 52,
+      "sha256": "e5d89b9efbce6e1c937689c70fb6b530eeb294c2d059927bfc2ff3b0c2352260"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_03.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_03.wtm",
+      "bytes": 52,
+      "sha256": "bd5aed2d64a36df9f36232996075e55861f594a111461e8112451d5c4cc89be6"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_04.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_04.wtm",
+      "bytes": 52,
+      "sha256": "c7b9781aec6e3ad1c145e411e4e23f369cd2d2bb35b582d69b04b93943ec3b0f"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_05.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_05.wtm",
+      "bytes": 52,
+      "sha256": "fc6a14db83e737ec119b64dd6e7f8a3b3c34ab6e9c93f768030ce1896fa311ae"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_06.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_06.wtm",
+      "bytes": 52,
+      "sha256": "6a42a47415b31d943ce9d7ae01e87f11a34578b1b9c68e65a396c4fe254f436a"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_07.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_07.wtm",
+      "bytes": 52,
+      "sha256": "a7765037864833c2b1c3ec9a98ad47dd87ef8fc058ea0e2da0773b1c0f8ff05e"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_08.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_08.wtm",
+      "bytes": 52,
+      "sha256": "12d65b9cb3fa640e6b944e740e8b03d0b4f108bc3cb42d558426874e47fd44a1"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_09.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_09.wtm",
+      "bytes": 52,
+      "sha256": "3dc47e2c87dbf9b4a70b9051c46badf74692432cca6af19d78e7f46d7e4c1932"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_10.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_10.wtm",
+      "bytes": 52,
+      "sha256": "8448c5782e6c69bc7d9252fd0749116adc1426c79e3488b68303de8b8c6ab3fb"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_11.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_11.wtm",
+      "bytes": 52,
+      "sha256": "1c2f48d6d91628db25b72e14f285b972e8f2e4b3319d8292ff3b1f30bf76fb4d"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_12.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_12.wtm",
+      "bytes": 52,
+      "sha256": "bb085c9ecff4b1ae221a2147a70ae5663a45598516bbe63ca24961cc16b955eb"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_mat_13.wtm",
+      "source": "client-overlay/Texture/Equip/bn_mat_13.wtm",
+      "bytes": 52,
+      "sha256": "76da7c411369d056899970940fd0dd4588a1941be2188a8b2c4597af788cd322"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/bn_surface.wtm",
+      "source": "client-overlay/Texture/Equip/bn_surface.wtm",
+      "bytes": 2304894,
+      "sha256": "6a185927b050e62ae251921021e3dc1bb650ec6457f48e07941c75ba4687d0c2"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/mt_mat_00.wtm",
+      "source": "client-overlay/Texture/Equip/mt_mat_00.wtm",
+      "bytes": 1249111,
+      "sha256": "83a44c000fe08768517c05c3708cab6a9a9c32298a47e9f8d2c21e4621b956b3"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/mt_mat_01.wtm",
+      "source": "client-overlay/Texture/Equip/mt_mat_01.wtm",
+      "bytes": 2080802,
+      "sha256": "0999c5cd597ff7e89cd488c775847b17e30bcef8231aa79bec40efbf2099c7a9"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/mt_mat_02.wtm",
+      "source": "client-overlay/Texture/Equip/mt_mat_02.wtm",
+      "bytes": 52,
+      "sha256": "6782ab48d92b62b2bdd0ca985c4da81856775cd1dfca22b38b7ea47363db30a4"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/mt_mat_03.wtm",
+      "source": "client-overlay/Texture/Equip/mt_mat_03.wtm",
+      "bytes": 2169388,
+      "sha256": "87791c826ad44a29b0ca24088c7d1e187415aeba0f1594fd25761c613f2c9fa1"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/mt_mat_04.wtm",
+      "source": "client-overlay/Texture/Equip/mt_mat_04.wtm",
+      "bytes": 52,
+      "sha256": "e5a8761c24e40bdfd39177ee244195a4878550f6587b3659576391097ca3863e"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/mt_mat_05.wtm",
+      "source": "client-overlay/Texture/Equip/mt_mat_05.wtm",
+      "bytes": 52,
+      "sha256": "7fc1d03ddfc538e7138dc6ff477e69ceab3417c871d95aca82192e4479d7f74d"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/mt_mat_06.wtm",
+      "source": "client-overlay/Texture/Equip/mt_mat_06.wtm",
+      "bytes": 52,
+      "sha256": "18e004b5a10490773f87fc5bf0ce7e332ffc1b7e34737f4be65ca00bed99b397"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/mt_mat_07.wtm",
+      "source": "client-overlay/Texture/Equip/mt_mat_07.wtm",
+      "bytes": 2080802,
+      "sha256": "0999c5cd597ff7e89cd488c775847b17e30bcef8231aa79bec40efbf2099c7a9"
+    },
+    {
+      "kind": "client",
+      "path": "UInterface.dll",
+      "source": "client-overlay/UInterface.dll",
+      "bytes": 495616,
+      "sha256": "4669f6c03689a6255b19ddee8317997847c83143e0c293aab0c3dfe9d369894b"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/__MOB_DATA.txt",
+      "source": "game-data/DATA/__MOB_DATA.txt",
+      "bytes": 41084,
+      "sha256": "b84e388ce9734bb2a47d330432c6ca92afa90bbaf1199c2645555cf4d1de5813"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/AttributeTable_Base_Hit.txt",
+      "source": "game-data/DATA/AttributeTable_Base_Hit.txt",
+      "bytes": 112,
+      "sha256": "acef3d456629de6686efd6efbbe2c9aa02f4128a1835103264074f96ca5f880b"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/backSho.txt",
+      "source": "game-data/DATA/backSho.txt",
+      "bytes": 11670,
+      "sha256": "200054d2631b64f782e81efae8901ae0767f7a3efcda5579599581e2b5751bc1"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/BILLING_DATA.txt",
+      "source": "game-data/DATA/BILLING_DATA.txt",
+      "bytes": 4328,
+      "sha256": "6b292557fe0fc2c37e41a0ab93f5544ab2a144e6d47ca532a104cd083d152d6a"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/bk_NPC_INFO.txt",
+      "source": "game-data/DATA/bk_NPC_INFO.txt",
+      "bytes": 629,
+      "sha256": "d791390753e6e25fd9ed8beca209e83903a36b894cb7f156b55e4478915f44c8"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/CASTLE_DOOR.txt",
+      "source": "game-data/DATA/CASTLE_DOOR.txt",
+      "bytes": 179,
+      "sha256": "f2b38f3d6748ff5f17662a495ba3f55a0d8f32f9b4394cdce037a8a2d247f093"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/char_def_point.txt",
+      "source": "game-data/DATA/char_def_point.txt",
+      "bytes": 2393,
+      "sha256": "5e15138d17f581d7d8b8f786d459ae3e8cf7e9a71db68c860ac27501812bd97e"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/CharacterAbilityExp.txt",
+      "source": "game-data/DATA/CharacterAbilityExp.txt",
+      "bytes": 12113,
+      "sha256": "45ecb45f3bf7a3c864e633a32fbe5ccd230b15e8d5716c16cb6dcbd4aab9660f"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/damage_table.txt",
+      "source": "game-data/DATA/damage_table.txt",
+      "bytes": 31879,
+      "sha256": "b74417f340b6b9c1740dd7ed753e85bc8ffb3dbf9b0fec933cfa0dcf6274c71e"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/e_lang_table.txt",
+      "source": "game-data/DATA/e_lang_table.txt",
+      "bytes": 11180,
+      "sha256": "adaf1d073b16f4b3adee69333024ba3f6947ec349581972b94e1019290f66911"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/EVMOB_ARMOR.txt",
+      "source": "game-data/DATA/EVMOB_ARMOR.txt",
+      "bytes": 2549,
+      "sha256": "fdeefea62e0ebf550cf0d44e5b9aaaf83e010d21abbb239e16f0ffebc4f8a2c3"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/EVMOB_WEAPON.txt",
+      "source": "game-data/DATA/EVMOB_WEAPON.txt",
+      "bytes": 2779,
+      "sha256": "cd107bdfd74deeb700040d08650b77fbc36500534f86c57621ae898b9a2530a7"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/exp_protect_table.txt",
+      "source": "game-data/DATA/exp_protect_table.txt",
+      "bytes": 1247,
+      "sha256": "fba8ba7f1e859967453a8d54f90aa406bcc52ca16efbef7da999e6bce23cad3e"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/ITEM_DATA.txt",
+      "source": "game-data/DATA/ITEM_DATA.txt",
+      "bytes": 4195850,
+      "sha256": "13ab85a6edb72a1285e4e34ceed1f9bd8e82ee5e24fbdf39c5e69949666f8a2a"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/lang_table.txt",
+      "source": "game-data/DATA/lang_table.txt",
+      "bytes": 10178,
+      "sha256": "801e69dcb5d3096bc6cbd71c4d4e8fc5d53caf23a7e807e83205095842c4630b"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/LimitWord.txt",
+      "source": "game-data/DATA/LimitWord.txt",
+      "bytes": 44,
+      "sha256": "645ee7fa7e51670e54d0b09aa7b01e1a3857efd3689482205ebd568c1028c969"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/log_item.txt",
+      "source": "game-data/DATA/log_item.txt",
+      "bytes": 756,
+      "sha256": "5a8df40cddeea22f1330cedc024b580af19c1a69781fbcbbcb3f11b13abf07fb"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/MOB_DATA.txt",
+      "source": "game-data/DATA/MOB_DATA.txt",
+      "bytes": 42439,
+      "sha256": "ad48e8332d08f97b675d0150ef745109513df19180a1453eef993dab85d94ea9"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/MobItemLoseTable.txt",
+      "source": "game-data/DATA/MobItemLoseTable.txt",
+      "bytes": 130518,
+      "sha256": "d37214f24cef4826d2859bba18df8529bc35c4433f2d4c69824efa059357085c"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/NPC_INFO.txt",
+      "source": "game-data/DATA/NPC_INFO.txt",
+      "bytes": 600,
+      "sha256": "98e3864618651f9a708894648db6239e896d661e9818da9d2153cf0bffb4cdd9"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/PET_INFO.txt",
+      "source": "game-data/DATA/PET_INFO.txt",
+      "bytes": 2471,
+      "sha256": "2850710bbc6ba5a0137c3f34da9e48b2f30c8bd29676aeba4a8d2826537b46ab"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/Quest_data.txt",
+      "source": "game-data/DATA/Quest_data.txt",
+      "bytes": 2005,
+      "sha256": "06af8f6737296aeb637bda8fcf53833ad3b7e83009b7d91911eb3df55fe469b5"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/SHOP_INFO.txt",
+      "source": "game-data/DATA/SHOP_INFO.txt",
+      "bytes": 7415,
+      "sha256": "2ea32ed15e52c8647c381aa932f378bca7be3ee1c6e883f94f9010acd3de6a41"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/skill_data.txt",
+      "source": "game-data/DATA/skill_data.txt",
+      "bytes": 24649,
+      "sha256": "6e6f9b0954a1dff6193dca22c50e684662a4c915c7660d877cdba9f9a7c1fb49"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/SkillLevelExp.txt",
+      "source": "game-data/DATA/SkillLevelExp.txt",
+      "bytes": 74185,
+      "sha256": "247d678c192bc2a35bba92d7a4466b8cfdbb4f30c203dd91e7c8ab13503bb0a3"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/spe_skill_class.txt",
+      "source": "game-data/DATA/spe_skill_class.txt",
+      "bytes": 740,
+      "sha256": "e3c18a35f4cd914821fec4cf063936bf8f77d91ff3caba54cafb29f761431167"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/StateLevelHPMP.txt",
+      "source": "game-data/DATA/StateLevelHPMP.txt",
+      "bytes": 102,
+      "sha256": "30fbb364807568ef3921092012ac3b043f6dbd009f4b107beb642bac5c2e2301"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/WAR_CRISTAL.txt",
+      "source": "game-data/DATA/WAR_CRISTAL.txt",
+      "bytes": 56,
+      "sha256": "3eee390bed150ebca124362eb108782a2c72afa91a5affd6291e3ccf4029055f"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/WAR_INFO.txt",
+      "source": "game-data/DATA/WAR_INFO.txt",
+      "bytes": 275,
+      "sha256": "469456ffdabfe8d4b5d78b1ca455a0b75614ca4ae92a764dfd5d9efb399879cd"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/WARPOINT_INFO.txt",
+      "source": "game-data/DATA/WARPOINT_INFO.txt",
+      "bytes": 42,
+      "sha256": "8fe3736fc3cf1c4dfbcd1b938b07ed345d3463ec72b173a0d062b3f87d1107db"
+    },
+    {
+      "kind": "server",
+      "path": "LAQIA_GameServer",
+      "source": "server-bin/LAQIA_GameServer",
+      "bytes": 1780784,
+      "sha256": "5efb607c1205aad56fae928b354ded06a5b72ef6b8d924ba4b9f90e0aeec283d"
+    },
+    {
+      "kind": "updater",
+      "path": "update/father_update.py",
+      "source": "distribution/father_update.py",
+      "bytes": 13035,
+      "sha256": "acaf0f6334a3131d9eec41521d0b3599a21fcccdc25dd7ecf81d19b2634fea92"
+    }
+  ]
+}

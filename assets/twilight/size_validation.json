@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "uniform_scale": 0.7291430554074543,
+  "reference_length": 2.2120628356933594,
+  "actual_length": 2.0973031520843506,
+  "grip_to_tip": 1.605823040008545,
+  "all_positions_scaled_about_grip": true,
+  "uv_normals_materials_textures_preserved": true,
+  "all_lods_updated": true,
+  "trail_endpoints_scaled": true,
+  "appearance_storage_key_unchanged": "twilight-appearance-v1"
+}

@@ -1,0 +1,17 @@
+{
+  "reference_model": "Wp_0026_1.mod",
+  "reference_item_id": 11613,
+  "reference_length": 2.2120628356933594,
+  "reference_grip_to_tip": 1.6058229207992554,
+  "previous_length": 2.8763944506645203,
+  "previous_grip_to_tip": 2.2023427486419678,
+  "scale": 0.7291430554074543,
+  "new_length": 2.0973030383145743,
+  "new_grip_to_tip": 1.6058229207992554,
+  "anchor": [
+    0,
+    0.5,
+    0
+  ],
+  "method": "uniform scaling about the native grip; no shape, UV or texture changes"
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "cloth_meshes": 0,
+  "grip_material": "dark leather",
+  "preserved_other_meshes": 34,
+  "moon_crest_geometry_unchanged": true,
+  "overall_length_unchanged": true,
+  "within_black_knight_limit": true,
+  "previous_triangles": 36418,
+  "triangles": 12990,
+  "all_lods_installed": true
+}

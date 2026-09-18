@@ -88,6 +88,7 @@ static void gmUsage(sPDESC_DATA p,GMKind k){
  case GM_HEAL:SendSystemMsg(p,"사용법: /재뽕 회복 [이름]. 예시: /재뽕 회복 아버지");break;
  default:
   SendSystemMsg(p,"[GM 도움말] 일반 채팅에서 입력. 이름 생략=자신");
+  SendSystemMsg(p,"/재뽕 테스트 2 = 푸른달의 트와일라잇 양손검 지급 (Rank 9)");
   SendSystemMsg(p,"/재뽕 테스트 1 = 블러드나이트스피어 지급 (Rank 15, 착용 제한 없음)");
   SendSystemMsg(p,"/재뽕 돈 1000000 | /재뽕 레벨 근접 100");
   SendSystemMsg(p,"/재뽕 캐시 9999999 [이름] (이름 생략=자신)");

@@ -1,0 +1,61 @@
+{
+  "name": "푸른달의 트와일라잇 양손검",
+  "rank": 9,
+  "weapon_type": 2,
+  "weapon_class": "양손검",
+  "name_color": "#72CFFF",
+  "rank_color": "#348BFF",
+  "inventory_style": "black background, antique gold border",
+  "damage": {
+    "0": [
+      224,
+      259
+    ],
+    "20": [
+      3015,
+      3305
+    ]
+  },
+  "in_game_registered": true,
+  "stage": "registered and protocol tested",
+  "source_concept": "concept_texture.png",
+  "icon": "inventory_icon_imagegen.png",
+  "item_ids": [
+    19030,
+    19050
+  ],
+  "command": "/재뽕 테스트 2",
+  "sword_trail": "twilight_blue",
+  "size": {
+    "reference_model": "Wp_0026_1.mod",
+    "reference_item_id": 11613,
+    "reference_length": 2.2120628356933594,
+    "reference_grip_to_tip": 1.6058229207992554,
+    "previous_length": 2.8763944506645203,
+    "previous_grip_to_tip": 2.2023427486419678,
+    "scale": 0.7291430554074543,
+    "new_length": 2.0973030383145743,
+    "new_grip_to_tip": 1.6058229207992554,
+    "anchor": [
+      0,
+      0.5,
+      0
+    ],
+    "method": "uniform scaling about the native grip; no shape, UV or texture changes"
+  },
+  "cloth_strips": 0,
+  "grip": "dark leather, no loose cloth",
+  "blade_revision": "broad cutting blade extended toward hilt; total length unchanged",
+  "game_appearance": {
+    "blueColor": "#2962db",
+    "blueSaturation": 0.69,
+    "blueBrightness": 0.43,
+    "metalColor": "#aaabc0",
+    "metalRoughness": 1,
+    "clothColor": "#3b3b3a",
+    "clothBrightness": 1.8,
+    "clothRoughness": 1,
+    "clothWeave": 1
+  },
+  "inventory_icon_revision": "user colors, matte blue-gray blade, no cloth"
+}

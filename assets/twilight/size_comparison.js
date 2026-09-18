@@ -1,0 +1,16 @@
+// The reference and sword use the same coordinate units and grip origin.
+const sizeSpec=__SIZE_SPEC__,referenceData=__BLACK_KNIGHT_REFERENCE__;
+const compareButton=document.createElement('button');compareButton.id='sizeCompare';compareButton.textContent='블랙나이트 크기 비교';document.querySelector('.panel').prepend(compareButton);
+const sizeNote=document.createElement('p');sizeNote.id='sizeNote';sizeNote.textContent=`길이 ${(sizeSpec.scale*100).toFixed(1)}%로 축소 · 블랙나이트 스피어 이하`;document.querySelector('header').append(sizeNote);
+const compareGroup=new THREE.Group();compareGroup.visible=false;scene.add(compareGroup);
+const referenceGeometry=new THREE.BufferGeometry();referenceGeometry.setAttribute('position',new THREE.Float32BufferAttribute(referenceData.positions,3));referenceGeometry.setAttribute('normal',new THREE.Float32BufferAttribute(referenceData.normals,3));referenceGeometry.setAttribute('uv',new THREE.Float32BufferAttribute(referenceData.uv,2));
+const referenceMap=new THREE.TextureLoader().load(referenceData.image);referenceMap.colorSpace=THREE.SRGBColorSpace;referenceMap.flipY=false;
+const referenceMesh=new THREE.Mesh(referenceGeometry,new THREE.MeshStandardMaterial({map:referenceMap,metalness:.22,roughness:.48,side:THREE.DoubleSide}));referenceMesh.position.x=-.52;compareGroup.add(referenceMesh);
+const comparisonSword=model.clone(true);comparisonSword.rotation.set(0,0,0);comparisonSword.position.x=.52;compareGroup.add(comparisonSword);
+function syncComparisonMaterials(){comparisonSword.traverse(o=>{if(o.isMesh){const source=model.getObjectByName(o.name);if(source)o.material=source.material;}});}
+document.querySelector('#clay').addEventListener('click',syncComparisonMaterials);document.querySelector('#wire').addEventListener('click',syncComparisonMaterials);
+const gripLine=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-.9,.5,-.15),new THREE.Vector3(1.15,.5,-.15)]),new THREE.LineBasicMaterial({color:0x45607c,transparent:true,opacity:.55}));compareGroup.add(gripLine);
+let comparingSize=false;const normalSetView=setView;
+setView=function(view){comparingSize=false;compareGroup.visible=false;model.visible=true;compareButton.classList.remove('active');sizeNote.textContent=`길이 ${(sizeSpec.scale*100).toFixed(1)}%로 축소 · 블랙나이트 스피어 이하`;normalSetView(view);};window.setView=setView;
+compareButton.onclick=()=>{if(comparingSize){setView('three');return;}comparingSize=true;model.visible=false;compareGroup.visible=true;controls.autoRotate=false;compareButton.classList.add('active');document.querySelectorAll('[data-view]').forEach(b=>b.classList.remove('active'));const bounds=new THREE.Box3().setFromObject(compareGroup),target=bounds.getCenter(new THREE.Vector3()),size=bounds.getSize(new THREE.Vector3());camera.position.copy(target).add(new THREE.Vector3(0,0,Math.max(size.y*2.05,size.x*2.4)));camera.setViewOffset(innerWidth,innerHeight,innerWidth*.13,0,innerWidth,innerHeight);controls.target.copy(target);controls.update();sizeNote.textContent=`왼쪽: 블랙나이트 ${sizeSpec.reference_length.toFixed(2)} · 오른쪽: 트와일라잇 ${sizeSpec.new_length.toFixed(2)} | 같은 배율 · 가로선은 잡는 위치`;window.currentView='size-compare';renderer.render(scene,camera);};
+if(new URLSearchParams(location.search).get('compare')==='1')compareButton.click();

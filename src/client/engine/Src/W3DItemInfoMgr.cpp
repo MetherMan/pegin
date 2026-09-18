@@ -975,6 +975,8 @@ void CW3DItemInfoMgr::DrawTipInfo(
 			dwColor = 0xffFF0000;
 			break;
 		}
+		const bool bTwilightItem = pItemInfoDat->wItemNum >= 19030 && pItemInfoDat->wItemNum <= 19050;
+		if( bTwilightItem ) dwColor = 0xff348BFF;
 		if( ISWEAPONITEM( pItemInfoDat->btItemType ) || ISDEFENSEITEM( pItemInfoDat->btItemType ) )
 		{
 			if( pItemInfoDat->bItemIndex == 0 )
@@ -982,20 +984,20 @@ void CW3DItemInfoMgr::DrawTipInfo(
 				sprintf( szBuff, "Rank %d", pItemInfoDat->wItemLev );
 				DRAW_NEXTTEXTLINE( szBuff, dTITLE_NAME_CNT, dwColor );
 				sprintf( szBuff, "%s", pItemInfoDat->szHName );
-				DRAW_NEXTTEXTLINE( szBuff, dTITLE_NAME_CNT, dwColor );
+				DRAW_NEXTTEXTLINE( szBuff, dTITLE_NAME_CNT, bTwilightItem ? 0xff72CFFF : dwColor );
 			}	
 			else
 			{
 				sprintf( szBuff, "Rank %d", pItemInfoDat->wItemLev );
 				DRAW_NEXTTEXTLINE( szBuff, dTITLE_NAME_CNT, dwColor );
 				sprintf( szBuff, "(+%d)%s",pItemInfoDat->bItemIndex, pItemInfoDat->szHName );	
-				DRAW_NEXTTEXTLINE( szBuff, dTITLE_NAME_CNT, dwColor );
+				DRAW_NEXTTEXTLINE( szBuff, dTITLE_NAME_CNT, bTwilightItem ? 0xff72CFFF : dwColor );
 			}			
 		}
 		else
 		{
 			sprintf( szBuff, "%s", pItemInfoDat->szHName );
-			DRAW_NEXTTEXTLINE( szBuff, dTITLE_NAME_CNT, dwColor );
+			DRAW_NEXTTEXTLINE( szBuff, dTITLE_NAME_CNT, bTwilightItem ? 0xff72CFFF : dwColor );
 		}
 	}
 	if( dwFlag & DII_OTHER )

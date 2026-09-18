@@ -1,0 +1,341 @@
+[
+  {
+    "test": "live_server_all_21_enhancement_definitions",
+    "passed": true,
+    "details": [
+      {
+        "id": 19030,
+        "level": 0,
+        "rank": 9,
+        "type": 2,
+        "min": 224,
+        "max": 259,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19031,
+        "level": 1,
+        "rank": 9,
+        "type": 2,
+        "min": 228,
+        "max": 263,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19032,
+        "level": 2,
+        "rank": 9,
+        "type": 2,
+        "min": 237,
+        "max": 272,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19033,
+        "level": 3,
+        "rank": 9,
+        "type": 2,
+        "min": 303,
+        "max": 344,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19034,
+        "level": 4,
+        "rank": 9,
+        "type": 2,
+        "min": 324,
+        "max": 367,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19035,
+        "level": 5,
+        "rank": 9,
+        "type": 2,
+        "min": 347,
+        "max": 392,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19036,
+        "level": 6,
+        "rank": 9,
+        "type": 2,
+        "min": 435,
+        "max": 489,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19037,
+        "level": 7,
+        "rank": 9,
+        "type": 2,
+        "min": 486,
+        "max": 544,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19038,
+        "level": 8,
+        "rank": 9,
+        "type": 2,
+        "min": 575,
+        "max": 641,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19039,
+        "level": 9,
+        "rank": 9,
+        "type": 2,
+        "min": 681,
+        "max": 757,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19040,
+        "level": 10,
+        "rank": 9,
+        "type": 2,
+        "min": 804,
+        "max": 891,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19041,
+        "level": 11,
+        "rank": 9,
+        "type": 2,
+        "min": 931,
+        "max": 1030,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19042,
+        "level": 12,
+        "rank": 9,
+        "type": 2,
+        "min": 1080,
+        "max": 1193,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19043,
+        "level": 13,
+        "rank": 9,
+        "type": 2,
+        "min": 1251,
+        "max": 1379,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19044,
+        "level": 14,
+        "rank": 9,
+        "type": 2,
+        "min": 1418,
+        "max": 1563,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19045,
+        "level": 15,
+        "rank": 9,
+        "type": 2,
+        "min": 1611,
+        "max": 1772,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19046,
+        "level": 16,
+        "rank": 9,
+        "type": 2,
+        "min": 1830,
+        "max": 2011,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19047,
+        "level": 17,
+        "rank": 9,
+        "type": 2,
+        "min": 2072,
+        "max": 2277,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19048,
+        "level": 18,
+        "rank": 9,
+        "type": 2,
+        "min": 2348,
+        "max": 2578,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19049,
+        "level": 19,
+        "rank": 9,
+        "type": 2,
+        "min": 2661,
+        "max": 2919,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      },
+      {
+        "id": 19050,
+        "level": 20,
+        "rank": 9,
+        "type": 2,
+        "min": 3015,
+        "max": 3305,
+        "weight": 0,
+        "needClass": 0,
+        "needStr": 0,
+        "needInt": 0,
+        "needDex": 0
+      }
+    ]
+  },
+  {
+    "test": "existing_admin_permission_preserved",
+    "passed": true,
+    "details": null
+  },
+  {
+    "test": "requested_command_grants_exactly_one_base_item",
+    "passed": true,
+    "details": [
+      "[GM 지급] TwilightQA: 푸른달의 트와일라잇 양손검 1/1개"
+    ]
+  },
+  {
+    "test": "test_1_still_grants_blood_knight",
+    "passed": true,
+    "details": null
+  },
+  {
+    "test": "malformed_command_never_grants",
+    "passed": true,
+    "details": null
+  },
+  {
+    "test": "rank_9_equips_on_level_zero_non_admin_non_warrior",
+    "passed": true,
+    "details": "19030\t3\t2609180441-00000001"
+  },
+  {
+    "test": "enhance_to_1",
+    "passed": true,
+    "details": [
+      "[GM 완료] TwilightQA: +1 푸른달의 트와일라잇 양손검 (+1 설정)"
+    ]
+  },
+  {
+    "test": "enhance_to_10",
+    "passed": true,
+    "details": [
+      "[GM 완료] TwilightQA: +10 푸른달의 트와일라잇 양손검 (+10 설정)"
+    ]
+  },
+  {
+    "test": "enhance_to_20",
+    "passed": true,
+    "details": [
+      "[GM 완료] TwilightQA: +20 푸른달의 트와일라잇 양손검 (+20 설정)"
+    ]
+  },
+  {
+    "test": "plus20_equipment_survives_relogin",
+    "passed": true,
+    "details": [
+      19050
+    ]
+  },
+  {
+    "test": "test_character_removed_existing_characters_unchanged",
+    "passed": true,
+    "details": null
+  }
+]

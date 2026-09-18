@@ -1,0 +1,5 @@
+Tool: built-in ImageGen
+Reference: concept_texture.png, the weathered cloth ribbons around the hilt.
+Create a production-ready seamless square PBR BASE COLOR texture matching the reference bandages: rough woven natural linen, aged pale ash-gray ivory, subtle dusty stains, dense fine crosswoven fiber grain, uneven threads and softly creased lengthwise fabric. Flat orthographic full-frame textile swatch, no sword, backdrop, loose ribbon silhouette or border. Neutral grayscale so existing user-selected material color remains adjustable. Light gray to off-white base, irregular charcoal-gray wear, embedded dirt and broad soft vertical crease streaks. No harsh baked shadows. Seamless on both axes, matte and threadbare. Not burlap, satin, paper or procedural stripes. No symbols or text; moon marks are separate geometry.
+
+Refinement: Fill every pixel edge-to-edge with the center's pale gray linen weave; remove all transparency, swatch silhouettes and edge vignette. Uniform diffuse lighting, fully opaque square material, seamless on both axes. Built-in ImageGen edit of the first generated swatch.
