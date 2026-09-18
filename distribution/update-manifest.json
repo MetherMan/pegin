@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-18-twilight-rank-color",
+  "version": "2026-09-18-twilight-trail-init",
   "files": [
     {
       "kind": "client",
@@ -15,7 +15,7 @@
       "path": "DeicideOnline.exe",
       "source": "client-overlay/DeicideOnline.exe",
       "bytes": 503808,
-      "sha256": "1782d86586a7998f2ead36dfdbc70787e4ea5b9839a6b6cb0937af389fe09a0b"
+      "sha256": "a085da09952eec18ba7ae51bbc66fb98d78ec25fd4351a302ac58e4139ba16ed"
     },
     {
       "kind": "client",

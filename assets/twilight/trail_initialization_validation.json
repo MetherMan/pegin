@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "original_failure_reproduced": true,
+  "creation_cases": 7,
+  "initial_equipped_twilight": "twilight_blue",
+  "other_weapons": "unchanged default",
+  "re_equip_selection_unchanged": true,
+  "stack_and_flags_preserved": true,
+  "attack_event_timing_unchanged": true,
+  "visual_in_game_checked": false,
+  "sha256": "a085da09952eec18ba7ae51bbc66fb98d78ec25fd4351a302ac58e4139ba16ed"
+}
