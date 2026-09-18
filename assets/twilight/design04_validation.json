@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "revision": "approved-04",
+  "all_three_lods_equal": true,
+  "animation_meshes": 1,
+  "native_triangles": 10229,
+  "open_apertures": [
+    "round_blade_aperture",
+    "upper_openwork",
+    "crescent_pommel"
+  ],
+  "solid_blades_verified": [
+    "main_blue_blade",
+    "left_auxiliary_cutter",
+    "long_right_cutter",
+    "middle_right_cutter",
+    "short_right_cutter",
+    "round_grip"
+  ],
+  "length": 2.0973031520843506,
+  "grip_to_tip": 1.605823040008545,
+  "icon_size": [
+    28,
+    28
+  ],
+  "icon_sha256": "06c1a09ef5f2b79694da2504a59e47657247924461ef1e6278a4ed3e0a8c28dc",
+  "in_game_visual_test": false
+}

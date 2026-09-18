@@ -47,9 +47,9 @@ def viewer():
  html=html.replace('<button data-view="cloth">','<button data-view="junction">연결부 확대</button><button data-view="cloth">')
  html=html.replace('<button data-view="back">','<button data-view="side">옆면</button><button data-view="back">')
  html=html.replace("if(view==='back')", "if(view==='side'){dist=extent*2.1;dir.set(1,.02,.045);}if(view==='back')")
- html=html.replace("if(view==='back')", "if(view==='junction'){const part=(model.getObjectByName('04 | continuous forged blade junction | face')||model.getObjectByName('04 | diagonal pierced guard rib | face'));if(part)new THREE.Box3().setFromObject(part).getCenter(target);dist=extent*.85;dir.set(.14,.03,1);}if(view==='back')")
+ html=html.replace("if(view==='back')", "if(view==='junction'){const part=(model.getObjectByName('01 | design 04 integrated irregular blades | face'));target.set(0,.85,0).applyMatrix4(model.matrixWorld);dist=extent*1.05;dir.set(.14,.03,1);}if(view==='back')")
  html=html.replace("if(view==='back')", "if(view==='cloth'){target.y=center.y-extent*.29;target.x=center.x-extent*.035;dist=extent*.92;dir.set(.16,.09,1);}if(view==='back')")
- html=html.replace('초승달 문양 · 흩날리는 붕대','길어진 주 칼날 · 붕대 없는 가죽 손잡이').replace('<button data-view="cloth">붕대 확대</button>','')
+ html=html.replace('초승달 문양 · 흩날리는 붕대','불규칙 보조 칼날 · 원형 관통 장식').replace('<button data-view="cloth">붕대 확대</button>','')
  if (O/'size_comparison.js').exists():
   comparison=(O/'size_comparison.js').read_text(encoding='utf-8').replace('__SIZE_SPEC__',(O/'size_spec.json').read_text(encoding='utf-8')).replace('__BLACK_KNIGHT_REFERENCE__',(O/'black_knight_reference.json').read_text(encoding='utf-8'))
   html=html.replace('</script></html>','\nif(window.viewerReady){\n'+comparison+'\n}\n</script></html>')

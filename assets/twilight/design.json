@@ -44,18 +44,18 @@
     "method": "uniform scaling about the native grip; no shape, UV or texture changes"
   },
   "cloth_strips": 0,
-  "grip": "dark leather, no loose cloth",
-  "blade_revision": "broad cutting blade extended toward hilt; total length unchanged",
+  "grip": "cylindrical blue leather, no loose cloth",
+  "blade_revision": "approved concept 04: irregular auxiliary blades, upper openwork, round aperture",
   "game_appearance": {
-    "blueColor": "#2962db",
-    "blueSaturation": 0.69,
-    "blueBrightness": 0.43,
-    "metalColor": "#aaabc0",
+    "blueColor": "#5c8fff",
+    "blueSaturation": 1.26,
+    "blueBrightness": 1.74,
+    "metalColor": "#ffffff",
     "metalRoughness": 1,
     "clothColor": "#3b3b3a",
     "clothBrightness": 1.8,
     "clothRoughness": 1,
     "clothWeave": 1
   },
-  "inventory_icon_revision": "user colors, matte blue-gray blade, no cloth"
+  "inventory_icon_revision": "ImageGen design 04 blade crop; black background and antique gold border"
 }

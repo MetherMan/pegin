@@ -4,228 +4,38 @@
   "name_color": "#72CFFF",
   "rank_color": "#348BFF",
   "type": 2,
-  "triangles": 12990,
-  "mesh_objects": 54,
+  "triangles": 7248,
+  "mesh_objects": 5,
   "cloth_strips": 0,
   "source": "concept_texture.png",
+  "revision": "approved design 04",
+  "construction_transform": {
+    "pixel_scale": 0.0014646333377416202,
+    "x_origin": 487,
+    "y_offset": 2.131453676431277
+  },
   "not_in_game": false,
-  "construction": "Real extruded blade and separate crescent fins, open negative spaces, round wrapped hilt, tight dark leather grip. Both blade faces use the concept projection; some painted lighting remains in the texture.",
+  "construction": "Extruded approved 04 silhouette with genuine upper slit and circular aperture, irregular integrated auxiliary cutters, textured sidewalls, cylindrical two-hand grip and crescent pommel. One rigid animation mesh in native export.",
   "parts": [
     {
-      "name": "01 | long pierced moon blade | face",
-      "triangles": 238
+      "name": "01 | design 04 integrated irregular blades | face",
+      "triangles": 926
     },
     {
-      "name": "01 | long pierced moon blade | solid metal bevel",
-      "triangles": 510
+      "name": "01 | design 04 integrated irregular blades | solid metal bevel",
+      "triangles": 4610
     },
     {
-      "name": "01b | textured steel tip facets",
-      "triangles": 3
+      "name": "12 | design 04 crescent pommel | face",
+      "triangles": 264
     },
     {
-      "name": "01b | textured steel tip facets",
-      "triangles": 3
+      "name": "12 | design 04 crescent pommel | solid metal bevel",
+      "triangles": 1320
     },
     {
-      "name": "02 | swept crescent crown and upper fin | face",
-      "triangles": 58
-    },
-    {
-      "name": "02 | swept crescent crown and upper fin | solid metal bevel",
-      "triangles": 310
-    },
-    {
-      "name": "03 | lower crescent cutting guard | face",
-      "triangles": 40
-    },
-    {
-      "name": "03 | lower crescent cutting guard | solid metal bevel",
-      "triangles": 220
-    },
-    {
-      "name": "04 | diagonal pierced guard rib | face",
-      "triangles": 22
-    },
-    {
-      "name": "04 | diagonal pierced guard rib | solid metal bevel",
-      "triangles": 130
-    },
-    {
-      "name": "05 | narrow continuous textured cutting line | face",
-      "triangles": 24
-    },
-    {
-      "name": "05 | narrow continuous textured cutting line | solid metal bevel",
-      "triangles": 140
-    },
-    {
-      "name": "06 | cutting bevel outer tip",
-      "triangles": 390
-    },
-    {
-      "name": "06 | cutting bevel outer tip",
-      "triangles": 390
-    },
-    {
-      "name": "06 | cutting bevel crescent guard",
-      "triangles": 450
-    },
-    {
-      "name": "06 | cutting bevel crescent guard",
-      "triangles": 450
-    },
-    {
-      "name": "06 | cutting bevel left fin",
-      "triangles": 330
-    },
-    {
-      "name": "06 | cutting bevel left fin",
-      "triangles": 330
-    },
-    {
-      "name": "07 | raised crescent moon insignia | face",
-      "triangles": 82
-    },
-    {
-      "name": "07 | raised crescent moon insignia | solid metal bevel",
-      "triangles": 520
-    },
-    {
-      "name": "07 | raised crescent moon insignia | face",
-      "triangles": 82
-    },
-    {
-      "name": "07 | raised crescent moon insignia | solid metal bevel",
-      "triangles": 520
-    },
-    {
-      "name": "08 | moonstone inlay",
-      "triangles": 168
-    },
-    {
-      "name": "08 | moonstone inlay",
-      "triangles": 168
-    },
-    {
-      "name": "08 | moonstone inlay",
-      "triangles": 168
-    },
-    {
-      "name": "08 | moonstone inlay",
-      "triangles": 168
-    },
-    {
-      "name": "08 | moonstone inlay",
-      "triangles": 168
-    },
-    {
-      "name": "08 | moonstone inlay",
-      "triangles": 168
-    },
-    {
-      "name": "09 | two-handed dark leather grip",
-      "triangles": 96
-    },
-    {
-      "name": "10 | tight leather grip binding 0",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 1",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 2",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 3",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 4",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 5",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 6",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 7",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 8",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 9",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 10",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 11",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 12",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 13",
-      "triangles": 280
-    },
-    {
-      "name": "10 | tight leather grip binding 14",
-      "triangles": 280
-    },
-    {
-      "name": "11 | silver grip ferrule",
-      "triangles": 80
-    },
-    {
-      "name": "11 | silver grip ferrule",
-      "triangles": 80
-    },
-    {
-      "name": "11 | silver grip ferrule",
-      "triangles": 80
-    },
-    {
-      "name": "11 | silver grip ferrule",
-      "triangles": 80
-    },
-    {
-      "name": "12 | crescent pommel | face",
-      "triangles": 36
-    },
-    {
-      "name": "12 | crescent pommel | solid metal bevel",
-      "triangles": 200
-    },
-    {
-      "name": "13 | reference moonstone dome",
-      "triangles": 384
-    },
-    {
-      "name": "13 | reference moonstone dome",
-      "triangles": 384
-    },
-    {
-      "name": "18 | lunar orbit engraving",
-      "triangles": 560
-    },
-    {
-      "name": "18 | lunar orbit engraving",
-      "triangles": 560
+      "name": "09 | cylindrical blue leather two-hand grip",
+      "triangles": 128
     }
   ]
 }
