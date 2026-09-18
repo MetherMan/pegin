@@ -9,6 +9,9 @@ sys.path.insert(0,str(O))
 from bake_appearance import apply_appearance
 from native_atlas import single_mesh_atlas
 appearance=json.loads((O/'game_appearance.json').read_text(encoding='utf-8'))['settings'] if (O/'game_appearance.json').exists() else None
+orientation=json.loads((O/'native_orientation.json').read_text()) if (O/'native_orientation.json').exists() else {'roll_degrees':0}
+assert orientation['roll_degrees'] in (0,180)
+native_rotation=np.array([1,-1,-1] if orientation['roll_degrees']==180 else [1,1,1],dtype='<f4')
 def pack_texture(image,path):
  f=BytesIO();image.convert('RGB').save(f,format='BMP');b=f.getvalue();path.write_bytes(b'TEAMMAY\0\0'+struct.pack('<I',len(b))+zlib.compress(b,9))
 b=(O/'Blue_Moon_Twilight_Greatsword.glb').read_bytes();n=struct.unpack_from('<I',b,12)[0];j=json.loads(b[20:20+n]);bin=b[28+n:]
@@ -45,6 +48,9 @@ for mesh in j['meshes']:
   # Original weapons point along +X; the resized GLB preserves its grip at Y=.5.
   pos=np.column_stack((pos[:,1]-.5,-pos[:,0],pos[:,2])).astype('<f4')
   normal=np.column_stack((normal[:,1],-normal[:,0],normal[:,2])).astype('<f4')
+  # Roll the rigid weapon around its grip-to-tip axis, never turn it end-for-end.
+  # A proper 180-degree rotation preserves winding and carries normals with it.
+  pos*=native_rotation;normal*=native_rotation
   if sign<0:
    pos=pos.reshape(-1,3,3)[:,[0,2,1]].reshape(-1,3);normal=normal.reshape(-1,3,3)[:,[0,2,1]].reshape(-1,3);uv=uv.reshape(-1,3,2)[:,[0,2,1]].reshape(-1,2)
   # Fur and relief ribbons must remain visible from both sides in the old renderer.
@@ -76,4 +82,5 @@ for mesh in report:
  assert struct.unpack_from('<i',data,at)[0]==0;at+=4
 assert at==len(data)
 pos=np.concatenate(allpos);result=dict(passed=True,triangles=sum(x['triangles'] for x in report),meshes=len(report),bounds=[pos.min(axis=0).tolist(),pos.max(axis=0).tolist()],original_winding_sign=sign,bytes=len(data),parts=report,atlas=atlas_report,one_animation_mesh=True)
+result['native_roll_degrees']=orientation['roll_degrees']
 (O/'native_model_validation.json').write_text(json.dumps(result,indent=2));print(json.dumps({k:v for k,v in result.items() if k!='parts'}))

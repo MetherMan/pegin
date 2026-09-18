@@ -47,9 +47,9 @@
   "grip": "cylindrical blue leather, no loose cloth",
   "blade_revision": "approved concept 04: irregular auxiliary blades, upper openwork, round aperture",
   "game_appearance": {
-    "blueColor": "#5c8fff",
-    "blueSaturation": 1.26,
-    "blueBrightness": 1.74,
+    "blueColor": "#294ae0",
+    "blueSaturation": 1.86,
+    "blueBrightness": 0.86,
     "metalColor": "#ffffff",
     "metalRoughness": 1,
     "clothColor": "#3b3b3a",
@@ -57,5 +57,10 @@
     "clothRoughness": 1,
     "clothWeave": 1
   },
-  "inventory_icon_revision": "ImageGen design 04 blade crop; black background and antique gold border"
+  "inventory_icon_revision": "ImageGen design 04 blade crop, deep saturated blue; black background and antique gold border",
+  "native_orientation": {
+    "roll_degrees": 180,
+    "axis": "native X / grip-to-tip",
+    "reason": "Reverse cutting-edge facing while preserving the grip and tip positions"
+  }
 }

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "lods": 3,
+  "positions": "exact 180 degree roll about native X",
+  "normals": "exact same rotation",
+  "uv": "unchanged",
+  "grip_and_length": "unchanged"
+}

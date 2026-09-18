@@ -23,6 +23,7 @@
     28,
     28
   ],
-  "icon_sha256": "06c1a09ef5f2b79694da2504a59e47657247924461ef1e6278a4ed3e0a8c28dc",
-  "in_game_visual_test": false
+  "icon_sha256": "84072303d75ae7bf062bc6a3d5e0223747b3c9d3e8b0eb5603192bda3ccadef8",
+  "in_game_visual_test": false,
+  "native_roll_degrees": 180
 }

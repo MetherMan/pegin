@@ -6,6 +6,7 @@ import numpy as np
 from PIL import Image
 from verify_native_animation import read_mod
 O=Path(__file__).resolve().parent
+roll=json.loads((O/'native_orientation.json').read_text())['roll_degrees'] if (O/'native_orientation.json').exists() else 0
 info=json.loads((O/'model_info.json').read_text(encoding='utf-8'));spec=json.loads((O/'size_spec.json').read_text());t=info['construction_transform']
 parts=read_mod(O/'payload/mt_twilight_1.mod');assert len(parts)==1
 part=parts[0];vertices=part['points'];tri=vertices[part['corners']['index']].reshape(-1,3,3)
@@ -16,6 +17,7 @@ assert part['texture']=='mt_twilight_atlas.bmp'
 
 def ray_hits_pixel(x,y):
     point=np.array([t['y_offset']-y*t['pixel_scale']-.5,-(x-t['x_origin'])*t['pixel_scale']])
+    if roll==180:point[1]*=-1
     a=tri[:,0,:2];v0=tri[:,1,:2]-a;v1=tri[:,2,:2]-a;v2=point-a
     cross=lambda u,v:u[:,0]*v[:,1]-u[:,1]*v[:,0]
     det=cross(v0,v1);valid=np.abs(det)>1e-10;safe=np.where(valid,det,1)
@@ -31,5 +33,6 @@ encoded=(O/'payload/mt_twilight_icon.wtm').read_bytes();raw=zlib.decompress(enco
 icon=Image.open(BytesIO(raw)).convert('RGB');assert icon.size==(28,28)
 assert np.array_equal(np.asarray(icon),np.asarray(Image.open(O/'inventory_icon_28.png').convert('RGB')))
 result=dict(passed=True,revision='approved-04',all_three_lods_equal=True,animation_meshes=1,native_triangles=len(tri),open_apertures=list(holes),solid_blades_verified=list(solid),length=float(np.ptp(vertices[:,0])),grip_to_tip=float(vertices[:,0].max()),icon_size=list(icon.size),icon_sha256=hashlib.sha256(encoded).hexdigest(),in_game_visual_test=False)
+result['native_roll_degrees']=roll
 (O/'design04_validation.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result))

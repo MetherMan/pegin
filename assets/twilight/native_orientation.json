@@ -1,0 +1,5 @@
+{
+  "roll_degrees": 180,
+  "axis": "native X / grip-to-tip",
+  "reason": "Reverse cutting-edge facing while preserving the grip and tip positions"
+}

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-18-twilight-design04",
+  "version": "2026-09-18-twilight-edge-colors",
   "files": [
     {
       "kind": "client",
@@ -57,21 +57,21 @@
       "path": "Equip/mt_twilight_1.mod",
       "source": "client-overlay/Equip/mt_twilight_1.mod",
       "bytes": 793084,
-      "sha256": "e6eb83492cd806f204e471410e9384c7c13f1b3731e38f50e4cd8a4e39a8c0b4"
+      "sha256": "41ca4c3c3acca29a9572f6c06edea32c6c82ce65aee92b442cbe02dba5870fc2"
     },
     {
       "kind": "client",
       "path": "Equip/mt_twilight_2.mod",
       "source": "client-overlay/Equip/mt_twilight_2.mod",
       "bytes": 793084,
-      "sha256": "e6eb83492cd806f204e471410e9384c7c13f1b3731e38f50e4cd8a4e39a8c0b4"
+      "sha256": "41ca4c3c3acca29a9572f6c06edea32c6c82ce65aee92b442cbe02dba5870fc2"
     },
     {
       "kind": "client",
       "path": "Equip/mt_twilight_3.mod",
       "source": "client-overlay/Equip/mt_twilight_3.mod",
       "bytes": 793084,
-      "sha256": "e6eb83492cd806f204e471410e9384c7c13f1b3731e38f50e4cd8a4e39a8c0b4"
+      "sha256": "41ca4c3c3acca29a9572f6c06edea32c6c82ce65aee92b442cbe02dba5870fc2"
     },
     {
       "kind": "client",
@@ -112,8 +112,8 @@
       "kind": "client",
       "path": "Item/mt_twilight_icon.wtm",
       "source": "client-overlay/Item/mt_twilight_icon.wtm",
-      "bytes": 1778,
-      "sha256": "06c1a09ef5f2b79694da2504a59e47657247924461ef1e6278a4ed3e0a8c28dc"
+      "bytes": 1856,
+      "sha256": "84072303d75ae7bf062bc6a3d5e0223747b3c9d3e8b0eb5603192bda3ccadef8"
     },
     {
       "kind": "client",
@@ -161,8 +161,8 @@
       "kind": "client",
       "path": "Texture/Body/mt_twilight_icon.wtm",
       "source": "client-overlay/Texture/Body/mt_twilight_icon.wtm",
-      "bytes": 527534,
-      "sha256": "76b6d7a903b0bde145a342b4e0052120fbb2557b839bcc656c19811426e15f0b"
+      "bytes": 512744,
+      "sha256": "28dad419a6a2a5e7adf8787ee65fc1a0f078aa2fbf756dcb6fdba12fef7b9c26"
     },
     {
       "kind": "client",
@@ -273,8 +273,8 @@
       "kind": "client",
       "path": "Texture/Equip/mt_mat_00.wtm",
       "source": "client-overlay/Texture/Equip/mt_mat_00.wtm",
-      "bytes": 527534,
-      "sha256": "76b6d7a903b0bde145a342b4e0052120fbb2557b839bcc656c19811426e15f0b"
+      "bytes": 512744,
+      "sha256": "28dad419a6a2a5e7adf8787ee65fc1a0f078aa2fbf756dcb6fdba12fef7b9c26"
     },
     {
       "kind": "client",
@@ -329,8 +329,8 @@
       "kind": "client",
       "path": "Texture/Equip/mt_twilight_atlas.wtm",
       "source": "client-overlay/Texture/Equip/mt_twilight_atlas.wtm",
-      "bytes": 3001981,
-      "sha256": "6efbfffbf44ae3844a7efe4c7b987a3085349f3a9bf84961da4a1b36f42fe49b"
+      "bytes": 2989911,
+      "sha256": "871152bfdd4e69f08e63e86305f6eb3d84fac869a0c6cb3dfe8b1df4e0e47d70"
     },
     {
       "kind": "client",
