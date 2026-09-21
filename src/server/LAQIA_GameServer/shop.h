@@ -74,3 +74,5 @@ int	ITEMCASHCNT( int itemNum );
 
 
 
+
+BOOL SHOP_BuyItemWide(sPDESC_DATA pPlayer, WORD shopNum, int itemNum, WORD cnt);

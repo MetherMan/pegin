@@ -5,6 +5,12 @@ $repoRoot = Split-Path $PSScriptRoot -Parent
 Set-Location -LiteralPath $repoRoot
 Add-Type -AssemblyName System.Net.Http
 Add-Type -AssemblyName System.IO.Compression.FileSystem
+function Get-RuntimeSha256([string]$Path) {
+    $stream = [IO.File]::OpenRead($Path)
+    $hasher = [Security.Cryptography.SHA256]::Create()
+    try { return [BitConverter]::ToString($hasher.ComputeHash($stream)).Replace('-','').ToLowerInvariant() }
+    finally { $hasher.Dispose(); $stream.Dispose() }
+}
 $manifest = Get-Content -LiteralPath (Join-Path $repoRoot 'runtime-manifest.json') -Raw | ConvertFrom-Json
 $runtimeRoot = Join-Path $repoRoot 'runtime'
 $cacheRoot = Join-Path $repoRoot '.cache'
@@ -23,7 +29,7 @@ if (!(Test-Path -LiteralPath $marker)) {
     foreach ($asset in $manifest.assets) {
         $zipPath = Join-Path $cacheRoot $asset.name
         if ($KitDirectory) { $zipPath = Join-Path $KitDirectory $asset.name }
-        if (!(Test-Path -LiteralPath $zipPath) -or (Get-FileHash -LiteralPath $zipPath -Algorithm SHA256).Hash.ToLower() -ne $asset.sha256) {
+        if (!(Test-Path -LiteralPath $zipPath) -or (Get-RuntimeSha256 $zipPath) -ne $asset.sha256) {
             if ($KitDirectory) { throw "Local kit missing or invalid: $($asset.name)" }
             $remoteAsset = $release.assets | Where-Object { $_.name -eq $asset.name } | Select-Object -First 1
             if (!$remoteAsset) { throw "Release asset missing: $($asset.name)" }
@@ -56,7 +62,7 @@ if (!(Test-Path -LiteralPath $marker)) {
                 }
             } finally { $http.Dispose();$handler.Dispose() }
         }
-        if ((Get-FileHash -LiteralPath $zipPath -Algorithm SHA256).Hash.ToLower() -ne $asset.sha256) { throw "Checksum mismatch: $($asset.name)" }
+        if ((Get-RuntimeSha256 $zipPath) -ne $asset.sha256) { throw "Checksum mismatch: $($asset.name)" }
         Write-Host "Extracting $($asset.name)..."
         $zip = [IO.Compression.ZipFile]::OpenRead($zipPath)
         try {

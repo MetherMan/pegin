@@ -50,7 +50,7 @@ struct SItemData
 
 	int				nId;					///< 아이템 아이디.
 	int				nType;					///< 아이템 타입.
-	BYTE			btCount;				///< 아이템 개수.
+	WORD			btCount;				///< 아이템 개수.
 	int				nSellPrice;				///< 아이템 판매가격
 	SItemInfoData*	pItemInfoData;			///< 아이템 데이터.
 	IW3DSprite*		pimgItem;				///< 아이템 이미지.
@@ -93,7 +93,7 @@ public:
 		const int nId, 
 		const int nType, 
 		SItemInfoData *pItemInfo,
-		const BYTE btCount = 0,
+		const WORD btCount = 0,
 		const int  nPrice = -1
 		);
 
@@ -101,7 +101,7 @@ public:
 		const int nId, 
 		const int nType, 
 		SItemInfoData *pItemInfo,
-		const BYTE btCount = 0,
+		const WORD btCount = 0,
 		const int  nPrice = -1
 		);
 

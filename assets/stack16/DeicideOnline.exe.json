@@ -1,0 +1,268 @@
+{
+  "original_sha256": "a085da09952eec18ba7ae51bbc66fb98d78ec25fd4351a302ac58e4139ba16ed",
+  "original_size": 503808,
+  "sha256": "93549d3b8475816bc0eec142e956a4a89dfd61588b564801580a9109f4ab7e5b",
+  "section_rva": 516096,
+  "undo": [
+    [
+      201427,
+      "8a5430744088542410"
+    ],
+    [
+      201388,
+      "42668b083bd1"
+    ],
+    [
+      203217,
+      "8a14304088542414"
+    ],
+    [
+      203172,
+      "42668b083bd1"
+    ],
+    [
+      214150,
+      "8a4c307440884c2408"
+    ],
+    [
+      214113,
+      "40668b113bc2"
+    ],
+    [
+      214374,
+      "8a4c307440884c2408"
+    ],
+    [
+      214337,
+      "40668b113bc2"
+    ],
+    [
+      215405,
+      "8a4c307440884c2410"
+    ],
+    [
+      215362,
+      "41668b023bc8"
+    ],
+    [
+      217260,
+      "8a4c307440884c240c"
+    ],
+    [
+      217217,
+      "40668b113bc2"
+    ],
+    [
+      216013,
+      "8a4c307440884c2410"
+    ],
+    [
+      216909,
+      "8a5430744088542414"
+    ],
+    [
+      242378,
+      "8a4c307440884c2414"
+    ],
+    [
+      164464,
+      "b808100000e8d6740200"
+    ],
+    [
+      327028,
+      "e857b8ffff"
+    ],
+    [
+      672,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0500"
+    ],
+    [
+      304,
+      "00e00700"
+    ],
+    [
+      252,
+      "00900600"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "receive quantity 0x4312d3 width=2",
+      "va": 4395731,
+      "original": "8a5430744088542410",
+      "replacement": "e928cd040090909090",
+      "target": 4710400,
+      "resume": 4395740,
+      "assembly": "movzx edx, word ptr [eax+esi+0x74]; add eax,2; mov dword ptr [esp+16],edx",
+      "code": "0fb754307483c00289542410e9cb32fbff"
+    },
+    {
+      "label": "quantity bounds 0x4312ac",
+      "va": 4395692,
+      "original": "42668b083bd1",
+      "replacement": "e96fcd040090",
+      "target": 4710432,
+      "resume": 4395698,
+      "assembly": "add edx,2; mov cx, word ptr [eax]; cmp edx, ecx",
+      "code": "83c202668b0839cae98532fbff"
+    },
+    {
+      "label": "receive quantity 0x4319d1 width=2",
+      "va": 4397521,
+      "original": "8a14304088542414",
+      "replacement": "e95ac60400909090",
+      "target": 4710448,
+      "resume": 4397529,
+      "assembly": "movzx edx, word ptr [eax+esi]; add eax,2; mov dword ptr [esp+20],edx",
+      "code": "0fb7143083c00289542414e99939fbff"
+    },
+    {
+      "label": "quantity bounds 0x4319a4",
+      "va": 4397476,
+      "original": "42668b083bd1",
+      "replacement": "e997c6040090",
+      "target": 4710464,
+      "resume": 4397482,
+      "assembly": "add edx,2; mov cx, word ptr [eax]; cmp edx, ecx",
+      "code": "83c202668b0839cae95d39fbff"
+    },
+    {
+      "label": "receive quantity 0x434486 width=2",
+      "va": 4408454,
+      "original": "8a4c307440884c2408",
+      "replacement": "e9c59b040090909090",
+      "target": 4710480,
+      "resume": 4408463,
+      "assembly": "movzx ecx, word ptr [eax+esi+0x74]; add eax,2; mov dword ptr [esp+8],ecx",
+      "code": "0fb74c307483c002894c2408e92e64fbff"
+    },
+    {
+      "label": "quantity bounds 0x434461",
+      "va": 4408417,
+      "original": "40668b113bc2",
+      "replacement": "e90a9c040090",
+      "target": 4710512,
+      "resume": 4408423,
+      "assembly": "add eax,2; mov dx, word ptr [ecx]; cmp eax, edx",
+      "code": "83c002668b1139d0e9ea63fbff"
+    },
+    {
+      "label": "receive quantity 0x434566 width=2",
+      "va": 4408678,
+      "original": "8a4c307440884c2408",
+      "replacement": "e9159b040090909090",
+      "target": 4710528,
+      "resume": 4408687,
+      "assembly": "movzx ecx, word ptr [eax+esi+0x74]; add eax,2; mov dword ptr [esp+8],ecx",
+      "code": "0fb74c307483c002894c2408e9de64fbff"
+    },
+    {
+      "label": "quantity bounds 0x434541",
+      "va": 4408641,
+      "original": "40668b113bc2",
+      "replacement": "e95a9b040090",
+      "target": 4710560,
+      "resume": 4408647,
+      "assembly": "add eax,2; mov dx, word ptr [ecx]; cmp eax, edx",
+      "code": "83c002668b1139d0e99a64fbff"
+    },
+    {
+      "label": "receive quantity 0x43496d width=2",
+      "va": 4409709,
+      "original": "8a4c307440884c2410",
+      "replacement": "e93e97040090909090",
+      "target": 4710576,
+      "resume": 4409718,
+      "assembly": "movzx ecx, word ptr [eax+esi+0x74]; add eax,2; mov dword ptr [esp+16],ecx",
+      "code": "0fb74c307483c002894c2410e9b568fbff"
+    },
+    {
+      "label": "quantity bounds 0x434942",
+      "va": 4409666,
+      "original": "41668b023bc8",
+      "replacement": "e98997040090",
+      "target": 4710608,
+      "resume": 4409672,
+      "assembly": "add ecx,2; mov ax, word ptr [edx]; cmp ecx, eax",
+      "code": "83c102668b0239c1e96b68fbff"
+    },
+    {
+      "label": "receive quantity 0x4350ac width=2",
+      "va": 4411564,
+      "original": "8a4c307440884c240c",
+      "replacement": "e92f90040090909090",
+      "target": 4710624,
+      "resume": 4411573,
+      "assembly": "movzx ecx, word ptr [eax+esi+0x74]; add eax,2; mov dword ptr [esp+12],ecx",
+      "code": "0fb74c307483c002894c240ce9c46ffbff"
+    },
+    {
+      "label": "quantity bounds 0x435081",
+      "va": 4411521,
+      "original": "40668b113bc2",
+      "replacement": "e97a90040090",
+      "target": 4710656,
+      "resume": 4411527,
+      "assembly": "add eax,2; mov dx, word ptr [ecx]; cmp eax, edx",
+      "code": "83c002668b1139d0e97a6ffbff"
+    },
+    {
+      "label": "receive quantity 0x434bcd width=1",
+      "va": 4410317,
+      "original": "8a4c307440884c2410",
+      "replacement": "e93e95040090909090",
+      "target": 4710672,
+      "resume": 4410326,
+      "assembly": "movzx ecx, byte ptr [eax+esi+0x74]; add eax,1; mov dword ptr [esp+16],ecx",
+      "code": "0fb64c307483c001894c2410e9b56afbff"
+    },
+    {
+      "label": "receive quantity 0x434f4d width=1",
+      "va": 4411213,
+      "original": "8a5430744088542414",
+      "replacement": "e9de91040090909090",
+      "target": 4710704,
+      "resume": 4411222,
+      "assembly": "movzx edx, byte ptr [eax+esi+0x74]; add eax,1; mov dword ptr [esp+20],edx",
+      "code": "0fb654307483c00189542414e9156efbff"
+    },
+    {
+      "label": "receive quantity 0x43b2ca width=1",
+      "va": 4436682,
+      "original": "8a4c307440884c2414",
+      "replacement": "e9812e040090909090",
+      "target": 4710736,
+      "resume": 4436691,
+      "assembly": "movzx ecx, byte ptr [eax+esi+0x74]; add eax,1; mov dword ptr [esp+20],ecx",
+      "code": "0fb64c307483c001894c2414e972d1fbff"
+    },
+    {
+      "label": "buy WORD quantity",
+      "va": 4358768,
+      "original": "b808100000e8d6740200",
+      "replacement": "e9fb5e05009090909090",
+      "target": 4710768,
+      "resume": 4358778,
+      "assembly": "mov eax, 0x1008; call 0x44f750; mov eax, dword ptr [esp + 0x100c]; push 12; mov ecx, eax; and eax, 0xff; shr ecx, 0x10; mov dword ptr [esp + 0xa], ecx; lea ecx, [esp + 4]; mov word ptr [esp + 8], ax; movzx eax,word ptr [esp+0x1014]; lea edx, [esp + 4]; push ecx; mov ecx, dword ptr [0x4779d8]; mov dword ptr [esp + 0x1008], edx; mov word ptr [esp + 0xa], 0x45; mov word ptr [esp+0x12],ax; mov word ptr [esp+8],12; call 0x449fe0; add esp, 0x1008; ret 8",
+      "code": "b808100000e8d615fdff8b84240c1000006a0c89c125ff000000c1e910894c240a8d4c240466894424080fb78424141000008d542404518b0dd87947008994240810000066c744240a4500668944241266c74424080c00e814befcff81c408100000c20800e9a0a0faff"
+    },
+    {
+      "label": "initialize local crash reporter",
+      "va": 4521332,
+      "original": "e857b8ffff",
+      "replacement": "e997e40200",
+      "target": 4710928,
+      "resume": 4521337,
+      "assembly": "pushfd; pushad; push 4710874; call dword ptr [0x46a0d8]; test eax,eax; jz done; push 4710889; push eax; call dword ptr [0x46a158]; test eax,eax; jz done; call eax; done: popad; popfd; call 0x44b5d0",
+      "code": "9c6068dae14700ff15d8a0460085c0741268e9e1470050ff1558a1460085c07402ffd0619de896d3fcffe93a1bfdff"
+    }
+  ]
+}

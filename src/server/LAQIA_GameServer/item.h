@@ -36,6 +36,10 @@
 
 #ifndef __ITEM_H__
 #define __ITEM_H__
+#include "stack_limits.h"
+int GetItemStackLimit(sPITEM_DATA item);
+int GetItemStackCount(sPITEM_DATA item);
+void ConsumeOneEnchantCard(sPDESC_DATA player, sPITEM_DATA card);
 
 #define dMAX_ITEMINFO		20480
 
@@ -113,7 +117,7 @@
 
 #define dMAP_ITEM_LIFE			3			// 맵 위의 아이템 수명 ( 분단위 )
 
-#define dMAX_POTION_CNT			100			// 포션 CNT
+#define dMAX_POTION_CNT			10000			// 포션 CNT
 
 #define dMAX_GARBAGE_CNT			90			//창고최대보관		
 

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "longbows": 5,
+  "staffs": 5,
+  "separate_unique_pngs": 10,
+  "images": [
+    {
+      "file": "longbow-01.png",
+      "sha256": "5436afb5da7e2a87ac979ab8feb14feb755a371c5afdc6739645cf00d2544ab0"
+    },
+    {
+      "file": "longbow-02.png",
+      "sha256": "1137c967847041948e57dc86f96f077d76b6a9117713865769dd33da85683fef"
+    },
+    {
+      "file": "longbow-03.png",
+      "sha256": "e14da73dff3af58ef65f1a9aae3b6d902be3ffced2d37500080be395a034b40b"
+    },
+    {
+      "file": "longbow-04.png",
+      "sha256": "5fd6ec462d95ed3731840185a6523d39c10bc0e49fc50e6704b3760042d79d78"
+    },
+    {
+      "file": "longbow-05.png",
+      "sha256": "65cfc6f9ed38d548afb72acfe27eb1f2404ddb60953f52b4061ffded873896dd"
+    },
+    {
+      "file": "staff-01.png",
+      "sha256": "0a28e744212cc9b215deb9b130f5c46b4a111d0daed0a509313f7419a6455fb4"
+    },
+    {
+      "file": "staff-02.png",
+      "sha256": "c1ffc98c0c6d5ccde0ae91d31494fe6b693d527518859f7a7e70fcc68a7cb34a"
+    },
+    {
+      "file": "staff-03.png",
+      "sha256": "c8c274ef91f9dc1ce095e508c76926530f8b88cd385c799c68f699e8b5403970"
+    },
+    {
+      "file": "staff-04.png",
+      "sha256": "7f2035194aab8a8cb59e66674aa941980d9649318bd4b25e9db1088c069bb1c4"
+    },
+    {
+      "file": "staff-05.png",
+      "sha256": "2f7953bd2cfff0ea62421f6615aab97f9352a4b4fa79e7b20bcd32f73a772bfc"
+    }
+  ]
+}

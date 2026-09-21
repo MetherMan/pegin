@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "mode": "normal",
+      "exit_code": "0x0",
+      "files": 0
+    },
+    {
+      "mode": "handled",
+      "exit_code": "0x0",
+      "files": 0
+    },
+    {
+      "mode": "access",
+      "exit_code": "0xc0000005",
+      "files": 2
+    },
+    {
+      "mode": "thread",
+      "exit_code": "0xc0000005",
+      "files": 2
+    },
+    {
+      "mode": "stack",
+      "exit_code": "0xc00000fd",
+      "files": 2
+    }
+  ],
+  "sha256": "32bbe03f4bbd4695db9f3e36c011d8bb9407aa00bf6d63d37aa1f564f3c73904",
+  "scope": "Isolated native x86 fixtures, including real unhandled access violations and stack overflow. Not a reproduction of the reported boss crash."
+}

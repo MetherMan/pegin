@@ -1,0 +1,274 @@
+{
+  "original_sha256": "4669f6c03689a6255b19ddee8317997847c83143e0c293aab0c3dfe9d369894b",
+  "original_size": 495616,
+  "sha256": "77cc2c2fd5cef4886925b9b2e525e0be72c11a3ee9ceeaec609779c4a47f2642",
+  "section_rva": 507904,
+  "undo": [
+    [
+      39461,
+      "8a542454c6450800"
+    ],
+    [
+      39489,
+      "885508895d10"
+    ],
+    [
+      40210,
+      "8a5424588b5c2454"
+    ],
+    [
+      40247,
+      "885508895d10"
+    ],
+    [
+      143788,
+      "8a54240c5657885008"
+    ],
+    [
+      144271,
+      "8a4c242081fb71270000"
+    ],
+    [
+      144639,
+      "8a4c242081ff71270000"
+    ],
+    [
+      145221,
+      "8a4c241881fb71270000"
+    ],
+    [
+      145573,
+      "8a4c241881fb71270000"
+    ],
+    [
+      144327,
+      "84c97505c644242001"
+    ],
+    [
+      144695,
+      "84c97505c644242001"
+    ],
+    [
+      145277,
+      "84c97505c644241801"
+    ],
+    [
+      145629,
+      "84c97505c644241801"
+    ],
+    [
+      31458,
+      "8a400884c0"
+    ],
+    [
+      31465,
+      "25ff000000"
+    ],
+    [
+      31992,
+      "8a470884c0"
+    ],
+    [
+      32039,
+      "8a4f08518d542418"
+    ],
+    [
+      152341,
+      "b863000000"
+    ],
+    [
+      792,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0800"
+    ],
+    [
+      304,
+      "00c00700"
+    ],
+    [
+      252,
+      "00d80500"
+    ],
+    [
+      312,
+      "bfab0700"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "item allocation quantity",
+      "va": 268474917,
+      "original": "8a542454c6450800",
+      "replacement": "e9d6250700909090",
+      "target": 268943360,
+      "resume": 268474925,
+      "assembly": "movzx edx,word ptr [esp+0x54]; mov word ptr [ebp+8],0",
+      "code": "0fb754245466c745080000e91ddaf8ff"
+    },
+    {
+      "label": "item store quantity",
+      "va": 268474945,
+      "original": "885508895d10",
+      "replacement": "e9ca25070090",
+      "target": 268943376,
+      "resume": 268474951,
+      "assembly": "mov word ptr [ebp+8],dx; mov dword ptr [ebp+0x10],ebx",
+      "code": "66895508895d10e92bdaf8ff"
+    },
+    {
+      "label": "temporary item quantity",
+      "va": 268475666,
+      "original": "8a5424588b5c2454",
+      "replacement": "e909230700909090",
+      "target": 268943392,
+      "resume": 268475674,
+      "assembly": "movzx edx,word ptr [esp+0x58]; mov ebx,dword ptr [esp+0x54]",
+      "code": "0fb75424588b5c2454e9ecdcf8ff"
+    },
+    {
+      "label": "temporary item store quantity",
+      "va": 268475703,
+      "original": "885508895d10",
+      "replacement": "e9f422070090",
+      "target": 268943408,
+      "resume": 268475709,
+      "assembly": "mov word ptr [ebp+8],dx; mov dword ptr [ebp+0x10],ebx",
+      "code": "66895508895d10e901ddf8ff"
+    },
+    {
+      "label": "update UI quantity",
+      "va": 268579244,
+      "original": "8a54240c5657885008",
+      "replacement": "e98f8e050090909090",
+      "target": 268943424,
+      "resume": 268579253,
+      "assembly": "movzx edx,word ptr [esp+0xc]; push esi; push edi; mov word ptr [eax+8],dx",
+      "code": "0fb754240c565766895008e96571faff"
+    },
+    {
+      "label": "UI argument 0x1002338f",
+      "va": 268579727,
+      "original": "8a4c242081fb71270000",
+      "replacement": "e9bc8c05009090909090",
+      "target": 268943440,
+      "resume": 268579737,
+      "assembly": "movzx ecx,word ptr [esp+32]; cmp ebx,0x2771",
+      "code": "0fb74c242081fb71270000e93973faff"
+    },
+    {
+      "label": "UI argument 0x100234ff",
+      "va": 268580095,
+      "original": "8a4c242081ff71270000",
+      "replacement": "e95c8b05009090909090",
+      "target": 268943456,
+      "resume": 268580105,
+      "assembly": "movzx ecx,word ptr [esp+32]; cmp edi,0x2771",
+      "code": "0fb74c242081ff71270000e99974faff"
+    },
+    {
+      "label": "UI argument 0x10023745",
+      "va": 268580677,
+      "original": "8a4c241881fb71270000",
+      "replacement": "e9268905009090909090",
+      "target": 268943472,
+      "resume": 268580687,
+      "assembly": "movzx ecx,word ptr [esp+24]; cmp ebx,0x2771",
+      "code": "0fb74c241881fb71270000e9cf76faff"
+    },
+    {
+      "label": "UI argument 0x100238a5",
+      "va": 268581029,
+      "original": "8a4c241881fb71270000",
+      "replacement": "e9d68705009090909090",
+      "target": 268943488,
+      "resume": 268581039,
+      "assembly": "movzx ecx,word ptr [esp+24]; cmp ebx,0x2771",
+      "code": "0fb74c241881fb71270000e91f78faff"
+    },
+    {
+      "label": "zero potion normalization 0x100233c7",
+      "va": 268579783,
+      "original": "84c97505c644242001",
+      "replacement": "e9c48c050090909090",
+      "target": 268943504,
+      "resume": 268579792,
+      "assembly": "test cx,cx; jnz 0x100233d0; mov dword ptr [esp+32],1",
+      "code": "6685c90f853773faffc744242001000000e92a73faff"
+    },
+    {
+      "label": "zero potion normalization 0x10023537",
+      "va": 268580151,
+      "original": "84c97505c644242001",
+      "replacement": "e9748b050090909090",
+      "target": 268943536,
+      "resume": 268580160,
+      "assembly": "test cx,cx; jnz 0x10023540; mov dword ptr [esp+32],1",
+      "code": "6685c90f858774faffc744242001000000e97a74faff"
+    },
+    {
+      "label": "zero potion normalization 0x1002377d",
+      "va": 268580733,
+      "original": "84c97505c644241801",
+      "replacement": "e94e89050090909090",
+      "target": 268943568,
+      "resume": 268580742,
+      "assembly": "test cx,cx; jnz 0x10023786; mov dword ptr [esp+24],1",
+      "code": "6685c90f85ad76faffc744241801000000e9a076faff"
+    },
+    {
+      "label": "zero potion normalization 0x100238dd",
+      "va": 268581085,
+      "original": "84c97505c644241801",
+      "replacement": "e90e88050090909090",
+      "target": 268943600,
+      "resume": 268581094,
+      "assembly": "test cx,cx; jnz 0x100238e6; mov dword ptr [esp+24],1",
+      "code": "6685c90f85ed77faffc744241801000000e9e077faff"
+    },
+    {
+      "label": "count matching inventory items",
+      "va": 268466914,
+      "original": "8a400884c0",
+      "replacement": "e929460700",
+      "target": 268943632,
+      "resume": 268466919,
+      "assembly": "movzx eax,word ptr [eax+8]; test eax,eax",
+      "code": "0fb7400885c0e9ccb9f8ff"
+    },
+    {
+      "label": "count sum mask",
+      "va": 268466921,
+      "original": "25ff000000",
+      "replacement": "25ffff0000"
+    },
+    {
+      "label": "draw count visibility",
+      "va": 268467448,
+      "original": "8a470884c0",
+      "replacement": "e923440700",
+      "target": 268943648,
+      "resume": 268467453,
+      "assembly": "movzx eax,word ptr [edi+8]; test eax,eax",
+      "code": "0fb7470885c0e9d2bbf8ff"
+    },
+    {
+      "label": "draw full quantity",
+      "va": 268467495,
+      "original": "8a4f08518d542418",
+      "replacement": "e904440700909090",
+      "target": 268943664,
+      "resume": 268467503,
+      "assembly": "movzx ecx,word ptr [edi+8]; push ecx; lea edx,[esp+0x18]",
+      "code": "0fb74f08518d542418e9f1bbf8ff"
+    },
+    {
+      "label": "shop purchase maximum 9999",
+      "va": 268587797,
+      "original": "b863000000",
+      "replacement": "b80f270000"
+    }
+  ]
+}

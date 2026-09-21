@@ -10,9 +10,9 @@
   "source": "concept_texture.png",
   "revision": "approved design 04",
   "construction_transform": {
-    "pixel_scale": 0.0014646333377416202,
+    "pixel_scale": 0.0014652913474092048,
     "x_origin": 487,
-    "y_offset": 2.131453676431277
+    "y_offset": 2.1319538617488316
   },
   "not_in_game": false,
   "construction": "Extruded approved 04 silhouette with genuine upper slit and circular aperture, irregular integrated auxiliary cutters, textured sidewalls, cylindrical two-hand grip and crescent pommel. One rigid animation mesh in native export.",

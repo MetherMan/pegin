@@ -867,6 +867,7 @@ BOOL ItemToInventory( sPDESC_DATA pPlayer, sPITEM_DATA pItem , sPCHECK_INVEN pCh
 		return 0;
 	}
 	
+	if (GetItemStackLimit(pItem) > 1 && pItem->exVal[0] < 1) pItem->exVal[0] = 1;
 	pPlayer->invenIdx++;
 	pItem->idxNum = pPlayer->invenIdx;
 	pItem->invenPage = pCheckInven->page;
@@ -884,7 +885,7 @@ BOOL ItemToInventory( sPDESC_DATA pPlayer, sPITEM_DATA pItem , sPCHECK_INVEN pCh
 	}
 
 	int exVal = 0;
-	if( GET_ITEM_TYPE( pItem ) == dITEMTYPE_POTION || GET_ITEM_TYPE( pItem ) == dITEMTYPE_CONTAINER )
+	if( GetItemStackLimit( pItem ) > 1 )
 	{
 		exVal = pItem->exVal[0];
 	}
@@ -903,7 +904,7 @@ BOOL ItemToInventory( sPDESC_DATA pPlayer, sPITEM_DATA pItem , sPCHECK_INVEN pCh
 	PutByte( g_Packet, pItem->invenPage, g_nPos );
 	PutByte( g_Packet, pItem->invenX, g_nPos );
 	PutByte( g_Packet, pItem->invenY, g_nPos );
-	PutByte( g_Packet, exVal, g_nPos );	// 수량
+	PutWord( g_Packet, exVal, g_nPos );	// 수량
 	PutSize( g_Packet, g_nPos );
 	
 	SendData( pPlayer, g_Packet, g_nPos );
@@ -1401,7 +1402,7 @@ void ItemToGarbage( sPDESC_DATA pPlayer, sPITEM_DATA pItem )
 	PutWord( g_Packet, dPACKET_INSERT_TO_GARBAGE, g_nPos );
 	PutWord( g_Packet, pItem->itemNum, g_nPos );
 	PutInteger( g_Packet, pItem->idxNum, g_nPos );
-	PutByte( g_Packet, pItem->exVal[0], g_nPos );
+	PutWord( g_Packet, GetItemStackCount(pItem), g_nPos );
 	
 	PutSize( g_Packet, g_nPos );
 
@@ -1512,7 +1513,7 @@ sPITEM_DATA FindPotionItem( sPDESC_DATA pPlayer, sPITEM_DATA pItem )
 	LIST_WHILE( pPlayer->inven, item, next_item , i_next, WMgr );
 	if( item->itemNum == pItem->itemNum )
 	{
-		if( ( item->exVal[0] + MIN( pItem->exVal[0], 1 ) ) < dMAX_POTION_CNT )
+		if( GetItemStackCount(item) + GetItemStackCount(pItem) <= GetItemStackLimit(pItem) )
 			return item;
 	}
 	LIST_WHILEEND( pPlayer->inven, item, next_item );
@@ -1610,7 +1611,7 @@ void ClearPlayerItem( sPDESC_DATA pPlayer )
 	LIST_WHILE( pPlayer->inven, item, item_next, i_next, WMgr );
 
 	// 포션일 경우 수량 저장
-	if( GET_ITEM_TYPE( item ) == dITEMTYPE_POTION || GET_ITEM_TYPE( item ) == dITEMTYPE_CONTAINER )
+	if( GetItemStackLimit( item ) > 1 )
 		ITEMDB_UpdateInvenItem( pPlayer, item );
 	
 	INSERT_ITEM_TO_MEMORY( item );
@@ -1682,7 +1683,7 @@ void SendPlayerItemInfo( sPDESC_DATA pPlayer )
 
 	LIST_WHILE( pPlayer->inven, item, next_item, i_next, WMgr2 );
 	int exVal = 0;
-	if( GET_ITEM_TYPE( item ) == dITEMTYPE_POTION || GET_ITEM_TYPE( item ) == dITEMTYPE_CONTAINER )
+	if( GetItemStackLimit( item ) > 1 )
 	{
 		exVal = item->exVal[0];
 	}
@@ -1696,7 +1697,7 @@ void SendPlayerItemInfo( sPDESC_DATA pPlayer )
 	PutByte( g_Packet, item->invenPage, g_nPos );
 	PutByte( g_Packet, item->invenX, g_nPos );
 	PutByte( g_Packet, item->invenY, g_nPos );
-	PutByte( g_Packet, exVal, g_nPos );	// 수량
+	PutWord( g_Packet, exVal, g_nPos );	// 수량
 	//PutByte( g_Packet, GET_ITEM_TYPE( item ) == dITEMTYPE_POTION ? item->exVal[0] : 0 , g_nPos );	// 수량
 
 	LIST_WHILEEND( pPlayer->inven, item, next_item );
@@ -2359,15 +2360,16 @@ void UnFillInvenArray( sPDESC_DATA pPlayer, BYTE page, BYTE invenX, BYTE invenY 
 //
 void SendUpdatePotionCnt( sPDESC_DATA pPlayer, sPITEM_DATA pItem )
 {
-	if( GET_ITEM_TYPE( pItem ) != dITEMTYPE_POTION )
+	if( GetItemStackLimit(pItem) <= 1 )
 		return;
 
 	g_nPos = 2;
 	PutWord( g_Packet, dPACKET_UPDATE_POTIONCNT, g_nPos );
 	PutInteger( g_Packet, pItem->idxNum, g_nPos );
-	PutByte( g_Packet, (BYTE)pItem->exVal[0], g_nPos );
+	PutWord( g_Packet, GetItemStackCount(pItem), g_nPos );
 	PutSize( g_Packet, g_nPos );
 	SendData( pPlayer , g_Packet, g_nPos );
+	ITEMDB_UpdateInvenItem(pPlayer,pItem);
 }
 
 
@@ -2384,7 +2386,7 @@ void SendUpdateEnchantCnt( sPDESC_DATA pPlayer, sPITEM_DATA pItem )
 	g_nPos = 2;
 	PutWord( g_Packet, dPACKET_UPDATE_CARDCNT, g_nPos );
 	PutInteger( g_Packet, pItem->idxNum, g_nPos );
-	PutByte( g_Packet, (BYTE)pItem->exVal[0], g_nPos );
+	PutWord( g_Packet, GetItemStackCount(pItem), g_nPos );
 	PutSize( g_Packet, g_nPos );
 	SendData( pPlayer , g_Packet, g_nPos );
 }
@@ -5754,3 +5756,26 @@ void ClearSmith( sPDESC_DATA pPlayer )
 
 //
 
+
+int GetItemStackLimit(sPITEM_DATA item)
+{
+    return item ? LaqiaStackLimit(GET_ITEM_TYPE(item),item->itemNum) : 1;
+}
+int GetItemStackCount(sPITEM_DATA item)
+{
+    return item ? LaqiaStackCount(GET_ITEM_TYPE(item),item->itemNum,item->exVal[0]) : 0;
+}
+void ConsumeOneEnchantCard(sPDESC_DATA player, sPITEM_DATA card)
+{
+    if (!player || !card) return;
+#ifdef dUSE_ITEMLOG
+    ITEMLOG_ItemLog(player,NULL,card,ITEMLOG_ACT_INCHENT_REMOVE);
+#endif
+    if (GetItemStackCount(card)>1) {
+        --card->exVal[0];
+        SendUpdatePotionCnt(player,card);
+    } else {
+        ItemFromInventory(player,card);
+        INSERT_ITEM_TO_MEMORY(card);
+    }
+}

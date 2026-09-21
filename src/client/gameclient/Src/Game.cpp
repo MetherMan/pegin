@@ -2362,7 +2362,7 @@ void CGame::OnEventBuyItem( DWORD dwParam1, DWORD dwParam2 )
 {
 	int			nItemType	= dwParam1 >> 16;		// 구입할 아이템
 	WORD		wShop		= dwParam1 & 0xFF;		// SHOP
-	BYTE		btCnt		= dwParam2;				// 수량(포션용) from sk8snow
+	WORD		btCnt		= dwParam2;				// 수량(포션용) from sk8snow
 
 	CPacket		sendPacket;
 	sendPacket.Tag( dPACKET_BUY_ITEM )

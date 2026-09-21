@@ -116,7 +116,7 @@ BOOL CUIItemMgr::InsertItem(
 	const int		nId,			///< [IN] 아이템 아이디
 	const int		nType,			///< [IN] 아이템 타입 인덱스
 	SItemInfoData	*pItemInfo,		///< [IN] 아이템 정보
-	const BYTE		btCount,		///< [IN] 아이템 개수
+	const WORD		btCount,		///< [IN] 아이템 개수
 	const int		nSellPrice		///< [IN] 아이템 가격
 	)
 {
@@ -196,7 +196,7 @@ BOOL CUIItemMgr::InsertItemInTemp(
 	const int		nId,			///< [IN] 아이템 아이디
 	const int		nType,			///< [IN] 아이템 타입 인덱스
 	SItemInfoData	*pItemInfo,		///< [IN] 아이템 정보
-	BYTE			btCount,		///< [IN] 아이템 개수
+	WORD			btCount,		///< [IN] 아이템 개수
 	const int		nSellPrice		///< [IN] 아이템 가격
 	)
 {

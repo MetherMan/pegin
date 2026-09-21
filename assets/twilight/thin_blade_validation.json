@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "native_blade_thickness": 0.003907443024218082,
+  "reference_blade_thickness": {
+    "red_knight_greatsword": 0.021479619666934013,
+    "black_knight_greatsword": 0.03514157235622406
+  },
+  "textured_side_triangles": 2168,
+  "minimum_side_uv_area": 1.087103456143268e-07,
+  "side_texture_mean": 92.39544895448954,
+  "side_texture_std": 15.500361586114206,
+  "native_sha256": "7529dda6c387db102fe82eb1f1950a6c910d2af4bde706ea0c6627ea55104f9e",
+  "preview_front_and_side_reviewed": true,
+  "in_game_visual_test": false
+}

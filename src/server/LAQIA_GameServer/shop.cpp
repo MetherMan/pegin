@@ -432,7 +432,7 @@ void SHOP_Result( sPDESC_DATA pPlayer, BYTE result )
 // Date: 2003-05-05
 // Description: 
 //
-void SHOP_BuyItem( sPDESC_DATA pPlayer, WORD shopNum, int itemNum , BYTE cnt )
+BOOL SHOP_BuyItemWide( sPDESC_DATA pPlayer, WORD shopNum, int itemNum , WORD cnt )
 {
 #ifdef dUSE_AUTO_SHOP
 	shopNum = GET_CURR_OPENSHOP( pPlayer );
@@ -448,18 +448,31 @@ void SHOP_BuyItem( sPDESC_DATA pPlayer, WORD shopNum, int itemNum , BYTE cnt )
 		if( !FindShopItem( shopNum, itemNum ) )
 		{
 			SHOP_Result( pPlayer, 0 );
-			return;
+			return 0;
 		}
 	}
 
 	if( !IS_VALID_ITEM( itemNum ) )
-		return;
+		return 0;
 
+// Reject impossible quantities before allocating an item or charging money.
+    const int stackLimit=LaqiaStackLimit(GET_ITEM_TYPE2(itemNum),itemNum);
+    if(cnt==0) cnt=1;
+    int purchaseCount=1;
+    if(GET_ITEM_TYPE2(itemNum)==dITEMTYPE_POTION || GET_ITEM_TYPE2(itemNum)==dITEMTYPE_CONTAINER)
+        purchaseCount=ITEMCASHCNT(itemNum)>0?ITEMCASHCNT(itemNum):cnt;
+    if(purchaseCount>stackLimit) return 0;
+    sPITEM_DATA stackTarget=NULL;
+    if(stackLimit>1) for(sPITEM_DATA candidate=pPlayer->inven;candidate;candidate=candidate->i_next)
+        if(candidate->itemNum==itemNum && GetItemStackCount(candidate)+purchaseCount<=stackLimit) {stackTarget=candidate;break;}
+
+    if (stackLimit>1 && (cnt<1 || cnt>stackLimit)) return 0;
+    if (stackLimit>1 && (long long)GET_ITEM_PRICE2(itemNum)*cnt>2147483647LL) return 0;
 #ifdef USE_ITEM_WEIGHT
 	if( GET_CURRITEM_WEIGHT( pPlayer ) + ( GET_ITEM_WEIGHT2( itemNum ) * MIN( cnt, 1 ) ) > CalsAllowTotalWeight( pPlayer ) )
 	{
 		SendSystemMsg( pPlayer, g_LANG_STR[180] );
-		return;
+		return 0;
 	}
 #endif
 
@@ -483,14 +496,14 @@ if( itemNum == 11996 ||
 		if( !CheckEmptyInven( pPlayer, &checkInven ) )
 		{
 			SendSystemMsg( pPlayer, g_LANG_STR[19] );
-			return;
+			return 0;
 		}
 
 		if( GET_CASHMONEY( pPlayer ) < itemPrice )
 		{
 			// 잔액 부족
 			SendSystemMsg( pPlayer, "Cash amount is insufficient." );
-			return;
+			return 0;
 		}
 
 		sPITEM_DATA buyItem =  CreateItem( itemNum , "SHOP_BuyItem()", __FILE__, __LINE__ );
@@ -498,7 +511,7 @@ if( itemNum == 11996 ||
 		if( !buyItem )
 		{
 			SHOP_Result( pPlayer, 2 );
-			return;
+			return 0;
 		}
 
 		GET_CASHMONEY( pPlayer ) -= itemPrice;
@@ -535,10 +548,10 @@ if( itemNum == 11996 ||
 			itemPrice += itemTax;
 		}
 
-		if( !CheckEmptyInven( pPlayer, &checkInven ) )
+		if( !CheckEmptyInven( pPlayer, &checkInven ) && !stackTarget )
 		{
 			SendSystemMsg( pPlayer, g_LANG_STR[19] );
-			return;
+			return 0;
 		}
 
 		if( GET_ITEM_TYPE2( itemNum ) == dITEMTYPE_POTION || GET_ITEM_TYPE2( itemNum ) == dITEMTYPE_CONTAINER )
@@ -547,14 +560,14 @@ if( itemNum == 11996 ||
 			{
 				// 잔액 부족
 				SHOP_Result( pPlayer, 1 );
-				return;
+				return 0;
 			}
 		}
 		else if( GET_MONEY( pPlayer ) < itemPrice )
 		{
 			// 잔액 부족
 			SHOP_Result( pPlayer, 1 );
-			return;
+			return 0;
 		}
 
 		// 세금 계산
@@ -573,7 +586,7 @@ if( itemNum == 11996 ||
 			if( FindItemFromInvenByNum( pPlayer, itemNum ) )
 			{
 				SendSystemMsg( pPlayer, g_LANG_STR[54] );
-				return;
+				return 0;
 			}
 		}
 
@@ -582,7 +595,7 @@ if( itemNum == 11996 ||
 		if( !buyItem )
 		{
 			SHOP_Result( pPlayer, 2 );
-			return;
+			return 0;
 		}
 
 		//여기서 캐쉬아이템 체크
@@ -598,8 +611,8 @@ if( itemNum == 11996 ||
 
 			else
 			{
-				if( cnt >= dMAX_POTION_CNT )
-					return;
+				if( cnt > stackLimit )
+					return 0;
 
 				itemPrice = ( itemPrice * MIN( cnt, 1 ) );
 				GET_MONEY( pPlayer ) -= itemPrice;
@@ -615,7 +628,12 @@ if( itemNum == 11996 ||
 			}
 			GET_MONEY( pPlayer ) -= itemPrice;
 		}
-		ItemToInventory( pPlayer, buyItem , &checkInven );
+		if(stackTarget) {
+            stackTarget->exVal[0]=GetItemStackCount(stackTarget)+purchaseCount;
+            SendUpdatePotionCnt(pPlayer,stackTarget);
+            INSERT_ITEM_TO_MEMORY(buyItem);
+            buyItem=stackTarget;
+        } else ItemToInventory( pPlayer, buyItem , &checkInven );
 
 #ifdef dUSE_ITEMLOG
 		ITEMLOG_ItemLog( pPlayer, NULL, buyItem, ITEMLOG_ACT_BUYITEM );
@@ -624,8 +642,9 @@ if( itemNum == 11996 ||
 		DATASERV_SendUpdateMoney( pPlayer );
 		UpdateMoney( pPlayer );
 		SendSystemMsg( pPlayer, "You paid the %d shild as tax.", itemTax );
-		SendSystemMsg( pPlayer, "You have paid a total of %d shild to %s items.", GET_ITEM_HNAME2( itemNum ), itemPrice );
+		SendSystemMsg( pPlayer, "You have paid a total of %d shild to %s items.", itemPrice, GET_ITEM_HNAME2( itemNum ) );
 	}
+    return 1;
 }
 
 
@@ -864,3 +883,5 @@ int ITEMCASHCNT( int itemNum )
 //
 
 
+
+void SHOP_BuyItem(sPDESC_DATA p, WORD shop, int item, BYTE count) { SHOP_BuyItemWide(p,shop,item,count); }

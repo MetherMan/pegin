@@ -169,13 +169,24 @@ static void gmCash(sPDESC_DATA actor,sPDESC_DATA p,int amount){
 static void gmGrant(sPDESC_DATA actor,sPDESC_DATA p,const GMRequest& r){
  int item=r.kind==GM_CARD?(r.subtype==1?dENCHANT_CARD_WEAPON:dENCHANT_CARD_ARMOR):(r.kind==GM_HORSE?10187+r.subtype:r.subtype);
  if(item>=dMAX_ITEMINFO||!IS_VALID_ITEM(item)){SendSystemMsg(actor,"[GM 오류] 존재하지 않는 아이템 번호입니다.");gmUsage(actor,r.kind);return;}
- int empty=CountEmptyInven(p);
- if(empty<r.value){SendSystemMsg(actor,(char*)"[GM 오류] 인벤 빈칸 %d개, 필요한 칸 %d개. 지급하지 않았습니다.",empty,r.value);gmUsage(actor,r.kind);return;}
+ int empty=CountEmptyInven(p),limit=LaqiaStackLimit(GET_ITEM_TYPE2(item),item),capacity=empty*limit;
+ if(limit>1)for(sPITEM_DATA existing=p->inven;existing;existing=existing->i_next)
+  if(existing->itemNum==item&&GetItemStackCount(existing)<limit)capacity+=limit-GetItemStackCount(existing);
+ if(capacity<r.value){SendSystemMsg(actor,(char*)"[GM 오류] 인벤에 %d개만 더 담을 수 있습니다. 지급하지 않았습니다.",capacity);gmUsage(actor,r.kind);return;}
  int done=0;
- for(;done<r.value;done++){
+ if(limit>1)for(sPITEM_DATA existing=p->inven;existing&&done<r.value;existing=existing->i_next){
+  if(existing->itemNum!=item)continue;
+  int room=limit-GetItemStackCount(existing),amount=r.value-done;
+  if(room<amount)amount=room;if(amount<=0)continue;
+  existing->exVal[0]=GetItemStackCount(existing)+amount;done+=amount;SendUpdatePotionCnt(p,existing);
+ }
+ for(;done<r.value;){
   sCHECK_INVEN slot;if(!CheckEmptyInven(p,&slot))break;
   sPITEM_DATA itemData=CreateItem(item,(char*)"LocalGM",(char*)__FILE__,__LINE__);if(!itemData)break;
+  int amount=r.value-done;if(amount>limit)amount=limit;
+  if(limit>1)itemData->exVal[0]=amount;
   if(!ItemToInventory(p,itemData,&slot))break;
+  done+=amount;
  }
  SendSystemMsg(actor,(char*)"[GM 지급] %s: %s %d/%d개",GET_NAME(p),g_ItemInfo[item]->hName,done,r.value);
  if(actor!=p)SendSystemMsg(p,(char*)"[GM] %s %d개를 받았습니다.",g_ItemInfo[item]->hName,done);
@@ -241,7 +252,7 @@ static BOOL gmBuyFromShelf(sPDESC_DATA p){
  if(pos<4||pos+2>size||size>sizeof(p->TemprecvBuff))return 0;
  memcpy(&shop,p->TemprecvBuff+pos,2);if(shop!=gmShelfShop)return gmOriginalBuy(p);
  if(!gmShelfAllowed(p)){SendSystemMsg(p,"[GM 오류] 운영자 전용 창고입니다.");return 1;}
- if(pos+7!=size){SendSystemMsg(p,"[GM 오류] 잘못된 창고 요청입니다.");return 1;}
+ if(pos+8!=size&&pos+7!=size){SendSystemMsg(p,"[GM 오류] 잘못된 창고 요청입니다.");return 1;}
  std::map<sPDESC_DATA,GMShelf>::iterator it=gmShelves.find(p);
  if(it==gmShelves.end()||strcmp(it->second.account,GET_ID(p))){SendSystemMsg(p,"[GM 오류] /재뽕 창고 명령으로 목록을 먼저 여세요.");return 1;}
  int item=0;memcpy(&item,p->TemprecvBuff+pos+2,4);GMShelf& shelf=it->second;

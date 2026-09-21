@@ -115,7 +115,7 @@ int CW3DUInterface::GetOnItemType( int nPart )
 /**
  * 아이템 내용 수정.
  */
-BOOL CW3DUInterface::UpdateItemData( const int nId, const BYTE btCount )
+BOOL CW3DUInterface::UpdateItemData( const int nId, const WORD btCount )
 {
 	SItemData*		pItemData = m_ItemMgr.FindItem( nId );
 	if( !pItemData )
@@ -208,7 +208,7 @@ BOOL CW3DUInterface::InsertInventory(
 	const BYTE	btPage,		///< [IN]
 	const BYTE	btCol,		///< [IN]
 	const BYTE	btRow,		///< [IN]
-	const BYTE	btCnt,		///< [IN]
+	const WORD	btCnt,		///< [IN]
 	BOOL bSave				///< [IN]
 	)
 {
@@ -219,7 +219,7 @@ BOOL CW3DUInterface::InsertInventory(
 		return FALSE;
 	} //if
 
-	BYTE		btItemCount = btCnt;
+	WORD		btItemCount = btCnt;
 	if( ISPOTION( nType ) && btCnt == 0 )
 	{
 		btItemCount = 1;
@@ -303,7 +303,7 @@ BOOL CW3DUInterface::InsertSerIntInventory( const int	nId,		///< [IN]
 											const BYTE	btPage,		///< [IN]
 											const BYTE	btCol,		///< [IN]
 											const BYTE	btRow,		///< [IN]
-											const BYTE	btCnt,		///< [IN]
+											const WORD	btCnt,		///< [IN]
 											BOOL bSave )				///< [IN]
 {
 	SItemInfoData*	pItemInfoDat = m_pItemInfoMgr->GetItemInfo( nType );
@@ -313,7 +313,7 @@ BOOL CW3DUInterface::InsertSerIntInventory( const int	nId,		///< [IN]
 		return FALSE;
 	} //if
 
-	BYTE		btItemCount = btCnt;
+	WORD		btItemCount = btCnt;
 	if( ISPOTION( nType ) && btCnt == 0 )
 	{
 		btItemCount = 1;
@@ -409,7 +409,7 @@ BOOL CW3DUInterface::RemoveSerInventory( int nId )
 BOOL CW3DUInterface::InsertItemInStorage(
 	const int	nId,		///< [IN]
 	const int	nType,		///< [IN]
-	const BYTE	btCnt		///< [IN]
+	const WORD	btCnt		///< [IN]
 	)
 {
 	SItemInfoData*	pItemInfoDat = m_pItemInfoMgr->GetItemInfo( nType );
@@ -419,7 +419,7 @@ BOOL CW3DUInterface::InsertItemInStorage(
 		return FALSE;
 	} //if
 
-	BYTE		btItemCount = btCnt;
+	WORD		btItemCount = btCnt;
 	if( ISPOTION( nType ) && btCnt == 0 )
 	{
 		btItemCount = 1;
@@ -455,7 +455,7 @@ BOOL CW3DUInterface::InsertItemInStorage(
 } //CW3DUInterface::InsertItemInStorage
 
 
-BOOL CW3DUInterface::InsertItemInSerGarbage( const int nId, const int nType, const BYTE btCnt )
+BOOL CW3DUInterface::InsertItemInSerGarbage( const int nId, const int nType, const WORD btCnt )
 {
 	SItemInfoData*	pItemInfoDat = m_pItemInfoMgr->GetItemInfo( nType );
 	if( !pItemInfoDat )
@@ -464,7 +464,7 @@ BOOL CW3DUInterface::InsertItemInSerGarbage( const int nId, const int nType, con
 		return FALSE;
 	} //if
 	
-	BYTE		btItemCount = btCnt;
+	WORD		btItemCount = btCnt;
 	if( ISPOTION( nType ) && btCnt == 0 )
 	{
 		btItemCount = 1;
@@ -1404,7 +1404,7 @@ void CW3DUInterface::RefreshBuyPosion()
 			nInvenSpace += pInven->GetBlankNum();
 		} //for
 		if( m_nNumPosion < 0 )		m_nNumPosion = 0;
-		if( m_nNumPosion > 99 )		m_nNumPosion = 99;
+		if( m_nNumPosion > 9999 )		m_nNumPosion = 9999;
 		
 		if( nInvenSpace < 1 )
 		{
@@ -1783,7 +1783,7 @@ void CW3DUInterface::InitInventory()
 			} //if
 		} //for
 
-		for( BYTE btItemCount = 0; btItemCount < nItemNum; btItemCount++ )
+		for( WORD btItemCount = 0; btItemCount < nItemNum; btItemCount++ )
 		{ // 읽어온 아템 개수만큼
 			for( BYTE btTotInvenIdx = btItemCount; btTotInvenIdx < nItemNum; btTotInvenIdx++ )
 			{ //인벤토리 내 아템 개수 만큼

@@ -208,6 +208,15 @@ int WINAPI WinMain(
 	int			nCmdShow
 	)
 {
+	// Optional local diagnostics; initialized after CRT startup, before game work.
+	HMODULE crashReporter = LoadLibraryA( "LaqiaCrash.dll" );
+	if( crashReporter )
+	{
+		typedef BOOL (WINAPI *InitCrashReporter)();
+		InitCrashReporter init = (InitCrashReporter)GetProcAddress( crashReporter, "InitializeCrashReporter" );
+		if( init ) init();
+	}
+
 	MEMORYSTATUS status;
 	GlobalMemoryStatus( &status ); 
 

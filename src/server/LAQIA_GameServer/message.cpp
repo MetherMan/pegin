@@ -1380,7 +1380,7 @@ BYTE GetItemProc( sPDESC_DATA pPlayer, sPITEM_DATA pItem )
 	sCHECK_INVEN checkInven;
 	
 	// 아이템이 포션인 경우 
-	if( GET_ITEM_TYPE( pItem ) == dITEMTYPE_POTION || GET_ITEM_TYPE( pItem ) == dITEMTYPE_CONTAINER )
+	if( GetItemStackLimit(pItem) > 1 )
 	{
 		sPITEM_DATA pPotion = FindPotionItem( pPlayer, pItem );
 		
@@ -1653,14 +1653,23 @@ BOOL PACKET_SellItem( sPDESC_DATA pPlayer )
 //
 BOOL PACKET_BuyItem( sPDESC_DATA pPlayer )
 {
+    WORD requestSize=0; memcpy(&requestSize,pPlayer->TemprecvBuff,2);
+    if (pPlayer->recvPos+8!=requestSize) return 0;
+
 	WORD shopNum = GetWord( pPlayer->TemprecvBuff, pPlayer->recvPos );
 	int itemNum = GetInteger( pPlayer->TemprecvBuff, pPlayer->recvPos );
-	BYTE cnt = GetByte( pPlayer->TemprecvBuff, pPlayer->recvPos );
+	WORD cnt = GetWord( pPlayer->TemprecvBuff, pPlayer->recvPos );
 
 	if( !IsShopKeeperArea( pPlayer, shopNum ) )
 		return 1;
 
-	SHOP_BuyItem( pPlayer, shopNum, itemNum , cnt );
+	if (itemNum==12097 || itemNum==12098) {
+        int neededItem=itemNum==12097?10193:10194, available=0;
+        for(sPITEM_DATA card=pPlayer->inven;card;card=card->i_next)
+            if(card->itemNum==neededItem) available+=GetItemStackCount(card);
+        if(cnt<1 || available<cnt) return 1;
+    }
+    if (!SHOP_BuyItemWide( pPlayer, shopNum, itemNum , cnt )) return 1;
 
 	if( itemNum == 12098 || itemNum == 12097 )
 	{
@@ -1670,7 +1679,7 @@ BOOL PACKET_BuyItem( sPDESC_DATA pPlayer )
 			for( int i=0; i < cnt; i++ )
 			{
 				pCardItem = FindItemFromInvenByNum( pPlayer, 10193 );
-				ItemFromInventory( pPlayer, pCardItem );
+				ConsumeOneEnchantCard( pPlayer, pCardItem );
 			}
 		}
 		else if( itemNum == 12098 )
@@ -1678,102 +1687,11 @@ BOOL PACKET_BuyItem( sPDESC_DATA pPlayer )
 			for( int i=0; i < cnt; i++ )
 			{
 				pCardItem = FindItemFromInvenByNum( pPlayer, 10194 );
-				ItemFromInventory( pPlayer, pCardItem );
+				ConsumeOneEnchantCard( pPlayer, pCardItem );
 			}
 		}
 	}
 
-	if( itemNum == 13551)
-	{
-		sPITEM_DATA pCardItem = NULL;
-		sPITEM_DATA pTemp = NULL;
-		int nExVal = 0;
-		int nNew = 0;
-		sCHECK_INVEN checkInven;
-
-		if( itemNum == 13551 )
-		{
-			for( int p=0; p < dINVEN_PAGE; p++ )
-			{
-				for( int y=0; y < dINVEN_Y; y++ )
-				{
-					for( int x=0; x < dINVEN_X; x++ )
-					{
-						pCardItem = FindItemFromInvenByPos( pPlayer, p, x, y );
-						if( pCardItem != NULL )
-						{
-							if( pCardItem->itemNum == 13551 )
-							{
-								if( pCardItem->exVal[0] > 0 )
-									nExVal += pCardItem->exVal[0];
-								else
-									nNew++;
-
-								ItemFromInventory( pPlayer, pCardItem );
-							}
-						}
-					}
-				}
-			}
-			pTemp = CreateItem( 13551 , "", "", 0 );
-			pTemp->exVal[0] = nNew + nExVal;
-			sCHECK_INVEN checkInven;
-			
-			if( !CheckEmptyInven( pPlayer, &checkInven ) )
-			{
-				SendSystemMsg( pPlayer, g_LANG_STR[19] );
-				return 0;
-			}
-			ItemToInventory( pPlayer, pTemp, &checkInven );
-			log_file( "plusProt.txt", "Item in: %d [%s/%s]\r\n", itemNum, GET_ID( pPlayer ), GET_NAME( pPlayer ) );
-		}
-	}
-
-	if( itemNum == 13552)
-	{
-		sPITEM_DATA pCardItem = NULL;
-		sPITEM_DATA pTemp = NULL;
-		int nExVal = 0;
-		int nNew = 0;
-		sCHECK_INVEN checkInven;
-
-		if( itemNum == 13552 )
-		{
-			for( int p=0; p < dINVEN_PAGE; p++ )
-			{
-				for( int y=0; y < dINVEN_Y; y++ )
-				{
-					for( int x=0; x < dINVEN_X; x++ )
-					{
-						pCardItem = FindItemFromInvenByPos( pPlayer, p, x, y );
-						if( pCardItem != NULL )
-						{
-							if( pCardItem->itemNum == 13552 )
-							{
-								if( pCardItem->exVal[0] > 0 )
-									nExVal += pCardItem->exVal[0];
-								else
-									nNew++;
-
-								ItemFromInventory( pPlayer, pCardItem );
-							}
-						}
-					}
-				}
-			}
-			pTemp = CreateItem( 13552 , "", "", 0 );
-			pTemp->exVal[0] = nNew + nExVal;
-			sCHECK_INVEN checkInven;
-
-			if( !CheckEmptyInven( pPlayer, &checkInven ) )
-			{
-				SendSystemMsg( pPlayer, g_LANG_STR[19] );
-				return 0;
-			}
-			ItemToInventory( pPlayer, pTemp, &checkInven );
-			log_file( "plusProt.txt", "Item in: %d [%s/%s]\r\n", itemNum, GET_ID( pPlayer ), GET_NAME( pPlayer ) );
-		}
-	}
 	return 1;
 }
 
@@ -2849,7 +2767,7 @@ BOOL PACKET_OpenGarbage( sPDESC_DATA pPlayer )
 
 	PutWord( g_Packet, item->itemNum, g_nPos );
 	PutInteger( g_Packet, item->idxNum, g_nPos );
-	PutByte( g_Packet, item->exVal[0], g_nPos );
+	PutWord( g_Packet, GetItemStackCount(item), g_nPos );
 
 	LIST_WHILEEND( pPlayer->garbage, item, next_item );
 
@@ -3074,15 +2992,10 @@ BOOL PACKET_MoveInvenItem( sPDESC_DATA pPlayer )
 			return 1;
 	
 		// 아이템이 포션인 경우 
-		if( GET_ITEM_TYPE( pTarget ) == dITEMTYPE_POTION &&
-			GET_ITEM_TYPE( pItem ) == dITEMTYPE_POTION &&
-			pTarget->itemNum == pItem->itemNum || 
-			GET_ITEM_TYPE( pTarget ) == dITEMTYPE_CONTAINER &&
-			GET_ITEM_TYPE( pItem ) == dITEMTYPE_CONTAINER &&
-			pTarget->itemNum == pItem->itemNum )
+		if( GetItemStackLimit(pItem) > 1 && pTarget->itemNum == pItem->itemNum )
 		{
 			// 겹칠 수 없는 경우
-			if( pTarget->exVal[0] >= (dMAX_POTION_CNT - 1) )
+			if( pTarget->exVal[0] >= GetItemStackLimit(pTarget) )
 			{
 				sCHECK_INVEN srcInven;
 				sCHECK_INVEN targetInven;
@@ -3102,7 +3015,7 @@ BOOL PACKET_MoveInvenItem( sPDESC_DATA pPlayer )
 				return 1;
 			}
 
-			if( MIN( pTarget->exVal[0], 1 ) + pItem->exVal[0] < dMAX_POTION_CNT )
+			if( GetItemStackCount(pTarget) + GetItemStackCount(pItem) <= GetItemStackLimit(pTarget) )
 			{
 				pTarget->exVal[0] = MIN( pTarget->exVal[0], 1 ) + MIN( pItem->exVal[0], 1 );
 				int itemWeight = GetItemWeight( pItem );
@@ -3114,8 +3027,8 @@ BOOL PACKET_MoveInvenItem( sPDESC_DATA pPlayer )
 			}
 			else
 			{
-				BYTE tmpVal = (pTarget->exVal[0] + pItem->exVal[0]) - (dMAX_POTION_CNT-1);
-				pTarget->exVal[0] = (dMAX_POTION_CNT-1);
+				int tmpVal = GetItemStackCount(pTarget) + GetItemStackCount(pItem) - GetItemStackLimit(pTarget);
+				pTarget->exVal[0] = GetItemStackLimit(pTarget);
 				pItem->exVal[0] = MIN( tmpVal, 1 );
 				SendUpdatePotionCnt( pPlayer, pTarget );
 				SendUpdatePotionCnt( pPlayer, pItem );
@@ -3915,11 +3828,11 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 		SendData( pPlayer, g_Packet, g_nPos );
 
 		// 아이템 삭제 
-		ItemFromInventory( pPlayer, pCardItem );
+		ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-		ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+		/* Card consumption is logged once by the helper. */
 #endif
-		INSERT_ITEM_TO_MEMORY( pCardItem );
+		/* Card lifetime is handled by ConsumeOneEnchantCard. */
 		ItemFromInventory( pPlayer, pItem );
 
 #ifdef dUSE_ITEMLOG
@@ -3961,13 +3874,13 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 #endif
 
 		// 아이템 삭제 ( 카드 )
-		ItemFromInventory( pPlayer, pCardItem );
+		ConsumeOneEnchantCard( pPlayer, pCardItem );
 
 #ifdef dUSE_ITEMLOG
-		ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+		/* Card consumption is logged once by the helper. */
 #endif
 
-		INSERT_ITEM_TO_MEMORY( pCardItem );
+		/* Card lifetime is handled by ConsumeOneEnchantCard. */
 		
 		// 인첸트 대상 아이템
 		sCHECK_INVEN checkInven;
@@ -4035,12 +3948,12 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 			SendData( pPlayer, g_Packet, g_nPos );
 			
 			// 아이템 삭제 
-			ItemFromInventory( pPlayer, pCardItem );
+			ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-			ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+			/* Card consumption is logged once by the helper. */
 #endif
 
-			INSERT_ITEM_TO_MEMORY( pCardItem );
+			/* Card lifetime is handled by ConsumeOneEnchantCard. */
 
 			sCHECK_INVEN checkInven;
 	
@@ -4108,11 +4021,11 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 				PutSize( g_Packet, g_nPos );
 				SendData( pPlayer, g_Packet, g_nPos );
 
-				ItemFromInventory( pPlayer, pCardItem );
+				ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-				ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+				/* Card consumption is logged once by the helper. */
 #endif
-				INSERT_ITEM_TO_MEMORY( pCardItem );
+				/* Card lifetime is handled by ConsumeOneEnchantCard. */
 
 				SendSystemMsg( pPlayer, g_LANG_STR[228] );
 				break;
@@ -4136,9 +4049,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 Delete item
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4157,9 +4070,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 Delete item
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4177,9 +4090,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4197,9 +4110,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4221,9 +4134,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4242,9 +4155,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4262,9 +4175,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4282,9 +4195,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4306,9 +4219,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4337,7 +4250,7 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 						}
 						else
 						{
-							if( GET_ITEM_UNIQ2( minusItem ) != ( GET_ITEM_UNIQ( pItem ) - 2 ) )
+							if( GET_ITEM_UNIQ2( minusItem ) != ( GET_ITEM_UNIQ( pItem ) - (pItem->itemNum - minusItem) ) )
 								return 1;
 						}
 
@@ -4357,11 +4270,11 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 						SendData( pPlayer, g_Packet, g_nPos );
 
 						// 아이템 삭제 
-						ItemFromInventory( pPlayer, pCardItem );
+						ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-						ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+						/* Card consumption is logged once by the helper. */
 #endif
-						INSERT_ITEM_TO_MEMORY( pCardItem );
+						/* Card lifetime is handled by ConsumeOneEnchantCard. */
 
 						sCHECK_INVEN checkInven;
 
@@ -4406,9 +4319,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4427,9 +4340,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4447,9 +4360,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4467,9 +4380,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4491,9 +4404,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4512,9 +4425,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4532,9 +4445,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4552,9 +4465,9 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 								SendData( pPlayer, g_Packet, g_nPos );
 
 								// 아이템 삭제 
-								ItemFromInventory( pPlayer, pCardItem );
+								ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-								ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+								/* Card consumption is logged once by the helper. */
 #endif 
 							}
 						}
@@ -4568,11 +4481,11 @@ BOOL PACKET_EnchantItem( sPDESC_DATA pPlayer )
 						SendData( pPlayer, g_Packet, g_nPos );
 
 						// 아이템 삭제 
-						ItemFromInventory( pPlayer, pCardItem );
+						ConsumeOneEnchantCard( pPlayer, pCardItem );
 #ifdef dUSE_ITEMLOG
-						ITEMLOG_ItemLog( pPlayer, NULL, pCardItem, ITEMLOG_ACT_INCHENT_REMOVE );
+						/* Card consumption is logged once by the helper. */
 #endif 
-						INSERT_ITEM_TO_MEMORY( pCardItem );
+						/* Card lifetime is handled by ConsumeOneEnchantCard. */
 						ItemFromInventory( pPlayer, pItem );
 #ifdef dUSE_ITEMLOG
 						ITEMLOG_ItemLog( pPlayer, NULL, pItem, ITEMLOG_ACT_INCHENT_REMOVE );

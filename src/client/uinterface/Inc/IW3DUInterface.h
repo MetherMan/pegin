@@ -462,7 +462,7 @@ public:
 		BYTE	btPage,			///< [IN]
 		BYTE	btCol,			///< [IN]
 		BYTE	btRow,			///< [IN]
-		BYTE	btCount,		///< [IN]
+		WORD	btCount,		///< [IN]
 		BOOL	bSave = TRUE
 		) = 0;
 
@@ -472,14 +472,14 @@ public:
 		BYTE	btPage,			///< [IN]
 		BYTE	btCol,			///< [IN]
 		BYTE	btRow,			///< [IN]
-		BYTE	btCount,		///< [IN]
+		WORD	btCount,		///< [IN]
 		BOOL	bSave = TRUE
 		) = 0;
 
 	/**
 	 * 아이템 내용 수정.
 	 */
-	virtual BOOL			UpdateItemData( const int nId, const BYTE btCount ) = 0;
+	virtual BOOL			UpdateItemData( const int nId, const WORD btCount ) = 0;
 
 	/**
 	 *
@@ -581,9 +581,9 @@ public:
 	/**
 	 * 창고에 아이템 추가.
 	 */
-	virtual BOOL			InsertItemInStorage( const int nId, const int nType, const BYTE	btCnt ) = 0;
+	virtual BOOL			InsertItemInStorage( const int nId, const int nType, const WORD	btCnt ) = 0;
 
-	virtual BOOL			InsertItemInSerGarbage( const int nId, const int nType, const BYTE	btCnt ) = 0;
+	virtual BOOL			InsertItemInSerGarbage( const int nId, const int nType, const WORD	btCnt ) = 0;
 
 	/**
 	 * 창고 보이기.

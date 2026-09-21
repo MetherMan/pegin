@@ -1,8 +1,13 @@
 """Build a hash manifest and the minimal father updater ZIP (no saves/keys)."""
 from pathlib import Path
-import hashlib,json,zipfile
+import argparse,hashlib,json,zipfile
 ROOT=Path(__file__).resolve().parents[1]
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--version',default='2026-09-18-twilight-trail-init')
+    parser.add_argument('--manifest-only',action='store_true')
+    parser.add_argument('--output',type=Path,default=ROOT/'dist/아버지_자동업뎃.zip')
+    args=parser.parse_args()
     files=[]
     for kind,folder,prefix in [('client','client-overlay',''),('server','game-data','')]:
         candidates=(ROOT/folder).rglob('*') if kind=='client' else (ROOT/folder/'DATA').glob('*')
@@ -16,9 +21,13 @@ def main():
     for kind,path,source in [('server','LAQIA_GameServer','server-bin/LAQIA_GameServer'),('updater','update/father_update.py','distribution/father_update.py')]:
         p=ROOT/source
         files.append(dict(kind=kind,path=path,source=source,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
-    manifest=dict(format=1,repository='MetherMan/pegin',version='2026-09-18-twilight-trail-init',files=files)
+    manifest=dict(format=1,repository='MetherMan/pegin',version=args.version,files=files)
     (ROOT/'distribution/update-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    output=ROOT.parent/'아버지_자동업뎃.zip'
+    if args.manifest_only:
+        print(json.dumps(dict(version=args.version,manifest_files=len(files))))
+        return
+    output=args.output
+    output.parent.mkdir(parents=True,exist_ok=True)
     cmd='''@echo off
 chcp 65001 >nul
 cd /d "%~dp0"

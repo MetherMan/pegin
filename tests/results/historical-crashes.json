@@ -1,0 +1,22 @@
+{
+  "source": "Windows Application events 1000 and 1001 read 2026-09-21; search expanded to 30 days",
+  "incidents": [
+    {
+      "local_time": "2026-09-14T21:49:54+09:00",
+      "module": "UInterface.dll",
+      "exception": "0xc0000005",
+      "rva": "0x24b9d"
+    },
+    {
+      "local_time": "2026-09-14T22:02:02+09:00",
+      "module": "UInterface.dll",
+      "exception": "0xc0000005",
+      "rva": "0x24ba2"
+    }
+  ],
+  "current_dll_sha256": "77cc2c2fd5cef4886925b9b2e525e0be72c11a3ee9ceeaec609779c4a47f2642",
+  "current_function": "CW3DUInterface::InsertItemInShop, with pre-existing GM warehouse hooks",
+  "offsets_are_current_instruction_boundaries": false,
+  "conclusion": "Historical shop UI crashes exist, but these offsets are inside operands in the current patched DLL. The exact faulting DLL and dump are unavailable; these events cannot identify the reported boss-combat crash.",
+  "archive_access": "Windows denied read access to the two game WER report folders, including after a permitted sandbox escalation; no ACLs changed."
+}

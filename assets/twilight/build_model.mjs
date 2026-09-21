@@ -10,7 +10,7 @@ function p(x,y,z=0){return new T.Vector3((x-CX)*S,(CY-y)*S,z);}
 function pix(x,y){return new T.Vector2(x/S+CX,CY-y/S);}
 const materials={
  blade:{name:'Midnight cobalt lunar inlay',color:'#ffffff',metal:.22,rough:.48,texture:true},
- edge:{name:'Moonlit honed silver',color:'#ffffff',metal:.62,rough:.38,texture:'steel'},
+ edge:{name:'Moonlit honed silver',color:'#b8c0cd',metal:.62,rough:.58,texture:'steel'},
  dark:{name:'Blued steel spine',color:'#142035',metal:.72,rough:.4},
  cloth:{name:'Weathered ivory woven bandage',color:'#aaa798',metal:0,rough:.94,texture:'cloth'},
  seam:{name:'Linen edge stitching',color:'#655f53',metal:0,rough:.98},
@@ -26,14 +26,14 @@ function tube(points,radius,key,name,segments=40,sides=6){return add(new T.TubeG
 function cylinderBetween(a,b,r1,r2,key,name,sides=20){const d=b.clone().sub(a);const mesh=add(new T.CylinderGeometry(r2,r1,d.length(),sides,1,false),key,name);mesh.position.copy(a).add(b).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),d.normalize());return mesh;}
 function shapeOf(points,holes=[]){let q=points.map(a=>p(...a));let s=new T.Shape(q.map(v=>new T.Vector2(v.x,v.y)));for(const ring of holes){let h=ring.map(a=>p(...a));s.holes.push(new T.Path(h.map(v=>new T.Vector2(v.x,v.y))));}return s;}
 function project(g){const pos=g.attributes.position,uv=g.attributes.uv;for(let i=0;i<pos.count;i++){const a=pix(pos.getX(i),pos.getY(i));uv.setXY(i,a.x/W,1-a.y/H);}return g;}
-function unwrapSidewalls(g,points,holes,z){
+function unwrapSidewalls(g,points,holes,z,depth){
  const loops=[points,...holes].map(ring=>{const pts=ring.map(q=>p(...q));let total=0;const segments=pts.map((a,i)=>{const b=pts[(i+1)%pts.length],d=b.clone().sub(a),length=d.length(),s={a,d,length,start:total};total+=length;return s;});return {segments,total};});
  const pos=g.attributes.position,uv=g.attributes.uv,perimeters=[];
  for(let i=0;i<pos.count;i++){const q=new T.Vector3(pos.getX(i),pos.getY(i),0);let best;
   for(const loop of loops)for(const s of loop.segments){const t=T.MathUtils.clamp(q.clone().sub(s.a).dot(s.d)/(s.length*s.length),0,1),distance=q.distanceToSquared(s.a.clone().addScaledVector(s.d,t));if(!best||distance<best.distance)best={distance,along:s.start+t*s.length,total:loop.total};}
   // Unwrap the thickness independently of the front projection. Every side
   // triangle now samples real 2D texture area instead of a collapsed UV line.
-  uv.setXY(i,(pos.getZ(i)-z)/.08,best.along/.22);perimeters.push(best.total/.22);
+  uv.setXY(i,(pos.getZ(i)-z)/depth,best.along/.22);perimeters.push(best.total/.22);
  }
  for(let i=0;i<pos.count;i+=3){const vs=[uv.getY(i),uv.getY(i+1),uv.getY(i+2)],total=perimeters[i];if(Math.max(...vs)-Math.min(...vs)>total*.5)for(let k=0;k<3;k++)if(vs[k]<total*.5)uv.setY(i+k,vs[k]+total);}
 }
@@ -42,15 +42,17 @@ function solidShape(points,holes,depth,z,key,name,bevel=.002){
  // Planar faces retain their reference projection. Sidewalls and bevels use
  // a dedicated metal tile with perimeter/thickness UVs.
  let face;
- for(const group of geo.groups){const g=new T.BufferGeometry();for(const [attr,a] of Object.entries(geo.attributes)){g.setAttribute(attr,new T.BufferAttribute(a.array.slice(group.start*a.itemSize,(group.start+group.count)*a.itemSize),a.itemSize));}if(group.materialIndex!==0)unwrapSidewalls(g,points,holes,z);const m=add(g,group.materialIndex===0?key:'edge',name+(group.materialIndex===0?' | face':' | solid metal bevel'));if(group.materialIndex===0)face=m;}
+ for(const group of geo.groups){const g=new T.BufferGeometry();for(const [attr,a] of Object.entries(geo.attributes)){g.setAttribute(attr,new T.BufferAttribute(a.array.slice(group.start*a.itemSize,(group.start+group.count)*a.itemSize),a.itemSize));}if(group.materialIndex!==0)unwrapSidewalls(g,points,holes,z,depth);const m=add(g,group.materialIndex===0?key:'edge',name+(group.materialIndex===0?' | face':' | solid metal bevel'));if(group.materialIndex===0)face=m;}
  return face;
 }
 
 // All auxiliary blades share a continuous root with the primary blade.
 // Image-derived holes are genuine topology, including the round lunar aperture.
 for(const part of design.parts){
- const depth=part.name.startsWith('main')?.038:.042;
- solidShape(part.outline,part.holes,depth,-depth/2,'blade',part.name.startsWith('main')?'01 | design 04 integrated irregular blades':'12 | design 04 crescent pommel',.0006);
+ // Keep the detailed front silhouette, but give the blade a honed edge instead
+ // of the old thick extrusion. The round grip retains its original diameter.
+ const depth=part.name.startsWith('main')?.004:.006;
+ solidShape(part.outline,part.holes,depth,-depth/2,'blade',part.name.startsWith('main')?'01 | design 04 integrated irregular blades':'12 | design 04 crescent pommel',.0002);
 }
 // A circular grip gives the edge-on view real volume instead of a flat card.
 const top=p(CX,design.grip_top),bottom=p(CX,design.grip_bottom);

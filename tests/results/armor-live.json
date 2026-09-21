@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "fixture_is_non_admin": true,
+  "no_probability_override": true,
+  "valid_high_armour_transitions": 586,
+  "cases": [
+    {
+      "type": 19,
+      "item": 3988,
+      "name": "+18 붉은소가죽 셔츠",
+      "from_level": 18,
+      "to_level": 19,
+      "attempts": 40,
+      "successes": 1
+    },
+    {
+      "type": 19,
+      "item": 3989,
+      "name": "+19 붉은소가죽 셔츠",
+      "from_level": 19,
+      "to_level": 20,
+      "attempts": 20,
+      "successes": 1
+    },
+    {
+      "type": 21,
+      "item": 4366,
+      "name": "+18 궁수의 셔츠",
+      "from_level": 18,
+      "to_level": 19,
+      "attempts": 20,
+      "successes": 2
+    },
+    {
+      "type": 21,
+      "item": 4367,
+      "name": "+19 궁수의 셔츠",
+      "from_level": 19,
+      "to_level": 20,
+      "attempts": 20,
+      "successes": 1
+    },
+    {
+      "type": 23,
+      "item": 4681,
+      "name": "+18 마법사 로브",
+      "from_level": 18,
+      "to_level": 19,
+      "attempts": 40,
+      "successes": 1
+    },
+    {
+      "type": 23,
+      "item": 4682,
+      "name": "+19 마법사 로브",
+      "from_level": 19,
+      "to_level": 20,
+      "attempts": 20,
+      "successes": 3
+    }
+  ],
+  "cap_preserves_item_and_card": true,
+  "server_sha256": "23297da8c7f39b15622a325678e49bc477bb5a6ce3851206bb4e719749ce571b"
+}

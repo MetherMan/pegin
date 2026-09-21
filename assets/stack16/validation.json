@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "emulated_cases": 289,
+  "complete_packet_handler_cases": 30,
+  "dll_load_bases": [
+    268435456,
+    55574528
+  ],
+  "staged": "C:\\Users\\c\\Downloads\\\ub77c\ud0a4\uc544\uc694\\.cache\\stack16-client",
+  "installed": false
+}

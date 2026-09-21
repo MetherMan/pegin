@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "checks": [
+    "initial inventory preserves 16-bit potion/card quantities",
+    "NPC shop purchase 9999",
+    "NPC rejects purchase above 9999",
+    "dropped weapon card pickup stacks to 999",
+    "dropped armour card pickup stacks to 999",
+    "pickup at card cap preserves the excess in a separate stack",
+    "consuming last card removes only that stack",
+    "card 999 and potion 9999 merge caps retain overflow",
+    "weapon and armour enchanting consume exactly one card",
+    "potion use preserves remaining 9998",
+    "warehouse deposit/list/withdraw preserve large stacks",
+    "relogin preserves all quantities, types and positions",
+    "all potion data weights are zero"
+  ],
+  "potion_limit": 9999,
+  "card_limit": 999,
+  "potion_rows": 104,
+  "server_sha256": "23297da8c7f39b15622a325678e49bc477bb5a6ce3851206bb4e719749ce571b"
+}

@@ -1338,7 +1338,7 @@ void CGame::OnPacketInsertInventory()
 	BYTE	btPage;		// 페이지
 	BYTE	btX;		// X
 	BYTE	btY;		// Y 
-	BYTE	btContainCnt;	// 수량(포션용) from sk8snow
+	WORD	btContainCnt;	// 수량(포션용) from sk8snow
 //	BYTE	btRange;
 	// from sk8snow
 	m_recvPacket
@@ -1506,7 +1506,7 @@ void CGame::OnPacketItemPlayerItemInfo()
 		BYTE	btInvenPage;	// 인벤토리 Page
 		BYTE	btInvenCol;		// 인벤토리 Column
 		BYTE	btInvenRow;		// 인벤토리 Row
-		BYTE	btContainCnt;	// 수량 ( 포션만 ) from sk8snow
+		WORD	btContainCnt;	// 수량 ( 포션만 ) from sk8snow
 
 		m_recvPacket
 			>> nInvenId
@@ -2336,7 +2336,7 @@ void CGame::OnPacketSkillList()
 void CGame::OnPacketUpdatePotionCnt()
 {
 	int nID;		// 아이템 고유번호 
-	BYTE btCnt;		// 수량 from sk8snow
+	WORD btCnt;		// 수량 from sk8snow
 
 	m_recvPacket 
 		>> nID
@@ -2351,7 +2351,7 @@ void CGame::OnPacketUpdatePotionCnt()
 void CGame::OnPacketUpdateCardCnt()
 {
 	int nID;		// 아이템 고유번호 
-	BYTE btCnt;		// 수량 from sk8snow
+	WORD btCnt;		// 수량 from sk8snow
 
 	m_recvPacket 
 		>> nID
@@ -2431,7 +2431,7 @@ void CGame::OnPacketGarbageItemList()
 	WORD wCnt;
 	WORD wItemType;
 	int nIdxNum;
-	BYTE btContainCnt;
+	WORD btContainCnt;
 	int nContainMoney;
 
 	m_recvPacket 
@@ -2529,7 +2529,7 @@ void CGame::OnPacketInsertToGarbage()
 {
 	WORD wItemType;
 	int nIdxNum;
-	BYTE btContainCnt;
+	WORD btContainCnt;
 
 	m_recvPacket 
 		>> wItemType

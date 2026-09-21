@@ -356,13 +356,13 @@ public:
 	void				DeleteCharInfo( const int nIndex  );
 	int					GetOnItemType( int nPart );
 
-	BOOL				UpdateItemData( const int nId, const BYTE btCount );
+	BOOL				UpdateItemData( const int nId, const WORD btCount );
 	int					GetItemNumInInventory( const int nType );
 	SItemData*			GetItemDataInInventory( const int nType );
 	SItemData*			GetItemDataInEquip( const int nType );
 	int					InventoryBlank();
-	BOOL				InsertInventory( int nId, int nType, BYTE btPage, BYTE btCol, BYTE btRow, BYTE btCnt, BOOL bSave );
-	BOOL				InsertSerIntInventory( int nId, int nType, BYTE btPage, BYTE btCol, BYTE btRow, BYTE btCnt, BOOL bSave );
+	BOOL				InsertInventory( int nId, int nType, BYTE btPage, BYTE btCol, BYTE btRow, WORD btCnt, BOOL bSave );
+	BOOL				InsertSerIntInventory( int nId, int nType, BYTE btPage, BYTE btCol, BYTE btRow, WORD btCnt, BOOL bSave );
 	void				ItemInMyInventory( SItemData* pItemDat, UIInventoryIN* pInventory );
 	BOOL				ItemToHand( int nId );
 	BOOL				ItemFromHand();
@@ -401,7 +401,7 @@ public:
 	
 	///////////////////  Ã¢°í  ///////////////////////
 
-	BOOL				InsertItemInStorage( const int nId, const int nType, const BYTE	btCnt );
+	BOOL				InsertItemInStorage( const int nId, const int nType, const WORD	btCnt );
 	BOOL				RemoveItemInStorage( const int nId );
 	BOOL				RemoveSerItemInStorage( const int nId );
 	void				RemoveAllItemInStorage();
@@ -409,7 +409,7 @@ public:
 	void				RequestSaveItemInStorage( SItemData* pItemDat );
 	void				TakeItemInStorage( SItemData* pItemDat );
 	void				TakeItemInSerStorage( SItemData* pItemDat, int ServerNum );
-	BOOL				InsertItemInSerGarbage( const int nId, const int nType, const BYTE	btCnt );
+	BOOL				InsertItemInSerGarbage( const int nId, const int nType, const WORD	btCnt );
 
 	///////////////////  Äù½ºÆ®  ///////////////////////
 

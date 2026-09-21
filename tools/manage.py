@@ -27,7 +27,8 @@ def update_server(ctl,built=None):
  with connect() as c:
   cmd=lambda s:ctl.command(c,s)
   if cmd("ss -Htn state established 'sport = :2560'").strip():raise RuntimeError('Players are connected; close the game before updating the server.')
-  files={p.relative_to(ROOT/'game-data').as_posix() : p for p in (ROOT/'game-data').rglob('*') if p.is_file()}
+  # Administrator accounts belong to each local installation, as in the family updater.
+  files={p.relative_to(ROOT/'game-data').as_posix() : p for p in (ROOT/'game-data').rglob('*') if p.is_file() and p.relative_to(ROOT/'game-data').as_posix()!='DATA/ADMIN_INFO.txt'}
   binary=built or ROOT/'server-bin/LAQIA_GameServer';files['LAQIA_GameServer']=binary
   desired={n:sha(p) for n,p in files.items()};state=R/'applied-server.json'
   if state.exists() and json.loads(state.read_text())==desired:return

@@ -43,6 +43,10 @@ def single_mesh_atlas(groups, images, pack_texture, destination):
         count=0;source_area=0;atlas_area=0
         for pos,normal,uv in parts:
             data=np.column_stack((pos,normal,uv)).astype(np.float64).reshape(-1,3,8)
+            # Float32 UVs such as 1.0000001 otherwise create microscopic extra
+            # strips across repeat boundaries that collapse on native export.
+            rounded=np.round(data[:,:,6:])
+            data[:,:,6:]=np.where(np.abs(data[:,:,6:]-rounded)<1e-6,rounded,data[:,:,6:])
             for triangle in data:
                 source_area+=np.linalg.norm(np.cross(triangle[1,:3]-triangle[0,:3],triangle[2,:3]-triangle[0,:3]))/2
                 low=np.floor(triangle[:,6:].min(axis=0)).astype(int)

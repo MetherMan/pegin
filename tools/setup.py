@@ -32,8 +32,8 @@ def main():
  state=R/'setup-private.json'
  if state.exists():settings=json.loads(state.read_text())
  else:
-  pwd=os.environ.get('LAQIA_DEV_PASSWORD') or getpass.getpass('Choose a NEW local game password for developer (4-24 ASCII letters/digits): ')
-  if not re.fullmatch(r'[A-Za-z0-9]{4,24}',pwd):raise ValueError('Use 4-24 ASCII letters/digits for the legacy login client.')
+  pwd=os.environ.get('LAQIA_DEV_PASSWORD') or getpass.getpass('Choose a NEW local game password for developer (4-16 ASCII letters/digits): ')
+  if not re.fullmatch(r'[A-Za-z0-9]{4,16}',pwd):raise ValueError('Use 4-16 ASCII letters/digits for the legacy login client.')
   settings={'db_password':secrets.token_hex(16),'game_password':pwd,'instance':str(uuid.uuid4())};state.write_text(json.dumps(settings))
  if not (R/'vm-ssh-key').exists():
   key=paramiko.RSAKey.generate(3072);key.write_private_key_file(str(R/'vm-ssh-key'));(R/'vm-ssh-key.pub').write_text(key.get_name()+' '+key.get_base64())

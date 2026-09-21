@@ -1,0 +1,66 @@
+{
+  "reference": "../inventory_icon_imagegen.png",
+  "common_prompt": "Use case: stylized-concept. Create ONE separate full-length weapon concept image for the Blue Moon Twilight family of a classic Korean fantasy MMORPG. The attached sword image is a MATERIAL AND DESIGN LANGUAGE REFERENCE ONLY; create the requested different weapon. Faithfully match its richly saturated deep cobalt/sapphire cracked mineral inlay, weathered matte pale silver sharp edging, crescent cutouts, irregular blade accents, subtle eight-point star motif. No bare white untextured surfaces. Neutral dark charcoal studio background, soft readable studio light, entire single weapon visible with generous margins, front three-quarter view with very shallow perspective, vertically oriented portrait composition. Clean production concept art suitable for later 3D modeling. No person, hands, environment, gold frame, text, captions, collage, duplicated objects, exaggerated glow or particles. Longbows must have a taut visible bowstring, coherent usable grip, realistic bow silhouette, no arrow; staffs must clearly be a staff and not a sword. Specific variant: ",
+  "images": [
+    {
+      "id": "longbow-01",
+      "file": "longbow-01.png",
+      "prompt": "A tall elegant longbow with gently recurved crescent limbs; a circular lunar aperture in the central silver riser; cobalt blue textured inlays along both limbs and one silver eight-point star near the grip.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-e958f054-fd71-4c21-818e-eba3682d69bb.png"
+    },
+    {
+      "id": "longbow-02",
+      "file": "longbow-02.png",
+      "prompt": "An imposing asymmetric longbow with the sword's irregular swept auxiliary blade silhouettes echoed in the upper limb, a restrained lower crescent limb, an open teardrop lunar window at the riser.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-de61f49d-2ede-4303-a76f-1effde83350b.png"
+    },
+    {
+      "id": "longbow-03",
+      "file": "longbow-03.png",
+      "prompt": "A slender balanced double-crescent longbow, long silver-edged blue limbs with negative-space cutouts, a tiny lunar ring at its dark blue grip, one hanging silver star detail.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-98f4823a-1e23-462b-8e15-2c862c5e10c8.png"
+    },
+    {
+      "id": "longbow-04",
+      "file": "longbow-04.png",
+      "prompt": "An angular moonhunter longbow with layered cobalt wing-shaped limbs, silver thorn-like bevel outlines, a small circular aperture above the handgrip and pronounced recurved tips.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-0053c811-9324-40fc-85ef-2f104d4d5a47.png"
+    },
+    {
+      "id": "longbow-05",
+      "file": "longbow-05.png",
+      "prompt": "A refined ceremonial longbow with flowing elongated crescent limbs, silver star relief inset into cracked cobalt stone-like panels, asymmetrical forked lunar tips and a clean practical grip.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-3db7176e-f40f-4167-9a5c-1cec542e799a.png"
+    },
+    {
+      "id": "staff-01",
+      "file": "staff-01.png",
+      "prompt": "A tall slender wizard staff crowned with an open silver crescent surrounding a cobalt blue moonstone; an eight-point silver star set into the stone; blue-inlaid silver shaft and dark leather handgrip.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-43ed75c3-e6e7-4ba9-82fa-842a3da3b5a8.png"
+    },
+    {
+      "id": "staff-02",
+      "file": "staff-02.png",
+      "prompt": "A tall battle staff crowned with two unequal swept crescent blades forming an open lunar ring, deep cobalt blue textured inlays on their faces and a floating-looking but physically mounted blue moonstone.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-126dcd1e-ca5b-4e84-9855-021507b1057e.png"
+    },
+    {
+      "id": "staff-03",
+      "file": "staff-03.png",
+      "prompt": "An elegant astronomical staff with a single large circular silver aperture, asymmetrical blue finial blades flowing upward, silver eight-point star center, thin cobalt-inlaid shaft and crescent butt cap.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-98380c4c-5428-4758-8915-adc64b34a600.png"
+    },
+    {
+      "id": "staff-04",
+      "file": "staff-04.png",
+      "prompt": "A powerful gothic moon staff with an elongated spear-like central cobalt crystal held by three irregular silver crescent claws, star relief ornaments and a slender dark-blue leather grip.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-6abf26c9-964e-44a7-99e8-b75e0a5d8ec9.png"
+    },
+    {
+      "id": "staff-05",
+      "file": "staff-05.png",
+      "prompt": "A refined twilight archmage staff with a sweeping open crescent finial and a suspended eight-point silver star held by slim struts, cracked cobalt face panels, silver borders and a small secondary lunar ring on the shaft.",
+      "source": "C:\\Users\\c\\.codex\\generated_images\\01a0c3f2-b52b-7b33-a7d3-93c238cea34f\\exec-af24e336-4a59-4cd2-975d-6a010b44e0bd.png"
+    }
+  ]
+}

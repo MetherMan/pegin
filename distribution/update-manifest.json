@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-18-twilight-trail-init",
+  "version": "2026-09-21-stacks-armor-thin-blade-diagnostics",
   "files": [
     {
       "kind": "client",
@@ -14,8 +14,8 @@
       "kind": "client",
       "path": "DeicideOnline.exe",
       "source": "client-overlay/DeicideOnline.exe",
-      "bytes": 503808,
-      "sha256": "a085da09952eec18ba7ae51bbc66fb98d78ec25fd4351a302ac58e4139ba16ed"
+      "bytes": 507904,
+      "sha256": "93549d3b8475816bc0eec142e956a4a89dfd61588b564801580a9109f4ab7e5b"
     },
     {
       "kind": "client",
@@ -56,22 +56,22 @@
       "kind": "client",
       "path": "Equip/mt_twilight_1.mod",
       "source": "client-overlay/Equip/mt_twilight_1.mod",
-      "bytes": 793084,
-      "sha256": "41ca4c3c3acca29a9572f6c06edea32c6c82ce65aee92b442cbe02dba5870fc2"
+      "bytes": 648820,
+      "sha256": "7529dda6c387db102fe82eb1f1950a6c910d2af4bde706ea0c6627ea55104f9e"
     },
     {
       "kind": "client",
       "path": "Equip/mt_twilight_2.mod",
       "source": "client-overlay/Equip/mt_twilight_2.mod",
-      "bytes": 793084,
-      "sha256": "41ca4c3c3acca29a9572f6c06edea32c6c82ce65aee92b442cbe02dba5870fc2"
+      "bytes": 648820,
+      "sha256": "7529dda6c387db102fe82eb1f1950a6c910d2af4bde706ea0c6627ea55104f9e"
     },
     {
       "kind": "client",
       "path": "Equip/mt_twilight_3.mod",
       "source": "client-overlay/Equip/mt_twilight_3.mod",
-      "bytes": 793084,
-      "sha256": "41ca4c3c3acca29a9572f6c06edea32c6c82ce65aee92b442cbe02dba5870fc2"
+      "bytes": 648820,
+      "sha256": "7529dda6c387db102fe82eb1f1950a6c910d2af4bde706ea0c6627ea55104f9e"
     },
     {
       "kind": "client",
@@ -121,6 +121,13 @@
       "source": "client-overlay/Item/Skill.dat",
       "bytes": 25981,
       "sha256": "497be82b049cf670516f29927c6d270d5bb04ffce0aa1ad05689111dcf327af1"
+    },
+    {
+      "kind": "client",
+      "path": "LaqiaCrash.dll",
+      "source": "client-overlay/LaqiaCrash.dll",
+      "bytes": 377344,
+      "sha256": "32bbe03f4bbd4695db9f3e36c011d8bb9407aa00bf6d63d37aa1f564f3c73904"
     },
     {
       "kind": "client",
@@ -280,8 +287,8 @@
       "kind": "client",
       "path": "Texture/Equip/mt_mat_01.wtm",
       "source": "client-overlay/Texture/Equip/mt_mat_01.wtm",
-      "bytes": 2310164,
-      "sha256": "749b886efb0c48d4dc9224796bae1cc68ce5a5a085e73e06bcf51f081a092918"
+      "bytes": 2296505,
+      "sha256": "0bc4b8d8d3f26f3e22d05bb238687b13e7fa0e29e2dd189e3b6f2ad851e11bc3"
     },
     {
       "kind": "client",
@@ -322,22 +329,22 @@
       "kind": "client",
       "path": "Texture/Equip/mt_mat_07.wtm",
       "source": "client-overlay/Texture/Equip/mt_mat_07.wtm",
-      "bytes": 2310164,
-      "sha256": "749b886efb0c48d4dc9224796bae1cc68ce5a5a085e73e06bcf51f081a092918"
+      "bytes": 2310282,
+      "sha256": "21fffe36b7ed2bc113614a13c8ad07e1946a04084b10ff8ea756e4afcf744414"
     },
     {
       "kind": "client",
       "path": "Texture/Equip/mt_twilight_atlas.wtm",
       "source": "client-overlay/Texture/Equip/mt_twilight_atlas.wtm",
-      "bytes": 2989911,
-      "sha256": "871152bfdd4e69f08e63e86305f6eb3d84fac869a0c6cb3dfe8b1df4e0e47d70"
+      "bytes": 2948837,
+      "sha256": "657248c3b4b7ab7f9fa0008a192f8bc9a6cf7828d70e6fbc2b16b435e2073bc9"
     },
     {
       "kind": "client",
       "path": "UInterface.dll",
       "source": "client-overlay/UInterface.dll",
-      "bytes": 495616,
-      "sha256": "4669f6c03689a6255b19ddee8317997847c83143e0c293aab0c3dfe9d369894b"
+      "bytes": 499712,
+      "sha256": "77cc2c2fd5cef4886925b9b2e525e0be72c11a3ee9ceeaec609779c4a47f2642"
     },
     {
       "kind": "server",
@@ -553,8 +560,8 @@
       "kind": "server",
       "path": "LAQIA_GameServer",
       "source": "server-bin/LAQIA_GameServer",
-      "bytes": 1780784,
-      "sha256": "5efb607c1205aad56fae928b354ded06a5b72ef6b8d924ba4b9f90e0aeec283d"
+      "bytes": 1793280,
+      "sha256": "23297da8c7f39b15622a325678e49bc477bb5a6ce3851206bb4e719749ce571b"
     },
     {
       "kind": "updater",
