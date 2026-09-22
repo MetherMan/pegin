@@ -1,0 +1,40 @@
+{
+  "base_warrior_id": 53,
+  "base_warrior_experience": 15044,
+  "experience_before": 14328,
+  "experience_after": 16548,
+  "increase_over_warrior_percent": 9.997341132677473,
+  "variant_ids": [
+    80,
+    280,
+    380,
+    480,
+    580,
+    680
+  ],
+  "server_check": {
+    "variant_ids": [
+      80,
+      280,
+      380,
+      480,
+      580,
+      680
+    ],
+    "other_rows_and_fields_unchanged": true
+  },
+  "client_check": {
+    "variant_ids": [
+      80,
+      280,
+      380,
+      480,
+      580,
+      680
+    ],
+    "other_rows_and_fields_unchanged": true
+  },
+  "server_sha256": "e4446a03b06c1202a550b412f7c7e488b60edd56661598374268e3fd88328dbb",
+  "client_sha256": "3a66ff929d90fb55558861da64a0dc639ae057403f0669ef45c5da7106b321d9",
+  "actual_outputs_installation_tested": false
+}

@@ -1,0 +1,14 @@
+{
+  "version": "2026-09-22-hell-horse-icon-correction",
+  "manifest_files": 224,
+  "manifest_hashes_valid": true,
+  "existing_item_stats_unchanged": true,
+  "original_compressed_ui_rows_unchanged": true,
+  "primordial_skin_and_experience_preserved": true,
+  "actual_outputs_installation_tested": false,
+  "certificate_correction_only_payload_changes": [
+    "client-overlay/Item/mt_hellhorse_icon.wtm",
+    "client-overlay/Texture/Body/mt_hellhorse_icon.wtm"
+  ],
+  "certificate_wtm_roundtrip_valid": true
+}

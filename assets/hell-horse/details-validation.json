@@ -1,0 +1,130 @@
+{
+  "sounds": {
+    "linked_motion_sounds": [
+      {
+        "sex": 0,
+        "weapon": 0,
+        "state": 1,
+        "phase": 0,
+        "sound": "HorseWalk_A01.wav"
+      },
+      {
+        "sex": 0,
+        "weapon": 0,
+        "state": 2,
+        "phase": 1,
+        "sound": "HorseGallop.wav"
+      },
+      {
+        "sex": 0,
+        "weapon": 0,
+        "state": 2,
+        "phase": 2,
+        "sound": "HorseBlow.wav"
+      },
+      {
+        "sex": 0,
+        "weapon": 15,
+        "state": 1,
+        "phase": 0,
+        "sound": "HorseWalk_A01.wav"
+      },
+      {
+        "sex": 0,
+        "weapon": 15,
+        "state": 2,
+        "phase": 1,
+        "sound": "HorseGallop.wav"
+      },
+      {
+        "sex": 0,
+        "weapon": 15,
+        "state": 2,
+        "phase": 2,
+        "sound": "HorseBlow.wav"
+      },
+      {
+        "sex": 1,
+        "weapon": 0,
+        "state": 1,
+        "phase": 0,
+        "sound": "HorseWalk_A01.wav"
+      },
+      {
+        "sex": 1,
+        "weapon": 0,
+        "state": 2,
+        "phase": 1,
+        "sound": "HorseGallop.wav"
+      },
+      {
+        "sex": 1,
+        "weapon": 0,
+        "state": 2,
+        "phase": 2,
+        "sound": "HorseBlow.wav"
+      },
+      {
+        "sex": 1,
+        "weapon": 15,
+        "state": 1,
+        "phase": 0,
+        "sound": "HorseWalk_A01.wav"
+      },
+      {
+        "sex": 1,
+        "weapon": 15,
+        "state": 2,
+        "phase": 1,
+        "sound": "HorseGallop.wav"
+      },
+      {
+        "sex": 1,
+        "weapon": 15,
+        "state": 2,
+        "phase": 2,
+        "sound": "HorseBlow.wav"
+      }
+    ],
+    "native_audio": [
+      {
+        "file": "HorseGallop.wav",
+        "seconds": 4.11,
+        "sha256": "6e88b40b69abd96c08e31d19e72432b398615ebda08a37bbba53c70e191462d0"
+      },
+      {
+        "file": "HorseBlow.wav",
+        "seconds": 0.685,
+        "sha256": "8f332f8e7275c8aba4cf356588f487f7a66c7ee40febe709ed271c90c241c711"
+      },
+      {
+        "file": "HorseWalk_A01.wav",
+        "seconds": 4.37,
+        "sha256": "809ca91cba2658ab4910d4524ec1ed6a17a0334dae4b5a9bd40aac52c6b3d017"
+      },
+      {
+        "file": "HorseWhinney.wav",
+        "seconds": 1.672,
+        "sha256": "92d942a1fa6022545a6189a2903fe53398245af0c2f75e369dbfc7d5c8f79ace"
+      }
+    ],
+    "animation_frames_and_models_unchanged": true
+  },
+  "map": {
+    "map_id": 41,
+    "title": "Forgotten Taros",
+    "loading_sizes": [
+      [
+        800,
+        600
+      ],
+      [
+        1024,
+        768
+      ]
+    ],
+    "light_hour": 23,
+    "weather": "fixed clear; map-scoped client packet filter"
+  },
+  "actual_game_audio_visual_tested": false
+}

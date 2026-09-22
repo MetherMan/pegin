@@ -1,0 +1,51 @@
+{
+  "original_sha256": "5cb2f787c02d53ecc559ea5b08812f9d1b394e9039734b5de39992f30979de96",
+  "original_size": 503808,
+  "sha256": "42b35656203734794acc3b067ca7a0d0e7391001968715f16c28f8e2e0dd4352",
+  "section_rva": 516096,
+  "undo": [
+    [
+      153528,
+      "3dcc270000"
+    ],
+    [
+      872,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0a00"
+    ],
+    [
+      304,
+      "00e00700"
+    ],
+    [
+      252,
+      "00f80500"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "hell-horse certificate uses native horse whinny on use and item handling",
+      "va": 268588984,
+      "original": "3dcc270000",
+      "replacement": "e943880500",
+      "target": 268951552,
+      "resume": 268588989,
+      "assembly": "cmp eax,19130; je 0x100257cd; cmp eax,10188",
+      "code": "3dba4a00000f84c277faff3dcc270000e9a877faff"
+    }
+  ],
+  "validation": {
+    "item_sound_cases": 16,
+    "relocated_bases": [
+      268435456,
+      318767104
+    ]
+  }
+}

@@ -1590,6 +1590,8 @@ void CGame::OnPacketChangeTime()
 	// Indoor일때는 시간의 영향을 받지 아니한다.
 	if( !m_bIndoor && m_btMapType == 0 )
 	{		
+		// Forgotten Taros remains at night, including later server time packets.
+		if( m_wMap == 41 ) btTime = btNextTime = 23;
 		m_pWorld->SetTime( btTime, btNextTime, dwNext );
 	} //if
 } //CGame::OnPacketChangeTime
@@ -2993,6 +2995,7 @@ void CGame::OnPacketChangeWeather()
 	// 일단은 3가지 만 받도록 한다.
 	Assert( btWeather >= 0 && btWeather < 3 );
 
+	if( m_wMap == 41 ) btWeather = 0; // No snow/rain changes in Forgotten Taros.
 	m_pWorld->SetWeather( btWeather );
 }//CGame::OnPacketChangeWeather
 

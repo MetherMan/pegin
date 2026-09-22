@@ -1,0 +1,152 @@
+{
+  "native_footstep_calls": [
+    {
+      "sex": 0,
+      "weapon": 0,
+      "state": 1,
+      "phase": 0,
+      "elapsed": 100,
+      "play3d": []
+    },
+    {
+      "sex": 0,
+      "weapon": 0,
+      "state": 1,
+      "phase": 0,
+      "elapsed": 650,
+      "play3d": [
+        "HorseWalk_A01.wav"
+      ]
+    },
+    {
+      "sex": 0,
+      "weapon": 0,
+      "state": 2,
+      "phase": 1,
+      "elapsed": 100,
+      "play3d": []
+    },
+    {
+      "sex": 0,
+      "weapon": 0,
+      "state": 2,
+      "phase": 1,
+      "elapsed": 650,
+      "play3d": [
+        "HorseGallop.wav"
+      ]
+    },
+    {
+      "sex": 0,
+      "weapon": 15,
+      "state": 1,
+      "phase": 0,
+      "elapsed": 100,
+      "play3d": []
+    },
+    {
+      "sex": 0,
+      "weapon": 15,
+      "state": 1,
+      "phase": 0,
+      "elapsed": 650,
+      "play3d": [
+        "HorseWalk_A01.wav"
+      ]
+    },
+    {
+      "sex": 0,
+      "weapon": 15,
+      "state": 2,
+      "phase": 1,
+      "elapsed": 100,
+      "play3d": []
+    },
+    {
+      "sex": 0,
+      "weapon": 15,
+      "state": 2,
+      "phase": 1,
+      "elapsed": 650,
+      "play3d": [
+        "HorseGallop.wav"
+      ]
+    },
+    {
+      "sex": 1,
+      "weapon": 0,
+      "state": 1,
+      "phase": 0,
+      "elapsed": 100,
+      "play3d": []
+    },
+    {
+      "sex": 1,
+      "weapon": 0,
+      "state": 1,
+      "phase": 0,
+      "elapsed": 650,
+      "play3d": [
+        "HorseWalk_A01.wav"
+      ]
+    },
+    {
+      "sex": 1,
+      "weapon": 0,
+      "state": 2,
+      "phase": 1,
+      "elapsed": 100,
+      "play3d": []
+    },
+    {
+      "sex": 1,
+      "weapon": 0,
+      "state": 2,
+      "phase": 1,
+      "elapsed": 650,
+      "play3d": [
+        "HorseGallop.wav"
+      ]
+    },
+    {
+      "sex": 1,
+      "weapon": 15,
+      "state": 1,
+      "phase": 0,
+      "elapsed": 100,
+      "play3d": []
+    },
+    {
+      "sex": 1,
+      "weapon": 15,
+      "state": 1,
+      "phase": 0,
+      "elapsed": 650,
+      "play3d": [
+        "HorseWalk_A01.wav"
+      ]
+    },
+    {
+      "sex": 1,
+      "weapon": 15,
+      "state": 2,
+      "phase": 1,
+      "elapsed": 100,
+      "play3d": []
+    },
+    {
+      "sex": 1,
+      "weapon": 15,
+      "state": 2,
+      "phase": 1,
+      "elapsed": 650,
+      "play3d": [
+        "HorseGallop.wav"
+      ]
+    }
+  ],
+  "resource_readback_passed": true,
+  "night_table_passed": true,
+  "exe_sha256": "7face79a37389b75b15f629f335a4d8bfe61a2127530b2fa43d88bafa50e3a6d",
+  "actual_game_audio_visual_tested": false
+}

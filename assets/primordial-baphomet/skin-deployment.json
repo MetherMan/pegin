@@ -1,0 +1,22 @@
+{
+  "version": "2026-09-22-baphomet-red-skin-editor",
+  "manifest_files": 216,
+  "changed_existing_payloads": [
+    "Texture/Monster/mt_prime_body.wtm"
+  ],
+  "added_editor_files": [
+    "Tools/BaphometColors/base-body.png",
+    "Tools/BaphometColors/blade-atlas.png",
+    "Tools/BaphometColors/cm_0018-original.png",
+    "Tools/BaphometColors/cm_0018_it-original.png",
+    "Tools/BaphometColors/edit_skin.py",
+    "Tools/BaphometColors/index.html",
+    "Tools/BaphometColors/model.json",
+    "Tools/BaphometColors/Open.cmd",
+    "Tools/BaphometColors/settings.json",
+    "Tools/BaphometColors/skin.js",
+    "Tools/BaphometColors/viewer.js"
+  ],
+  "git_clean_preserves_all_manifest_bytes": true,
+  "actual_outputs_installation_tested": false
+}

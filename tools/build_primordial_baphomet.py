@@ -82,7 +82,10 @@ def main():
     assert original[0]['corners']==modified[0]['corners']
     put('Monster/mt_prime_baphomet.mod',raw)
     for key,size in [('body',(1024,1024)),('blade',(256,1024))]:
-        im=Image.open(O/(key+'-imagegen.png')).convert('RGB').resize(size,Image.Resampling.LANCZOS)
+        # The color editor's baked body atlas is authoritative after red-feature
+        # initialization; a full monster rebuild must preserve saved skin colors.
+        selected=O/'body-atlas.png' if key=='body' and (O/'skin-settings.json').exists() else O/(key+'-imagegen.png')
+        im=Image.open(selected).convert('RGB').resize(size,Image.Resampling.LANCZOS)
         im.save(O/(key+'-atlas.png'));buf=BytesIO();im.save(buf,format='BMP');bmp=buf.getvalue()
         wtm=b'TEAMMAY\0\0'+struct.pack('<I',len(bmp))+zlib.compress(bmp,9)
         assert Image.open(BytesIO(zlib.decompress(wtm[13:]))).tobytes()==im.tobytes()
@@ -116,11 +119,13 @@ def main():
     info=info.rstrip()+'\r\n'+'\r\n'.join(f'{n}\t231\t태초의 바포메트 \\\tmt_prime_baphomet\tNONE\t0' for n in IDS)+'\r\n'
     put('Monster/MobInfo.dat',info.encode('cp949'))
     server=ROOT/'game-data/DATA/MOB_DATA.txt'
-    source_row=next(l.split('\t') for l in server.read_bytes().decode('cp949').splitlines() if l.startswith('44\t'))
+    server_rows={int(f[0]):f for l in server.read_bytes().decode('cp949').splitlines() if (f:=l.split('\t'))[0].isdigit()}
+    source_row=server_rows[44]
+    experience=(int(server_rows[53][12])*11+5)//10  # Basic Baphomet Warrior +10%, nearest integer.
     new_rows=[]
     for ident in IDS:
         row=source_row[:];row[0]=str(ident);row[1]='태초의 바포메트';row[2]='Primordial Baphomet'
-        for idx,value in [(3,231),(4,23162),(6,1470),(7,1610)]:row[idx]=str(value)
+        for idx,value in [(3,231),(4,23162),(6,1470),(7,1610),(12,experience)]:row[idx]=str(value)
         new_rows.append('\t'.join(row))
     table_add(server,new_rows)
     old=(C/'Monster/monster.dat').read_bytes();txt=zlib.decompress(old[20:]).decode('cp949').rstrip()+'\r\n'+'\r\n'.join(new_rows)+'\r\n'
@@ -138,7 +143,7 @@ def main():
     data=dict(original=original,primordial=modified,clips={n:dict(original=a,primordial=b) for n,(a,b) in clips.items()},motions=motions,
               textures=dict(original=['cm_0018-original.png','cm_0018_it-original.png'],primordial=['body-atlas.png','blade-atlas.png']))
     (O/'model.json').write_text(json.dumps(data,separators=(',',':')),encoding='utf-8')
-    report=dict(passed=True,base_id=BASE,variant_ids=IDS,name='태초의 바포메트',level=231,hp=23162,attack=[1470,1610],scale=SCALE,
+    report=dict(passed=True,base_id=BASE,variant_ids=IDS,name='태초의 바포메트',level=231,hp=23162,attack=[1470,1610],experience=experience,experience_basis_id=53,scale=SCALE,
                 vertices=sum(len(c['points']) for c in original),triangles=sum(len(c['corners'])//3 for c in original),bones=29,
                 animations=animations,original_monsters_untouched=True,blood_textures_from_imagegen=True,
                 native_mesh_and_all_animation_translations_scaled=True,original_rotations_and_skin_indices_preserved=True,

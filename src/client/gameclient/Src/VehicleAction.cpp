@@ -306,7 +306,7 @@ void CVehicleAction::Update( DWORD dwTick )
 	// STATE_RUN의 "중"동작 사운드 재생
 	if(	m_pSound										&&
 		m_dwSoundTick >= m_pModel[0].GetActionTicks()	&&
-		m_wLevel == 1
+		( m_wLevel == 1 || ( m_wState == STATE_WALK && m_wLevel == 0 ) )
 		) 
 	{
 		if( !m_bUnderWater )

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-22-primordial-baphomet",
+  "version": "2026-09-22-hell-horse-icon-correction",
   "files": [
     {
       "kind": "client",
@@ -14,8 +14,8 @@
       "kind": "client",
       "path": "DeicideOnline.exe",
       "source": "client-overlay/DeicideOnline.exe",
-      "bytes": 520192,
-      "sha256": "f1465e05d3ebe7db3a3c825ccc464b8d7652bcda9d5cf8477cba05b92cdbfac4"
+      "bytes": 524288,
+      "sha256": "7face79a37389b75b15f629f335a4d8bfe61a2127530b2fa43d88bafa50e3a6d"
     },
     {
       "kind": "client",
@@ -266,8 +266,8 @@
       "kind": "client",
       "path": "Interface/item.dat",
       "source": "client-overlay/Interface/item.dat",
-      "bytes": 374512,
-      "sha256": "5cb48966f1d98b3ab3a2be9abe043fdff4fe91bc454de6034533c04b11706565"
+      "bytes": 374587,
+      "sha256": "5fbd0364604f10ba9893d33c3156390c9227be4d8d79ba57ad280ca8d5ed8bff"
     },
     {
       "kind": "client",
@@ -294,8 +294,8 @@
       "kind": "client",
       "path": "Item/ITEM.dat",
       "source": "client-overlay/Item/ITEM.dat",
-      "bytes": 4198651,
-      "sha256": "22acd510db558be8202957a7cdec0adb03d4332ac5717ce4c441916f3fb1630e"
+      "bytes": 4198671,
+      "sha256": "bb2f085f8b3bf71ccd1a7a8f5e3ad09f2f8c7823bd757c500b0767bb1d27ec3d"
     },
     {
       "kind": "client",
@@ -310,6 +310,13 @@
       "source": "client-overlay/Item/mt_heaven_icon.wtm",
       "bytes": 2298,
       "sha256": "6a1152382cbe3b1b857a1820d3c483bb54b4d54a397dc24770bccf79ad4c79d6"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_hellhorse_icon.wtm",
+      "source": "client-overlay/Item/mt_hellhorse_icon.wtm",
+      "bytes": 2039,
+      "sha256": "100aefdcc980316db42c5fbe444046492f5db9a5417834f2dbd3ed5ee9ee43af"
     },
     {
       "kind": "client",
@@ -366,6 +373,13 @@
       "source": "client-overlay/LaqiaCrash.dll",
       "bytes": 377344,
       "sha256": "32bbe03f4bbd4695db9f3e36c011d8bb9407aa00bf6d63d37aa1f564f3c73904"
+    },
+    {
+      "kind": "client",
+      "path": "Light/table.scr",
+      "source": "client-overlay/Light/table.scr",
+      "bytes": 94,
+      "sha256": "9e02800ad8f29308b1dee36a4fa2594a15902528f46745c1df1eff62e9f48be1"
     },
     {
       "kind": "client",
@@ -455,8 +469,8 @@
       "kind": "client",
       "path": "Map/land0041.mds",
       "source": "client-overlay/Map/land0041.mds",
-      "bytes": 36,
-      "sha256": "95c912aed79bb1ab2e634eb6b887c5a6996303c7a5025cd79a8bde8286d33adc"
+      "bytes": 90,
+      "sha256": "bf64880f0147d1b2a06b06da6f181892c8dfa9a8a67ff192cff4da73fc59302a"
     },
     {
       "kind": "client",
@@ -476,22 +490,22 @@
       "kind": "client",
       "path": "Map/loading0041_0800.wtm",
       "source": "client-overlay/Map/loading0041_0800.wtm",
-      "bytes": 207114,
-      "sha256": "3b66aaa5ff3ed5184377393a7a9f5067e9f1d75d9064772f51cf71a1b6277702"
+      "bytes": 447373,
+      "sha256": "010bff7dabc10d83137b6773a956eed4a284067debc5ca76bae40a28f7051b50"
     },
     {
       "kind": "client",
       "path": "Map/loading0041_1024.wtm",
       "source": "client-overlay/Map/loading0041_1024.wtm",
-      "bytes": 227738,
-      "sha256": "c1e4d1f4425600d3f897ec765417d48c4d81a30f0b10f03f08b4d689896e9e84"
+      "bytes": 702588,
+      "sha256": "cf1fba206f6cc2ca3360374060e5cc88ea987f9b8f6329590e67fbaf7f6caa29"
     },
     {
       "kind": "client",
       "path": "Map/title0041.wtm",
       "source": "client-overlay/Map/title0041.wtm",
-      "bytes": 10607,
-      "sha256": "16a488209b01dfdb8cae777e8a7a1a0a2c5f194f1db221a4833fcdcb38fe4e38"
+      "bytes": 15007,
+      "sha256": "978fae0a6dd859e1cbe27d5e4c426f35d46d2f08b40525f7b02a70edc2c3bd25"
     },
     {
       "kind": "client",
@@ -568,7 +582,7 @@
       "path": "Monster/monster.dat",
       "source": "client-overlay/Monster/monster.dat",
       "bytes": 11638,
-      "sha256": "b2ed1ba1fb2799c71d9043d3d698c8d6d2a66d3cd9cc19cda9220f4f16264351"
+      "sha256": "3a66ff929d90fb55558861da64a0dc639ae057403f0669ef45c5da7106b321d9"
     },
     {
       "kind": "client",
@@ -597,6 +611,34 @@
       "source": "client-overlay/Skill/Skill.dat",
       "bytes": 6657,
       "sha256": "c7d22549beaa9a2461b96ae6fef12bccb8a0e4c3242c139c62c7a5323c757c4a"
+    },
+    {
+      "kind": "client",
+      "path": "Sound/HorseBlow.wav",
+      "source": "client-overlay/Sound/HorseBlow.wav",
+      "bytes": 30254,
+      "sha256": "8f332f8e7275c8aba4cf356588f487f7a66c7ee40febe709ed271c90c241c711"
+    },
+    {
+      "kind": "client",
+      "path": "Sound/HorseGallop.wav",
+      "source": "client-overlay/Sound/HorseGallop.wav",
+      "bytes": 185348,
+      "sha256": "6e88b40b69abd96c08e31d19e72432b398615ebda08a37bbba53c70e191462d0"
+    },
+    {
+      "kind": "client",
+      "path": "Sound/HorseWalk_A01.wav",
+      "source": "client-overlay/Sound/HorseWalk_A01.wav",
+      "bytes": 196814,
+      "sha256": "809ca91cba2658ab4910d4524ec1ed6a17a0334dae4b5a9bd40aac52c6b3d017"
+    },
+    {
+      "kind": "client",
+      "path": "Sound/HorseWhinney.wav",
+      "source": "client-overlay/Sound/HorseWhinney.wav",
+      "bytes": 77826,
+      "sha256": "92d942a1fa6022545a6189a2903fe53398245af0c2f75e369dbfc7d5c8f79ace"
     },
     {
       "kind": "client",
@@ -646,6 +688,13 @@
       "source": "client-overlay/Texture/Body/mt_heaven_icon.wtm",
       "bytes": 2298,
       "sha256": "6a1152382cbe3b1b857a1820d3c483bb54b4d54a397dc24770bccf79ad4c79d6"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/mt_hellhorse_icon.wtm",
+      "source": "client-overlay/Texture/Body/mt_hellhorse_icon.wtm",
+      "bytes": 2039,
+      "sha256": "100aefdcc980316db42c5fbe444046492f5db9a5417834f2dbd3ed5ee9ee43af"
     },
     {
       "kind": "client",
@@ -952,8 +1001,8 @@
       "kind": "client",
       "path": "Texture/Monster/mt_prime_body.wtm",
       "source": "client-overlay/Texture/Monster/mt_prime_body.wtm",
-      "bytes": 1881266,
-      "sha256": "8d36845b4ea536d70ebf4893aa7858047d0ecf6bdee6ca881cd5b198b53d00b3"
+      "bytes": 1770675,
+      "sha256": "6bb3a1576f42a03ed5cb4e3e5b0ba518c87dd6fda9b1f9de4a9626dd7dacb819"
     },
     {
       "kind": "client",
@@ -961,6 +1010,83 @@
       "source": "client-overlay/Texture/Vehicle/mt_hellhorse.wtm",
       "bytes": 2050487,
       "sha256": "d69a12f68dbcdd3e224f35ad692e88043102fa1a1c072b8fa5cc461b905b7732"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/base-body.png",
+      "source": "client-overlay/Tools/BaphometColors/base-body.png",
+      "bytes": 1391532,
+      "sha256": "35515e5a687da2fc66bb85a9c30db2def1141dee7fbd495fadbf8de16031e05e"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/blade-atlas.png",
+      "source": "client-overlay/Tools/BaphometColors/blade-atlas.png",
+      "bytes": 312430,
+      "sha256": "0960d84a5052da0c02f352e9b497db9e32052ea0baec8e3e8dec7b1f0dc0bfe7"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/cm_0018-original.png",
+      "source": "client-overlay/Tools/BaphometColors/cm_0018-original.png",
+      "bytes": 377841,
+      "sha256": "6d50fd229c6343952b5d9197f35a40a94c0ac28de64ba018d9946ee87eb758bb"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/cm_0018_it-original.png",
+      "source": "client-overlay/Tools/BaphometColors/cm_0018_it-original.png",
+      "bytes": 28145,
+      "sha256": "4302826a0beba0c01bb5c1f68fa15fd8d1e7122c6d725df019159d54c64fadad"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/edit_skin.py",
+      "source": "client-overlay/Tools/BaphometColors/edit_skin.py",
+      "bytes": 7537,
+      "sha256": "032ac0648034303ce801c181385a98eb8f09744fd366562ba1a23ffd4b2a5630"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/index.html",
+      "source": "client-overlay/Tools/BaphometColors/index.html",
+      "bytes": 5930,
+      "sha256": "f8127d4af2ce28345195f8ea77fda8529c64f983fec79e3b164b2b1352899aab"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/model.json",
+      "source": "client-overlay/Tools/BaphometColors/model.json",
+      "bytes": 5409131,
+      "sha256": "e7977cba094754ebb27ff0b199faf89af1918452821724b4c43387aee605407f"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/Open.cmd",
+      "source": "client-overlay/Tools/BaphometColors/Open.cmd",
+      "bytes": 251,
+      "sha256": "7ad122ef15148c2ed749751cff7a1ef61286d73addb2c4b8c0e8de3bd53b2eaa"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/settings.json",
+      "source": "client-overlay/Tools/BaphometColors/settings.json",
+      "bytes": 64,
+      "sha256": "c11502710ae6026aea07579cd580e20a7334d1aa11d4ccfc4197af92a6577a1c"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/skin.js",
+      "source": "client-overlay/Tools/BaphometColors/skin.js",
+      "bytes": 4315,
+      "sha256": "8a8ef2d7bbcd3a4ec4cf62920b1b83810c802b4fd4826b17c6dc0100478d9f35"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/BaphometColors/viewer.js",
+      "source": "client-overlay/Tools/BaphometColors/viewer.js",
+      "bytes": 5548,
+      "sha256": "e7045f93debdd063f2de24717582e415d195b300dd2a2872fa8560ba6eff0125"
     },
     {
       "kind": "client",
@@ -1169,8 +1295,8 @@
       "kind": "client",
       "path": "UInterface.dll",
       "source": "client-overlay/UInterface.dll",
-      "bytes": 503808,
-      "sha256": "5cb2f787c02d53ecc559ea5b08812f9d1b394e9039734b5de39992f30979de96"
+      "bytes": 507904,
+      "sha256": "42b35656203734794acc3b067ca7a0d0e7391001968715f16c28f8e2e0dd4352"
     },
     {
       "kind": "client",
@@ -1185,6 +1311,13 @@
       "source": "client-overlay/Vehicle/mt_hellhorse.mod",
       "bytes": 57089,
       "sha256": "5c627e80bb4b744698a89f7ee019c5dee3ad202a23f6dcf43e0d3755ee4d3725"
+    },
+    {
+      "kind": "client",
+      "path": "Vehicle/vehicle.wad",
+      "source": "client-overlay/Vehicle/vehicle.wad",
+      "bytes": 1200453,
+      "sha256": "5537e597df893be24548486bafac8b99c0343f338b91fb571ed4e9214b55aa1e"
     },
     {
       "kind": "server",
@@ -1281,8 +1414,8 @@
       "kind": "server",
       "path": "DATA/ITEM_DATA.txt",
       "source": "game-data/DATA/ITEM_DATA.txt",
-      "bytes": 4213176,
-      "sha256": "9d6bb084b5f5e586b99f6aa240110f12dc66765781c0fa6819756ac3a058591b"
+      "bytes": 4213196,
+      "sha256": "cef4572c689408c5200a474ab1bdfb52262df25f1ae2006498b3299b6002f9d4"
     },
     {
       "kind": "server",
@@ -1338,7 +1471,7 @@
       "path": "DATA/MOB_DATA.txt",
       "source": "game-data/DATA/MOB_DATA.txt",
       "bytes": 43296,
-      "sha256": "5bebfdca5305132878ee72ae6e8163e294602be8f7511b5469468a18760138bc"
+      "sha256": "e4446a03b06c1202a550b412f7c7e488b60edd56661598374268e3fd88328dbb"
     },
     {
       "kind": "server",
