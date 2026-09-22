@@ -1,0 +1,176 @@
+{
+  "resources": [
+    {
+      "target": "mm_protecfire_a01.wed",
+      "frames": 46
+    },
+    {
+      "target": "mm_firepierce_a01.wed",
+      "frames": 46
+    },
+    {
+      "target": "mf_spikeice_a.wed",
+      "frames": 16
+    },
+    {
+      "target": "mm_fireball01.wed",
+      "frames": 11
+    },
+    {
+      "target": "mm_ta_fire.wed",
+      "frames": 20
+    },
+    {
+      "target": "mm_fireball02.wed",
+      "frames": 64
+    },
+    {
+      "target": "mm_fireball02_1.wed",
+      "frames": 61
+    },
+    {
+      "target": "mm_fireball02_2.wed",
+      "frames": 59
+    },
+    {
+      "target": "mm_fireball02_3.wed",
+      "frames": 57
+    },
+    {
+      "target": "mm_fireball02_4.wed",
+      "frames": 54
+    },
+    {
+      "target": "mm_fireball02_5.wed",
+      "frames": 52
+    },
+    {
+      "target": "mm_fireball02_6.wed",
+      "frames": 49
+    },
+    {
+      "target": "mf_spikeice02.wed",
+      "frames": 21
+    },
+    {
+      "target": "mf_spikeice01.wed",
+      "frames": 21
+    },
+    {
+      "target": "mf_pajang02.wed",
+      "frames": 21
+    },
+    {
+      "target": "mh_ps0002_1.wed",
+      "frames": 31
+    },
+    {
+      "target": "mh_vb0001.wed",
+      "frames": 21
+    }
+  ],
+  "magic": {
+    "mt_heaven": "mt_heaven.ms",
+    "mt_six": "mt_six.ms",
+    "mt_six_blue": "mt_six_blue.ms",
+    "mt_meteorA": "mt_meteorA.ms",
+    "mt_frostA": "mt_frostA.ms",
+    "mt_meteorB": "mt_meteorB.ms",
+    "mt_frostB": "mt_frostB.ms"
+  },
+  "tuning": {
+    "meteor": {
+      "portalGap": 80,
+      "readyHold": 250,
+      "shotGap": 80,
+      "flightSpeed": 1800
+    },
+    "frost": {
+      "startDelay": 350,
+      "stepGap": 45,
+      "distance": 12,
+      "size": 1.2,
+      "riseSpeed": 1.5,
+      "brightness": 1.3
+    },
+    "heaven": {
+      "startDelay": 1750,
+      "shotGap": 85,
+      "flightSpeed": 3000,
+      "impactSize": 1.8
+    },
+    "six": {
+      "startDelay": 1750,
+      "shotGap": 70,
+      "flightSpeed": 3000
+    }
+  },
+  "timing": {
+    "meteor": {
+      "first": 730,
+      "last": 1210,
+      "fadeStart": 1510,
+      "fadeEnd": 2010,
+      "motionEnd": 1500
+    },
+    "frost": {
+      "first": 350,
+      "last": 575,
+      "distance": 12,
+      "stations": 6,
+      "motionEnd": 1500
+    },
+    "heaven": {
+      "first": 1750,
+      "last": 1920,
+      "motionEnd": 2500
+    },
+    "six": {
+      "first": 1750,
+      "last": 2100,
+      "motionEnd": 2500
+    }
+  },
+  "meteor_portal_positions": [
+    [
+      0.0,
+      0.5,
+      4.1
+    ],
+    [
+      1.9,
+      0.5,
+      3.1
+    ],
+    [
+      -1.9,
+      0.5,
+      3.1
+    ],
+    [
+      3.8,
+      0.5,
+      4.1
+    ],
+    [
+      -3.8,
+      0.5,
+      4.1
+    ],
+    [
+      5.7,
+      0.5,
+      3.1
+    ],
+    [
+      -5.7,
+      0.5,
+      3.1
+    ]
+  ],
+  "frost_angles": [
+    0,
+    -45,
+    45
+  ]
+}

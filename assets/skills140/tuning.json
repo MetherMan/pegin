@@ -1,0 +1,30 @@
+{
+  "meteor": {
+    "portalGap": 80,
+    "readyHold": 250,
+    "shotGap": 80,
+    "flightSpeed": 1100,
+    "impactHeight": 0.55
+  },
+  "frost": {
+    "startDelay": 100,
+    "stepGap": 60,
+    "distance": 10,
+    "size": 1.5,
+    "riseSpeed": 1.1,
+    "brightness": 1.2,
+    "spreadAngle": 25,
+    "mistStrength": 2
+  },
+  "heaven": {
+    "startDelay": 1750,
+    "shotGap": 85,
+    "flightSpeed": 3000,
+    "impactSize": 2.5
+  },
+  "six": {
+    "startDelay": 2000,
+    "shotGap": 85,
+    "flightSpeed": 2900
+  }
+}

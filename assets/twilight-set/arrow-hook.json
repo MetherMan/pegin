@@ -1,0 +1,23 @@
+{
+  "original_sha256": "93549d3b8475816bc0eec142e956a4a89dfd61588b564801580a9109f4ab7e5b",
+  "sha256": "4cf06ceb05f1a7d0a9a5fb643a92c3b36283e1baacb2bb713b034745c2906682",
+  "hooks": [
+    {
+      "va": 4258393,
+      "original": "bfe40e4700",
+      "target": 4714512
+    },
+    {
+      "va": 4258520,
+      "original": "bee40e4700",
+      "target": 4714560
+    }
+  ],
+  "range": [
+    19060,
+    19080
+  ],
+  "previous_sections_preserved": true,
+  "executed_full_assignment_cases": 29,
+  "stack_and_callee_saved_registers_preserved": true
+}

@@ -1,0 +1,53 @@
+{
+  "triangles": 4968,
+  "vertices": 2501,
+  "meshes": 1,
+  "bounds": [
+    [
+      -0.8076891899108887,
+      -0.36563512682914734,
+      -0.03400000184774399
+    ],
+    [
+      0.9393648505210876,
+      0.10463513433933258,
+      0.03400000184774399
+    ]
+  ],
+  "atlas": {
+    "atlas_size": 2048,
+    "unique_tiles": 3,
+    "material_tiles": {
+      "0": 0,
+      "1": 1,
+      "2": 2
+    },
+    "triangles_by_material": {
+      "0": 4116,
+      "1": 820,
+      "2": 32
+    },
+    "surface_area_by_material": {
+      "0": {
+        "source": 0.37783957586990596,
+        "atlas": 0.37783957586990596
+      },
+      "1": {
+        "source": 0.04238925553300191,
+        "atlas": 0.04238925553300191
+      },
+      "2": {
+        "source": 0.012293254269253645,
+        "atlas": 0.012293254269253645
+      }
+    }
+  },
+  "reference": "wb_0040_1.mod",
+  "reference_winding": 1.0,
+  "kind": "longbow",
+  "body_half_thickness_max": 0.034,
+  "round_grip": true,
+  "source_polygons": 2,
+  "genuine_holes": 1,
+  "visual_in_game_checked": false
+}

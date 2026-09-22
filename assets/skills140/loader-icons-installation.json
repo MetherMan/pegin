@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "version": "2026-09-22-skill-effects-loader-icons",
+  "installation": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient",
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\skill-effects-loader-icons-20260922-143143",
+  "changed": [
+    "Interface/item.dat",
+    "Item/ITEM.dat",
+    "Item/mt_frost_icon.wtm",
+    "Item/mt_heaven_icon.wtm",
+    "Item/mt_meteor_icon.wtm",
+    "Item/mt_six_icon.wtm",
+    "Magic/mt_frostB.ms",
+    "Magic/mt_heaven.ms",
+    "Magic/mt_meteorB.ms",
+    "Magic/mt_six.ms",
+    "Magic/mt_six_blue.ms",
+    "Texture/Body/mt_frost_icon.wtm",
+    "Texture/Body/mt_heaven_icon.wtm",
+    "Texture/Body/mt_meteor_icon.wtm",
+    "Texture/Body/mt_six_icon.wtm",
+    "Tools/SkillColors/colors.json"
+  ],
+  "client_files": 135,
+  "saved_colors": {
+    "meteor": "#D65C5C",
+    "frost": "#862882"
+  },
+  "server_and_database_untouched": true,
+  "in_game_visual_test": false
+}

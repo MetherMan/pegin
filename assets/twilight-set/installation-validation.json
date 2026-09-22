@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "version": "2026-09-22-twilight-closed-surfaces",
+  "manifest_files": 98,
+  "installed_client_files": 66,
+  "server_sha256": "c6291ec9b808b2f4037587d735e540ca1a736500b4c5b28ae83260ee991be6b2",
+  "commit_pushed": false
+}

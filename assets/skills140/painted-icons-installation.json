@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "version": "2026-09-22-skill-icons-painted",
+  "installation": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient",
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\skill-icons-painted-20260922-145743",
+  "changed": [
+    "Item/mt_frost_icon.wtm",
+    "Item/mt_heaven_icon.wtm",
+    "Item/mt_meteor_icon.wtm",
+    "Item/mt_six_icon.wtm",
+    "Texture/Body/mt_frost_icon.wtm",
+    "Texture/Body/mt_heaven_icon.wtm",
+    "Texture/Body/mt_meteor_icon.wtm",
+    "Texture/Body/mt_six_icon.wtm"
+  ],
+  "client_files": 135,
+  "saved_colors": {
+    "meteor": "#D65C5C",
+    "frost": "#862882"
+  },
+  "server_database_effects_untouched": true,
+  "in_game_visual_test": false
+}

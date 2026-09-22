@@ -8,7 +8,8 @@ from capstone import Cs,CS_ARCH_X86,CS_MODE_32
 def align(n,a):return (n+a-1)//a*a
 
 class Hooks:
-    def __init__(self,path,report):
+    def __init__(self,path,report,section=b'.stk16'):
+        self.section=section
         self.path=Path(path);self.report=Path(report)
         data=self.path.read_bytes()
         if self.report.exists():
@@ -20,7 +21,7 @@ class Hooks:
                 data=bytes(restored)
                 assert hashlib.sha256(data).hexdigest()==old['original_sha256']
         self.original=data;self.data=bytearray(data);self.pe=pefile.PE(data=data)
-        assert not any(s.Name.rstrip(b'\0')==b'.stk16' for s in self.pe.sections), 'Unrecognized previous stack patch'
+        assert not any(s.Name.rstrip(b'\0')==section for s in self.pe.sections), 'Unrecognized previous patch'
         self.base=self.pe.OPTIONAL_HEADER.ImageBase
         last=self.pe.sections[-1]
         self.rva=align(last.VirtualAddress+max(last.Misc_VirtualSize,last.SizeOfRawData),self.pe.OPTIONAL_HEADER.SectionAlignment)
@@ -56,7 +57,7 @@ class Hooks:
         assert h+40<=p.OPTIONAL_HEADER.SizeOfHeaders
         assert self.data[h:h+40]==bytes(40),'No spare section header'
         raw_size=align(len(self.code),p.OPTIONAL_HEADER.FileAlignment)
-        self.write(h,struct.pack('<8sIIIIIIHHI',b'.stk16\0\0',len(self.code),self.rva,raw_size,self.raw,0,0,0,0,0x60000020))
+        self.write(h,struct.pack('<8sIIIIIIHHI',self.section,len(self.code),self.rva,raw_size,self.raw,0,0,0,0,0x60000020))
         self.write(p.FILE_HEADER.get_field_absolute_offset('NumberOfSections'),struct.pack('<H',p.FILE_HEADER.NumberOfSections+1))
         self.write(p.OPTIONAL_HEADER.get_field_absolute_offset('SizeOfImage'),struct.pack('<I',align(self.rva+len(self.code),p.OPTIONAL_HEADER.SectionAlignment)))
         self.write(p.OPTIONAL_HEADER.get_field_absolute_offset('SizeOfCode'),struct.pack('<I',p.OPTIONAL_HEADER.SizeOfCode+raw_size))

@@ -3176,7 +3176,7 @@ void CW3DUInterface::MoveItemInInventory( SItemData* pItemDat, UIInventoryIN* pI
 
 	if( pExistItemDat )
 	{
-		if( SelectedEnchantItem( pItemDat, FALSE ) )
+		if( !((pItemDat->nType == 10193 || pItemDat->nType == 10194) && pItemDat->nType == pExistItemDat->nType) && SelectedEnchantItem( pItemDat, FALSE ) )
 		{ //¿Œ√æ∆Æ
 			UseEnchantItem( pExistItemDat );
 			return;

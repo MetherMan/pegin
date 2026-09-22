@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "version": "2026-09-22-sixfold-icon-rollback",
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\sixfold-icon-rollback-20260922-150915",
+  "changed": [
+    "Item/mt_six_icon.wtm",
+    "Texture/Body/mt_six_icon.wtm"
+  ],
+  "restored_art": "painted-v4/six-source.png",
+  "identical_to_previous_installation": true,
+  "client_files": 135,
+  "game_running": false,
+  "other_icons_and_effects_unchanged": true
+}

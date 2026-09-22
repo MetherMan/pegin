@@ -1,0 +1,13 @@
+{
+  "items": [
+    19120,
+    19121,
+    19122,
+    19123
+  ],
+  "source": "magicscroll_b.wtm",
+  "frame": "ws_0081.wtm",
+  "background": "black",
+  "ribbon": "original red",
+  "green_background_pixels_removed": 303
+}

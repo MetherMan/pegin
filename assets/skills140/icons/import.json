@@ -1,0 +1,44 @@
+{
+  "items": {
+    "19120": "mt_heaven_icon.bmp",
+    "19121": "mt_six_icon.bmp",
+    "19122": "mt_meteor_icon.bmp",
+    "19123": "mt_frost_icon.bmp"
+  },
+  "size": [
+    28,
+    28
+  ],
+  "frame": "ls_0014.wtm",
+  "border_width": 2,
+  "male_and_female": true,
+  "scroll": "mt_skill140_scroll.bmp",
+  "art_revision": "effect-matched-v5",
+  "style_reference_skills": {
+    "heaven": [
+      "ls_0014",
+      "\ub370\uc4f0\ud328\ub108\ud2b8\ub808\uc774\uc158"
+    ],
+    "six": [
+      "ls_0013",
+      "\ub354\ube14\ub354\ube14\uc0f7"
+    ],
+    "meteor": [
+      "mb_0004",
+      "\ud30c\uc774\uc5b4\ubcfc"
+    ],
+    "frost": [
+      "mb_0009",
+      "\uc2a4\ud30c\uc774\ud06c\uc544\uc774\uc2a4"
+    ]
+  },
+  "art_overrides": {
+    "six": "painted-v4"
+  },
+  "effect_color_reference": {
+    "heaven": "#72DFFF",
+    "six": null,
+    "meteor": "#D65C5C",
+    "frost": "#862882"
+  }
+}

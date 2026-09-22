@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "longbow_brightness": "Use case: precise-object-edit. Edit target: image 1, the approved Eclipse longbow. Image 2 is ONLY a cobalt brightness reference. Change ONLY the dark blue inlay regions of image 1 so they have the same vivid, brighter royal cobalt blue luminance and saturation as image 2. Preserve absolutely the exact approved bow silhouette, all curves, proportions, silver metal surfaces, details, bowstring, central grip, camera, lighting and background of image 1. Do not add or remove decoration. No text. Output the same full portrait framing.",
+  "inventory_icons": "Use case: product-mockup. Create one square classic fantasy MMORPG inventory item icon from the attached exact approved weapon reference. Match the reference weapon precisely; showcase a diagonal close-up of its distinctive upper body/head and part of its handle, silver metal and vivid royal cobalt blue, keep object very large and recognizable at 28 by 28 pixel game display. Black background, thin antique gold square border matching old Korean MMORPG inventory icons. No text, letters, numerals, watermark or UI. The weapon's unique silhouette should occupy 85 percent of the frame.",
+  "approved_staff": "KakaoTalk_20260921_233812406_01.png"
+}

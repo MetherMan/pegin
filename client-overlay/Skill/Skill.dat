@@ -1,0 +1,347 @@
+[SKILL]
+	[NAME] 워크라이 
+	[WEAPON] 1
+	[EFFECT] 워크라이
+	[MALE_ACTION] warcries_m.ani
+	[FEMALE_ACTION] warcries_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 버로우
+	[WEAPON] 1
+	[EFFECT] 버로우
+	[MALE_ACTION] burrow_m.ani
+	[FEMALE_ACTION] burrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 스텔스
+	[WEAPON] 1
+	[EFFECT] 스텔스
+	[MALE_ACTION] stealth_m.ani
+	[FEMALE_ACTION] stealth_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 센스티브
+	[WEAPON] 1
+	[EFFECT] 센스티브
+	[MALE_ACTION] senstive_m.ani
+	[FEMALE_ACTION] senstive_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 해븐리스태프
+	[WEAPON] 1
+	[EFFECT] 해븐리스태프
+	[MALE_ACTION] heavenlystaff_m.ani
+	[FEMALE_ACTION] heavenlystaff_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 에너지드레인
+	[WEAPON] 1
+	[EFFECT] 에너지드레인
+	[MALE_ACTION] heavenlystaff_m.ani
+	[FEMALE_ACTION] heavenlystaff_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 블레싱실드
+	[WEAPON] 1
+	[EFFECT] 블레싱실드
+	[MALE_ACTION] blessingshield_m.ani
+	[FEMALE_ACTION] blessingshield_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 해븐리에로우
+	[WEAPON] 1
+	[EFFECT] 해븐리에로우
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 포이즌웨폰
+	[WEAPON] 1
+	[EFFECT] 포이즌웨폰
+	[MALE_ACTION] poisonweapon_m.ani
+	[FEMALE_ACTION] poisonweapon_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 리제너레이션
+	[WEAPON] 1
+	[EFFECT] 리제너레이션
+	[MALE_ACTION] regeneration_m.ani
+	[FEMALE_ACTION] regeneration_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 리쥬버네이션
+	[WEAPON] 1
+	[EFFECT] 리쥬버네이션
+	[MALE_ACTION] rejuvenation_m.ani
+	[FEMALE_ACTION] rejuvenation_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 해븐리해머
+	[WEAPON] 1
+	[EFFECT] 해븐리해머
+	[MALE_ACTION] poisonweapon_m.ani
+	[FEMALE_ACTION] poisonweapon_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 더스트스킨
+	[WEAPON] 1
+	[EFFECT] 더스트스킨
+	[MALE_ACTION] dustskin_m.ani
+	[FEMALE_ACTION] dustskin_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 크리티컬
+	[WEAPON] 1
+	[EFFECT] 크리티컬_스킬
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 파이어에로우
+	[WEAPON] 1
+	[EFFECT] 파이어에로우
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 포이즌에로우
+	[WEAPON] 1
+	[EFFECT] 포이즌에로우
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 칠터치
+	[WEAPON] 1
+	[EFFECT] 칠터치
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 클라우드킬
+	[WEAPON] 1
+	[EFFECT] 클라우드킬
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 파이어월
+	[WEAPON] 1
+	[EFFECT] 파이어월
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 큐어라이트
+	[WEAPON] 1
+	[EFFECT] 큐어라이트
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 어스스워드
+	[WEAPON] 1
+	[EFFECT] 어스스워드
+	[MALE_ACTION] terrain_m.ani
+	[FEMALE_ACTION] terrain_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 글래십
+	[WEAPON] 1
+	[EFFECT] 글래십
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 울프클로
+	[WEAPON] 1
+	[EFFECT] 울프클로
+	[MALE_ACTION] WolfClaw_m.ani
+	[FEMALE_ACTION] WolfClaw_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 베어클로
+	[WEAPON] 1
+	[EFFECT] 베어클로
+	[MALE_ACTION] WolfClaw_m.ani
+	[FEMALE_ACTION] WolfClaw_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 스탭
+	[WEAPON] 1
+	[EFFECT] 스탭
+	[MALE_ACTION] Stab_m.ani
+	[FEMALE_ACTION] Stab_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 와일드스탭
+	[WEAPON] 1
+	[EFFECT] 와일드스탭
+	[MALE_ACTION] Stab_m.ani
+	[FEMALE_ACTION] Stab_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 블레이드윈드
+	[WEAPON] 1
+	[EFFECT] 블레이드윈드
+	[MALE_ACTION] Bladewind_m.ani
+	[FEMALE_ACTION] Bladewind_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 블레이드브리즈
+	[WEAPON] 1
+	[EFFECT] 블레이드브리즈
+	[MALE_ACTION] Bladewind_m.ani
+	[FEMALE_ACTION] Bladewind_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 본브레이크
+	[WEAPON] 1
+	[EFFECT] 본브레이크
+	[MALE_ACTION] WolfClaw_m.ani
+	[FEMALE_ACTION] WolfClaw_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 더블브레이크
+	[WEAPON] 1
+	[EFFECT] 더블브레이크
+	[MALE_ACTION] Bladewind_m.ani
+	[FEMALE_ACTION] Bladewind_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 오거클로
+	[WEAPON] 1
+	[EFFECT] 오거클로
+	[MALE_ACTION] WolfClaw_m.ani
+	[FEMALE_ACTION] WolfClaw_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 버스트스탭
+	[WEAPON] 1
+	[EFFECT] 버스트스탭
+	[MALE_ACTION] Stab_m.ani
+	[FEMALE_ACTION] Stab_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 블레이드게일
+	[WEAPON] 1
+	[EFFECT] 블레이드게일
+	[MALE_ACTION] Bladewind_m.ani
+	[FEMALE_ACTION] Bladewind_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 브레이크레볼루션
+	[WEAPON] 1
+	[EFFECT] 브레이크레볼루션
+	[MALE_ACTION] WolfClaw_m.ani
+	[FEMALE_ACTION] WolfClaw_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 스피릿애로우
+	[WEAPON] 1
+	[EFFECT] 스피릿애로우
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 다크스피릿애로우
+	[WEAPON] 1
+	[EFFECT] 다크스피릿애로우
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 파이어혼
+	[WEAPON] 1
+	[EFFECT] 파이어혼
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 아이스혼
+	[WEAPON] 1
+	[EFFECT] 아이스혼
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 더블샷
+	[WEAPON] 1
+	[EFFECT] 더블샷
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 트리플샷
+	[WEAPON] 1
+	[EFFECT] 트리플샷
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 패너트레이션
+	[WEAPON] 1
+	[EFFECT] 패너트레이션
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 파워패너트레이션
+	[WEAPON] 1
+	[EFFECT] 파워패너트레이션
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 블러드스피릿애로우
+	[WEAPON] 1
+	[EFFECT] 블러드스피릿애로우
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 라이트닝혼
+	[WEAPON] 1
+	[EFFECT] 라이트닝혼
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 더블더블샷
+	[WEAPON] 1
+	[EFFECT] 더블더블샷
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+	[NAME] 데쓰패너트레이션
+	[WEAPON] 1
+	[EFFECT] 데쓰패너트레이션
+	[MALE_ACTION] arrow_m.ani
+	[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+[SKILL]
+[NAME] mt_heaven
+[WEAPON] 1
+[EFFECT] mt_heaven
+[MALE_ACTION] arrow_m.ani
+[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+
+[SKILL]
+[NAME] mt_six
+[WEAPON] 1
+[EFFECT] mt_six
+[MALE_ACTION] arrow_m.ani
+[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+
+[SKILL]
+[NAME] mt_six_blue
+[WEAPON] 1
+[EFFECT] mt_six_blue
+[MALE_ACTION] arrow_m.ani
+[FEMALE_ACTION] arrow_f.ani
+[/SKILL]
+
+[END]

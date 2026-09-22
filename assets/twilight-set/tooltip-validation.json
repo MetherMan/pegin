@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "cases": 80,
+  "rank_color": "#72CFFF",
+  "name_color": "#72CFFF",
+  "reserved_family_range": [
+    19030,
+    19110
+  ],
+  "two_load_addresses": true,
+  "sha256": "fd282cd7c764880de68855c792f9357da86d5416dfdd509473b921ca022aa181"
+}

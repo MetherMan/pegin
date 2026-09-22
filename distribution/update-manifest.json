@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-21-stacks-armor-thin-blade-diagnostics",
+  "version": "2026-09-22-twilight-skills140-balance",
   "files": [
     {
       "kind": "client",
@@ -14,22 +14,162 @@
       "kind": "client",
       "path": "DeicideOnline.exe",
       "source": "client-overlay/DeicideOnline.exe",
-      "bytes": 507904,
-      "sha256": "93549d3b8475816bc0eec142e956a4a89dfd61588b564801580a9109f4ab7e5b"
+      "bytes": 516096,
+      "sha256": "6ecdeba8c51fd85a4046c29c03dc95e5e68b2897587c3d28f1ebab6832481747"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pajang02.wed",
+      "source": "client-overlay/Effect/mf_pajang02.wed",
+      "bytes": 1590,
+      "sha256": "e2162233af91f83c561f3e000e488a78855154714dccfd96e24c8f4032597b64"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pajang03.wed",
+      "source": "client-overlay/Effect/mf_pajang03.wed",
+      "bytes": 1590,
+      "sha256": "b58de97bda4c30f2974ec311f27db3addd0b7219ca73ae5748ed4d487814ba88"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_spikeice01.wed",
+      "source": "client-overlay/Effect/mf_spikeice01.wed",
+      "bytes": 1591,
+      "sha256": "484628dd3283e2be29a0ee0a76b181127340185cf71ad76a688b73ab1233acf0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_spikeice02.wed",
+      "source": "client-overlay/Effect/mf_spikeice02.wed",
+      "bytes": 1591,
+      "sha256": "b2fe2f706b55317afdca4c41d3a64d58493081ab1719496db07d5a9bbcbe2440"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_spikeice_a.wed",
+      "source": "client-overlay/Effect/mf_spikeice_a.wed",
+      "bytes": 914,
+      "sha256": "754da44ec75b9735825598b97def83599525b359da954e383dd03f1738b7e6bc"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_ps0002_1.wed",
+      "source": "client-overlay/Effect/mh_ps0002_1.wed",
+      "bytes": 1697,
+      "sha256": "af26e1d6f2ee3fcbf6fb5af60fcb593431fdee9d695dde8feb83b71a77880ae3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_vb0001.wed",
+      "source": "client-overlay/Effect/mh_vb0001.wed",
+      "bytes": 1174,
+      "sha256": "170985e27b9dbea760ed8d644e35a7c23980cdea78c2b319282ab3e42102c106"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fireball01.wed",
+      "source": "client-overlay/Effect/mm_fireball01.wed",
+      "bytes": 659,
+      "sha256": "360459594ceb6bbd94ad3c73d90aa154288545a0d80ff988ddadc49f43a04aec"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fireball02.wed",
+      "source": "client-overlay/Effect/mm_fireball02.wed",
+      "bytes": 3419,
+      "sha256": "ece5f3a3ba15a0da538f4a8ede48c7dfe64350844405d326241db3f06a913acc"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fireball02_1.wed",
+      "source": "client-overlay/Effect/mm_fireball02_1.wed",
+      "bytes": 3263,
+      "sha256": "d21745c80f820f0c4a045e3ed9530d08e859b6ae9b99b2f4865de84ee785a8a9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fireball02_2.wed",
+      "source": "client-overlay/Effect/mm_fireball02_2.wed",
+      "bytes": 3159,
+      "sha256": "1be3c14d5b57a888e9f52b759846e06066dcdcafde2d814e9edec61bb5f61ece"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fireball02_3.wed",
+      "source": "client-overlay/Effect/mm_fireball02_3.wed",
+      "bytes": 3055,
+      "sha256": "68022d61b5223100983b1e0b62dc1fa39814c6cc846e6637f8c87b03b65a7611"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fireball02_4.wed",
+      "source": "client-overlay/Effect/mm_fireball02_4.wed",
+      "bytes": 2899,
+      "sha256": "196255049f2919ff2faf915f9c1a3ad4e11be95c4b9924d2cf6f92a49c1c58b3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fireball02_5.wed",
+      "source": "client-overlay/Effect/mm_fireball02_5.wed",
+      "bytes": 2795,
+      "sha256": "8cda8ec73eb46966870cba1b3784c8c5f1e807b9e7c5e2fa53baed77a9ab7e53"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fireball02_6.wed",
+      "source": "client-overlay/Effect/mm_fireball02_6.wed",
+      "bytes": 2639,
+      "sha256": "f376e70ce1258fc07da847b5ac9f13b838ddc2e496a70202aeb3ac46dc4d77c2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_firepierce_a01.wed",
+      "source": "client-overlay/Effect/mm_firepierce_a01.wed",
+      "bytes": 2483,
+      "sha256": "0f5e1d235b94b2e2f33655ca31cf2d02e363afab160b2df4097c9e8ff520a283"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_protecfire_a01.wed",
+      "source": "client-overlay/Effect/mm_protecfire_a01.wed",
+      "bytes": 2483,
+      "sha256": "2b82594f950716cf4d65fd765e541d296d98ca90a06e300136341f8f23031c05"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_ta_fire.wed",
+      "source": "client-overlay/Effect/mm_ta_fire.wed",
+      "bytes": 1125,
+      "sha256": "314f7373aa6bc8472df4116eb47247240869876d52c4a1fab14c4d433503db2f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mt_arrow.wed",
+      "source": "client-overlay/Effect/mt_arrow.wed",
+      "bytes": 1692,
+      "sha256": "91ec6f4b65decfe44f2e1c200005a243243c5b43254977d22482676d33efe412"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mt_arrow_hit.wed",
+      "source": "client-overlay/Effect/mt_arrow_hit.wed",
+      "bytes": 1067,
+      "sha256": "8405be9a902f986bc4b771a1f60d0e1470910f4c1beb85603b5e13707e3d42ec"
     },
     {
       "kind": "client",
       "path": "Effect/trace.tdf",
       "source": "client-overlay/Effect/trace.tdf",
-      "bytes": 597,
-      "sha256": "30d814cc61520bf6dcc43ae6e3ae984c2b9d99730ed56adc50deb417ec9bf195"
+      "bytes": 647,
+      "sha256": "e747d441249745083acf30b4792d7eafd82580875866e92a871c77d47eef471a"
     },
     {
       "kind": "client",
       "path": "Engine.dll",
       "source": "client-overlay/Engine.dll",
       "bytes": 311296,
-      "sha256": "d767f98ac4467311dcf6d9137c8bc0037940534e90aff8448d9a1bb63783533d"
+      "sha256": "fd282cd7c764880de68855c792f9357da86d5416dfdd509473b921ca022aa181"
     },
     {
       "kind": "client",
@@ -54,24 +194,66 @@
     },
     {
       "kind": "client",
+      "path": "Equip/mt_longbow_1.mod",
+      "source": "client-overlay/Equip/mt_longbow_1.mod",
+      "bytes": 387868,
+      "sha256": "a573d5ca2ca2393ab0b1cb9e932111cdbe75cc1b88ec71dc8bf9c2ac6e3599cb"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/mt_longbow_2.mod",
+      "source": "client-overlay/Equip/mt_longbow_2.mod",
+      "bytes": 387868,
+      "sha256": "a573d5ca2ca2393ab0b1cb9e932111cdbe75cc1b88ec71dc8bf9c2ac6e3599cb"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/mt_longbow_3.mod",
+      "source": "client-overlay/Equip/mt_longbow_3.mod",
+      "bytes": 387868,
+      "sha256": "a573d5ca2ca2393ab0b1cb9e932111cdbe75cc1b88ec71dc8bf9c2ac6e3599cb"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/mt_staff_1.mod",
+      "source": "client-overlay/Equip/mt_staff_1.mod",
+      "bytes": 551044,
+      "sha256": "4c625fa9f5d8afea6838e4301bacfb40670871350bfbae165e99f3799adccede"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/mt_staff_2.mod",
+      "source": "client-overlay/Equip/mt_staff_2.mod",
+      "bytes": 551044,
+      "sha256": "4c625fa9f5d8afea6838e4301bacfb40670871350bfbae165e99f3799adccede"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/mt_staff_3.mod",
+      "source": "client-overlay/Equip/mt_staff_3.mod",
+      "bytes": 551044,
+      "sha256": "4c625fa9f5d8afea6838e4301bacfb40670871350bfbae165e99f3799adccede"
+    },
+    {
+      "kind": "client",
       "path": "Equip/mt_twilight_1.mod",
       "source": "client-overlay/Equip/mt_twilight_1.mod",
-      "bytes": 648820,
-      "sha256": "7529dda6c387db102fe82eb1f1950a6c910d2af4bde706ea0c6627ea55104f9e"
+      "bytes": 533392,
+      "sha256": "28a581a0a8494a16101d316a609339078664fbbd7bcb484d61a32006c07d8232"
     },
     {
       "kind": "client",
       "path": "Equip/mt_twilight_2.mod",
       "source": "client-overlay/Equip/mt_twilight_2.mod",
-      "bytes": 648820,
-      "sha256": "7529dda6c387db102fe82eb1f1950a6c910d2af4bde706ea0c6627ea55104f9e"
+      "bytes": 533392,
+      "sha256": "28a581a0a8494a16101d316a609339078664fbbd7bcb484d61a32006c07d8232"
     },
     {
       "kind": "client",
       "path": "Equip/mt_twilight_3.mod",
       "source": "client-overlay/Equip/mt_twilight_3.mod",
-      "bytes": 648820,
-      "sha256": "7529dda6c387db102fe82eb1f1950a6c910d2af4bde706ea0c6627ea55104f9e"
+      "bytes": 533392,
+      "sha256": "28a581a0a8494a16101d316a609339078664fbbd7bcb484d61a32006c07d8232"
     },
     {
       "kind": "client",
@@ -84,8 +266,15 @@
       "kind": "client",
       "path": "Interface/item.dat",
       "source": "client-overlay/Interface/item.dat",
-      "bytes": 373067,
-      "sha256": "deb644a966ea814b7d7f64ccb03c195431ea783f11a5644f9047eb69ec6baf3a"
+      "bytes": 374512,
+      "sha256": "5cb48966f1d98b3ab3a2be9abe043fdff4fe91bc454de6034533c04b11706565"
+    },
+    {
+      "kind": "client",
+      "path": "Interface/skill.dat",
+      "source": "client-overlay/Interface/skill.dat",
+      "bytes": 8050,
+      "sha256": "f6fabaf9692ce75986e915fac5410ad5ba979efe58d37d4ca189ab4191c2cbb7"
     },
     {
       "kind": "client",
@@ -105,22 +294,71 @@
       "kind": "client",
       "path": "Item/ITEM.dat",
       "source": "client-overlay/Item/ITEM.dat",
-      "bytes": 4181237,
-      "sha256": "e92841a686adda77ea8e69ae5aa4d930dd5be31ddf5525e60a366a355537f2a9"
+      "bytes": 4198352,
+      "sha256": "e0575c487363c6cc777d808b2319fb0223df2e91e067f9d385ca6a39e2727d1d"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_frost_icon.wtm",
+      "source": "client-overlay/Item/mt_frost_icon.wtm",
+      "bytes": 2312,
+      "sha256": "ec23ac1160484b0615944b1b7d196bbad21a2181f7e084afe37fe1c96740c8d6"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_heaven_icon.wtm",
+      "source": "client-overlay/Item/mt_heaven_icon.wtm",
+      "bytes": 2298,
+      "sha256": "6a1152382cbe3b1b857a1820d3c483bb54b4d54a397dc24770bccf79ad4c79d6"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_longbow_icon.wtm",
+      "source": "client-overlay/Item/mt_longbow_icon.wtm",
+      "bytes": 1263,
+      "sha256": "0feb6c17abba5c0cc24a5c0b5d7757a03df4a6c4c444700634f9e5ce5b3bb077"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_meteor_icon.wtm",
+      "source": "client-overlay/Item/mt_meteor_icon.wtm",
+      "bytes": 2242,
+      "sha256": "5843e19764acd261615d60957e7cf0f6ff310e837ec1dda6141590649d3bdeea"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_six_icon.wtm",
+      "source": "client-overlay/Item/mt_six_icon.wtm",
+      "bytes": 2146,
+      "sha256": "8a45dc9be28a43d421db87371bd6d234a87e550edb08e7144aaecc34f5f482f9"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_skill140_scroll.wtm",
+      "source": "client-overlay/Item/mt_skill140_scroll.wtm",
+      "bytes": 1285,
+      "sha256": "db3ebc0f6aabae46d3ad4f9bfc99dbaa2487a34ad3963f8fb24a1618fb16f4a0"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_staff_icon.wtm",
+      "source": "client-overlay/Item/mt_staff_icon.wtm",
+      "bytes": 1423,
+      "sha256": "56018f8bd79443f56cfc1338a4bc7521ecf11d6319ecb740024bd5fd575ffcfb"
     },
     {
       "kind": "client",
       "path": "Item/mt_twilight_icon.wtm",
       "source": "client-overlay/Item/mt_twilight_icon.wtm",
-      "bytes": 1856,
-      "sha256": "84072303d75ae7bf062bc6a3d5e0223747b3c9d3e8b0eb5603192bda3ccadef8"
+      "bytes": 1643,
+      "sha256": "8b9c5ecdee51a24cf13f999d62b07ae2c3d2c0590aff3061f9adc459e323f296"
     },
     {
       "kind": "client",
       "path": "Item/Skill.dat",
       "source": "client-overlay/Item/Skill.dat",
-      "bytes": 25981,
-      "sha256": "497be82b049cf670516f29927c6d270d5bb04ffce0aa1ad05689111dcf327af1"
+      "bytes": 26716,
+      "sha256": "cabb4e996296c8dcfad0340975968ad1180eff15cdb212a8d908973cab79fc82"
     },
     {
       "kind": "client",
@@ -128,6 +366,69 @@
       "source": "client-overlay/LaqiaCrash.dll",
       "bytes": 377344,
       "sha256": "32bbe03f4bbd4695db9f3e36c011d8bb9407aa00bf6d63d37aa1f564f3c73904"
+    },
+    {
+      "kind": "client",
+      "path": "Magic/MagicList.ml",
+      "source": "client-overlay/Magic/MagicList.ml",
+      "bytes": 9686,
+      "sha256": "b3fc237c895aab704dd05a87cae73f407af9cb9b23e7ba4f8103a8819bfc5cf2"
+    },
+    {
+      "kind": "client",
+      "path": "Magic/mt_arrow.ms",
+      "source": "client-overlay/Magic/mt_arrow.ms",
+      "bytes": 576,
+      "sha256": "d2e1d8e3cdfa38d8a33c751b682a85f823724ffbda1dd313b939c01bef11dff9"
+    },
+    {
+      "kind": "client",
+      "path": "Magic/mt_frostA.ms",
+      "source": "client-overlay/Magic/mt_frostA.ms",
+      "bytes": 235,
+      "sha256": "9ea9499c57a0ac5559fbc702e28d501c733f3a75b34327aef999bf689d23600a"
+    },
+    {
+      "kind": "client",
+      "path": "Magic/mt_frostB.ms",
+      "source": "client-overlay/Magic/mt_frostB.ms",
+      "bytes": 4303,
+      "sha256": "8e9a2b554e937fa4e9c5d9f6b39059dfbee09913055bb791a90cd6b007e6310a"
+    },
+    {
+      "kind": "client",
+      "path": "Magic/mt_heaven.ms",
+      "source": "client-overlay/Magic/mt_heaven.ms",
+      "bytes": 1578,
+      "sha256": "c67038234f82e6ec46bfaac20bf465f5b1c06d98c6adf7375532990274e8f703"
+    },
+    {
+      "kind": "client",
+      "path": "Magic/mt_meteorA.ms",
+      "source": "client-overlay/Magic/mt_meteorA.ms",
+      "bytes": 366,
+      "sha256": "9e1de65429c989b2080fbaa683c38024fb51a02b0f1a5ffd19558c94ef5c198a"
+    },
+    {
+      "kind": "client",
+      "path": "Magic/mt_meteorB.ms",
+      "source": "client-overlay/Magic/mt_meteorB.ms",
+      "bytes": 4742,
+      "sha256": "f7661f020af42b52837b0410ce7474d43ddf23c1b470576bc60f0e0aae9c5658"
+    },
+    {
+      "kind": "client",
+      "path": "Magic/mt_six.ms",
+      "source": "client-overlay/Magic/mt_six.ms",
+      "bytes": 3036,
+      "sha256": "7d30e4197bdb291c2d44fbd45c9a8878b0d0258f164643cc22a430870fc2b216"
+    },
+    {
+      "kind": "client",
+      "path": "Magic/mt_six_blue.ms",
+      "source": "client-overlay/Magic/mt_six_blue.ms",
+      "bytes": 3131,
+      "sha256": "cfd6804eff4329ae97c4e71254dc890ccf8df2384ba6d0621233f8a9f156d845"
     },
     {
       "kind": "client",
@@ -142,6 +443,27 @@
       "source": "client-overlay/Render.dll",
       "bytes": 598016,
       "sha256": "1361ad946b6657635e24c9432017115e4d23fa22213af7caf672e0c98327ce50"
+    },
+    {
+      "kind": "client",
+      "path": "Skill/Skill.dat",
+      "source": "client-overlay/Skill/Skill.dat",
+      "bytes": 6657,
+      "sha256": "c7d22549beaa9a2461b96ae6fef12bccb8a0e4c3242c139c62c7a5323c757c4a"
+    },
+    {
+      "kind": "client",
+      "path": "Sound/mm_meteor_hit.wav",
+      "source": "client-overlay/Sound/mm_meteor_hit.wav",
+      "bytes": 52964,
+      "sha256": "dad4f3a5ce1916f3bcb9a1e243a4a34e838ebcdf26f9e6074c09ea0505f722aa"
+    },
+    {
+      "kind": "client",
+      "path": "Sound/mm_meteor_launch.wav",
+      "source": "client-overlay/Sound/mm_meteor_launch.wav",
+      "bytes": 37970,
+      "sha256": "d8b17a6f33ed4582dfc1350f04850fd125b4ae82c0507d4a8ecb604710dd6e61"
     },
     {
       "kind": "client",
@@ -166,10 +488,129 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Body/mt_frost_icon.wtm",
+      "source": "client-overlay/Texture/Body/mt_frost_icon.wtm",
+      "bytes": 2312,
+      "sha256": "ec23ac1160484b0615944b1b7d196bbad21a2181f7e084afe37fe1c96740c8d6"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/mt_heaven_icon.wtm",
+      "source": "client-overlay/Texture/Body/mt_heaven_icon.wtm",
+      "bytes": 2298,
+      "sha256": "6a1152382cbe3b1b857a1820d3c483bb54b4d54a397dc24770bccf79ad4c79d6"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/mt_longbow_icon.wtm",
+      "source": "client-overlay/Texture/Body/mt_longbow_icon.wtm",
+      "bytes": 1263,
+      "sha256": "0feb6c17abba5c0cc24a5c0b5d7757a03df4a6c4c444700634f9e5ce5b3bb077"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/mt_meteor_icon.wtm",
+      "source": "client-overlay/Texture/Body/mt_meteor_icon.wtm",
+      "bytes": 2242,
+      "sha256": "5843e19764acd261615d60957e7cf0f6ff310e837ec1dda6141590649d3bdeea"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/mt_six_icon.wtm",
+      "source": "client-overlay/Texture/Body/mt_six_icon.wtm",
+      "bytes": 2146,
+      "sha256": "8a45dc9be28a43d421db87371bd6d234a87e550edb08e7144aaecc34f5f482f9"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/mt_skill140_scroll.wtm",
+      "source": "client-overlay/Texture/Body/mt_skill140_scroll.wtm",
+      "bytes": 1285,
+      "sha256": "db3ebc0f6aabae46d3ad4f9bfc99dbaa2487a34ad3963f8fb24a1618fb16f4a0"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/mt_staff_icon.wtm",
+      "source": "client-overlay/Texture/Body/mt_staff_icon.wtm",
+      "bytes": 1423,
+      "sha256": "56018f8bd79443f56cfc1338a4bc7521ecf11d6319ecb740024bd5fd575ffcfb"
+    },
+    {
+      "kind": "client",
       "path": "Texture/Body/mt_twilight_icon.wtm",
       "source": "client-overlay/Texture/Body/mt_twilight_icon.wtm",
-      "bytes": 512744,
-      "sha256": "28dad419a6a2a5e7adf8787ee65fc1a0f078aa2fbf756dcb6fdba12fef7b9c26"
+      "bytes": 1643,
+      "sha256": "8b9c5ecdee51a24cf13f999d62b07ae2c3d2c0590aff3061f9adc459e323f296"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_ice_02.wtm",
+      "source": "client-overlay/Texture/Effect/mf_ice_02.wtm",
+      "bytes": 52905,
+      "sha256": "f5e6a84925bdf83e0d04f4eb169a126d1853878a0e825273709b1c6975b18e08"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_LI_09.wtm",
+      "source": "client-overlay/Texture/Effect/mf_LI_09.wtm",
+      "bytes": 11396,
+      "sha256": "054681e0ddb8a868deab118419a4b4e0f55607c078eaee92b48473952b7ae474"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_ta_05.wtm",
+      "source": "client-overlay/Texture/Effect/mf_ta_05.wtm",
+      "bytes": 13158,
+      "sha256": "88d4da831510be57df64bd527ee25ee95448da14eb81fd52d8ca1a63bed161ba"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mh_ps0002_1.wtm",
+      "source": "client-overlay/Texture/Effect/mh_ps0002_1.wtm",
+      "bytes": 6476,
+      "sha256": "c9eecbaf3fa3e7f999283da0c3feabc0958499d5964be6b36e0294f24387f6fa"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mh_ta_06.wtm",
+      "source": "client-overlay/Texture/Effect/mh_ta_06.wtm",
+      "bytes": 13445,
+      "sha256": "03023834cd68f760855cc66ce58858a728d60b4e386dc54cd69747aee57c0baf"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mm_fireball01.wtm",
+      "source": "client-overlay/Texture/Effect/mm_fireball01.wtm",
+      "bytes": 5486,
+      "sha256": "87709919a9bae9eccc4e72b9174cf1a9e21f81880ffad4d9c4ba7c4011a84f7e"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mm_firepierce_a01.wtm",
+      "source": "client-overlay/Texture/Effect/mm_firepierce_a01.wtm",
+      "bytes": 47345,
+      "sha256": "b3009b33932c11881d3ddd811b8476dabee44ff166d6839061f9d989268c3a76"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mm_protecfire_a01.wtm",
+      "source": "client-overlay/Texture/Effect/mm_protecfire_a01.wtm",
+      "bytes": 17810,
+      "sha256": "c8c52c5dc4a74e500270b93ccc02596545c3f9b2569c901fe7ee9cd1f3457c4a"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mm_ta_06ani.wtm",
+      "source": "client-overlay/Texture/Effect/mm_ta_06ani.wtm",
+      "bytes": 168800,
+      "sha256": "df93cca35d50eeeed3c641e46118c445d4394cb607d5487abf2c908a7936e847"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mt_arrow_trace.wtm",
+      "source": "client-overlay/Texture/Effect/mt_arrow_trace.wtm",
+      "bytes": 15030,
+      "sha256": "a9b4cb9611c29cc9e32dd6affb5258470f39fe8bf3aaa5c1f95f50de581c04bb"
     },
     {
       "kind": "client",
@@ -278,6 +719,13 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Equip/mt_longbow_atlas.wtm",
+      "source": "client-overlay/Texture/Equip/mt_longbow_atlas.wtm",
+      "bytes": 3704063,
+      "sha256": "79a17d305a313cf07b94e6fed45dbf5094a4d9ac5d8931c8a3b1789729edc6bc"
+    },
+    {
+      "kind": "client",
       "path": "Texture/Equip/mt_mat_00.wtm",
       "source": "client-overlay/Texture/Equip/mt_mat_00.wtm",
       "bytes": 512744,
@@ -334,6 +782,13 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Equip/mt_staff_atlas.wtm",
+      "source": "client-overlay/Texture/Equip/mt_staff_atlas.wtm",
+      "bytes": 3832899,
+      "sha256": "4a5862d440970bab5fbd5a3f0e9269d05270132244748ad0d406a07a3db0f5ec"
+    },
+    {
+      "kind": "client",
       "path": "Texture/Equip/mt_twilight_atlas.wtm",
       "source": "client-overlay/Texture/Equip/mt_twilight_atlas.wtm",
       "bytes": 2948837,
@@ -341,10 +796,213 @@
     },
     {
       "kind": "client",
+      "path": "Tools/SkillColors/actor.js",
+      "source": "client-overlay/Tools/SkillColors/actor.js",
+      "bytes": 4722,
+      "sha256": "cefc1e5285099d5e1d433ffe740d5a1e9a61375632dbc9ec59c69b987aff9a7a"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/colors.json",
+      "source": "client-overlay/Tools/SkillColors/colors.json",
+      "bytes": 48,
+      "sha256": "e4e52d441c68e845bd40ac0555119d93f7181ecad06cda208b5dd0045c05ad86"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/controls.js",
+      "source": "client-overlay/Tools/SkillColors/controls.js",
+      "bytes": 4733,
+      "sha256": "e7eadb0a725c8b709f192f8281a03f3b25a70920232e495d07f877f59ad76de0"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/edit_colors.py",
+      "source": "client-overlay/Tools/SkillColors/edit_colors.py",
+      "bytes": 8445,
+      "sha256": "16dce28ed2e2d579f8922608012f2945801eea46ba84e7236743d76d8bb4384c"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/index.html",
+      "source": "client-overlay/Tools/SkillColors/index.html",
+      "bytes": 9361,
+      "sha256": "d895c11b866721b092632a30ba6871da88e1e9bdba372d71af475be38387915e"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/native_actor.py",
+      "source": "client-overlay/Tools/SkillColors/native_actor.py",
+      "bytes": 4443,
+      "sha256": "36cd6dac247e4fb2b7d168218ec56204b765b21534970523f3afd5f565e519c9"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/native_assets.py",
+      "source": "client-overlay/Tools/SkillColors/native_assets.py",
+      "bytes": 9530,
+      "sha256": "c7d8f44b0f4f63b716d5d741946d6000d09649417f0155c1cf77ce679aa9f61c"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/Open.cmd",
+      "source": "client-overlay/Tools/SkillColors/Open.cmd",
+      "bytes": 115,
+      "sha256": "3a786e135caef2e16b8ef1ab345bdb6643eaef172b39deb5a0444b37d8067b35"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/preview.js",
+      "source": "client-overlay/Tools/SkillColors/preview.js",
+      "bytes": 20650,
+      "sha256": "10ed5eaee601e8c85c6a85c74963bc42843f08b816b65e5087aeb38640cddee3"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/style.css",
+      "source": "client-overlay/Tools/SkillColors/style.css",
+      "bytes": 4828,
+      "sha256": "992602521c11505a0af1db94d6c82bc508bb798bf58ebef4c7317c32d71cd2ee"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mf_pajang02.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mf_pajang02.wed",
+      "bytes": 1694,
+      "sha256": "0ed6b28b21ace478cb8e8269c78426a22ee85822cedb3694466453d8c556dc06"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mf_spikeice02.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mf_spikeice02.wed",
+      "bytes": 1695,
+      "sha256": "e8b634d316520248bd0425149bc0e22c01f1d4e34a585469caeef205a67d8e0f"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mf_spikeice_a.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mf_spikeice_a.wed",
+      "bytes": 914,
+      "sha256": "04c093cb57def1e84ea144e76afeac5097f9511aacf9c8bc5a92e54097179f0f"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_fireball01.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_fireball01.wed",
+      "bytes": 659,
+      "sha256": "6c7a4a4fb52164ae56beaff59df1416dc45b4509e644caaa29f8634d2764aeb2"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_fireball02.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_fireball02.wed",
+      "bytes": 5239,
+      "sha256": "df2b53536a5915c77aeab48ea220e5631f064367c973f7a07c761f8b5fc4439d"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_fireball02_1.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_fireball02_1.wed",
+      "bytes": 5031,
+      "sha256": "b0cedf011dc2506a49358f4e1baa8ec7d3eeb46b66a72388f50ef5e3e05bd109"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_fireball02_2.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_fireball02_2.wed",
+      "bytes": 4771,
+      "sha256": "20d989c74ce725f62be4c1242c9d3988060e24d3c73502f1de898b783cb8fe1f"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_fireball02_3.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_fireball02_3.wed",
+      "bytes": 4563,
+      "sha256": "d5987107e850d681ddc8efc971f295d331f8ce62a525955185ee74fcea7e4945"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_fireball02_4.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_fireball02_4.wed",
+      "bytes": 4303,
+      "sha256": "5c58bf3dde242a552e1177a41781bccb9ec2dcc92f0464f80e69f424b20265c0"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_fireball02_5.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_fireball02_5.wed",
+      "bytes": 4095,
+      "sha256": "dd334983d7a7a8193ec1eb691263053d6493237d0a20bc1301be50436afcd227"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_fireball02_6.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_fireball02_6.wed",
+      "bytes": 3835,
+      "sha256": "54bccc037d1ec57ea964636714e69105b631f0303790ed8aca16d79b582fd33e"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_firepierce_a01.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_firepierce_a01.wed",
+      "bytes": 2483,
+      "sha256": "dc9532b526dce1e186079b3bd1aba05775e059e6e12425728d8a7d74296b783f"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_protecfire_a01.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_protecfire_a01.wed",
+      "bytes": 2483,
+      "sha256": "e94604325cf8f64db70de8a9f795862d5891210b402783d1bd74c68573259f03"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/templates/mm_ta_fire.wed",
+      "source": "client-overlay/Tools/SkillColors/templates/mm_ta_fire.wed",
+      "bytes": 1125,
+      "sha256": "d1c8c8446302470879c4ff0a6261c26dc552c4dcb3bc54494d8f98b523843861"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/tuning.json",
+      "source": "client-overlay/Tools/SkillColors/tuning.json",
+      "bytes": 513,
+      "sha256": "0002b5c7d2788b0eae3359210c198c95594709ddfb7a998dbd2a9d55468bf27c"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/tuning.py",
+      "source": "client-overlay/Tools/SkillColors/tuning.py",
+      "bytes": 14561,
+      "sha256": "a779697664892c08c1e61b2b57c7c01d6d36c625c3c4d13f48d68c36f6e188e7"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/vendor/OrbitControls.js",
+      "source": "client-overlay/Tools/SkillColors/vendor/OrbitControls.js",
+      "bytes": 32134,
+      "sha256": "80efaadea4f8a636a65fb0bd08bfef62f3d93a0bb94e2e7500f23176c5c07f4e"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/vendor/THREE-LICENSE.txt",
+      "source": "client-overlay/Tools/SkillColors/vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/vendor/three.module.js",
+      "source": "client-overlay/Tools/SkillColors/vendor/three.module.js",
+      "bytes": 1314681,
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+    },
+    {
+      "kind": "client",
       "path": "UInterface.dll",
       "source": "client-overlay/UInterface.dll",
-      "bytes": 499712,
-      "sha256": "77cc2c2fd5cef4886925b9b2e525e0be72c11a3ee9ceeaec609779c4a47f2642"
+      "bytes": 503808,
+      "sha256": "5cb2f787c02d53ecc559ea5b08812f9d1b394e9039734b5de39992f30979de96"
     },
     {
       "kind": "server",
@@ -441,8 +1099,8 @@
       "kind": "server",
       "path": "DATA/ITEM_DATA.txt",
       "source": "game-data/DATA/ITEM_DATA.txt",
-      "bytes": 4195850,
-      "sha256": "13ab85a6edb72a1285e4e34ceed1f9bd8e82ee5e24fbdf39c5e69949666f8a2a"
+      "bytes": 4212877,
+      "sha256": "5818c2fd7c446042dde7feff3fb71bb9b384bd2018ebe6a3ebf11af185c69795"
     },
     {
       "kind": "server",
@@ -511,8 +1169,8 @@
       "kind": "server",
       "path": "DATA/skill_data.txt",
       "source": "game-data/DATA/skill_data.txt",
-      "bytes": 24649,
-      "sha256": "6e6f9b0954a1dff6193dca22c50e684662a4c915c7660d877cdba9f9a7c1fb49"
+      "bytes": 25177,
+      "sha256": "02356d58a8b0cefb614fe9ce4c13d51922771e2944cd63ce815769e5c3632531"
     },
     {
       "kind": "server",
@@ -560,8 +1218,8 @@
       "kind": "server",
       "path": "LAQIA_GameServer",
       "source": "server-bin/LAQIA_GameServer",
-      "bytes": 1793280,
-      "sha256": "23297da8c7f39b15622a325678e49bc477bb5a6ce3851206bb4e719749ce571b"
+      "bytes": 1797896,
+      "sha256": "23f0ebfc89061f7d9cd47266ae06e18926c88f3fee0d69176941e08209e26c46"
     },
     {
       "kind": "updater",

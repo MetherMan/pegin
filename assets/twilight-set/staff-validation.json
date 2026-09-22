@@ -1,0 +1,47 @@
+{
+  "triangles": 7052,
+  "vertices": 3595,
+  "meshes": 1,
+  "bounds": [
+    [
+      -0.8819060325622559,
+      -0.24795973300933838,
+      -0.04100000113248825
+    ],
+    [
+      0.9405369162559509,
+      0.17955704033374786,
+      0.04100000113248825
+    ]
+  ],
+  "atlas": {
+    "atlas_size": 2048,
+    "unique_tiles": 2,
+    "material_tiles": {
+      "0": 0,
+      "1": 1
+    },
+    "triangles_by_material": {
+      "0": 5614,
+      "1": 1438
+    },
+    "surface_area_by_material": {
+      "0": {
+        "source": 0.4482854713007358,
+        "atlas": 0.4482854713007358
+      },
+      "1": {
+        "source": 0.08571329101047447,
+        "atlas": 0.08571329101047447
+      }
+    }
+  },
+  "reference": "ww_0015_1.mod",
+  "reference_winding": 1.0,
+  "kind": "staff",
+  "body_half_thickness_max": 0.041,
+  "round_grip": true,
+  "source_polygons": 2,
+  "genuine_holes": 3,
+  "visual_in_game_checked": false
+}

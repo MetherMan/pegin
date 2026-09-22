@@ -1,0 +1,46 @@
+{
+  "original_sha256": "4cf06ceb05f1a7d0a9a5fb643a92c3b36283e1baacb2bb713b034745c2906682",
+  "original_size": 512000,
+  "sha256": "6ecdeba8c51fd85a4046c29c03dc95e5e68b2897587c3d28f1ebab6832481747",
+  "section_rva": 524288,
+  "undo": [
+    [
+      66188,
+      "8b8e7001000083c043"
+    ],
+    [
+      752,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0700"
+    ],
+    [
+      304,
+      "00000800"
+    ],
+    [
+      252,
+      "00b00600"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "Sixfold Shot selects equipped Twilight arrow color",
+      "va": 4260492,
+      "original": "8b8e7001000083c043",
+      "replacement": "e97ffd060090909090",
+      "target": 4718608,
+      "resume": 4260501,
+      "assembly": "pushfd; cmp word ptr [eax],19121; jne normal; mov ecx,[esi+0x300]; test ecx,ecx; jz normal; cmp dword ptr [ecx],0x615f746d; jne normal; cmp dword ptr [ecx+4],0x776f7272; jne normal; mov eax,4718592; jmp done; normal: add eax,0x43; done: popfd; mov ecx,[esi+0x170]",
+      "code": "9c668138b14a75228b8e0003000085c9741881396d745f61751081790472726f777507b800004800eb0383c0439d8b8e70010000e94c02f9ff"
+    }
+  ],
+  "passed": true,
+  "selector_cases": 8
+}

@@ -1,0 +1,23 @@
+{
+  "version": "2026-09-22-frost-wave-meteor-audio",
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\frost-wave-meteor-audio-20260922-163139",
+  "changed": [
+    "Effect/mf_pajang03.wed",
+    "Magic/mt_frostB.ms",
+    "Magic/mt_meteorB.ms",
+    "Sound/mm_meteor_hit.wav",
+    "Sound/mm_meteor_launch.wav",
+    "Tools/SkillColors/index.html",
+    "Tools/SkillColors/native_assets.py",
+    "Tools/SkillColors/preview.js",
+    "Tools/SkillColors/tuning.json",
+    "Tools/SkillColors/tuning.py"
+  ],
+  "verified_client_files": 143,
+  "saved_settings_preserved": true,
+  "colors_preserved": true,
+  "frost_angle": 25,
+  "meteor_launch_cues": 7,
+  "meteor_arrival_cues": 7,
+  "in_game_visual_test": false
+}

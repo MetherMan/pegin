@@ -1,0 +1,16 @@
+{
+  "version": "2026-09-22-meteor-ground-impact",
+  "changed": [
+    "Magic/mt_meteorB.ms",
+    "Tools/SkillColors/native_assets.py",
+    "Tools/SkillColors/preview.js",
+    "Tools/SkillColors/tuning.py"
+  ],
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\meteor-ground-impact-20260922-165053",
+  "verified_client_files": 143,
+  "latest_settings_preserved": true,
+  "projectile_target_height": 1,
+  "impact_target_height": 0.06,
+  "native_entry_offset": -0.94,
+  "in_game_visual_test": false
+}

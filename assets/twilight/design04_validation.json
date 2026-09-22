@@ -3,7 +3,7 @@
   "revision": "approved-04",
   "all_three_lods_equal": true,
   "animation_meshes": 1,
-  "native_triangles": 8308,
+  "native_triangles": 6836,
   "open_apertures": [
     "round_blade_aperture",
     "upper_openwork",

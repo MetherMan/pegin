@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "effects": [
+    {
+      "source": "arrow01.wed",
+      "target": "mt_arrow.wed",
+      "frames": 31,
+      "only_rgb_changed": true
+    },
+    {
+      "source": "ta_arrow01.wed",
+      "target": "mt_arrow_hit.wed",
+      "frames": 19,
+      "only_rgb_changed": true
+    }
+  ],
+  "trace_frames_and_rate": [
+    50,
+    111
+  ],
+  "trace_dimensions": [
+    128,
+    128
+  ],
+  "trace_opacity_and_shape_preserved": true,
+  "only_twilight_bow": true,
+  "staff_effects_unchanged": true,
+  "visual_in_game_checked": false
+}

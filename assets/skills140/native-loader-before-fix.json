@@ -1,0 +1,30 @@
+{
+  "passed": false,
+  "windows_crt": true,
+  "legacy_blank_line_reproduced": true,
+  "scripts": {
+    "mt_arrow": {
+      "effects": 2,
+      "parts": 4,
+      "blows": 1
+    },
+    "mt_meteorA": {
+      "effects": 3,
+      "parts": 3,
+      "blows": 0
+    },
+    "mt_frostA": {
+      "effects": 2,
+      "parts": 2,
+      "blows": 0
+    }
+  },
+  "failures": {
+    "mt_heaven": "part reached EOF before [/PART]",
+    "mt_six": "part reached EOF before [/PART]",
+    "mt_six_blue": "part reached EOF before [/PART]",
+    "mt_meteorB": "part reached EOF before [/PART]",
+    "mt_frostB": "part reached EOF before [/PART]"
+  },
+  "in_game_visual_test": false
+}

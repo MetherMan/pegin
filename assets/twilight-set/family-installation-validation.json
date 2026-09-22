@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "installation": "existing-outputs-installation",
+  "version": "2026-09-22-twilight-closed-surfaces",
+  "original_account_login_before": true,
+  "original_account_login_after": true,
+  "character_selection_received": true,
+  "all_five_databases_unchanged": true,
+  "client_files_verified": 66,
+  "server_binary_verified": true,
+  "father_updater_path_tested": true,
+  "password_changed": false,
+  "account_migrated": false,
+  "remote_father_pc_accessed": false
+}

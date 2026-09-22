@@ -1,0 +1,5 @@
+{
+  "mode": "built-in image_gen",
+  "revision": "skill-identity-v3",
+  "intent": "Use the existing game's rendering style and palette; transform the entire composition around each skill's name and visible attack, without requiring original motifs to remain."
+}

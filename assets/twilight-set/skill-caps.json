@@ -1,0 +1,399 @@
+{
+  "source": "game-data/DATA/skill_data.txt",
+  "interpretation": "Highest learnable skill requirement per proficiency, not character XP cap or an individual skill upgrade cap",
+  "branches": [
+    {
+      "branch": "근거리",
+      "max_learn_level": 90,
+      "skills": [
+        {
+          "id": 100008012,
+          "item": 12039,
+          "name": "브레이크레볼루션",
+          "requirements": [
+            90,
+            0,
+            0,
+            0
+          ],
+          "class_id": 0,
+          "previous_item": 12038
+        }
+      ]
+    },
+    {
+      "branch": "원거리",
+      "max_learn_level": 140,
+      "skills": [
+        {
+          "id": 100030001,
+          "item": 19120,
+          "name": "헤븐 페너트레이션",
+          "requirements": [
+            0,
+            140,
+            0,
+            0
+          ],
+          "class_id": 0,
+          "previous_item": 0
+        },
+        {
+          "id": 100030002,
+          "item": 19121,
+          "name": "식스폴드 샷",
+          "requirements": [
+            0,
+            140,
+            0,
+            0
+          ],
+          "class_id": 0,
+          "previous_item": 0
+        }
+      ]
+    },
+    {
+      "branch": "흑마법",
+      "max_learn_level": 140,
+      "skills": [
+        {
+          "id": 100030003,
+          "item": 19122,
+          "name": "메테오 버스트",
+          "requirements": [
+            0,
+            0,
+            140,
+            0
+          ],
+          "class_id": 0,
+          "previous_item": 0
+        },
+        {
+          "id": 100030004,
+          "item": 19123,
+          "name": "트라이스파이크 프로스트",
+          "requirements": [
+            0,
+            0,
+            140,
+            0
+          ],
+          "class_id": 0,
+          "previous_item": 0
+        }
+      ]
+    },
+    {
+      "branch": "백마법",
+      "max_learn_level": 115,
+      "skills": [
+        {
+          "id": 100010009,
+          "item": 12058,
+          "name": "썬더볼트",
+          "requirements": [
+            0,
+            0,
+            0,
+            115
+          ],
+          "class_id": 0,
+          "previous_item": 12057
+        }
+      ]
+    }
+  ],
+  "specializations": [
+    {
+      "class_id": 1,
+      "class_name": "워리어",
+      "skill": "워크라이",
+      "skill_item": 10129,
+      "requirements": [
+        25,
+        0,
+        0,
+        0
+      ],
+      "skill_table_requirements": [
+        25,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "class_id": 2,
+      "class_name": "밴디츠",
+      "skill": "버로우",
+      "skill_item": 10130,
+      "requirements": [
+        10,
+        15,
+        0,
+        0
+      ],
+      "skill_table_requirements": [
+        10,
+        15,
+        0,
+        0
+      ]
+    },
+    {
+      "class_id": 3,
+      "class_name": "샤도우나이츠",
+      "skill": "에너지드레인",
+      "skill_item": 10121,
+      "requirements": [
+        15,
+        0,
+        10,
+        0
+      ],
+      "skill_table_requirements": [
+        15,
+        0,
+        10,
+        0
+      ]
+    },
+    {
+      "class_id": 4,
+      "class_name": "팔라딘",
+      "skill": "블레싱 실드",
+      "skill_item": 10131,
+      "requirements": [
+        15,
+        0,
+        0,
+        10
+      ],
+      "skill_table_requirements": [
+        15,
+        0,
+        0,
+        10
+      ]
+    },
+    {
+      "class_id": 5,
+      "class_name": "어쌔신",
+      "skill": "스텔스",
+      "skill_item": 10132,
+      "requirements": [
+        15,
+        10,
+        0,
+        0
+      ],
+      "skill_table_requirements": [
+        15,
+        10,
+        0,
+        0
+      ]
+    },
+    {
+      "class_id": 6,
+      "class_name": "아처",
+      "skill": "크리티컬",
+      "skill_item": 10122,
+      "requirements": [
+        0,
+        25,
+        0,
+        0
+      ],
+      "skill_table_requirements": [
+        0,
+        25,
+        0,
+        0
+      ]
+    },
+    {
+      "class_id": 7,
+      "class_name": "포처",
+      "skill": "파이어 에로우",
+      "skill_item": 10123,
+      "requirements": [
+        0,
+        15,
+        10,
+        0
+      ],
+      "skill_table_requirements": [
+        0,
+        15,
+        10,
+        0
+      ]
+    },
+    {
+      "class_id": 8,
+      "class_name": "레인저",
+      "skill": "해븐리 에로우",
+      "skill_item": 10124,
+      "requirements": [
+        0,
+        15,
+        0,
+        10
+      ],
+      "skill_table_requirements": [
+        0,
+        15,
+        0,
+        10
+      ]
+    },
+    {
+      "class_id": 9,
+      "class_name": "블레이드 메이지",
+      "skill": "포이즌 웨폰",
+      "skill_item": 10125,
+      "requirements": [
+        10,
+        0,
+        15,
+        0
+      ],
+      "skill_table_requirements": [
+        10,
+        0,
+        15,
+        0
+      ]
+    },
+    {
+      "class_id": 10,
+      "class_name": "원더러",
+      "skill": "포이즌 에로우",
+      "skill_item": 10126,
+      "requirements": [
+        0,
+        10,
+        15,
+        0
+      ],
+      "skill_table_requirements": [
+        0,
+        10,
+        15,
+        0
+      ]
+    },
+    {
+      "class_id": 11,
+      "class_name": "위저드",
+      "skill": "더스트 스킨",
+      "skill_item": 10133,
+      "requirements": [
+        0,
+        0,
+        25,
+        0
+      ],
+      "skill_table_requirements": [
+        0,
+        0,
+        25,
+        0
+      ]
+    },
+    {
+      "class_id": 12,
+      "class_name": "샤먼",
+      "skill": "리제너레이션",
+      "skill_item": 10134,
+      "requirements": [
+        0,
+        0,
+        15,
+        10
+      ],
+      "skill_table_requirements": [
+        0,
+        0,
+        15,
+        10
+      ]
+    },
+    {
+      "class_id": 13,
+      "class_name": "몽크",
+      "skill": "헤븐리 스테프",
+      "skill_item": 10127,
+      "requirements": [
+        10,
+        0,
+        0,
+        15
+      ],
+      "skill_table_requirements": [
+        10,
+        0,
+        0,
+        15
+      ]
+    },
+    {
+      "class_id": 14,
+      "class_name": "호크",
+      "skill": "센스티브",
+      "skill_item": 10135,
+      "requirements": [
+        0,
+        10,
+        0,
+        15
+      ],
+      "skill_table_requirements": [
+        0,
+        10,
+        0,
+        15
+      ]
+    },
+    {
+      "class_id": 15,
+      "class_name": "드루이드",
+      "skill": "리쥬버네이션",
+      "skill_item": 10136,
+      "requirements": [
+        0,
+        0,
+        10,
+        15
+      ],
+      "skill_table_requirements": [
+        0,
+        0,
+        10,
+        15
+      ]
+    },
+    {
+      "class_id": 16,
+      "class_name": "클레릭",
+      "skill": "해븐리해머",
+      "skill_item": 10128,
+      "requirements": [
+        0,
+        0,
+        0,
+        25
+      ],
+      "skill_table_requirements": [
+        0,
+        0,
+        0,
+        25
+      ]
+    }
+  ],
+  "skill_count": 163
+}

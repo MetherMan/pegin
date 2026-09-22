@@ -2462,6 +2462,29 @@ BOOL SKILL_NormalMagicAttack( sPDESC_DATA pPlayer, sPDESC_DATA pTargetPlayer, sP
 }
 
 
+// Level-140 bursts use the ordinary authoritative hit/area/PvP rules per hit.
+// Never mutate the shared skill definition (the older multi-shot PvP code did).
+BOOL SKILL_Level140Attack( sPDESC_DATA pPlayer, sPDESC_DATA pTargetPlayer, sPMOB_DATA pMob, BYTE target, sPSKILL_DATA pSkill )
+{
+    int hits = 0;
+    switch( pSkill->itemNum )
+    {
+    case 19120: hits = 3; break;
+    case 19121: hits = 6; break;
+    case 19122: hits = 7; break;
+    case 19123: hits = 3; break;
+    default: return 0;
+    }
+    for( int hit = 0; hit < hits; ++hit )
+    {
+        if( pSkill->itemNum <= 19121 )
+            SKILL_NormalSkillAttack( pPlayer, pTargetPlayer, pMob, target, pSkill );
+        else
+            SKILL_NormalMagicAttack( pPlayer, pTargetPlayer, pMob, target, pSkill );
+    }
+    return 1;
+}
+
 void AsignSkillFunc()
 {
 #define SET_SKILL_FUNC( skillItemNum, skill_func ) \
@@ -2469,6 +2492,11 @@ void AsignSkillFunc()
 	{	\
 		g_SKILL[g_ItemInfo[skillItemNum]->skillIdx]->func = skill_func;	\
 	}	\
+
+	SET_SKILL_FUNC( 19120, SKILL_Level140Attack );
+	SET_SKILL_FUNC( 19121, SKILL_Level140Attack );
+	SET_SKILL_FUNC( 19122, SKILL_Level140Attack );
+	SET_SKILL_FUNC( 19123, SKILL_Level140Attack );
 
 	SET_SKILL_FUNC( dSPE_SKILL_ENERGYDRAIN,			SKILL_EnergyDrain );		// 에너지 드레인  
 	SET_SKILL_FUNC( dSPE_SKILL_CRITICAL,			SKILL_Critical );			// 크리티컬

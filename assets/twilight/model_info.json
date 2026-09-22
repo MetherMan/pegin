@@ -4,34 +4,34 @@
   "name_color": "#72CFFF",
   "rank_color": "#72CFFF",
   "type": 2,
-  "triangles": 7248,
+  "triangles": 6836,
   "mesh_objects": 5,
   "cloth_strips": 0,
   "source": "concept_texture.png",
-  "revision": "approved design 04",
+  "revision": "approved design 04 - sculpted body and thin cutting rim",
   "construction_transform": {
-    "pixel_scale": 0.0014652913474092048,
+    "pixel_scale": 0.0014656205925077357,
     "x_origin": 487,
-    "y_offset": 2.1319538617488316
+    "y_offset": 2.132204123315576
   },
   "not_in_game": false,
-  "construction": "Extruded approved 04 silhouette with genuine upper slit and circular aperture, irregular integrated auxiliary cutters, textured sidewalls, cylindrical two-hand grip and crescent pommel. One rigid animation mesh in native export.",
+  "construction": "Sculpted 04 silhouette: thin cutting rims, thicker spine, guard and crescent pommel, true apertures, round grip and independently mapped metal sidewalls. One rigid animation mesh.",
   "parts": [
     {
-      "name": "01 | design 04 integrated irregular blades | face",
-      "triangles": 926
+      "name": "01 | sculpted blade, spine and guard | face",
+      "triangles": 4928
     },
     {
-      "name": "01 | design 04 integrated irregular blades | solid metal bevel",
-      "triangles": 4610
+      "name": "01 | sculpted blade, spine and guard | side",
+      "triangles": 1136
     },
     {
-      "name": "12 | design 04 crescent pommel | face",
-      "triangles": 264
+      "name": "12 | solid crescent pommel | face",
+      "triangles": 372
     },
     {
-      "name": "12 | design 04 crescent pommel | solid metal bevel",
-      "triangles": 1320
+      "name": "12 | solid crescent pommel | side",
+      "triangles": 272
     },
     {
       "name": "09 | cylindrical blue leather two-hand grip",

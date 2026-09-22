@@ -1,0 +1,22 @@
+{
+  "version": "2026-09-22-meteor-impact-height-control",
+  "changed": [
+    "Tools/SkillColors/index.html",
+    "Tools/SkillColors/preview.js",
+    "Tools/SkillColors/tuning.py"
+  ],
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\meteor-impact-height-20260922-165840",
+  "verified_client_files": 143,
+  "latest_settings_preserved": true,
+  "control": {
+    "name": "impactHeight",
+    "minimum": -0.5,
+    "maximum": 2,
+    "step": 0.01,
+    "value": 0.06
+  },
+  "paused_preview_time_verified": 1650,
+  "art_source": "Effect/ta_fire.wed",
+  "art_changed": false,
+  "in_game_visual_test": false
+}

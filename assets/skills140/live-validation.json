@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "checks": [
+    "all four live skill definitions, exact damage ranges, learn requirements, area and callbacks",
+    "legacy zero-count weapon/armour singleton cards merge 1+1 into 2",
+    "card 998+5 retains 999 and overflow 4",
+    "139 cannot learn any of the four skills; scrolls retained",
+    "140 learns all four through real scroll-use packets",
+    "all four scrolls appear in the existing GM bow/black-magic shelves without overlapping slots",
+    "19120: actual hit packets / radius 0,5,6,7 = [3, 3, 0, 0]",
+    "19121: actual hit packets / radius 0,5,6,7 = [6, 0, 0, 0]",
+    "19122: actual hit packets / radius 0,5,6,7 = [7, 7, 7, 0]",
+    "19123: actual hit packets / radius 0,5,6,7 = [3, 3, 3, 0]",
+    "learned skills and merged cards persist after relog",
+    "all five existing save tables preserved; fixture removed"
+  ],
+  "skills": [
+    {
+      "item": 19120,
+      "reqr": 140,
+      "reqb": 0,
+      "area": 5,
+      "attr": 2,
+      "cool": 8,
+      "damage": [
+        560,
+        620
+      ],
+      "callback": "0x807ef13 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+    },
+    {
+      "item": 19121,
+      "reqr": 140,
+      "reqb": 0,
+      "area": 0,
+      "attr": 0,
+      "cool": 9,
+      "damage": [
+        380,
+        420
+      ],
+      "callback": "0x807ef13 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+    },
+    {
+      "item": 19122,
+      "reqr": 0,
+      "reqb": 140,
+      "area": 6,
+      "attr": 2,
+      "cool": 12,
+      "damage": [
+        550,
+        610
+      ],
+      "callback": "0x807ef13 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+    },
+    {
+      "item": 19123,
+      "reqr": 0,
+      "reqb": 140,
+      "area": 6,
+      "attr": 2,
+      "cool": 10,
+      "damage": [
+        1120,
+        1230
+      ],
+      "callback": "0x807ef13 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+    }
+  ],
+  "hit_tests": [
+    {
+      "skill": 19120,
+      "target_and_radius_5_6_7_hits": [
+        3,
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "skill": 19121,
+      "target_and_radius_5_6_7_hits": [
+        6,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "skill": 19122,
+      "target_and_radius_5_6_7_hits": [
+        7,
+        7,
+        7,
+        0
+      ]
+    },
+    {
+      "skill": 19123,
+      "target_and_radius_5_6_7_hits": [
+        3,
+        3,
+        3,
+        0
+      ]
+    }
+  ],
+  "save_data_preserved": true
+}

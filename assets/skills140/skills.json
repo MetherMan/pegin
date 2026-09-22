@@ -1,0 +1,62 @@
+[
+  {
+    "id": 19120,
+    "name": "헤븐 페너트레이션",
+    "key": "mt_heaven",
+    "peer": 12048,
+    "branch": 1,
+    "hits": 3,
+    "area": 5,
+    "mp": 140,
+    "cool": 8,
+    "damage": [
+      560,
+      620
+    ]
+  },
+  {
+    "id": 19121,
+    "name": "식스폴드 샷",
+    "key": "mt_six",
+    "peer": 12045,
+    "branch": 1,
+    "hits": 6,
+    "area": 0,
+    "mp": 150,
+    "cool": 9,
+    "damage": [
+      380,
+      420
+    ]
+  },
+  {
+    "id": 19122,
+    "name": "메테오 버스트",
+    "key": "mt_meteor",
+    "peer": 10106,
+    "branch": 2,
+    "hits": 7,
+    "area": 6,
+    "mp": 320,
+    "cool": 12,
+    "damage": [
+      550,
+      610
+    ]
+  },
+  {
+    "id": 19123,
+    "name": "트라이스파이크 프로스트",
+    "key": "mt_frost",
+    "peer": 10111,
+    "branch": 2,
+    "hits": 3,
+    "area": 6,
+    "mp": 280,
+    "cool": 10,
+    "damage": [
+      1120,
+      1230
+    ]
+  }
+]

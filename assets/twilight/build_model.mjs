@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 const OUT=path.dirname(fileURLToPath(import.meta.url));
 const root=new T.Group();root.name='Blue_Moon_Twilight_Greatsword';
 const design=JSON.parse(fs.readFileSync(path.join(OUT,'design04_geometry.json'),'utf8'));
+const volumes=JSON.parse(fs.readFileSync(path.join(OUT,'volume_geometry.json'),'utf8'));
 const [W,H]=design.image_size,S=.00165,CX=design.center_x,CY=1112;
 function p(x,y,z=0){return new T.Vector3((x-CX)*S,(CY-y)*S,z);}
 function pix(x,y){return new T.Vector2(x/S+CX,CY-y/S);}
@@ -49,10 +50,15 @@ function solidShape(points,holes,depth,z,key,name,bevel=.002){
 // All auxiliary blades share a continuous root with the primary blade.
 // Image-derived holes are genuine topology, including the round lunar aperture.
 for(const part of design.parts){
- // Keep the detailed front silhouette, but give the blade a honed edge instead
- // of the old thick extrusion. The round grip retains its original diameter.
- const depth=part.name.startsWith('main')?.004:.006;
- solidShape(part.outline,part.holes,depth,-depth/2,'blade',part.name.startsWith('main')?'01 | design 04 integrated irregular blades':'12 | design 04 crescent pommel',.0002);
+ const title=part.name.startsWith('main')?'01 | sculpted blade, spine and guard':'12 | solid crescent pommel';
+ for(const [surface,data] of Object.entries(volumes[part.name])){
+  const g=new T.BufferGeometry();
+  for(const [key,size] of [['position',3],['normal',3],['uv',2]])g.setAttribute(key,new T.Float32BufferAttribute(data[key],size));
+  // The geometry tool uses image-space V; GLB export below performs its own
+  // flip, so keep the builder's usual bottom-up UV convention here.
+  const uv=g.attributes.uv;for(let i=0;i<uv.count;i++)uv.setY(i,1-uv.getY(i));
+  add(g,surface==='face'?'blade':'edge',title+' | '+surface);
+ }
 }
 // A circular grip gives the edge-on view real volume instead of a flat card.
 const top=p(CX,design.grip_top),bottom=p(CX,design.grip_bottom);
@@ -94,7 +100,7 @@ let json=Buffer.from(JSON.stringify(gltf)),jp=Buffer.alloc((4-json.length%4)%4,3
 const head=Buffer.alloc(12);head.writeUInt32LE(0x46546c67);head.writeUInt32LE(2,4);head.writeUInt32LE(28+json.length+bin.length,8);
 const jhead=Buffer.alloc(8);jhead.writeUInt32LE(json.length);jhead.write('JSON',4);const bhead=Buffer.alloc(8);bhead.writeUInt32LE(bin.length);bhead.write('BIN\0',4);
 fs.writeFileSync(path.join(OUT,'Blue_Moon_Twilight_Greatsword.glb'),Buffer.concat([head,jhead,json,bhead,bin]));
-const info={name:'푸른달의 트와일라잇 양손검',rank:9,name_color:'#72CFFF',rank_color:'#72CFFF',type:2,triangles:stats.reduce((a,b)=>a+b.triangles,0),mesh_objects:stats.length,cloth_strips:0,source:'concept_texture.png',revision:'approved design 04',construction_transform:{pixel_scale:S*scale,x_origin:CX,y_offset:CY*S*scale+root.position.y},not_in_game:false,construction:'Extruded approved 04 silhouette with genuine upper slit and circular aperture, irregular integrated auxiliary cutters, textured sidewalls, cylindrical two-hand grip and crescent pommel. One rigid animation mesh in native export.',parts:stats};
+const info={name:'푸른달의 트와일라잇 양손검',rank:9,name_color:'#72CFFF',rank_color:'#72CFFF',type:2,triangles:stats.reduce((a,b)=>a+b.triangles,0),mesh_objects:stats.length,cloth_strips:0,source:'concept_texture.png',revision:'approved design 04 - sculpted body and thin cutting rim',construction_transform:{pixel_scale:S*scale,x_origin:CX,y_offset:CY*S*scale+root.position.y},not_in_game:false,construction:'Sculpted 04 silhouette: thin cutting rims, thicker spine, guard and crescent pommel, true apertures, round grip and independently mapped metal sidewalls. One rigid animation mesh.',parts:stats};
 fs.writeFileSync(path.join(OUT,'model_info.json'),JSON.stringify(info,null,2));
 // Readable editable OBJ companion with the same geometry and material assignments.
 let obj=['mtllib Blue_Moon_Twilight_Greatsword.mtl'];let idx=1;

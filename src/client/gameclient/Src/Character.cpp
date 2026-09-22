@@ -4229,7 +4229,7 @@ BOOL CW3DCharacter::CastingMagic( DWORD dwID, DWORD dwMagicId )
  */
 void CW3DCharacter::SetArrowInfo( const int nBowIndex )
 {
-	m_sArrow = "�ܱñ⺻";
+	m_sArrow = (nBowIndex >= 19060 && nBowIndex <= 19080) ? "mt_arrow" : "�ܱñ⺻";
 /*	switch( nBowIndex )
 	{
 	case 901:	case 902:	case 903:	default:
@@ -4329,7 +4329,7 @@ void CW3DCharacter::UseSkill( WORD wSkillId )
 		} //if
 	} //if..else
 
-	char*		szSkillName = pItemInfoDat->szEName;
+	const char* szSkillName = (wSkillId == 19121 && m_sArrow == "mt_arrow") ? "mt_six_blue" : pItemInfoDat->szEName;
 
 	int nWeapon = 0;
 	switch( m_nSkill )
@@ -4384,7 +4384,7 @@ void CW3DCharacter::AddSkill( IW3DCreature* pTarget, const WORD wSkillId )
 		return;
 	} //if
 
-	char*		szSkillName = pItemInfoDat->szEName;
+	const char* szSkillName = (wSkillId == 19121 && m_sArrow == "mt_arrow") ? "mt_six_blue" : pItemInfoDat->szEName;
 	SAction* pAction = g_mgrSkill.Add( this, pTarget, szSkillName, m_nSex );
 
 	if( pAction )

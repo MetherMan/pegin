@@ -1,0 +1,12 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "../skill-icon-style-reference.png",
+  "shared_prompt": "Create ONE square game skill icon as a new asset for this exact old Korean MMORPG. The attached reference is a contact sheet of original 28x28 icons and is ONLY a STYLE reference, not a target to redraw. Match its early-2000s low-resolution hand-painted pixel art, chunky intentional clusters, jewel-tone directional highlights, dark background, thin antique gold rectangular frame. Produce an enlarged crisp nearest-neighbor-like pixel artwork designed on a strict 28x28 pixel grid, 1:1 aspect, full-bleed square, no sheet, no labels, no typography, no smooth modern vector look, no 3D UI mockup, no surrounding margin. Clear readable silhouette at 28x28.",
+  "subject_briefs": {
+    "heaven": "Exactly three icy blue and silver arrows pointing diagonally upper-right on a dark purple background.",
+    "six": "Exactly six silver-blue arrowheads in two staggered rows of three.",
+    "meteor": "Seven crimson meteors: one large foreground fireball and six smaller falling projectiles, small red magic circle at upper left.",
+    "frost": "Three dominant jagged ice pillars fanning left, center, right in violet, magenta and blue-white highlights."
+  },
+  "import": "BOX resize to native 28x28; exact original ls_0014.wtm two-pixel border; packed native WTM in Item and Texture/Body."
+}

@@ -1,0 +1,28 @@
+{
+  "meteor": {
+    "first": 730,
+    "last": 1210,
+    "fadeStart": 1510,
+    "fadeEnd": 2010,
+    "motionEnd": 1500,
+    "impactHeight": 0.06
+  },
+  "frost": {
+    "first": 100,
+    "last": 400,
+    "distance": 10,
+    "spreadAngle": 25,
+    "stations": 6,
+    "motionEnd": 1500
+  },
+  "heaven": {
+    "first": 1750,
+    "last": 1920,
+    "motionEnd": 2500
+  },
+  "six": {
+    "first": 2000,
+    "last": 2425,
+    "motionEnd": 2500
+  }
+}

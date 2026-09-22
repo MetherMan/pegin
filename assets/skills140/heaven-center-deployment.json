@@ -1,0 +1,44 @@
+{
+  "version": "2026-09-22-heaven-impact-center",
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\heaven-center-20260922-161149",
+  "changed": [
+    "Effect/mh_vb0001.wed",
+    "Magic/mt_heaven.ms",
+    "Tools/SkillColors/tuning.py"
+  ],
+  "preserved_settings": {
+    "tuning.json": {
+      "meteor": {
+        "portalGap": 80,
+        "readyHold": 250,
+        "shotGap": 80,
+        "flightSpeed": 1800
+      },
+      "frost": {
+        "startDelay": 100,
+        "stepGap": 60,
+        "distance": 12,
+        "size": 1.5,
+        "riseSpeed": 1.1,
+        "brightness": 1.3
+      },
+      "heaven": {
+        "startDelay": 1750,
+        "shotGap": 85,
+        "flightSpeed": 3000,
+        "impactSize": 2.5
+      },
+      "six": {
+        "startDelay": 2000,
+        "shotGap": 85,
+        "flightSpeed": 2900
+      }
+    },
+    "colors.json": {
+      "meteor": "#CF4A7F",
+      "frost": "#862882"
+    }
+  },
+  "verified_client_files": 140,
+  "in_game_visual_test": false
+}

@@ -59,7 +59,7 @@ static bool gmParse(const char* input,GMRequest& r){
  for(char* s=strtok(buffer," \t\r\n");s;s=strtok(0," \t\r\n")){if(n==8)return false;t[n++]=s;}
  if(n==0||(!gmEqual(t[0],"/gm")&&!gmEqual(t[0],"/재뽕")))return false;
  if(n==1){r.kind=GM_HELP;return true;}
- if(gmEqual(t[1],"테스트")){if(n!=3)return false;int item=gmEqual(t[2],"1")?19000:(gmEqual(t[2],"2")?19030:0);if(!item)return false;r.kind=GM_ITEM;r.subtype=item;r.value=1;return true;}
+ if(gmEqual(t[1],"테스트")){if(n!=3)return false;int item=gmEqual(t[2],"1")?19000:(gmEqual(t[2],"2")?19030:(gmEqual(t[2],"3")?19060:(gmEqual(t[2],"4")?19090:0)));if(!item)return false;r.kind=GM_ITEM;r.subtype=item;r.value=1;return true;}
  r.kind=gmKind(t[1]);int target=-1;
  switch(r.kind){
  case GM_EXP_RATE:case GM_CARD_RATE:

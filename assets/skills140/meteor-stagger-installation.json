@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "version": "2026-09-22-meteor-stagger-fade",
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\meteor-stagger-fade-20260922-140303",
+  "changed": [
+    "Effect/mm_fireball02.wed",
+    "Effect/mm_fireball02_1.wed",
+    "Effect/mm_fireball02_2.wed",
+    "Effect/mm_fireball02_3.wed",
+    "Effect/mm_fireball02_4.wed",
+    "Effect/mm_fireball02_5.wed",
+    "Effect/mm_fireball02_6.wed",
+    "Magic/mt_meteorB.ms",
+    "Tools/SkillColors/edit_colors.py",
+    "Tools/SkillColors/index.html",
+    "Tools/SkillColors/templates/mm_fireball02.wed",
+    "Tools/SkillColors/templates/mm_fireball02_1.wed",
+    "Tools/SkillColors/templates/mm_fireball02_2.wed",
+    "Tools/SkillColors/templates/mm_fireball02_3.wed",
+    "Tools/SkillColors/templates/mm_fireball02_4.wed",
+    "Tools/SkillColors/templates/mm_fireball02_5.wed",
+    "Tools/SkillColors/templates/mm_fireball02_6.wed"
+  ],
+  "installed_client_files": 127,
+  "saved_colors": {
+    "meteor": "#D65C5C",
+    "frost": "#862882"
+  },
+  "standalone_preview_matches": true,
+  "game_running": false
+}

@@ -2,6 +2,7 @@ from pathlib import Path
 import shutil,subprocess,sys,runpy,json
 ROOT=Path(__file__).resolve().parents[1];R=ROOT/'runtime';O=ROOT/'assets/twilight'
 sys.path.insert(0,str(R/'pylibs'))
+subprocess.run([sys.executable,str(ROOT/'assets/twilight-set/build_sword_volume.py')],check=True)
 subprocess.run([str(R/'node/node.exe'),str(O/'build_model.mjs')],check=True)
 runpy.run_path(str(O/'convert_native.py'),run_name='__main__')
 runpy.run_path(str(O/'build_icon.py'),run_name='__main__')
@@ -17,3 +18,4 @@ for i,line in enumerate(lines):
   lines[i]=f'{line.split()[0]} twilight_blue {0.2*scale:.7f} 0.0 0.0 {2.2*scale:.7f} 0.0 0.0'
 trace.write_bytes(('\r\n'.join(lines)+'\r\n').encode('cp949'))
 print('Twilight rebuilt into client-overlay. Run Update-Workspace.cmd to apply.')
+subprocess.run([sys.executable,str(ROOT/'tools/build_twilight_icon_frames.py')],check=True,cwd=ROOT)

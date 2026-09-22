@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "windows_crt": true,
+  "legacy_blank_line_reproduced": true,
+  "scripts": {
+    "mt_arrow": {
+      "effects": 2,
+      "parts": 4,
+      "blows": 1
+    },
+    "mt_heaven": {
+      "effects": 6,
+      "parts": 12,
+      "blows": 3
+    },
+    "mt_six": {
+      "effects": 12,
+      "parts": 24,
+      "blows": 6
+    },
+    "mt_six_blue": {
+      "effects": 12,
+      "parts": 24,
+      "blows": 6
+    },
+    "mt_meteorA": {
+      "effects": 3,
+      "parts": 3,
+      "blows": 0
+    },
+    "mt_frostA": {
+      "effects": 2,
+      "parts": 2,
+      "blows": 0
+    },
+    "mt_meteorB": {
+      "effects": 22,
+      "parts": 36,
+      "blows": 7
+    },
+    "mt_frostB": {
+      "effects": 32,
+      "parts": 35,
+      "blows": 3
+    }
+  },
+  "failures": {},
+  "in_game_visual_test": false
+}
