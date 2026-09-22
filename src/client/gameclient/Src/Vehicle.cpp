@@ -205,18 +205,19 @@ IW3DModel* CVehicle::LoadModel( DWORD dwType )
 char* CVehicle::GetModelName( DWORD dwType )
 {
 	dwType--;
-	Assert( dwType < 6 && dwType >= 0 );
+	Assert( dwType < 4 );
 
-	if( dwType < 0 || dwType > 6 )
+	if( dwType >= 4 )
 	{
 		return "horse_1";
 	} //if
 
-	static char	szVehicle[3][256] =
+	static char	szVehicle[4][256] =
 	{
 		"horse_1",
 		"horse_2",
-		"horse_3"
+		"horse_3",
+		"mt_hellhorse"
 	}; //static char	szMonster[1][256] =
 	
 	return szVehicle[dwType];

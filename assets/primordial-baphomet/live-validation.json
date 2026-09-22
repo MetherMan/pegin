@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "definitions": [
+    {
+      "level": 231,
+      "hp": 23162,
+      "minDamage": 1470,
+      "maxDamage": 1610,
+      "dp": 147,
+      "Magicdp": 189,
+      "exp": 14328,
+      "attackRange": 3,
+      "resetTimer": 120,
+      "id": 80
+    },
+    {
+      "level": 231,
+      "hp": 23162,
+      "minDamage": 1470,
+      "maxDamage": 1610,
+      "dp": 147,
+      "Magicdp": 189,
+      "exp": 14328,
+      "attackRange": 3,
+      "resetTimer": 120,
+      "id": 280
+    },
+    {
+      "level": 231,
+      "hp": 23162,
+      "minDamage": 1470,
+      "maxDamage": 1610,
+      "dp": 147,
+      "Magicdp": 189,
+      "exp": 14328,
+      "attackRange": 3,
+      "resetTimer": 120,
+      "id": 380
+    },
+    {
+      "level": 231,
+      "hp": 23162,
+      "minDamage": 1470,
+      "maxDamage": 1610,
+      "dp": 147,
+      "Magicdp": 189,
+      "exp": 14328,
+      "attackRange": 3,
+      "resetTimer": 120,
+      "id": 480
+    },
+    {
+      "level": 231,
+      "hp": 23162,
+      "minDamage": 1470,
+      "maxDamage": 1610,
+      "dp": 147,
+      "Magicdp": 189,
+      "exp": 14328,
+      "attackRange": 3,
+      "resetTimer": 120,
+      "id": 580
+    },
+    {
+      "level": 231,
+      "hp": 23162,
+      "minDamage": 1470,
+      "maxDamage": 1610,
+      "dp": 147,
+      "Magicdp": 189,
+      "exp": 14328,
+      "attackRange": 3,
+      "resetTimer": 120,
+      "id": 680
+    }
+  ],
+  "spawn_positions": 106,
+  "reset_entries": 212,
+  "live_counts": {
+    "80": 19,
+    "280": 26,
+    "380": 24,
+    "480": 43,
+    "580": 33,
+    "680": 35
+  },
+  "world_reset_counts": {
+    "3": 496,
+    "14": 452,
+    "40": 244,
+    "41": 212
+  }
+}

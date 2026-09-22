@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "base_id": 80,
+  "variant_ids": [
+    80,
+    280,
+    380,
+    480,
+    580,
+    680
+  ],
+  "name": "태초의 바포메트",
+  "level": 231,
+  "hp": 23162,
+  "attack": [
+    1470,
+    1610
+  ],
+  "scale": 1.4,
+  "vertices": 845,
+  "triangles": 1650,
+  "bones": 29,
+  "animations": {
+    "p-warrior_bla_pst.ani": {
+      "source_sha256": "ac78ad542aa6b14414b4c06b8388aba0a16d16d2196e8360cf4a73568304a0a1",
+      "output": "mt_prime_pst.ani",
+      "frames": 71
+    },
+    "p-warrior_bla_pwa.ani": {
+      "source_sha256": "a5f4c0923a97b2de43a5f5d68cd5d5e1c1b56951b4fac8adaaf3c6634fb28436",
+      "output": "mt_prime_pwa.ani",
+      "frames": 42
+    },
+    "p-warrior_bla_pa1.ani": {
+      "source_sha256": "ac78ad542aa6b14414b4c06b8388aba0a16d16d2196e8360cf4a73568304a0a1",
+      "output": "mt_prime_pa1.ani",
+      "frames": 71
+    },
+    "p-warrior_bla_ded.ani": {
+      "source_sha256": "6697ac212754d779c73500783ccdd82c7b505b3be585787c8ce8cd5174a0d155",
+      "output": "mt_prime_ded.ani",
+      "frames": 93
+    },
+    "p-warrior_bla_wst.ani": {
+      "source_sha256": "ac78ad542aa6b14414b4c06b8388aba0a16d16d2196e8360cf4a73568304a0a1",
+      "output": "mt_prime_wst.ani",
+      "frames": 71
+    },
+    "p-warrior_bla_wru.ani": {
+      "source_sha256": "8597ebedb8ff939ff906c50231055ea031a3a8d77cbde7869cd9e0f3d4e97b4a",
+      "output": "mt_prime_wru.ani",
+      "frames": 26
+    },
+    "p-warrior_bla_wa1.ani": {
+      "source_sha256": "86368ded87a596737f5b3473e789a938de1ec29111d899f94b72a1db29db1195",
+      "output": "mt_prime_wa1.ani",
+      "frames": 104
+    },
+    "p-warrior_bla_ht.ani": {
+      "source_sha256": "c1d035aa1828ea8a9cfea487c88005a6cde5b848a68116548dea6c8ac1c302c9",
+      "output": "mt_prime_ht.ani",
+      "frames": 34
+    }
+  },
+  "original_monsters_untouched": true,
+  "blood_textures_from_imagegen": true,
+  "native_mesh_and_all_animation_translations_scaled": true,
+  "original_rotations_and_skin_indices_preserved": true,
+  "unspecified_stats_and_drops": "original basic Baphomet (44)",
+  "drop_rows_per_variant": 26
+}

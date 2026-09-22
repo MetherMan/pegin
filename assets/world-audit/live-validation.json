@@ -1,0 +1,211 @@
+{
+  "mirror_map_files_equal_to_live_vm": true,
+  "mismatches": [],
+  "worlds": [
+    {
+      "id": 3,
+      "loaded": true,
+      "reset_count": 496,
+      "monster_count": 102
+    },
+    {
+      "id": 4,
+      "loaded": true,
+      "reset_count": 248,
+      "monster_count": 67
+    },
+    {
+      "id": 5,
+      "loaded": true,
+      "reset_count": 672,
+      "monster_count": 169
+    },
+    {
+      "id": 6,
+      "loaded": true,
+      "reset_count": 456,
+      "monster_count": 99
+    },
+    {
+      "id": 7,
+      "loaded": true,
+      "reset_count": 772,
+      "monster_count": 181
+    },
+    {
+      "id": 8,
+      "loaded": true,
+      "reset_count": 508,
+      "monster_count": 109
+    },
+    {
+      "id": 9,
+      "loaded": true,
+      "reset_count": 348,
+      "monster_count": 90
+    },
+    {
+      "id": 10,
+      "loaded": true,
+      "reset_count": 280,
+      "monster_count": 84
+    },
+    {
+      "id": 11,
+      "loaded": true,
+      "reset_count": 156,
+      "monster_count": 43
+    },
+    {
+      "id": 12,
+      "loaded": true,
+      "reset_count": 390,
+      "monster_count": 107
+    },
+    {
+      "id": 13,
+      "loaded": true,
+      "reset_count": 622,
+      "monster_count": 140
+    },
+    {
+      "id": 14,
+      "loaded": true,
+      "reset_count": 452,
+      "monster_count": 112
+    },
+    {
+      "id": 15,
+      "loaded": true,
+      "reset_count": 306,
+      "monster_count": 77
+    },
+    {
+      "id": 16,
+      "loaded": true,
+      "reset_count": 184,
+      "monster_count": 55
+    },
+    {
+      "id": 17,
+      "loaded": true,
+      "reset_count": 450,
+      "monster_count": 108
+    },
+    {
+      "id": 20,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 21,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 22,
+      "loaded": true,
+      "reset_count": 282,
+      "monster_count": 73
+    },
+    {
+      "id": 23,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 24,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 25,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 26,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 31,
+      "loaded": true,
+      "reset_count": 460,
+      "monster_count": 117
+    },
+    {
+      "id": 32,
+      "loaded": true,
+      "reset_count": 430,
+      "monster_count": 98
+    },
+    {
+      "id": 33,
+      "loaded": true,
+      "reset_count": 358,
+      "monster_count": 104
+    },
+    {
+      "id": 40,
+      "loaded": true,
+      "reset_count": 244,
+      "monster_count": 59
+    },
+    {
+      "id": 1001,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 1002,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 1003,
+      "loaded": true,
+      "reset_count": 964,
+      "monster_count": 225
+    },
+    {
+      "id": 1004,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 1005,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    },
+    {
+      "id": 1006,
+      "loaded": true,
+      "reset_count": 0,
+      "monster_count": 0
+    }
+  ],
+  "zero_reset_maps": [
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    1001,
+    1002,
+    1004,
+    1005,
+    1006
+  ]
+}

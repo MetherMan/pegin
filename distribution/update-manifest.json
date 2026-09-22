@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-22-twilight-skills140-balance",
+  "version": "2026-09-22-primordial-baphomet",
   "files": [
     {
       "kind": "client",
@@ -14,8 +14,8 @@
       "kind": "client",
       "path": "DeicideOnline.exe",
       "source": "client-overlay/DeicideOnline.exe",
-      "bytes": 516096,
-      "sha256": "6ecdeba8c51fd85a4046c29c03dc95e5e68b2897587c3d28f1ebab6832481747"
+      "bytes": 520192,
+      "sha256": "f1465e05d3ebe7db3a3c825ccc464b8d7652bcda9d5cf8477cba05b92cdbfac4"
     },
     {
       "kind": "client",
@@ -294,8 +294,8 @@
       "kind": "client",
       "path": "Item/ITEM.dat",
       "source": "client-overlay/Item/ITEM.dat",
-      "bytes": 4198352,
-      "sha256": "e0575c487363c6cc777d808b2319fb0223df2e91e067f9d385ca6a39e2727d1d"
+      "bytes": 4198651,
+      "sha256": "22acd510db558be8202957a7cdec0adb03d4332ac5717ce4c441916f3fb1630e"
     },
     {
       "kind": "client",
@@ -432,10 +432,157 @@
     },
     {
       "kind": "client",
+      "path": "Map/land0041.door",
+      "source": "client-overlay/Map/land0041.door",
+      "bytes": 4436,
+      "sha256": "d475539ac192e5ec299237aa460161ad287fb00df868d4db64cfeeae07d1c043"
+    },
+    {
+      "kind": "client",
+      "path": "Map/land0041.ini",
+      "source": "client-overlay/Map/land0041.ini",
+      "bytes": 197,
+      "sha256": "dfe21edca33df93c40aca9b851735cc6db35f18d469b250f7900eff25f1218eb"
+    },
+    {
+      "kind": "client",
+      "path": "Map/land0041.map",
+      "source": "client-overlay/Map/land0041.map",
+      "bytes": 4130776,
+      "sha256": "3761b604dfa52314b8ed3b68dd480d9129a499f758561477d5dd76db3c523220"
+    },
+    {
+      "kind": "client",
+      "path": "Map/land0041.mds",
+      "source": "client-overlay/Map/land0041.mds",
+      "bytes": 36,
+      "sha256": "95c912aed79bb1ab2e634eb6b887c5a6996303c7a5025cd79a8bde8286d33adc"
+    },
+    {
+      "kind": "client",
+      "path": "Map/land0041.wtm",
+      "source": "client-overlay/Map/land0041.wtm",
+      "bytes": 25211,
+      "sha256": "315019b1ced2b466daab654118954ccf6ccbc20fd3aaff2080ba196ed65694b1"
+    },
+    {
+      "kind": "client",
+      "path": "Map/landb0041.wtm",
+      "source": "client-overlay/Map/landb0041.wtm",
+      "bytes": 283408,
+      "sha256": "87a461b2c61af715e9251ae67889904fa300518b3d77e52e08663160d2b5336b"
+    },
+    {
+      "kind": "client",
+      "path": "Map/loading0041_0800.wtm",
+      "source": "client-overlay/Map/loading0041_0800.wtm",
+      "bytes": 207114,
+      "sha256": "3b66aaa5ff3ed5184377393a7a9f5067e9f1d75d9064772f51cf71a1b6277702"
+    },
+    {
+      "kind": "client",
+      "path": "Map/loading0041_1024.wtm",
+      "source": "client-overlay/Map/loading0041_1024.wtm",
+      "bytes": 227738,
+      "sha256": "c1e4d1f4425600d3f897ec765417d48c4d81a30f0b10f03f08b4d689896e9e84"
+    },
+    {
+      "kind": "client",
+      "path": "Map/title0041.wtm",
+      "source": "client-overlay/Map/title0041.wtm",
+      "bytes": 10607,
+      "sha256": "16a488209b01dfdb8cae777e8a7a1a0a2c5f194f1db221a4833fcdcb38fe4e38"
+    },
+    {
+      "kind": "client",
       "path": "Media.dll",
       "source": "client-overlay/Media.dll",
       "bytes": 49152,
       "sha256": "08938c93231a2c28832c3552d86721a664fc6216bc6a84fbf57ce6a84ab93f51"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/Animation/mt_prime_ded.ani",
+      "source": "client-overlay/Monster/Animation/mt_prime_ded.ani",
+      "bytes": 78460,
+      "sha256": "60d1b312256c7626ccda3984f1bf548168cb39d56ee5336c5e0a7829058104aa"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/Animation/mt_prime_ht.ani",
+      "source": "client-overlay/Monster/Animation/mt_prime_ht.ani",
+      "bytes": 30552,
+      "sha256": "5b590ead557ddf8e266b0280a75c39d37b9b37ca720161236b8e8997cfe195c7"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/Animation/mt_prime_pa1.ani",
+      "source": "client-overlay/Monster/Animation/mt_prime_pa1.ani",
+      "bytes": 60596,
+      "sha256": "f73aebf647804d47278bac013f74fe1e373e9c8f24532b45fad21a937575505e"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/Animation/mt_prime_pst.ani",
+      "source": "client-overlay/Monster/Animation/mt_prime_pst.ani",
+      "bytes": 60596,
+      "sha256": "f73aebf647804d47278bac013f74fe1e373e9c8f24532b45fad21a937575505e"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/Animation/mt_prime_pwa.ani",
+      "source": "client-overlay/Monster/Animation/mt_prime_pwa.ani",
+      "bytes": 37048,
+      "sha256": "524e8e745ea89d2c586a50a13acae6b7189441ce05b09c1090cdbbc591e62de0"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/Animation/mt_prime_wa1.ani",
+      "source": "client-overlay/Monster/Animation/mt_prime_wa1.ani",
+      "bytes": 87392,
+      "sha256": "bef0ec4d89ef580153c9462507264f0211397a5642dcde6bb8dab04e71acc84f"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/Animation/mt_prime_wru.ani",
+      "source": "client-overlay/Monster/Animation/mt_prime_wru.ani",
+      "bytes": 24056,
+      "sha256": "90ef14e4f65e8cfa1ceb74a970358cf01489dceb881e35cced7bd0db40d76607"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/Animation/mt_prime_wst.ani",
+      "source": "client-overlay/Monster/Animation/mt_prime_wst.ani",
+      "bytes": 60596,
+      "sha256": "f73aebf647804d47278bac013f74fe1e373e9c8f24532b45fad21a937575505e"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/MobInfo.dat",
+      "source": "client-overlay/Monster/MobInfo.dat",
+      "bytes": 17403,
+      "sha256": "b94b7fd93e05b47235f2b7da24fadfe9864e96d4122e81fc9cdfa6a516458a4d"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/monster.dat",
+      "source": "client-overlay/Monster/monster.dat",
+      "bytes": 11638,
+      "sha256": "b2ed1ba1fb2799c71d9043d3d698c8d6d2a66d3cd9cc19cda9220f4f16264351"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/monster.wad",
+      "source": "client-overlay/Monster/monster.wad",
+      "bytes": 37481,
+      "sha256": "7b66e314ae1ec7b03503f9d87d955065de98bbc97df260c22944e5e9a7a98042"
+    },
+    {
+      "kind": "client",
+      "path": "Monster/mt_prime_baphomet.mod",
+      "source": "client-overlay/Monster/mt_prime_baphomet.mod",
+      "bytes": 130069,
+      "sha256": "02d1c782760615fce09384d04a170d901d1c81a6483c98ecfedf7f3c7f380921"
     },
     {
       "kind": "client",
@@ -796,6 +943,27 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Monster/mt_prime_blade.wtm",
+      "source": "client-overlay/Texture/Monster/mt_prime_blade.wtm",
+      "bytes": 429804,
+      "sha256": "ffa20cb707794e71bd7517fc171e0e7214458847d5fdeb4897a851774a953908"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Monster/mt_prime_body.wtm",
+      "source": "client-overlay/Texture/Monster/mt_prime_body.wtm",
+      "bytes": 1881266,
+      "sha256": "8d36845b4ea536d70ebf4893aa7858047d0ecf6bdee6ca881cd5b198b53d00b3"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Vehicle/mt_hellhorse.wtm",
+      "source": "client-overlay/Texture/Vehicle/mt_hellhorse.wtm",
+      "bytes": 2050487,
+      "sha256": "d69a12f68dbcdd3e224f35ad692e88043102fa1a1c072b8fa5cc461b905b7732"
+    },
+    {
+      "kind": "client",
       "path": "Tools/SkillColors/actor.js",
       "source": "client-overlay/Tools/SkillColors/actor.js",
       "bytes": 4722,
@@ -1005,6 +1173,20 @@
       "sha256": "5cb2f787c02d53ecc559ea5b08812f9d1b394e9039734b5de39992f30979de96"
     },
     {
+      "kind": "client",
+      "path": "Vehicle/mt_hellhorse.act",
+      "source": "client-overlay/Vehicle/mt_hellhorse.act",
+      "bytes": 116,
+      "sha256": "10d52ac141897baf40e72e49b6fd3a9d947b81430dcf76793bce001e7e6edd5e"
+    },
+    {
+      "kind": "client",
+      "path": "Vehicle/mt_hellhorse.mod",
+      "source": "client-overlay/Vehicle/mt_hellhorse.mod",
+      "bytes": 57089,
+      "sha256": "5c627e80bb4b744698a89f7ee019c5dee3ad202a23f6dcf43e0d3755ee4d3725"
+    },
+    {
       "kind": "server",
       "path": "DATA/__MOB_DATA.txt",
       "source": "game-data/DATA/__MOB_DATA.txt",
@@ -1099,8 +1281,8 @@
       "kind": "server",
       "path": "DATA/ITEM_DATA.txt",
       "source": "game-data/DATA/ITEM_DATA.txt",
-      "bytes": 4212877,
-      "sha256": "5818c2fd7c446042dde7feff3fb71bb9b384bd2018ebe6a3ebf11af185c69795"
+      "bytes": 4213176,
+      "sha256": "9d6bb084b5f5e586b99f6aa240110f12dc66765781c0fa6819756ac3a058591b"
     },
     {
       "kind": "server",
@@ -1118,6 +1300,34 @@
     },
     {
       "kind": "server",
+      "path": "DATA/LocalWorld_land0041.map",
+      "source": "game-data/DATA/LocalWorld_land0041.map",
+      "bytes": 4135768,
+      "sha256": "b90d59c2b71f71f66e0846fea952f243e0b27084a917869582db8033662ce508"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/LocalWorld_loadingpoint.txt",
+      "source": "game-data/DATA/LocalWorld_loadingpoint.txt",
+      "bytes": 1019,
+      "sha256": "8ee0a05b1fd204c342af51da76b0606aa6acba3a80b2f9f820d22348f50f114d"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/LocalWorld_map_list.txt",
+      "source": "game-data/DATA/LocalWorld_map_list.txt",
+      "bytes": 150,
+      "sha256": "260b282092e20c2bdb42d2b1c98369a77b98f1b75f43674fbee61afff4747f8d"
+    },
+    {
+      "kind": "server",
+      "path": "DATA/LocalWorld_map_name.txt",
+      "source": "game-data/DATA/LocalWorld_map_name.txt",
+      "bytes": 373,
+      "sha256": "40ba7ab40569e2425517b68e73ee727a3f25cce1f05c76f0144b00367cfe4dad"
+    },
+    {
+      "kind": "server",
       "path": "DATA/log_item.txt",
       "source": "game-data/DATA/log_item.txt",
       "bytes": 756,
@@ -1127,15 +1337,15 @@
       "kind": "server",
       "path": "DATA/MOB_DATA.txt",
       "source": "game-data/DATA/MOB_DATA.txt",
-      "bytes": 42439,
-      "sha256": "ad48e8332d08f97b675d0150ef745109513df19180a1453eef993dab85d94ea9"
+      "bytes": 43296,
+      "sha256": "5bebfdca5305132878ee72ae6e8163e294602be8f7511b5469468a18760138bc"
     },
     {
       "kind": "server",
       "path": "DATA/MobItemLoseTable.txt",
       "source": "game-data/DATA/MobItemLoseTable.txt",
-      "bytes": 130518,
-      "sha256": "d37214f24cef4826d2859bba18df8529bc35c4433f2d4c69824efa059357085c"
+      "bytes": 132532,
+      "sha256": "bfe109a2d932b71d240e0488fec96cd9ce6538ee39bd334c82986df1029bd83e"
     },
     {
       "kind": "server",
@@ -1218,8 +1428,8 @@
       "kind": "server",
       "path": "LAQIA_GameServer",
       "source": "server-bin/LAQIA_GameServer",
-      "bytes": 1797896,
-      "sha256": "23f0ebfc89061f7d9cd47266ae06e18926c88f3fee0d69176941e08209e26c46"
+      "bytes": 1812060,
+      "sha256": "3c2636a65cdcb33c29079fd914c91e33e25b78c3de4f0cb059e344ee33dd4342"
     },
     {
       "kind": "updater",

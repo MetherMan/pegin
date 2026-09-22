@@ -338,7 +338,7 @@ void LoadMapName()
 		if( *tmp == '#' )
 			break;
 
-		if( sscanf( tmp, "%d %s", &mapNum, mapName ) != 2 )
+		if( sscanf( tmp, "%d %63[^\r\n]", &mapNum, mapName ) != 2 )
 		{
 			log( "LoadMapName : Bad file Format\r\n" );
 			fclose( fp );

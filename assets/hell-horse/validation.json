@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source": "Vehicle/horse_1.mod",
+  "source_texture": "Texture/Vehicle/horse21.wtm",
+  "source_sha256": "12f00b951753487168c82ea0f28515bce236b408c84cef7edb7e82ba66e1691c",
+  "model_sha256": "5c627e80bb4b744698a89f7ee019c5dee3ad202a23f6dcf43e0d3755ee4d3725",
+  "source_bones": 32,
+  "source_frames": 171,
+  "vertices": 393,
+  "triangles": 718,
+  "hoof_vertices_modified": 48,
+  "original_skin_weights_uvs_topology_preserved": true,
+  "texture_size": [
+    1024,
+    1024
+  ],
+  "eye_emission": false,
+  "registered_as_ride_item": false,
+  "note": "Separate native model asset and animated preview. Existing horse definitions are unchanged."
+}

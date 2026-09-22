@@ -70,6 +70,9 @@ void ConsumeOneEnchantCard(sPDESC_DATA player, sPITEM_DATA card);
 #define dRIDE_ITEM2				10189			// 말2 ( 검정말 )
 #define dRIDE_ITEM3				10190			// 말3 ( 하양말 )
 
+#define dRIDE_ITEM4 19130 // Hell horse ownership certificate
+#define dRIDE_TYPE4 4
+
 #define dRIDE_TYPE1				1			// 갈색말
 #define dRIDE_TYPE2				2			// 검정말
 #define dRIDE_TYPE3				3			// 하양말

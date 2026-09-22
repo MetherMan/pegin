@@ -335,6 +335,7 @@ void CCharacterAction::SetSex( UINT nSex )
  */
 void CCharacterAction::SetMode( WORD wMode )
 {
+	if( wMode == MODE_VEHICLE + 4 ) wMode = MODE_VEHICLE + 1;
 	/*
 		TODO : 현재는 임시로, 탈것은 맨손 동작만 쓴다.
 	*/

@@ -3034,6 +3034,9 @@ BYTE GetRideSpeed( sPDESC_DATA pPlayer )
 		case 3:					// 하양말 White Horse
 			speed = 80;
 			break;
+		case dRIDE_TYPE4:
+			speed = 95;
+			break;
 		}
 	}
 
@@ -3990,7 +3993,7 @@ void DropItemByCHA( sPDESC_DATA pPlayer )
 	// 말은 일단 제외
 	if( inven->itemNum == dRIDE_ITEM1 ||
 		inven->itemNum == dRIDE_ITEM2 ||
-		inven->itemNum == dRIDE_ITEM3 
+		inven->itemNum == dRIDE_ITEM3 || inven->itemNum == dRIDE_ITEM4
 #ifdef dDAUM_BILLING
 		|| IS_BILLING_ITEM2( inven->itemNum )
 #endif

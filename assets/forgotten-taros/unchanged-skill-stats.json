@@ -1,0 +1,26 @@
+[
+  {
+    "id": 19120,
+    "min": 560,
+    "max": 620,
+    "callback": "0x807ef33 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+  },
+  {
+    "id": 19121,
+    "min": 380,
+    "max": 420,
+    "callback": "0x807ef33 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+  },
+  {
+    "id": 19122,
+    "min": 550,
+    "max": 610,
+    "callback": "0x807ef33 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+  },
+  {
+    "id": 19123,
+    "min": 1120,
+    "max": 1230,
+    "callback": "0x807ef33 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+  }
+]

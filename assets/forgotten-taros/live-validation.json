@@ -1,0 +1,206 @@
+{
+  "passed": true,
+  "checks": [
+    "all 32 previous maps retain native spawn counts; independent map 41 has the full name and no old mobs",
+    "real item-use packets mount and dismount all horses: 70 / 75 / 80 / 95; walking speed remains 40",
+    "hell horse remains mounted at speed 95 after relog",
+    "wreck entrance and both return landmarks emit real map-load packets; no immediate portal bounce; mount retained",
+    "relogin inside Forgotten Taros restores map, position and hell horse",
+    "GM hell-horse alias grants the new certificate",
+    "existing five save tables unchanged; disposable player removed"
+  ],
+  "worlds": [
+    {
+      "id": 3,
+      "reset_count": 496,
+      "name": "베일"
+    },
+    {
+      "id": 4,
+      "reset_count": 248,
+      "name": "미라스"
+    },
+    {
+      "id": 5,
+      "reset_count": 672,
+      "name": "레기온"
+    },
+    {
+      "id": 6,
+      "reset_count": 456,
+      "name": "모하스"
+    },
+    {
+      "id": 7,
+      "reset_count": 772,
+      "name": "가우나"
+    },
+    {
+      "id": 8,
+      "reset_count": 508,
+      "name": "네리스"
+    },
+    {
+      "id": 9,
+      "reset_count": 348,
+      "name": "하리트"
+    },
+    {
+      "id": 10,
+      "reset_count": 280,
+      "name": "바크난"
+    },
+    {
+      "id": 11,
+      "reset_count": 156,
+      "name": "수헤르"
+    },
+    {
+      "id": 12,
+      "reset_count": 390,
+      "name": "모자드"
+    },
+    {
+      "id": 13,
+      "reset_count": 622,
+      "name": "지레네"
+    },
+    {
+      "id": 14,
+      "reset_count": 452,
+      "name": "타로스"
+    },
+    {
+      "id": 15,
+      "reset_count": 306,
+      "name": "로비"
+    },
+    {
+      "id": 16,
+      "reset_count": 184,
+      "name": "테반"
+    },
+    {
+      "id": 17,
+      "reset_count": 450,
+      "name": "레벤"
+    },
+    {
+      "id": 20,
+      "reset_count": 0,
+      "name": "바터스케어"
+    },
+    {
+      "id": 21,
+      "reset_count": 0,
+      "name": "네메시스"
+    },
+    {
+      "id": 22,
+      "reset_count": 282,
+      "name": "고스"
+    },
+    {
+      "id": 23,
+      "reset_count": 0,
+      "name": "바이카"
+    },
+    {
+      "id": 24,
+      "reset_count": 0,
+      "name": "레벤"
+    },
+    {
+      "id": 25,
+      "reset_count": 0,
+      "name": "모로스"
+    },
+    {
+      "id": 26,
+      "reset_count": 0,
+      "name": "아구아"
+    },
+    {
+      "id": 31,
+      "reset_count": 460,
+      "name": "바이곤"
+    },
+    {
+      "id": 32,
+      "reset_count": 430,
+      "name": "마쉬랜드"
+    },
+    {
+      "id": 33,
+      "reset_count": 358,
+      "name": "다크홀"
+    },
+    {
+      "id": 40,
+      "reset_count": 244,
+      "name": "질스"
+    },
+    {
+      "id": 41,
+      "reset_count": 0,
+      "name": "잊혀진 타로스"
+    },
+    {
+      "id": 1001,
+      "reset_count": 0,
+      "name": "지하던전1"
+    },
+    {
+      "id": 1002,
+      "reset_count": 0,
+      "name": "지하던전2"
+    },
+    {
+      "id": 1003,
+      "reset_count": 964,
+      "name": "네카던전"
+    },
+    {
+      "id": 1004,
+      "reset_count": 0,
+      "name": "네카던전"
+    },
+    {
+      "id": 1005,
+      "reset_count": 0,
+      "name": "배틀존"
+    },
+    {
+      "id": 1006,
+      "reset_count": 0,
+      "name": "배틀존"
+    }
+  ],
+  "transitions": [
+    [
+      14,
+      448,
+      264,
+      41,
+      443,
+      264
+    ],
+    [
+      41,
+      448,
+      264,
+      14,
+      443,
+      264
+    ],
+    [
+      41,
+      60,
+      265,
+      14,
+      443,
+      264
+    ]
+  ],
+  "save_data_preserved": true
+}

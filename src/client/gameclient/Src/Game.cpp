@@ -4774,7 +4774,7 @@ void CGame::ReadMapInfo( FILE* pFile )
 	{
 		if( !strcmp( szBuff, "map_name" ) )
 		{
-			fscanf( pFile, "%s", szMapName );
+			fscanf( pFile, " %63[^\r\n]", szMapName );
 			g_pGUI->SetText( "TXT_MAPNAME", szMapName );
 		}
 		else if( 

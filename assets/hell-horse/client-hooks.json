@@ -1,0 +1,112 @@
+{
+  "original_sha256": "6ecdeba8c51fd85a4046c29c03dc95e5e68b2897587c3d28f1ebab6832481747",
+  "original_size": 516096,
+  "sha256": "f1465e05d3ebe7db3a3c825ccc464b8d7652bcda9d5cf8477cba05b92cdbfac4",
+  "section_rva": 528384,
+  "undo": [
+    [
+      139808,
+      "568b742408"
+    ],
+    [
+      34699,
+      "83f803"
+    ],
+    [
+      21736,
+      "8b7c240c8906"
+    ],
+    [
+      181984,
+      "6878054700"
+    ],
+    [
+      792,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0800"
+    ],
+    [
+      304,
+      "00100800"
+    ],
+    [
+      252,
+      "00c00600"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "four mount models, bounds checked",
+      "va": 4334112,
+      "original": "568b742408",
+      "replacement": "e9fbed0500",
+      "target": 4722720,
+      "resume": 4334117,
+      "assembly": "mov eax,[esp+4]; cmp eax,4; je hell; cmp eax,1; jb fallback; cmp eax,3; ja fallback; dec eax; shl eax,8; add eax,0x472194; ret 4; hell: mov eax,4722688; ret 4; fallback: mov eax,0x472594; ret 4",
+      "code": "8b44240483f804741683f801721983f803771448c1e0080594214700c20400b800104800c20400b894254700c20400e9d111faff"
+    },
+    {
+      "label": "hell horse uses original horse animation mode",
+      "va": 4229003,
+      "original": "83f803",
+      "replacement": "83f804"
+    },
+    {
+      "label": "hell-horse rider uses original horse posture",
+      "va": 4216040,
+      "original": "8b7c240c8906",
+      "replacement": "e973bb070090",
+      "target": 4722784,
+      "resume": 4216046,
+      "assembly": "mov edi,[esp+0xc]; cmp di,6; jne original; mov edi,3; original: mov [esi],eax",
+      "code": "8b7c240c6683ff067505bf030000008906e97844f8ff"
+    },
+    {
+      "label": "full map name including spaces",
+      "va": 4376288,
+      "original": "6878054700",
+      "replacement": "680d104800"
+    }
+  ],
+  "validation": {
+    "model_cases": [
+      {
+        "kind": 0,
+        "model": "horse_1"
+      },
+      {
+        "kind": 1,
+        "model": "horse_1"
+      },
+      {
+        "kind": 2,
+        "model": "horse_2"
+      },
+      {
+        "kind": 3,
+        "model": "horse_3"
+      },
+      {
+        "kind": 4,
+        "model": "mt_hellhorse"
+      },
+      {
+        "kind": 5,
+        "model": "horse_1"
+      },
+      {
+        "kind": 4294967295,
+        "model": "horse_1"
+      }
+    ],
+    "horse_animation_modes": 6,
+    "rider_modes": 7
+  }
+}

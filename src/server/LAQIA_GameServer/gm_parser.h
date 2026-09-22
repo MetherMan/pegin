@@ -87,7 +87,8 @@ static bool gmParse(const char* input,GMRequest& r){
   if(gmEqual(t[2],"°¥»ö")||gmEqual(t[2],"brown"))r.subtype=1;
   else if(gmEqual(t[2],"Èæ¸¶")||gmEqual(t[2],"black"))r.subtype=2;
   else if(gmEqual(t[2],"¹é¸¶")||gmEqual(t[2],"white"))r.subtype=3;
-  else if(!gmNumber(t[2],1,3,r.subtype))return false;target=3;break;
+  else if(gmEqual(t[2],"Áö¿Á¸¶")||gmEqual(t[2],"hell"))r.subtype=4;
+  else if(!gmNumber(t[2],1,4,r.subtype))return false;target=3;break;
  case GM_ITEM:
   if(n<4||n>5||!gmNumber(t[2],1,65535,r.subtype)||!gmNumber(t[3],1,1000,r.value))return false;target=4;break;
  case GM_CATALOG:

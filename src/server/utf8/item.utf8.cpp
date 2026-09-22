@@ -2176,6 +2176,7 @@ BOOL CastItem( sPDESC_DATA pPlayer, sPITEM_DATA pItem )
 	case dRIDE_ITEM1:
 	case dRIDE_ITEM2:
 	case dRIDE_ITEM3:
+	case dRIDE_ITEM4:
 		// Local play: mounts have no character-level requirement.
 
 		// 버로우 스텔스
@@ -2202,6 +2203,8 @@ BOOL CastItem( sPDESC_DATA pPlayer, sPITEM_DATA pItem )
 				GET_RIDE_TYPE( pPlayer ) = dRIDE_TYPE2;
 			else if( pItem->itemNum == dRIDE_ITEM3 )	// 하양말
 				GET_RIDE_TYPE( pPlayer ) = dRIDE_TYPE3;
+			else if( pItem->itemNum == dRIDE_ITEM4 )
+				GET_RIDE_TYPE( pPlayer ) = dRIDE_TYPE4;
 			else
 				GET_RIDE_TYPE( pPlayer ) = dRIDE_TYPE3;
 			
@@ -2596,6 +2599,7 @@ void CheckItemValue( sPDESC_DATA pPlayer , sPITEM_DATA pItem )
 	case dRIDE_ITEM1:
 	case dRIDE_ITEM2:
 	case dRIDE_ITEM3:
+	case dRIDE_ITEM4:
 		if( pItem->exVal[0] )
 		{
 			// 레벨이 낮은데 말을 타고 있을 경우
@@ -2605,6 +2609,8 @@ void CheckItemValue( sPDESC_DATA pPlayer , sPITEM_DATA pItem )
 				GET_RIDE_TYPE( pPlayer ) = dRIDE_TYPE1;
 			else if( pItem->itemNum == dRIDE_ITEM2 )
 				GET_RIDE_TYPE( pPlayer ) = dRIDE_TYPE2;
+			else if( pItem->itemNum == dRIDE_ITEM4 )
+				GET_RIDE_TYPE( pPlayer ) = dRIDE_TYPE4;
 			else
 				GET_RIDE_TYPE( pPlayer ) = dRIDE_TYPE3;
 

@@ -1,0 +1,3531 @@
+{
+  "maps": [
+    {
+      "id": 3,
+      "name": "베일",
+      "marker_count": 248,
+      "usable_markers": 248,
+      "types": [
+        {
+          "id": 1,
+          "name": "L1.비홀더",
+          "markers": 135,
+          "usable_markers": 135,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 1,
+              "name": "L1.비홀더",
+              "level": 1
+            },
+            {
+              "id": 201,
+              "name": "L2.비홀더",
+              "level": 2
+            },
+            {
+              "id": 301,
+              "name": "L3.비홀더",
+              "level": 3
+            },
+            {
+              "id": 401,
+              "name": "L4.비홀더",
+              "level": 4
+            },
+            {
+              "id": 501,
+              "name": "L5.비홀더",
+              "level": 5
+            },
+            {
+              "id": 601,
+              "name": "B.비홀더",
+              "level": 15
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "L6.카니발렛",
+          "markers": 106,
+          "usable_markers": 106,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 2,
+              "name": "L6.카니발렛",
+              "level": 6
+            },
+            {
+              "id": 202,
+              "name": "L7.카니발렛",
+              "level": 7
+            },
+            {
+              "id": 302,
+              "name": "L8.카니발렛",
+              "level": 8
+            },
+            {
+              "id": 402,
+              "name": "L9.카니발렛",
+              "level": 9
+            },
+            {
+              "id": 502,
+              "name": "L10.카니발렛",
+              "level": 10
+            },
+            {
+              "id": 602,
+              "name": "B.카니발렛",
+              "level": 20
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "L11.해츨링",
+          "markers": 7,
+          "usable_markers": 7,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 3,
+              "name": "L11.해츨링",
+              "level": 11
+            },
+            {
+              "id": 203,
+              "name": "L12.해츨링",
+              "level": 12
+            },
+            {
+              "id": 303,
+              "name": "L13.해츨링",
+              "level": 13
+            },
+            {
+              "id": 403,
+              "name": "L14.해츨링",
+              "level": 14
+            },
+            {
+              "id": 503,
+              "name": "L15.해츨링",
+              "level": 15
+            },
+            {
+              "id": 603,
+              "name": "B.해츨링",
+              "level": 25
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        4,
+        20,
+        22
+      ],
+      "outgoing": [
+        4,
+        22
+      ]
+    },
+    {
+      "id": 4,
+      "name": "미라스",
+      "marker_count": 124,
+      "usable_markers": 124,
+      "types": [
+        {
+          "id": 3,
+          "name": "L11.해츨링",
+          "markers": 15,
+          "usable_markers": 15,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 3,
+              "name": "L11.해츨링",
+              "level": 11
+            },
+            {
+              "id": 203,
+              "name": "L12.해츨링",
+              "level": 12
+            },
+            {
+              "id": 303,
+              "name": "L13.해츨링",
+              "level": 13
+            },
+            {
+              "id": 403,
+              "name": "L14.해츨링",
+              "level": 14
+            },
+            {
+              "id": 503,
+              "name": "L15.해츨링",
+              "level": 15
+            },
+            {
+              "id": 603,
+              "name": "B.해츨링",
+              "level": 25
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "L16.좀비독",
+          "markers": 77,
+          "usable_markers": 77,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 4,
+              "name": "L16.좀비독",
+              "level": 16
+            },
+            {
+              "id": 204,
+              "name": "L17.좀비독",
+              "level": 17
+            },
+            {
+              "id": 304,
+              "name": "L18.좀비독",
+              "level": 18
+            },
+            {
+              "id": 404,
+              "name": "L19.좀비독",
+              "level": 19
+            },
+            {
+              "id": 504,
+              "name": "L20.좀비독",
+              "level": 20
+            },
+            {
+              "id": 604,
+              "name": "B.좀비독",
+              "level": 30
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "L21.이블독",
+          "markers": 32,
+          "usable_markers": 32,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 5,
+              "name": "L21.이블독",
+              "level": 21
+            },
+            {
+              "id": 205,
+              "name": "L22.이블독",
+              "level": 22
+            },
+            {
+              "id": 305,
+              "name": "L23.이블독",
+              "level": 23
+            },
+            {
+              "id": 405,
+              "name": "L24.이블독",
+              "level": 24
+            },
+            {
+              "id": 505,
+              "name": "L25.이블독",
+              "level": 25
+            },
+            {
+              "id": 605,
+              "name": "B.이블독",
+              "level": 35
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        3,
+        5
+      ],
+      "outgoing": [
+        3,
+        5
+      ]
+    },
+    {
+      "id": 5,
+      "name": "레기온",
+      "marker_count": 336,
+      "usable_markers": 336,
+      "types": [
+        {
+          "id": 5,
+          "name": "L21.이블독",
+          "markers": 26,
+          "usable_markers": 26,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 5,
+              "name": "L21.이블독",
+              "level": 21
+            },
+            {
+              "id": 205,
+              "name": "L22.이블독",
+              "level": 22
+            },
+            {
+              "id": 305,
+              "name": "L23.이블독",
+              "level": 23
+            },
+            {
+              "id": 405,
+              "name": "L24.이블독",
+              "level": 24
+            },
+            {
+              "id": 505,
+              "name": "L25.이블독",
+              "level": 25
+            },
+            {
+              "id": 605,
+              "name": "B.이블독",
+              "level": 35
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "L26.고블린",
+          "markers": 233,
+          "usable_markers": 233,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 6,
+              "name": "L26.고블린",
+              "level": 26
+            },
+            {
+              "id": 206,
+              "name": "L27.고블린",
+              "level": 27
+            },
+            {
+              "id": 306,
+              "name": "L28.고블린",
+              "level": 28
+            },
+            {
+              "id": 406,
+              "name": "L29.고블린",
+              "level": 29
+            },
+            {
+              "id": 506,
+              "name": "L30.고블린",
+              "level": 30
+            },
+            {
+              "id": 606,
+              "name": "B.고블린",
+              "level": 40
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "L31.고블린랜서",
+          "markers": 52,
+          "usable_markers": 52,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 7,
+              "name": "L31.고블린랜서",
+              "level": 31
+            },
+            {
+              "id": 207,
+              "name": "L32.고블린랜서",
+              "level": 32
+            },
+            {
+              "id": 307,
+              "name": "L33.고블린랜서",
+              "level": 33
+            },
+            {
+              "id": 407,
+              "name": "L34.고블린랜서",
+              "level": 34
+            },
+            {
+              "id": 507,
+              "name": "L35.고블린랜서",
+              "level": 35
+            },
+            {
+              "id": 607,
+              "name": "B.고블린랜서",
+              "level": 45
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "L36.킹비홀더",
+          "markers": 25,
+          "usable_markers": 25,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 8,
+              "name": "L36.킹비홀더",
+              "level": 36
+            },
+            {
+              "id": 208,
+              "name": "L37.킹비홀더",
+              "level": 37
+            },
+            {
+              "id": 308,
+              "name": "L38.킹비홀더",
+              "level": 38
+            },
+            {
+              "id": 408,
+              "name": "L39.킹비홀더",
+              "level": 39
+            },
+            {
+              "id": 508,
+              "name": "L40.킹비홀더",
+              "level": 40
+            },
+            {
+              "id": 608,
+              "name": "B.킹비홀더",
+              "level": 50
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        4,
+        6
+      ],
+      "outgoing": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": 6,
+      "name": "모하스",
+      "marker_count": 228,
+      "usable_markers": 228,
+      "types": [
+        {
+          "id": 8,
+          "name": "L36.킹비홀더",
+          "markers": 45,
+          "usable_markers": 45,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 8,
+              "name": "L36.킹비홀더",
+              "level": 36
+            },
+            {
+              "id": 208,
+              "name": "L37.킹비홀더",
+              "level": 37
+            },
+            {
+              "id": 308,
+              "name": "L38.킹비홀더",
+              "level": 38
+            },
+            {
+              "id": 408,
+              "name": "L39.킹비홀더",
+              "level": 39
+            },
+            {
+              "id": 508,
+              "name": "L40.킹비홀더",
+              "level": 40
+            },
+            {
+              "id": 608,
+              "name": "B.킹비홀더",
+              "level": 50
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "L41.오크",
+          "markers": 160,
+          "usable_markers": 160,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 9,
+              "name": "L41.오크",
+              "level": 41
+            },
+            {
+              "id": 209,
+              "name": "L42.오크",
+              "level": 42
+            },
+            {
+              "id": 309,
+              "name": "L43.오크",
+              "level": 43
+            },
+            {
+              "id": 409,
+              "name": "L44.오크",
+              "level": 44
+            },
+            {
+              "id": 509,
+              "name": "L45.오크",
+              "level": 45
+            },
+            {
+              "id": 609,
+              "name": "B.오크",
+              "level": 55
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "L46.오크아처",
+          "markers": 23,
+          "usable_markers": 23,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 10,
+              "name": "L46.오크아처",
+              "level": 46
+            },
+            {
+              "id": 210,
+              "name": "L47.오크아처",
+              "level": 47
+            },
+            {
+              "id": 310,
+              "name": "L48.오크아처",
+              "level": 48
+            },
+            {
+              "id": 410,
+              "name": "L49.오크아처",
+              "level": 49
+            },
+            {
+              "id": 510,
+              "name": "L50.오크아처",
+              "level": 50
+            },
+            {
+              "id": 610,
+              "name": "B.오크아처",
+              "level": 60
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        5,
+        7
+      ],
+      "outgoing": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": 7,
+      "name": "가우나",
+      "marker_count": 386,
+      "usable_markers": 386,
+      "types": [
+        {
+          "id": 11,
+          "name": "L51.홉고블린",
+          "markers": 109,
+          "usable_markers": 109,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 11,
+              "name": "L51.홉고블린",
+              "level": 51
+            },
+            {
+              "id": 211,
+              "name": "L52.홉고블린",
+              "level": 52
+            },
+            {
+              "id": 311,
+              "name": "L53.홉고블린",
+              "level": 53
+            },
+            {
+              "id": 411,
+              "name": "L54.홉고블린",
+              "level": 54
+            },
+            {
+              "id": 511,
+              "name": "L55.홉고블린",
+              "level": 55
+            },
+            {
+              "id": 611,
+              "name": "B.홉고블린",
+              "level": 65
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "L61.좀비",
+          "markers": 128,
+          "usable_markers": 128,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 12,
+              "name": "L61.좀비",
+              "level": 61
+            },
+            {
+              "id": 212,
+              "name": "L62.좀비",
+              "level": 62
+            },
+            {
+              "id": 312,
+              "name": "L63.좀비",
+              "level": 63
+            },
+            {
+              "id": 412,
+              "name": "L64.좀비",
+              "level": 64
+            },
+            {
+              "id": 512,
+              "name": "L65.좀비",
+              "level": 65
+            },
+            {
+              "id": 612,
+              "name": "B.좀비",
+              "level": 70
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "L66.웨어울프",
+          "markers": 106,
+          "usable_markers": 106,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 13,
+              "name": "L66.웨어울프",
+              "level": 66
+            },
+            {
+              "id": 213,
+              "name": "L67.웨어울프",
+              "level": 67
+            },
+            {
+              "id": 313,
+              "name": "L68.웨어울프",
+              "level": 68
+            },
+            {
+              "id": 413,
+              "name": "L69.웨어울프",
+              "level": 69
+            },
+            {
+              "id": 513,
+              "name": "L70.웨어울프",
+              "level": 70
+            },
+            {
+              "id": 613,
+              "name": "B.웨어울프",
+              "level": 75
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "L56.피라니아",
+          "markers": 43,
+          "usable_markers": 43,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 17,
+              "name": "L56.피라니아",
+              "level": 56
+            },
+            {
+              "id": 217,
+              "name": "L57.피라니아",
+              "level": 57
+            },
+            {
+              "id": 317,
+              "name": "L58.피라니아",
+              "level": 58
+            },
+            {
+              "id": 417,
+              "name": "L59.피라니아",
+              "level": 59
+            },
+            {
+              "id": 517,
+              "name": "L60.피라니아",
+              "level": 60
+            },
+            {
+              "id": 617,
+              "name": "B.피라니아",
+              "level": 95
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        6,
+        8
+      ],
+      "outgoing": [
+        6,
+        8
+      ]
+    },
+    {
+      "id": 8,
+      "name": "네리스",
+      "marker_count": 254,
+      "usable_markers": 254,
+      "types": [
+        {
+          "id": 14,
+          "name": "L71.스켈레톤",
+          "markers": 103,
+          "usable_markers": 103,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 14,
+              "name": "L71.스켈레톤",
+              "level": 71
+            },
+            {
+              "id": 214,
+              "name": "L72.스켈레톤",
+              "level": 72
+            },
+            {
+              "id": 314,
+              "name": "L73.스켈레톤",
+              "level": 73
+            },
+            {
+              "id": 414,
+              "name": "L74.스켈레톤",
+              "level": 74
+            },
+            {
+              "id": 514,
+              "name": "L75.스켈레톤",
+              "level": 75
+            },
+            {
+              "id": 614,
+              "name": "B.스켈레톤",
+              "level": 80
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "L76.스톤골렘",
+          "markers": 79,
+          "usable_markers": 79,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 15,
+              "name": "L76.스톤골렘",
+              "level": 76
+            },
+            {
+              "id": 215,
+              "name": "L77.스톤골렘",
+              "level": 77
+            },
+            {
+              "id": 315,
+              "name": "L78.스톤골렘",
+              "level": 78
+            },
+            {
+              "id": 415,
+              "name": "L79.스톤골렘",
+              "level": 79
+            },
+            {
+              "id": 515,
+              "name": "L80.스톤골렘",
+              "level": 80
+            },
+            {
+              "id": 615,
+              "name": "B.스톤골렘",
+              "level": 85
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "L81.스켈레톤랜서",
+          "markers": 49,
+          "usable_markers": 49,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 16,
+              "name": "L81.스켈레톤랜서",
+              "level": 81
+            },
+            {
+              "id": 216,
+              "name": "L82.스켈레톤랜서",
+              "level": 82
+            },
+            {
+              "id": 316,
+              "name": "L83.스켈레톤랜서",
+              "level": 83
+            },
+            {
+              "id": 416,
+              "name": "L84.스켈레톤랜서",
+              "level": 84
+            },
+            {
+              "id": 516,
+              "name": "L85.스켈레톤랜서",
+              "level": 85
+            },
+            {
+              "id": 616,
+              "name": "B.스켈레톤랜서",
+              "level": 90
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "L86.스켈레톤리더",
+          "markers": 23,
+          "usable_markers": 23,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 18,
+              "name": "L86.스켈레톤리더",
+              "level": 86
+            },
+            {
+              "id": 218,
+              "name": "L87.스켈레톤리더",
+              "level": 87
+            },
+            {
+              "id": 318,
+              "name": "L88.스켈레톤리더",
+              "level": 88
+            },
+            {
+              "id": 418,
+              "name": "L89.스켈레톤리더",
+              "level": 89
+            },
+            {
+              "id": 518,
+              "name": "L90.스켈레톤리더",
+              "level": 90
+            },
+            {
+              "id": 618,
+              "name": "B.스켈레톤리더",
+              "level": 100
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        7,
+        9,
+        1003
+      ],
+      "outgoing": [
+        7,
+        9,
+        1003
+      ]
+    },
+    {
+      "id": 9,
+      "name": "하리트",
+      "marker_count": 176,
+      "usable_markers": 174,
+      "types": [
+        {
+          "id": 19,
+          "name": "L91.마그마골렘",
+          "markers": 10,
+          "usable_markers": 10,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 19,
+              "name": "L91.마그마골렘",
+              "level": 91
+            },
+            {
+              "id": 219,
+              "name": "L92.마그마골렘",
+              "level": 92
+            },
+            {
+              "id": 319,
+              "name": "L93.마그마골렘",
+              "level": 93
+            },
+            {
+              "id": 419,
+              "name": "L94.마그마골렘",
+              "level": 94
+            },
+            {
+              "id": 519,
+              "name": "L95.마그마골렘",
+              "level": 95
+            },
+            {
+              "id": 619,
+              "name": "B.마그마골렘",
+              "level": 105
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "L96.아이스골렘",
+          "markers": 122,
+          "usable_markers": 120,
+          "blocked_markers": 2,
+          "possible_variants": [
+            {
+              "id": 20,
+              "name": "L96.아이스골렘",
+              "level": 96
+            },
+            {
+              "id": 220,
+              "name": "L97.아이스골렘",
+              "level": 97
+            },
+            {
+              "id": 320,
+              "name": "L98.아이스골렘",
+              "level": 98
+            },
+            {
+              "id": 420,
+              "name": "L99.아이스골렘",
+              "level": 99
+            },
+            {
+              "id": 520,
+              "name": "L100.아이스골렘",
+              "level": 100
+            },
+            {
+              "id": 620,
+              "name": "B.아이스골렘",
+              "level": 110
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "L101.세티로스",
+          "markers": 24,
+          "usable_markers": 24,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 21,
+              "name": "L101.세티로스",
+              "level": 101
+            },
+            {
+              "id": 221,
+              "name": "L102.세티로스",
+              "level": 102
+            },
+            {
+              "id": 321,
+              "name": "L103.세티로스",
+              "level": 103
+            },
+            {
+              "id": 421,
+              "name": "L104.세티로스",
+              "level": 104
+            },
+            {
+              "id": 521,
+              "name": "L105.세티로스",
+              "level": 105
+            },
+            {
+              "id": 621,
+              "name": "B.세티로스",
+              "level": 115
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "L106.오우거",
+          "markers": 20,
+          "usable_markers": 20,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 22,
+              "name": "L106.오우거",
+              "level": 106
+            },
+            {
+              "id": 222,
+              "name": "L107.오우거",
+              "level": 107
+            },
+            {
+              "id": 322,
+              "name": "L108.오우거",
+              "level": 108
+            },
+            {
+              "id": 422,
+              "name": "L109.오우거",
+              "level": 109
+            },
+            {
+              "id": 522,
+              "name": "L110.오우거",
+              "level": 110
+            },
+            {
+              "id": 622,
+              "name": "B.오우거",
+              "level": 120
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        8,
+        10
+      ],
+      "outgoing": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": 10,
+      "name": "바크난",
+      "marker_count": 140,
+      "usable_markers": 140,
+      "types": [
+        {
+          "id": 23,
+          "name": "L111.사이클롭스",
+          "markers": 49,
+          "usable_markers": 49,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 23,
+              "name": "L111.사이클롭스",
+              "level": 111
+            },
+            {
+              "id": 223,
+              "name": "L112.사이클롭스",
+              "level": 112
+            },
+            {
+              "id": 323,
+              "name": "L113.사이클롭스",
+              "level": 113
+            },
+            {
+              "id": 423,
+              "name": "L114.사이클롭스",
+              "level": 114
+            },
+            {
+              "id": 523,
+              "name": "L115.사이클롭스",
+              "level": 115
+            },
+            {
+              "id": 623,
+              "name": "B.사이클롭스",
+              "level": 125
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "L116.트롤키메라",
+          "markers": 31,
+          "usable_markers": 31,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 24,
+              "name": "L116.트롤키메라",
+              "level": 116
+            },
+            {
+              "id": 224,
+              "name": "L117.트롤키메라",
+              "level": 117
+            },
+            {
+              "id": 324,
+              "name": "L118.트롤키메라",
+              "level": 118
+            },
+            {
+              "id": 424,
+              "name": "L119.트롤키메라",
+              "level": 119
+            },
+            {
+              "id": 524,
+              "name": "L120.트롤키메라",
+              "level": 120
+            },
+            {
+              "id": 624,
+              "name": "B.트롤키메라",
+              "level": 130
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "L121.아이스나이츠",
+          "markers": 47,
+          "usable_markers": 47,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 25,
+              "name": "L121.아이스나이츠",
+              "level": 121
+            },
+            {
+              "id": 225,
+              "name": "L122.아이스나이츠",
+              "level": 122
+            },
+            {
+              "id": 325,
+              "name": "L123.아이스나이츠",
+              "level": 123
+            },
+            {
+              "id": 425,
+              "name": "L124.아이스나이츠",
+              "level": 124
+            },
+            {
+              "id": 525,
+              "name": "L125.아이스나이츠",
+              "level": 125
+            },
+            {
+              "id": 625,
+              "name": "B.아이스나이츠",
+              "level": 135
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "L126.아이스나이츠리더",
+          "markers": 13,
+          "usable_markers": 13,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 26,
+              "name": "L126.아이스나이츠리더",
+              "level": 126
+            },
+            {
+              "id": 226,
+              "name": "L127.아이스나이츠리더",
+              "level": 127
+            },
+            {
+              "id": 326,
+              "name": "L128.아이스나이츠리더",
+              "level": 128
+            },
+            {
+              "id": 426,
+              "name": "L129.아이스나이츠리더",
+              "level": 129
+            },
+            {
+              "id": 526,
+              "name": "L130.아이스나이츠리더",
+              "level": 130
+            },
+            {
+              "id": 626,
+              "name": "B.아이스나이츠리더",
+              "level": 140
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        9,
+        11
+      ],
+      "outgoing": [
+        9,
+        11
+      ]
+    },
+    {
+      "id": 11,
+      "name": "수헤르",
+      "marker_count": 78,
+      "usable_markers": 78,
+      "types": [
+        {
+          "id": 26,
+          "name": "L126.아이스나이츠리더",
+          "markers": 19,
+          "usable_markers": 19,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 26,
+              "name": "L126.아이스나이츠리더",
+              "level": 126
+            },
+            {
+              "id": 226,
+              "name": "L127.아이스나이츠리더",
+              "level": 127
+            },
+            {
+              "id": 326,
+              "name": "L128.아이스나이츠리더",
+              "level": 128
+            },
+            {
+              "id": 426,
+              "name": "L129.아이스나이츠리더",
+              "level": 129
+            },
+            {
+              "id": 526,
+              "name": "L130.아이스나이츠리더",
+              "level": 130
+            },
+            {
+              "id": 626,
+              "name": "B.아이스나이츠리더",
+              "level": 140
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "L131.하피",
+          "markers": 45,
+          "usable_markers": 45,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 27,
+              "name": "L131.하피",
+              "level": 131
+            },
+            {
+              "id": 227,
+              "name": "L132.하피",
+              "level": 132
+            },
+            {
+              "id": 327,
+              "name": "L133.하피",
+              "level": 133
+            },
+            {
+              "id": 427,
+              "name": "L134.하피",
+              "level": 134
+            },
+            {
+              "id": 527,
+              "name": "L135.하피",
+              "level": 135
+            },
+            {
+              "id": 627,
+              "name": "B.하피",
+              "level": 145
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "L136.서큐버스",
+          "markers": 14,
+          "usable_markers": 14,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 28,
+              "name": "L136.서큐버스",
+              "level": 136
+            },
+            {
+              "id": 228,
+              "name": "L137.서큐버스",
+              "level": 137
+            },
+            {
+              "id": 328,
+              "name": "L138.서큐버스",
+              "level": 138
+            },
+            {
+              "id": 428,
+              "name": "L139.서큐버스",
+              "level": 139
+            },
+            {
+              "id": 528,
+              "name": "L140.서큐버스",
+              "level": 140
+            },
+            {
+              "id": 628,
+              "name": "B.서큐버스",
+              "level": 150
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        10,
+        12
+      ],
+      "outgoing": [
+        10,
+        12
+      ]
+    },
+    {
+      "id": 12,
+      "name": "모자드",
+      "marker_count": 195,
+      "usable_markers": 195,
+      "types": [
+        {
+          "id": 22,
+          "name": "L106.오우거",
+          "markers": 1,
+          "usable_markers": 1,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 22,
+              "name": "L106.오우거",
+              "level": 106
+            },
+            {
+              "id": 222,
+              "name": "L107.오우거",
+              "level": 107
+            },
+            {
+              "id": 322,
+              "name": "L108.오우거",
+              "level": 108
+            },
+            {
+              "id": 422,
+              "name": "L109.오우거",
+              "level": 109
+            },
+            {
+              "id": 522,
+              "name": "L110.오우거",
+              "level": 110
+            },
+            {
+              "id": 622,
+              "name": "B.오우거",
+              "level": 120
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "L111.사이클롭스",
+          "markers": 81,
+          "usable_markers": 81,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 23,
+              "name": "L111.사이클롭스",
+              "level": 111
+            },
+            {
+              "id": 223,
+              "name": "L112.사이클롭스",
+              "level": 112
+            },
+            {
+              "id": 323,
+              "name": "L113.사이클롭스",
+              "level": 113
+            },
+            {
+              "id": 423,
+              "name": "L114.사이클롭스",
+              "level": 114
+            },
+            {
+              "id": 523,
+              "name": "L115.사이클롭스",
+              "level": 115
+            },
+            {
+              "id": 623,
+              "name": "B.사이클롭스",
+              "level": 125
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "L131.하피",
+          "markers": 76,
+          "usable_markers": 76,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 27,
+              "name": "L131.하피",
+              "level": 131
+            },
+            {
+              "id": 227,
+              "name": "L132.하피",
+              "level": 132
+            },
+            {
+              "id": 327,
+              "name": "L133.하피",
+              "level": 133
+            },
+            {
+              "id": 427,
+              "name": "L134.하피",
+              "level": 134
+            },
+            {
+              "id": 527,
+              "name": "L135.하피",
+              "level": 135
+            },
+            {
+              "id": 627,
+              "name": "B.하피",
+              "level": 145
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "L136.서큐버스",
+          "markers": 37,
+          "usable_markers": 37,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 28,
+              "name": "L136.서큐버스",
+              "level": 136
+            },
+            {
+              "id": 228,
+              "name": "L137.서큐버스",
+              "level": 137
+            },
+            {
+              "id": 328,
+              "name": "L138.서큐버스",
+              "level": 138
+            },
+            {
+              "id": 428,
+              "name": "L139.서큐버스",
+              "level": 139
+            },
+            {
+              "id": 528,
+              "name": "L140.서큐버스",
+              "level": 140
+            },
+            {
+              "id": 628,
+              "name": "B.서큐버스",
+              "level": 150
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        11,
+        13
+      ],
+      "outgoing": [
+        11,
+        13
+      ]
+    },
+    {
+      "id": 13,
+      "name": "지레네",
+      "marker_count": 311,
+      "usable_markers": 311,
+      "types": [
+        {
+          "id": 29,
+          "name": "L151.와이번",
+          "markers": 43,
+          "usable_markers": 43,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 29,
+              "name": "L151.와이번",
+              "level": 151
+            },
+            {
+              "id": 229,
+              "name": "L152.와이번",
+              "level": 152
+            },
+            {
+              "id": 329,
+              "name": "L153.와이번",
+              "level": 153
+            },
+            {
+              "id": 429,
+              "name": "L154.와이번",
+              "level": 154
+            },
+            {
+              "id": 529,
+              "name": "L155.와이번",
+              "level": 155
+            },
+            {
+              "id": 629,
+              "name": "B.와이번",
+              "level": 160
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "name": "L141.자이언트 앤트",
+          "markers": 162,
+          "usable_markers": 162,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 34,
+              "name": "L141.자이언트 앤트",
+              "level": 141
+            },
+            {
+              "id": 234,
+              "name": "L142.자이언트 앤트",
+              "level": 142
+            },
+            {
+              "id": 334,
+              "name": "L143.자이언트 앤트",
+              "level": 143
+            },
+            {
+              "id": 434,
+              "name": "L144.자이언트 앤트",
+              "level": 144
+            },
+            {
+              "id": 534,
+              "name": "L145.자이언트 앤트",
+              "level": 145
+            },
+            {
+              "id": 634,
+              "name": "B.자이언트 앤트",
+              "level": 155
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "name": "L156.레드터틀",
+          "markers": 49,
+          "usable_markers": 49,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 35,
+              "name": "L156.레드터틀",
+              "level": 156
+            },
+            {
+              "id": 235,
+              "name": "L157.레드터틀",
+              "level": 157
+            },
+            {
+              "id": 335,
+              "name": "L158.레드터틀",
+              "level": 158
+            },
+            {
+              "id": 435,
+              "name": "L159.레드터틀",
+              "level": 159
+            },
+            {
+              "id": 535,
+              "name": "L160.레드터틀",
+              "level": 160
+            },
+            {
+              "id": 635,
+              "name": "B.레드터틀",
+              "level": 165
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "L146.스웰라",
+          "markers": 57,
+          "usable_markers": 57,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 36,
+              "name": "L146.스웰라",
+              "level": 146
+            },
+            {
+              "id": 236,
+              "name": "L147.스웰라",
+              "level": 147
+            },
+            {
+              "id": 336,
+              "name": "L148.스웰라",
+              "level": 148
+            },
+            {
+              "id": 436,
+              "name": "L149.스웰라",
+              "level": 149
+            },
+            {
+              "id": 536,
+              "name": "L150.스웰라",
+              "level": 150
+            },
+            {
+              "id": 636,
+              "name": "B.스웰라",
+              "level": 160
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        12,
+        14
+      ],
+      "outgoing": [
+        12,
+        14
+      ]
+    },
+    {
+      "id": 14,
+      "name": "타로스",
+      "marker_count": 226,
+      "usable_markers": 226,
+      "types": [
+        {
+          "id": 34,
+          "name": "L141.자이언트 앤트",
+          "markers": 58,
+          "usable_markers": 58,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 34,
+              "name": "L141.자이언트 앤트",
+              "level": 141
+            },
+            {
+              "id": 234,
+              "name": "L142.자이언트 앤트",
+              "level": 142
+            },
+            {
+              "id": 334,
+              "name": "L143.자이언트 앤트",
+              "level": 143
+            },
+            {
+              "id": 434,
+              "name": "L144.자이언트 앤트",
+              "level": 144
+            },
+            {
+              "id": 534,
+              "name": "L145.자이언트 앤트",
+              "level": 145
+            },
+            {
+              "id": 634,
+              "name": "B.자이언트 앤트",
+              "level": 155
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "name": "L166.비어드피쉬",
+          "markers": 23,
+          "usable_markers": 23,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 37,
+              "name": "L166.비어드피쉬",
+              "level": 166
+            },
+            {
+              "id": 237,
+              "name": "L167.비어드피쉬",
+              "level": 167
+            },
+            {
+              "id": 337,
+              "name": "L168.비어드피쉬",
+              "level": 168
+            },
+            {
+              "id": 437,
+              "name": "L169.비어드피쉬",
+              "level": 169
+            },
+            {
+              "id": 537,
+              "name": "L170.비어드피쉬",
+              "level": 170
+            },
+            {
+              "id": 637,
+              "name": "B.비어드피쉬",
+              "level": 180
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "L171.블루터틀",
+          "markers": 39,
+          "usable_markers": 39,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 38,
+              "name": "L171.블루터틀",
+              "level": 171
+            },
+            {
+              "id": 238,
+              "name": "L172.블루터틀",
+              "level": 172
+            },
+            {
+              "id": 338,
+              "name": "L173.블루터틀",
+              "level": 173
+            },
+            {
+              "id": 438,
+              "name": "L174.블루터틀",
+              "level": 174
+            },
+            {
+              "id": 538,
+              "name": "L175.블루터틀",
+              "level": 175
+            },
+            {
+              "id": 638,
+              "name": "B.블루터틀",
+              "level": 185
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "name": "L161.바포메트",
+          "markers": 106,
+          "usable_markers": 106,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 44,
+              "name": "L161.바포메트",
+              "level": 161
+            },
+            {
+              "id": 244,
+              "name": "L162.바포메트",
+              "level": 162
+            },
+            {
+              "id": 344,
+              "name": "L163.바포메트",
+              "level": 163
+            },
+            {
+              "id": 444,
+              "name": "L164.바포메트",
+              "level": 164
+            },
+            {
+              "id": 544,
+              "name": "L165.바포메트",
+              "level": 165
+            },
+            {
+              "id": 644,
+              "name": "B.바포메트",
+              "level": 175
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        13
+      ],
+      "outgoing": [
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "name": "로비",
+      "marker_count": 153,
+      "usable_markers": 153,
+      "types": [
+        {
+          "id": 15,
+          "name": "L76.스톤골렘",
+          "markers": 103,
+          "usable_markers": 103,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 15,
+              "name": "L76.스톤골렘",
+              "level": 76
+            },
+            {
+              "id": 215,
+              "name": "L77.스톤골렘",
+              "level": 77
+            },
+            {
+              "id": 315,
+              "name": "L78.스톤골렘",
+              "level": 78
+            },
+            {
+              "id": 415,
+              "name": "L79.스톤골렘",
+              "level": 79
+            },
+            {
+              "id": 515,
+              "name": "L80.스톤골렘",
+              "level": 80
+            },
+            {
+              "id": 615,
+              "name": "B.스톤골렘",
+              "level": 85
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "L136.서큐버스",
+          "markers": 3,
+          "usable_markers": 3,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 28,
+              "name": "L136.서큐버스",
+              "level": 136
+            },
+            {
+              "id": 228,
+              "name": "L137.서큐버스",
+              "level": 137
+            },
+            {
+              "id": 328,
+              "name": "L138.서큐버스",
+              "level": 138
+            },
+            {
+              "id": 428,
+              "name": "L139.서큐버스",
+              "level": 139
+            },
+            {
+              "id": 528,
+              "name": "L140.서큐버스",
+              "level": 140
+            },
+            {
+              "id": 628,
+              "name": "B.서큐버스",
+              "level": 150
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "name": "L176.그레이울프",
+          "markers": 47,
+          "usable_markers": 47,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 33,
+              "name": "L176.그레이울프",
+              "level": 206
+            },
+            {
+              "id": 233,
+              "name": "L177.그레이울프",
+              "level": 207
+            },
+            {
+              "id": 333,
+              "name": "L178.그레이울프",
+              "level": 208
+            },
+            {
+              "id": 433,
+              "name": "L179.그레이울프",
+              "level": 209
+            },
+            {
+              "id": 533,
+              "name": "L180.그레이울프",
+              "level": 210
+            },
+            {
+              "id": 633,
+              "name": "B.그레이울프",
+              "level": 225
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        16,
+        1003
+      ],
+      "outgoing": [
+        16,
+        1003
+      ]
+    },
+    {
+      "id": 16,
+      "name": "테반",
+      "marker_count": 92,
+      "usable_markers": 92,
+      "types": [
+        {
+          "id": 19,
+          "name": "L91.마그마골렘",
+          "markers": 60,
+          "usable_markers": 60,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 19,
+              "name": "L91.마그마골렘",
+              "level": 91
+            },
+            {
+              "id": 219,
+              "name": "L92.마그마골렘",
+              "level": 92
+            },
+            {
+              "id": 319,
+              "name": "L93.마그마골렘",
+              "level": 93
+            },
+            {
+              "id": 419,
+              "name": "L94.마그마골렘",
+              "level": 94
+            },
+            {
+              "id": 519,
+              "name": "L95.마그마골렘",
+              "level": 95
+            },
+            {
+              "id": 619,
+              "name": "B.마그마골렘",
+              "level": 105
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": "L151.와이번",
+          "markers": 32,
+          "usable_markers": 32,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 29,
+              "name": "L151.와이번",
+              "level": 151
+            },
+            {
+              "id": 229,
+              "name": "L152.와이번",
+              "level": 152
+            },
+            {
+              "id": 329,
+              "name": "L153.와이번",
+              "level": 153
+            },
+            {
+              "id": 429,
+              "name": "L154.와이번",
+              "level": 154
+            },
+            {
+              "id": 529,
+              "name": "L155.와이번",
+              "level": 155
+            },
+            {
+              "id": 629,
+              "name": "B.와이번",
+              "level": 160
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        15,
+        17
+      ],
+      "outgoing": [
+        15,
+        17
+      ]
+    },
+    {
+      "id": 17,
+      "name": "레벤",
+      "marker_count": 225,
+      "usable_markers": 225,
+      "types": [
+        {
+          "id": 19,
+          "name": "L91.마그마골렘",
+          "markers": 133,
+          "usable_markers": 133,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 19,
+              "name": "L91.마그마골렘",
+              "level": 91
+            },
+            {
+              "id": 219,
+              "name": "L92.마그마골렘",
+              "level": 92
+            },
+            {
+              "id": 319,
+              "name": "L93.마그마골렘",
+              "level": 93
+            },
+            {
+              "id": 419,
+              "name": "L94.마그마골렘",
+              "level": 94
+            },
+            {
+              "id": 519,
+              "name": "L95.마그마골렘",
+              "level": 95
+            },
+            {
+              "id": 619,
+              "name": "B.마그마골렘",
+              "level": 105
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "name": "L186.트렌트",
+          "markers": 48,
+          "usable_markers": 48,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 39,
+              "name": "L186.트렌트",
+              "level": 211
+            },
+            {
+              "id": 239,
+              "name": "L187.트렌트",
+              "level": 212
+            },
+            {
+              "id": 339,
+              "name": "L188.트렌트",
+              "level": 213
+            },
+            {
+              "id": 439,
+              "name": "L189.트렌트",
+              "level": 214
+            },
+            {
+              "id": 539,
+              "name": "L190.트렌트",
+              "level": 215
+            },
+            {
+              "id": 639,
+              "name": "B.트렌트",
+              "level": 225
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "L181.위치",
+          "markers": 44,
+          "usable_markers": 44,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 40,
+              "name": "L181.위치",
+              "level": 216
+            },
+            {
+              "id": 240,
+              "name": "L182.위치",
+              "level": 217
+            },
+            {
+              "id": 340,
+              "name": "L183.위치",
+              "level": 218
+            },
+            {
+              "id": 440,
+              "name": "L184.위치",
+              "level": 219
+            },
+            {
+              "id": 540,
+              "name": "L185.위치",
+              "level": 220
+            },
+            {
+              "id": 640,
+              "name": "B.위치",
+              "level": 220
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        16
+      ],
+      "outgoing": [
+        16
+      ]
+    },
+    {
+      "id": 20,
+      "name": "바터스케어",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [
+        31
+      ],
+      "outgoing": [
+        3
+      ]
+    },
+    {
+      "id": 21,
+      "name": "네메시스",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "id": 22,
+      "name": "고스",
+      "marker_count": 141,
+      "usable_markers": 141,
+      "types": [
+        {
+          "id": 53,
+          "name": "L191.바포메트워리어",
+          "markers": 62,
+          "usable_markers": 62,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 53,
+              "name": "L191.바포메트워리어",
+              "level": 176
+            },
+            {
+              "id": 253,
+              "name": "L192.바포메트워리어",
+              "level": 177
+            },
+            {
+              "id": 353,
+              "name": "L193.바포메트워리어",
+              "level": 178
+            },
+            {
+              "id": 453,
+              "name": "L194.바포메트워리어",
+              "level": 179
+            },
+            {
+              "id": 553,
+              "name": "L195.바포메트워리어",
+              "level": 180
+            },
+            {
+              "id": 653,
+              "name": "B.바포메트워리어",
+              "level": 190
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "name": "L196.레드와이번",
+          "markers": 79,
+          "usable_markers": 79,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 54,
+              "name": "L196.레드와이번",
+              "level": 181
+            },
+            {
+              "id": 254,
+              "name": "L197.레드와이번",
+              "level": 182
+            },
+            {
+              "id": 354,
+              "name": "L198.레드와이번",
+              "level": 183
+            },
+            {
+              "id": 454,
+              "name": "L199.레드와이번",
+              "level": 184
+            },
+            {
+              "id": 554,
+              "name": "L200.레드와이번",
+              "level": 185
+            },
+            {
+              "id": 654,
+              "name": "B.레드와이번",
+              "level": 195
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        3,
+        40
+      ],
+      "outgoing": [
+        3,
+        40
+      ]
+    },
+    {
+      "id": 23,
+      "name": "바이카",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [
+        33
+      ],
+      "outgoing": [
+        33
+      ]
+    },
+    {
+      "id": 24,
+      "name": "레벤",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "id": 25,
+      "name": "모로스",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "id": 26,
+      "name": "아구아",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "id": 31,
+      "name": "바이곤",
+      "marker_count": 230,
+      "usable_markers": 230,
+      "types": [
+        {
+          "id": 39,
+          "name": "L186.트렌트",
+          "markers": 63,
+          "usable_markers": 63,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 39,
+              "name": "L186.트렌트",
+              "level": 211
+            },
+            {
+              "id": 239,
+              "name": "L187.트렌트",
+              "level": 212
+            },
+            {
+              "id": 339,
+              "name": "L188.트렌트",
+              "level": 213
+            },
+            {
+              "id": 439,
+              "name": "L189.트렌트",
+              "level": 214
+            },
+            {
+              "id": 539,
+              "name": "L190.트렌트",
+              "level": 215
+            },
+            {
+              "id": 639,
+              "name": "B.트렌트",
+              "level": 225
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "name": "P196.그리폰",
+          "markers": 69,
+          "usable_markers": 69,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 46,
+              "name": "P196.그리폰",
+              "level": 241
+            },
+            {
+              "id": 246,
+              "name": "P197.그리폰",
+              "level": 242
+            },
+            {
+              "id": 346,
+              "name": "P198.그리폰",
+              "level": 243
+            },
+            {
+              "id": 446,
+              "name": "P199.그리폰",
+              "level": 244
+            },
+            {
+              "id": 546,
+              "name": "P200.그리폰",
+              "level": 245
+            },
+            {
+              "id": 646,
+              "name": "PB.그리폰",
+              "level": 255
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "name": "P191.고쿤",
+          "markers": 98,
+          "usable_markers": 98,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 52,
+              "name": "P191.고쿤",
+              "level": 236
+            },
+            {
+              "id": 252,
+              "name": "P192.고쿤",
+              "level": 237
+            },
+            {
+              "id": 352,
+              "name": "P193.고쿤",
+              "level": 238
+            },
+            {
+              "id": 452,
+              "name": "P194.고쿤",
+              "level": 239
+            },
+            {
+              "id": 552,
+              "name": "P195.고쿤",
+              "level": 240
+            },
+            {
+              "id": 652,
+              "name": "PB.고쿤",
+              "level": 250
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        32
+      ],
+      "outgoing": [
+        20,
+        32
+      ]
+    },
+    {
+      "id": 32,
+      "name": "마쉬랜드",
+      "marker_count": 215,
+      "usable_markers": 215,
+      "types": [
+        {
+          "id": 49,
+          "name": "P210.덤프솔져",
+          "markers": 98,
+          "usable_markers": 98,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 49,
+              "name": "P210.덤프솔져",
+              "level": 246
+            },
+            {
+              "id": 249,
+              "name": "P220.덤프솔져",
+              "level": 247
+            },
+            {
+              "id": 349,
+              "name": "P230.덤프솔져",
+              "level": 248
+            },
+            {
+              "id": 449,
+              "name": "P240.덤프솔져",
+              "level": 249
+            },
+            {
+              "id": 549,
+              "name": "P250.덤프솔져",
+              "level": 250
+            },
+            {
+              "id": 649,
+              "name": "PB.덤프솔져",
+              "level": 260
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "name": "P260.덤프솔져워리어",
+          "markers": 65,
+          "usable_markers": 65,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 50,
+              "name": "P260.덤프솔져워리어",
+              "level": 251
+            },
+            {
+              "id": 250,
+              "name": "P270.덤프솔져워리어",
+              "level": 252
+            },
+            {
+              "id": 350,
+              "name": "P280.덤프솔져워리어",
+              "level": 253
+            },
+            {
+              "id": 450,
+              "name": "P290.덤프솔져워리어",
+              "level": 254
+            },
+            {
+              "id": 550,
+              "name": "P300.덤프솔져워리어",
+              "level": 255
+            },
+            {
+              "id": 650,
+              "name": "PB.덤프솔져워리어",
+              "level": 265
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "name": "P191.고쿤",
+          "markers": 52,
+          "usable_markers": 52,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 52,
+              "name": "P191.고쿤",
+              "level": 236
+            },
+            {
+              "id": 252,
+              "name": "P192.고쿤",
+              "level": 237
+            },
+            {
+              "id": 352,
+              "name": "P193.고쿤",
+              "level": 238
+            },
+            {
+              "id": 452,
+              "name": "P194.고쿤",
+              "level": 239
+            },
+            {
+              "id": 552,
+              "name": "P195.고쿤",
+              "level": 240
+            },
+            {
+              "id": 652,
+              "name": "PB.고쿤",
+              "level": 250
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        31,
+        33
+      ],
+      "outgoing": [
+        31,
+        33
+      ]
+    },
+    {
+      "id": 33,
+      "name": "다크홀",
+      "marker_count": 181,
+      "usable_markers": 179,
+      "types": [
+        {
+          "id": 45,
+          "name": "P310.구울",
+          "markers": 39,
+          "usable_markers": 39,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 45,
+              "name": "P310.구울",
+              "level": 256
+            },
+            {
+              "id": 245,
+              "name": "P320.구울",
+              "level": 257
+            },
+            {
+              "id": 345,
+              "name": "P330.구울",
+              "level": 258
+            },
+            {
+              "id": 445,
+              "name": "P340.구울",
+              "level": 259
+            },
+            {
+              "id": 545,
+              "name": "P350.구울",
+              "level": 260
+            },
+            {
+              "id": 645,
+              "name": "PB.구울",
+              "level": 290
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "name": "P260.덤프솔져워리어",
+          "markers": 33,
+          "usable_markers": 33,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 50,
+              "name": "P260.덤프솔져워리어",
+              "level": 251
+            },
+            {
+              "id": 250,
+              "name": "P270.덤프솔져워리어",
+              "level": 252
+            },
+            {
+              "id": 350,
+              "name": "P280.덤프솔져워리어",
+              "level": 253
+            },
+            {
+              "id": 450,
+              "name": "P290.덤프솔져워리어",
+              "level": 254
+            },
+            {
+              "id": 550,
+              "name": "P300.덤프솔져워리어",
+              "level": 255
+            },
+            {
+              "id": 650,
+              "name": "PB.덤프솔져워리어",
+              "level": 265
+            }
+          ]
+        },
+        {
+          "id": 51,
+          "name": "P360.가스트",
+          "markers": 109,
+          "usable_markers": 107,
+          "blocked_markers": 2,
+          "possible_variants": [
+            {
+              "id": 51,
+              "name": "P360.가스트",
+              "level": 261
+            },
+            {
+              "id": 251,
+              "name": "P370.가스트",
+              "level": 262
+            },
+            {
+              "id": 351,
+              "name": "P380.가스트",
+              "level": 263
+            },
+            {
+              "id": 451,
+              "name": "P390.가스트",
+              "level": 264
+            },
+            {
+              "id": 551,
+              "name": "P400.가스트",
+              "level": 265
+            },
+            {
+              "id": 651,
+              "name": "PB.가스트",
+              "level": 275
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        23,
+        32
+      ],
+      "outgoing": [
+        23,
+        32
+      ]
+    },
+    {
+      "id": 40,
+      "name": "질스",
+      "marker_count": 45,
+      "usable_markers": 44,
+      "types": [
+        {
+          "id": 42,
+          "name": "L260.어스엘리멘탈",
+          "markers": 45,
+          "usable_markers": 44,
+          "blocked_markers": 1,
+          "possible_variants": [
+            {
+              "id": 42,
+              "name": "L260.어스엘리멘탈",
+              "level": 191
+            },
+            {
+              "id": 242,
+              "name": "L270.어스엘리멘탈",
+              "level": 192
+            },
+            {
+              "id": 342,
+              "name": "L280.어스엘리멘탈",
+              "level": 193
+            },
+            {
+              "id": 442,
+              "name": "L290.어스엘리멘탈",
+              "level": 194
+            },
+            {
+              "id": 542,
+              "name": "L300.어스엘리멘탈",
+              "level": 195
+            },
+            {
+              "id": 642,
+              "name": "B.어스엘리멘탈",
+              "level": 205
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        22
+      ],
+      "outgoing": [
+        22
+      ]
+    },
+    {
+      "id": 1001,
+      "name": "지하던전1",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "id": 1002,
+      "name": "지하던전2",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "id": 1003,
+      "name": "네카던전",
+      "marker_count": 482,
+      "usable_markers": 482,
+      "types": [
+        {
+          "id": 31,
+          "name": "D152.그레이트뱃",
+          "markers": 182,
+          "usable_markers": 182,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 31,
+              "name": "D152.그레이트뱃",
+              "level": 196
+            },
+            {
+              "id": 231,
+              "name": "D154.그레이트뱃",
+              "level": 197
+            },
+            {
+              "id": 331,
+              "name": "D156.그레이트뱃",
+              "level": 198
+            },
+            {
+              "id": 431,
+              "name": "D158.그레이트뱃",
+              "level": 199
+            },
+            {
+              "id": 531,
+              "name": "D160.그레이트뱃",
+              "level": 200
+            },
+            {
+              "id": 631,
+              "name": "DB.그레이트뱃",
+              "level": 210
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "D162.가고일",
+          "markers": 159,
+          "usable_markers": 159,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 32,
+              "name": "D162.가고일",
+              "level": 201
+            },
+            {
+              "id": 232,
+              "name": "D164.가고일",
+              "level": 202
+            },
+            {
+              "id": 332,
+              "name": "D166.가고일",
+              "level": 203
+            },
+            {
+              "id": 432,
+              "name": "D168.가고일",
+              "level": 204
+            },
+            {
+              "id": 532,
+              "name": "D170.가고일",
+              "level": 205
+            },
+            {
+              "id": 632,
+              "name": "DB.가고일",
+              "level": 220
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "D182.리치",
+          "markers": 108,
+          "usable_markers": 108,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 41,
+              "name": "D182.리치",
+              "level": 226
+            },
+            {
+              "id": 241,
+              "name": "D184.리치",
+              "level": 227
+            },
+            {
+              "id": 341,
+              "name": "D186.리치",
+              "level": 228
+            },
+            {
+              "id": 441,
+              "name": "D188.리치",
+              "level": 229
+            },
+            {
+              "id": 541,
+              "name": "D190.리치",
+              "level": 230
+            },
+            {
+              "id": 641,
+              "name": "DB.리치",
+              "level": 230
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "name": "D172.벤쉬",
+          "markers": 33,
+          "usable_markers": 33,
+          "blocked_markers": 0,
+          "possible_variants": [
+            {
+              "id": 43,
+              "name": "D172.벤쉬",
+              "level": 221
+            },
+            {
+              "id": 243,
+              "name": "D174.벤쉬",
+              "level": 222
+            },
+            {
+              "id": 343,
+              "name": "D176.벤쉬",
+              "level": 223
+            },
+            {
+              "id": 443,
+              "name": "D178.벤쉬",
+              "level": 224
+            },
+            {
+              "id": 543,
+              "name": "D180.벤쉬",
+              "level": 225
+            },
+            {
+              "id": 643,
+              "name": "DB.벤쉬",
+              "level": 235
+            }
+          ]
+        }
+      ],
+      "incoming": [
+        8,
+        15
+      ],
+      "outgoing": [
+        8,
+        15
+      ]
+    },
+    {
+      "id": 1004,
+      "name": "네카던전",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "id": 1005,
+      "name": "배틀존",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [],
+      "outgoing": []
+    },
+    {
+      "id": 1006,
+      "name": "배틀존",
+      "marker_count": 0,
+      "usable_markers": 0,
+      "types": [],
+      "incoming": [],
+      "outgoing": []
+    }
+  ],
+  "empty_ids": [
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    1001,
+    1002,
+    1004,
+    1005,
+    1006
+  ],
+  "portals": [
+    [
+      3,
+      416,
+      420,
+      4,
+      68,
+      76,
+      0
+    ],
+    [
+      4,
+      68,
+      76,
+      3,
+      416,
+      420,
+      0
+    ],
+    [
+      4,
+      439,
+      199,
+      5,
+      62,
+      176,
+      0
+    ],
+    [
+      5,
+      62,
+      176,
+      4,
+      439,
+      199,
+      0
+    ],
+    [
+      5,
+      421,
+      65,
+      6,
+      60,
+      332,
+      0
+    ],
+    [
+      6,
+      60,
+      332,
+      5,
+      421,
+      65,
+      0
+    ],
+    [
+      6,
+      400,
+      440,
+      7,
+      260,
+      58,
+      0
+    ],
+    [
+      7,
+      260,
+      58,
+      6,
+      400,
+      440,
+      0
+    ],
+    [
+      7,
+      420,
+      416,
+      8,
+      270,
+      67,
+      0
+    ],
+    [
+      8,
+      270,
+      67,
+      7,
+      420,
+      416,
+      0
+    ],
+    [
+      8,
+      302,
+      422,
+      9,
+      246,
+      74,
+      0
+    ],
+    [
+      8,
+      402,
+      230,
+      1003,
+      88,
+      444,
+      1
+    ],
+    [
+      1003,
+      88,
+      444,
+      8,
+      402,
+      230,
+      0
+    ],
+    [
+      9,
+      120,
+      420,
+      10,
+      382,
+      114,
+      0
+    ],
+    [
+      9,
+      246,
+      74,
+      8,
+      302,
+      422,
+      0
+    ],
+    [
+      10,
+      382,
+      114,
+      9,
+      120,
+      420,
+      0
+    ],
+    [
+      10,
+      203,
+      366,
+      11,
+      320,
+      40,
+      0
+    ],
+    [
+      11,
+      320,
+      40,
+      10,
+      203,
+      366,
+      0
+    ],
+    [
+      11,
+      102,
+      424,
+      12,
+      76,
+      64,
+      0
+    ],
+    [
+      12,
+      76,
+      64,
+      11,
+      102,
+      424,
+      0
+    ],
+    [
+      12,
+      360,
+      304,
+      13,
+      132,
+      112,
+      0
+    ],
+    [
+      13,
+      132,
+      112,
+      12,
+      360,
+      304,
+      0
+    ],
+    [
+      13,
+      416,
+      280,
+      14,
+      60,
+      265,
+      0
+    ],
+    [
+      14,
+      60,
+      265,
+      13,
+      416,
+      280,
+      0
+    ],
+    [
+      15,
+      432,
+      428,
+      1003,
+      408,
+      260,
+      1
+    ],
+    [
+      1003,
+      408,
+      260,
+      15,
+      432,
+      428,
+      0
+    ],
+    [
+      15,
+      100,
+      50,
+      16,
+      370,
+      430,
+      0
+    ],
+    [
+      16,
+      370,
+      430,
+      15,
+      100,
+      50,
+      0
+    ],
+    [
+      16,
+      128,
+      102,
+      17,
+      428,
+      168,
+      0
+    ],
+    [
+      17,
+      428,
+      168,
+      16,
+      128,
+      102,
+      0
+    ],
+    [
+      20,
+      100,
+      150,
+      3,
+      416,
+      420,
+      0
+    ],
+    [
+      31,
+      76,
+      60,
+      20,
+      100,
+      60,
+      0
+    ],
+    [
+      31,
+      246,
+      440,
+      32,
+      336,
+      72,
+      0
+    ],
+    [
+      32,
+      244,
+      424,
+      33,
+      384,
+      144,
+      0
+    ],
+    [
+      32,
+      336,
+      72,
+      31,
+      246,
+      440,
+      0
+    ],
+    [
+      33,
+      384,
+      144,
+      32,
+      244,
+      424,
+      0
+    ],
+    [
+      22,
+      108,
+      422,
+      3,
+      423,
+      65,
+      0
+    ],
+    [
+      3,
+      423,
+      65,
+      22,
+      108,
+      422,
+      0
+    ],
+    [
+      22,
+      353,
+      77,
+      40,
+      250,
+      455,
+      0
+    ],
+    [
+      40,
+      250,
+      455,
+      22,
+      353,
+      77,
+      0
+    ],
+    [
+      33,
+      96,
+      411,
+      23,
+      112,
+      67,
+      0
+    ],
+    [
+      23,
+      112,
+      67,
+      33,
+      96,
+      411,
+      0
+    ]
+  ],
+  "source_sha256": {
+    "land0003.map": "6f8478be2fd424dcd4df126f0275f43c28dc56910199e90ad00822d28848d3a0",
+    "land0004.map": "80ed2bc5291674ae26bdaee5f1c8b86cba767cfa7b815b8da4bac8ae265f5691",
+    "land0005.map": "adab035320013d28b410771d0428132733605fd5aa0df1e5d0690dfb6b6187bc",
+    "land0006.map": "efb24440daddf0a06ad843243241561923447d82a9fa2d99ac89d1d9ee5021e3",
+    "land0007.map": "9db0a8514a2f6900e2991031f3bfd356bd03a62fc406ff81faee6331d1460501",
+    "land0008.map": "cd3b78e52a9849ef08ea93dea3c39d046cc86296d69bcb5f8dcada3ce1abcb9e",
+    "land0009.map": "0335f87f9fdd44ef0ffba557848f46ebf3108201b160763962c16aa13be7e615",
+    "land0010.map": "8eaf931abb9dacfcf92e31b3b07df9b36200924c59b0aa288701ba8780efd212",
+    "land0011.map": "84a9a6dbf4c48d19678cf778ddea4c1f32015c3eb5e88f2c33f4047b89df1412",
+    "land0012.map": "520b8ce351a0600ac609e1ae7d63f1fc7f5590d33c2cb5c854a213ff56ad2795",
+    "land0013.map": "be9447f7ea0ec8cec14c59b6861ec2f2ba0168f1fb984d5b7933db01fc2a6f7e",
+    "land0014.map": "91f120b77f4302ee46f41faaa1f6707e4c219264bb660b9ef65701923ed8332b",
+    "land0015.map": "cf4ae978faca1a4864977965fe148261ee47679787e7ebd46d2e6327bcee5b63",
+    "land0016.map": "7e3d823297e9f4da73296c05ce284b4b71efce6fd5ebcc10dfd22de7eea9c761",
+    "land0017.map": "e9740a2a5dab7a4ecf301f54889a66bdb2a32ac601a3ab7be8a006161a232759",
+    "land0020.map": "4882b5f4a26ddd88d6deb8be1a903d94ddac7f698a350828f41f265e6115c0b4",
+    "land0021.map": "b800d001ab1607cc8529c11ed4bef8daf090c2be6bfa6453cb8e3771020ba320",
+    "land0022.map": "9a3f75c4ca618f9268b934b0714bd82dc5220369fee655ab4d31c5872a663b97",
+    "land0023.map": "ad8428d0ea0a24f0d9f0e3910106bff4b98c24cc6f861a279e1818ad3b5bb7a8",
+    "land0024.map": "af5f281bdc944f37ab777d5ea4ef952e5a4ce6be334d49a599ae587049fe0050",
+    "land0025.map": "fc88d9b8eb85cb2e6dfacf2bdd1c521eea9f93b112845d3c9cb326dfcbf8b651",
+    "land0026.map": "9b5189b491627bc1b9c5f6944ee3aacae9fe4c774e1c2af820a811196fba4b23",
+    "land0031.map": "33f9fe8a5b3de7c7cedba95e7f7eff244568ba0760a6ddabddc29c54df087365",
+    "land0032.map": "994628ed57d7af51fbe69a0520d7d23ee2e9f7eda979a32e62509f1a7c8ad787",
+    "land0033.map": "a8e958812c0ed7c682cc043962abf9de60ab315cf833fbbb92acafdbbe2342b3",
+    "land0040.map": "1181ba57de4b11c92c46240faa948532f60bf4f6883dac21cc44dcd22a1e3fc3",
+    "land1001.map": "69e4f8d68a9dbee3238024201356cd0386e03da0f23109f7c000325cc2015d7d",
+    "land1002.map": "a57bcb7c5e545added349b5b67c17d928af86f43cfb4ae2d28ec673d61e9c924",
+    "land1003.map": "ed0dd16be658251fc4fc58d480a262c210e7e5ca59b3986b37957a0253bfb6c9",
+    "land1004.map": "1b9c373d7e702c340b9696a8f066712391c0a8cb82aa0ef9b0c8bb398f4e4b40",
+    "land1005.map": "9420be7bde3f70d985f6aedbfb40b2ca115d9add498c8d53d52400862695fbad",
+    "land1006.map": "9420be7bde3f70d985f6aedbfb40b2ca115d9add498c8d53d52400862695fbad",
+    "map_list.txt": "78ccf3e71f4dfd2c9c5f1443dcf116a3c673840a5d7a03dd74bb0d90a4d9ccf1",
+    "map_name.txt": "99db38e9240512204d52a5c03a17b5b4fad761dca48496be1402c2597edb6e17",
+    "loadingpoint.txt": "8cbafd480ab1d16a8462d15a1f34613bc228fe5e7d3bf60abddb4cd689f0c577"
+  },
+  "method": "Native MAP entities + layer-0 collision + MOB_DATA definitions; no map mutation.",
+  "notes": [
+    "Markers are spawn locations, not the instantaneous live monster population.",
+    "Event bosses 101/102/103 use existing reset points on maps 11/12/10.",
+    "A map number alone does not establish which map precedes it."
+  ]
+}

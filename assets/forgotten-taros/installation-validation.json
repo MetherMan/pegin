@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "installation": "existing outputs/work installation",
+  "manifest_version": "2026-09-22-hell-horse-forgotten-taros",
+  "client_files": 155,
+  "server_sha256": "3c2636a65cdcb33c29079fd914c91e33e25b78c3de4f0cb059e344ee33dd4342",
+  "native_crt_map_names": 3,
+  "all_installed_payload_hashes_match": true,
+  "game_window_visual_check": false
+}

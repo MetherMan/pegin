@@ -82,7 +82,7 @@ static void gmUsage(sPDESC_DATA p,GMKind k){
  case GM_CASH:SendSystemMsg(p,"사용법: /재뽕 캐시 수량 [캐릭터이름] (1~20억 지급)");SendSystemMsg(p,"예시: /재뽕 캐시 9999999 (이름 생략=자신)");break;
  case GM_LEVEL:SendSystemMsg(p,"사용법: /재뽕 레벨 [계열] 값 [이름] (각 0~200)");SendSystemMsg(p,"계열: 근거리(근접) / 원거리 / 흑마법 / 백마법 / 전체");SendSystemMsg(p,"예시: /재뽕 레벨 근거리 100 아버지");SendSystemMsg(p,"/재뽕 레벨 100 = 대상이 현재 사용하는 계열만 100");SendSystemMsg(p,"/재뽕 레벨 전체 200 = 네 계열 각각 200, 총레벨 800");break;
  case GM_CARD:SendSystemMsg(p,"사용법: /재뽕 카드 종류 수량 [이름] (1~1000장)");SendSystemMsg(p,"종류: 1=무기, 2=방어구. 예시: /재뽕 카드 1 20 아버지");break;
- case GM_HORSE:SendSystemMsg(p,"사용법: /재뽕 말 [종류] [이름] (소유증서 1개)");SendSystemMsg(p,"1=갈색, 2=흑마, 3=백마. 예시: /재뽕 말 2 아버지");break;
+ case GM_HORSE:SendSystemMsg(p,"사용법: /재뽕 말 [종류] [이름] (소유증서 1개)");SendSystemMsg(p,"1=갈색, 2=흑마, 3=백마, 4=지옥마. 예시: /재뽕 말 2 아버지");break;
  case GM_ITEM:SendSystemMsg(p,"사용법: /재뽕 아이템 아이템번호 수량 [이름]");SendSystemMsg(p,"예시: /재뽕 아이템 10193 10 아버지");break;
  case GM_INFO:SendSystemMsg(p,"사용법: /재뽕 정보 [이름]. 예시: /재뽕 정보 아버지");break;
  case GM_HEAL:SendSystemMsg(p,"사용법: /재뽕 회복 [이름]. 예시: /재뽕 회복 아버지");break;
@@ -169,7 +169,7 @@ static void gmCash(sPDESC_DATA actor,sPDESC_DATA p,int amount){
  log_file((char*)"gm_commands.log",(char*)"CASH actor=%s target=%s amount=%d balance=%d\n",GET_ID(actor),GET_NAME(p),amount,GET_CASHMONEY(p));
 }
 static void gmGrant(sPDESC_DATA actor,sPDESC_DATA p,const GMRequest& r){
- int item=r.kind==GM_CARD?(r.subtype==1?dENCHANT_CARD_WEAPON:dENCHANT_CARD_ARMOR):(r.kind==GM_HORSE?10187+r.subtype:r.subtype);
+ int item=r.kind==GM_CARD?(r.subtype==1?dENCHANT_CARD_WEAPON:dENCHANT_CARD_ARMOR):(r.kind==GM_HORSE?(r.subtype==4?dRIDE_ITEM4:10187+r.subtype):r.subtype);
  if(item>=dMAX_ITEMINFO||!IS_VALID_ITEM(item)){SendSystemMsg(actor,"[GM 오류] 존재하지 않는 아이템 번호입니다.");gmUsage(actor,r.kind);return;}
  int empty=CountEmptyInven(p),limit=LaqiaStackLimit(GET_ITEM_TYPE2(item),item),capacity=empty*limit;
  if(limit>1)for(sPITEM_DATA existing=p->inven;existing;existing=existing->i_next)

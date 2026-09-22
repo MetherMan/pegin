@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "preview_url": "http://127.0.0.1:8877/assets/primordial-baphomet/",
+  "visual_checks": [
+    "original and new model at the same camera scale",
+    "1.4x size comparison with visible labels",
+    "idle, walk, run and attack animations",
+    "front and back texture mapping",
+    "blood markings and red blade tip"
+  ],
+  "browser_console_errors": [],
+  "native_game_window_visual_test": false,
+  "native_resource_validation": "validation.json",
+  "running_server_validation": "live-validation.json"
+}

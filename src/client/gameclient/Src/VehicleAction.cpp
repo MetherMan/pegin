@@ -460,7 +460,7 @@ WORD CVehicleAction::GetVehicleType( WORD wId )
 	case 0:	case 1:	case 2:	case 3:
 		return 1;
 	case 4:
-		return 2;
+		return 1;
 	} //switch
 
 	return 1;

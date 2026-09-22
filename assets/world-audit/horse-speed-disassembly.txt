@@ -1,0 +1,46 @@
+Dump of assembler code for function _Z12GetRideSpeedP15descriptor_data:
+   0x0806afbc <+0>:	push   %ebp
+   0x0806afbd <+1>:	mov    %esp,%ebp
+   0x0806afbf <+3>:	sub    $0x10,%esp
+   0x0806afc2 <+6>:	movb   $0x28,-0x1(%ebp)
+   0x0806afc6 <+10>:	mov    0x8(%ebp),%eax
+   0x0806afc9 <+13>:	movzwl 0x3233e(%eax),%eax
+   0x0806afd0 <+20>:	test   %ax,%ax
+   0x0806afd3 <+23>:	je     0x806afe3 <_Z12GetRideSpeedP15descriptor_data+39>
+   0x0806afd5 <+25>:	mov    0x8(%ebp),%eax
+   0x0806afd8 <+28>:	movzbl 0x32340(%eax),%eax
+   0x0806afdf <+35>:	test   %al,%al
+   0x0806afe1 <+37>:	jne    0x806afe9 <_Z12GetRideSpeedP15descriptor_data+45>
+   0x0806afe3 <+39>:	movb   $0x28,-0x1(%ebp)
+   0x0806afe7 <+43>:	jmp    0x806b01d <_Z12GetRideSpeedP15descriptor_data+97>
+   0x0806afe9 <+45>:	mov    0x8(%ebp),%eax
+   0x0806afec <+48>:	movzwl 0x3233e(%eax),%eax
+   0x0806aff3 <+55>:	movzwl %ax,%eax
+   0x0806aff6 <+58>:	cmp    $0x3,%eax
+   0x0806aff9 <+61>:	je     0x806b018 <_Z12GetRideSpeedP15descriptor_data+92>
+   0x0806affb <+63>:	cmp    $0x3,%eax
+   0x0806affe <+66>:	jg     0x806b01d <_Z12GetRideSpeedP15descriptor_data+97>
+   0x0806b000 <+68>:	cmp    $0x1,%eax
+   0x0806b003 <+71>:	je     0x806b00c <_Z12GetRideSpeedP15descriptor_data+80>
+   0x0806b005 <+73>:	cmp    $0x2,%eax
+   0x0806b008 <+76>:	je     0x806b012 <_Z12GetRideSpeedP15descriptor_data+86>
+   0x0806b00a <+78>:	jmp    0x806b01d <_Z12GetRideSpeedP15descriptor_data+97>
+   0x0806b00c <+80>:	movb   $0x46,-0x1(%ebp)
+   0x0806b010 <+84>:	jmp    0x806b01d <_Z12GetRideSpeedP15descriptor_data+97>
+   0x0806b012 <+86>:	movb   $0x4b,-0x1(%ebp)
+   0x0806b016 <+90>:	jmp    0x806b01d <_Z12GetRideSpeedP15descriptor_data+97>
+   0x0806b018 <+92>:	movb   $0x50,-0x1(%ebp)
+   0x0806b01c <+96>:	nop
+   0x0806b01d <+97>:	mov    0x8(%ebp),%eax
+   0x0806b020 <+100>:	movzwl 0x3233e(%eax),%eax
+   0x0806b027 <+107>:	test   %ax,%ax
+   0x0806b02a <+110>:	jne    0x806b03d <_Z12GetRideSpeedP15descriptor_data+129>
+   0x0806b02c <+112>:	mov    0x8(%ebp),%eax
+   0x0806b02f <+115>:	mov    0x3242c(%eax),%eax
+   0x0806b035 <+121>:	test   %eax,%eax
+   0x0806b037 <+123>:	je     0x806b03d <_Z12GetRideSpeedP15descriptor_data+129>
+   0x0806b039 <+125>:	addb   $0xf,-0x1(%ebp)
+   0x0806b03d <+129>:	movzbl -0x1(%ebp),%eax
+   0x0806b041 <+133>:	leave
+   0x0806b042 <+134>:	ret
+End of assembler dump.
