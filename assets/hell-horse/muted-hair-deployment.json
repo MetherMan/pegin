@@ -1,0 +1,17 @@
+{
+  "version": "2026-09-22-hell-horse-muted-hair-speed100",
+  "texture_size": [
+    1024,
+    1024
+  ],
+  "native_wtm_pixels_match": true,
+  "only_changed_client_payload": [
+    "client-overlay/Texture/Vehicle/mt_hellhorse.wtm"
+  ],
+  "model_animation_motion_icons_unchanged": true,
+  "speed": 100,
+  "server_sha256": "a6eec1ea244e16924de4364b9ccd904e566eefc7564fc2013648915f1b0fd9d3",
+  "native_speed_validation": "speed100-validation.json",
+  "three_dimensional_preview_inspected": true,
+  "actual_game_installation_tested": false
+}

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-22-hell-horse-icon-correction",
+  "version": "2026-09-22-hell-horse-muted-hair-speed100",
   "files": [
     {
       "kind": "client",
@@ -1008,8 +1008,8 @@
       "kind": "client",
       "path": "Texture/Vehicle/mt_hellhorse.wtm",
       "source": "client-overlay/Texture/Vehicle/mt_hellhorse.wtm",
-      "bytes": 2050487,
-      "sha256": "d69a12f68dbcdd3e224f35ad692e88043102fa1a1c072b8fa5cc461b905b7732"
+      "bytes": 2014036,
+      "sha256": "765f129412068ba350fd08bf30af85135265edb5f9a6167064a09e7c45baefc0"
     },
     {
       "kind": "client",
@@ -1562,7 +1562,7 @@
       "path": "LAQIA_GameServer",
       "source": "server-bin/LAQIA_GameServer",
       "bytes": 1812060,
-      "sha256": "3c2636a65cdcb33c29079fd914c91e33e25b78c3de4f0cb059e344ee33dd4342"
+      "sha256": "a6eec1ea244e16924de4364b9ccd904e566eefc7564fc2013648915f1b0fd9d3"
     },
     {
       "kind": "updater",
