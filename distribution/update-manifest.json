@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-22-hell-horse-muted-hair-speed100",
+  "version": "2026-09-22-updater-whpx-tcg-repair",
   "files": [
     {
       "kind": "client",
@@ -1568,8 +1568,31 @@
       "kind": "updater",
       "path": "update/father_update.py",
       "source": "distribution/father_update.py",
-      "bytes": 13024,
-      "sha256": "ffc21f44f243c02addd0f3c23a614a6ed0f2066544041d45a2deafbc76233157"
+      "bytes": 15609,
+      "sha256": "c2399beeb6e827e7b16a1a86fec02413f98a06a0f49d9a030236469533ef3840"
+    }
+  ],
+  "runtime_files": [
+    {
+      "kind": "runtime",
+      "path": "local_control.py",
+      "source": "tools/runtime/local_control.py",
+      "bytes": 7387,
+      "sha256": "80b034e5a01ea41e6894162aa3307a9aeba145d608192fda4839723d62c45ac7"
+    },
+    {
+      "kind": "runtime",
+      "path": "ssh_vm.py",
+      "source": "tools/runtime/ssh_vm.py",
+      "bytes": 1409,
+      "sha256": "7cf012b12a1d99913d5d9e3d6bf06dc66067e88437ae4bb68e4273455a4bbd61"
+    },
+    {
+      "kind": "runtime",
+      "path": "start_vm.py",
+      "source": "tools/runtime/start_vm.py",
+      "bytes": 2523,
+      "sha256": "d7ba582c442b8bd0e136745fdc44b9648fc92deddd5db843eff3971e1caf0741"
     }
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "accel": "tcg,thread=multi",
+  "disk_attached": false,
+  "game_vm_touched": false,
+  "qmp_status": {
+    "status": "prelaunch",
+    "running": false
+  },
+  "exit_code": 0,
+  "startup_tests": 8,
+  "updater_tests": 10,
+  "reported_error": "WHPX: No accelerator found; failed to initialize whpx",
+  "actual_father_installation_tested": false
+}

@@ -21,7 +21,12 @@ def main():
     for kind,path,source in [('server','LAQIA_GameServer','server-bin/LAQIA_GameServer'),('updater','update/father_update.py','distribution/father_update.py')]:
         p=ROOT/source
         files.append(dict(kind=kind,path=path,source=source,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
-    manifest=dict(format=1,repository='MetherMan/pegin',version=args.version,files=files)
+    runtime_files=[]
+    for name in ['local_control.py','ssh_vm.py','start_vm.py']:
+        p=ROOT/'tools/runtime'/name
+        runtime_files.append(dict(kind='runtime',path=name,source=p.relative_to(ROOT).as_posix(),
+                                  bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
+    manifest=dict(format=1,repository='MetherMan/pegin',version=args.version,files=files,runtime_files=runtime_files)
     (ROOT/'distribution/update-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     if args.manifest_only:
         print(json.dumps(dict(version=args.version,manifest_files=len(files))))
@@ -45,7 +50,11 @@ if errorlevel 1 (
 )
 pause
 '''.replace('\n','\r\n').encode('utf-8')
-    note='''[처음 한 번만 따라 하세요]
+    note='''[VM did not become ready 오류가 난 경우 / 처음 설치]
+
+복구용 수정본입니다. 기존 자동업데이트는 서버가 켜져야 자신을 갱신하므로,
+이 오류가 난 PC에는 아래 두 항목을 한 번 직접 덮어써야 합니다.
+게임과 업데이트 창을 닫고 복사하세요. VM 디스크·계정·저장 데이터는 교체하지 않습니다.
 
 1. 게임을 끕니다.
 
@@ -79,6 +88,7 @@ pause
 게임을 끈 뒤 '자동업데이트.cmd'만 더블클릭하면 됩니다.
 인터넷에 연결되어 있어야 합니다. 계정·캐릭터·장비는 그대로 유지됩니다.
 '업데이트 중단'이 나오면 창의 내용을 아들에게 알려 주세요.
+서버 준비가 계속 실패하면 work/laqia-runtime/vm-start-diagnostic.txt를 함께 확인해 주세요.
 '''
     with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as z:
         z.writestr('라키아/자동업데이트.cmd',cmd)

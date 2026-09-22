@@ -9,9 +9,14 @@ def connect():
     known=ROOT/'vm-known-hosts'
     if known.exists(): c.load_host_keys(str(known))
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    c.connect('127.0.0.1',port=22222,username='root',key_filename=str(ROOT/'vm-ssh-key'),timeout=8,allow_agent=False,look_for_keys=False)
-    c.save_host_keys(str(known))
-    return c
+    try:
+        c.connect('127.0.0.1',port=22222,username='root',key_filename=str(ROOT/'vm-ssh-key'),
+                  timeout=8,banner_timeout=8,auth_timeout=8,allow_agent=False,look_for_keys=False)
+        c.save_host_keys(str(known))
+        return c
+    except BaseException:
+        c.close()
+        raise
 
 if __name__=='__main__':
     with connect() as c:

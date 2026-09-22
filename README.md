@@ -12,6 +12,12 @@
 
 `distribution/father_update.py`는 공개 GitHub의 manifest에 있는 게임 파일과 정적 서버 데이터만 교체합니다. 계정, 비밀번호, 캐릭터 DB, VM 디스크, 개인 설정은 교체하지 않습니다. 커밋·푸시하지 않은 로컬 변경은 아버지 PC로 배포되지 않습니다.
 
+## VM 시작 오류 복구
+
+`WHPX: No accelerator found` / `failed to initialize whpx` 뒤에 `VM did not become ready`가 나타났다면, [복구 업데이트 ZIP](distribution/father-updater-repair.zip)을 받아 압축을 푼다. 안의 `라키아` 폴더에서 `자동업데이트.cmd`와 `update` 폴더를 기존 설치본의 `outputs`·`work`가 보이는 위치에 한 번 덮어쓰고 실행한다. 기존 업데이트는 VM이 켜진 뒤에야 자기 코드를 교체하므로, 이미 이 오류가 난 PC는 단순 재실행만으로 복구 코드를 받을 수 없다.
+
+수정본은 해시 검증된 업데이트 프로그램과 시작 도구 3개를 VM 시작 전에 적용한다. WHPX 실패 기록이 있으면 TCG로 시작하며, 기본 실행도 QEMU 자체의 WHPX→TCG 전환을 사용한다([공식 QEMU 문서](https://www.qemu.org/docs/master/system/invocation.html)). 이미 부팅 중인 VM은 중복 실행하지 않고 최대 6분 기다린다. Windows 기능·VM 디스크·키·계정 DB는 바꾸지 않는다. 계속 실패하면 `work/laqia-runtime/vm-start-diagnostic.txt`에 마지막 연결 오류와 부팅 로그가 남는다. TCG는 하드웨어 가속보다 느릴 수 있다.
+
 ## 개발 변경을 실제 플레이 설치본에 적용
 
 게임 종료 후 manifest를 재생성하고, 저장소 루트에서 다음 명령을 실행합니다. `<기존 설치 폴더>`는 `outputs`와 `work`가 함께 있는 폴더입니다.

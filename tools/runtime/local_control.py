@@ -11,40 +11,66 @@ def command(c,cmd):
     error=err.read().decode(errors='replace')
     if out.channel.recv_exit_status(): raise RuntimeError(error or result)
     return result
-def online():
+def vm_status():
     try:
         with connect() as c:
-            command(c,'test -f /root/laqia-server-prepared')
-        return True
-    except Exception: return False
+            command(c,"test -f /root/laqia-server-prepared || { echo 'VM SSH connected, but the existing server preparation marker is missing.'; exit 1; }")
+        return True, ''
+    except Exception as error:
+        return False, type(error).__name__ + ': ' + str(error)
+
+def online():
+    return vm_status()[0]
+
+def boot_diagnostic(reason):
+    parts=['VM 준비 확인 실패: '+reason]
+    for name in ('server-start.log','vm-stderr.log','vm-console.log'):
+        path=ROOT/name
+        try:
+            with path.open('rb') as stream:
+                stream.seek(max(0,path.stat().st_size-6000))
+                tail=stream.read().decode('utf-8',errors='replace')
+            tail=re.sub(r'\x1b\[[0-?]*[ -/]*[@-~]','',tail).strip()
+            if tail:parts.append('['+name+']\n'+tail)
+        except OSError:pass
+    report='\n\n'.join(parts)
+    target=ROOT/'vm-start-diagnostic.txt'
+    try:target.write_text(report+'\n',encoding='utf-8')
+    except OSError:pass
+    return ('게임 서버가 준비되지 않았습니다. 게임 파일과 DB는 아직 변경하지 않았습니다.\n'
+            '마지막 확인: '+reason+'\n진단 파일: '+str(target)+'\n'+report[-2400:])
+
+def wait_for_vm(timeout=360):
+    start_time=time.monotonic();deadline=start_time+timeout;notice=start_time
+    reason='VM boot is still in progress'
+    while time.monotonic()<deadline:
+        ready,reason=vm_status()
+        if ready:return
+        now=time.monotonic()
+        if now>=notice:
+            print('서버 부팅 확인 중... '+str(int(now-start_time))+'초 / '+str(timeout)+'초',flush=True)
+            notice=now+15
+        if now<deadline:time.sleep(min(2,deadline-now))
+    raise RuntimeError(boot_diagnostic(reason))
 def port_open(port):
     try:
         with socket.create_connection(('127.0.0.1',port),timeout=.5):return True
     except OSError:return False
 def start():
     preflight(client=False)
-    print('Starting local server. First boot can take a minute...', flush=True)
+    print('기존 게임 서버를 준비합니다. 느린 PC는 최대 6분 정도 걸릴 수 있습니다.', flush=True)
     if not online():
-        if port_open(44444):
-            raise RuntimeError('서버가 아직 시작하거나 종료하는 중입니다. 잠시 뒤 다시 눌러 주세요.')
-        # If our SSH port already exists, never launch another VM against the same disk.
-        try:
-            with socket.create_connection(('127.0.0.1',22222),timeout=1):
-                raise RuntimeError('SSH is present but not ready. Retry shortly; no second VM was started.')
-        except (ConnectionRefusedError, socket.timeout): pass
-        # pythonw is used by the desktop supervisor; start_vm reports errors through
-        # its exit code and VM log, so no console window is needed.
-        boot_log=ROOT/'server-start.log'
-        with boot_log.open('wb') as output:
-            launched=subprocess.run([str(ROOT/'python/python.exe'),str(ROOT/'start_vm.py')],
-                                    stdout=output,stderr=subprocess.STDOUT,creationflags=subprocess.CREATE_NO_WINDOW)
-        if launched.returncode:
-            detail=boot_log.read_text(encoding='utf-8',errors='replace')[-2200:].strip()
-            raise RuntimeError('로컬 서버를 시작하지 못했습니다.\n'+detail)
-        for _ in range(60):
-            if online(): break
-            time.sleep(2)
-        else: raise RuntimeError('VM did not become ready. Check work/laqia-runtime/vm-console.log.')
+        if port_open(44444) or port_open(22222):
+            # A previous timeout may leave the original VM still booting.
+            print('이미 시작 중인 서버를 기다립니다. 두 번째 VM은 실행하지 않습니다.',flush=True)
+        else:
+            boot_log=ROOT/'server-start.log'
+            with boot_log.open('wb') as output:
+                launched=subprocess.run([str(ROOT/'python/python.exe'),str(ROOT/'start_vm.py')],
+                                        stdout=output,stderr=subprocess.STDOUT,creationflags=subprocess.CREATE_NO_WINDOW)
+            if launched.returncode:
+                raise RuntimeError(boot_diagnostic('QEMU 시작 프로그램 종료 코드 '+str(launched.returncode)))
+        wait_for_vm()
     with connect() as c:
         command(c,'systemctl start '+SERVICES)
         print(command(c,'systemctl is-active '+SERVICES))
