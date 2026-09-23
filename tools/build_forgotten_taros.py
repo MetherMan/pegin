@@ -51,6 +51,9 @@ def build(server, client):
     ini = re.sub(r'(?m)^area_warcastle[^\r\n]*[\r\n]*', '', ini)
     (dest / 'land0041.ini').write_bytes(ini.encode('cp949'))
     (dest / 'land0041.mds').write_bytes(b'; Forgotten Taros\r\nWeather: 3\r\nEnd\r\n')
+    # Preserve the separate region's title and permanent-night presentation.
+    from build_hell_horse_taros_details import build_map_presentation
+    build_map_presentation(client)
     # Arrival is outside the trigger cross so one step cannot bounce the player back.
     portals = [(14,448,264,41,443,264,0), (41,448,264,14,443,264,0),
                (41,60,265,14,443,264,0)]

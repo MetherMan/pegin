@@ -3035,7 +3035,7 @@ BYTE GetRideSpeed( sPDESC_DATA pPlayer )
 			speed = 80;
 			break;
 		case dRIDE_TYPE4:
-			speed = 95;
+			speed = 100;
 			break;
 		}
 	}

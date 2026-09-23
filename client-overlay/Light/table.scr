@@ -1,0 +1,8 @@
+[MAP]	1004
+	[ALL]	0
+[/MAP]
+
+; Forgotten Taros: always night
+[MAP]	41
+	[ALL]	23
+[/MAP]

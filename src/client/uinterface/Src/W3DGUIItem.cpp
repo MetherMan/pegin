@@ -1566,7 +1566,7 @@ void CW3DUInterface::SoundItem( SItemData* pItemDat )
 	Assert( m_pSound );
 
 	if( pItemDat->nType == ITEM_MONEY )			m_pSound->Play( "MoneyDrop.wav" );
-	else if( ISHORSE( pItemDat->nType )	)		m_pSound->Play( "HorseWhinney.wav" );
+	else if( ( ISHORSE( pItemDat->nType ) || pItemDat->nType == 19130 ) )		m_pSound->Play( "HorseWhinney.wav" );
 	else
 	{
 		SItemInfoData*	pItemInfo = pItemDat->pItemInfoData;

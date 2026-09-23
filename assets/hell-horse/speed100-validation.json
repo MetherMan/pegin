@@ -1,0 +1,208 @@
+{
+  "speed": 100,
+  "original_horse_speeds": [
+    70,
+    75,
+    80
+  ],
+  "symbol_address": "0x806afbc",
+  "changed_byte_offsets": [
+    143403
+  ],
+  "sha256": "cc0db003c2a10e0947a144375bc1cc6216bf39876307c829733127b8e49246e4",
+  "native_cases": [
+    {
+      "kind": 0,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 0,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 55
+    },
+    {
+      "kind": 0,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 0,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 55
+    },
+    {
+      "kind": 1,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 1,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 1,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 70
+    },
+    {
+      "kind": 1,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 70
+    },
+    {
+      "kind": 2,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 2,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 2,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 75
+    },
+    {
+      "kind": 2,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 75
+    },
+    {
+      "kind": 3,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 3,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 3,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 80
+    },
+    {
+      "kind": 3,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 80
+    },
+    {
+      "kind": 4,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 4,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 4,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 100
+    },
+    {
+      "kind": 4,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 100
+    },
+    {
+      "kind": 5,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 5,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 5,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 5,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 255,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 255,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 255,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 255,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 65535,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 65535,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 65535,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 65535,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 40
+    }
+  ],
+  "actual_game_installation_tested": false
+}

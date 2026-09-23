@@ -1,0 +1,78 @@
+{
+  "original_sha256": "ccda166cd52a804d594bbbc8c850284836244dc01fb3a4374a770b775e0422eb",
+  "original_size": 524288,
+  "sha256": "b39b3f74ff4b0673c0f23867e2cc20dbeae9ab1a11433982f96511bf368064a3",
+  "section_rva": 536576,
+  "undo": [
+    [
+      204242,
+      "8b4e24528b542408"
+    ],
+    [
+      226841,
+      "81e2ff000000"
+    ],
+    [
+      34236,
+      "66837d2e01"
+    ],
+    [
+      872,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0a00"
+    ],
+    [
+      304,
+      "00300800"
+    ],
+    [
+      252,
+      "00e00600"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "map 41 always receives current and next night time",
+      "va": 4398546,
+      "original": "8b4e24528b542408",
+      "replacement": "e929120500909090",
+      "target": 4730880,
+      "resume": 4398554,
+      "assembly": "cmp word ptr [esi+0x28],41; jne unchanged; mov byte ptr [esp+8],23; mov byte ptr [esp+4],23; unchanged: mov ecx,[esi+0x24]; push edx; mov edx,[esp+8]",
+      "code": "66837e2829750ac644240817c6442404178b4e24528b542408e9bcedfaff"
+    },
+    {
+      "label": "map 41 ignores snow and rain changes",
+      "va": 4421145,
+      "original": "81e2ff000000",
+      "replacement": "e902ba040090",
+      "target": 4730912,
+      "resume": 4421151,
+      "assembly": "and edx,0xff; cmp word ptr [esi+0x28],41; jne unchanged; xor edx,edx; unchanged: nop",
+      "code": "81e2ff00000066837e2829750231d290e9ea45fbff"
+    },
+    {
+      "label": "repeat walking hoof sound as well as existing middle-phase sounds",
+      "va": 4228540,
+      "original": "66837d2e01",
+      "replacement": "e97faa0700",
+      "target": 4730944,
+      "resume": 4228545,
+      "assembly": "cmp word ptr [ebp+0x2e],1; je done; cmp word ptr [ebp+0x2e],0; jne done; cmp word ptr [ebp+0x2c],1; done: nop",
+      "code": "66837d2e01740c66837d2e00750566837d2c0190e96855f8ff"
+    }
+  ],
+  "validation": {
+    "time_packet_cases": 72,
+    "weather_packet_cases": 9,
+    "other_maps_unchanged": true,
+    "sound_repeat_cases": 150
+  }
+}

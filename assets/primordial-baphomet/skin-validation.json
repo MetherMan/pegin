@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "native BMP/WTM and saved PNG pixel equivalence",
+    "browser saved texture matches tint of immutable baseline and final settings",
+    "running game blocked without writes",
+    "mid-save failure rolls back every original file",
+    "successful save updates texture/settings/manifest; backups outside payload",
+    "invalid settings and malformed native texture rejected"
+  ],
+  "settings": {
+    "color": "#323539",
+    "strength": 0.75,
+    "brightness": 1
+  },
+  "texture_sha256": "6bb3a1576f42a03ed5cb4e3e5b0ba518c87dd6fda9b1f9de4a9626dd7dacb819",
+  "actual_game_run": false
+}

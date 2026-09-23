@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "body-atlas.png at bf039a7",
+  "output": "body-red-features-imagegen.png",
+  "prompt": "Use case: precise-object-edit. Asset type: an existing 1024x1024 game character UV texture atlas, not a character portrait. Edit this exact atlas in place. Change ONLY the large curled ribbed ram-horn texture island in the center (approximately x=295..590,y=390..650) to rich saturated crimson/scarlet red, preserving its ridged horn details, shading and exact silhouette. Change ONLY the three yellow eyes in the face island at the lower right (forehead third eye and two regular eyes) to luminous bright crimson red with small pale highlights and black pupils preserved. Preserve the entire rest of the atlas unchanged: every UV island position, shape, scale, orientation, margins, existing dark gray-green skin color, all blood stains, hands, feet, teeth, ears, armor, fine texture. No new geometry, no new islands, no paint outside these exact horn and eye regions, no labels, no border, no crop, no zoom, no padding, no atmospheric glow spilling onto skin. Output must be the same square full-frame UV atlas suitable for the existing unchanged game UV coordinates."
+}

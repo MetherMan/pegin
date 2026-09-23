@@ -59,28 +59,28 @@ end''')
             f"VALUES('{account}','{account}',3,266,272,30000,30000,30000,30000,100,100,100,0,201,0)")
         sql('INSERT INTO InvenItems(itemNum,invenPage,invenX,invenY,ownerID,ownerPos,life,exValue1) VALUES '+','.join(f"({n},0,{i},0,'{account}',0,100,0)" for i,n in enumerate([10188,10189,10190,19130])))
         p=Player(account)
-        for item,kind,speed in [(10188,1,70),(10189,2,75),(10190,3,80),(19130,4,95)]:
+        for item,kind,speed in [(10188,1,70),(10189,2,75),(10190,3,80),(19130,4,100)]:
             serial=p.select(item);assert serial
             p.packet(111,struct.pack('<iB',serial,0));assert ride()==[kind,1,speed],(item,ride())
             p.packet(111,struct.pack('<iB',serial,0));assert ride()==[0,0,40]
-        passed('real item-use packets mount and dismount all horses: 70 / 75 / 80 / 95; walking speed remains 40')
+        passed('real item-use packets mount and dismount all horses: 70 / 75 / 80 / 100; walking speed remains 40')
         p.packet(111,struct.pack('<iB',p.select(19130),0));p.close();p=None;time.sleep(1)
-        p=Player(account);assert ride()==[4,1,95]
-        passed('hell horse remains mounted at speed 95 after relog')
+        p=Player(account);assert ride()==[4,1,100]
+        passed('hell horse remains mounted at speed 100 after relog')
         transitions=[]
         for src,x,y,dst in [(14,448,264,41),(41,448,264,14),(41,60,265,14)]:
             warp(src,x,y);p.drain(.1)
             gdb(f'set $qa=FindPlayerIdList("{account}")\nset $qa->ch2.endMapLoading=0\ncall CheckLoadingPoint($qa)')
             events=p.drain(.4);data=next(d for t,d in events if t==5)
             assert struct.unpack_from('<Hii',data)==(dst,443,264),(src,data.hex())
-            p.packet(6);assert location()==[dst,443,264];assert ride()==[4,1,95]
+            p.packet(6);assert location()==[dst,443,264];assert ride()==[4,1,100]
             # The landing coordinate lies outside the return trigger.
             gdb(f'set $qa=FindPlayerIdList("{account}")\ncall CheckLoadingPoint($qa)')
             assert not any(t==5 for t,d in p.drain(.3))
             transitions.append([src,x,y,dst,443,264])
         passed('wreck entrance and both return landmarks emit real map-load packets; no immediate portal bounce; mount retained')
         warp(41,443,264);p.close();p=None;time.sleep(1);p=Player(account)
-        assert location()==[41,443,264] and ride()==[4,1,95]
+        assert location()==[41,443,264] and ride()==[4,1,100]
         passed('relogin inside Forgotten Taros restores map, position and hell horse')
         gdb(f'set $qa=FindPlayerIdList("{account}")\nset $qa->isAdmin=1\nset $qa->adminLevel=3')
         events=p.command('/재뽕 말 지옥마');assert any(t==43 and struct.unpack_from('<i',d,4)[0]==19130 for t,d in events)

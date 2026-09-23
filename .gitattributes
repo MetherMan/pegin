@@ -8,3 +8,6 @@
 *.mjs text eol=lf
 *.cjs text eol=lf
 src/server/utf8/* text eol=lf
+# Updater hashes must match raw GitHub bytes exactly on every checkout.
+client-overlay/** -text -eol
+distribution/father_update.py -text -eol

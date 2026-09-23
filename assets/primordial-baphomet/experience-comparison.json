@@ -1,0 +1,156 @@
+{
+  "source": "game-data/DATA/MOB_DATA.txt",
+  "source_sha256": "e4446a03b06c1202a550b412f7c7e488b60edd56661598374268e3fd88328dbb",
+  "rows": [
+    {
+      "id": 44,
+      "name": "L161.바포메트",
+      "level": 161,
+      "hp": 2315,
+      "experience": 14328,
+      "bonus_experience": 0
+    },
+    {
+      "id": 244,
+      "name": "L162.바포메트",
+      "level": 162,
+      "hp": 2320,
+      "experience": 14360,
+      "bonus_experience": 0
+    },
+    {
+      "id": 344,
+      "name": "L163.바포메트",
+      "level": 163,
+      "hp": 2325,
+      "experience": 14392,
+      "bonus_experience": 0
+    },
+    {
+      "id": 444,
+      "name": "L164.바포메트",
+      "level": 164,
+      "hp": 2330,
+      "experience": 14424,
+      "bonus_experience": 0
+    },
+    {
+      "id": 544,
+      "name": "L165.바포메트",
+      "level": 165,
+      "hp": 2335,
+      "experience": 14456,
+      "bonus_experience": 0
+    },
+    {
+      "id": 644,
+      "name": "B.바포메트",
+      "level": 175,
+      "hp": 4670,
+      "experience": 91453,
+      "bonus_experience": 0
+    },
+    {
+      "id": 53,
+      "name": "L191.바포메트워리어",
+      "level": 176,
+      "hp": 6434,
+      "experience": 15044,
+      "bonus_experience": 0
+    },
+    {
+      "id": 253,
+      "name": "L192.바포메트워리어",
+      "level": 177,
+      "hp": 6441,
+      "experience": 15060,
+      "bonus_experience": 0
+    },
+    {
+      "id": 353,
+      "name": "L193.바포메트워리어",
+      "level": 178,
+      "hp": 6448,
+      "experience": 15076,
+      "bonus_experience": 0
+    },
+    {
+      "id": 453,
+      "name": "L194.바포메트워리어",
+      "level": 179,
+      "hp": 6455,
+      "experience": 15092,
+      "bonus_experience": 0
+    },
+    {
+      "id": 553,
+      "name": "L195.바포메트워리어",
+      "level": 180,
+      "hp": 6462,
+      "experience": 15108,
+      "bonus_experience": 0
+    },
+    {
+      "id": 653,
+      "name": "B.바포메트워리어",
+      "level": 190,
+      "hp": 12924,
+      "experience": 100778,
+      "bonus_experience": 0
+    },
+    {
+      "id": 80,
+      "name": "태초의 바포메트",
+      "level": 231,
+      "hp": 23162,
+      "experience": 16548,
+      "bonus_experience": 0
+    },
+    {
+      "id": 280,
+      "name": "태초의 바포메트",
+      "level": 231,
+      "hp": 23162,
+      "experience": 16548,
+      "bonus_experience": 0
+    },
+    {
+      "id": 380,
+      "name": "태초의 바포메트",
+      "level": 231,
+      "hp": 23162,
+      "experience": 16548,
+      "bonus_experience": 0
+    },
+    {
+      "id": 480,
+      "name": "태초의 바포메트",
+      "level": 231,
+      "hp": 23162,
+      "experience": 16548,
+      "bonus_experience": 0
+    },
+    {
+      "id": 580,
+      "name": "태초의 바포메트",
+      "level": 231,
+      "hp": 23162,
+      "experience": 16548,
+      "bonus_experience": 0
+    },
+    {
+      "id": 680,
+      "name": "태초의 바포메트",
+      "level": 231,
+      "hp": 23162,
+      "experience": 16548,
+      "bonus_experience": 0
+    }
+  ],
+  "experience_changed": true,
+  "experience_basis": {
+    "id": 53,
+    "multiplier": 1.1,
+    "rounding": "nearest integer"
+  }
+}
