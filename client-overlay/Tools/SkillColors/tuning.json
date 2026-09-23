@@ -67,8 +67,8 @@
     "brightness": 1,
     "intensity": 1,
     "projectileSize": 1.3,
-    "launchSize": 1.3,
-    "impactSize": 1.3,
+    "launchSize": 0.9,
+    "impactSize": 0.8,
     "impactHeight": 0
   }
 }

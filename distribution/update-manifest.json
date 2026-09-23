@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-24-blue-moon-icons-approved",
+  "version": "2026-09-24-sixfold-effect-scale",
   "files": [
     {
       "kind": "client",
@@ -3774,21 +3774,21 @@
       "path": "Effect/ms_charge.wed",
       "source": "client-overlay/Effect/ms_charge.wed",
       "bytes": 603,
-      "sha256": "3161c10934454e09bf275d0acb576ff47d68e59783a821124c282367fb1ab0d3"
+      "sha256": "65efe0704204ba3c2b241e3a3f489865b76d36b71b53a6b1e594f922ff334298"
     },
     {
       "kind": "client",
       "path": "Effect/ms_impact.wed",
       "source": "client-overlay/Effect/ms_impact.wed",
       "bytes": 1070,
-      "sha256": "febcfdf184c25f7b780080c86602f6c323c7c6c89adc7f40f78520204f24a404"
+      "sha256": "cc2498c36dace638756de96418ccbdbbae2894888c3885dff14220f57b35532b"
     },
     {
       "kind": "client",
       "path": "Effect/ms_launch.wed",
       "source": "client-overlay/Effect/ms_launch.wed",
       "bytes": 602,
-      "sha256": "73242f8b27512634d0b620131e3a2b199d562005b66caa6df9daa1931c699590"
+      "sha256": "436f691e59e0b48495fad5092788504352d072feb107c70de9b59476d1903660"
     },
     {
       "kind": "client",
@@ -3802,28 +3802,28 @@
       "path": "Effect/ms_target_burst.wed",
       "source": "client-overlay/Effect/ms_target_burst.wed",
       "bytes": 867,
-      "sha256": "54ae92f81e9561e7258acff88395d50904e41486f438aec954597faf4d2b68a3"
+      "sha256": "9ea73e57bb175be59130cccf001d95bc8ff02ccffc076eafc8a31bde3ac4f6c0"
     },
     {
       "kind": "client",
       "path": "Effect/msb_charge.wed",
       "source": "client-overlay/Effect/msb_charge.wed",
       "bytes": 604,
-      "sha256": "c4946031cf276b0299502c45cecbfb6e5d00288c5e38d6ad2ac37284bff24fb9"
+      "sha256": "9dbdeb43679acfe66cfd402adaaf5749e9e06a35921a89e45ffb6309f988619e"
     },
     {
       "kind": "client",
       "path": "Effect/msb_impact.wed",
       "source": "client-overlay/Effect/msb_impact.wed",
       "bytes": 1071,
-      "sha256": "1cd071e89cb3c9f6fcb4b003881ba6cf6b6ed2a263991e21cf8ab2c58c76beb8"
+      "sha256": "515871cd8ef316c509759a682505516aaacfb6f4e4a96cfe41e99b78915175c8"
     },
     {
       "kind": "client",
       "path": "Effect/msb_launch.wed",
       "source": "client-overlay/Effect/msb_launch.wed",
       "bytes": 603,
-      "sha256": "f633932b7ad34ed56ee76b10d2eeeee6392c4606eb706945f7534dc20740b05a"
+      "sha256": "1cf58a1841103e6fd9ef84d1f9e7cca6c524487c199aaa4c5238a5753084568e"
     },
     {
       "kind": "client",
@@ -3837,7 +3837,7 @@
       "path": "Effect/msb_target_burst.wed",
       "source": "client-overlay/Effect/msb_target_burst.wed",
       "bytes": 868,
-      "sha256": "958e14fed0bdbacee38a2e678be48d83c0898c28d91a1bed9d2d70e1838d0ec9"
+      "sha256": "0eb0c5c631f4e296d3ab5f9e17fbad67a29c636341baccafff485ef2038a232a"
     },
     {
       "kind": "client",
@@ -5286,7 +5286,7 @@
       "path": "Tools/SkillColors/tuning.json",
       "source": "client-overlay/Tools/SkillColors/tuning.json",
       "bytes": 1577,
-      "sha256": "ed54df88c21fb4d3e99c38da9c77bf6d6057103e2899c691cb6cc48ea0178ce2"
+      "sha256": "d39c70c699c9959f6df3d718a8694c548bc3e5f8e4347a998daab601ec16dc38"
     },
     {
       "kind": "client",
