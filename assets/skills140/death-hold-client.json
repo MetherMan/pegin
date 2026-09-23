@@ -1,0 +1,232 @@
+{
+  "original_sha256": "b39b3f74ff4b0673c0f23867e2cc20dbeae9ab1a11433982f96511bf368064a3",
+  "original_size": 528384,
+  "sha256": "558ce5222f93baa46efb1664f1bac0c79f3feb31f015a0008ea9c4498f5f43a6",
+  "section_rva": 540672,
+  "undo": [
+    [
+      219752,
+      "8b1084db0f94c1518bc8ff922c010000"
+    ],
+    [
+      912,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0b00"
+    ],
+    [
+      304,
+      "00400800"
+    ],
+    [
+      252,
+      "00f00600"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "Immediately stop movement/attack for an already-dead mage victim; keep normal modes",
+      "va": 4414056,
+      "original": "8b1084db0f94c1518bc8ff922c010000",
+      "replacement": "e993e504009090909090909090909090",
+      "target": 4734976,
+      "resume": 4414072,
+      "assembly": "cmp bl,2; jne ordinary; mov edi,eax; sub esp,12; mov edx,esp; push edx; mov ecx,edi; mov eax,[edi]; call dword ptr [eax+0x2c]; push eax; mov ecx,edi; mov edx,[edi]; call dword ptr [edx+0x24]; mov ecx,edi; mov edx,[edi]; call dword ptr [edx+0xd0]; mov ecx,[edi+0x1ac]; test ecx,ecx; jz held; mov edx,[ecx+8]; test edx,edx; jz held; cmp dword ptr [ecx+0xc],0; je held; cmp dword ptr [edx+0x14],0; je held; push 1; mov ecx,edi; mov edx,[edi]; call dword ptr [edx+0x12c]; mov ecx,[edi+0x1ac]; mov word ptr [ecx+0x26],0; call 0x407af0; held: add esp,12; jmp 0x435a78; ordinary: mov edx,[eax]; test bl,bl; sete cl; push ecx; mov ecx,eax; call dword ptr [edx+0x12c]",
+      "code": "80fb02756389c783ec0c89e25289f98b07ff502c5089f98b17ff522489f98b17ff92d00000008b8fac01000085c974308b510885d2742983790c007423837a1400741d6a0189f98b17ff922c0100008b8fac01000066c741260000e8903af8ff83c40ce9101afbff8b1084db0f94c15189c1ff922c010000e9fb19fbff"
+    }
+  ],
+  "passed": true,
+  "native_monster_cases": [
+    {
+      "state": 0,
+      "present": false,
+      "animated": false,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 0,
+      "present": false,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 0,
+      "present": true,
+      "animated": false,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 0,
+      "present": true,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 1,
+      "present": false,
+      "animated": false,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 1,
+      "present": false,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 1,
+      "present": true,
+      "animated": false,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 1,
+      "present": true,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 2,
+      "present": false,
+      "animated": false,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 2,
+      "present": false,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 2,
+      "present": true,
+      "animated": false,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": true
+    },
+    {
+      "state": 2,
+      "present": true,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": true
+    },
+    {
+      "state": 3,
+      "present": false,
+      "animated": false,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 3,
+      "present": false,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 3,
+      "present": true,
+      "animated": false,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    },
+    {
+      "state": 3,
+      "present": true,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "ready",
+      "stack_preserved": true,
+      "stopped": false
+    }
+  ],
+  "in_game_visual_test": false,
+  "immediate_idle_action_states_checked": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "incomplete_animation_resource_cases": [
+    {
+      "state": 2,
+      "present": true,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "no_info",
+      "stack_preserved": true,
+      "stopped": true
+    },
+    {
+      "state": 2,
+      "present": true,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "no_action",
+      "stack_preserved": true,
+      "stopped": true
+    },
+    {
+      "state": 2,
+      "present": true,
+      "animated": true,
+      "initial_action": 4,
+      "resources": "no_animation",
+      "stack_preserved": true,
+      "stopped": true
+    }
+  ],
+  "prior_crash_regression_rejected": true
+}

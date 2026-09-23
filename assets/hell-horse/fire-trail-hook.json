@@ -1,0 +1,143 @@
+{
+  "original_sha256": "558ce5222f93baa46efb1664f1bac0c79f3feb31f015a0008ea9c4498f5f43a6",
+  "original_size": 532480,
+  "sha256": "f7bee3ad9706e7695f132ed8e871bd08f19829870c728ee20afe26852a38b1f8",
+  "section_rva": 544768,
+  "undo": [
+    [
+      140195,
+      "8b83b8000000"
+    ],
+    [
+      952,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0c00"
+    ],
+    [
+      304,
+      "00500800"
+    ],
+    [
+      252,
+      "00000700"
+    ],
+    [
+      312,
+      "00000000"
+    ],
+    [
+      992,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0d00"
+    ],
+    [
+      304,
+      "00600800"
+    ],
+    [
+      256,
+      "00400100"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "hell-horse actual movement with distance/time budget",
+      "va": 4334499,
+      "original": "8b83b8000000",
+      "replacement": "e9782c060090",
+      "target": 4739104,
+      "resume": 4334505,
+      "assembly": "\n      cmp dword ptr [ebx+0x24],4; jne ordinary;\n      pushfd; pushad; sub esp,16;\n      call pic; pic: pop esi; sub esi,pic; add esi,4194304;\n      call dword ptr [esi+0x6a100]; mov ebp,eax;\n      mov edi,ebx; shr edi,4; and edi,63; shl edi,5;\n      add edi,esi; add edi,548864;\n      lea edx,[esi+550912]; mov ecx,64;\n      probe: cmp dword ptr [edi],ebx; je found;\n      cmp dword ptr [edi],0; je reset;\n      mov eax,ebp; sub eax,[edi+8]; cmp eax,5000; jae reset;\n      add edi,32; cmp edi,edx; jb next_slot; sub edi,2048;\n      next_slot: loop probe; jmp reset;\n      found:\n      mov eax,[ebx+0x20]; cmp [edi+4],eax; jne reset;\n      fld dword ptr [ebx+0x44]; fsub dword ptr [edi+12]; fmul st(0),st(0);\n      fld dword ptr [ebx+0x48]; fsub dword ptr [edi+16]; fmul st(0),st(0);\n      faddp st(1),st(0); fstp dword ptr [esp+12];\n      mov eax,[ebx+0x44]; mov [edi+12],eax;\n      mov eax,[ebx+0x48]; mov [edi+16],eax;\n      fld dword ptr [esp+12]; fcomp dword ptr [esi+544784];\n      fnstsw ax; test ah,0x45; jnz done;\n      fld dword ptr [esp+12]; fcomp dword ptr [esi+544788];\n      fnstsw ax; test ah,1; jz reset;\n      mov eax,ebp; sub eax,[edi+8]; cmp eax,80; jb done;\n      fld dword ptr [ebx+0x44]; fsub dword ptr [edi+20]; fmul st(0),st(0);\n      fld dword ptr [ebx+0x48]; fsub dword ptr [edi+24]; fmul st(0),st(0);\n      faddp st(1),st(0); fcomp dword ptr [esi+544792];\n      fnstsw ax; test ah,5; jnz done;\n      mov [edi+8],ebp;\n      mov eax,[ebx+0x44]; mov [edi+20],eax; mov [esp],eax;\n      mov eax,[ebx+0x48]; mov [edi+24],eax; mov [esp+4],eax;\n      fld dword ptr [ebx+0x4c]; fadd dword ptr [esi+544796]; fstp dword ptr [esp+8];\n      mov ecx,[ebx+0x10]; test ecx,ecx; jz done;\n      lea eax,[esp]; push eax;\n      lea eax,[esi+544768]; push eax;\n      mov edx,[ecx]; call dword ptr [edx+0x90]; jmp done;\n      reset:\n      mov [edi],ebx; mov eax,[ebx+0x20]; mov [edi+4],eax;\n      mov [edi+8],ebp;\n      mov eax,[ebx+0x44]; mov [edi+12],eax; mov [edi+20],eax;\n      mov eax,[ebx+0x48]; mov [edi+16],eax; mov [edi+24],eax;\n      done: add esp,16; popad; popfd; pop edi; pop esi; jmp 0x4223bf;\n      ordinary: mov eax,[ebx+0xb8]\n    ",
+      "code": "837b24040f85530100009c6083ec10e8000000005e81ee3450480081c600004000ff9600a1060089c589dfc1ef0483e73fc1e70501f781c7006008008d9600680800b940000000391f742d833f000f84e000000089e82b47083d881300000f83d000000083c72039d7720681ef00080000e2d4e9bc0000008b43203947040f85b0000000d94344d8670cd8c8d94348d86710d8c8dec1d95c240c8b434489470c8b4348894710d944240cd89e10500800dfe0f6c4450f8596000000d944240cd89e14500800dfe0f6c401746889e82b470883f850727bd94344d86714d8c8d94348d86718d8c8dec1d89e18500800dfe0f6c405755c896f088b43448947148904248b434889471889442404d9434cd8861c500800d95c24088b4b1085c974328d0424508d8600500800508b11ff9290000000eb1d891f8b4320894704896f088b434489470c8947148b434889471089471883c410619d5f5ee942d2f9ff8b83b8000000e921d2f9ff"
+    }
+  ],
+  "state_section_rva": 548864,
+  "version": 2,
+  "validation": {
+    "passed": true,
+    "legacy_missing_trail_reproduced": true,
+    "actual_movement_with_legacy_state_zero": true,
+    "initialized_rw_slots": 64,
+    "bounded_collision_probing": true,
+    "code_rx_data_rw": true,
+    "frame_rate_cases": [
+      {
+        "base": 4194304,
+        "fps": 15,
+        "emissions_per_10_seconds": 75,
+        "stopped_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "fps": 30,
+        "emissions_per_10_seconds": 100,
+        "stopped_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "fps": 60,
+        "emissions_per_10_seconds": 120,
+        "stopped_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "fps": 144,
+        "emissions_per_10_seconds": 120,
+        "stopped_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "fps": 240,
+        "emissions_per_10_seconds": 120,
+        "stopped_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "fps": 15,
+        "emissions_per_10_seconds": 75,
+        "stopped_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "fps": 30,
+        "emissions_per_10_seconds": 100,
+        "stopped_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "fps": 60,
+        "emissions_per_10_seconds": 120,
+        "stopped_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "fps": 144,
+        "emissions_per_10_seconds": 120,
+        "stopped_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "fps": 240,
+        "emissions_per_10_seconds": 120,
+        "stopped_emissions": 0
+      }
+    ],
+    "minimum_interval_ms": 80,
+    "minimum_emit_distance": 0.25,
+    "maximum_step_before_reset": 8,
+    "ground_lift": 0.35,
+    "teleport_and_object_reuse_checked": true,
+    "original_epilogue_stack_and_nonvolatile_registers_preserved": true,
+    "timestamp_wrap_checked": true,
+    "other_mounts_unchanged": true,
+    "maximum_particles_per_second": 12.5,
+    "maximum_live_trail_particles": 23,
+    "in_game_visual_test": false
+  }
+}

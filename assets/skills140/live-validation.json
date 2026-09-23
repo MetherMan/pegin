@@ -1,7 +1,7 @@
 {
   "passed": true,
   "checks": [
-    "all four live skill definitions, exact damage ranges, learn requirements, area and callbacks",
+    "all four live skill definitions, exact damage ranges and cooldown seconds, learn requirements, area and callbacks",
     "legacy zero-count weapon/armour singleton cards merge 1+1 into 2",
     "card 998+5 retains 999 and overflow 4",
     "139 cannot learn any of the four skills; scrolls retained",
@@ -11,6 +11,8 @@
     "19121: actual hit packets / radius 0,5,6,7 = [6, 0, 0, 0]",
     "19122: actual hit packets / radius 0,5,6,7 = [7, 7, 7, 0]",
     "19123: actual hit packets / radius 0,5,6,7 = [3, 3, 3, 0]",
+    "19122: immediate kill and freeze, zero further damage, one death animation after 3596ms",
+    "19123: immediate kill and freeze, zero further damage, one death animation after 1095ms",
     "learned skills and merged cards persist after relog",
     "all five existing save tables preserved; fixture removed"
   ],
@@ -26,7 +28,7 @@
         560,
         620
       ],
-      "callback": "0x807ef13 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+      "callback": "0x807f023 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
     },
     {
       "item": 19121,
@@ -39,7 +41,7 @@
         380,
         420
       ],
-      "callback": "0x807ef13 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+      "callback": "0x807f023 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
     },
     {
       "item": 19122,
@@ -47,12 +49,12 @@
       "reqb": 140,
       "area": 6,
       "attr": 2,
-      "cool": 12,
+      "cool": 4,
       "damage": [
         550,
         610
       ],
-      "callback": "0x807ef13 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+      "callback": "0x807f023 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
     },
     {
       "item": 19123,
@@ -60,12 +62,12 @@
       "reqb": 140,
       "area": 6,
       "attr": 2,
-      "cool": 10,
+      "cool": 4,
       "damage": [
         1120,
         1230
       ],
-      "callback": "0x807ef13 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
+      "callback": "0x807f023 <SKILL_Level140Attack(descriptor_data*, descriptor_data*, monster_data*, unsigned char, skill_data*)>"
     }
   ],
   "hit_tests": [
@@ -104,6 +106,28 @@
         3,
         0
       ]
+    }
+  ],
+  "death_holds": [
+    {
+      "skill": 19122,
+      "delay_ms": 3596,
+      "immediate_kill": true,
+      "aggro_cleared": true,
+      "stale_attack_blocked": true,
+      "freeze_packet": true,
+      "early_death_packets": 0,
+      "final_death_packets": 1
+    },
+    {
+      "skill": 19123,
+      "delay_ms": 1095,
+      "immediate_kill": true,
+      "aggro_cleared": true,
+      "stale_attack_blocked": true,
+      "freeze_packet": true,
+      "early_death_packets": 0,
+      "final_death_packets": 1
     }
   ],
   "save_data_preserved": true

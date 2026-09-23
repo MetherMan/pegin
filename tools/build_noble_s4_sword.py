@@ -4,6 +4,7 @@ import json,shutil,subprocess,sys
 from build_noble_moon import R,O,D,build,digest
 from mesh_tools import read_mod,np,Image,BytesIO,zlib
 from verify_closed_surfaces import audit
+from refine_s4_blade import verify_refined_native
 
 SPEC=O/'noble-moon-s4-sword-geometry.json'
 REVIEW=O/'s4'
@@ -24,6 +25,9 @@ def main():
     spec=json.loads(SPEC.read_text())['weapons'][0]
     assert spec['kind']=='sword'
     result=build(spec)
+    if spec.get('blade_refinement'):
+        refinement_reference=json.loads((REVIEW/'blade-refinement-validation.json').read_text())
+        result['blade_refinement']=verify_refined_native(sword.read_bytes(),spec,refinement_reference)
     surface=audit(sword);assert surface['passed'],surface
     raw=(D/'Texture/Equip/mt_twilight_atlas.wtm').read_bytes()
     native=np.asarray(Image.open(BytesIO(zlib.decompress(raw[13:]))).convert('RGB'))
@@ -32,7 +36,7 @@ def main():
     subprocess.run([sys.executable,'-B','-X','utf8',str(O/'preview_native.py'),'--kind','sword'],cwd=R,check=True)
     after={str(p.relative_to(R)):digest(p) for p in protected};assert before==after,'Only the sword may change'
     active=json.loads((O/'active-design.json').read_text(encoding='utf-8'))
-    active['default_build_kinds']=['sword']
+    active.setdefault('default_build_kinds',['sword','longbow'])
     active.setdefault('overrides',{})['sword']=dict(design='noble-blue-moon-s4-sword',source='../visual-refresh-20260923/noble-moon-15/sword-04.png',geometry_spec=SPEC.name,builder='tools/build_noble_s4_sword.py',approved_by_user=True)
     active['sources'][0]='../visual-refresh-20260923/noble-moon-15/sword-04.png'
     (O/'active-design.json').write_text(json.dumps(active,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

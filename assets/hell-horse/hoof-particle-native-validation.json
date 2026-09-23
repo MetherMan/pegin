@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "recorded_from": "tools/verify_hell_hoof_particle.py",
+  "render_sha256": "1aff9c55db7e490fb089a9d37921d22d3f85424036634d45eccbbf906712af29",
+  "tested_row_sha256": "2a881d9e1fef654cd63e71b94c6cf3128a85278c726d432b4d20c697718e5a37",
+  "deployed_table_matches_generator": true,
+  "particle_table_validation": {
+    "original_particle_records_unchanged": true,
+    "original_record_count": 59,
+    "table_record_count": 60,
+    "idempotent": true,
+    "stationary_world_space": true,
+    "particle_lifetime_ms": 385,
+    "particles_per_emission": 1,
+    "billboard_width_world_units": [
+      0.2639999921321871,
+      0.24
+    ],
+    "no_shadow_tint": true,
+    "fog_scope_marker": 140041,
+    "native_interpolation_all_living_milliseconds_checked": true,
+    "texture": "Texture/particle/pa_05.BMP",
+    "trail_sha256": "2a881d9e1fef654cd63e71b94c6cf3128a85278c726d432b4d20c697718e5a37",
+    "in_game_visual_test": false
+  },
+  "tests": [
+    {
+      "base": "0x10000000",
+      "ages_checked": 386,
+      "first_age_ms": 0,
+      "last_age_ms": 385,
+      "alive_ages_checked": 385,
+      "erased_at_ms": 385,
+      "freed_list_nodes": 1,
+      "main_rgb_first": [
+        160,
+        56,
+        4
+      ],
+      "main_rgb_last_alive": [
+        1,
+        1,
+        0
+      ],
+      "monotonic_rgb_fade": true,
+      "secondary_argb_always": "0xff000000",
+      "width_min": 0.24006178538735523,
+      "width_max": 0.2639999921321871,
+      "position_unchanged_every_age": true,
+      "key_indices_min": 0,
+      "key_indices_max": 10,
+      "native_world_transform_ages_ms": [
+        0,
+        192,
+        384
+      ],
+      "native_world_width_and_position_correct": true,
+      "stack_balanced": true
+    },
+    {
+      "base": "0x16000000",
+      "ages_checked": 386,
+      "first_age_ms": 0,
+      "last_age_ms": 385,
+      "alive_ages_checked": 385,
+      "erased_at_ms": 385,
+      "freed_list_nodes": 1,
+      "main_rgb_first": [
+        160,
+        56,
+        4
+      ],
+      "main_rgb_last_alive": [
+        1,
+        1,
+        0
+      ],
+      "monotonic_rgb_fade": true,
+      "secondary_argb_always": "0xff000000",
+      "width_min": 0.24006178538735523,
+      "width_max": 0.2639999921321871,
+      "position_unchanged_every_age": true,
+      "key_indices_min": 0,
+      "key_indices_max": 10,
+      "native_world_transform_ages_ms": [
+        0,
+        192,
+        384
+      ],
+      "native_world_width_and_position_correct": true,
+      "stack_balanced": true
+    }
+  ],
+  "icealp_section_bytes_preserved": 4096,
+  "icealp_rva_preserved": true,
+  "actual_native_functions": [
+    "CW3DParticles::Update",
+    "CW3DParticles::SetWorld",
+    "Common Matrix4::GetBillboard",
+    "native float-to-integer conversion"
+  ],
+  "substituted_services": [
+    "Frustum::CheckPoint always visible",
+    "D3D SetTransform records matrix",
+    "list-node allocator free"
+  ],
+  "limits": "Generator row is tested in memory. Resource loader BYTE conversion is reproduced, not executed. No in-game visual or FPS test.",
+  "overlay_written": false,
+  "in_game_visual_test": false
+}

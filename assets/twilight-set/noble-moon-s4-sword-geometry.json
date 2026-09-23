@@ -10,6 +10,13 @@
       "scale": 0.0013070593213106143,
       "tip_y": 19,
       "blade_root_y": 902,
+      "blade_refinement": {
+        "length_factor": 1.12,
+        "width_factor": 1.10,
+        "thickness_factor": 1.15,
+        "blend_pixels": 100,
+        "source_model_sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+      },
       "bevel_pixels": 38,
       "likely_threshold": 60,
       "solid_threshold": 130,

@@ -331,6 +331,16 @@ public:
 	void	Stop()							{	m_wAdvanced = MONSTER_STATE_STOP;	}
 	void	Dead()							{	m_wAdvanced = MONSTER_STATE_DEAD;	}
 
+    // Stop a server-confirmed lethal victim without finishing its attack motion.
+    void StopImmediately()
+    {
+        if (!m_pMonster || !m_pAction ||
+            !m_pMonster->modePeace.aAction[MONSTER_STATE_STOP].pAnimation) return;
+        SetMode(TRUE);
+        Stop();
+        ChangeAction();
+    }
+
 	/**
 	 *
 	 */

@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "reference_images": [
+    "sword-readable-thin-imagegen.png",
+    "reference/11424-black-knight-greatsword-ws_0081.png"
+  ]
+}

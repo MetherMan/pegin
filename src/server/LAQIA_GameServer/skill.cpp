@@ -2462,6 +2462,8 @@ BOOL SKILL_NormalMagicAttack( sPDESC_DATA pPlayer, sPDESC_DATA pTargetPlayer, sP
 }
 
 
+#include "skill140_death_timing.h"
+
 // Level-140 bursts use the ordinary authoritative hit/area/PvP rules per hit.
 // Never mutate the shared skill definition (the older multi-shot PvP code did).
 BOOL SKILL_Level140Attack( sPDESC_DATA pPlayer, sPDESC_DATA pTargetPlayer, sPMOB_DATA pMob, BYTE target, sPSKILL_DATA pSkill )
@@ -2475,6 +2477,9 @@ BOOL SKILL_Level140Attack( sPDESC_DATA pPlayer, sPDESC_DATA pTargetPlayer, sPMOB
     case 19123: hits = 3; break;
     default: return 0;
     }
+    DWORD priorDeathHold = g_Skill140DeathHold;
+    g_Skill140DeathHold = pSkill->itemNum == 19122 ? g_Skill140MeteorDeath :
+                         pSkill->itemNum == 19123 ? g_Skill140FrostDeath : 0;
     for( int hit = 0; hit < hits; ++hit )
     {
         if( pSkill->itemNum <= 19121 )
@@ -2482,11 +2487,13 @@ BOOL SKILL_Level140Attack( sPDESC_DATA pPlayer, sPDESC_DATA pTargetPlayer, sPMOB
         else
             SKILL_NormalMagicAttack( pPlayer, pTargetPlayer, pMob, target, pSkill );
     }
+    g_Skill140DeathHold = priorDeathHold;
     return 1;
 }
 
 void AsignSkillFunc()
 {
+    LoadSkill140DeathTiming();
 #define SET_SKILL_FUNC( skillItemNum, skill_func ) \
 	if( g_SKILL[g_ItemInfo[skillItemNum]->skillIdx] )	\
 	{	\

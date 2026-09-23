@@ -2736,7 +2736,15 @@ void CGame::OnPacketMobState()
 
 	if( pMonster )
 	{	
-		pMonster->SetMode( !btState );		
+        if (btState == 2)
+        {
+            // Server already settled this kill. Wait still for the climax/death packet.
+            pMonster->SetGoalPosition(pMonster->GetPosition());
+            pMonster->Stop();
+            pMonster->SetMode(2);
+        }
+        else
+            pMonster->SetMode(!btState);
 	} //if
 }//CGame::OnPacketMobState
 

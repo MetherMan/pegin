@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "artwork_tool": "built-in image_gen",
+  "native_frame_source": "runtime/client/GameClient/Item/ws_0081.wtm",
+  "frame_width": 2,
+  "item_and_equipped_slots_share_sprite": true,
+  "icons": [
+    {
+      "kind": "sword",
+      "item_ids": [
+        19030,
+        19031,
+        19032,
+        19033,
+        19034,
+        19035,
+        19036,
+        19037,
+        19038,
+        19039,
+        19040,
+        19041,
+        19042,
+        19043,
+        19044,
+        19045,
+        19046,
+        19047,
+        19048,
+        19049,
+        19050
+      ],
+      "source": "assets/twilight-set/icons-gold-20260923/sword-v4.png",
+      "source_sha256": "3a3734e587b4639e1e04443b8677d268577dc26f6fc6b68d1225ff7a5ec7ed35",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "art_box": [
+        20,
+        20,
+        1234,
+        1234
+      ],
+      "native_name": "mt_twilight_icon.wtm",
+      "wtm_sha256": "12ca809409a41ad1a4c79cb28c5785461cb143e7d3b66b13725ac6a20ada28bc",
+      "dimensions": [
+        28,
+        28
+      ],
+      "bits": 24,
+      "existing_frame_identical": true
+    },
+    {
+      "kind": "longbow",
+      "item_ids": [
+        19060,
+        19061,
+        19062,
+        19063,
+        19064,
+        19065,
+        19066,
+        19067,
+        19068,
+        19069,
+        19070,
+        19071,
+        19072,
+        19073,
+        19074,
+        19075,
+        19076,
+        19077,
+        19078,
+        19079,
+        19080
+      ],
+      "source": "assets/twilight-set/icons-gold-20260923/longbow-v4.png",
+      "source_sha256": "e489df12a14608c42c3cb7320f3380f663d13802b8b9aaa7dcb8c4ec417419b5",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "art_box": [
+        28,
+        28,
+        1226,
+        1226
+      ],
+      "native_name": "mt_longbow_icon.wtm",
+      "wtm_sha256": "87c275691d91cba512554d71569a6406ea59b2e218e70426073880268354943d",
+      "dimensions": [
+        28,
+        28
+      ],
+      "bits": 24,
+      "existing_frame_identical": true
+    },
+    {
+      "kind": "staff",
+      "item_ids": [
+        19090,
+        19091,
+        19092,
+        19093,
+        19094,
+        19095,
+        19096,
+        19097,
+        19098,
+        19099,
+        19100,
+        19101,
+        19102,
+        19103,
+        19104,
+        19105,
+        19106,
+        19107,
+        19108,
+        19109,
+        19110
+      ],
+      "source": "assets/twilight-set/icons-gold-20260923/staff-v2.png",
+      "source_sha256": "22ba432f7a5d7880bc4d2935e697cabd68d653d9520169871362031fffb0ee20",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "art_box": [
+        32,
+        32,
+        1222,
+        1222
+      ],
+      "native_name": "mt_staff_icon.wtm",
+      "wtm_sha256": "dba7b5522674d8b00d71fe399aca0e6411b2240b63935f3b7fc527dd5679b254",
+      "dimensions": [
+        28,
+        28
+      ],
+      "bits": 24,
+      "existing_frame_identical": true
+    }
+  ],
+  "covered_items": 63,
+  "in_game_visual_test": false
+}

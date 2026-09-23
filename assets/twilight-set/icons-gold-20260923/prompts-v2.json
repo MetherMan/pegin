@@ -1,0 +1,22 @@
+{
+  "tool": "built-in image_gen",
+  "revision": "Cropped weapon details, no full-weapon thumbnails",
+  "game_resources_updated": false,
+  "jobs": [
+    {
+      "kind": "sword",
+      "file": "sword-v2.png",
+      "prompt": "Edit this into a proper tightly cropped MMORPG INVENTORY ICON. The current whole weapon view is rejected. KEEP the simple square gold outer border and opaque black backdrop, same blue moon sword identity and palette. Change ONLY weapon framing and simplify detail for tiny 28px readability: zoom in approximately 2.5x on the junction of BLADE AND GUARD. Guard/crescent sits upper-right of center, broad flowing cobalt blade with one broad moon-white cutting plane traverses diagonally toward bottom-left and is decisively CUT OFF by left and bottom inner frame edges. Grip extends OUT through the top-right edge; NO blade tip and NO pommel anywhere in image. Show only a powerful connected SECTION of sword, approximately middle third of full weapon. The crescent guard and jewel are secondary to the large solid blade face. Thick readable material shapes, reduce fine filigree to a few simple warm gold seams, no chains. The weapon should cover around 60 percent of interior area. Gold border stays perfectly square and unbroken ON TOP of the cropped artwork, same thin width, with nothing protruding outside frame. This is a game item icon with confidently cropped edges, not a full weapon illustration. Black negative space, silver/cobalt metal, restrained small blue jewel. No text, no extra aura, no particle effects, no transparency. Output one square icon."
+    },
+    {
+      "kind": "longbow",
+      "file": "longbow-v2.png",
+      "prompt": "Edit this whole-bow artwork into a tightly cropped MMORPG inventory ICON. User specifically rejects squeezing the full weapon into the square. Preserve blue/silver horn-bow identity, plain square gold border and solid black background. Zoom approximately 2.4x into the central GRIP AND CURVING UPPER LIMB, keeping them connected. Wrapped blue grip in lower-left area is cut off by bottom edge. A large broad cobalt and moon-silver curved limb rises across center and sweeps OUT of the top/right frame edge; both bow endpoints are completely OUTSIDE view. A small crescent in the inner bend identifies the blue moon set. Keep a clear thin taut diagonal bowstring through the right side, cut off by top and bottom edges, with clean black separation from limb. Main readable feature is a curved BOW SECTION with grip, not a crescent medallion. Broad solid material planes, simplified gold joins; remove chains, tiny lattice and surplus micro-detail. Strong confident large silhouette uses most of square. The original uniform gold square border remains unbroken, overlays crop boundaries, nothing sticks outside it. No full weapon, no limb endpoint jewels, no full bow outline, no extra margins. Opaque pure black negative space, no text, no glow cloud, no particles. One square game icon."
+    },
+    {
+      "kind": "staff",
+      "file": "staff-v2.png",
+      "prompt": "Edit this into a tightly cropped MMORPG INVENTORY ITEM ICON. User rejects whole-weapon thumbnail. Keep blue moon staff design, square gold border and opaque black backdrop. Zoom strongly into the crescent-hook HEAD AND SHORT CONNECTED NECK; discard long shaft/full weapon framing. Large icy blue full moon in an asymmetric cobalt/silver hook dominates upper-middle of square, about 38 percent of square width. Hook's upper and right sweeping outer portions are confidently CUT OFF by top/right inner frame boundaries, while inner crescent and black gap remain readable. Connected short blue/gold neck points diagonally toward lower-left and shaft exits through bottom-left edge; shaft end is NOT visible. Show only head and adjoining neck, no full shaft, no bottom jewel, no pommel. The enlarged head fills about 70 percent of frame width. Simplify dense filigree to broad clear gold joins and silver/cobalt planes for readability at 28px. Remove hanging chain details and all tiny jewelry. Contained pale blue moon light, bright moon with simple lunar shading, clean black separation, no glow fog. Preserve thin straight unbroken plain gold square border OVER the cropped image, no weapon outside frame, no ornate corner additions. One square icon, opaque solid black background, no text or numbers."
+    }
+  ]
+}

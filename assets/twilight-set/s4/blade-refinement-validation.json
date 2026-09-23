@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "source_sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+  "refined_sha256": "181ca3401b58c864350d6f94b985cccd6808f488a750fc578c794632d9493c52",
+  "bytes": 884332,
+  "vertices": 5689,
+  "triangles": 11332,
+  "changed_vertices": 3412,
+  "protected_vertices": 2277,
+  "changed_bytes": 195377,
+  "protected_bytes_identical": true,
+  "topology_identical": true,
+  "source_uvs_identical": true,
+  "guard_handle_pommel_identical": true,
+  "native_grip_origin_preserved": true,
+  "blade_root_native_x": 0.4561637031374044,
+  "blend_native_length": 0.13070593213106144,
+  "requested_factors": [
+    1.12,
+    1.1,
+    1.15
+  ],
+  "minimum_jacobian_determinant": 1.000045569022073,
+  "old_bounds": [
+    [
+      -0.33722129464149475,
+      -0.25356951355934143,
+      -0.027499999850988388
+    ],
+    [
+      1.6129112243652344,
+      0.13332004845142365,
+      0.027499999850988388
+    ]
+  ],
+  "new_bounds": [
+    [
+      -0.33722129464149475,
+      -0.25356951355934143,
+      -0.027499999850988388
+    ],
+    [
+      1.751720905303955,
+      0.13332004845142365,
+      0.027499999850988388
+    ]
+  ],
+  "old_blade_bounds": [
+    [
+      0.45681723952293396,
+      -0.09541533142328262,
+      -0.022969234734773636
+    ],
+    [
+      1.6129112243652344,
+      0.09672238677740097,
+      0.022969234734773636
+    ]
+  ],
+  "new_blade_bounds": [
+    [
+      0.45681723952293396,
+      -0.10495686531066895,
+      -0.024564921855926514
+    ],
+    [
+      1.751720905303955,
+      0.09683967381715775,
+      0.024564921855926514
+    ]
+  ],
+  "changed_faces_collapsed_or_reversed": 0,
+  "blade_length_ratio": 1.1200000047683716,
+  "trace_recommendation": {
+    "start_unchanged": 0.1458286,
+    "old_end": 1.6041147,
+    "new_end": 1.7418688196235115
+  },
+  "in_game_visual_test": false,
+  "trace_lines_updated": 3,
+  "model_file_written": "client-overlay/Equip/mt_twilight_{1,2,3}.mod",
+  "protected_geometry_sha256": "9a1f169dfdffa7d9bb3432da07ec80a3d88be51f1a3d942f4996fe4588e5e5b9",
+  "topology_uv_sha256": "8d1a86785c57e4d83425b4379e8ebe57833417b44f66ff6be5c986c3c9ad71a0"
+}

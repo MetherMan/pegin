@@ -227,6 +227,86 @@ char* CVehicle::GetModelName( DWORD dwType )
 /**
  * Update
  */
+// State is external so CVehicle's shipped 32-bit object ABI stays unchanged.
+// Query actual animated sole centers; body-center spacing is not a hoof trail.
+static void EmitHellHorseHooves( const void* pVehicle, DWORD dwId,
+                                const SAction* pAction, IW3DModel* pModel,
+                                IW3DWorld* pWorld, const Vector3& vPos,
+                                const Quaternion& qRot, DWORD animationTick )
+{
+    struct HoofState
+    {
+        const void* vehicle;
+        DWORD id, seenAt;
+        float sampleX, sampleY;
+        DWORD armed;
+        const void* action;
+        DWORD reserved;
+        float previousY[4];
+        int actionStart, actionEnd;
+        IW3DAnimation* animation;
+        DWORD animationTick;
+    };
+    static HoofState states[64] = {0};
+    static const char* names[4] = {
+        "Bip02 L Finger01", "Bip02 R Finger01", "Bip02 L Toe0", "Bip02 R Toe0"
+    };
+    // Centroid of the four sole vertices, transformed by inverse bind matrix.
+    static const Vector3 soleLocal[4] = {
+        Vector3(0.128036912464F, -0.007704655553F, 0.017997010834F),
+        Vector3(0.128054758531F,  0.007704499051F, 0.018100216139F),
+        Vector3(0.123759327335F,  0.003451034783F, 0.040027760792F),
+        Vector3(0.123718520184F, -0.003541369337F, 0.040048668851F)
+    };
+    const DWORD now = GetTickCount();
+    DWORD index = (reinterpret_cast<DWORD>(pVehicle) >> 4) & 63;
+    for( DWORD probe = 0; probe < 64; ++probe )
+    {
+        HoofState& slot = states[index];
+        if( slot.vehicle == pVehicle || !slot.vehicle || now - slot.seenAt >= 5000 ) break;
+        index = (index + 1) & 63;
+    }
+    HoofState& state = states[index];
+    const float dx = vPos.x - state.sampleX, dy = vPos.y - state.sampleY;
+    const float step = dx * dx + dy * dy;
+    const int actionStart = pAction ? pAction->nStart : 0;
+    const int actionEnd = pAction ? pAction->nEnd : 0;
+    IW3DAnimation* animation = pAction ? pAction->pAnimation : NULL;
+    const bool reset = state.vehicle != pVehicle || state.id != dwId ||
+        now - state.seenAt >= 5000 || state.action != pAction ||
+        state.actionStart != actionStart || state.actionEnd != actionEnd ||
+        state.animation != animation || animationTick < state.animationTick ||
+        !(step > 0.000001F) || !(step < 64.0F) || !pAction || !pModel || !pWorld;
+    state.vehicle = pVehicle; state.id = dwId; state.seenAt = now;
+    state.sampleX = vPos.x; state.sampleY = vPos.y; state.action = pAction;
+    state.actionStart = actionStart; state.actionEnd = actionEnd;
+    state.animation = animation; state.animationTick = animationTick;
+    if( reset )
+    {
+        state.armed = 0;
+        for( int foot = 0; foot < 4; ++foot ) state.previousY[foot] = 0;
+        return;
+    }
+    Matrix4 world;
+    world.SetWorld( vPos, qRot );
+    for( int foot = 0; foot < 4; ++foot )
+    {
+        const Matrix4 bone = pModel->GetBoneMatrix( names[foot], animationTick );
+        const Vector3 sole = soleLocal[foot] * bone;
+        const float previousY = state.previousY[foot];
+        state.previousY[foot] = sole.y;
+        const DWORD bit = 1 << foot;
+        if( sole.y > 0.22F ) state.armed |= bit;
+        else if( (state.armed & bit) && sole.y <= 0.16F && sole.y <= previousY )
+        {
+            state.armed &= ~bit;
+            Vector3 flame = sole * world;
+            flame.z = pWorld->GetHeight( flame ) + 0.20F;
+            pWorld->AddParticle( "mt_hell_hoof", flame );
+        }
+    }
+}
+
 BOOL CVehicle::Update( const DWORD dwTick )
 {
 	Assert( m_pWorld );
@@ -255,10 +335,15 @@ BOOL CVehicle::Update( const DWORD dwTick )
 
 	BOOL	bLive = TRUE;
 
-	switch( m_nState )
+	if( m_dwType == 4 )
+	{
+		EmitHellHorseHooves( this, m_dwId, m_pAction, m_pModel, m_pWorld,
+		                      m_vPos, m_qRot, m_pActionMgr->GetTime() );
+	}
+	else switch( m_nState )
 	{
 	case STATE_MOVE:
-		m_pWorld->AddParticle( m_dwType == 4 ? "mt_hell_hoof" : "연기", m_vPos );
+		m_pWorld->AddParticle( "연기", m_vPos );
 		break;
 	}; //switch
 

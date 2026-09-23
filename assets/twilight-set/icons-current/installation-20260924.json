@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "timestamp": "2026-09-24T00:28:28.307736",
+  "selection": {
+    "sword": "sword-v4.png",
+    "longbow": "longbow-v4.png",
+    "staff": "staff-v2.png"
+  },
+  "client_root": "C:\\Users\\c\\Downloads\\라키아요\\runtime\\client\\GameClient",
+  "backup_root": "C:\\Users\\c\\Downloads\\라키아요\\.cache\\approved-weapon-icons-20260924-002404",
+  "installed_files": [
+    {
+      "path": "Item/mt_twilight_icon.wtm",
+      "before": "1fb02bee8ed4c2627bf1b7b75ca161b5c3ac1af1021ad4b8d27dae59ffe8640d",
+      "sha256": "12ca809409a41ad1a4c79cb28c5785461cb143e7d3b66b13725ac6a20ada28bc",
+      "bytes": 1220
+    },
+    {
+      "path": "Texture/Body/mt_twilight_icon.wtm",
+      "before": "1fb02bee8ed4c2627bf1b7b75ca161b5c3ac1af1021ad4b8d27dae59ffe8640d",
+      "sha256": "12ca809409a41ad1a4c79cb28c5785461cb143e7d3b66b13725ac6a20ada28bc",
+      "bytes": 1220
+    },
+    {
+      "path": "Item/mt_longbow_icon.wtm",
+      "before": "91932c8bc23e7f3e97475392b8ad19b28f34a5c5f9538189c0925207a0ab54e4",
+      "sha256": "87c275691d91cba512554d71569a6406ea59b2e218e70426073880268354943d",
+      "bytes": 1206
+    },
+    {
+      "path": "Texture/Body/mt_longbow_icon.wtm",
+      "before": "91932c8bc23e7f3e97475392b8ad19b28f34a5c5f9538189c0925207a0ab54e4",
+      "sha256": "87c275691d91cba512554d71569a6406ea59b2e218e70426073880268354943d",
+      "bytes": 1206
+    },
+    {
+      "path": "Item/mt_staff_icon.wtm",
+      "before": "edd78351d7b02e64270422ec5ec3ac234f16cc1b9366c59471cd088c86ccaf38",
+      "sha256": "dba7b5522674d8b00d71fe399aca0e6411b2240b63935f3b7fc527dd5679b254",
+      "bytes": 1690
+    },
+    {
+      "path": "Texture/Body/mt_staff_icon.wtm",
+      "before": "edd78351d7b02e64270422ec5ec3ac234f16cc1b9366c59471cd088c86ccaf38",
+      "sha256": "dba7b5522674d8b00d71fe399aca0e6411b2240b63935f3b7fc527dd5679b254",
+      "bytes": 1690
+    }
+  ],
+  "installed_resource_count": 6,
+  "covered_item_ids": 63,
+  "item_definition_sources_verified": 3,
+  "format": "28x28 RGB24 BMP in TEAMMAY WTM",
+  "native_frame_identical": true,
+  "protected_files_unchanged": 68,
+  "manifest_version": "2026-09-24-blue-moon-icons-approved",
+  "manifest_entries_updated": 6,
+  "other_manifest_entries_unchanged": true,
+  "in_game_visual_test": false,
+  "remote_pc_updated": false,
+  "all_manifest_sources_verified": 803
+}

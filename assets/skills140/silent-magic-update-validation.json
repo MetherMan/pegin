@@ -1,0 +1,241 @@
+{
+  "passed": true,
+  "patched_engine_sha256": "da26047849cf6fefc323ad2357b30708cb89256df9b978afba0911ac6eaa43a8",
+  "sound_sha256": "ea1fb3a1ea9e36bc11f6378ca1ef936cfb239ee1edce3945eef58fc9bc672528",
+  "scope": "CMagic::Update through native CMagicEffect::Update and native SoundObject3D::Update3D",
+  "frames_per_comparison": 120,
+  "tests": [
+    {
+      "engine_base": "0x10000000",
+      "sound_base": "0x24000000",
+      "waiting_for_start": false,
+      "before": {
+        "frames": 120,
+        "totals": {
+          "engine": 63960,
+          "common": 24720,
+          "sound": 1080,
+          "update3d_calls": 120
+        },
+        "per_frame_profiles": [
+          {
+            "frames": 120,
+            "counts": {
+              "engine": 533,
+              "common": 206,
+              "sound": 9,
+              "update3d_calls": 1
+            }
+          }
+        ]
+      },
+      "after": {
+        "frames": 120,
+        "totals": {
+          "engine": 63480,
+          "common": 24720,
+          "sound": 0,
+          "update3d_calls": 0
+        },
+        "per_frame_profiles": [
+          {
+            "frames": 120,
+            "counts": {
+              "engine": 529,
+              "common": 206,
+              "sound": 0,
+              "update3d_calls": 0
+            }
+          }
+        ]
+      },
+      "omitted": {
+        "engine": 480,
+        "common": 0,
+        "sound": 1080,
+        "update3d_calls": 120
+      },
+      "state_equal_every_frame": true
+    },
+    {
+      "engine_base": "0x10000000",
+      "sound_base": "0x24000000",
+      "waiting_for_start": true,
+      "before": {
+        "frames": 120,
+        "totals": {
+          "engine": 22680,
+          "common": 0,
+          "sound": 0,
+          "update3d_calls": 0
+        },
+        "per_frame_profiles": [
+          {
+            "frames": 120,
+            "counts": {
+              "engine": 189,
+              "common": 0,
+              "sound": 0,
+              "update3d_calls": 0
+            }
+          }
+        ]
+      },
+      "after": {
+        "frames": 120,
+        "totals": {
+          "engine": 22680,
+          "common": 0,
+          "sound": 0,
+          "update3d_calls": 0
+        },
+        "per_frame_profiles": [
+          {
+            "frames": 120,
+            "counts": {
+              "engine": 189,
+              "common": 0,
+              "sound": 0,
+              "update3d_calls": 0
+            }
+          }
+        ]
+      },
+      "omitted": {
+        "engine": 0,
+        "common": 0,
+        "sound": 0,
+        "update3d_calls": 0
+      },
+      "state_equal_every_frame": true
+    },
+    {
+      "engine_base": "0x16000000",
+      "sound_base": "0x25000000",
+      "waiting_for_start": false,
+      "before": {
+        "frames": 120,
+        "totals": {
+          "engine": 63960,
+          "common": 24720,
+          "sound": 1080,
+          "update3d_calls": 120
+        },
+        "per_frame_profiles": [
+          {
+            "frames": 120,
+            "counts": {
+              "engine": 533,
+              "common": 206,
+              "sound": 9,
+              "update3d_calls": 1
+            }
+          }
+        ]
+      },
+      "after": {
+        "frames": 120,
+        "totals": {
+          "engine": 63480,
+          "common": 24720,
+          "sound": 0,
+          "update3d_calls": 0
+        },
+        "per_frame_profiles": [
+          {
+            "frames": 120,
+            "counts": {
+              "engine": 529,
+              "common": 206,
+              "sound": 0,
+              "update3d_calls": 0
+            }
+          }
+        ]
+      },
+      "omitted": {
+        "engine": 480,
+        "common": 0,
+        "sound": 1080,
+        "update3d_calls": 120
+      },
+      "state_equal_every_frame": true
+    },
+    {
+      "engine_base": "0x16000000",
+      "sound_base": "0x25000000",
+      "waiting_for_start": true,
+      "before": {
+        "frames": 120,
+        "totals": {
+          "engine": 22680,
+          "common": 0,
+          "sound": 0,
+          "update3d_calls": 0
+        },
+        "per_frame_profiles": [
+          {
+            "frames": 120,
+            "counts": {
+              "engine": 189,
+              "common": 0,
+              "sound": 0,
+              "update3d_calls": 0
+            }
+          }
+        ]
+      },
+      "after": {
+        "frames": 120,
+        "totals": {
+          "engine": 22680,
+          "common": 0,
+          "sound": 0,
+          "update3d_calls": 0
+        },
+        "per_frame_profiles": [
+          {
+            "frames": 120,
+            "counts": {
+              "engine": 189,
+              "common": 0,
+              "sound": 0,
+              "update3d_calls": 0
+            }
+          }
+        ]
+      },
+      "omitted": {
+        "engine": 0,
+        "common": 0,
+        "sound": 0,
+        "update3d_calls": 0
+      },
+      "state_equal_every_frame": true
+    }
+  ],
+  "per_active_silent_layer": {
+    "engine_instructions_omitted": 4,
+    "sound_instructions_omitted": 9,
+    "total_instructions_omitted": 13,
+    "virtual_calls_omitted": 1
+  },
+  "per_waiting_silent_layer": {
+    "instructions_omitted": 0,
+    "virtual_calls_omitted": 0
+  },
+  "conservative_per_cast_per_frame_upper_bounds": {
+    "meteor": {
+      "silent_layers": 86,
+      "instructions_omitted": 1118,
+      "virtual_calls_omitted": 86
+    },
+    "frost": {
+      "silent_layers": 210,
+      "instructions_omitted": 2730,
+      "virtual_calls_omitted": 210
+    }
+  },
+  "in_game_fps_measured": false,
+  "limits": "Instruction counts are not CPU cycles or FPS. Fixture omits SPE rendering and particles; unchanged rendering cost cancels between variants. Bounds assume all silent layers active, so delayed/expired layers reduce actual savings. No idle cost is saved when there is no active magic."
+}

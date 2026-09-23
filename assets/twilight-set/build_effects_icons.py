@@ -4,11 +4,14 @@ Motion, mesh, sound, blend mode, opacity, damage timing and frame count are
 copied byte-for-byte. Only RGB material values change in the new resources.
 """
 from mesh_tools import *
-import hashlib
+import hashlib,subprocess,sys
 O=Path(__file__).resolve().parent;C=ROOT/'runtime/client/GameClient';D=ROOT/'client-overlay'
-for kind,prefix in [('longbow','mt_longbow'),('staff','mt_staff')]:
-    im=Image.open(O/(kind+'-icon.png')).convert('RGB').resize((28,28),Image.Resampling.LANCZOS)
-    im.save(O/(kind+'-icon-28.png'));pack_texture(im,D/f'Item/{prefix}_icon.wtm');pack_texture(im,D/f'Texture/Body/{prefix}_icon.wtm')
+if (O/'icons-current/manifest.json').is_file():
+    subprocess.run([sys.executable,str(ROOT/'tools/build_current_weapon_icons.py')],check=True,cwd=ROOT)
+else:
+    for kind,prefix in [('longbow','mt_longbow'),('staff','mt_staff')]:
+        im=Image.open(O/(kind+'-icon.png')).convert('RGB').resize((28,28),Image.Resampling.LANCZOS)
+        im.save(O/(kind+'-icon-28.png'));pack_texture(im,D/f'Item/{prefix}_icon.wtm');pack_texture(im,D/f'Texture/Body/{prefix}_icon.wtm')
 color=np.array([.45,.80,1.0]);wed_reports=[]
 for original,target in [('arrow01.wed','mt_arrow.wed'),('ta_arrow01.wed','mt_arrow_hit.wed')]:
     raw=(C/'Effect'/original).read_bytes();b=bytearray(raw);at=31

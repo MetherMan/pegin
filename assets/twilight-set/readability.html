@@ -2,11 +2,11 @@
 <style>body{margin:0;background:#101720;color:#d8e5ef;font:15px system-ui}main{max-width:1400px;margin:auto;padding:24px}h1{font-size:24px;margin:0 0 8px}p{color:#a9bdcd;line-height:1.7}button,a{color:#bbddff}button{cursor:pointer;background:#25354a;border:1px solid #5b7594;border-radius:6px;padding:9px 16px;margin:3px}button.active{background:#235881}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}article{border:1px solid #354451;border-radius:10px;overflow:hidden}h2{font-size:18px;margin:14px 18px}canvas{width:100%;height:470px;display:block}.note{padding:0 18px 8px;font-size:13px}@media(max-width:850px){.grid{grid-template-columns:1fr}}</style>
 <main><h1>푸른달의 트와일라잇 · 화면 크기 비교</h1><p>실제 MOD·WTM과 캐릭터를 같은 비율로 표시합니다. 캐릭터 높이를 줄여서 초승달 실루엣과 푸른 날이 남는지 확인하세요.<br>브라우저 재현 화면이며, 게임의 조명·배경·발광 효과는 포함하지 않습니다.</p>
 <nav><button data-px="90">멀리 · 90px</button><button data-px="140" class="active">보통 · 140px</button><button data-px="240">가까이 · 240px</button><button id="rotate">자동 회전 켜기</button><button id="light">밝은 배경</button><a href="index.html">무기 확대 검수</a></nav><p id="status">게임 모델을 읽는 중…</p>
-<div class="grid"><article data-kind="sword"><h2>S4 검</h2><canvas></canvas><p class="note">불규칙한 청백색 칼날 · 초승달 가드</p></article><article data-kind="arrow"><h2>H03 활</h2><canvas></canvas><p class="note">휘어진 비대칭 뿔 · 푸른 초승달</p></article><article data-kind="magic"><h2>월식 갈고리 지팡이</h2><canvas></canvas><p class="note">월식 갈고리 · 가는 자루</p></article></div></main>
+<div class="grid"><article data-kind="sword"><h2>S4 검</h2><canvas></canvas><p class="note">불규칙한 청백색 칼날 · 초승달 가드</p></article><article data-kind="arrow"><h2>쌍월 대장궁</h2><canvas></canvas><p class="note">뒤로 휘어진 윗활대 · 긴 푸른 초승달</p></article><article data-kind="magic"><h2>월식 갈고리 지팡이</h2><canvas></canvas><p class="note">월식 갈고리 · 가는 자루</p></article></div></main>
 <script type="importmap">{"imports":{"three":"../twilight/vendor/three.module.js"}}</script>
 <script type="module">
 import * as T from 'three';import {NativeActor} from '../../client-overlay/Tools/SkillColors/actor.js';
-const data=await (await fetch('readability-actors.json?v=selected-h03-v13')).json();const views=[];let pixelHeight=140,rotating=false,light=false;
+const data=await (await fetch('readability-actors.json?v=twin-moon-greatbow-06-v2')).json();const views=[];let pixelHeight=140,rotating=false,light=false,frame=0,prev=0;
 for(const card of document.querySelectorAll('article')){
  const canvas=card.querySelector('canvas'),scene=new T.Scene();scene.background=new T.Color('#25302b');
  const renderer=new T.WebGLRenderer({canvas,antialias:true});renderer.setPixelRatio(devicePixelRatio);renderer.outputColorSpace=T.SRGBColorSpace;
@@ -16,10 +16,10 @@ for(const card of document.querySelectorAll('article')){
  const bodyBounds=new T.Box3();actor.parts.forEach(p=>bodyBounds.union(new T.Box3().setFromObject(p.mesh)));const height=bodyBounds.getSize(new T.Vector3()).y;
  views.push({canvas,scene,renderer,camera,actor,height,ground});
 }
-function resize(){for(const v of views){const w=v.canvas.clientWidth,h=v.canvas.clientHeight;v.renderer.setSize(w,h,false);v.camera.aspect=w/h;v.camera.updateProjectionMatrix();const d=v.height*h/(pixelHeight*2*Math.tan(Math.PI*v.camera.fov/360));const center=new T.Vector3(0,.85,0);v.camera.position.copy(center).addScaledVector(new T.Vector3(.42,.62,1).normalize(),d);v.camera.lookAt(center)}}
+function resize(){for(const v of views){const w=v.canvas.clientWidth,h=v.canvas.clientHeight;v.renderer.setSize(w,h,false);v.camera.aspect=w/h;v.camera.updateProjectionMatrix();const d=v.height*h/(pixelHeight*2*Math.tan(Math.PI*v.camera.fov/360));const center=new T.Vector3(0,.85,0);v.camera.position.copy(center).addScaledVector(new T.Vector3(.42,.62,1).normalize(),d);v.camera.lookAt(center)}requestDraw()}
 document.querySelectorAll('[data-px]').forEach(b=>b.onclick=()=>{pixelHeight=Number(b.dataset.px);document.querySelectorAll('[data-px]').forEach(x=>x.classList.toggle('active',x===b));resize()});
-document.querySelector('#rotate').onclick=e=>{rotating=!rotating;e.target.textContent=rotating?'자동 회전 끄기':'자동 회전 켜기'};
-document.querySelector('#light').onclick=e=>{light=!light;for(const v of views){v.scene.background.set(light?'#7d8272':'#25302b');v.ground.material.color.set(light?'#7d8272':'#303a30')}e.target.textContent=light?'어두운 배경':'밝은 배경'};
+document.querySelector('#rotate').onclick=e=>{rotating=!rotating;e.target.textContent=rotating?'자동 회전 끄기':'자동 회전 켜기';prev=0;requestDraw()};
+document.querySelector('#light').onclick=e=>{light=!light;for(const v of views){v.scene.background.set(light?'#7d8272':'#25302b');v.ground.material.color.set(light?'#7d8272':'#303a30')}e.target.textContent=light?'어두운 배경':'밝은 배경';requestDraw()};
 addEventListener('resize',resize);resize();document.querySelector('#status').textContent='게임 파일 읽기 완료 · 화면 높이는 비교용이며 실제 게임 카메라 설정값은 아닙니다.';
-let prev=0;function tick(t){for(const v of views){if(rotating)v.actor.group.rotation.y+=Math.min(50,t-prev)*.0005;v.renderer.render(v.scene,v.camera)}prev=t;requestAnimationFrame(tick)}requestAnimationFrame(tick);
+function requestDraw(){if(!frame&&!document.hidden)frame=requestAnimationFrame(tick)}function tick(t){frame=0;for(const v of views){if(rotating&&prev)v.actor.group.rotation.y+=Math.min(50,t-prev)*.0005;v.renderer.render(v.scene,v.camera)}prev=t;if(rotating)requestDraw()}document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;prev=0}else requestDraw()});requestDraw();
 </script></html>

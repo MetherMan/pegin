@@ -100,7 +100,8 @@ def main():
             fs=preview['effects'][e['wed']]['frames']
             assert all(g[:3]==[0,0,0] for g in fs),'Ice slid away from its ground root'
             assert fs[0][8]<fs[10][8] and max(g[8] for g in fs)<=fs[-1][8]*1.08
-            assert preview['effects'][e['wed']]['texture']=='ice_02.wtm'
+            expected_ice='ice_02.wtm' if colors['frostIce'].upper()=='#2374D8' else 'mf_ice_02.wtm'
+            assert preview['effects'][e['wed']]['texture']==expected_ice
             radii.append(math.hypot(*e['parts'][0]['TARGET'][:2]))
         offset=0
         assert all(a<b for a,b in zip(ft['ringTimes'],ft['ringTimes'][1:]))

@@ -522,7 +522,10 @@ public:
 	{
 		if( m_pActionMgr )
 		{
-			m_pActionMgr->SetMode( btMode );
+            if (btMode == 2)
+                m_pActionMgr->StopImmediately();
+            else
+                m_pActionMgr->SetMode(btMode);
 		} //if
 	} //SetMode
 

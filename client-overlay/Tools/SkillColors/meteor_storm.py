@@ -1,6 +1,6 @@
 """Eight tilted triple portals, native artillery, then a separate final impact."""
 import math
-from native_vfx import plane,flame_plume,flame_funnel,arcane_texture,mesh,frames,rgb,envelope
+from native_vfx import plane,flame_plume,flame_funnel,arcane_texture,mesh,frames,rgb,envelope,GROUND_SPEED
 from skill_tuning_frames import shade_generated
 
 def build(read,out,wed,part,effect,sound,blow,m,color):
@@ -16,7 +16,7 @@ def build(read,out,wed,part,effect,sound,blow,m,color):
     impact=round(last+travel(final_start,(0,0),final_speed));fade=impact+2100;end=impact+3800
     s=sound('mb_0004_A.wav')
     seal_textures=[arcane_texture(read,out,'mm',n) for n in ('jin03_2','jin02','jin05')]
-    def anchor(x,y,z,at,life):return part(f'[ENEMY]\n[TARGET] {x:.5f} {y:.5f} {z:.5f}\n[STARTTIME] {at}\n[TIMELIMIT] {life}')
+    def anchor(x,y,z,at,life):return part(f'[ENEMY]\n[SPEED] {GROUND_SPEED}\n[TARGET] {x:.5f} {y:.5f} {z:.5f}\n[STARTTIME] {at}\n[TIMELIMIT] {life}')
     def seal(name,layer,center,radius,axis,tilt,at,life):
         normal=plane(read,out,name+'.WEM',axis,tilt)
         def transform(n,fs):
@@ -59,7 +59,7 @@ def build(read,out,wed,part,effect,sound,blow,m,color):
         x,y,z=start;tx,ty=target
         p=part(f'[NOSHOW]\n[ENEMY]\n[TARGET] {x} {y} {z}\n[STARTTIME] {at-80}\n[TIMELIMIT] 80')
         p+=part(f'[ATTACK]\n[TARGET] {tx} {ty} {targetz}\n[MOVETYPE] 1\n[TIMELIMIT] 0\n[SPEED] {final_speed if heavy_shot else m["flightSpeed"]}')
-        p+=part(f'[NOSHOW]\n[ENEMY]\n[TARGET] {tx} {ty} {m["impactHeight"]}\n[POS] 0 0 {m["impactHeight"]-targetz}\n'+(blow('mm_meteor_hit.wav')+'\n' if damage else '[SOUND] 0 mm_meteor_hit.wav 3\n')+f'[TAIL] {tail}\n[TIMELIMIT] {1250 if heavy_shot else 950}')
+        p+=part(f'[NOSHOW]\n[ENEMY]\n[SPEED] {GROUND_SPEED}\n[TARGET] {tx} {ty} {m["impactHeight"]}\n[POS] 0 0 {m["impactHeight"]-targetz}\n'+(blow('mm_meteor_hit.wav')+'\n' if damage else '[SOUND] 0 mm_meteor_hit.wav 3\n')+f'[TAIL] {tail}\n[TIMELIMIT] {1250 if heavy_shot else 950}')
         return effect(w,p,True)
     for i,(start,target,at) in enumerate(zip(starts,targets,shots)):
         s+=sound('mm_meteor_launch.wav',at)+flight(cannon,start,target,at,hit,i<6)
@@ -71,7 +71,7 @@ def build(read,out,wed,part,effect,sound,blow,m,color):
         p=part(f'[NOSHOW]\n[ENEMY]\n[TARGET] {x} {y} {z}\n[STARTTIME] {launched-80}\n[TIMELIMIT] 80')
         speed=final_speed if source==final_start and launched==last else m['flightSpeed']
         p+=part(f'[NOSHOW]\n[ATTACK]\n[TARGET] {dx} {dy} {targetz}\n[MOVETYPE] 1\n[TIMELIMIT] 0\n[SPEED] {speed}')
-        p+=part(f'[NOSHOW]\n[ENEMY]\n[TARGET] {tx} {ty} {tz}\n[POS] {ox} {oy} {tz-targetz}\n[TAIL] {tail}\n[TIMELIMIT] {life}')
+        p+=part(f'[NOSHOW]\n[ENEMY]\n[SPEED] {GROUND_SPEED}\n[TARGET] {tx} {ty} {tz}\n[POS] {ox} {oy} {tz-targetz}\n[TAIL] {tail}\n[TIMELIMIT] {life}')
         return effect(None,p)
     s+=follow(shock,1250)
     from meteor_blast import build as build_blast

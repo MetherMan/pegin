@@ -231,6 +231,6 @@ ws_0078_1.mod 八如C        0.445           -0.0          -0.0                1.4
 ws_0079_1.mod 八如C        0.243            0.0          -0.0                1.394          0.0             0.0 
 ws_0080_1.mod 八如B        0.384            0.0           0.0                1.479          0.0             0.0
 ws_0081_1.mod 八如A        0.194           -0.0          -0.052              1.443         -0.0             0.407
-mt_twilight_1.mod twilight_blue 0.1458286 0.0 0.0 1.6041147 0.0 0.0
-mt_twilight_2.mod twilight_blue 0.1458286 0.0 0.0 1.6041147 0.0 0.0
-mt_twilight_3.mod twilight_blue 0.1458286 0.0 0.0 1.6041147 0.0 0.0
+mt_twilight_1.mod twilight_blue 0.1458286 0.0 0.0 1.74186882 0.0 0.0
+mt_twilight_2.mod twilight_blue 0.1458286 0.0 0.0 1.74186882 0.0 0.0
+mt_twilight_3.mod twilight_blue 0.1458286 0.0 0.0 1.74186882 0.0 0.0

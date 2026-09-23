@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "width_scale": 1.2,
+  "widths_before": [
+    0.22,
+    0.2
+  ],
+  "widths_after": [
+    0.264,
+    0.24
+  ],
+  "size_key_ratios": [
+    1.2,
+    1.2,
+    1.2000000515851106,
+    1.2000000255758105,
+    1.2000000507181339,
+    1.1999999497153544,
+    1.1999999750744215,
+    1.1999999752911659,
+    1.2000000244920908,
+    1.2000000242753461,
+    1.2,
+    1.2000000476837158
+  ],
+  "only_12_size_floats_changed": true,
+  "other_rows_and_color_life_texture_marker_byte_identical": true,
+  "center_height_before": 0.1,
+  "center_height_after": 0.2,
+  "minimum_edge_height_above_level_ground": 0.068,
+  "exe_sha256": "d0c0eb6b4564505259c6c5cf0960d5d1c62a5859bcd6d265e71754c00cdd9a23",
+  "particle_sha256": "ec65bdb9e01b48994c1a7931f18946066cbce8bd9665913eba2c5eef4fbfd5d7",
+  "render_and_engine_unchanged": true,
+  "in_game_visual_test": false
+}

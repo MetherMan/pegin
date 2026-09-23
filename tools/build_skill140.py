@@ -6,8 +6,8 @@ sys.path.insert(0,str(R/'runtime/pylibs'))
 SPECS=[
  dict(id=19120,name='헤븐 페너트레이션',key='mt_heaven',peer=12048,branch=1,hits=3,area=5,mp=140,cool=8,damage=[560,620]),
  dict(id=19121,name='식스폴드 샷',key='mt_six',peer=12045,branch=1,hits=6,area=0,mp=150,cool=9,damage=[380,420]),
- dict(id=19122,name='메테오 버스트',key='mt_meteor',peer=10106,branch=2,hits=7,area=6,mp=320,cool=12,damage=[550,610]),
- dict(id=19123,name='아일랜드 오브 코시투스',key='mt_frost',peer=10111,branch=2,hits=3,area=6,mp=280,cool=10,damage=[1120,1230])]
+ dict(id=19122,name='메테오 버스트',key='mt_meteor',peer=10106,branch=2,hits=7,area=6,mp=320,cool=4,damage=[550,610]),
+ dict(id=19123,name='아일랜드 오브 코시투스',key='mt_frost',peer=10111,branch=2,hits=3,area=6,mp=280,cool=4,damage=[1120,1230])]
 def read(p):return p.read_bytes().decode('cp949')
 def write(p,s):p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes((s.rstrip()+'\r\n').replace('\r\r','\r').encode('cp949'))
 def rows(s):return {int(r[0]):r for l in s.splitlines() if (r:=l.split('\t'))[0].isdigit()}
@@ -168,6 +168,7 @@ def effects(config=None):
   target=D/rel;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
  (O/'tuning.json').write_bytes(compiled['Tools/SkillColors/tuning.json'])
  (O/'effect-timing.json').write_text(json.dumps(timing,indent=2)+'\n')
+ (R/'game-data/DATA/SKILL140_DEATH.txt').write_bytes(('19122 %d\n19123 %d\n'%(timing['meteor']['finalImpact'],timing['frost']['pillarAt'])).encode('ascii'))
  from native_assets import read_wed
  final_resources=[dict(target=Path(rel).name,frames=len(read_wed(data)['frames'])) for rel,data in compiled.items() if rel.startswith('Effect/') and rel.lower().endswith('.wed')]
  (O/'effect-build.json').write_text(json.dumps(dict(resources=final_resources,magic=magics,tuning=tuning,timing=timing,meteor_portal_positions=portal_positions,frost_angles=[0,-tuning['frost']['spreadAngle'],tuning['frost']['spreadAngle']]),indent=2)+'\n')

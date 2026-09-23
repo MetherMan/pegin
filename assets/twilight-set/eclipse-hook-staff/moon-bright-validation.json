@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "mode": "built-in ImageGen edit; UV integration",
+  "changed_pixels": 13455,
+  "outside_moon_byte_identical": true,
+  "mod_mesh_uv_sha256": {
+    "client-overlay\\Equip\\mt_staff_1.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Equip\\mt_staff_2.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Equip\\mt_staff_3.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
+  },
+  "atlas_sha256": "b6a5171ed4e77bda7fc0cd76ddf5c0cbfe9f5e1c05fd9d619d7e506a93a14efe",
+  "in_game_visual_test": false
+}

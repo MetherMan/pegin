@@ -283,13 +283,15 @@ def compile_resources(read, settings, colors, only=None):
         inner=text.split('\n',1)[1].rsplit('[/NAME]',1)[0]
         emit('mt_'+kind+'A',inner)
     from meteor_storm import build as build_meteor_storm
+    # Native ATTACKMAGIC retains the last position after target removal. Without
+    # it, a lethal hit discards every remaining layer, including the final blast.
     if 'meteor' in selected:
         storm,meta['meteor']=build_meteor_storm(read,out,wed,part,effect,sound,blow,cfg['meteor'],colors['meteor'])
-        emit('mt_meteorB',storm)
+        emit('mt_meteorB','[ATTACKMAGIC]\n'+storm)
     from cocytus import build as build_cocytus
     if 'frost' in selected:
         frost,meta['frost']=build_cocytus(read,out,wed,part,effect,sound,blow,cfg['frost'],colors['frost'],colors['frostIce'])
-        emit('mt_frostB',frost)
+        emit('mt_frostB','[ATTACKMAGIC]\n'+frost)
     from archer_effects import build as build_archers
     if selected&{'heaven','six'}:meta.update(build_archers(read,out,wed,part,effect,sound,blow,cfg,emit,only=selected))
     out['Tools/SkillColors/tuning.json']=(json.dumps(cfg,indent=2)+'\n').encode()

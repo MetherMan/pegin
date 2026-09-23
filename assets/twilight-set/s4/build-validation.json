@@ -12,7 +12,7 @@
         -0.027499999850988388
       ],
       [
-        1.6129112243652344,
+        1.751720905303955,
         0.13332004845142365,
         0.027499999850988388
       ]
@@ -74,7 +74,25 @@
     "separate_moon_badge": false,
     "parts": 2,
     "holes": 0,
-    "in_game_visual_test": false
+    "in_game_visual_test": false,
+    "blade_refinement": {
+      "passed": true,
+      "source_model_sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "blade_root_native_x": 0.4561637031374044,
+      "parameters": {
+        "length_factor": 1.12,
+        "width_factor": 1.1,
+        "thickness_factor": 1.15,
+        "blend_pixels": 100,
+        "source_model_sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+      },
+      "guard_handle_pommel_identical": true,
+      "topology_identical": true,
+      "source_uvs_identical": true,
+      "protected_geometry_sha256": "9a1f169dfdffa7d9bb3432da07ec80a3d88be51f1a3d942f4996fe4588e5e5b9",
+      "topology_uv_sha256": "8d1a86785c57e4d83425b4379e8ebe57833417b44f66ff6be5c986c3c9ad71a0"
+    },
+    "blade_refinement_report": "s4/blade-refinement-validation.json"
   },
   "surface": {
     "model": "mt_twilight_1.mod",
@@ -85,27 +103,27 @@
     "closed_components": 3,
     "component_volumes": [
       0.0003313850674377435,
-      0.004606361613160108,
+      0.005384225801971729,
       0.0002721165503142095
     ],
-    "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+    "sha256": "181ca3401b58c864350d6f94b985cccd6808f488a750fc578c794632d9493c52",
     "passed": true
   },
   "native_source_pixels_verified": 466752,
   "protected_sha256": {
-    "client-overlay\\Equip\\mt_longbow_1.mod": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
-    "client-overlay\\Equip\\mt_longbow_2.mod": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
-    "client-overlay\\Equip\\mt_longbow_3.mod": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
-    "client-overlay\\Texture\\Equip\\mt_longbow_atlas.wtm": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea",
-    "client-overlay\\Equip\\mt_staff_1.mod": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
-    "client-overlay\\Equip\\mt_staff_2.mod": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
-    "client-overlay\\Equip\\mt_staff_3.mod": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
-    "client-overlay\\Texture\\Equip\\mt_staff_atlas.wtm": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f",
-    "assets\\twilight-set\\longbow-native.glb": "4d189dd2849caa7cecae8298c4588a0bbfcaabb1f3b6a9dbd3d0c96ef15ef93d",
-    "assets\\twilight-set\\staff-native.glb": "6fda47c0aa37754eb5aeba63e400ef52c36f3da6f09fb76470f4d8c289848697",
-    "client-overlay\\Item\\ITEM.dat": "ba6e26b00c984b75bfb4b66ddd5acda3418a6c25c2df2586db142a9f950beed4",
-    "client-overlay\\Interface\\item.dat": "b7fd7b4c995c70a9f862fa5a80173830825048fea17fdaa1fb8f997d35bedb94",
-    "client-overlay\\Equip\\Trace.txt": "6ff9b65dcbec97c8074fa5bc65b0d93641fb4e90f63a434313626a56d836d353"
+    "client-overlay\\Equip\\mt_longbow_1.mod": "0560c4681332f0443c0c4b5b38819a260195c5125a207631d561b36cfe7a3aef",
+    "client-overlay\\Equip\\mt_longbow_2.mod": "0560c4681332f0443c0c4b5b38819a260195c5125a207631d561b36cfe7a3aef",
+    "client-overlay\\Equip\\mt_longbow_3.mod": "0560c4681332f0443c0c4b5b38819a260195c5125a207631d561b36cfe7a3aef",
+    "client-overlay\\Texture\\Equip\\mt_longbow_atlas.wtm": "be8d95cbb419311c4babbba84c4d0a20fe1786535cff3d31ec27965b2c83ba52",
+    "client-overlay\\Equip\\mt_staff_1.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Equip\\mt_staff_2.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Equip\\mt_staff_3.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Texture\\Equip\\mt_staff_atlas.wtm": "b6a5171ed4e77bda7fc0cd76ddf5c0cbfe9f5e1c05fd9d619d7e506a93a14efe",
+    "assets\\twilight-set\\longbow-native.glb": "bdedf25c8dcfd49eda7dfc306c377540aee408e7f35525d272df622e5b6ea857",
+    "assets\\twilight-set\\staff-native.glb": "81d58d6e1a3c5786ed93b54550ecd8569b9bf9febf66094ac00c13513d21472f",
+    "client-overlay\\Item\\ITEM.dat": "f06d05bd9eab7f3265b874f46927a2ec3b3da1c77612f0aa517ad010ff7e5e73",
+    "client-overlay\\Interface\\item.dat": "0597bc9abbb6651a7a6edee44173c53d601edcad386c7ae46c68f77064733b27",
+    "client-overlay\\Equip\\Trace.txt": "c616b4da24e75bf28c478067576876e9fd87a575769bf53da6d59574fcf83299"
   },
   "bow_and_staff_not_regenerated": true,
   "installed_client_written": false,
@@ -128,17 +146,17 @@
   "replacements": [
     {
       "path": "Equip/mt_twilight_1.mod",
-      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "sha256": "181ca3401b58c864350d6f94b985cccd6808f488a750fc578c794632d9493c52",
       "bytes": 884332
     },
     {
       "path": "Equip/mt_twilight_2.mod",
-      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "sha256": "181ca3401b58c864350d6f94b985cccd6808f488a750fc578c794632d9493c52",
       "bytes": 884332
     },
     {
       "path": "Equip/mt_twilight_3.mod",
-      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "sha256": "181ca3401b58c864350d6f94b985cccd6808f488a750fc578c794632d9493c52",
       "bytes": 884332
     },
     {
@@ -146,5 +164,96 @@
       "sha256": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf",
       "bytes": 753583
     }
-  ]
+  ],
+  "blade_only_refinement": {
+    "passed": true,
+    "source_sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+    "refined_sha256": "181ca3401b58c864350d6f94b985cccd6808f488a750fc578c794632d9493c52",
+    "bytes": 884332,
+    "vertices": 5689,
+    "triangles": 11332,
+    "changed_vertices": 3412,
+    "protected_vertices": 2277,
+    "changed_bytes": 195377,
+    "protected_bytes_identical": true,
+    "topology_identical": true,
+    "source_uvs_identical": true,
+    "guard_handle_pommel_identical": true,
+    "native_grip_origin_preserved": true,
+    "blade_root_native_x": 0.4561637031374044,
+    "blend_native_length": 0.13070593213106144,
+    "requested_factors": [
+      1.12,
+      1.1,
+      1.15
+    ],
+    "minimum_jacobian_determinant": 1.000045569022073,
+    "old_bounds": [
+      [
+        -0.33722129464149475,
+        -0.25356951355934143,
+        -0.027499999850988388
+      ],
+      [
+        1.6129112243652344,
+        0.13332004845142365,
+        0.027499999850988388
+      ]
+    ],
+    "new_bounds": [
+      [
+        -0.33722129464149475,
+        -0.25356951355934143,
+        -0.027499999850988388
+      ],
+      [
+        1.751720905303955,
+        0.13332004845142365,
+        0.027499999850988388
+      ]
+    ],
+    "old_blade_bounds": [
+      [
+        0.45681723952293396,
+        -0.09541533142328262,
+        -0.022969234734773636
+      ],
+      [
+        1.6129112243652344,
+        0.09672238677740097,
+        0.022969234734773636
+      ]
+    ],
+    "new_blade_bounds": [
+      [
+        0.45681723952293396,
+        -0.10495686531066895,
+        -0.024564921855926514
+      ],
+      [
+        1.751720905303955,
+        0.09683967381715775,
+        0.024564921855926514
+      ]
+    ],
+    "changed_faces_collapsed_or_reversed": 0,
+    "blade_length_ratio": 1.1200000047683716,
+    "trace_recommendation": {
+      "start_unchanged": 0.1458286,
+      "old_end": 1.6041147,
+      "new_end": 1.7418688196235115
+    },
+    "in_game_visual_test": false,
+    "trace_lines_updated": 3,
+    "model_file_written": "client-overlay/Equip/mt_twilight_{1,2,3}.mod",
+    "protected_geometry_sha256": "9a1f169dfdffa7d9bb3432da07ec80a3d88be51f1a3d942f4996fe4588e5e5b9",
+    "topology_uv_sha256": "8d1a86785c57e4d83425b4379e8ebe57833417b44f66ff6be5c986c3c9ad71a0"
+  },
+  "unchanged_texture_and_gameplay_sha256": {
+    "client-overlay/Texture/Equip/mt_twilight_atlas.wtm": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf",
+    "client-overlay/Texture/Equip/mt_staff_atlas.wtm": "b6a5171ed4e77bda7fc0cd76ddf5c0cbfe9f5e1c05fd9d619d7e506a93a14efe",
+    "client-overlay/DeicideOnline.exe": "f7bee3ad9706e7695f132ed8e871bd08f19829870c728ee20afe26852a38b1f8",
+    "client-overlay/Engine.dll": "da26047849cf6fefc323ad2357b30708cb89256df9b978afba0911ac6eaa43a8",
+    "client-overlay/Effect/particle.ptc": "74b8530dd531c24a5d1c10a0c478722700ac8f0b53975bba81b846b61b2a312f"
+  }
 }

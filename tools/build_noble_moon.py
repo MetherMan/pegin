@@ -82,6 +82,9 @@ def surface_depth(kind,spec,xy,distance):
     return .001+.026*(1-.65*u)*np.sin(np.minimum(distance/18,1)*math.pi/2)
 
 def build(spec):
+    if spec.get('artifact_tag')=='twin-moon-greatbow':
+        from build_twin_moon_greatbow import build_bow
+        return build_bow(spec)
     if spec.get('artifact_tag')=='h03-horn-bow':
         from build_h03_horn_bow import build_bow
         return build_bow(spec)
@@ -111,9 +114,16 @@ def build(spec):
     # blue artwork. No grey steel material and no independent moon badge.
     images=[rgb.crop(spec['box']),rgb.crop(spec['side_material_box']),Image.new('RGB',(8,8),(110,218,255))]
     parts=remapped
+    if spec.get('blade_refinement'):
+        from refine_s4_blade import refine_preview_parts
+        parts=refine_preview_parts(parts,spec)
     write_glb(O/f"{prefix}-{spec.get('artifact_tag','noble')}.glb",parts,images)
     ref='ws_0081_1.mod' if kind=='sword' else 'wb_0040_1.mod'
     result=export_native(O/'payload',prefix,parts,images,R/'runtime/client/GameClient/Equip'/ref,atlas_packer=full_resolution_atlas)
+    if spec.get('blade_refinement'):
+        from refine_s4_blade import verify_refined_native
+        reference=json.loads((O/'s4/blade-refinement-validation.json').read_text(encoding='utf-8'))
+        result['blade_refinement']=verify_refined_native((O/f'payload/{prefix}_1.mod').read_bytes(),spec,reference)
     for lod in (1,2,3):shutil.copy2(O/f'payload/{prefix}_{lod}.mod',D/f'Equip/{prefix}_{lod}.mod')
     shutil.copy2(O/f'payload/{prefix}_atlas.wtm',D/f'Texture/Equip/{prefix}_atlas.wtm')
     result.update(kind=kind,source=spec['source'],source_sha256=digest(source),grip=spec['grip'],scale=scale,

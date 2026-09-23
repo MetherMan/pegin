@@ -173,6 +173,14 @@ def main():
                   height_ratio_to_prior=height / old_height,
                   replacements=[dict(path=str(p.relative_to(D)).replace('\\', '/'),
                                      sha256=digest(p), bytes=p.stat().st_size) for p in replacements])
+    # Rebuilding geometry must retain the user's later moon-only brightness edit.
+    if (REVIEW / 'moon-bright-imagegen.png').exists():
+        from apply_staff_moon_texture import main as apply_moon
+        apply_moon()
+        report['moon_texture_override'] = 'moon-bright-validation.json'
+        for replacement in report['replacements']:
+            path = D / replacement['path']
+            replacement.update(sha256=digest(path), bytes=path.stat().st_size)
     (REVIEW / 'build-validation.json').write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps(dict(passed=True, triangles=result['triangles'], parts=result['parts'],
                          holes=result['holes'], height_ratio=report['height_ratio_to_prior'],

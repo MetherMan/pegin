@@ -1,0 +1,204 @@
+{
+  "original_sha256": "fd282cd7c764880de68855c792f9357da86d5416dfdd509473b921ca022aa181",
+  "original_size": 311296,
+  "sha256": "1cf254e9f2d1cc63fc73a80160c659a90f76db2ced5488f8ab4445716c38d4e2",
+  "section_rva": 319488,
+  "undo": [
+    [
+      110544,
+      "8d4c240457"
+    ],
+    [
+      696,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      254,
+      "0500"
+    ],
+    [
+      328,
+      "00e00400"
+    ],
+    [
+      276,
+      "00c00300"
+    ],
+    [
+      336,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "level explicitly marked stationary spell layers",
+      "va": 268546000,
+      "original": "8d4c240457",
+      "replacement": "e92b300300",
+      "target": 268754944,
+      "resume": 268546005,
+      "assembly": "\n        push ecx;\n        mov ecx, dword ptr [esi+0x1c];\n        mov ecx, dword ptr [ecx+8];\n        cmp dword ptr [ecx+0x54], 140031;\n        jne ordinary;\n        xor eax, eax;\n    ordinary:\n        pop ecx;\n        lea ecx, [esp+4];\n        push edi;\n    ",
+      "code": "518b4e1c8b4908817954ff220200750231c0598d4c240457e9b8cffcff"
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "native_function": "CMagicEffect::UpdateEnemyPos",
+    "actual_common_math": true,
+    "relocated_bases": 2,
+    "stationary_cases": [
+      {
+        "base": "0x10000000",
+        "origin": [
+          0,
+          -5,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0.07
+        ],
+        "up": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "base": "0x10000000",
+        "origin": [
+          0,
+          -2,
+          0
+        ],
+        "target": [
+          1.4,
+          0.6,
+          0.55
+        ],
+        "up": [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "base": "0x10000000",
+        "origin": [
+          4,
+          -3,
+          2
+        ],
+        "target": [
+          0,
+          0,
+          5
+        ],
+        "up": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "base": "0x10000000",
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "base": "0x16000000",
+        "origin": [
+          0,
+          -5,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0.07
+        ],
+        "up": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "base": "0x16000000",
+        "origin": [
+          0,
+          -2,
+          0
+        ],
+        "target": [
+          1.4,
+          0.6,
+          0.55
+        ],
+        "up": [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "base": "0x16000000",
+        "origin": [
+          4,
+          -3,
+          2
+        ],
+        "target": [
+          0,
+          0,
+          5
+        ],
+        "up": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "base": "0x16000000",
+        "origin": [
+          0,
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "up": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    ],
+    "ordinary_comparisons": 48,
+    "yaw_matches_horizontal_reference": true,
+    "zero_horizontal_distance_safe": true,
+    "ground_regression": {
+      "previous_floor_min_z": -0.030790125876665117,
+      "fixed_floor_min_z": 0.07
+    },
+    "in_game_visual_test": false
+  }
+}

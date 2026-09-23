@@ -1,0 +1,142 @@
+{
+  "method": "WTM zlib payload decoded to BMP, saved losslessly as PNG. No resize, crop, drawing, recolor, or alpha editing.",
+  "items": [
+    {
+      "id": 11403,
+      "name": "레드나이트양손검",
+      "type": 2,
+      "rank": 5,
+      "originalWTM": "runtime/client/GameClient/Item/ws_0076.wtm",
+      "iconReference": "ws_0076.tga",
+      "decodedPNG": "assets/twilight-set/icons-current/reference/11403-red-knight-greatsword-ws_0076.png",
+      "size": [
+        28,
+        28
+      ],
+      "mode": "RGB",
+      "sourceSha256": "13913d813b18b6e12b876a3a468dc16389842fb30119fbf5fc050826a344758c",
+      "pixelSha256": "2ed7af808d32e1012d698321ad7925c4e81333b703e5fac7afca98b5b403849c",
+      "pixelsUnchanged": true
+    },
+    {
+      "id": 11424,
+      "name": "블랙나이트양손검",
+      "type": 2,
+      "rank": 6,
+      "originalWTM": "runtime/client/GameClient/Item/ws_0081.wtm",
+      "iconReference": "ws_0081.tga",
+      "decodedPNG": "assets/twilight-set/icons-current/reference/11424-black-knight-greatsword-ws_0081.png",
+      "size": [
+        28,
+        28
+      ],
+      "mode": "RGB",
+      "sourceSha256": "45e401bf7f11292c4a7bfb7c2bf64435f0059f01643a564b391f9459c9bb2586",
+      "pixelSha256": "b9167d6ac60c13e8ab6719b846f97e90b6f86dae8433f13c094bde8dea874d31",
+      "pixelsUnchanged": true
+    },
+    {
+      "id": 11340,
+      "name": "레드나이트한손검",
+      "type": 1,
+      "rank": 5,
+      "originalWTM": "runtime/client/GameClient/Item/ws_0060.wtm",
+      "iconReference": "ws_0060.tga",
+      "decodedPNG": "assets/twilight-set/icons-current/reference/11340-red-knight-onehand-sword-ws_0060.png",
+      "size": [
+        28,
+        28
+      ],
+      "mode": "RGB",
+      "sourceSha256": "3091c8ad6fa96ab5700effb0643472774eb0f8fa63b80145d31cd4f8edf8659c",
+      "pixelSha256": "a309c0343d8de4d0ca1ec070177b8ecd285ad8344e1f884921d8e89637573788",
+      "pixelsUnchanged": true
+    },
+    {
+      "id": 11361,
+      "name": "블랙나이트한손검",
+      "type": 1,
+      "rank": 6,
+      "originalWTM": "runtime/client/GameClient/Item/ws_0071.wtm",
+      "iconReference": "ws_0071.tga",
+      "decodedPNG": "assets/twilight-set/icons-current/reference/11361-black-knight-onehand-sword-ws_0071.png",
+      "size": [
+        28,
+        28
+      ],
+      "mode": "RGB",
+      "sourceSha256": "724f8fb7d59ccb1d6d34629799eb66ca10244140f5fa7187f8d90846d864c0d6",
+      "pixelSha256": "f2ddac1731eebbec6c9de38ceb2f9dfcad4ff8a47082657584b9f049001e745d",
+      "pixelsUnchanged": true
+    },
+    {
+      "id": 11718,
+      "name": "레드헌터롱보우",
+      "type": 12,
+      "rank": 5,
+      "originalWTM": "runtime/client/GameClient/Item/wb_0038.wtm",
+      "iconReference": "wb_0038.tga",
+      "decodedPNG": "assets/twilight-set/icons-current/reference/11718-red-hunter-longbow-wb_0038.png",
+      "size": [
+        28,
+        28
+      ],
+      "mode": "RGB",
+      "sourceSha256": "b91f267cc9de0a12d945d2fca7314f2f17160341d1e705dd6b8d6ac80d89710e",
+      "pixelSha256": "4ee32bb84ee950232c4b06dac62873240420610f49524e3754497660241ff4ba",
+      "pixelsUnchanged": true
+    },
+    {
+      "id": 11739,
+      "name": "화이트헌터롱보우",
+      "type": 12,
+      "rank": 6,
+      "originalWTM": "runtime/client/GameClient/Item/wb_0040.wtm",
+      "iconReference": "wb_0040.tga",
+      "decodedPNG": "assets/twilight-set/icons-current/reference/11739-white-hunter-longbow-wb_0040.png",
+      "size": [
+        28,
+        28
+      ],
+      "mode": "RGB",
+      "sourceSha256": "d676f49517157190fe483e0ad1e942d034fd38dd8f2bb96034a041404f2c4f30",
+      "pixelSha256": "de50e7a3243cc486559a11858196d514ccbda7275603b35fc85bbe4a9d8b6e2d",
+      "pixelsUnchanged": true
+    },
+    {
+      "id": 11844,
+      "name": "대지의정령스태프",
+      "type": 18,
+      "rank": 5,
+      "originalWTM": "runtime/client/GameClient/Item/ww_0002.wtm",
+      "iconReference": "ww_0002.tga",
+      "decodedPNG": "assets/twilight-set/icons-current/reference/11844-earth-spirit-staff-ww_0002.png",
+      "size": [
+        28,
+        28
+      ],
+      "mode": "RGB",
+      "sourceSha256": "6828d1a11720e24687b41797394725f3b947baaa7193e28d49b54256eaaa4469",
+      "pixelSha256": "954a774b3acfc82e8dddc9116d1b8a7f45d88ec2074e379e17d306f433ad59cb",
+      "pixelsUnchanged": true
+    },
+    {
+      "id": 11865,
+      "name": "달의정령스태프",
+      "type": 18,
+      "rank": 6,
+      "originalWTM": "runtime/client/GameClient/Item/ww_0015.wtm",
+      "iconReference": "ww_0015.tga",
+      "decodedPNG": "assets/twilight-set/icons-current/reference/11865-moon-spirit-staff-ww_0015.png",
+      "size": [
+        28,
+        28
+      ],
+      "mode": "RGB",
+      "sourceSha256": "907d662a87bbd5b42a1363aeaf9db39126b98771edc555e499cf72dceaee2236",
+      "pixelSha256": "f09007516f75be60cc534de192336473b71a1d077763fae7b312ac9d8b8cf832",
+      "pixelsUnchanged": true
+    }
+  ],
+  "note": "No item named Black Knight or Red Knight longbow/staff exists in this table. Bow/staff references are their actual Rank 5/6 counterparts."
+}

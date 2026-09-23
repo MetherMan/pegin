@@ -27,8 +27,8 @@
   "frost": {
     "startDelay": 100,
     "stepGap": 60,
-    "distance": 12,
-    "size": 1.9,
+    "distance": 10,
+    "size": 1.3,
     "riseSpeed": 1.1,
     "brightness": 1.6,
     "spreadAngle": 25,
@@ -41,11 +41,11 @@
     "sealOffsetX": 0,
     "sealOffsetY": 0,
     "blizzardStrength": 1,
-    "iceDensity": 2.5,
-    "mistAmount": 1,
+    "iceDensity": 2.4,
+    "mistAmount": 1.4,
     "inwardStartRadius": 1.4,
     "inwardEndRadius": 0.1,
-    "iceOpacity": 90
+    "iceOpacity": 76
   },
   "heaven": {
     "startDelay": 1750,

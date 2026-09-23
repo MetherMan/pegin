@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "design": "twin-moon-greatbow-06",
+  "model": {
+    "triangles": 5148,
+    "vertices": 2602,
+    "meshes": 1,
+    "bounds": [
+      [
+        -0.7905668020248413,
+        -0.30614474415779114,
+        -0.03240000084042549
+      ],
+      [
+        1.213819980621338,
+        0.22293418645858765,
+        0.03240000084042549
+      ]
+    ],
+    "atlas": {
+      "atlas_size": 2048,
+      "layout": "unscaled-tall-source-crops",
+      "unique_tiles": 3,
+      "material_rects": {
+        "0": {
+          "x": 8,
+          "y": 8,
+          "width": 400,
+          "height": 1492,
+          "source_size": [
+            400,
+            1492
+          ],
+          "resampled": false
+        },
+        "1": {
+          "x": 424,
+          "y": 8,
+          "width": 8,
+          "height": 24,
+          "source_size": [
+            8,
+            24
+          ],
+          "resampled": false
+        },
+        "2": {
+          "x": 448,
+          "y": 8,
+          "width": 2,
+          "height": 22,
+          "source_size": [
+            2,
+            22
+          ],
+          "resampled": false
+        }
+      },
+      "source_pixels_preserved": true,
+      "triangles_by_material": {
+        "0": 3422,
+        "1": 1702,
+        "2": 24
+      },
+      "surface_area_by_material": {
+        "0": {
+          "source": 0.7361912065565706,
+          "atlas": 0.7361912065565706
+        },
+        "1": {
+          "source": 0.014736349600323906,
+          "atlas": 0.014736349600323906
+        },
+        "2": {
+          "source": 0.009849129785409892,
+          "atlas": 0.009849129785409892
+        }
+      }
+    },
+    "reference": "wb_0040_1.mod",
+    "reference_winding": 1.0,
+    "kind": "longbow",
+    "source": "assets/visual-refresh-20260923/longbow-tall-drafts/blue-moon-v3/06-twin-crescent-regalia-swept.png",
+    "source_sha256": "daf8323868d9f5aff0cb775b29a2c3147bf98d2220282015d22bf089db1673be",
+    "grip": [
+      555,
+      750
+    ],
+    "scale": 0.00154,
+    "parts": 3,
+    "holes": 5,
+    "upper_length_factor": 1.22,
+    "lower_length_factor": 0.75,
+    "overall_scale": 0.9,
+    "body_side_scale": 0.72,
+    "source_repainted": false,
+    "in_game_visual_test": false
+  },
+  "surface": {
+    "model": "mt_longbow_1.mod",
+    "triangles": 5148,
+    "open_edges": 0,
+    "nonmanifold_edges": 0,
+    "reversed_seams": 0,
+    "closed_components": 5,
+    "component_volumes": [
+      0.0029115584989854123,
+      2.98768291027273e-06,
+      0.0059159916726813705,
+      0.0002234803976811122,
+      4.794707129037523e-06
+    ],
+    "sha256": "0560c4681332f0443c0c4b5b38819a260195c5125a207631d561b36cfe7a3aef",
+    "passed": true
+  },
+  "prior": {
+    "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+    "triangles": 26580,
+    "bounds": [
+      [
+        -0.7864590287208557,
+        -0.1877003312110901,
+        -0.05558410659432411
+      ],
+      [
+        0.9569666981697083,
+        0.3926093280315399,
+        0.05558410659432411
+      ]
+    ]
+  },
+  "height_ratio_to_prior": 1.1496829212340722,
+  "grip_origin_preserved": true,
+  "protected_sha256": {
+    "assets\\visual-refresh-20260923\\longbow-tall-drafts\\blue-moon-v3\\06-twin-crescent-regalia-swept.png": "daf8323868d9f5aff0cb775b29a2c3147bf98d2220282015d22bf089db1673be",
+    "assets\\twilight-set\\sword-native.glb": "d2c6078902a3ce4c150b733edbb8c9a5656d1aa1a829001ab12bc19892a4b470",
+    "assets\\twilight-set\\staff-native.glb": "81d58d6e1a3c5786ed93b54550ecd8569b9bf9febf66094ac00c13513d21472f",
+    "client-overlay\\Item\\ITEM.dat": "f06d05bd9eab7f3265b874f46927a2ec3b3da1c77612f0aa517ad010ff7e5e73",
+    "client-overlay\\Interface\\item.dat": "0597bc9abbb6651a7a6edee44173c53d601edcad386c7ae46c68f77064733b27",
+    "client-overlay\\Equip\\Trace.txt": "6ff9b65dcbec97c8074fa5bc65b0d93641fb4e90f63a434313626a56d836d353",
+    "client-overlay\\Equip\\mt_twilight_1.mod": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+    "client-overlay\\Equip\\mt_twilight_2.mod": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+    "client-overlay\\Equip\\mt_twilight_3.mod": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+    "client-overlay\\Texture\\Equip\\mt_twilight_atlas.wtm": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf",
+    "client-overlay\\Equip\\mt_staff_1.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Equip\\mt_staff_2.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Equip\\mt_staff_3.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Texture\\Equip\\mt_staff_atlas.wtm": "b6a5171ed4e77bda7fc0cd76ddf5c0cbfe9f5e1c05fd9d619d7e506a93a14efe"
+  },
+  "installed_client_written": false,
+  "native_corners_before": 79740,
+  "native_corners_after": 15444,
+  "native_corner_reduction": 0.8063205417607223,
+  "source_pixels_verified": 596800,
+  "replacements": [
+    {
+      "path": "Equip/mt_longbow_1.mod",
+      "sha256": "0560c4681332f0443c0c4b5b38819a260195c5125a207631d561b36cfe7a3aef",
+      "bytes": 402040
+    },
+    {
+      "path": "Equip/mt_longbow_2.mod",
+      "sha256": "0560c4681332f0443c0c4b5b38819a260195c5125a207631d561b36cfe7a3aef",
+      "bytes": 402040
+    },
+    {
+      "path": "Equip/mt_longbow_3.mod",
+      "sha256": "0560c4681332f0443c0c4b5b38819a260195c5125a207631d561b36cfe7a3aef",
+      "bytes": 402040
+    },
+    {
+      "path": "Texture/Equip/mt_longbow_atlas.wtm",
+      "sha256": "be8d95cbb419311c4babbba84c4d0a20fe1786535cff3d31ec27965b2c83ba52",
+      "bytes": 1073468
+    }
+  ]
+}

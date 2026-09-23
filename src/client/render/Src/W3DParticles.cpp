@@ -734,7 +734,12 @@ void CW3DParticles::Render( const DWORD dwTick )
 
 		g_pd3dDevice->SetRenderState( D3DRS_TEXTUREFACTOR, pParticle->dwColor_s );
 
+		// Only private hoof embers bypass fog while drawing: additive fog would
+		// tint the texture's black background. Restore the native TRUE state.
+		const BOOL bHellTrail = pParticle->pHeader->nTick == 140041;
+		if( bHellTrail ) D3D::FogEnable( FALSE );
 		m_pVB->Draw( D3DPT_TRIANGLESTRIP, 2 );
+		if( bHellTrail ) D3D::FogEnable( TRUE );
 	} //for
 
 	SetRenderState( TRUE );
@@ -759,7 +764,12 @@ void CW3DParticles::Render( const DWORD dwTick )
 
 		g_pd3dDevice->SetRenderState( D3DRS_TEXTUREFACTOR, pParticle->dwColor );
 
+		// Only private hoof embers bypass fog while drawing: additive fog would
+		// tint the texture's black background. Restore the native TRUE state.
+		const BOOL bHellTrail = pParticle->pHeader->nTick == 140041;
+		if( bHellTrail ) D3D::FogEnable( FALSE );
 		m_pVB->Draw( D3DPT_TRIANGLESTRIP, 2 );
+		if( bHellTrail ) D3D::FogEnable( TRUE );
 	} //for
 } //CW3DParticles::Render
 
