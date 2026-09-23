@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-23T14:26:43.953192+09:00",
+  "passed": true,
+  "image_validation": {
+    "total": 15,
+    "counts_by_kind": {
+      "sword": 5,
+      "bow": 5,
+      "staff": 5
+    },
+    "unique_sha256_count": 15,
+    "all_png_chunks_and_scanlines_valid": true,
+    "all_original_copies_identical": true,
+    "all_prompt_bindings_valid": true,
+    "dimensions": [
+      "1024x1536"
+    ],
+    "manifest": "manifest.json",
+    "manifest_sha256": "5ba12425e4e239efaa771775dfade5fa6b602705a9c5dc8cd9dc2d1c17fcf899"
+  },
+  "protected_files": {
+    "baseline": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\noble-moon-protected-before.json",
+    "baseline_sha256": "a031adbfdde2d73197f7fb199109b08bfb19b5754c4d5834ae4fec10e1e60aa1",
+    "checked": 59,
+    "unchanged": 59,
+    "files": [
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Join-Father-Server.cmd",
+        "expected_sha256": "cb6bf0d022f2f63d1e696d5e85ab9192b4ec39399a3f5551387047bedc8b2512",
+        "current_sha256": "cb6bf0d022f2f63d1e696d5e85ab9192b4ec39399a3f5551387047bedc8b2512",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Reapply-Full-Korean.cmd",
+        "expected_sha256": "4a504fac6b9ac93b47e35cd66036b9ac16c2fc1155263ed30696019935aa4f5d",
+        "current_sha256": "4a504fac6b9ac93b47e35cd66036b9ac16c2fc1155263ed30696019935aa4f5d",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Restore-Full-Korean.cmd",
+        "expected_sha256": "8064214341a740c08de7eeabac0a1dea874564ef8913392813bc5fe00f5025d4",
+        "current_sha256": "8064214341a740c08de7eeabac0a1dea874564ef8913392813bc5fe00f5025d4",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Restore-Previous-UI.cmd",
+        "expected_sha256": "f716390d5f2f2c08d2304d4f02711484c7c4f2d89f1330866c17b3ca46d62f29",
+        "current_sha256": "f716390d5f2f2c08d2304d4f02711484c7c4f2d89f1330866c17b3ca46d62f29",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Run-Family.cmd",
+        "expected_sha256": "f1e8ebfa2f292fae5429221c6e57a26e4473c3ac79c2da06a7de2c9c54af8839",
+        "current_sha256": "f1e8ebfa2f292fae5429221c6e57a26e4473c3ac79c2da06a7de2c9c54af8839",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Run-Local.cmd",
+        "expected_sha256": "8d2abe8ecff996852b882555401dba74d7cd50d304f2d9000bb593a41b57b80c",
+        "current_sha256": "8d2abe8ecff996852b882555401dba74d7cd50d304f2d9000bb593a41b57b80c",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Setup-Family-Network.cmd",
+        "expected_sha256": "93d1609058880eef3eacf6cb14c946fb93f30b251a0c075dd9e395bad8d1596b",
+        "current_sha256": "93d1609058880eef3eacf6cb14c946fb93f30b251a0c075dd9e395bad8d1596b",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Start-Family-Game.cmd",
+        "expected_sha256": "755e7132efecf6ced2048e099d2d54f1bcdedae5951d7f457f7068c76a17b0d4",
+        "current_sha256": "755e7132efecf6ced2048e099d2d54f1bcdedae5951d7f457f7068c76a17b0d4",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Start-Local-Game.cmd",
+        "expected_sha256": "c800872ebec3f430fcdba6baec25e318c3a2e60cd9be47d44ede343dad14824c",
+        "current_sha256": "c800872ebec3f430fcdba6baec25e318c3a2e60cd9be47d44ede343dad14824c",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Start-Local-Server.cmd",
+        "expected_sha256": "d776f8085a18d2c245bc5e55b8acb2482815f930701a1ebb75c6fe369d2bdc21",
+        "current_sha256": "d776f8085a18d2c245bc5e55b8acb2482815f930701a1ebb75c6fe369d2bdc21",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\Stop-Local-Server.cmd",
+        "expected_sha256": "0e9f10653f712ff6b3f88a0aa6c490d8992df7ae2a4c1d65b2d64a1f03950d92",
+        "current_sha256": "0e9f10653f712ff6b3f88a0aa6c490d8992df7ae2a4c1d65b2d64a1f03950d92",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\가족 게임 시작.cmd",
+        "expected_sha256": "755e7132efecf6ced2048e099d2d54f1bcdedae5951d7f457f7068c76a17b0d4",
+        "current_sha256": "755e7132efecf6ced2048e099d2d54f1bcdedae5951d7f457f7068c76a17b0d4",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\가족 연결 설정.cmd",
+        "expected_sha256": "93d1609058880eef3eacf6cb14c946fb93f30b251a0c075dd9e395bad8d1596b",
+        "current_sha256": "93d1609058880eef3eacf6cb14c946fb93f30b251a0c075dd9e395bad8d1596b",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\아버지 서버 접속.cmd",
+        "expected_sha256": "cb6bf0d022f2f63d1e696d5e85ab9192b4ec39399a3f5551387047bedc8b2512",
+        "current_sha256": "cb6bf0d022f2f63d1e696d5e85ab9192b4ec39399a3f5551387047bedc8b2512",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\캐릭터 데이터 추출.cmd",
+        "expected_sha256": "b3debe8aedbb07cf431aeee71e1d972a083850d065481ec4dc51b8acab816418",
+        "current_sha256": "b3debe8aedbb07cf431aeee71e1d972a083850d065481ec4dc51b8acab816418",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\outputs\\혼자 게임 시작.cmd",
+        "expected_sha256": "c800872ebec3f430fcdba6baec25e318c3a2e60cd9be47d44ede343dad14824c",
+        "current_sha256": "c800872ebec3f430fcdba6baec25e318c3a2e60cd9be47d44ede343dad14824c",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\게임 시작.cmd",
+        "expected_sha256": "a6a0b5e8657ce95fa6383dfc74ed36067fbee90d43179f973d215482b1ab7b1b",
+        "current_sha256": "a6a0b5e8657ce95fa6383dfc74ed36067fbee90d43179f973d215482b1ab7b1b",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\스킬 색상 설정.cmd",
+        "expected_sha256": "fbc3839148b66b5fca04297dec7dc0d76ac8e9cfd5e7eb8881057c58b8a9bbfb",
+        "current_sha256": "fbc3839148b66b5fca04297dec7dc0d76ac8e9cfd5e7eb8881057c58b8a9bbfb",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\DeicideOnline.exe",
+        "expected_sha256": "ccda166cd52a804d594bbbc8c850284836244dc01fb3a4374a770b775e0422eb",
+        "current_sha256": "ccda166cd52a804d594bbbc8c850284836244dc01fb3a4374a770b775e0422eb",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\config.ini",
+        "expected_sha256": "cd40b649bdf3a9837fa685add9d1c6f85674f25918247a398686d2aafbc82372",
+        "current_sha256": "cd40b649bdf3a9837fa685add9d1c6f85674f25918247a398686d2aafbc82372",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\server.ini",
+        "expected_sha256": "2e2cec2acf1cdbb194be815db0e98b42a65d064dc5d8a981296971e99cae24cd",
+        "current_sha256": "2e2cec2acf1cdbb194be815db0e98b42a65d064dc5d8a981296971e99cae24cd",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\lang.ini",
+        "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "current_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\arg.txt",
+        "expected_sha256": "a00a071426de22024d67c1dcda0c74eeda95f0dc88bed429eb1d655cc33ca017",
+        "current_sha256": "a00a071426de22024d67c1dcda0c74eeda95f0dc88bed429eb1d655cc33ca017",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Item\\ITEM.dat",
+        "expected_sha256": "ba6e26b00c984b75bfb4b66ddd5acda3418a6c25c2df2586db142a9f950beed4",
+        "current_sha256": "ba6e26b00c984b75bfb4b66ddd5acda3418a6c25c2df2586db142a9f950beed4",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Item\\Skill.dat",
+        "expected_sha256": "224b3cd4822a21ba478ff4a4d001b5a8016d29cdeef8ee1c060e3aba239ac2f5",
+        "current_sha256": "224b3cd4822a21ba478ff4a4d001b5a8016d29cdeef8ee1c060e3aba239ac2f5",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Interface\\item.dat",
+        "expected_sha256": "b7fd7b4c995c70a9f862fa5a80173830825048fea17fdaa1fb8f997d35bedb94",
+        "current_sha256": "b7fd7b4c995c70a9f862fa5a80173830825048fea17fdaa1fb8f997d35bedb94",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Interface\\skill.dat",
+        "expected_sha256": "cb178246dd16ccfc25266e3bb9d9c156b59d5f17f7bee288fac8d893e9fcce12",
+        "current_sha256": "cb178246dd16ccfc25266e3bb9d9c156b59d5f17f7bee288fac8d893e9fcce12",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_staff_1.mod",
+        "expected_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "current_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_staff_2.mod",
+        "expected_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "current_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_staff_3.mod",
+        "expected_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "current_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Texture\\Equip\\mt_staff_atlas.wtm",
+        "expected_sha256": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f",
+        "current_sha256": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Magic\\mt_arrow.ms",
+        "expected_sha256": "d2e1d8e3cdfa38d8a33c751b682a85f823724ffbda1dd313b939c01bef11dff9",
+        "current_sha256": "d2e1d8e3cdfa38d8a33c751b682a85f823724ffbda1dd313b939c01bef11dff9",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Magic\\mt_frostA.ms",
+        "expected_sha256": "9ea9499c57a0ac5559fbc702e28d501c733f3a75b34327aef999bf689d23600a",
+        "current_sha256": "9ea9499c57a0ac5559fbc702e28d501c733f3a75b34327aef999bf689d23600a",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Magic\\mt_frostB.ms",
+        "expected_sha256": "00dde8477fcd53ddc722307a5726b2ed4ad96dae8b8618a9344f6200c00ff97a",
+        "current_sha256": "00dde8477fcd53ddc722307a5726b2ed4ad96dae8b8618a9344f6200c00ff97a",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Magic\\mt_heaven.ms",
+        "expected_sha256": "75e3b1479c8a4be6bda9ee4863871db748a992d264111528befee82e4f849104",
+        "current_sha256": "75e3b1479c8a4be6bda9ee4863871db748a992d264111528befee82e4f849104",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Magic\\mt_meteorA.ms",
+        "expected_sha256": "9e1de65429c989b2080fbaa683c38024fb51a02b0f1a5ffd19558c94ef5c198a",
+        "current_sha256": "9e1de65429c989b2080fbaa683c38024fb51a02b0f1a5ffd19558c94ef5c198a",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Magic\\mt_meteorB.ms",
+        "expected_sha256": "f7661f020af42b52837b0410ce7474d43ddf23c1b470576bc60f0e0aae9c5658",
+        "current_sha256": "f7661f020af42b52837b0410ce7474d43ddf23c1b470576bc60f0e0aae9c5658",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Magic\\mt_six.ms",
+        "expected_sha256": "7f51cfe3aa934764650a889352ff56eb74539dbd481ed5ff77c15263f12251b0",
+        "current_sha256": "7f51cfe3aa934764650a889352ff56eb74539dbd481ed5ff77c15263f12251b0",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Magic\\mt_six_blue.ms",
+        "expected_sha256": "fcc1356bb8a53273a0058750cad46563355c69e5095390f2bedd54ba77b1ad85",
+        "current_sha256": "fcc1356bb8a53273a0058750cad46563355c69e5095390f2bedd54ba77b1ad85",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\DeicideOnline.exe",
+        "expected_sha256": "6ecdeba8c51fd85a4046c29c03dc95e5e68b2897587c3d28f1ebab6832481747",
+        "current_sha256": "6ecdeba8c51fd85a4046c29c03dc95e5e68b2897587c3d28f1ebab6832481747",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\config.ini",
+        "expected_sha256": "cd40b649bdf3a9837fa685add9d1c6f85674f25918247a398686d2aafbc82372",
+        "current_sha256": "cd40b649bdf3a9837fa685add9d1c6f85674f25918247a398686d2aafbc82372",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\server.ini",
+        "expected_sha256": "2e2cec2acf1cdbb194be815db0e98b42a65d064dc5d8a981296971e99cae24cd",
+        "current_sha256": "2e2cec2acf1cdbb194be815db0e98b42a65d064dc5d8a981296971e99cae24cd",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\lang.ini",
+        "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "current_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Item\\ITEM.dat",
+        "expected_sha256": "dd2adaa34a5617372ac77c2d1279bd57d0a8eaa609d3ce1ef32e223638639f2a",
+        "current_sha256": "dd2adaa34a5617372ac77c2d1279bd57d0a8eaa609d3ce1ef32e223638639f2a",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Item\\Skill.dat",
+        "expected_sha256": "573232a78019b8e4f4327766362e2c336b2ddbd5b1998e545acc2e9d81e57d1e",
+        "current_sha256": "573232a78019b8e4f4327766362e2c336b2ddbd5b1998e545acc2e9d81e57d1e",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Interface\\item.dat",
+        "expected_sha256": "bc459be473d663213d734769bc085bba890d22c4026f5232a227d2f447308dd1",
+        "current_sha256": "bc459be473d663213d734769bc085bba890d22c4026f5232a227d2f447308dd1",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Interface\\skill.dat",
+        "expected_sha256": "1d4a90ccd1c7c8b78a94a43e4b2d5b17c73e0d362e10fabb9ddba1cac58c6425",
+        "current_sha256": "1d4a90ccd1c7c8b78a94a43e4b2d5b17c73e0d362e10fabb9ddba1cac58c6425",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_staff_1.mod",
+        "expected_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "current_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_staff_2.mod",
+        "expected_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "current_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_staff_3.mod",
+        "expected_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "current_sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Texture\\Equip\\mt_staff_atlas.wtm",
+        "expected_sha256": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f",
+        "current_sha256": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Magic\\mt_arrow.ms",
+        "expected_sha256": "d2e1d8e3cdfa38d8a33c751b682a85f823724ffbda1dd313b939c01bef11dff9",
+        "current_sha256": "d2e1d8e3cdfa38d8a33c751b682a85f823724ffbda1dd313b939c01bef11dff9",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Magic\\mt_frostA.ms",
+        "expected_sha256": "9ea9499c57a0ac5559fbc702e28d501c733f3a75b34327aef999bf689d23600a",
+        "current_sha256": "9ea9499c57a0ac5559fbc702e28d501c733f3a75b34327aef999bf689d23600a",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Magic\\mt_frostB.ms",
+        "expected_sha256": "0b2f2b35c052e8ef024f3537733a4b31e823ca3be4c90d4c69cce390aa7f5485",
+        "current_sha256": "0b2f2b35c052e8ef024f3537733a4b31e823ca3be4c90d4c69cce390aa7f5485",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Magic\\mt_heaven.ms",
+        "expected_sha256": "a2ff6f67a9c16d48348cd4ee95baee3c0ae8cb85d83a25674fdce6e9b4c75727",
+        "current_sha256": "a2ff6f67a9c16d48348cd4ee95baee3c0ae8cb85d83a25674fdce6e9b4c75727",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Magic\\mt_meteorA.ms",
+        "expected_sha256": "9e1de65429c989b2080fbaa683c38024fb51a02b0f1a5ffd19558c94ef5c198a",
+        "current_sha256": "9e1de65429c989b2080fbaa683c38024fb51a02b0f1a5ffd19558c94ef5c198a",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Magic\\mt_meteorB.ms",
+        "expected_sha256": "d6224da802a8e268321017a9971e34a28db6b1d76905a63bdc46044f39506889",
+        "current_sha256": "d6224da802a8e268321017a9971e34a28db6b1d76905a63bdc46044f39506889",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Magic\\mt_six.ms",
+        "expected_sha256": "2e94c4c510205b8866f72e15bd847a67cbc294e285790ddc974f0b765d00e15d",
+        "current_sha256": "2e94c4c510205b8866f72e15bd847a67cbc294e285790ddc974f0b765d00e15d",
+        "unchanged": true
+      },
+      {
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Magic\\mt_six_blue.ms",
+        "expected_sha256": "39dff7e5a79005067b02e993888bd3ec790eaf59bf1e1aefd60bca6f9ffb2de3",
+        "current_sha256": "39dff7e5a79005067b02e993888bd3ec790eaf59bf1e1aefd60bca6f9ffb2de3",
+        "unchanged": true
+      }
+    ]
+  },
+  "installed_weapons": {
+    "baseline": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\twilight-set\\noble-moon-installation.json",
+    "baseline_sha256": "27f628d5c52cc30f1b1765f0141f0c4b77038158dc239016fc9702fbc95ef38d",
+    "checked": 16,
+    "unchanged": 16,
+    "roots": {
+      "family": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient",
+      "workspace": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient"
+    },
+    "files": [
+      {
+        "root": "family",
+        "relative_path": "Equip/mt_twilight_1.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_twilight_1.mod",
+        "expected_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "current_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "unchanged": true
+      },
+      {
+        "root": "family",
+        "relative_path": "Equip/mt_twilight_2.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_twilight_2.mod",
+        "expected_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "current_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "unchanged": true
+      },
+      {
+        "root": "family",
+        "relative_path": "Equip/mt_twilight_3.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_twilight_3.mod",
+        "expected_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "current_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "unchanged": true
+      },
+      {
+        "root": "family",
+        "relative_path": "Equip/mt_longbow_1.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_longbow_1.mod",
+        "expected_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "current_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "unchanged": true
+      },
+      {
+        "root": "family",
+        "relative_path": "Equip/mt_longbow_2.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_longbow_2.mod",
+        "expected_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "current_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "unchanged": true
+      },
+      {
+        "root": "family",
+        "relative_path": "Equip/mt_longbow_3.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_longbow_3.mod",
+        "expected_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "current_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "unchanged": true
+      },
+      {
+        "root": "family",
+        "relative_path": "Texture/Equip/mt_twilight_atlas.wtm",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Texture\\Equip\\mt_twilight_atlas.wtm",
+        "expected_sha256": "5277dce405783b30472064e0dc7da0d17a6766bd4969b4aeb382814df2d50bb3",
+        "current_sha256": "5277dce405783b30472064e0dc7da0d17a6766bd4969b4aeb382814df2d50bb3",
+        "unchanged": true
+      },
+      {
+        "root": "family",
+        "relative_path": "Texture/Equip/mt_longbow_atlas.wtm",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Texture\\Equip\\mt_longbow_atlas.wtm",
+        "expected_sha256": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea",
+        "current_sha256": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea",
+        "unchanged": true
+      },
+      {
+        "root": "workspace",
+        "relative_path": "Equip/mt_twilight_1.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_twilight_1.mod",
+        "expected_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "current_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "unchanged": true
+      },
+      {
+        "root": "workspace",
+        "relative_path": "Equip/mt_twilight_2.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_twilight_2.mod",
+        "expected_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "current_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "unchanged": true
+      },
+      {
+        "root": "workspace",
+        "relative_path": "Equip/mt_twilight_3.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_twilight_3.mod",
+        "expected_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "current_sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+        "unchanged": true
+      },
+      {
+        "root": "workspace",
+        "relative_path": "Equip/mt_longbow_1.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_longbow_1.mod",
+        "expected_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "current_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "unchanged": true
+      },
+      {
+        "root": "workspace",
+        "relative_path": "Equip/mt_longbow_2.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_longbow_2.mod",
+        "expected_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "current_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "unchanged": true
+      },
+      {
+        "root": "workspace",
+        "relative_path": "Equip/mt_longbow_3.mod",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_longbow_3.mod",
+        "expected_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "current_sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+        "unchanged": true
+      },
+      {
+        "root": "workspace",
+        "relative_path": "Texture/Equip/mt_twilight_atlas.wtm",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Texture\\Equip\\mt_twilight_atlas.wtm",
+        "expected_sha256": "5277dce405783b30472064e0dc7da0d17a6766bd4969b4aeb382814df2d50bb3",
+        "current_sha256": "5277dce405783b30472064e0dc7da0d17a6766bd4969b4aeb382814df2d50bb3",
+        "unchanged": true
+      },
+      {
+        "root": "workspace",
+        "relative_path": "Texture/Equip/mt_longbow_atlas.wtm",
+        "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Texture\\Equip\\mt_longbow_atlas.wtm",
+        "expected_sha256": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea",
+        "current_sha256": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea",
+        "unchanged": true
+      }
+    ]
+  },
+  "scope": {
+    "comparison": "Read-only SHA-256 comparison of the supplied protected-file and installed-weapon baselines.",
+    "images_modified": false,
+    "game_files_written": false,
+    "database_or_vm_accessed": false,
+    "browser_used": false,
+    "written_files": [
+      "manifest.json",
+      "asset-validation.json"
+    ],
+    "limitations": [
+      "This comparison covers the 59 listed protected files and 16 installed weapon resources, not every file in the installation or database contents.",
+      "PNG structure and prompt/original-file linkage are validated; image artistic quality is reviewed separately."
+    ]
+  },
+  "errors": []
+}

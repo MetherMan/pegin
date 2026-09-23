@@ -1,0 +1,39 @@
+{
+  "design": "noble-blue-moon",
+  "sources": [
+    "../visual-refresh-20260923/noble-moon-15/sword-04.png",
+    "../visual-refresh-20260923/bow-horns-10/bow-03.png",
+    "../visual-refresh-20260923/moon-pairs-10/pair-03.png"
+  ],
+  "builder": "tools/build_noble_moon.py",
+  "geometry_spec": "noble-moon-geometry.json",
+  "direction": "푸른달의 트와일라잇 · 고결한 푸르름",
+  "staff": "approved eclipse-hook staff from moon-pairs-10 P3",
+  "default_build_kinds": [
+    "sword",
+    "longbow"
+  ],
+  "overrides": {
+    "sword": {
+      "design": "noble-blue-moon-s4-sword",
+      "source": "../visual-refresh-20260923/noble-moon-15/sword-04.png",
+      "geometry_spec": "noble-moon-s4-sword-geometry.json",
+      "builder": "tools/build_noble_s4_sword.py",
+      "approved_by_user": true
+    },
+    "staff": {
+      "design": "eclipse-hook-staff",
+      "source": "../visual-refresh-20260923/moon-pairs-10/pair-03.png",
+      "geometry_spec": "eclipse-hook-staff/geometry.json",
+      "builder": "tools/build_eclipse_hook_staff.py",
+      "approved_by_user": true
+    },
+    "longbow": {
+      "design": "approved-h03-horn-bow",
+      "source": "../visual-refresh-20260923/bow-horns-10/bow-03.png",
+      "geometry_spec": "h03-horn-bow/geometry.json",
+      "builder": "tools/build_h03_horn_bow.py",
+      "approved_by_user": true
+    }
+  }
+}

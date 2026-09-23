@@ -1,0 +1,172 @@
+{
+  "passed": true,
+  "design": "approved-h03-horn-bow",
+  "model": {
+    "triangles": 26580,
+    "vertices": 13381,
+    "meshes": 1,
+    "bounds": [
+      [
+        -0.7864590287208557,
+        -0.1877003312110901,
+        -0.05558410659432411
+      ],
+      [
+        0.9569666981697083,
+        0.3926093280315399,
+        0.05558410659432411
+      ]
+    ],
+    "atlas": {
+      "atlas_size": 2048,
+      "layout": "unscaled-tall-source-crops",
+      "unique_tiles": 3,
+      "material_rects": {
+        "0": {
+          "x": 8,
+          "y": 8,
+          "width": 505,
+          "height": 1442,
+          "source_size": [
+            505,
+            1442
+          ],
+          "resampled": false
+        },
+        "1": {
+          "x": 529,
+          "y": 8,
+          "width": 12,
+          "height": 33,
+          "source_size": [
+            12,
+            33
+          ],
+          "resampled": false
+        },
+        "2": {
+          "x": 557,
+          "y": 8,
+          "width": 2,
+          "height": 18,
+          "source_size": [
+            2,
+            18
+          ],
+          "resampled": false
+        }
+      },
+      "source_pixels_preserved": true,
+      "triangles_by_material": {
+        "0": 23924,
+        "1": 2616,
+        "2": 40
+      },
+      "surface_area_by_material": {
+        "0": {
+          "source": 0.5852681795952173,
+          "atlas": 0.5852681795952173
+        },
+        "1": {
+          "source": 0.015166132067214568,
+          "atlas": 0.015166132067214568
+        },
+        "2": {
+          "source": 0.010606813810707858,
+          "atlas": 0.010606813810707858
+        }
+      }
+    },
+    "reference": "wb_0040_1.mod",
+    "reference_winding": 1.0,
+    "kind": "longbow",
+    "source": "assets/visual-refresh-20260923/bow-horns-10/bow-03.png",
+    "source_sha256": "7fc6dd5f4ff469a629c6669efe83cdf6a8586cafde3b82dfe2cfd2b122dd7dd4",
+    "grip": [
+      584,
+      818
+    ],
+    "scale": 0.001227,
+    "parts": 3,
+    "holes": 2,
+    "source_repainted": false,
+    "original_weapon_id_preserved": true,
+    "in_game_visual_test": false
+  },
+  "surface": {
+    "model": "mt_longbow_1.mod",
+    "triangles": 26580,
+    "open_edges": 0,
+    "nonmanifold_edges": 0,
+    "reversed_seams": 0,
+    "closed_components": 5,
+    "component_volumes": [
+      0.002429086863261763,
+      6.2944475634226306e-06,
+      0.007029265194083595,
+      0.0003216101038190114,
+      6.299345510144942e-06
+    ],
+    "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+    "passed": true
+  },
+  "source_pixels_verified": 728210,
+  "all_three_native_lods_identical": true,
+  "protected_sha256": {
+    "assets\\visual-refresh-20260923\\bow-horns-10\\bow-03.png": "7fc6dd5f4ff469a629c6669efe83cdf6a8586cafde3b82dfe2cfd2b122dd7dd4",
+    "assets\\twilight-set\\sword-native.glb": "d2c6078902a3ce4c150b733edbb8c9a5656d1aa1a829001ab12bc19892a4b470",
+    "assets\\twilight-set\\staff-native.glb": "8121c01a89ab60777c187490b4f97d97a232f0a0be58f9253835223029874244",
+    "client-overlay\\Item\\ITEM.dat": "ba6e26b00c984b75bfb4b66ddd5acda3418a6c25c2df2586db142a9f950beed4",
+    "client-overlay\\Interface\\item.dat": "b7fd7b4c995c70a9f862fa5a80173830825048fea17fdaa1fb8f997d35bedb94",
+    "client-overlay\\Equip\\Trace.txt": "6ff9b65dcbec97c8074fa5bc65b0d93641fb4e90f63a434313626a56d836d353",
+    "client-overlay\\Equip\\mt_twilight_1.mod": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+    "client-overlay\\Equip\\mt_twilight_2.mod": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+    "client-overlay\\Equip\\mt_twilight_3.mod": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+    "client-overlay\\Texture\\Equip\\mt_twilight_atlas.wtm": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf",
+    "client-overlay\\Equip\\mt_staff_1.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Equip\\mt_staff_2.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Equip\\mt_staff_3.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "client-overlay\\Texture\\Equip\\mt_staff_atlas.wtm": "0e81ca9ca31d9fc781c529dbcf65daca5a41fa9f50c4aa6df4ebbc87dbf48ae1"
+  },
+  "grip_origin_preserved": true,
+  "installed_client_written": false,
+  "previous": {
+    "sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+    "triangles": 10328,
+    "bounds": [
+      [
+        -0.8851405382156372,
+        -0.21196787059307098,
+        -0.026988565921783447
+      ],
+      [
+        0.8560240864753723,
+        0.28534135222435,
+        0.026988565921783447
+      ]
+    ]
+  },
+  "height_ratio_to_prior": 1.0012986148279666,
+  "replacements": [
+    {
+      "path": "Equip/mt_longbow_1.mod",
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "bytes": 2074492
+    },
+    {
+      "path": "Equip/mt_longbow_2.mod",
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "bytes": 2074492
+    },
+    {
+      "path": "Equip/mt_longbow_3.mod",
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "bytes": 2074492
+    },
+    {
+      "path": "Texture/Equip/mt_longbow_atlas.wtm",
+      "sha256": "56d3f3077ca72da189ec94cd80067b8ed3c9fd96729ed158ffacb89d4f8d2f72",
+      "bytes": 1079751
+    }
+  ]
+}

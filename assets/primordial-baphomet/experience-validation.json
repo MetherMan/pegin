@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "base_id": 44,
+  "base_exp": 14328,
+  "primordial_exp": 28656,
+  "column_zero_based": 12,
+  "variant_ids": [
+    80,
+    280,
+    380,
+    480,
+    580,
+    680
+  ],
+  "server_rows": [
+    {
+      "id": 80,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 280,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 380,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 480,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 580,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 680,
+      "before": 14328,
+      "after": 28656
+    }
+  ],
+  "client_rows": [
+    {
+      "id": 80,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 280,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 380,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 480,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 580,
+      "before": 14328,
+      "after": 28656
+    },
+    {
+      "id": 680,
+      "before": 14328,
+      "after": 28656
+    }
+  ],
+  "other_rows_fields_and_line_endings_preserved": true,
+  "client_header_preserved": true,
+  "protected_hashes_unchanged": 7,
+  "server_sha256": "0f3ae2d097e16b1dbdd443e2007eb13926d194283f87830180fa589176863126",
+  "client_sha256": "92c8b6ad2923efcd0a8ef395c775fce11ee18c59ed898650c9bbef41aebb2aa0",
+  "source_loader": "src/server/LAQIA_GameServer/monster.cpp:648-663 (_dUMENOKOJI_)",
+  "installed_files_written": false,
+  "vm_database_or_accounts_written": false
+}

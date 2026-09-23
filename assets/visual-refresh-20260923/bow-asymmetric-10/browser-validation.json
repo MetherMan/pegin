@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8876/assets/visual-refresh-20260923/bow-asymmetric-10/index.html",
+  "browser": {
+    "tool": "agbrowse",
+    "mode": "headless",
+    "cdp_port": 9238,
+    "profile": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\bow-v11-browser",
+    "viewport": [
+      1422,
+      904
+    ],
+    "other_sessions_used": false,
+    "evaluate_used": false
+  },
+  "image_requests": 10,
+  "images_visually_confirmed": 10,
+  "checks": {
+    "enlarge": "PASS A01 dialog with full image and controls",
+    "previous_wrap": "PASS A01 -> A10",
+    "next_wrap": "PASS A10 -> A01",
+    "selection": "PASS A01 checkmark appeared in dialog and card",
+    "clear": "PASS clear button removed A01 selection; empty selection persisted after reload",
+    "console": "PASS no output during fresh reload monitored for 3000ms",
+    "visual": "PASS all ten cards checked using full-page initial capture plus individual row screenshots after scrolling; no broken image in final visited rows"
+  },
+  "test_selection_cleared": true,
+  "console_errors_observed": 0,
+  "code_changes": [],
+  "screenshot": {
+    "file": "gallery-overview.png",
+    "source": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\bow-v11-browser\\screenshots\\screenshot_1790148422179.png",
+    "dimensions": [
+      1407,
+      6064
+    ],
+    "sha256": "005a6ff252b29d99a9f6a032bd34113d568a496fb6b0ed3dc8da2b70d735303d",
+    "original_bytes_preserved": true,
+    "png_integrity": "PASS"
+  },
+  "notes": [
+    "Visited every row to allow offscreen asynchronous image decoding before final full-page capture.",
+    "Final large full-page PNG passed Pillow integrity; view_image failed its base64 transport, so row screenshots were individually visually inspected.",
+    "Clipboard copying and external links were not exercised. No images, game files or gallery source were modified."
+  ]
+}

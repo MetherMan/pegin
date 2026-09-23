@@ -11,9 +11,9 @@ def command(c,cmd):
     error=err.read().decode(errors='replace')
     if out.channel.recv_exit_status(): raise RuntimeError(error or result)
     return result
-def online():
+def online(timeout=8):
     try:
-        with connect() as c:
+        with connect(timeout=timeout) as c:
             command(c,'test -f /root/laqia-server-prepared')
         return True
     except Exception: return False
@@ -21,30 +21,38 @@ def port_open(port):
     try:
         with socket.create_connection(('127.0.0.1',port),timeout=.5):return True
     except OSError:return False
+
+def wait_for_vm(timeout=600):
+    # TCG cold boots can take several minutes. A live QEMU is not a ready OS.
+    # Continue waiting for the same installation instead of making the user
+    # retry and risking a second VM against the same disk.
+    deadline=time.monotonic()+timeout;progress=0
+    while time.monotonic()<deadline:
+        if online(timeout=2):return
+        if time.monotonic()>=progress:
+            print('기존 서버와 계정 데이터를 준비하는 중입니다. 이 창에서 계속 기다려 주세요.',flush=True)
+            progress=time.monotonic()+20
+        time.sleep(2)
+    detail=[]
+    for name in ('vm-process.json','server-start.log','vm-stderr.log','vm-console.log'):
+        p=ROOT/name
+        if p.is_file():detail.append(name+'\n'+p.read_text(encoding='utf-8',errors='replace')[-3500:])
+    diagnostic=ROOT/'vm-start-diagnostic.txt'
+    diagnostic.write_text('\n\n'.join(detail),encoding='utf-8')
+    raise RuntimeError('기존 서버가 10분 안에 준비되지 않았습니다. 새 서버나 계정을 만들지 않았습니다. 진단 파일: '+str(diagnostic))
 def start():
     preflight(client=False)
-    print('Starting local server. First boot can take a minute...', flush=True)
+    print('기존 로컬 서버를 준비합니다. 느린 PC의 첫 시작은 몇 분 걸릴 수 있습니다.', flush=True)
     if not online():
-        if port_open(44444):
-            raise RuntimeError('서버가 아직 시작하거나 종료하는 중입니다. 잠시 뒤 다시 눌러 주세요.')
-        # If our SSH port already exists, never launch another VM against the same disk.
-        try:
-            with socket.create_connection(('127.0.0.1',22222),timeout=1):
-                raise RuntimeError('SSH is present but not ready. Retry shortly; no second VM was started.')
-        except (ConnectionRefusedError, socket.timeout): pass
-        # pythonw is used by the desktop supervisor; start_vm reports errors through
-        # its exit code and VM log, so no console window is needed.
-        boot_log=ROOT/'server-start.log'
-        with boot_log.open('wb') as output:
-            launched=subprocess.run([str(ROOT/'python/python.exe'),str(ROOT/'start_vm.py')],
-                                    stdout=output,stderr=subprocess.STDOUT,creationflags=subprocess.CREATE_NO_WINDOW)
-        if launched.returncode:
-            detail=boot_log.read_text(encoding='utf-8',errors='replace')[-2200:].strip()
-            raise RuntimeError('로컬 서버를 시작하지 못했습니다.\n'+detail)
-        for _ in range(60):
-            if online(): break
-            time.sleep(2)
-        else: raise RuntimeError('VM did not become ready. Check work/laqia-runtime/vm-console.log.')
+        if not port_open(44444) and not port_open(22222):
+            boot_log=ROOT/'server-start.log'
+            with boot_log.open('wb') as output:
+                launched=subprocess.run([str(ROOT/'python/python.exe'),str(ROOT/'start_vm.py')],
+                                        stdout=output,stderr=subprocess.STDOUT,creationflags=subprocess.CREATE_NO_WINDOW)
+            if launched.returncode:
+                detail=boot_log.read_text(encoding='utf-8',errors='replace')[-2200:].strip()
+                raise RuntimeError('로컬 서버를 시작하지 못했습니다.\n'+detail)
+        wait_for_vm()
     with connect() as c:
         command(c,'systemctl start '+SERVICES)
         print(command(c,'systemctl is-active '+SERVICES))

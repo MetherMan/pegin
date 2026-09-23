@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "native_mod_wtm_readback": true,
+  "source_silhouette_reviewed": true,
+  "negative_spaces_preserved": true,
+  "moon_has_rounded_volume": true,
+  "closed_front_back_sides_reviewed": true,
+  "views": [
+    "front",
+    "quarter",
+    "edge",
+    "back"
+  ],
+  "native_actor_grip_reviewed": true,
+  "native_actor_pixel_heights": [
+    140,
+    240
+  ],
+  "blue_moon_and_hooks_readable": true,
+  "console_errors_captured": 0,
+  "screenshots": [
+    "native-front.png",
+    "native-quarter.png",
+    "native-edge.png",
+    "native-back.png",
+    "actor-140px-front.png",
+    "actor-240px-front.png"
+  ],
+  "browser_port": 9222,
+  "in_game_direct3d_test": false,
+  "model_frozen_for_installation": true
+}

@@ -1,0 +1,239 @@
+{
+  "mode": "built-in image_gen",
+  "intent": "generate",
+  "images": [
+    {
+      "id": "P1",
+      "name": "초승달 물결",
+      "file": "pair-01.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 01 — Crescent tide. Bow: an astonishing offset C-shaped longbow whose upper cobalt limb unfurls as one long breaking wave and lower limb curls back into a shorter crescent; a broad opaline BLUE crescent surrounds an open oval just above the grip, and a single long blue drop hangs below. Staff: a long gently S-curved shaft rising into a huge sideways crescent of blue moonstone, with two flowing blade-like wave ribbons wrapping at different heights around its open center. Express liquid moonlight with broad continuous curved surfaces, asymmetry and spacious elegant gaps.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-e8a82ecd-60d5-4059-95d9-cd9919c57ad8.png",
+      "sha256": "4efa78c892670a8e9f9ff96c3fcc8b69441076d40bb9e8df1b79f41c2d2f02ae",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "초승달을 크게 드러낸 물결형 활과 넓은 두 갈래 곡선의 초승달 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    },
+    {
+      "id": "P2",
+      "name": "쌍월 날개",
+      "file": "pair-02.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 02 — Twin lunar wings. Bow: two unequal broad sweeping wings of royal-blue moonstone, the upper wing reaching dramatically upward and outward, the lower folding inward; two offset blue crescents embrace an airy central moon aperture without mirror symmetry. Staff: a sculptural open fork like two differently sized curving wings guarding a suspended brilliant blue full moon, one wing high, one low; sweeping elongated base and spare blue trailing pinions. Wing architecture is abstract and smooth, not literal feather rows, and the two weapons must have different open silhouettes.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-c99ba020-2bf3-4482-8353-72949a141aa0.png",
+      "sha256": "54769f11c81d42d8dc224c5595d5eecacfe49f3f2bc672dd5b435c7b58343c0f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "크기가 다른 날개 곡선을 가진 활과 푸른 만월을 감싸는 두 날개 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    },
+    {
+      "id": "P3",
+      "name": "월식 갈고리",
+      "file": "pair-03.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 03 — Eclipse hooks. Bow: a daring hooked asymmetric crescent longbow with an enormous upper sickle sweeping inward over a dark open eclipse gap, a narrow forked lower hook and a cobalt crescent embedded beside the grip. Staff: a dramatically off-axis hooked crozier made of dark cobalt and luminous azure moonstone; its huge near-circular hooked head wraps only two-thirds around a glowing blue eclipse moon, ending in two offset long talons. Slender elegant body with broad powerful head; sensual crescents and severe tapered tips, no rough spikes.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-24521ebb-4a85-4447-9fc5-60c548563e2b.png",
+      "sha256": "66195c8e58b37879f66fa973d3e71fa881e1c1b29c9e7ca4ed6221c29e77329c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "길게 갈고리처럼 휜 활 끝과 옆으로 비켜 선 커다란 월식 갈고리 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    },
+    {
+      "id": "P4",
+      "name": "만월 성소",
+      "file": "pair-04.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 04 — Full-moon sanctuary. Bow: a broad open architectural frame of graceful cobalt arches, asymmetrically tall above the grip and lean below, with a large pearlescent BLUE full-moon disk sheltered in an open side alcove beside the grip; bow limbs read as flowing flying buttresses, never a rectangular machine. Staff: a spacious monumental circular lunar sanctuary head, a huge blue full moon held by three unequal sweeping ribs and open crescent windows, on a slim subtly curved long shaft. Sacred calm, high nobility, beautiful cathedral-like negative space without literal buildings.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-f0964914-2c4c-4c61-a96c-333658e1e9e1.png",
+      "sha256": "cc5b9f8793c8708efaa18f1c0de65bf2b75715c92a1228a724133cdd007b2d2d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "가느다란 열린 아치 활과 거대한 푸른 만월을 세 기둥으로 받친 성소 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    },
+    {
+      "id": "P5",
+      "name": "달빛 용형 곡선",
+      "file": "pair-05.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 05 — Serpentine lunar current. Bow: a sinuous royal-blue longbow shaped by one powerful dragon-like double-S curve, a broad upper coil and a flowing extended lower tip, no animal face or body, only abstract muscular moonlight curves; a luminous blue crescent nested into its off-center coil is unmistakable. Staff: an elegant long serpentine spiral with a huge upper spiral curling around a floating blue moonstone sphere, then extending one long backward crest. Smooth overlapping cobalt scales used sparingly as abstract surfacing, no creature, animal head, teeth, or literal dragon. Distinct organic silhouettes, luxurious not monstrous.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-4eb3ab18-5428-4f4a-bcdb-59821ddf195f.png",
+      "sha256": "f73976c5f85ea0337a18cbf92c8b47ea605a4a09165b2958db2c063b824db974",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "동물 얼굴 없는 굽이치는 활과 위로 길게 휘어 나온 용형 곡선 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    },
+    {
+      "id": "P6",
+      "name": "성월 꽃잎",
+      "file": "pair-06.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 06 — Astral moon petals. Bow: a spectacular asymmetrical bloom of three large curved azure petal blades forming the upper limb and one long tapering petal forming the lower limb, with large empty teardrop openings and a bold cobalt-blue crescent at the grip. Staff: a tall open lotus-like lunar corolla, exactly five large unequal curved blue opal petals spiraling around a suspended deep-blue moon sphere, one petal dramatically higher, a sleek long stem with one curved basal leaf. Noble celestial floral architecture, broad clear petals, no dense feather or leaf clutter.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-7372a633-4b99-4731-bcf1-4e4753fba9c0.png",
+      "sha256": "fe22b849e32f8eae270f4f62029b04e8fffdc3e526f5481c06f1bd1991eeaee7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "서로 다른 크기의 꽃잎으로 벌어진 활과 푸른달을 품은 불균등 꽃잎 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    },
+    {
+      "id": "P7",
+      "name": "엇갈린 궤도",
+      "file": "pair-07.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 07 — Crossed lunar orbits. Bow: an innovative sweeping open bow formed from two long skewed cobalt arcs that cross only at the handgrip and diverge in asymmetric loops, a bright blue crescent suspended in the larger upper loop; tension string remains a fine clean line. Staff: an angularly tilted orbital astrolabe head with three large unequal thin crescent arcs at intersecting angles, wrapped around a deep-blue full moon; head shifted sideways off the shaft, creating dynamic asymmetry. Blue moonstone rings with razor-thin pearl edges, very spacious voids, sophisticated celestial geometry, no gears or machinery.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-d60ca0f4-74a6-46f6-a995-a34d07fc998a.png",
+      "sha256": "1a0e246095ad7375063dfa33a6f64ccae201051283186d9603f55f2ffddcaf9a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "초승달을 띄운 긴 S자 활과 만월 주위에 엇갈린 궤도를 두른 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    },
+    {
+      "id": "P8",
+      "name": "반달 왕관",
+      "file": "pair-08.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 08 — Half-moon coronation. Bow: a commanding high crescent arch ending in three long uneven curved crown points, lower limb extending as a smooth narrow moon-tail, and a large luminous half-moon of cobalt glass above the grip; open regal silhouette, never bilateral symmetric. Staff: an oversized open half-moon crown head in azure crystal, one long outer crescent cradling a luminous blue half-disk and four unequal high crown blades along the top; long royal-blue shaft with sparse opal inlays. Regal, proud, immaculate blue, asymmetric pointed elegance rather than tangled spikes.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-c5e5b1cf-a1f0-4316-a13b-a0c1c717c563.png",
+      "sha256": "f22d99a1b54131a8513ccdc3c371dcc07b602187e3bc55a96ba079875676fb6d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "상단 반달이 큰 활과 길이가 다른 왕관 뿔 사이로 푸른 반달을 받친 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    },
+    {
+      "id": "P9",
+      "name": "쇄월 파편",
+      "file": "pair-09.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 09 — Three shattered moons. Bow: three LARGE irregular curved blue moonstone fragments arranged as a coherent bow silhouette, joined by fine luminous cobalt bridges, each fragment containing a broad sweeping crescent edge; one dominant upper fragment, one smaller central grip fragment, one tapering lower fragment. The main central fragment has a very clear luminous blue moon-shaped aperture. Staff: precisely three large asymmetric floating crescent shards encircling an intense cobalt moon core, with generous empty gaps, a long slender shaft and one oblique blue crystal spine. Large monumental fractures, not confetti or dozens of tiny shards. Elegant high-status reconstructed lunar relic.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-a7f8a56a-74e2-454e-ae0c-f5c29d5aec07.png",
+      "sha256": "72b58212d96316d830c01726f9e215812207abd86e970f9803505b7110c8d831",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "거친 큰 월석 판을 연결한 활과 푸른 만월 주위에 비대칭 세 조각이 도는 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    },
+    {
+      "id": "P10",
+      "name": "긴 오로라 리본",
+      "file": "pair-10.png",
+      "prompt": "Use case: stylized-concept. Create one exceptional high-fantasy MMORPG weapon design concept image, a wide landscape 3:2 composition. EXACTLY TWO full-length weapons only: an unstrung-or-fine-string functional bow on the LEFT and a tall magic staff on the RIGHT, separated by generous empty space. Both entire weapons visible from top tip to bottom tip, large in frame, orthographic-like three-quarter product presentation, same scale of craft, crisp material and silhouette detail. No swords, people, hands, captions, letters, labels, watermark, UI, border, or background moon. Plain very dark navy background. Noble blue-moon regalia with asymmetric sweeping curves, elaborate but clearly legible architectural shapes and elegant open negative spaces. The blue moon is the primary physical emblem: a large luminous BLUE moonstone or moon-shaped structure built into each weapon, readable at thumbnail scale, not merely a tiny engraved symbol. Deep cobalt and royal-blue translucent moonstone and opalescent azure surfaces dominate; pearl-blue cutting highlights, very restrained fine platinum-gold joining lines; almost no grey metal. No ordinary grey weapon painted blue. Fine engraved star paths only secondary. Luxurious, graceful, powerful, otherworldly; no industrial mechanical parts, no animal heads, skulls, red blood, excessive smoke, huge bloom that conceals structure, or thicket of tiny symmetrical spikes. Design both weapons from scratch, independently shaped within a matching collection inspired by flowing blue moonlight. The bow must retain an identifiable central handgrip and coherent limb/string path; the staff must retain a usable long grip. Precise full-silhouette concept art with subtle material depth, not a flat icon. Pair 10 — Aurora lunar ribbons. Bow: exceptionally long flowing asymmetric cobalt-and-azure ribbon limbs with one elongated upper spiral and a shorter lower S-curve; thick luminous blue crescent moon at the center, fine readable string and dark-blue wrapped grip. Staff: very tall narrow sweeping shaft with a monumental open crescent head and two extremely long blue opaline ribbon-like solid blade fins curling in different directions down its sides, an intense blue moonstone cradled at the top. Suggest frozen aurora sheets through iridescent cyan-blue material, while every ribbon remains a solid buildable weapon form. No fabric, no loose glowing background trails. Wide graceful flowing voids.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-efe1ebb2-1caa-4fd9-bcb0-1e8fee8b4608.png",
+      "sha256": "46b5366080c1e7325ef74f296522cee30904cac421a9a3a02ca9442019fa143f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "note": "손잡이 옆 큰 초승달을 단 오로라 활과 긴 청색 리본 곡선이 흐르는 지팡이.",
+        "two_complete_weapons": true,
+        "left_bow_right_staff": true,
+        "large_blue_moon": true,
+        "no_labels": true
+      }
+    }
+  ],
+  "validation": {
+    "images": 10,
+    "weapons": 20,
+    "built_in_imagegen_calls": 10,
+    "size": [
+      1536,
+      1024
+    ],
+    "unique_sha256": 10,
+    "original_bytes_preserved": true,
+    "png_integrity": "PASS",
+    "visual_review": "10 images individually inspected from generatedImage output; full bow and staff, no labels, moon motifs and distinct silhouettes confirmed."
+  }
+}

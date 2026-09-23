@@ -1,13 +1,14 @@
 """Build a separate Baphomet, uniformly scaling its mesh AND all native motions."""
 from pathlib import Path
 from io import BytesIO
-import hashlib, json, struct, sys, zlib
+import argparse, hashlib, json, struct, sys, zlib
 ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT/'runtime/pylibs'),str(ROOT/'client-overlay/Tools/SkillColors')]
 from PIL import Image
 from native_actor import model, animation
+from primordial_geometry import TARGET_SCALE, scaled_animation
 C=ROOT/'runtime/client/GameClient';D=ROOT/'client-overlay';O=ROOT/'assets/primordial-baphomet'
-SCALE=1.4;BASE=80;IDS=[BASE+n for n in (0,200,300,400,500,600)]
+SCALE=TARGET_SCALE;BASE=80;IDS=[BASE+n for n in (0,200,300,400,500,600)]
 
 def put(rel,raw):
     p=D/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(raw)
@@ -17,24 +18,14 @@ def scale_floats(raw,offset,n):
     struct.pack_into('<'+str(n)+'f',raw,offset,*(v*SCALE for v in values))
 
 def scale_animation(source):
-    raw=bytearray(source);frames,meshes=struct.unpack_from('<2i',raw,32);at=40
-    for _ in range(meshes):
-        at+=4;scale_floats(raw,at,frames*3);at+=frames*28
-    bones=struct.unpack_from('<i',raw,at)[0];at+=4
-    for _ in range(bones):
-        at+=32;scale_floats(raw,at+12*4,3);at+=64+4
-    for _ in range(bones):
-        scale_floats(raw,at,frames*3);at+=frames*28
-    assert at==len(raw)
-    old=animation(source,list(range(frames)));new=animation(raw,list(range(frames)))
-    assert len(old['bones'])==len(new['bones'])==29
-    for a,b in zip(old['bones'],new['bones']):
-        assert a['name']==b['name']
-        for i,(x,y) in enumerate(zip(a['rest'],b['rest'])):assert abs(y-x*(SCALE if i in (12,13,14) else 1))<1e-5
-        for p,q in zip(a['poses'],b['poses']):
-            assert p[3:]==q[3:]
-            assert all(abs(q[i]-p[i]*SCALE)<1e-5 for i in range(3))
-    return bytes(raw),old,new
+    return scaled_animation(source,SCALE)
+
+def table_source(rel):
+    """Preserve later overlay additions rather than rebuilding from an install."""
+    return D/rel if (D/rel).exists() else C/rel
+
+def without_variants(lines):
+    return [l for l in lines if not (l.split() and l.split()[0].isdigit() and int(l.split()[0]) in IDS)]
 
 def wad_read(raw):
     assert struct.unpack_from('<I',raw)[0]==100
@@ -56,7 +47,12 @@ def table_add(path,new_rows):
     lines=[l for l in lines if not (l.split('\t')[0].isdigit() and int(l.split('\t')[0]) in IDS)]
     path.write_bytes(('\r\n'.join(lines+new_rows)+'\r\n').encode('cp949'))
 
-def main():
+def main(geometry_only=False):
+    if geometry_only:
+        # No monster definitions, experience or drop tables are touched here.
+        from sculpt_primordial_baphomet import main as sculpt
+        sculpt(SCALE)
+        return
     O.mkdir(exist_ok=True)
     source=(C/'Monster/p-warrior.mod').read_bytes();original=model(source);raw=bytearray(source);at=36
     assert len(original)==2 and all(c['bones'] is not None for c in original)
@@ -82,13 +78,16 @@ def main():
     assert original[0]['corners']==modified[0]['corners']
     put('Monster/mt_prime_baphomet.mod',raw)
     for key,size in [('body',(1024,1024)),('blade',(256,1024))]:
-        im=Image.open(O/(key+'-imagegen.png')).convert('RGB').resize(size,Image.Resampling.LANCZOS)
+        source_texture=O/(key+'-imagegen.png')
+        if key=='body' and (O/'body-antler-imagegen.png').exists():source_texture=O/'body-antler-imagegen.png'
+        if key=='body' and (O/'body-cyclops-imagegen.png').exists():source_texture=O/'body-cyclops-imagegen.png'
+        im=Image.open(source_texture).convert('RGB').resize(size,Image.Resampling.LANCZOS)
         im.save(O/(key+'-atlas.png'));buf=BytesIO();im.save(buf,format='BMP');bmp=buf.getvalue()
         wtm=b'TEAMMAY\0\0'+struct.pack('<I',len(bmp))+zlib.compress(bmp,9)
         assert Image.open(BytesIO(zlib.decompress(wtm[13:]))).tobytes()==im.tobytes()
         put('Texture/Monster/mt_prime_'+key+'.wtm',wtm)
-    strings,rows=wad_read((C/'Monster/monster.wad').read_bytes())
-    assert not any(struct.unpack_from('<I',row)[0]==BASE for row in rows)
+    strings,rows=wad_read(table_source('Monster/monster.wad').read_bytes())
+    rows=[row for row in rows if struct.unpack_from('<I',row)[0]!=BASE]
     original_row=next(row for row in rows if struct.unpack_from('<I',row)[0]==44)
     new_row=bytearray(original_row);struct.pack_into('<I',new_row,0,BASE)
     animations={};new_string_ids={};clips={}
@@ -103,16 +102,16 @@ def main():
                 raw_ani=(C/'Monster/Animation'/name).read_bytes()
                 scaled,old_clip,new_clip=scale_animation(raw_ani)
                 put('Monster/Animation/'+output,scaled)
-                sid=max(strings)+1;strings[sid]=output.encode()+b'\0';new_string_ids[ani]=sid
+                encoded=output.encode()+b'\0'
+                sid=next((key for key,value in strings.items() if value==encoded),max(strings)+1)
+                strings[sid]=encoded;new_string_ids[ani]=sid
                 animations[name]=dict(source_sha256=hashlib.sha256(raw_ani).hexdigest(),output=output,frames=old_clip['frames'])
                 clips[name]=(old_clip,new_clip)
             struct.pack_into('<H',new_row,offset+8,new_string_ids[ani])
     rows.append(bytes(new_row));put('Monster/monster.wad',wad_write(strings,rows))
     parsed_strings,parsed_rows=wad_read((D/'Monster/monster.wad').read_bytes())
     assert parsed_rows[:-1]==rows[:-1] and len(parsed_strings)==len(strings)
-    info=(C/'Monster/MobInfo.dat').read_bytes().decode('cp949')
-    existing={int(l.split()[0]) for l in info.splitlines()[1:] if l.split()}
-    assert not set(IDS)&existing
+    info='\r\n'.join(without_variants(table_source('Monster/MobInfo.dat').read_bytes().decode('cp949').splitlines()))
     info=info.rstrip()+'\r\n'+'\r\n'.join(f'{n}\t231\t태초의 바포메트 \\\tmt_prime_baphomet\tNONE\t0' for n in IDS)+'\r\n'
     put('Monster/MobInfo.dat',info.encode('cp949'))
     server=ROOT/'game-data/DATA/MOB_DATA.txt'
@@ -121,9 +120,12 @@ def main():
     for ident in IDS:
         row=source_row[:];row[0]=str(ident);row[1]='태초의 바포메트';row[2]='Primordial Baphomet'
         for idx,value in [(3,231),(4,23162),(6,1470),(7,1610)]:row[idx]=str(value)
+        # Use the authoritative server base (14328), not the old client 6312.
+        row[12]=str(int(source_row[12])*2)
         new_rows.append('\t'.join(row))
     table_add(server,new_rows)
-    old=(C/'Monster/monster.dat').read_bytes();txt=zlib.decompress(old[20:]).decode('cp949').rstrip()+'\r\n'+'\r\n'.join(new_rows)+'\r\n'
+    old=table_source('Monster/monster.dat').read_bytes()
+    txt='\r\n'.join(without_variants(zlib.decompress(old[20:]).decode('cp949').splitlines())+new_rows)+'\r\n'
     encoded=txt.encode('cp949');put('Monster/monster.dat',old[:16]+struct.pack('<I',len(encoded))+zlib.compress(encoded))
     drop=ROOT/'game-data/DATA/MobItemLoseTable.txt';old=drop.read_bytes().decode('cp949').splitlines()
     base_drop=[l.split() for l in old if l.split() and l.split()[0]=='44']
@@ -145,5 +147,10 @@ def main():
                 unspecified_stats_and_drops='original basic Baphomet (44)',drop_rows_per_variant=len(base_drop))
     (O/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k!='animations'},ensure_ascii=False))
+    from sculpt_primordial_baphomet import main as sculpt
+    sculpt()
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--geometry-only',action='store_true',help='Rebuild model, original-source motions and textures without editing monster/stat/drop tables')
+    main(parser.parse_args().geometry_only)

@@ -121,7 +121,7 @@ def write_glb(path,parts,images):
     jb=json.dumps(j).encode();jb+=b' '*((-len(jb))%4);bb=b''.join(blobs);bb+=bytes((-len(bb))%4)
     path.write_bytes(struct.pack('<3I',0x46546c67,2,28+len(jb)+len(bb))+struct.pack('<I4s',len(jb),b'JSON')+jb+struct.pack('<I4s',len(bb),b'BIN\0')+bb)
 
-def export_native(out,prefix,parts,images,reference):
+def export_native(out,prefix,parts,images,reference,atlas_packer=single_mesh_atlas):
     out.mkdir(parents=True,exist_ok=True);groups={}
     ref=read_mod(reference)[0];tri=ref['points'][ref['corners']['index']].reshape(-1,3,3)
     dots=(np.cross(tri[:,1]-tri[:,0],tri[:,2]-tri[:,0])*ref['corners']['normal'].reshape(-1,3,3).mean(1)).sum(1)
@@ -133,7 +133,7 @@ def export_native(out,prefix,parts,images,reference):
         if sign<0:
             p=p.reshape(-1,3,3)[:,[0,2,1]].reshape(-1,3);n=n.reshape(-1,3,3)[:,[0,2,1]].reshape(-1,3);uv=uv.reshape(-1,3,2)[:,[0,2,1]].reshape(-1,2)
         groups.setdefault(mat,[]).append((p,n,uv))
-    p,n,u,atlas=single_mesh_atlas(groups,dict(enumerate(images)),pack_texture,out/(prefix+'_atlas.wtm'))
+    p,n,u,atlas=atlas_packer(groups,dict(enumerate(images)),pack_texture,out/(prefix+'_atlas.wtm'))
     vertices,index=np.unique(p,axis=0,return_inverse=True);nf=len(p)//3
     assert len(vertices)<65536 and nf<65536
     c=np.empty(len(p),dtype=[('i','<i4'),('n','<f4',3),('u','<f4',2)]);c['i']=index;c['n']=n;c['u']=u

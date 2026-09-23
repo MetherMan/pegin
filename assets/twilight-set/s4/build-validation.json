@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "design": "noble-blue-moon-s4-sword",
+  "model": {
+    "triangles": 11332,
+    "vertices": 5689,
+    "meshes": 1,
+    "bounds": [
+      [
+        -0.33722129464149475,
+        -0.25356951355934143,
+        -0.027499999850988388
+      ],
+      [
+        1.6129112243652344,
+        0.13332004845142365,
+        0.027499999850988388
+      ]
+    ],
+    "atlas": {
+      "atlas_size": 2048,
+      "layout": "unscaled-tall-source-crops",
+      "unique_tiles": 2,
+      "material_rects": {
+        "0": {
+          "x": 8,
+          "y": 8,
+          "width": 312,
+          "height": 1496,
+          "source_size": [
+            312,
+            1496
+          ],
+          "resampled": false
+        },
+        "1": {
+          "x": 336,
+          "y": 8,
+          "width": 20,
+          "height": 40,
+          "source_size": [
+            20,
+            40
+          ],
+          "resampled": false
+        }
+      },
+      "source_pixels_preserved": true,
+      "triangles_by_material": {
+        "0": 10118,
+        "1": 1214
+      },
+      "surface_area_by_material": {
+        "0": {
+          "source": 0.4667946328742401,
+          "atlas": 0.4667946328742401
+        },
+        "1": {
+          "source": 0.010385525012620665,
+          "atlas": 0.010385525012620665
+        }
+      }
+    },
+    "reference": "ws_0081_1.mod",
+    "reference_winding": 1.0,
+    "kind": "sword",
+    "source": "assets/visual-refresh-20260923/noble-moon-15/sword-04.png",
+    "source_sha256": "b16f338f6996112d5ed129ec9acac50fa2eeeb3cd9d09b1b5f069ceff21a8189",
+    "grip": [
+      519,
+      1251
+    ],
+    "scale": 0.0013070593213106144,
+    "separate_moon_badge": false,
+    "parts": 2,
+    "holes": 0,
+    "in_game_visual_test": false
+  },
+  "surface": {
+    "model": "mt_twilight_1.mod",
+    "triangles": 11332,
+    "open_edges": 0,
+    "nonmanifold_edges": 0,
+    "reversed_seams": 0,
+    "closed_components": 3,
+    "component_volumes": [
+      0.0003313850674377435,
+      0.004606361613160108,
+      0.0002721165503142095
+    ],
+    "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+    "passed": true
+  },
+  "native_source_pixels_verified": 466752,
+  "protected_sha256": {
+    "client-overlay\\Equip\\mt_longbow_1.mod": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+    "client-overlay\\Equip\\mt_longbow_2.mod": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+    "client-overlay\\Equip\\mt_longbow_3.mod": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+    "client-overlay\\Texture\\Equip\\mt_longbow_atlas.wtm": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea",
+    "client-overlay\\Equip\\mt_staff_1.mod": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+    "client-overlay\\Equip\\mt_staff_2.mod": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+    "client-overlay\\Equip\\mt_staff_3.mod": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+    "client-overlay\\Texture\\Equip\\mt_staff_atlas.wtm": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f",
+    "assets\\twilight-set\\longbow-native.glb": "4d189dd2849caa7cecae8298c4588a0bbfcaabb1f3b6a9dbd3d0c96ef15ef93d",
+    "assets\\twilight-set\\staff-native.glb": "6fda47c0aa37754eb5aeba63e400ef52c36f3da6f09fb76470f4d8c289848697",
+    "client-overlay\\Item\\ITEM.dat": "ba6e26b00c984b75bfb4b66ddd5acda3418a6c25c2df2586db142a9f950beed4",
+    "client-overlay\\Interface\\item.dat": "b7fd7b4c995c70a9f862fa5a80173830825048fea17fdaa1fb8f997d35bedb94",
+    "client-overlay\\Equip\\Trace.txt": "6ff9b65dcbec97c8074fa5bc65b0d93641fb4e90f63a434313626a56d836d353"
+  },
+  "bow_and_staff_not_regenerated": true,
+  "installed_client_written": false,
+  "previous": {
+    "sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+    "bounds": [
+      [
+        -0.39198020100593567,
+        -0.24763613939285278,
+        -0.027499999850988388
+      ],
+      [
+        1.6102970838546753,
+        0.24896039068698883,
+        0.027499999850988388
+      ]
+    ],
+    "triangles": 9688
+  },
+  "replacements": [
+    {
+      "path": "Equip/mt_twilight_1.mod",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "bytes": 884332
+    },
+    {
+      "path": "Equip/mt_twilight_2.mod",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "bytes": 884332
+    },
+    {
+      "path": "Equip/mt_twilight_3.mod",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "bytes": 884332
+    },
+    {
+      "path": "Texture/Equip/mt_twilight_atlas.wtm",
+      "sha256": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf",
+      "bytes": 753583
+    }
+  ]
+}

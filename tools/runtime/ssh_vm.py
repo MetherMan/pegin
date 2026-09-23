@@ -4,12 +4,16 @@ ROOT=Path(__file__).resolve().parent
 sys.path.insert(0,str(ROOT/'pylibs'))
 import paramiko
 
-def connect():
+def connect(timeout=8):
     c=paramiko.SSHClient()
     known=ROOT/'vm-known-hosts'
     if known.exists(): c.load_host_keys(str(known))
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    c.connect('127.0.0.1',port=22222,username='root',key_filename=str(ROOT/'vm-ssh-key'),timeout=8,allow_agent=False,look_for_keys=False)
+    try:
+        c.connect('127.0.0.1',port=22222,username='root',key_filename=str(ROOT/'vm-ssh-key'),timeout=timeout,banner_timeout=timeout,auth_timeout=timeout,allow_agent=False,look_for_keys=False)
+    except BaseException:
+        c.close()
+        raise
     c.save_host_keys(str(known))
     return c
 

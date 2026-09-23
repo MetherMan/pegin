@@ -1,0 +1,78 @@
+{
+  "binary_sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1",
+  "taros_monster_types_checked": [
+    34,
+    234,
+    334,
+    434,
+    534,
+    634,
+    37,
+    237,
+    337,
+    437,
+    537,
+    637,
+    38,
+    238,
+    338,
+    438,
+    538,
+    638,
+    44,
+    244,
+    344,
+    444,
+    544,
+    644,
+    80,
+    280,
+    380,
+    480,
+    580,
+    680
+  ],
+  "cards_per_cycle_before": 2,
+  "fixed_noncard_kills_before": 24,
+  "soak": [
+    {
+      "seed": 1,
+      "kills": 10400,
+      "cards_per_2600_kills": [
+        184,
+        200,
+        196,
+        199
+      ]
+    },
+    {
+      "seed": 20260923,
+      "kills": 10400,
+      "cards_per_2600_kills": [
+        193,
+        184,
+        167,
+        197
+      ]
+    },
+    {
+      "seed": 123456789,
+      "kills": 10400,
+      "cards_per_2600_kills": [
+        192,
+        197,
+        185,
+        205
+      ]
+    }
+  ],
+  "passed": true,
+  "native_soak_kills": 62400,
+  "scope": "Native selection/rate/RNG; item allocation and world placement captured, no live player session.",
+  "family_local_server_path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\server-local\\LAQIA_GameServer\\LAQIA_GameServer",
+  "family_local_server_sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1",
+  "family_local_server_byte_identical_to_tested_binary": true,
+  "old_growth_only_sha256": "5280d2bbabfea3adc99559d1652183d11043ec026d49ad4568bf15b169e54b7d",
+  "installed_vm_binary_verified_this_audit": false,
+  "note": "Family server-local file matches tested ELF exactly. Existing 5280 growth report is older; no server/VM/DB was started or changed by this audit."
+}

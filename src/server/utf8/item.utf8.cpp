@@ -1953,13 +1953,18 @@ int GetMonsterItem( sPMOB_DATA pMob, char *ownerName, char *masterName, sPDESC_D
 	if( !g_MOBINFO[pMob->mobNum]->inven )
 		return 0;
 
-	if( !g_MOBINFO[pMob->mobNum]->currDropItem )
-		g_MOBINFO[pMob->mobNum]->currDropItem = g_MOBINFO[pMob->mobNum]->inven;
-
-	if( !g_MOBINFO[pMob->mobNum]->currDropItem )
+	// Draw a fresh candidate each kill. A shared sequential cursor clusters
+	// the two card entries, then excludes cards for the rest of the cycle.
+	// Uniform selection preserves each entry's original long-run probability.
+	const int dropCount = g_MOBINFO[pMob->mobNum]->invenCnt;
+	if( dropCount <= 0 )
 		return 0;
-
-	sPMOB_INVEN pMobInven = g_MOBINFO[pMob->mobNum]->currDropItem;
+	sPMOB_INVEN pMobInven = g_MOBINFO[pMob->mobNum]->inven;
+	int dropIndex = number( 0, dropCount - 1 );
+	while( dropIndex-- > 0 && pMobInven )
+		pMobInven = pMobInven->next;
+	if( !pMobInven )
+		return 0;
 
 	int dropPercent = pMobInven->percent;
 
@@ -1969,7 +1974,7 @@ int GetMonsterItem( sPMOB_DATA pMob, char *ownerName, char *masterName, sPDESC_D
 	if( pKiller )
 	{
 		// 신의축복 ( 인첸트 카드 드랍확률 증가 )
-		if( g_MOBINFO[pMob->mobNum]->currDropItem->itemNum == dENCHANT_CARD_ARMOR || g_MOBINFO[pMob->mobNum]->currDropItem->itemNum == dENCHANT_CARD_WEAPON )
+		if( pMobInven->itemNum == dENCHANT_CARD_ARMOR || pMobInven->itemNum == dENCHANT_CARD_WEAPON )
 		{
 			if( pKiller->ch2.billingFlag[dBILL_ITEM_EFFECT7] )			// 신의축복 
 				dropPercent = (int)( pMobInven->percent * 3 );
@@ -2025,14 +2030,6 @@ int GetMonsterItem( sPMOB_DATA pMob, char *ownerName, char *masterName, sPDESC_D
 		}
 	}
 
-	if( g_MOBINFO[pMob->mobNum]->currDropItem->next == NULL )
-	{
-		g_MOBINFO[pMob->mobNum]->currDropItem = g_MOBINFO[pMob->mobNum]->inven;
-	}
-	else
-	{
-		g_MOBINFO[pMob->mobNum]->currDropItem = g_MOBINFO[pMob->mobNum]->currDropItem->next;		
-	}
 	
 
 	if( !createCnt && number( 1, 100 ) <= 70  && number( 1, 100 ) <= GET_MOB_DROPDICE( pMob ) ) 

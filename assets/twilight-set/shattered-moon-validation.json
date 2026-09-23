@@ -1,0 +1,169 @@
+[
+  {
+    "triangles": 11452,
+    "vertices": 5753,
+    "meshes": 1,
+    "bounds": [
+      [
+        -0.28246235847473145,
+        -0.296652615070343,
+        -0.05900000035762787
+      ],
+      [
+        1.6127187013626099,
+        0.32140764594078064,
+        0.05900000035762787
+      ]
+    ],
+    "atlas": {
+      "atlas_size": 2048,
+      "unique_tiles": 3,
+      "material_tiles": {
+        "0": 0,
+        "1": 1,
+        "2": 2
+      },
+      "triangles_by_material": {
+        "0": 7552,
+        "1": 1560,
+        "2": 2340
+      },
+      "surface_area_by_material": {
+        "0": {
+          "source": 0.8490556745464779,
+          "atlas": 0.8490556745464779
+        },
+        "1": {
+          "source": 0.23743671040563596,
+          "atlas": 0.23743671040563596
+        },
+        "2": {
+          "source": 0.04191249158523804,
+          "atlas": 0.04191249158523804
+        }
+      }
+    },
+    "reference": "ws_0081_1.mod",
+    "reference_winding": 1.0,
+    "kind": "sword",
+    "source": "twilight-shattered-moon-concept.png",
+    "grip": [
+      251,
+      185
+    ],
+    "scale": 0.0017637362637362636,
+    "holes": 0,
+    "parts": 2,
+    "visual_in_game_checked": false,
+    "refinement": "raised-blue-crescent-and-tapered-blade"
+  },
+  {
+    "triangles": 7964,
+    "vertices": 4011,
+    "meshes": 1,
+    "bounds": [
+      [
+        -0.9133653044700623,
+        -0.35684335231781006,
+        -0.05900000035762787
+      ],
+      [
+        0.8148881196975708,
+        0.28074026107788086,
+        0.05900000035762787
+      ]
+    ],
+    "atlas": {
+      "atlas_size": 2048,
+      "unique_tiles": 3,
+      "material_tiles": {
+        "0": 0,
+        "1": 1,
+        "2": 2
+      },
+      "triangles_by_material": {
+        "0": 4796,
+        "1": 1524,
+        "2": 1644
+      },
+      "surface_area_by_material": {
+        "0": {
+          "source": 0.6608159433383444,
+          "atlas": 0.6608159433383444
+        },
+        "1": {
+          "source": 0.22111764744106874,
+          "atlas": 0.22111764744106874
+        },
+        "2": {
+          "source": 0.04652334314929127,
+          "atlas": 0.04652334314929127
+        }
+      }
+    },
+    "reference": "wb_0040_1.mod",
+    "reference_winding": 1.0,
+    "kind": "longbow",
+    "source": "twilight-shattered-moon-concept.png",
+    "grip": [
+      674,
+      570
+    ],
+    "scale": 0.001786447638603696,
+    "holes": 0,
+    "parts": 1,
+    "visual_in_game_checked": false,
+    "refinement": "raised-blue-crescent-and-tapered-blade"
+  },
+  {
+    "triangles": 5988,
+    "vertices": 3039,
+    "meshes": 1,
+    "bounds": [
+      [
+        -0.8200446367263794,
+        -0.2509376108646393,
+        -0.03799999877810478
+      ],
+      [
+        0.9884204268455505,
+        0.2561315894126892,
+        0.03799999877810478
+      ]
+    ],
+    "atlas": {
+      "atlas_size": 2048,
+      "unique_tiles": 2,
+      "material_tiles": {
+        "0": 0,
+        "1": 1
+      },
+      "triangles_by_material": {
+        "0": 5098,
+        "1": 890
+      },
+      "surface_area_by_material": {
+        "0": {
+          "source": 0.6087330525681677,
+          "atlas": 0.6087330525681677
+        },
+        "1": {
+          "source": 0.04744850558176625,
+          "atlas": 0.04744850558176625
+        }
+      }
+    },
+    "reference": "ww_0015_1.mod",
+    "reference_winding": 1.0,
+    "kind": "staff",
+    "source": "twilight-shattered-moon-concept.png",
+    "grip": [
+      1103,
+      600
+    ],
+    "scale": 0.0017169811320754717,
+    "holes": 1,
+    "parts": 2,
+    "visual_in_game_checked": false
+  }
+]

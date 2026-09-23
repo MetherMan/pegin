@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "heavenOriginalImpactPlusPiercing": true,
+  "heavenScreenshot": "v11-heaven-existing-plus-pierce.png",
+  "meteorControls": [
+    "finalFlightSpeed",
+    "finalSealDelay",
+    "finalFallDelay"
+  ],
+  "meteorChangedValues": [
+    0.2,
+    1000,
+    1800
+  ],
+  "meteorRestoredValues": [
+    0.55,
+    220,
+    650
+  ],
+  "meteorChangedLastSeconds": 5.18,
+  "meteorRestoredLastSeconds": 3.25,
+  "meteorLiveAppliedSeconds": 0.59,
+  "iceValidation": "cocytus-organic-browser-validation.json",
+  "consoleErrorsCaptured": 0,
+  "settingsSavedDuringQA": false,
+  "inGameDirect3DTest": false
+}

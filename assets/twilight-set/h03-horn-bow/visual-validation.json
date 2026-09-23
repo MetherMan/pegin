@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "design": "approved-h03-horn-bow",
+  "method": "Browser WebGL renders of GLB independently decoded from actual MOD and WTM; screenshots inspected with view_image",
+  "source": "assets/visual-refresh-20260923/bow-horns-10/bow-03.png",
+  "native_model": "h03-horn-bow-native.glb",
+  "views": [
+    {"view": "front", "file": "native-front.png", "passed": true},
+    {"view": "quarter_60_degrees", "file": "native-quarter.png", "passed": true},
+    {"view": "edge_90_degrees", "file": "native-edge.png", "passed": true},
+    {"view": "back", "file": "native-back.png", "passed": true},
+    {"view": "front_original_texture_without_lighting", "file": "native-source-color.png", "passed": true}
+  ],
+  "approved_asymmetric_horn_outline_preserved": true,
+  "small_blue_moon_and_star_details_preserved": true,
+  "grip_and_connected_string_preserved": true,
+  "rounded_volume_visible_from_side": true,
+  "back_surface_visible": true,
+  "native_original_source_pixels_exact": true,
+  "in_game_d3d_visual_test": false,
+  "installed_client_written_by_this_builder": false
+}

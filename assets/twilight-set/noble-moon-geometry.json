@@ -1,0 +1,43 @@
+{
+  "design": "noble-blue-moon",
+  "weapons": [
+    {
+      "kind": "sword",
+      "source": "assets/visual-refresh-20260923/noble-blue-moon-sword-imagegen.png",
+      "box": [318, 8, 705, 1530],
+      "grip": [512, 1228],
+      "scale": 0.0013242574257425743,
+      "tip_y": 12,
+      "blade_root_y": 843,
+      "bevel_pixels": 38,
+      "alpha_threshold": 175,
+      "close_pixels": 3,
+      "minimum_area": 110,
+      "minimum_hole": 65,
+      "outline_error": 0.7,
+      "mesh_step": 20,
+      "exclude": [[489, 1147, 536, 1293]],
+      "grip_ends": [[512, 1139], [512, 1307]],
+      "grip_radii": [0.021, 0.021],
+      "side_material_box": [500, 315, 530, 352]
+    },
+    {
+      "kind": "longbow",
+      "source": "assets/visual-refresh-20260923/noble-blue-moon-bow-imagegen.png",
+      "box": [288, 13, 722, 1520],
+      "grip": [538, 752],
+      "scale": 0.0011646586345381526,
+      "alpha_threshold": 175,
+      "close_pixels": 3,
+      "minimum_area": 105,
+      "minimum_hole": 65,
+      "outline_error": 0.7,
+      "mesh_step": 20,
+      "exclude": [[507, 695, 562, 810], [703, 165, 714, 264], [703, 315, 714, 1193], [703, 1243, 714, 1356]],
+      "grip_ends": [[538, 683], [538, 825]],
+      "grip_radii": [0.022, 0.020],
+      "string_ends": [[709, 146], [709, 1376]],
+      "side_material_box": [340, 650, 358, 668]
+    }
+  ]
+}

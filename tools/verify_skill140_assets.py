@@ -41,13 +41,19 @@ def main():
    p=path('Effect/'+n);strings,at,count=wed(p.read_bytes());seen.add(n)
    path('Effect/'+strings[0]);path('Texture/Effect/'+str(Path(strings[1]).with_suffix('.wtm')))
  for key,n in [('mt_heaven',3),('mt_six',6),('mt_six_blue',6)]:
-  s=read(path('Magic/'+listing[key]));assert list(map(int,re.findall(r'\[BONE\] 14\s+\[STARTTIME\] (\d+)',s)))==[tuning['heaven' if key=='mt_heaven' else 'six']['startDelay']+tuning['heaven' if key=='mt_heaven' else 'six']['shotGap']*i for i in range(n)]
- s=read(path('Magic/mt_meteorB.ms'));assert len(re.findall(r'\[SPE\] mm_fireball02(?:_[1-6])?\.wed',s))==7 and s.count('[SPE] mm_fireball01.wed')==7
- s=read(path('Magic/mt_frostB.ms'));positions=[e['parts'][0]['POS'] for e in read_magic(s) if e['wed'] in ('mf_spikeice01.wed','mf_spikeice02.wed')];assert len(positions)==18
- stations=len(positions)//3
- for arm,angle in enumerate([0,-tuning['frost']['spreadAngle'],tuning['frost']['spreadAngle']]):
-  for x,y,z in positions[arm*stations:(arm+1)*stations]:assert abs(math.degrees(math.atan2(-x,y))-angle)<.001
- checks.append('7 magic scripts: native dependencies resolved, 3/6/7/3 blows, staggered shots and saved frost branch angles')
+  s=read(path('Magic/'+listing[key]));arrows=[e for e in read_magic(s) if any('HITSOUND' in p for p in e['parts'])]
+  v=tuning['heaven' if key=='mt_heaven' else 'six']
+  assert [e['parts'][0]['STARTTIME'] for e in arrows]==[v['startDelay']+v['shotGap']*i for i in range(n)]
+ s=read(path('Magic/mt_meteorB.ms'));assert len(re.findall(r'\[SPE\] mm_battery_[0-7]_[0-2]\.wed',s))==24 and s.count('[SPE] mm_cannon.wed')==8 and s.count('[SPE] mm_final_fireball.wed')==1
+ s=read(path('Magic/mt_frostB.ms'));effects=read_magic(s)
+ ice=[e for e in effects if (e['wed'] or '').startswith('mf_eruption_')]
+ assert len(ice)>=32 and all(e['parts'][0]['ENEMY'] for e in ice)
+ assert not any((e['wed'] or '').startswith('mf_pressure_front') for e in effects)
+ circles=[e for e in effects if (e['wed'] or '').startswith('mf_cocytus_seal')]
+ assert len(circles)==3
+ assert all(e['parts'][0]['TARGET'][:2]==[tuning['frost'].get('sealOffsetX',0),tuning['frost'].get('sealOffsetY',0)] for e in circles)
+ assert len([e for e in effects if e['wed']=='mf_cocytus_pillar.wed'])==1
+ checks.append('7 magic scripts: native dependencies resolved, 3/6/7/3 blows, target-centered Cocytus with three seals')
  mod=importlib.util.spec_from_file_location('skillcolors',D/'Tools/SkillColors/edit_colors.py');editor=importlib.util.module_from_spec(mod);mod.loader.exec_module(editor)
  cfg=json.loads((D/'Tools/SkillColors/colors.json').read_text());frames=0
  for p in (D/'Tools/SkillColors/templates').glob('*.wed'):
@@ -57,7 +63,9 @@ def main():
    assert all(i in changed for i,(a,z) in enumerate(zip(raw,b)) if a!=z)
   key='meteor' if p.name.startswith('mm_') else 'frost'
  # Compilation now also changes animation frames, scales and timings.
- compiled,_=compile_resources(resource_reader(D),tuning,cfg)
+ compiled,metadata=compile_resources(resource_reader(D),tuning,cfg)
+ from verify_cocytus_pressure import assert_rings
+ assert_rings(compiled,metadata['frost'],effects)
  for rel,data in compiled.items():assert (D/rel).read_bytes()==data,rel
  for value in [{},dict(meteor='red',frost='#abcdef'),dict(meteor='#abc123',frost='#abc123',other=1)]:
   try:editor.validate(value)

@@ -1,6 +1,7 @@
 from mesh_tools import *
+import argparse
 O=Path(__file__).resolve().parent
-for key,prefix,folder in [('longbow','mt_longbow',ROOT/'client-overlay'),('staff','mt_staff',ROOT/'client-overlay'),('sword','mt_twilight',ROOT/'client-overlay')]:
+def build_preview(key,prefix,folder):
     parts=[];images=[]
     for p in read_mod(folder/f'Equip/{prefix}_1.mod'):
         pos=p['points'][p['corners']['index']];n=p['corners']['normal'];uv=p['corners']['uv']
@@ -11,4 +12,12 @@ for key,prefix,folder in [('longbow','mt_longbow',ROOT/'client-overlay'),('staff
         raw=(folder/'Texture/Equip'/Path(p['texture']).with_suffix('.wtm')).read_bytes();im=Image.open(BytesIO(zlib.decompress(raw[13:]))).convert('RGB')
         parts.append((key,len(images),(pos,n,uv)));images.append(im)
     write_glb(O/f'{key}-native.glb',parts,images)
-print('Native MOD/WTM readback previews created.')
+
+def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--kind',choices=['longbow','staff','sword'],action='append');args=parser.parse_args()
+    for key,prefix in [('longbow','mt_longbow'),('staff','mt_staff'),('sword','mt_twilight')]:
+        if args.kind and key not in args.kind:continue
+        build_preview(key,prefix,ROOT/'client-overlay')
+    print('Native MOD/WTM readback previews created.')
+
+if __name__=='__main__':main()

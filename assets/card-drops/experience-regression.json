@@ -1,0 +1,266 @@
+{
+  "before_sha256": "d08473bb6ccf07edd4c4f6588360f6e0dfa2990cef7a6e248067a282dd34f43a",
+  "after_sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1",
+  "bug": "At total 576, the 401-byte experience table aliases gWorldTime. Values 1..6 zero the award before the 30x multiplier.",
+  "world_time_cases": [
+    {
+      "branch": 0,
+      "world_time": 0,
+      "before_exp": 429840,
+      "after_exp": 429840
+    },
+    {
+      "branch": 1,
+      "world_time": 0,
+      "before_exp": 429840,
+      "after_exp": 429840
+    },
+    {
+      "branch": 2,
+      "world_time": 0,
+      "before_exp": 429840,
+      "after_exp": 429840
+    },
+    {
+      "branch": 3,
+      "world_time": 0,
+      "before_exp": 429840,
+      "after_exp": 429840
+    },
+    {
+      "branch": 0,
+      "world_time": 1,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 1,
+      "world_time": 1,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 2,
+      "world_time": 1,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 3,
+      "world_time": 1,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 0,
+      "world_time": 2,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 1,
+      "world_time": 2,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 2,
+      "world_time": 2,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 3,
+      "world_time": 2,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 0,
+      "world_time": 3,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 1,
+      "world_time": 3,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 2,
+      "world_time": 3,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 3,
+      "world_time": 3,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 0,
+      "world_time": 4,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 1,
+      "world_time": 4,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 2,
+      "world_time": 4,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 3,
+      "world_time": 4,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 0,
+      "world_time": 5,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 1,
+      "world_time": 5,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 2,
+      "world_time": 5,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 3,
+      "world_time": 5,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 0,
+      "world_time": 6,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 1,
+      "world_time": 6,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 2,
+      "world_time": 6,
+      "before_exp": 0,
+      "after_exp": 429840
+    },
+    {
+      "branch": 3,
+      "world_time": 6,
+      "before_exp": 0,
+      "after_exp": 429840
+    }
+  ],
+  "table_boundary_cases": [
+    {
+      "total": 399,
+      "exp": 0
+    },
+    {
+      "total": 400,
+      "exp": 0
+    },
+    {
+      "total": 401,
+      "exp": 429840
+    },
+    {
+      "total": 404,
+      "exp": 429840
+    },
+    {
+      "total": 408,
+      "exp": 429840
+    },
+    {
+      "total": 416,
+      "exp": 429840
+    },
+    {
+      "total": 544,
+      "exp": 429840
+    },
+    {
+      "total": 575,
+      "exp": 429840
+    },
+    {
+      "total": 576,
+      "exp": 429840
+    },
+    {
+      "total": 577,
+      "exp": 429840
+    },
+    {
+      "total": 580,
+      "exp": 429840
+    },
+    {
+      "total": 600,
+      "exp": 429840
+    },
+    {
+      "total": 608,
+      "exp": 429840
+    },
+    {
+      "total": 700,
+      "exp": 429840
+    },
+    {
+      "total": 799,
+      "exp": 429840
+    }
+  ],
+  "threshold_cases": [
+    {
+      "branch": 0,
+      "before": 151,
+      "after": 152,
+      "remainder": 123
+    },
+    {
+      "branch": 1,
+      "before": 147,
+      "after": 148,
+      "remainder": 123
+    },
+    {
+      "branch": 2,
+      "before": 144,
+      "after": 145,
+      "remainder": 123
+    },
+    {
+      "branch": 3,
+      "before": 134,
+      "after": 135,
+      "remainder": 123
+    }
+  ],
+  "cap_cases": 4,
+  "passed": true,
+  "scope": "Actual x86 solo-kill award, multiplier, accumulation, and level-up; no live DB, drop/world side effects or UI/persistence notifications."
+}

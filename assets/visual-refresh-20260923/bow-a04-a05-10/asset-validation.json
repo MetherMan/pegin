@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "images": 10,
+  "distinct_sha256": 10,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "actual_reference_images": [
+    "A04",
+    "A05"
+  ],
+  "one_bow_per_image": true,
+  "independent_imagegen_calls": true,
+  "original_bytes_preserved": true,
+  "game_files_changed": false
+}

@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "revision": "matte-down-v4",
+  "scale": 1.7,
+  "baseline_scale": 1.4,
+  "sculpt_scale_factor": 1.2142857142857144,
+  "native_body_scale_max_error": 3.5762786865234375e-07,
+  "hand_bone": 14,
+  "grip_pivot_baseline": [
+    -2.92578,
+    3.2614,
+    0.0
+  ],
+  "grip_pivot_current": [
+    -3.5527328571428574,
+    3.960271428571429,
+    0.0
+  ],
+  "blade_roll_degrees": 180,
+  "blade_roll_axis": [
+    0,
+    0,
+    1
+  ],
+  "blade_not_reversed": true,
+  "rest_blade_roll_error": 0.0,
+  "closed_cleaver": {
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "triangles": 5184
+  },
+  "motions": {
+    "idle": {
+      "frames_checked": 70,
+      "grip_scale_error": 2.0667436784194138e-07,
+      "long_axis_movement_after_roll": 0.0,
+      "rigid_blade_roll_error": 0.0,
+      "first_frame": 1,
+      "edge_minus_spine_world_y_before": 0.8560330227552155,
+      "edge_minus_spine_world_y_after": -0.8560330227552155,
+      "edge_y_range_after": [
+        -0.8560330227552155,
+        -0.8172307727492913
+      ]
+    },
+    "walk": {
+      "frames_checked": 41,
+      "grip_scale_error": 2.022773726295668e-07,
+      "long_axis_movement_after_roll": 0.0,
+      "rigid_blade_roll_error": 0.0,
+      "first_frame": 1,
+      "edge_minus_spine_world_y_before": 0.859894239300302,
+      "edge_minus_spine_world_y_after": -0.8598942393003015,
+      "edge_y_range_after": [
+        -0.8629636155850651,
+        -0.8279290618831143
+      ]
+    },
+    "attack": {
+      "frames_checked": 87,
+      "grip_scale_error": 4.057634459542214e-07,
+      "long_axis_movement_after_roll": 0.0,
+      "rigid_blade_roll_error": 0.0,
+      "first_frame": 1,
+      "edge_minus_spine_world_y_before": 0.8560330488500163,
+      "edge_minus_spine_world_y_after": -0.8560330488500161,
+      "edge_y_range_after": [
+        -0.9458474408501498,
+        0.9343168320235051
+      ]
+    },
+    "run": {
+      "frames_checked": 25,
+      "grip_scale_error": 1.9969454645440976e-07,
+      "long_axis_movement_after_roll": 0.0,
+      "rigid_blade_roll_error": 0.0,
+      "first_frame": 1,
+      "edge_minus_spine_world_y_before": 0.9131182304967407,
+      "edge_minus_spine_world_y_after": -0.9131182304967405,
+      "edge_y_range_after": [
+        -0.9297445128322077,
+        -0.8745038807405714
+      ]
+    }
+  },
+  "animations": {
+    "p-warrior_bla_pst.ani": {
+      "frames": 71,
+      "bones": 29,
+      "rotations_exact": true,
+      "source_translation_scale": 1.7,
+      "sha256": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b"
+    },
+    "p-warrior_bla_pwa.ani": {
+      "frames": 42,
+      "bones": 29,
+      "rotations_exact": true,
+      "source_translation_scale": 1.7,
+      "sha256": "f5b00d844ec3c0bfa898612a82b3c3934659031e6a67665e14bfc0f1796b8df3"
+    },
+    "p-warrior_bla_pa1.ani": {
+      "frames": 71,
+      "bones": 29,
+      "rotations_exact": true,
+      "source_translation_scale": 1.7,
+      "sha256": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b"
+    },
+    "p-warrior_bla_ded.ani": {
+      "frames": 93,
+      "bones": 29,
+      "rotations_exact": true,
+      "source_translation_scale": 1.7,
+      "sha256": "0d6458c30373e0b8ab6e0e0f1f1c260347d27926228a2b7b1119d8d641264e2d"
+    },
+    "p-warrior_bla_wst.ani": {
+      "frames": 71,
+      "bones": 29,
+      "rotations_exact": true,
+      "source_translation_scale": 1.7,
+      "sha256": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b"
+    },
+    "p-warrior_bla_wru.ani": {
+      "frames": 26,
+      "bones": 29,
+      "rotations_exact": true,
+      "source_translation_scale": 1.7,
+      "sha256": "1ea5a05d110a2928611e0d5b9767b04fae6734e63fc77ec7e8e74649c518fae5"
+    },
+    "p-warrior_bla_wa1.ani": {
+      "frames": 104,
+      "bones": 29,
+      "rotations_exact": true,
+      "source_translation_scale": 1.7,
+      "sha256": "336f108980cee52b05efa9584649c4c8ee48a317909f71844fb3f83a44af9ae9"
+    },
+    "p-warrior_bla_ht.ani": {
+      "frames": 34,
+      "bones": 29,
+      "rotations_exact": true,
+      "source_translation_scale": 1.7,
+      "sha256": "5f6d59ca3e2062bc6eeaa9bc162f44928aafba53317d3369aae2f5b49260448e"
+    }
+  },
+  "texture_checks": [
+    {
+      "native": "mt_prime_body.wtm",
+      "source": "body-matte-v4-imagegen.png",
+      "source_to_atlas_exact": true,
+      "wtm_to_png_exact": true
+    },
+    {
+      "native": "mt_prime_cleaver.wtm",
+      "source": "../visual-refresh-20260923/baphomet-antler-cleaver-concept.png",
+      "source_to_atlas_exact": true,
+      "wtm_to_png_exact": true
+    }
+  ],
+  "repeat_build_identical": true,
+  "protected_tables_unchanged": {
+    "client-overlay\\Monster\\monster.wad": "7b66e314ae1ec7b03503f9d87d955065de98bbc97df260c22944e5e9a7a98042",
+    "client-overlay\\Monster\\monster.dat": "92c8b6ad2923efcd0a8ef395c775fce11ee18c59ed898650c9bbef41aebb2aa0",
+    "client-overlay\\Monster\\MobInfo.dat": "b94b7fd93e05b47235f2b7da24fadfe9864e96d4122e81fc9cdfa6a516458a4d",
+    "game-data\\DATA\\MOB_DATA.txt": "0f3ae2d097e16b1dbdd443e2007eb13926d194283f87830180fa589176863126",
+    "game-data\\DATA\\MobItemLoseTable.txt": "bfe109a2d932b71d240e0488fec96cd9ce6538ee39bd334c82986df1029bd83e"
+  },
+  "resource_hashes": {
+    "client-overlay\\Monster\\mt_prime_baphomet.mod": "dfcdd38e068c7aeb1e6d611240766dfbeeee14bc5998eef542572c27e2f5bc62",
+    "client-overlay\\Texture\\Monster\\mt_prime_body.wtm": "451e20e0bb117ef465d9c568e824007ad735c60a6c173240e1d5547fad1b696e",
+    "client-overlay\\Texture\\Monster\\mt_prime_cleaver.wtm": "1b449cbb90ce5e3aa24ab731522711540242931f4a1cb2ed4323557e907320f5",
+    "client-overlay\\Monster\\Animation\\mt_prime_ded.ani": "0d6458c30373e0b8ab6e0e0f1f1c260347d27926228a2b7b1119d8d641264e2d",
+    "client-overlay\\Monster\\Animation\\mt_prime_ht.ani": "5f6d59ca3e2062bc6eeaa9bc162f44928aafba53317d3369aae2f5b49260448e",
+    "client-overlay\\Monster\\Animation\\mt_prime_pa1.ani": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b",
+    "client-overlay\\Monster\\Animation\\mt_prime_pst.ani": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b",
+    "client-overlay\\Monster\\Animation\\mt_prime_pwa.ani": "f5b00d844ec3c0bfa898612a82b3c3934659031e6a67665e14bfc0f1796b8df3",
+    "client-overlay\\Monster\\Animation\\mt_prime_wa1.ani": "336f108980cee52b05efa9584649c4c8ee48a317909f71844fb3f83a44af9ae9",
+    "client-overlay\\Monster\\Animation\\mt_prime_wru.ani": "1ea5a05d110a2928611e0d5b9767b04fae6734e63fc77ec7e8e74649c518fae5",
+    "client-overlay\\Monster\\Animation\\mt_prime_wst.ani": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b",
+    "assets\\primordial-baphomet\\model.json": "8f0f42666bd59669f7814173f640c4f7d173cad3b5c074380279edaf3ade8938",
+    "assets\\primordial-baphomet\\body-cyclops-atlas.png": "43d0a5ddf114a601aebf3088b208ac17d9843b2b632d02e423dc567d6ec9100d",
+    "assets\\primordial-baphomet\\cleaver-atlas.png": "9eca40100819ea114c5cf2d461d1849609cab59ec4db6d5628113017861d741a"
+  },
+  "in_game_visual_test": false,
+  "note": "Grip preservation is measured relative to the uniformly resized hand. All motion rotations are original. The legacy original body is not asserted watertight; new cleaver is closed."
+}

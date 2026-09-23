@@ -1,5 +1,21 @@
 # 푸른달의 트와일라잇 롱보우 / 스태프
 
+## 현재 선택 · 2026-09-23 v13
+
+**S4 검 · H03 활 · 월식 갈고리 지팡이**를 기존 두 게임 설치 위치에 모두 적용했다. 검·지팡이는 기존 확정본과 일치하여 유지했고 H03 활의 MOD 3개·WTM 1개를 두 곳에 백업 후 교체했다. 24개 무기 파일이 선택 원본과 일치하며 실행 경로·아이템 번호·계정 설정을 비롯한 보호 파일 99개는 유지한다. [설치·백업 기록](selected-weapons-installation.json), [세 무기 모델](index.html), [H03 원화/입체 비교](h03-horn-bow/index.html), [착용 크기 비교](readability.html)를 참조한다.
+
+H03은 원화 728,210픽셀을 보존하고 뿔·초승달·손잡이·시위를 앞뒤 면과 닫힌 옆면으로 제작했다. 모든 LOD의 네이티브 파싱·닫힌 면·기존 길이·장착 축을 확인했다. 회전·착용 검수는 게임 파일을 읽은 브라우저 화면 기준이며 실제 게임 D3D 전투 검수는 하지 않았다. [최종 통합 검증](../skills140/final-v13-validation.json).
+
+## 이전 v10 선택
+
+검은 **S4 달빛 물결**, 지팡이는 **P3 월식 갈고리**로 제작·로컬 설치했다. 지팡이는 [선택 원화](../visual-refresh-20260923/moon-pairs-10/pair-03.png)의 오른쪽 디자인을 그대로 사용하며 큰 푸른 달과 갈고리 사이 빈 공간, 둥근 달의 두께, 기존 손잡이·장착 축·길이를 유지한다. [지팡이 모델](index.html?weapon=staff), [제작·검수 기록](eclipse-hook-staff/README.md), [8파일 백업·설치 기록](eclipse-hook-staff/installation.json)을 참조한다. 활은 기존 설치본을 유지하며 [활 3개씩 총 10장·30개 새 시안](../visual-refresh-20260923/bow-triples-10/index.html)을 비교할 수 있다. 아래의 v9 상태는 이전 이력이다.
+
+## 이전 v9 기록
+
+현재 검은 사용자가 선택한 **S4 달빛 물결** 원화로 제작·설치했다. 활은 **Noble Blue Moon**, 지팡이는 **Shattered Moon**을 유지한다. 검 MOD 3개와 WTM 1개를 아버지 설치본·작업공간 runtime에 각각 백업 후 교체해 총 8개를 적용했으며 보호 파일 67개, 기존 실행 경로와 아이템 번호·능력치는 유지했다. [S4 모델 보기](index.html?weapon=sword), [제작·검수 기록](s4/README.md), [설치·백업 기록](s4/installation.json)을 참조한다. 실제 MOD/WTM의 회전·착용 크기를 브라우저에서 확인했으며 실제 게임 Direct3D 전투 검수는 별도다.
+
+활과 지팡이는 새 [ImageGen 시안 10쌍 갤러리](../visual-refresh-20260923/moon-pairs-10/index.html)에서 후보를 비교할 수 있다. 각 원본 한 장에 활과 지팡이가 함께 있으며, 새 시안의 모델링·설치는 하지 않았다. [원본·프롬프트 기록](../visual-refresh-20260923/moon-pairs-10/prompts.json)과 [이전 15개 시안](../visual-refresh-20260923/noble-moon-15/index.html)을 보존한다. 이전 [NOBLE-MOON-REVIEW.md](NOBLE-MOON-REVIEW.md)와 [noble-moon-installation.json](noble-moon-installation.json)은 과거 설치 이력이다. 아래는 초기 제작 이력이다.
+
 2026-09-22 요청. 롱보우는 비대칭 3번 시안에서 청색만 밝힌 ImageGen 원본을 사용합니다. 스태프는 사용자가 확정한 KakaoTalk 이미지의 디자인입니다. 이름과 Rank는 양손검과 같은 `#72CFFF`, Rank 9, 무게 0, 착용 능력치 제한 없음입니다.
 
 | 무기 | 아이템 번호 (0~20강) | 0강 물리 | 20강 물리 | 0강 마법 | 20강 마법 | 지급 |

@@ -1,0 +1,319 @@
+{
+  "passed": true,
+  "configurations": [
+    {
+      "configuration": "saved",
+      "nativeParts": 150,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        276,
+        452,
+        628,
+        804
+      ],
+      "ringRadii": [
+        7.41,
+        5.7525,
+        4.095000000000001,
+        2.4375,
+        0.7800000000000002
+      ],
+      "ringCounts": [
+        30,
+        23,
+        17,
+        10,
+        8
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "iceDensity:0.2",
+      "nativeParts": 150,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        276,
+        452,
+        628,
+        804
+      ],
+      "ringRadii": [
+        7.41,
+        5.7525,
+        4.095000000000001,
+        2.4375,
+        0.7800000000000002
+      ],
+      "ringCounts": [
+        30,
+        23,
+        17,
+        10,
+        8
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "iceDensity:2.5",
+      "nativeParts": 150,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        276,
+        452,
+        628,
+        804
+      ],
+      "ringRadii": [
+        7.41,
+        5.7525,
+        4.095000000000001,
+        2.4375,
+        0.7800000000000002
+      ],
+      "ringCounts": [
+        30,
+        23,
+        17,
+        10,
+        8
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "mistAmount:0",
+      "nativeParts": 140,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        276,
+        452,
+        628,
+        804
+      ],
+      "ringRadii": [
+        7.41,
+        5.7525,
+        4.095000000000001,
+        2.4375,
+        0.7800000000000002
+      ],
+      "ringCounts": [
+        30,
+        23,
+        17,
+        10,
+        8
+      ],
+      "mistPuffs": 0,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "mistAmount:3",
+      "nativeParts": 170,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        276,
+        452,
+        628,
+        804
+      ],
+      "ringRadii": [
+        7.41,
+        5.7525,
+        4.095000000000001,
+        2.4375,
+        0.7800000000000002
+      ],
+      "ringCounts": [
+        30,
+        23,
+        17,
+        10,
+        8
+      ],
+      "mistPuffs": 30,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "inwardStartRadius:0.6",
+      "nativeParts": 123,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        276,
+        452,
+        628,
+        804
+      ],
+      "ringRadii": [
+        4.680000000000001,
+        3.7050000000000005,
+        2.7300000000000004,
+        1.7550000000000003,
+        0.7800000000000002
+      ],
+      "ringCounts": [
+        19,
+        15,
+        11,
+        8,
+        8
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "inwardStartRadius:2",
+      "nativeParts": 232,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        276,
+        452,
+        628,
+        804
+      ],
+      "ringRadii": [
+        15.600000000000001,
+        11.895000000000001,
+        8.190000000000001,
+        4.484999999999999,
+        0.7799999999999994
+      ],
+      "ringCounts": [
+        63,
+        48,
+        33,
+        18,
+        8
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "inwardEndRadius:0",
+      "nativeParts": 135,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        276,
+        452,
+        628
+      ],
+      "ringRadii": [
+        7.41,
+        5.5575,
+        3.705,
+        1.8525
+      ],
+      "ringCounts": [
+        30,
+        22,
+        15,
+        8
+      ],
+      "mistPuffs": 8,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "inwardEndRadius:0.5",
+      "nativeParts": 176,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        276,
+        452,
+        628,
+        804
+      ],
+      "ringRadii": [
+        7.41,
+        6.532500000000001,
+        5.655,
+        4.7775,
+        3.9000000000000004
+      ],
+      "ringCounts": [
+        30,
+        26,
+        23,
+        19,
+        16
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "all-frost-1",
+      "nativeParts": 107,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        315,
+        530,
+        745
+      ],
+      "ringRadii": [
+        2.73,
+        2.0475,
+        1.365,
+        0.6825000000000001
+      ],
+      "ringCounts": [
+        21,
+        16,
+        10,
+        8
+      ],
+      "mistPuffs": 0,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "all-frost-2",
+      "nativeParts": 315,
+      "damageEvents": 3,
+      "ringTimes": [
+        1500,
+        1830,
+        2160,
+        2490,
+        2820
+      ],
+      "ringRadii": [
+        26.0,
+        21.125,
+        16.25,
+        11.375,
+        6.5
+      ],
+      "ringCounts": [
+        64,
+        64,
+        50,
+        35,
+        20
+      ],
+      "mistPuffs": 30,
+      "fixedHorizontalAnchors": true
+    }
+  ],
+  "controls": [
+    "iceDensity",
+    "mistAmount",
+    "inwardStartRadius",
+    "inwardEndRadius"
+  ],
+  "savedValuesPreserved": 60,
+  "unrelatedNativeFilesUnchanged": 170,
+  "protectedFilesUnchanged": 59,
+  "supportsTrueOpacity": false,
+  "nativeBlend": "ONE/ONE",
+  "inGameVisualTest": false
+}

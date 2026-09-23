@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "native_preview_identical": true,
+  "original_body_positions_and_bones_preserved": true,
+  "weapon_hand_bone": 14,
+  "native_animation_files_unchanged": true,
+  "closed_weapon_surfaces": true,
+  "chunks": [
+    {
+      "vertices": 3237,
+      "triangles": 6232,
+      "degenerate": 0,
+      "boundary_edges": 20
+    },
+    {
+      "vertices": 2624,
+      "triangles": 5184,
+      "degenerate": 0,
+      "boundary_edges": 0
+    }
+  ],
+  "texture_pixel_readback": [
+    "mt_prime_body.wtm",
+    "mt_prime_cleaver.wtm"
+  ],
+  "in_game_visual_test": false
+}

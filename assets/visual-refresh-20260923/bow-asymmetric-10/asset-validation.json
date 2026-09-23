@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "images": 10,
+  "distinct_sha256": 10,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "new_independent_generations": true,
+  "cropped_from_previous_sheets": false,
+  "images_edited_after_generation": false,
+  "game_files_changed": false
+}

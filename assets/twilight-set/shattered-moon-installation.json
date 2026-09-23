@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "installation": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient",
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\shattered-moon-20260923-122409",
+  "installed_files": 24,
+  "unique_weapon_files": 12,
+  "protected_files_unchanged": 21,
+  "launcher_and_item_stats_unchanged": true,
+  "server_or_database_written": false,
+  "skills_applied": false,
+  "in_game_visual_test": false,
+  "files": [
+    {
+      "path": "Equip/mt_twilight_1.mod",
+      "sha256": "285dc7e2404368f72632da8c0fdf8e69c9fbe7e894aafb69bf0194a82bf8179f"
+    },
+    {
+      "path": "Equip/mt_twilight_2.mod",
+      "sha256": "285dc7e2404368f72632da8c0fdf8e69c9fbe7e894aafb69bf0194a82bf8179f"
+    },
+    {
+      "path": "Equip/mt_twilight_3.mod",
+      "sha256": "285dc7e2404368f72632da8c0fdf8e69c9fbe7e894aafb69bf0194a82bf8179f"
+    },
+    {
+      "path": "Equip/mt_longbow_1.mod",
+      "sha256": "45d618a9dd86c7c1bb73ab987dbc3ed06a43de6697ba33884eb21107bfcb949a"
+    },
+    {
+      "path": "Equip/mt_longbow_2.mod",
+      "sha256": "45d618a9dd86c7c1bb73ab987dbc3ed06a43de6697ba33884eb21107bfcb949a"
+    },
+    {
+      "path": "Equip/mt_longbow_3.mod",
+      "sha256": "45d618a9dd86c7c1bb73ab987dbc3ed06a43de6697ba33884eb21107bfcb949a"
+    },
+    {
+      "path": "Equip/mt_staff_1.mod",
+      "sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323"
+    },
+    {
+      "path": "Equip/mt_staff_2.mod",
+      "sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323"
+    },
+    {
+      "path": "Equip/mt_staff_3.mod",
+      "sha256": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323"
+    },
+    {
+      "path": "Texture/Equip/mt_twilight_atlas.wtm",
+      "sha256": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f"
+    },
+    {
+      "path": "Texture/Equip/mt_longbow_atlas.wtm",
+      "sha256": "7465209b1a369ca4c1462afcfdafccb1c3db0a68cef13ab3b9edb56f0a6155b6"
+    },
+    {
+      "path": "Texture/Equip/mt_staff_atlas.wtm",
+      "sha256": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f"
+    }
+  ]
+}

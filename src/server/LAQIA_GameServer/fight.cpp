@@ -1434,8 +1434,10 @@ BYTE CheckDeadMob( sPDESC_DATA pPlayer, sPMOB_DATA pMob )
 							mobExp = ceil( CalculationMobExp( pExpPlayer, pMob,
 								MAX( pMob->saveExp[i].expDamage[0], GET_MOB_HP( pMob ) ) ) * MIN( pExpPlayer->ch2.expJump, 1 ) );
 
-							if( g_EXP_PROTECT[GET_ALL_SKILL( pPlayer )] )
-								mobExp = mobExp * (int)(g_EXP_PROTECT[GET_ALL_SKILL( pPlayer )]/100);
+							// The legacy table ends at total level 400; never read adjacent globals.
+							const int expLevel = GET_ALL_SKILL( pExpPlayer );
+							if( expLevel >= 0 && expLevel < dMAX_EXP_PROTECT && g_EXP_PROTECT[expLevel] )
+								mobExp = mobExp * (int)(g_EXP_PROTECT[expLevel]/100);
 
 							if( g_ExpJump > 1 )
 								mobExp = (int)( mobExp * g_ExpJump );
@@ -1491,8 +1493,10 @@ BYTE CheckDeadMob( sPDESC_DATA pPlayer, sPMOB_DATA pMob )
 							mobExp = CalculationMobExp( pExpPlayer, pMob, 
 								MAX( pMob->saveExp[i].expDamage[1], GET_MOB_HP( pMob ) ) ) * MIN( pExpPlayer->ch2.expJump, 1 );
 
-							if( g_EXP_PROTECT[GET_ALL_SKILL( pPlayer )] )
-								mobExp = mobExp * (int)(g_EXP_PROTECT[GET_ALL_SKILL( pPlayer )]/100);
+							// The legacy table ends at total level 400; never read adjacent globals.
+							const int expLevel = GET_ALL_SKILL( pExpPlayer );
+							if( expLevel >= 0 && expLevel < dMAX_EXP_PROTECT && g_EXP_PROTECT[expLevel] )
+								mobExp = mobExp * (int)(g_EXP_PROTECT[expLevel]/100);
 
 							if( g_ExpJump > 1 )
 								mobExp = (int)( mobExp * g_ExpJump );
@@ -1550,8 +1554,10 @@ BYTE CheckDeadMob( sPDESC_DATA pPlayer, sPMOB_DATA pMob )
 							mobExp = CalculationMobExp( pExpPlayer, pMob, 
 								MAX( pMob->saveExp[i].expDamage[2], GET_MOB_HP( pMob ) ) ) * MIN( pExpPlayer->ch2.expJump, 1 );
 
-							if( g_EXP_PROTECT[GET_ALL_SKILL( pPlayer )] )
-								mobExp = mobExp * (int)(g_EXP_PROTECT[GET_ALL_SKILL( pPlayer )]/100);
+							// The legacy table ends at total level 400; never read adjacent globals.
+							const int expLevel = GET_ALL_SKILL( pExpPlayer );
+							if( expLevel >= 0 && expLevel < dMAX_EXP_PROTECT && g_EXP_PROTECT[expLevel] )
+								mobExp = mobExp * (int)(g_EXP_PROTECT[expLevel]/100);
 
 							//몬스터 경험치 획득 메시지
 							if( g_ExpJump > 1 )
@@ -1608,8 +1614,10 @@ BYTE CheckDeadMob( sPDESC_DATA pPlayer, sPMOB_DATA pMob )
 							mobExp = CalculationMobExp( pExpPlayer, pMob, 
 								MAX( pMob->saveExp[i].expDamage[3], GET_MOB_HP( pMob ) ) ) * MIN( pExpPlayer->ch2.expJump, 1 );
 
-							if( g_EXP_PROTECT[GET_ALL_SKILL( pPlayer )] )
-								mobExp = mobExp * (int)(g_EXP_PROTECT[GET_ALL_SKILL( pPlayer )]/100);
+							// The legacy table ends at total level 400; never read adjacent globals.
+							const int expLevel = GET_ALL_SKILL( pExpPlayer );
+							if( expLevel >= 0 && expLevel < dMAX_EXP_PROTECT && g_EXP_PROTECT[expLevel] )
+								mobExp = mobExp * (int)(g_EXP_PROTECT[expLevel]/100);
 
 							if( g_ExpJump > 1 )
 								mobExp = (int)( mobExp * g_ExpJump );

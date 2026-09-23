@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0;background:#15171c;color:#e4e9ef;font:18px system-ui;display:flex}section{width:33.333vw;text-align:center}canvas{width:100%;height:85vh}h2{font-size:18px}</style>
+<script type="importmap">{"imports":{"three":"../twilight/vendor/three.module.js"}}</script><script type="module">
+import * as T from 'three';
+const data=await(await fetch('knight-reference.json')).json();
+for(const d of data){const div=document.createElement('section');div.innerHTML=`<h2>${d.name}</h2>`;document.body.append(div);const s=new T.Scene(),r=new T.WebGLRenderer({antialias:true});r.setSize(innerWidth/3,innerHeight*.85);r.setClearColor(0x15171c);r.outputColorSpace=T.SRGBColorSpace;div.append(r.domElement);const group=new T.Group();s.add(group);
+const chunks=d.reference?[d.reference]:d.chunks;
+for(const c of chunks){const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(d.reference?c.positions:c.corners.flatMap(v=>{const p=c.points[v[0]];return [-p[1],p[0],p[2]]}),3));g.setAttribute('uv',new T.Float32BufferAttribute(d.reference?c.uv:c.corners.flatMap(v=>v.slice(4,6)),2));const t=await new T.TextureLoader().loadAsync(c.image);t.flipY=false;t.colorSpace=T.SRGBColorSpace;group.add(new T.Mesh(g,new T.MeshBasicMaterial({map:t,side:T.DoubleSide})));}
+const b=new T.Box3().setFromObject(group),sz=b.getSize(new T.Vector3()),c=b.getCenter(new T.Vector3()),cam=new T.PerspectiveCamera(30,(innerWidth/3)/(innerHeight*.85),.001,100);cam.position.copy(c).add(new T.Vector3(0,0,Math.max(sz.y,sz.x/cam.aspect)*2.05));cam.lookAt(c);r.render(s,cam);}
+</script>

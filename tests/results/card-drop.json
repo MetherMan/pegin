@@ -1,0 +1,79 @@
+{
+  "binary_sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1",
+  "taros_monster_types_checked": [
+    34,
+    234,
+    334,
+    434,
+    534,
+    634,
+    37,
+    237,
+    337,
+    437,
+    537,
+    637,
+    38,
+    238,
+    338,
+    438,
+    538,
+    638,
+    44,
+    244,
+    344,
+    444,
+    544,
+    644,
+    80,
+    280,
+    380,
+    480,
+    580,
+    680
+  ],
+  "cards_per_cycle_before": 2,
+  "fixed_noncard_kills_before": 24,
+  "before_cards_at_kills": [
+    1,
+    2,
+    27,
+    28
+  ],
+  "changing_map_does_not_reset_old_cursor": true,
+  "soak": [
+    {
+      "seed": 1,
+      "kills": 10400,
+      "cards_per_2600_kills": [
+        184,
+        200,
+        196,
+        199
+      ]
+    },
+    {
+      "seed": 20260923,
+      "kills": 10400,
+      "cards_per_2600_kills": [
+        193,
+        184,
+        167,
+        197
+      ]
+    },
+    {
+      "seed": 123456789,
+      "kills": 10400,
+      "cards_per_2600_kills": [
+        192,
+        197,
+        185,
+        205
+      ]
+    }
+  ],
+  "passed": true,
+  "native_soak_kills": 62400,
+  "scope": "Native selection/rate/RNG; item allocation and world placement captured, no live player session."
+}

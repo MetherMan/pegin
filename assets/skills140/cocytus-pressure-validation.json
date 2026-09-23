@@ -1,0 +1,104 @@
+{
+  "passed": true,
+  "configurations": [
+    {
+      "configuration": "saved",
+      "nativeParts": 135,
+      "damageEvents": 3,
+      "outerRadius": 7.41,
+      "innerRadius": 0.7800000000000001,
+      "mistPuffs": 14
+    },
+    {
+      "configuration": "iceDensity:0.2",
+      "nativeParts": 135,
+      "damageEvents": 3,
+      "outerRadius": 7.41,
+      "innerRadius": 0.7800000000000001,
+      "mistPuffs": 14
+    },
+    {
+      "configuration": "iceDensity:2.5",
+      "nativeParts": 135,
+      "damageEvents": 3,
+      "outerRadius": 7.41,
+      "innerRadius": 0.7800000000000001,
+      "mistPuffs": 14
+    },
+    {
+      "configuration": "mistAmount:0",
+      "nativeParts": 121,
+      "damageEvents": 3,
+      "outerRadius": 7.41,
+      "innerRadius": 0.7800000000000001,
+      "mistPuffs": 0
+    },
+    {
+      "configuration": "mistAmount:3",
+      "nativeParts": 147,
+      "damageEvents": 3,
+      "outerRadius": 7.41,
+      "innerRadius": 0.7800000000000001,
+      "mistPuffs": 26
+    },
+    {
+      "configuration": "inwardStartRadius:0.6",
+      "nativeParts": 135,
+      "damageEvents": 3,
+      "outerRadius": 4.680000000000001,
+      "innerRadius": 0.7800000000000001,
+      "mistPuffs": 14
+    },
+    {
+      "configuration": "inwardStartRadius:2",
+      "nativeParts": 135,
+      "damageEvents": 3,
+      "outerRadius": 15.600000000000001,
+      "innerRadius": 0.7800000000000001,
+      "mistPuffs": 14
+    },
+    {
+      "configuration": "inwardEndRadius:0",
+      "nativeParts": 135,
+      "damageEvents": 3,
+      "outerRadius": 7.41,
+      "innerRadius": 0.0,
+      "mistPuffs": 14
+    },
+    {
+      "configuration": "inwardEndRadius:0.5",
+      "nativeParts": 135,
+      "damageEvents": 3,
+      "outerRadius": 7.41,
+      "innerRadius": 3.9000000000000004,
+      "mistPuffs": 14
+    },
+    {
+      "configuration": "all-frost-1",
+      "nativeParts": 121,
+      "damageEvents": 3,
+      "outerRadius": 2.73,
+      "innerRadius": 0.0,
+      "mistPuffs": 0
+    },
+    {
+      "configuration": "all-frost-2",
+      "nativeParts": 147,
+      "damageEvents": 3,
+      "outerRadius": 26.0,
+      "innerRadius": 6.5,
+      "mistPuffs": 26
+    }
+  ],
+  "newControls": [
+    "iceDensity",
+    "mistAmount",
+    "inwardStartRadius",
+    "inwardEndRadius"
+  ],
+  "oldValuesPreserved": 56,
+  "unrelatedNativeFilesUnchanged": 146,
+  "supportsTrueOpacity": false,
+  "nativeBlend": "ONE/ONE",
+  "inGameVisualTest": false
+}

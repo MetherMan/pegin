@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-23T06:50:24.272450+00:00",
+  "url": "http://127.0.0.1:8876/assets/visual-refresh-20260923/bow-triples-10/index.html",
+  "browser": {
+    "tool": "agbrowse",
+    "mode": "headless",
+    "cdp_port": 9236,
+    "profile": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\bow-v10-browser",
+    "viewport": [
+      1422,
+      904
+    ],
+    "dpr": 1,
+    "evaluate_used": false,
+    "other_browser_sessions_used": false
+  },
+  "images": {
+    "expected": 10,
+    "network_image_entries": 10,
+    "visually_rendered": 10,
+    "bows_visible": 30,
+    "files": [
+      "bows-01.png",
+      "bows-02.png",
+      "bows-03.png",
+      "bows-04.png",
+      "bows-05.png",
+      "bows-06.png",
+      "bows-07.png",
+      "bows-08.png",
+      "bows-09.png",
+      "bows-10.png"
+    ]
+  },
+  "checks": {
+    "ten_cards_and_images": "PASS: B01 through B10 visible in full-page screenshot, three bows per card.",
+    "enlarge": "PASS: clicked B01; dialog image, heading, close and controls visible without clipping at tested viewport.",
+    "next": "PASS: B01 -> B02",
+    "previous": "PASS: B02 -> B01",
+    "wrap_previous": "PASS: B01 -> B10",
+    "wrap_next": "PASS: B10 -> B01",
+    "left_selection": "PASS: B01A in dialog and B10A on gallery card each displayed checkmark.",
+    "middle_selection": "PASS: B01B displayed checkmark and replaced B01A.",
+    "right_selection": "PASS: B02C displayed checkmark and replaced B01B.",
+    "persistence": "PASS: B02C remained selected after reload.",
+    "toggle_deselection": "PASS: clicking selected B02C again removed its checkmark.",
+    "clear_button": "PASS: selected B10A, used clear, then reloaded; no checked choices remained.",
+    "console": "PASS: no output after interactions and during fresh reload monitored for 3000 ms.",
+    "final_visual_review": "PASS: full-page original screenshot inspected after scrolling through the page; all ten images and controls visible."
+  },
+  "console_errors_observed": 0,
+  "test_selection_cleared": true,
+  "final_selection": "none",
+  "ui_source_changes": [],
+  "source_hashes": {
+    "index.html": "d95e50b665885c3a7658ce110d4612c25b57668f174f91b624a717502383a615",
+    "gallery.css": "b857a2811bda80330b8c4b0d545fb4c4224a6a3c52a1bb3c94241e0993c8b4ff"
+  },
+  "screenshot": {
+    "file": "gallery-overview.png",
+    "source": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\bow-v10-browser\\screenshots\\screenshot_1790146169567.png",
+    "dimensions": [
+      1407,
+      3849
+    ],
+    "sha256": "f023140b5207ccbd632fb260fe4a30ff49ccd8b7699a046ab323f792dbb03737",
+    "original_bytes_preserved": true
+  },
+  "notes": [
+    "A screenshot immediately after reload showed some offscreen async image decodes pending. Scrolling through the page completed rendering; final screenshot shows all ten images.",
+    "Copy-to-clipboard and external links were not activated. No game, skill, model or installation resources were changed."
+  ]
+}

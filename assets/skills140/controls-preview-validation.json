@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "controls": 56,
+  "game_apply_blocked": 403,
+  "preview_save_reload_checked": true,
+  "snow_density_saved_and_restored": [
+    1.5,
+    1
+  ],
+  "installed_files_unchanged": 59
+}

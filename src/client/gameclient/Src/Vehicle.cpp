@@ -258,7 +258,7 @@ BOOL CVehicle::Update( const DWORD dwTick )
 	switch( m_nState )
 	{
 	case STATE_MOVE:
-		m_pWorld->AddParticle( "연기", m_vPos );
+		m_pWorld->AddParticle( m_dwType == 4 ? "mt_hell_hoof" : "연기", m_vPos );
 		break;
 	}; //switch
 

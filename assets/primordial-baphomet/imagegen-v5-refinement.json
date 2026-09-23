@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "input": "horn-black-keratin-v5-imagegen.png",
+  "output": "horn-satin-keratin-v5-imagegen.png",
+  "prompt": "Edit this game horn material texture. The current version looks like chipped black rock and has far too many bright spots; remove that appearance. Replace the surface treatment with authentic dense black BUFFALO HORN KERATIN, mostly smooth and solid, a softly burnished satin surface. About 95% of the image should be a quiet near-uniform dark charcoal brown-black surface around RGB 40,39,37. Only extremely restrained fine rubbed areas and very subtle short interrupted hairline growth marks around RGB 46,45,42, low contrast. Keep all color values broadly in the narrow dark range, no bright flecks and no pits. No grey patches, spots, chunky scales, crumbling edges, sharp chips, lichen, granite, rough concrete or coal-rock texture. No wood bark, channels, large stripes, parallel grooves or long continuous lines. Surface has quiet organic variation and fine keratin skin, not a pattern. If the texture is shrunk to 64 pixels it should read as a smooth dark horn material with a little natural satin variation, not a speckled or striped texture. Fully opaque, edge-to-edge seamless square material swatch, no object, no transparency, no vignette, evenly lit neutral diffuse scan, no shadows or large shine, no text."
+}

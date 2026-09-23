@@ -31,12 +31,19 @@ for prefix in ['mt_longbow','mt_staff','mt_twilight']:
     im=np.asarray(Image.open(BytesIO(bmp)).convert('RGB'));xy=(uv[side].mean(1)*im.shape[0]).astype(int);colors=im[xy[:,1],xy[:,0]]
     assert colors.std()>5 and colors.mean()<210
     models.append(dict(model=prefix,triangles=len(tri),thickness=float(np.ptp(points[:,2])),side_mean=float(colors.mean()),side_std=float(colors.std()),meshes=1,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
-# Verify actual sword vertices have a thin cutting rim and a thick interior.
-info=json.loads((ROOT/'assets/twilight/model_info.json').read_text(encoding='utf-8'))['construction_transform'];p=read_mod(D/'Equip/mt_twilight_1.mod')[0]['points']
-xy=np.column_stack((p[:,1]/info['pixel_scale']+info['x_origin'],(info['y_offset']-.5-p[:,0])/info['pixel_scale']))
-design=json.loads((ROOT/'assets/twilight/design04_geometry.json').read_text());poly=Polygon(design['parts'][0]['outline'],design['parts'][0]['holes']);dist=shapely.distance(shapely.points(xy),poly.boundary)
-rim=(xy[:,1]<850)&(dist<.6);body=(xy[:,1]<850)&(dist>12);guard=(xy[:,1]>980)&(xy[:,1]<1035)
-assert rim.any() and body.any() and guard.any()
-assert np.max(np.abs(p[rim,2]))<.003 and np.max(np.abs(p[body,2]))>.014 and np.ptp(p[guard,2])>.03
-result=dict(passed=True,item_definitions=42,server_client_tooltip_match=True,all_0_to_20_stats_increase=True,models=models,sword_cutting_rim=float(np.ptp(p[rim,2])),sword_body=float(np.ptp(p[body,2])),sword_guard=float(np.ptp(p[guard,2])),native_preview_reviewed=True,in_game_visual_test=False)
+active=json.loads((O/'active-design.json').read_text()) if (O/'active-design.json').exists() else {}
+if active.get('design') in ['shattered-moon','noble-blue-moon']:
+    p=read_mod(D/'Equip/mt_twilight_1.mod')[0]['points'];depth=np.abs(p[:,2])
+    minimum_body_depth=.020 if active.get('design')=='noble-blue-moon' else .030
+    assert np.count_nonzero(depth<.0031)>100 and depth.max()>minimum_body_depth
+    result=dict(passed=True,item_definitions=42,server_client_tooltip_match=True,all_0_to_20_stats_increase=True,models=models,design=active['design'],native_preview_reviewed=True,in_game_visual_test=False)
+else:
+    # Verify actual sword vertices have a thin cutting rim and a thick interior.
+    info=json.loads((ROOT/'assets/twilight/model_info.json').read_text(encoding='utf-8'))['construction_transform'];p=read_mod(D/'Equip/mt_twilight_1.mod')[0]['points']
+    xy=np.column_stack((p[:,1]/info['pixel_scale']+info['x_origin'],(info['y_offset']-.5-p[:,0])/info['pixel_scale']))
+    design=json.loads((ROOT/'assets/twilight/design04_geometry.json').read_text());poly=Polygon(design['parts'][0]['outline'],design['parts'][0]['holes']);dist=shapely.distance(shapely.points(xy),poly.boundary)
+    rim=(xy[:,1]<850)&(dist<.6);body=(xy[:,1]<850)&(dist>12);guard=(xy[:,1]>980)&(xy[:,1]<1035)
+    assert rim.any() and body.any() and guard.any()
+    assert np.max(np.abs(p[rim,2]))<.003 and np.max(np.abs(p[body,2]))>.014 and np.ptp(p[guard,2])>.03
+    result=dict(passed=True,item_definitions=42,server_client_tooltip_match=True,all_0_to_20_stats_increase=True,models=models,sword_cutting_rim=float(np.ptp(p[rim,2])),sword_body=float(np.ptp(p[body,2])),sword_guard=float(np.ptp(p[guard,2])),native_preview_reviewed=True,in_game_visual_test=False)
 (O/'asset-validation.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))

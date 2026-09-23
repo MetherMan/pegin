@@ -1,0 +1,258 @@
+{
+  "passed": true,
+  "timestamp": "20260923-174702-303078",
+  "selection": {
+    "sword": "S4",
+    "longbow": "H03",
+    "staff": "월식 갈고리"
+  },
+  "files": [
+    {
+      "root": "family",
+      "kind": "sword",
+      "path": "Equip/mt_twilight_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_twilight_1.mod",
+      "before": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "family",
+      "kind": "sword",
+      "path": "Equip/mt_twilight_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_twilight_2.mod",
+      "before": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "family",
+      "kind": "sword",
+      "path": "Equip/mt_twilight_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_twilight_3.mod",
+      "before": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "family",
+      "kind": "sword",
+      "path": "Texture/Equip/mt_twilight_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Texture\\Equip\\mt_twilight_atlas.wtm",
+      "before": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf",
+      "sha256": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "family",
+      "kind": "longbow",
+      "path": "Equip/mt_longbow_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_longbow_1.mod",
+      "before": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "changed": true,
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\selected-weapons-20260923-174702-303078\\Equip\\mt_longbow_1.mod"
+    },
+    {
+      "root": "family",
+      "kind": "longbow",
+      "path": "Equip/mt_longbow_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_longbow_2.mod",
+      "before": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "changed": true,
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\selected-weapons-20260923-174702-303078\\Equip\\mt_longbow_2.mod"
+    },
+    {
+      "root": "family",
+      "kind": "longbow",
+      "path": "Equip/mt_longbow_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_longbow_3.mod",
+      "before": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "changed": true,
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\selected-weapons-20260923-174702-303078\\Equip\\mt_longbow_3.mod"
+    },
+    {
+      "root": "family",
+      "kind": "longbow",
+      "path": "Texture/Equip/mt_longbow_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Texture\\Equip\\mt_longbow_atlas.wtm",
+      "before": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea",
+      "sha256": "56d3f3077ca72da189ec94cd80067b8ed3c9fd96729ed158ffacb89d4f8d2f72",
+      "changed": true,
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\selected-weapons-20260923-174702-303078\\Texture\\Equip\\mt_longbow_atlas.wtm"
+    },
+    {
+      "root": "family",
+      "kind": "staff",
+      "path": "Equip/mt_staff_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_staff_1.mod",
+      "before": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "family",
+      "kind": "staff",
+      "path": "Equip/mt_staff_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_staff_2.mod",
+      "before": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "family",
+      "kind": "staff",
+      "path": "Equip/mt_staff_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_staff_3.mod",
+      "before": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "family",
+      "kind": "staff",
+      "path": "Texture/Equip/mt_staff_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Texture\\Equip\\mt_staff_atlas.wtm",
+      "before": "0e81ca9ca31d9fc781c529dbcf65daca5a41fa9f50c4aa6df4ebbc87dbf48ae1",
+      "sha256": "0e81ca9ca31d9fc781c529dbcf65daca5a41fa9f50c4aa6df4ebbc87dbf48ae1",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "workspace",
+      "kind": "sword",
+      "path": "Equip/mt_twilight_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_twilight_1.mod",
+      "before": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "workspace",
+      "kind": "sword",
+      "path": "Equip/mt_twilight_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_twilight_2.mod",
+      "before": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "workspace",
+      "kind": "sword",
+      "path": "Equip/mt_twilight_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_twilight_3.mod",
+      "before": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "workspace",
+      "kind": "sword",
+      "path": "Texture/Equip/mt_twilight_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Texture\\Equip\\mt_twilight_atlas.wtm",
+      "before": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf",
+      "sha256": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "workspace",
+      "kind": "longbow",
+      "path": "Equip/mt_longbow_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_longbow_1.mod",
+      "before": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "changed": true,
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\selected-weapons-20260923-174702-303078\\Equip\\mt_longbow_1.mod"
+    },
+    {
+      "root": "workspace",
+      "kind": "longbow",
+      "path": "Equip/mt_longbow_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_longbow_2.mod",
+      "before": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "changed": true,
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\selected-weapons-20260923-174702-303078\\Equip\\mt_longbow_2.mod"
+    },
+    {
+      "root": "workspace",
+      "kind": "longbow",
+      "path": "Equip/mt_longbow_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_longbow_3.mod",
+      "before": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427",
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "changed": true,
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\selected-weapons-20260923-174702-303078\\Equip\\mt_longbow_3.mod"
+    },
+    {
+      "root": "workspace",
+      "kind": "longbow",
+      "path": "Texture/Equip/mt_longbow_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Texture\\Equip\\mt_longbow_atlas.wtm",
+      "before": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea",
+      "sha256": "56d3f3077ca72da189ec94cd80067b8ed3c9fd96729ed158ffacb89d4f8d2f72",
+      "changed": true,
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\selected-weapons-20260923-174702-303078\\Texture\\Equip\\mt_longbow_atlas.wtm"
+    },
+    {
+      "root": "workspace",
+      "kind": "staff",
+      "path": "Equip/mt_staff_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_staff_1.mod",
+      "before": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "workspace",
+      "kind": "staff",
+      "path": "Equip/mt_staff_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_staff_2.mod",
+      "before": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "workspace",
+      "kind": "staff",
+      "path": "Equip/mt_staff_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_staff_3.mod",
+      "before": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+      "changed": false,
+      "backup": null
+    },
+    {
+      "root": "workspace",
+      "kind": "staff",
+      "path": "Texture/Equip/mt_staff_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Texture\\Equip\\mt_staff_atlas.wtm",
+      "before": "0e81ca9ca31d9fc781c529dbcf65daca5a41fa9f50c4aa6df4ebbc87dbf48ae1",
+      "sha256": "0e81ca9ca31d9fc781c529dbcf65daca5a41fa9f50c4aa6df4ebbc87dbf48ae1",
+      "changed": false,
+      "backup": null
+    }
+  ],
+  "verified_resources": 24,
+  "replaced_resources": 8,
+  "protected_files_unchanged": 99,
+  "existing_launch_paths_preserved": true,
+  "item_ids_preserved": true,
+  "skill_installation_changed": false,
+  "in_game_visual_test": false
+}

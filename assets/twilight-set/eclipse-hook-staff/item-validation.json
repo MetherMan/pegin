@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "item_definitions": 42,
+  "server_client_tooltip_match": true,
+  "all_0_to_20_stats_increase": true,
+  "models": [
+    {
+      "model": "mt_longbow",
+      "triangles": 10328,
+      "thickness": 0.053977131843566895,
+      "side_mean": 121.4146298264258,
+      "side_std": 78.12704844110247,
+      "meshes": 1,
+      "sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427"
+    },
+    {
+      "model": "mt_staff",
+      "triangles": 10996,
+      "thickness": 0.1877564787864685,
+      "side_mean": 101.43289495869162,
+      "side_std": 66.10372724276493,
+      "meshes": 1,
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
+    },
+    {
+      "model": "mt_twilight",
+      "triangles": 11332,
+      "thickness": 0.054999999701976776,
+      "side_mean": 92.95597484276729,
+      "side_std": 70.3626152825177,
+      "meshes": 1,
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+    }
+  ],
+  "design": "noble-blue-moon",
+  "native_preview_reviewed": true,
+  "in_game_visual_test": false
+}

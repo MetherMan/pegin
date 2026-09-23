@@ -1,0 +1,153 @@
+{
+  "title": "푸른달 단일 활 시안 N01~N05",
+  "images": [
+    {
+      "id": "N01",
+      "name": "유려한 초승달 장궁",
+      "file": "bow-01.png",
+      "prompt": "Use case: stylized-concept. Create ONE premium high-fantasy MMORPG bow concept, for the noble Twilight of the Blue Moon collection. Exactly ONE BOW, shown alone, upright, full length, portrait 2:3 composition, 1024x1536. The single bow fills approximately 88% of image height with 6% safe margin above and below; use its elegant sweep to fill the portrait naturally, no excessive empty space. Near-front three-quarter product presentation, crisp high-resolution material details and complete clear silhouette. Plain uniform very dark midnight-navy background. Design a NEW independent bow from scratch, not a crop of a multi-weapon sheet. PRIORITY: an unmistakable functional LONG BOW with long slender continuous upper and lower limbs, a clear human-sized central handgrip, tapered recurved tips, and one taut fine azure string running between both tip notches on the RIGHT of the grip. Keep the arrow and string paths open and the center grip usable. Elaborately beautiful but controlled asymmetry, noble sweeping curves and deliberate open spaces; jewelcraft integrated into the bow structure. Main material is saturated sapphire-blue translucent moonstone, deep cobalt crystal and luminous condensed blue moonlight, not ordinary metal painted blue. Clear brilliant blue lunar highlights against richly dark blue surfaces, restrained thin platinum and pale-gold seams, subtle star engraving. An unmistakable BLUE MOON motif is integrated coherently into the limbs, clearly visible but proportionate; no giant detached lunar disc, huge circular shield, bulky blade or axe attached to the bow. The weapon must remain long, agile and elegant rather than heavy or squat. Rich structural detail, polished sculpted contours, exquisite fantasy craft, controlled glow that does not erase the edges. No people, hands, sword, staff, extra weapon, alternate views, inset, collage, split panels, arrows, captions, letters, labels, watermark, ground scenery or background moon. Design direction: a flowing asymmetric recurve bow. The upper limb describes a long slender luminous blue crescent arc, continuously flowing into the grip and onward into a shorter reverse-curved lower limb. The crescent is part of the bow's graceful structural sweep, not an additional plate. One opening at the upper shoulder reveals a brilliant blue moonstone crescent; deep-cobalt outside surface, clear azure inner edge. Elegant open channel between two softly twisting structural ribs near the upper shoulder, merging into one sleek limb at the tip. Distinctive luxurious yet balanced moonlit silhouette, long and beautifully tapering.",
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-f328f24e-0026-4d95-b5cd-c98cd352e46b.png",
+      "sha256": "901036810acc92c150567154312c90657c77c35860624e1ca42a6f01fb11b7dd",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original) individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "portrait": true,
+        "visible_grip_and_string": true,
+        "blue_moon_visible": true,
+        "no_staff_sword_person_labels_multi_panel": true,
+        "note": "긴 상부 초승달 곡선, 투명한 청석 팔다리, 상단 푸른 초승달과 작은 하단 월석. 단일 활 전장과 손잡이·활줄 확인.",
+        "composition_note": "상하 끝이 모두 프레임 안에 보임. 요청한 5~8% 여유보다 타이트하게 크게 생성됐지만 잘림 없음."
+      }
+    },
+    {
+      "id": "N02",
+      "name": "청월의 비대칭 날개",
+      "file": "bow-02.png",
+      "prompt": "Use case: stylized-concept. Create ONE premium high-fantasy MMORPG bow concept, for the noble Twilight of the Blue Moon collection. Exactly ONE BOW, shown alone, upright, full length, portrait 2:3 composition, 1024x1536. The single bow fills approximately 88% of image height with 6% safe margin above and below; use its elegant sweep to fill the portrait naturally, no excessive empty space. Near-front three-quarter product presentation, crisp high-resolution material details and complete clear silhouette. Plain uniform very dark midnight-navy background. Design a NEW independent bow from scratch, not a crop of a multi-weapon sheet. PRIORITY: an unmistakable functional LONG BOW with long slender continuous upper and lower limbs, a clear human-sized central handgrip, tapered recurved tips, and one taut fine azure string running between both tip notches on the RIGHT of the grip. Keep the arrow and string paths open and the center grip usable. Elaborately beautiful but controlled asymmetry, noble sweeping curves and deliberate open spaces; jewelcraft integrated into the bow structure. Main material is saturated sapphire-blue translucent moonstone, deep cobalt crystal and luminous condensed blue moonlight, not ordinary metal painted blue. Clear brilliant blue lunar highlights against richly dark blue surfaces, restrained thin platinum and pale-gold seams, subtle star engraving. An unmistakable BLUE MOON motif is integrated coherently into the limbs, clearly visible but proportionate; no giant detached lunar disc, huge circular shield, bulky blade or axe attached to the bow. The weapon must remain long, agile and elegant rather than heavy or squat. Rich structural detail, polished sculpted contours, exquisite fantasy craft, controlled glow that does not erase the edges. No people, hands, sword, staff, extra weapon, alternate views, inset, collage, split panels, arrows, captions, letters, labels, watermark, ground scenery or background moon. Design direction: a long elegant bow with a sweeping asymmetrical crystalline wing motif integrated along the upper limb. Three substantial flowing sapphire feather-like ribs merge into one long slender upper tip; the lower limb is a clean extended counter-curve with one small fin. A vivid bright-blue FULL MOON gem, about the height of the central handgrip, sits INSIDE the outward upper-shoulder construction just above the grip, balanced and firmly integrated, away from the string. The lunar gem has a subtle cratered blue surface and immediately reads as a moon. The silhouette is a functional longbow with noble wing curves, not a bird, wing-shaped axe or jeweled staff. Long open spaces and a slender central section.",
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-6a8078e7-39c4-4744-8b82-963416ffd3d7.png",
+      "sha256": "e2d6a93c872dae677c83e5655304188bda67787413c585a7f9ae329487edcbbc",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original) individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "portrait": true,
+        "visible_grip_and_string": true,
+        "blue_moon_visible": true,
+        "no_staff_sword_person_labels_multi_panel": true,
+        "note": "비대칭 긴 월익 세 갈래와 선명한 상단 만월. 하단은 길고 가는 반대 곡선이며 단일 활 전장과 손잡이·활줄 확인.",
+        "composition_note": "상하 끝이 모두 프레임 안에 보임. 요청한 5~8% 여유보다 타이트하게 크게 생성됐지만 잘림 없음."
+      }
+    },
+    {
+      "id": "N03",
+      "name": "월식 갈고리 장궁",
+      "file": "bow-03.png",
+      "prompt": "Use case: stylized-concept. Create ONE premium high-fantasy MMORPG bow concept, for the noble Twilight of the Blue Moon collection. Exactly ONE BOW, shown alone, upright, full length, portrait 2:3 composition, 1024x1536. The single bow fills approximately 88% of image height with 6% safe margin above and below; use its elegant sweep to fill the portrait naturally, no excessive empty space. Near-front three-quarter product presentation, crisp high-resolution material details and complete clear silhouette. Plain uniform very dark midnight-navy background. Design a NEW independent bow from scratch, not a crop of a multi-weapon sheet. PRIORITY: an unmistakable functional LONG BOW with long slender continuous upper and lower limbs, a clear human-sized central handgrip, tapered recurved tips, and one taut fine azure string running between both tip notches on the RIGHT of the grip. Keep the arrow and string paths open and the center grip usable. Elaborately beautiful but controlled asymmetry, noble sweeping curves and deliberate open spaces; jewelcraft integrated into the bow structure. Main material is saturated sapphire-blue translucent moonstone, deep cobalt crystal and luminous condensed blue moonlight, not ordinary metal painted blue. Clear brilliant blue lunar highlights against richly dark blue surfaces, restrained thin platinum and pale-gold seams, subtle star engraving. An unmistakable BLUE MOON motif is integrated coherently into the limbs, clearly visible but proportionate; no giant detached lunar disc, huge circular shield, bulky blade or axe attached to the bow. The weapon must remain long, agile and elegant rather than heavy or squat. Rich structural detail, polished sculpted contours, exquisite fantasy craft, controlled glow that does not erase the edges. No people, hands, sword, staff, extra weapon, alternate views, inset, collage, split panels, arrows, captions, letters, labels, watermark, ground scenery or background moon. Design direction: a long recurve bow expressing eclipse hooks in its tapered limb ends. The upper sapphire limb sweeps out in an elongated hook like an attenuated crescent, while the lower limb curls inward more tightly, both connected through a clearly defined central grip. A luminous electric-blue crescent rim runs along the dark cobalt upper shoulder, and a small partly eclipsed blue moonstone is integrated just above the outer side of the grip. Glowing blue lunar edge against rich near-black sapphire, thin pale platinum joints, subtle etched stars. The upper and lower hooks are unequal and graceful, coherent long bow construction with a taut string, never a crozier or staff, never a giant blade.",
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-cca9ce0f-fdb8-43c1-b6b0-e190965992a2.png",
+      "sha256": "1dfd74332d77df70c69edb42625fdf31d8be3900c71aaf48e39dc57541a6b016",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original) individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "portrait": true,
+        "visible_grip_and_string": true,
+        "blue_moon_visible": true,
+        "no_staff_sword_person_labels_multi_panel": true,
+        "note": "길게 휜 월식 갈고리와 어두운 청색 월석의 밝은 푸른 테두리. 지팡이가 아닌 단일 장궁이며 전장과 활줄 확인.",
+        "composition_note": "상하 끝이 모두 프레임 안에 보임. 요청한 5~8% 여유보다 타이트하게 크게 생성됐지만 잘림 없음."
+      }
+    },
+    {
+      "id": "N04",
+      "name": "쌍초승의 고결한 대궁",
+      "file": "bow-04.png",
+      "prompt": "Use case: stylized-concept. Create ONE premium high-fantasy MMORPG bow concept, for the noble Twilight of the Blue Moon collection. Exactly ONE BOW, shown alone, upright, full length, portrait 2:3 composition, 1024x1536. The single bow fills approximately 88% of image height with 6% safe margin above and below; use its elegant sweep to fill the portrait naturally, no excessive empty space. Near-front three-quarter product presentation, crisp high-resolution material details and complete clear silhouette. Plain uniform very dark midnight-navy background. Design a NEW independent bow from scratch, not a crop of a multi-weapon sheet. PRIORITY: an unmistakable functional LONG BOW with long slender continuous upper and lower limbs, a clear human-sized central handgrip, tapered recurved tips, and one taut fine azure string running between both tip notches on the RIGHT of the grip. Keep the arrow and string paths open and the center grip usable. Elaborately beautiful but controlled asymmetry, noble sweeping curves and deliberate open spaces; jewelcraft integrated into the bow structure. Main material is saturated sapphire-blue translucent moonstone, deep cobalt crystal and luminous condensed blue moonlight, not ordinary metal painted blue. Clear brilliant blue lunar highlights against richly dark blue surfaces, restrained thin platinum and pale-gold seams, subtle star engraving. An unmistakable BLUE MOON motif is integrated coherently into the limbs, clearly visible but proportionate; no giant detached lunar disc, huge circular shield, bulky blade or axe attached to the bow. The weapon must remain long, agile and elegant rather than heavy or squat. Rich structural detail, polished sculpted contours, exquisite fantasy craft, controlled glow that does not erase the edges. No people, hands, sword, staff, extra weapon, alternate views, inset, collage, split panels, arrows, captions, letters, labels, watermark, ground scenery or background moon. Design direction: a grand longbow formed from two unequal, beautifully balanced crescent sweeps. A long broad-but-slender moonlit upper crescent arc transitions into the handgrip; a shorter deeper cobalt lower crescent sweeps in the opposite direction. Keep the bow very tall and agile, taper both tips elegantly. Two brilliant blue crescent-shaped moonstone inlays sit in the upper and lower shoulder structures, the upper crescent larger than the lower, surrounded by clean open channels. They feel integral to an exquisite flexible bow rather than attached moons. Asymmetric rhythm, sophisticated jewelcraft, pale platinum edge lines, strong blue glow, playable grip and open string path.",
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-7edcf3b3-d131-447e-b860-0de609758bfb.png",
+      "sha256": "9d8ae4fa94a8a88e8f74c2ad47761af9433cc62a72253a6d92024414f0f91878",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original) individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "portrait": true,
+        "visible_grip_and_string": true,
+        "blue_moon_visible": true,
+        "no_staff_sword_person_labels_multi_panel": true,
+        "note": "상부 큰 초승달과 하부 작은 초승달이 긴 곡선에 통합된 대궁. 단일 활 전장과 손잡이·활줄 확인.",
+        "composition_note": "상하 끝이 모두 프레임 안에 보임. 요청한 5~8% 여유보다 타이트하게 크게 생성됐지만 잘림 없음."
+      }
+    },
+    {
+      "id": "N05",
+      "name": "달빛 물결 장궁",
+      "file": "bow-05.png",
+      "prompt": "Use case: stylized-concept. Create ONE premium high-fantasy MMORPG bow concept, for the noble Twilight of the Blue Moon collection. Exactly ONE BOW, shown alone, upright, full length, portrait 2:3 composition, 1024x1536. The single bow fills approximately 88% of image height with 6% safe margin above and below; use its elegant sweep to fill the portrait naturally, no excessive empty space. Near-front three-quarter product presentation, crisp high-resolution material details and complete clear silhouette. Plain uniform very dark midnight-navy background. Design a NEW independent bow from scratch, not a crop of a multi-weapon sheet. PRIORITY: an unmistakable functional LONG BOW with long slender continuous upper and lower limbs, a clear human-sized central handgrip, tapered recurved tips, and one taut fine azure string running between both tip notches on the RIGHT of the grip. Keep the arrow and string paths open and the center grip usable. Elaborately beautiful but controlled asymmetry, noble sweeping curves and deliberate open spaces; jewelcraft integrated into the bow structure. Main material is saturated sapphire-blue translucent moonstone, deep cobalt crystal and luminous condensed blue moonlight, not ordinary metal painted blue. Clear brilliant blue lunar highlights against richly dark blue surfaces, restrained thin platinum and pale-gold seams, subtle star engraving. An unmistakable BLUE MOON motif is integrated coherently into the limbs, clearly visible but proportionate; no giant detached lunar disc, huge circular shield, bulky blade or axe attached to the bow. The weapon must remain long, agile and elegant rather than heavy or squat. Rich structural detail, polished sculpted contours, exquisite fantasy craft, controlled glow that does not erase the edges. No people, hands, sword, staff, extra weapon, alternate views, inset, collage, split panels, arrows, captions, letters, labels, watermark, ground scenery or background moon. Design direction: a noble tall longbow sculpted as a single continuous flowing ribbon of solid sapphire moonstone, like moonlight reflected in slow ocean waves. Two restrained long wave crests define the unequal upper and lower limbs; one luminous BLUE CRESCENT-shaped opening and inlay is integrated into the broad upper shoulder, clearly readable. Gentle torsion reveals translucent azure facets and rich deep-cobalt side surfaces, with subtle silver-star engraving and very fine pale-gold seams. The limbs are long and tapered, the grip narrow and clearly usable, the string path clear; elegant structural open space, no foamy surf, no loose fabric, no giant bulky wave-blade. A graceful but richly detailed blue-moon royal bow.",
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-ba425258-7a45-4fe0-b5b2-a599095a6295.png",
+      "sha256": "87c9f40d5757425a32e93caa16eb22ddb7295a1aa8e42ef95a06c35590d84244",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original) individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "portrait": true,
+        "visible_grip_and_string": true,
+        "blue_moon_visible": true,
+        "no_staff_sword_person_labels_multi_panel": true,
+        "note": "별문양을 얹은 청색 물결 곡선과 상단 초승달. 투명 청석 면과 가늘게 끝나는 팔다리, 단일 활 전장 확인.",
+        "composition_note": "상하 끝이 모두 프레임 안에 보임. 요청한 5~8% 여유보다 타이트하게 크게 생성됐지만 잘림 없음."
+      }
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "images": 5,
+    "new_builtin_imagegen_calls": 5,
+    "failures": 0,
+    "missing": 0,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "unique_sha256": 5,
+    "original_bytes_preserved": true,
+    "png_integrity": "PASS",
+    "all_local_images_directly_viewed": true,
+    "all_exactly_one_bow": true,
+    "crops_of_previous_images": false,
+    "scope": "N01-N05 only; no game or code files changed."
+  }
+}

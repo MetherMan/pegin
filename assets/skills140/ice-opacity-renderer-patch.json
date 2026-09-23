@@ -1,0 +1,70 @@
+{
+  "original_sha256": "1361ad946b6657635e24c9432017115e4d23fa22213af7caf672e0c98327ce50",
+  "original_size": 598016,
+  "sha256": "bd17a76aa45ee3f750cbbd8bb5b52a9eede5444da9019e6c7b5c49207e322001",
+  "section_rva": 610304,
+  "undo": [
+    [
+      148000,
+      "568bf1578b7c2414"
+    ],
+    [
+      148178,
+      "8bcee8f7000000"
+    ],
+    [
+      704,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      262,
+      "0500"
+    ],
+    [
+      336,
+      "00500900"
+    ],
+    [
+      284,
+      "00200700"
+    ],
+    [
+      344,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "Capture and restore alpha states around selected ice Render",
+      "va": 268583456,
+      "original": "568bf1578b7c2414",
+      "replacement": "e91b120700909090",
+      "target": 269046848,
+      "resume": 268583464,
+      "assembly": "\n        push ebp; mov ebp, esp; sub esp, 16; push esi; push edi;\n        mov esi, ecx; call 0x10095000; test eax, eax; jz passthrough;\n        cmp dword ptr [esi+0x0c], 0; je passthrough;\n        cmp dword ptr [ebp+16], 0; jne capture;\n        mov eax, [ebp+8]; cmp eax, [esi+0x34]; jge passthrough;\n        capture: call device_pc; device_pc: pop edi; sub edi, device_pc; add edi, 0x10089328; mov edi, [edi];\n        lea eax, [ebp-4]; push eax; push 4; push 0; push edi;\n        mov eax, [edi]; call dword ptr [eax+0xf8]; test eax, eax; js failed;\n        lea eax, [ebp-8]; push eax; push 5; push 0; push edi;\n        mov eax, [edi]; call dword ptr [eax+0xf8]; test eax, eax; js failed;\n        lea eax, [ebp-12]; push eax; push 6; push 0; push edi;\n        mov eax, [edi]; call dword ptr [eax+0xf8]; test eax, eax; js failed;\n        push dword ptr [ebp+16]; push dword ptr [ebp+12]; push dword ptr [ebp+8];\n        mov ecx, esi; call original; mov [ebp-16], eax;\n        push dword ptr [ebp-4]; push 4; push 0; push edi;\n        mov eax, [edi]; call dword ptr [eax+0xfc];\n        push dword ptr [ebp-8]; push 5; push 0; push edi;\n        mov eax, [edi]; call dword ptr [eax+0xfc];\n        push dword ptr [ebp-12]; push 6; push 0; push edi;\n        mov eax, [edi]; call dword ptr [eax+0xfc];\n        push 2; push 0x13; push edi; mov eax, [edi]; call dword ptr [eax+0xc8];\n        push 2; push 0x14; push edi; mov eax, [edi]; call dword ptr [eax+0xc8];\n        mov eax, [ebp-16]; jmp returned;\n        failed: xor eax, eax;\n        returned: pop edi; pop esi; mov esp, ebp; pop ebp; ret 12;\n        passthrough: mov ecx, esi; pop edi; pop esi; mov esp, ebp; pop ebp;\n        original: push esi; mov esi, ecx; push edi; mov edi, [esp+0x14]\n    ",
+      "code": "5589e583ec10565789cee8b1fbffff85c00f84df000000837e0c000f84d5000000837d1000750c8b45083b46340f8dc3000000e8000000005f81ef7854091081c7289308108b3f8d45fc506a046a00578b07ff90f800000085c00f888c0000008d45f8506a056a00578b07ff90f800000085c078778d45f4506a066a00578b07ff90f800000085c07862ff7510ff750cff750889f1e8630000008945f0ff75fc6a046a00578b07ff90fc000000ff75f86a056a00578b07ff90fc000000ff75f46a066a00578b07ff90fc0000006a026a13578b07ff90c80000006a026a14578b07ff90c80000008b45f0eb0231c05f5e89ec5dc20c0089f15f5e89ec5d5689ce578b7c2414e9deecf8ff"
+    },
+    {
+      "label": "Ice only SRCALPHA/INVSRCALPHA and TFACTOR alpha before mesh draw",
+      "va": 268583634,
+      "original": "8bcee8f7000000",
+      "replacement": "e9791207009090",
+      "target": 269047120,
+      "resume": 268583641,
+      "assembly": "\n        mov ecx, esi; call 0x100243d0;\n        pushad; mov ecx, esi; call 0x10095000; test eax, eax; jz finished;\n        call device_pc; device_pc: pop edi; sub edi, device_pc; add edi, 0x10089328; mov edi, [edi];\n        push 5; push 0x13; push edi; mov eax, [edi]; call dword ptr [eax+0xc8];\n        push 6; push 0x14; push edi; mov eax, [edi]; call dword ptr [eax+0xc8];\n        push 2; push 4; push 0; push edi; mov eax, [edi]; call dword ptr [eax+0xfc];\n        push 3; push 5; push 0; push edi; mov eax, [edi]; call dword ptr [eax+0xfc];\n        finished: popad\n    ",
+      "code": "89f1e879eef8ff6089f1e8a1faffff85c0744ce8000000005f81ef6855091081c7289308108b3f6a056a13578b07ff90c80000006a066a14578b07ff90c80000006a026a046a00578b07ff90fc0000006a036a056a00578b07ff90fc00000061e924edf8ff"
+    }
+  ],
+  "classifier_va": 269045760,
+  "protocol": "ice-opacity-v1",
+  "scope": "client-overlay only; no installed/runtime writes",
+  "policy": "basename case-insensitive: exact mf_cocytus_pillar.wed; mf_eruption_*.wed; mf_crown_spike*.wed",
+  "alpha": "WED dwColor high byte, multiplied only by standard SRCALPHA/INVSRCALPHA blend",
+  "depthWrite": false,
+  "alphaStageRestored": [
+    4,
+    5,
+    6
+  ],
+  "sourceEncoding": "cp949"
+}

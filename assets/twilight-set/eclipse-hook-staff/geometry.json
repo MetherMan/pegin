@@ -1,0 +1,27 @@
+{
+  "design": "eclipse-hook-staff",
+  "weapons": [
+    {
+      "kind": "staff",
+      "source": "assets/visual-refresh-20260923/moon-pairs-10/pair-03.png",
+      "box": [952, 8, 1250, 1016],
+      "grip": [1056.2, 555.188],
+      "scale": 0.001823049459,
+      "likely_threshold": 52,
+      "solid_threshold": 125,
+      "background": [[996, 120, 1000, 138], [1080, 65, 1090, 73], [1178, 269, 1183, 283], [1091, 238, 1100, 247]],
+      "close_pixels": 2,
+      "minimum_area": 8,
+      "minimum_hole": 22,
+      "outline_error": 0.55,
+      "mesh_step": 13,
+      "exclude": [[1036, 409, 1078, 795]],
+      "grip_ends": [[1055.2, 403], [1057.4, 801]],
+      "grip_radii": [0.0185, 0.0175],
+      "side_material_box": [1200, 105, 1208, 133],
+      "moon_center": [1074, 150],
+      "moon_radii": [69, 68],
+      "moon_half_depth": 0.092
+    }
+  ]
+}

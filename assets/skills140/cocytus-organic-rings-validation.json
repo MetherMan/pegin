@@ -1,0 +1,642 @@
+{
+  "passed": true,
+  "configurations": [
+    {
+      "configuration": "saved",
+      "nativeParts": 185,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        154,
+        333,
+        492,
+        676,
+        870
+      ],
+      "ringRadii": [
+        10.92,
+        8.385,
+        5.85,
+        3.3149999999999995,
+        0.7799999999999994
+      ],
+      "ringBandHalfWidths": [
+        1.0647,
+        1.0647,
+        1.0647,
+        1.0647,
+        0.2963999999999998
+      ],
+      "ringCounts": [
+        44,
+        34,
+        24,
+        13,
+        8
+      ],
+      "ringClusters": [
+        8,
+        7,
+        5,
+        3,
+        3
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "iceOpacity:0",
+      "nativeParts": 185,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        154,
+        333,
+        492,
+        676,
+        870
+      ],
+      "ringRadii": [
+        10.92,
+        8.385,
+        5.85,
+        3.3149999999999995,
+        0.7799999999999994
+      ],
+      "ringBandHalfWidths": [
+        1.0647,
+        1.0647,
+        1.0647,
+        1.0647,
+        0.2963999999999998
+      ],
+      "ringCounts": [
+        44,
+        34,
+        24,
+        13,
+        8
+      ],
+      "ringClusters": [
+        8,
+        7,
+        5,
+        3,
+        3
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "iceOpacity:100",
+      "nativeParts": 185,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        154,
+        333,
+        492,
+        676,
+        870
+      ],
+      "ringRadii": [
+        10.92,
+        8.385,
+        5.85,
+        3.3149999999999995,
+        0.7799999999999994
+      ],
+      "ringBandHalfWidths": [
+        1.0647,
+        1.0647,
+        1.0647,
+        1.0647,
+        0.2963999999999998
+      ],
+      "ringCounts": [
+        44,
+        34,
+        24,
+        13,
+        8
+      ],
+      "ringClusters": [
+        8,
+        7,
+        5,
+        3,
+        3
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "iceDensity:0.2",
+      "nativeParts": 185,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        154,
+        333,
+        492,
+        676,
+        870
+      ],
+      "ringRadii": [
+        10.92,
+        8.385,
+        5.85,
+        3.3149999999999995,
+        0.7799999999999994
+      ],
+      "ringBandHalfWidths": [
+        1.0647,
+        1.0647,
+        1.0647,
+        1.0647,
+        0.2963999999999998
+      ],
+      "ringCounts": [
+        44,
+        34,
+        24,
+        13,
+        8
+      ],
+      "ringClusters": [
+        8,
+        7,
+        5,
+        3,
+        3
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "iceDensity:2.5",
+      "nativeParts": 185,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        154,
+        333,
+        492,
+        676,
+        870
+      ],
+      "ringRadii": [
+        10.92,
+        8.385,
+        5.85,
+        3.3149999999999995,
+        0.7799999999999994
+      ],
+      "ringBandHalfWidths": [
+        1.0647,
+        1.0647,
+        1.0647,
+        1.0647,
+        0.2963999999999998
+      ],
+      "ringCounts": [
+        44,
+        34,
+        24,
+        13,
+        8
+      ],
+      "ringClusters": [
+        8,
+        7,
+        5,
+        3,
+        3
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "mistAmount:0",
+      "nativeParts": 175,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        154,
+        333,
+        492,
+        676,
+        870
+      ],
+      "ringRadii": [
+        10.92,
+        8.385,
+        5.85,
+        3.3149999999999995,
+        0.7799999999999994
+      ],
+      "ringBandHalfWidths": [
+        1.0647,
+        1.0647,
+        1.0647,
+        1.0647,
+        0.2963999999999998
+      ],
+      "ringCounts": [
+        44,
+        34,
+        24,
+        13,
+        8
+      ],
+      "ringClusters": [
+        8,
+        7,
+        5,
+        3,
+        3
+      ],
+      "mistPuffs": 0,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "mistAmount:3",
+      "nativeParts": 205,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        154,
+        333,
+        492,
+        676,
+        870
+      ],
+      "ringRadii": [
+        10.92,
+        8.385,
+        5.85,
+        3.3149999999999995,
+        0.7799999999999994
+      ],
+      "ringBandHalfWidths": [
+        1.0647,
+        1.0647,
+        1.0647,
+        1.0647,
+        0.2963999999999998
+      ],
+      "ringCounts": [
+        44,
+        34,
+        24,
+        13,
+        8
+      ],
+      "ringClusters": [
+        8,
+        7,
+        5,
+        3,
+        3
+      ],
+      "mistPuffs": 30,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "inwardStartRadius:0.6",
+      "nativeParts": 123,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        157,
+        315,
+        481,
+        675,
+        870
+      ],
+      "ringRadii": [
+        4.680000000000001,
+        3.7050000000000005,
+        2.7300000000000004,
+        1.7550000000000003,
+        0.7800000000000002
+      ],
+      "ringBandHalfWidths": [
+        0.40950000000000003,
+        0.40950000000000003,
+        0.40950000000000003,
+        0.40950000000000003,
+        0.2964000000000001
+      ],
+      "ringCounts": [
+        19,
+        15,
+        11,
+        8,
+        8
+      ],
+      "ringClusters": [
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "inwardStartRadius:2",
+      "nativeParts": 232,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        154,
+        333,
+        522,
+        678,
+        870
+      ],
+      "ringRadii": [
+        15.600000000000001,
+        11.895000000000001,
+        8.190000000000001,
+        4.484999999999999,
+        0.7799999999999994
+      ],
+      "ringBandHalfWidths": [
+        1.5561000000000003,
+        1.5561000000000003,
+        1.5561000000000003,
+        1.5561000000000003,
+        0.2963999999999998
+      ],
+      "ringCounts": [
+        63,
+        48,
+        33,
+        18,
+        8
+      ],
+      "ringClusters": [
+        8,
+        8,
+        7,
+        4,
+        3
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "inwardEndRadius:0",
+      "nativeParts": 170,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637
+      ],
+      "ringEndTimes": [
+        154,
+        331,
+        522,
+        663
+      ],
+      "ringRadii": [
+        10.92,
+        8.19,
+        5.46,
+        2.7300000000000004
+      ],
+      "ringBandHalfWidths": [
+        1.1465999999999998,
+        1.1465999999999998,
+        1.1465999999999998,
+        1.0374
+      ],
+      "ringCounts": [
+        44,
+        33,
+        22,
+        11
+      ],
+      "ringClusters": [
+        8,
+        7,
+        5,
+        3
+      ],
+      "mistPuffs": 8,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "inwardEndRadius:0.5",
+      "nativeParts": 212,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        279,
+        458,
+        637,
+        816
+      ],
+      "ringEndTimes": [
+        154,
+        330,
+        507,
+        686,
+        860
+      ],
+      "ringRadii": [
+        10.92,
+        9.165,
+        7.41,
+        5.655,
+        3.9000000000000004
+      ],
+      "ringBandHalfWidths": [
+        0.7371,
+        0.7371,
+        0.7371,
+        0.7371,
+        0.7371
+      ],
+      "ringCounts": [
+        44,
+        37,
+        30,
+        23,
+        16
+      ],
+      "ringClusters": [
+        8,
+        8,
+        6,
+        5,
+        3
+      ],
+      "mistPuffs": 10,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "all-frost-1",
+      "nativeParts": 107,
+      "damageEvents": 3,
+      "ringTimes": [
+        100,
+        366,
+        632,
+        898
+      ],
+      "ringEndTimes": [
+        116,
+        392,
+        654,
+        919
+      ],
+      "ringRadii": [
+        2.73,
+        2.0475,
+        1.365,
+        0.6825000000000001
+      ],
+      "ringBandHalfWidths": [
+        0.28664999999999996,
+        0.28664999999999996,
+        0.28664999999999996,
+        0.25935
+      ],
+      "ringCounts": [
+        21,
+        16,
+        10,
+        8
+      ],
+      "ringClusters": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "mistPuffs": 0,
+      "fixedHorizontalAnchors": true
+    },
+    {
+      "configuration": "all-frost-2",
+      "nativeParts": 315,
+      "damageEvents": 3,
+      "ringTimes": [
+        1500,
+        1830,
+        2160,
+        2490,
+        2820
+      ],
+      "ringEndTimes": [
+        1603,
+        1943,
+        2252,
+        2587,
+        2900
+      ],
+      "ringRadii": [
+        26.0,
+        21.125,
+        16.25,
+        11.375,
+        6.5
+      ],
+      "ringBandHalfWidths": [
+        2.0475,
+        2.0475,
+        2.0475,
+        2.0475,
+        2.0475
+      ],
+      "ringCounts": [
+        64,
+        64,
+        50,
+        35,
+        20
+      ],
+      "ringClusters": [
+        8,
+        8,
+        8,
+        7,
+        4
+      ],
+      "mistPuffs": 30,
+      "fixedHorizontalAnchors": true
+    }
+  ],
+  "controls": [
+    "iceOpacity",
+    "iceDensity",
+    "mistAmount",
+    "inwardStartRadius",
+    "inwardEndRadius"
+  ],
+  "savedValuesPreserved": 63,
+  "protectedFilesUnchanged": 77,
+  "supportsTrueOpacity": true,
+  "nativeBlend": "SRCALPHA/INVSRCALPHA for ice surfaces",
+  "inGameVisualTest": false
+}

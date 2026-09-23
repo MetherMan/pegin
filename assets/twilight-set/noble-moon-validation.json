@@ -1,0 +1,181 @@
+{
+  "passed": true,
+  "design": "noble-blue-moon",
+  "weapons": [
+    {
+      "triangles": 11332,
+      "vertices": 5689,
+      "meshes": 1,
+      "bounds": [
+        [
+          -0.33722129464149475,
+          -0.25356951355934143,
+          -0.027499999850988388
+        ],
+        [
+          1.6129112243652344,
+          0.13332004845142365,
+          0.027499999850988388
+        ]
+      ],
+      "atlas": {
+        "atlas_size": 2048,
+        "layout": "unscaled-tall-source-crops",
+        "unique_tiles": 2,
+        "material_rects": {
+          "0": {
+            "x": 8,
+            "y": 8,
+            "width": 312,
+            "height": 1496,
+            "source_size": [
+              312,
+              1496
+            ],
+            "resampled": false
+          },
+          "1": {
+            "x": 336,
+            "y": 8,
+            "width": 20,
+            "height": 40,
+            "source_size": [
+              20,
+              40
+            ],
+            "resampled": false
+          }
+        },
+        "source_pixels_preserved": true,
+        "triangles_by_material": {
+          "0": 10118,
+          "1": 1214
+        },
+        "surface_area_by_material": {
+          "0": {
+            "source": 0.4667946328742401,
+            "atlas": 0.4667946328742401
+          },
+          "1": {
+            "source": 0.010385525012620665,
+            "atlas": 0.010385525012620665
+          }
+        }
+      },
+      "reference": "ws_0081_1.mod",
+      "reference_winding": 1.0,
+      "kind": "sword",
+      "source": "assets/visual-refresh-20260923/noble-moon-15/sword-04.png",
+      "source_sha256": "b16f338f6996112d5ed129ec9acac50fa2eeeb3cd9d09b1b5f069ceff21a8189",
+      "grip": [
+        519,
+        1251
+      ],
+      "scale": 0.0013070593213106144,
+      "separate_moon_badge": false,
+      "parts": 2,
+      "holes": 0,
+      "in_game_visual_test": false
+    },
+    {
+      "triangles": 26580,
+      "vertices": 13381,
+      "meshes": 1,
+      "bounds": [
+        [
+          -0.7864590287208557,
+          -0.1877003312110901,
+          -0.05558410659432411
+        ],
+        [
+          0.9569666981697083,
+          0.3926093280315399,
+          0.05558410659432411
+        ]
+      ],
+      "atlas": {
+        "atlas_size": 2048,
+        "layout": "unscaled-tall-source-crops",
+        "unique_tiles": 3,
+        "material_rects": {
+          "0": {
+            "x": 8,
+            "y": 8,
+            "width": 505,
+            "height": 1442,
+            "source_size": [
+              505,
+              1442
+            ],
+            "resampled": false
+          },
+          "1": {
+            "x": 529,
+            "y": 8,
+            "width": 12,
+            "height": 33,
+            "source_size": [
+              12,
+              33
+            ],
+            "resampled": false
+          },
+          "2": {
+            "x": 557,
+            "y": 8,
+            "width": 2,
+            "height": 18,
+            "source_size": [
+              2,
+              18
+            ],
+            "resampled": false
+          }
+        },
+        "source_pixels_preserved": true,
+        "triangles_by_material": {
+          "0": 23924,
+          "1": 2616,
+          "2": 40
+        },
+        "surface_area_by_material": {
+          "0": {
+            "source": 0.5852681795952173,
+            "atlas": 0.5852681795952173
+          },
+          "1": {
+            "source": 0.015166132067214568,
+            "atlas": 0.015166132067214568
+          },
+          "2": {
+            "source": 0.010606813810707858,
+            "atlas": 0.010606813810707858
+          }
+        }
+      },
+      "reference": "wb_0040_1.mod",
+      "reference_winding": 1.0,
+      "kind": "longbow",
+      "source": "assets/visual-refresh-20260923/bow-horns-10/bow-03.png",
+      "source_sha256": "7fc6dd5f4ff469a629c6669efe83cdf6a8586cafde3b82dfe2cfd2b122dd7dd4",
+      "grip": [
+        584,
+        818
+      ],
+      "scale": 0.001227,
+      "parts": 3,
+      "holes": 2,
+      "source_repainted": false,
+      "original_weapon_id_preserved": true,
+      "in_game_visual_test": false
+    }
+  ],
+  "staff_unchanged": true,
+  "staff_sha256": {
+    "Equip/mt_staff_1.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "Equip/mt_staff_2.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "Equip/mt_staff_3.mod": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2",
+    "Texture/Equip/mt_staff_atlas.wtm": "0e81ca9ca31d9fc781c529dbcf65daca5a41fa9f50c4aa6df4ebbc87dbf48ae1"
+  },
+  "staff_design": "eclipse-hook-staff"
+}

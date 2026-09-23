@@ -1,6 +1,12 @@
 from pathlib import Path
 import shutil,subprocess,sys,runpy,json
 ROOT=Path(__file__).resolve().parents[1];R=ROOT/'runtime';O=ROOT/'assets/twilight'
+active=ROOT/'assets/twilight-set/active-design.json'
+if active.exists() and json.loads(active.read_text())['design'] in ['shattered-moon','noble-blue-moon']:
+    builder='tools/build_noble_moon.py' if json.loads(active.read_text())['design']=='noble-blue-moon' else 'tools/build_shattered_moon.py'
+    for script in [builder,'assets/twilight-set/preview_native.py','assets/twilight-set/verify_closed_surfaces.py']:
+        subprocess.run([sys.executable,str(ROOT/script)],check=True,cwd=ROOT)
+    sys.exit(0)
 sys.path.insert(0,str(R/'pylibs'))
 subprocess.run([sys.executable,str(ROOT/'assets/twilight-set/build_sword_volume.py')],check=True)
 subprocess.run([str(R/'node/node.exe'),str(O/'build_model.mjs')],check=True)

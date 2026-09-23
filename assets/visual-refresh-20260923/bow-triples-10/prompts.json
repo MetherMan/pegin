@@ -1,0 +1,444 @@
+{
+  "title": "푸른달의 트와일라잇 활 30개 시안",
+  "mode": "built-in image_gen",
+  "requested_images": 10,
+  "weapons_per_image": 3,
+  "images": [
+    {
+      "id": "B01",
+      "name": "거대한 초승달",
+      "file": "bows-01.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: an asymmetrical bow whose broad upper limb forms a single monumental inward-facing blue crescent, its lower limb a narrow long cobalt sabre curve. MIDDLE: a compact recurved bow with a thick luminous crescent open to the left wrapping OUTSIDE the central grip, two short angular midnight-blue horn limbs. RIGHT: a tall off-center C-shaped bow with a very broad crescent lower limb and an open hooked upper limb sweeping forward; the dominant blue crescent is below the grip. All three have a different large crescent silhouette.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B01A",
+          "position": "left",
+          "name": "상단 거대 초승달"
+        },
+        {
+          "id": "B01B",
+          "position": "middle",
+          "name": "손잡이를 감싼 거대 월호"
+        },
+        {
+          "id": "B01C",
+          "position": "right",
+          "name": "하단 초승달 반전"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-320520e9-e944-415f-b5e9-398fc9f66c5f.png",
+      "sha256": "8878a656cefd239a14962f48b387575630008540fc9c7a2dfe2cb112dfe0cdcd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "상단 거대 초승달 / 손잡이를 감싼 거대 월호 / 하단 초승달 반전"
+      }
+    },
+    {
+      "id": "B02",
+      "name": "만월의 건축",
+      "file": "bows-02.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: a longbow with a large glowing BLUE FULL MOON set in a circular cutout of a broad upper shoulder, a straight dark lapis spine and one sweeping lower hook. MIDDLE: an asymmetric arched bow built as two broad cathedral-buttress limbs, its brilliant full moon integrated outside the left edge of the grip and two oversized clean open arches. RIGHT: a compact broad-limbed bow with a large full moon cradled in a half-bowl at its lower shoulder and an elevated tall pointed upper arch. The luminous full moons show a subtle lunar crater surface, remain integral to the bows and do not obstruct the string.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B02A",
+          "position": "left",
+          "name": "상단 만월의 아치"
+        },
+        {
+          "id": "B02B",
+          "position": "middle",
+          "name": "중앙 만월 성소"
+        },
+        {
+          "id": "B02C",
+          "position": "right",
+          "name": "하단 만월 받침"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-b15940f8-cc95-4c1b-8aed-311692e41101.png",
+      "sha256": "4aa87cb8318171b5ae573e91975088c56d4f882f8e29378d25802a4d5cb19140",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "상단 만월의 아치 / 중앙 만월 성소 / 하단 만월 받침"
+      }
+    },
+    {
+      "id": "B03",
+      "name": "쌍월의 간극",
+      "file": "bows-03.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: two broad UNEQUAL nested blue crescents sweep together through the upper limb, the lower limb a short reverse crescent, with a prominent dark gap between the crescents. MIDDLE: a massive bright-blue crescent centered outside the grip is crossed by a darker cobalt half-crescent, creating one sculptural broken figure-eight outline; upper and lower limb ends remain solid simple tapers. RIGHT: a long compound S-curve bow with one big blue crescent in the upper shoulder and one smaller crescent at the far lower shoulder facing the opposite way; visually strong unequal masses, no symmetry. Emphasize negative-space architecture, not decorative wire rings.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B03A",
+          "position": "left",
+          "name": "겹친 두 초승달"
+        },
+        {
+          "id": "B03B",
+          "position": "middle",
+          "name": "교차하는 밝고 어두운 월호"
+        },
+        {
+          "id": "B03C",
+          "position": "right",
+          "name": "엇갈린 위아래 쌍월"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-5df77f1a-3db5-404a-9cc2-a0c997246ba6.png",
+      "sha256": "bcab511dce5ed7b7d50169931f3e4c595a44e265847a6f4708cb432c14b6d30a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "겹친 두 초승달 / 교차하는 밝고 어두운 월호 / 엇갈린 위아래 쌍월"
+      }
+    },
+    {
+      "id": "B04",
+      "name": "깊은 월식",
+      "file": "bows-04.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: a heavy dark lapis upper limb encloses a bright electric-blue eclipsed lunar disc with a bold illuminated crescent rim, while the lower limb is a single polished cobalt talon. MIDDLE: a vertical tallbow shaped around a large black-blue half-disc with a brilliant broad azure lunar rim OUTSIDE the grip; the ends sweep opposite directions like tidal blades. RIGHT: a short powerful bow with a thick obsidian-cobalt broken circular upper shoulder framing an offset luminous blue full moon, and a broad triangular lower recurved limb. Noble dark moonstone material, strong blue rim against near-black core, clearly readable three distinct eclipse silhouettes.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B04A",
+          "position": "left",
+          "name": "어두운 월식의 테두리"
+        },
+        {
+          "id": "B04B",
+          "position": "middle",
+          "name": "중앙 반월의 긴 곡선"
+        },
+        {
+          "id": "B04C",
+          "position": "right",
+          "name": "파쇄된 월식 외곽"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-34b28a20-002d-4321-97e9-48b3daa89093.png",
+      "sha256": "984e2cc9cc008857b185e3ea94057a03f27ed4b0f57d1e73ac6cc0cee789eb2d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "어두운 월식의 테두리 / 중앙 반월의 긴 곡선 / 파쇄된 월식 외곽"
+      }
+    },
+    {
+      "id": "B05",
+      "name": "달빛의 파도",
+      "file": "bows-05.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: a long bow carved as one thick cresting azure ocean wave, a large blue crescent visibly formed in the upper wave crest, a smooth elongated lower return. MIDDLE: a robust compressed recurve bow with two unequal broad wave blades and a blue crescent-shaped opening lined with glowing moonstone on the outer side of the central grip; substantial solid volumes. RIGHT: a high sweeping bow with three large joined lapis-blue tidal plates flowing from bottom to top, one very large blue crescent carried in the lower broad wave bowl. The waves are physical curved blue gemstone blades, no watery spray or decorative ribbons, inspired by noble moonlight over the sea.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B05A",
+          "position": "left",
+          "name": "상단 파도와 초승달"
+        },
+        {
+          "id": "B05B",
+          "position": "middle",
+          "name": "중앙 달빛 파도날"
+        },
+        {
+          "id": "B05C",
+          "position": "right",
+          "name": "하단 달의 물결"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-fbd7d06b-4eb9-4bca-925e-5fa693695b3a.png",
+      "sha256": "08f7976af9fef089167eb1105509180d337fc95a84d811dd5280939989aa73e5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "상단 파도와 초승달 / 중앙 달빛 파도날 / 하단 달의 물결"
+      }
+    },
+    {
+      "id": "B06",
+      "name": "쇄월의 청석",
+      "file": "bows-06.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: a broad broken-crescent upper limb assembled from THREE large unequal blue moonstone slabs joined by spare pale-gold seams, its lower limb a single long pointed lapis shard; clear recognizable crescent silhouette. MIDDLE: an angular bow with two solid elbowed arms, a large cratered blue half-moon slab extending outward from the grip and only two large supporting crystal fins. RIGHT: a dramatic asymmetric bow with a very large crescent-shaped blue crystalline lower blade split into two offset planes, a short sharp forked upper shoulder and a continuous cobalt structural spine. Fractures are bold and readable, not a cloud of tiny fragments; every limb remains joined and functional.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B06A",
+          "position": "left",
+          "name": "세 조각 상단 월석"
+        },
+        {
+          "id": "B06B",
+          "position": "middle",
+          "name": "큰 반월판과 각진 팔"
+        },
+        {
+          "id": "B06C",
+          "position": "right",
+          "name": "엇갈린 하단 월석날"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-4a613bb4-292b-44df-89c4-42f3ecfed508.png",
+      "sha256": "28e4529979a4f127f910f155a52511e9556cf3563e2dcf580aec52bc96747fe8",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "세 조각 상단 월석 / 큰 반월판과 각진 팔 / 엇갈린 하단 월석날"
+      }
+    },
+    {
+      "id": "B07",
+      "name": "고결한 월익",
+      "file": "bows-07.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: a broad cobalt upper limb opens into one large sweeping feather-like solid moonstone wing containing a bright-blue crescent, the lower limb a slender but substantial counter-wing. MIDDLE: a powerful compact bow with two unequal wide fin-like crystal wings enclosing a large FULL BLUE MOON at the outer grip edge, strongly architectural wing shapes not rows of fine feathers. RIGHT: a longbow with a huge upward swept blue half-moon wing at the lower shoulder and a narrow backward upper crest; large clean open space between the broad wing and the dark cobalt backbone. No bird heads or bodies, no small feather repetition, no detached wings.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B07A",
+          "position": "left",
+          "name": "초승달을 품은 월익"
+        },
+        {
+          "id": "B07B",
+          "position": "middle",
+          "name": "굵은 청석 날개와 만월"
+        },
+        {
+          "id": "B07C",
+          "position": "right",
+          "name": "하단 거대 반월익"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-a59cbc84-8588-47a2-bc9a-24d06683f68a.png",
+      "sha256": "73c7890689c94b56136a4197dafa0a59c3044b93207f7c8d7e46792ab139bd0d",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "초승달을 품은 월익 / 굵은 청석 날개와 만월 / 하단 거대 반월익"
+      }
+    },
+    {
+      "id": "B08",
+      "name": "반달의 왕관",
+      "file": "bows-08.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: a tall noble bow whose upper shoulder is a broad bright-blue HALF MOON supporting three unequal bluntly tapering crown points, lower limb a long elegant simple cobalt curve. MIDDLE: a shorter recurve with a huge luminous blue crescent forming a crown-like outward handguard, one broad arched upper limb and one inward-curled lower limb. RIGHT: a formidable asymmetrical bow with a large full blue moon held in a two-point cobalt crown at the lower shoulder, upper limb an oversized smooth horn arch with a broad empty aperture. Sparse large royal structures, moonstone dominant, fine pale-gold seams only, no jewel necklaces or ornamental string decorations.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B08A",
+          "position": "left",
+          "name": "상단 반달 왕관"
+        },
+        {
+          "id": "B08B",
+          "position": "middle",
+          "name": "중앙 월호의 왕실 활"
+        },
+        {
+          "id": "B08C",
+          "position": "right",
+          "name": "하단 만월 왕관"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-3ee41ca9-e6a7-4a4d-b481-fd555485646e.png",
+      "sha256": "52a623963fb45c43a7c473d77f30333e434c7d8e300a2a520dc99f6197b97573",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "상단 반달 왕관 / 중앙 월호의 왕실 활 / 하단 만월 왕관"
+      }
+    },
+    {
+      "id": "B09",
+      "name": "고대 월석 성물",
+      "file": "bows-09.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: a monumental ancient lunar bow with thick rounded rectangular lapis limbs, a giant blue crescent carved THROUGH the upper arm and glowing at the cut edges, a visible narrow usable central grip. MIDDLE: an angular stepped longbow made of two enormous unequal crystalline moonstone arcs, an inset glowing FULL BLUE MOON at the outer lower shoulder, deep engraved broad channels only. RIGHT: an asymmetric crescent-bow with a thick weathered yet polished blue gemstone spine, one large oval open space above the grip and a broad intense blue HALF MOON blade below; clean noble sacred artifact, not ruin debris. Strong graphic construction and substantial mass; still clearly functional bows, not axes or stone clubs.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B09A",
+          "position": "left",
+          "name": "굵은 상단 월석 성물"
+        },
+        {
+          "id": "B09B",
+          "position": "middle",
+          "name": "층진 청석과 하단 만월"
+        },
+        {
+          "id": "B09C",
+          "position": "right",
+          "name": "열린 눈 모양과 하단 반월"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-b1c70e10-cb51-4b5b-902e-843559dbe057.png",
+      "sha256": "c63d7e579048faa97662206596d6342ba0d25abad1c83ea5f2358ea8257b44f1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "굵은 상단 월석 성물 / 층진 청석과 하단 만월 / 열린 눈 모양과 하단 반월"
+      }
+    },
+    {
+      "id": "B10",
+      "name": "오로라 월광",
+      "file": "bows-10.png",
+      "prompt": "Use case: stylized-concept. Asset: a premium MMORPG weapon concept sheet for the noble Blue Moon Twilight collection. Create ONE landscape 3:2 image, 1536x1024, containing EXACTLY THREE DIFFERENT BOWS only. The left, middle and right bows are distinct designs, all upright at the same scale, all seen from a similar near-front product angle, full length with every tip safely inside the frame and generous equal separation. Neutral flat dark charcoal-grey nearly black background, no environment. Each bow has a clearly usable central handgrip, coherent upper and lower limbs and one fine taut string connecting the limb tips to the RIGHT of the grip; keep the nocking and arrow path clear. The principal design material is luminous deep cobalt moonstone, lapis-blue crystal, translucent clear azure stone and solid-looking condensed blue moonlight, with very restrained pale-gold/ivory joinery. The BLUE MOON is an unmistakable LARGE physical structural emblem integrated into EACH bow, seen immediately at game-thumbnail scale, not a tiny ornament, engraving or background prop. Strong substantial silhouette, broad sculpted volumes, noble elegance, asymmetric elaborate curves and deliberate open spaces. Balance brilliant clear-blue moon surfaces with saturated dark cobalt so the silhouette stays visible. These must be radically newly designed bows, not ordinary grey metal bows painted blue. Do not repeat skinny filigree scrolls, dangly jewelry, strings of beads or lots of tiny spikes. Show refined playable fantasy weapons with readable construction, crisp premium concept-render detail and controlled glow, not flat icons. No staffs, swords, arrows, characters, hands, stands, captions, letters, labels, watermark, panels or background moon. Each of the three designs must be clearly different in limb geometry and moon placement, not a recolor or mirrored copy. LEFT: one broad translucent azure ribbon of SOLID CRYSTAL twists through an elegant longbow silhouette, opening into a very large bright-blue crescent at the upper shoulder; the lower end is a clean taper. MIDDLE: two broad unequal opalescent cobalt bands cross once OUTSIDE the handgrip and enclose a large luminous blue full moon near the lower shoulder, making a compact dramatic recurved bow. RIGHT: a very tall bow with an exaggerated wide swept upper limb like a solid aurora sail and a hooked shorter lower limb; a huge blue crescent inset in the sail creates an unmistakable moon silhouette. Keep ribbons thick and structural, not flimsy fabric, with controlled azure-violet opalescence and deep cobalt shadows, no floating wisps.",
+      "status": "generated",
+      "mode": "built-in image_gen",
+      "designs": [
+        {
+          "id": "B10A",
+          "position": "left",
+          "name": "상단 달과 오로라 비틀림"
+        },
+        {
+          "id": "B10B",
+          "position": "middle",
+          "name": "겹친 월광띠와 하단 만월"
+        },
+        {
+          "id": "B10C",
+          "position": "right",
+          "name": "거대한 상단 월광 돛"
+        }
+      ],
+      "original_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-1e68dece-8b0b-414b-8a75-ac6a9b711cbf.png",
+      "sha256": "a458101f1f9464d20c24955dfe749822f21aac529fe62a8e88f005afa52c6460",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "visual_review": {
+        "status": "reviewed",
+        "method": "individually inspected generatedImage output",
+        "bows_visible": 3,
+        "full_length": true,
+        "grip_and_string_visible": true,
+        "large_blue_moon": true,
+        "distinct_left_middle_right_silhouettes": true,
+        "no_people_staffs_swords_labels": true,
+        "note": "상단 달과 오로라 비틀림 / 겹친 월광띠와 하단 만월 / 거대한 상단 월광 돛"
+      }
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "images": 10,
+    "bows": 30,
+    "built_in_imagegen_calls": 10,
+    "call_failures": 0,
+    "missing_images": 0,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "unique_sha256": 10,
+    "original_bytes_preserved": true,
+    "png_integrity": "PASS",
+    "visual_review": "All 10 images individually inspected; each includes three full-length distinct bows with visible grips, strings and prominent blue moon forms. Concept art only; not a game model."
+  }
+}

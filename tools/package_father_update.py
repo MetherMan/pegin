@@ -13,6 +13,7 @@ def main():
         candidates=(ROOT/folder).rglob('*') if kind=='client' else (ROOT/folder/'DATA').glob('*')
         for p in sorted(candidates):
             if not p.is_file():continue
+            if '__pycache__' in p.parts or p.suffix.lower() in ('.pyc','.pyo','.tmp','.log'):continue
             name=p.relative_to(ROOT/folder).as_posix()
             if kind=='client' and name.lower() in ('config.ini','server.ini'):continue
             if kind=='server' and not name.startswith('DATA/'):continue
@@ -21,7 +22,11 @@ def main():
     for kind,path,source in [('server','LAQIA_GameServer','server-bin/LAQIA_GameServer'),('updater','update/father_update.py','distribution/father_update.py')]:
         p=ROOT/source
         files.append(dict(kind=kind,path=path,source=source,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
-    manifest=dict(format=1,repository='MetherMan/pegin',version=args.version,files=files)
+    runtime_files=[]
+    for name in ('local_control.py','ssh_vm.py','start_vm.py'):
+        p=ROOT/'tools/runtime'/name
+        runtime_files.append(dict(kind='runtime',path=name,source=p.relative_to(ROOT).as_posix(),bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
+    manifest=dict(format=1,repository='MetherMan/pegin',version=args.version,files=files,runtime_files=runtime_files)
     (ROOT/'distribution/update-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     if args.manifest_only:
         print(json.dumps(dict(version=args.version,manifest_files=len(files))))

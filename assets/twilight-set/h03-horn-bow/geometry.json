@@ -1,0 +1,28 @@
+{
+  "design": "approved-h03-horn-bow",
+  "weapons": [{
+    "kind": "longbow",
+    "artifact_tag": "h03-horn-bow",
+    "source": "assets/visual-refresh-20260923/bow-horns-10/bow-03.png",
+    "box": [245, 28, 750, 1470],
+    "grip": [584, 818],
+    "scale": 0.001227,
+    "likely_threshold": 52,
+    "solid_threshold": 120,
+    "background": [],
+    "close_pixels": 2,
+    "minimum_area": 14,
+    "minimum_hole": 18,
+    "outline_error": 0.5,
+    "mesh_step": 12,
+    "exclude": [[551, 752, 612, 880], [681, 229, 691, 699], [681, 763, 691, 1307]],
+    "grip_ends": [[580, 741], [577, 893]],
+    "grip_radii": [0.024, 0.023],
+    "string_ends": [[686, 220], [686, 1338]],
+    "side_material_box": [603, 466, 615, 499],
+    "string_material_box": [685, 280, 687, 298],
+    "moon_center": [523, 581],
+    "moon_radii": [39, 44],
+    "moon_half_depth": 0.026
+  }]
+}

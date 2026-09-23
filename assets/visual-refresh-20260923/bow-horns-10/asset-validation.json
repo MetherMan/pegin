@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "images": 10,
+  "ids": [
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05",
+    "H06",
+    "H07",
+    "H08",
+    "H09",
+    "H10"
+  ],
+  "distinct_sha256": 10,
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "actual_reference_images": [
+    "A04",
+    "V01"
+  ],
+  "source_bytes_preserved": true,
+  "individual_visual_qa_present": true,
+  "notes": [
+    "모든 활과 뿔 끝은 보존되어 있다. 생성 결과의 상하 여백은 요청한 7%보다 좁아 각 visual_qa에 기록했다."
+  ],
+  "scope": "new bow-horns-10 gallery and catalog only"
+}

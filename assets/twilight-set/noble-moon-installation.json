@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\noble-blue-moon-20260923-141001",
+  "unique_weapon_files": 8,
+  "installed_files": 16,
+  "protected_files_unchanged": 59,
+  "files": [
+    {
+      "root": "family",
+      "path": "Equip/mt_twilight_1.mod",
+      "sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd"
+    },
+    {
+      "root": "family",
+      "path": "Equip/mt_twilight_2.mod",
+      "sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd"
+    },
+    {
+      "root": "family",
+      "path": "Equip/mt_twilight_3.mod",
+      "sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd"
+    },
+    {
+      "root": "family",
+      "path": "Equip/mt_longbow_1.mod",
+      "sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427"
+    },
+    {
+      "root": "family",
+      "path": "Equip/mt_longbow_2.mod",
+      "sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427"
+    },
+    {
+      "root": "family",
+      "path": "Equip/mt_longbow_3.mod",
+      "sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427"
+    },
+    {
+      "root": "family",
+      "path": "Texture/Equip/mt_twilight_atlas.wtm",
+      "sha256": "5277dce405783b30472064e0dc7da0d17a6766bd4969b4aeb382814df2d50bb3"
+    },
+    {
+      "root": "family",
+      "path": "Texture/Equip/mt_longbow_atlas.wtm",
+      "sha256": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_twilight_1.mod",
+      "sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_twilight_2.mod",
+      "sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_twilight_3.mod",
+      "sha256": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_longbow_1.mod",
+      "sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_longbow_2.mod",
+      "sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_longbow_3.mod",
+      "sha256": "aa8798210a1e56bdd475c360f3d0c01f519218660fb62dfddf134b33cc838427"
+    },
+    {
+      "root": "workspace",
+      "path": "Texture/Equip/mt_twilight_atlas.wtm",
+      "sha256": "5277dce405783b30472064e0dc7da0d17a6766bd4969b4aeb382814df2d50bb3"
+    },
+    {
+      "root": "workspace",
+      "path": "Texture/Equip/mt_longbow_atlas.wtm",
+      "sha256": "009f3dd428384d73986ad38cd69b714716770a17723a641ada2513a09ea511ea"
+    }
+  ],
+  "staff_unchanged": true,
+  "skills_applied": false,
+  "server_or_database_written": false,
+  "in_game_visual_test": false
+}

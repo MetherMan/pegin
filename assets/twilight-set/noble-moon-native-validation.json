@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "design": "noble-blue-moon",
+  "models": [
+    {
+      "kind": "sword",
+      "native_sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+      "blue_surface_fraction": 0.8394817113876343,
+      "closed_surface": {
+        "model": "mt_twilight_1.mod",
+        "triangles": 11332,
+        "open_edges": 0,
+        "nonmanifold_edges": 0,
+        "reversed_seams": 0,
+        "closed_components": 3,
+        "component_volumes": [
+          0.0003313850674377435,
+          0.004606361613160108,
+          0.0002721165503142095
+        ],
+        "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+        "passed": true
+      },
+      "full_resolution_native_texture": true,
+      "source_pixels_verified": 466752,
+      "face_texture_size": [
+        312,
+        1496
+      ],
+      "blade_middle_full_depth": 0.037514690309762955,
+      "blade_tip_full_depth": 0.004088977817445993,
+      "thin_rim_vertices": 500
+    },
+    {
+      "kind": "longbow",
+      "native_sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+      "blue_surface_fraction": 0.6604284048080444,
+      "closed_surface": {
+        "model": "mt_longbow_1.mod",
+        "triangles": 26580,
+        "open_edges": 0,
+        "nonmanifold_edges": 0,
+        "reversed_seams": 0,
+        "closed_components": 5,
+        "component_volumes": [
+          0.002429086863261763,
+          6.2944475634226306e-06,
+          0.007029265194083595,
+          0.0003216101038190114,
+          6.299345510144942e-06
+        ],
+        "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c",
+        "passed": true
+      },
+      "full_resolution_native_texture": true,
+      "source_pixels_verified": 728210,
+      "face_texture_size": [
+        505,
+        1442
+      ]
+    }
+  ],
+  "staff_unchanged": true,
+  "in_game_visual_test": false
+}

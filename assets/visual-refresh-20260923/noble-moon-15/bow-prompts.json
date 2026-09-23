@@ -1,0 +1,124 @@
+{
+  "title": "푸른달의 트와일라잇 — 활 5개 ImageGen 시안",
+  "date": "2026-09-23",
+  "scope": "Concept previews only. No modeling, installation, or existing asset replacement.",
+  "generation_calls": 5,
+  "mode": "built-in imagegen, one independent call per variant",
+  "images": [
+    {
+      "id": "B1",
+      "name": "초승달 궁정",
+      "file": "bow-01.png",
+      "prompt": "Use case: stylized-concept. Asset type: standalone fantasy MMORPG longbow concept for the 'Blue Moon Twilight' series, expressing noble blue elegance. Render ONE complete upright longbow, not a sheet or a collage. Clean orthographic side/front elevation showing the whole bow silhouette and its center grip; the straight delicate bowstring is on the RIGHT. Portrait composition with clear margins around both tips. Very dark navy clean plain background. No person, no hand, no arrow, no labels, no text, no watermark. The weapon must visually be deep azure sapphire and iridescent pale-blue moonstone/opal, not gray iron sprayed blue. Silver is allowed only as extremely thin restrained edging. The BLUE MOON is part of the structural silhouette itself, not a flat attached moon badge. Elegant sophisticated game weapon concept illustration with coherent dimensional facets, sharpened graceful tips, readable solid contour, minimal external glow; no floating particles, no excessive halo, no excessive filigree that obscures the silhouette. Unique design: CRESCENT COURT. A single enormous sweeping crescent forms nearly the entire bow's body, an expansive noble lunar C-shape opening to the right. The center grip crosses the open side cleanly; the continuous crescent has deep cobalt outer spine and a broad glowing opal inner crescent. Make it a confident simple regal silhouette with one dominant moon and only two elegantly recurved end tips. The center moon form must read from a small game camera. Avoid bird wings, orbit rings, branching crown spikes, and symmetrical multiple decorative crescents.",
+      "mode": "builtin",
+      "tool": "image_gen.imagegen",
+      "model": "built-in default; model identifier not exposed by tool",
+      "original_local_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-568861c5-a137-411c-a3d0-054f21fc18e8.png",
+      "workspace_path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\noble-moon-15\\bow-01.png",
+      "review": {
+        "complete_single_longbow": true,
+        "distinct_silhouette": true,
+        "string_on_right": true,
+        "no_text_or_people": true,
+        "no_excessive_external_halo": true,
+        "notes": "Broad lunar C-shaped body; two great opal crescents connect around a centered grip. Cleanest and broadest moon silhouette.",
+        "local_copy_verified": true
+      },
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4ed473f2b07f93b496ec799e11941f02f23814f93c73016769e7cff395123847"
+    },
+    {
+      "id": "B2",
+      "name": "쌍월 날개",
+      "file": "bow-02.png",
+      "prompt": "Use case: stylized-concept. Asset type: standalone fantasy MMORPG longbow concept for the 'Blue Moon Twilight' series, expressing noble blue elegance. Render ONE complete upright longbow, not a sheet or a collage. Clean orthographic side/front elevation showing the whole bow silhouette and its center grip; the straight delicate bowstring is on the RIGHT. Portrait composition with clear margins around both tips. Very dark navy clean plain background. No person, no hand, no arrow, no labels, no text, no watermark. The weapon must visually be deep azure sapphire and iridescent pale-blue moonstone/opal, not gray iron sprayed blue. Silver is allowed only as extremely thin restrained edging. The BLUE MOON is part of the structural silhouette itself, not a flat attached moon badge. Elegant sophisticated game weapon concept illustration with coherent dimensional facets, sharpened graceful tips, readable solid contour, minimal external glow; no floating particles, no excessive halo, no excessive filigree that obscures the silhouette. Unique design: TWIN MOON WINGS. Two dramatic flowing moon-feather wings form the upper and lower limbs, staggered and offset, sweeping in opposite arcs. Upper limb fans forward in three broad long azure crescent feathers; lower limb is a narrower reverse-sweeping pair of lunar feathers. Their unequal flowing silhouettes meet a slim center grip, with a clean open space behind it before the right bowstring. Treat the crescent wing blades as the actual structural bow. Broad translucent blue opal panels with dark sapphire ribs; no literal bird or angel, no single enormous central C-ring, no circular orbit rings, no crown spikes.",
+      "mode": "builtin",
+      "tool": "image_gen.imagegen",
+      "model": "built-in default; model identifier not exposed by tool",
+      "original_local_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-0b4f893c-aaa8-4c51-ba59-e4860df505a5.png",
+      "workspace_path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\noble-moon-15\\bow-02.png",
+      "review": {
+        "complete_single_longbow": true,
+        "distinct_silhouette": true,
+        "string_on_right": true,
+        "no_text_or_people": true,
+        "no_excessive_external_halo": true,
+        "notes": "Offset upper fan of crescent feathers and lower flowing twin feathers; visibly wing-shaped and lighter than B1.",
+        "local_copy_verified": true
+      },
+      "width": 1024,
+      "height": 1536,
+      "sha256": "253c99b3ebeac56e5a67eb55769d9c85e666b0f136bd8446db467c7fafa8a3e2"
+    },
+    {
+      "id": "B3",
+      "name": "성월 관측궁",
+      "file": "bow-03.png",
+      "prompt": "Use case: stylized-concept. Asset type: standalone fantasy MMORPG longbow concept for the 'Blue Moon Twilight' series, expressing noble blue elegance. Render ONE complete upright longbow, not a sheet or a collage. Clean orthographic side/front elevation showing the whole bow silhouette and its center grip; the straight delicate bowstring is on the RIGHT. Portrait composition with clear margins around both tips. Very dark navy clean plain background. No person, no hand, no arrow, no labels, no text, no watermark. The weapon must visually be deep azure sapphire and iridescent pale-blue moonstone/opal, not gray iron sprayed blue. Silver is allowed only as extremely thin restrained edging. The BLUE MOON is part of the structural silhouette itself, not a flat attached moon badge. Elegant sophisticated game weapon concept illustration with coherent dimensional facets, sharpened graceful tips, readable solid contour, minimal external glow; no floating particles, no excessive halo, no excessive filigree that obscures the silhouette. Unique design: LUNAR OBSERVATORY. An open armillary orbit structure forms this functional longbow: three gracefully intersecting incomplete elliptical crescent arcs, in different long elegant proportions, wrapping around an open center grip area. They connect into the long upper and lower bow limbs with restrained offset luminous sapphire nodes built into the frame. The overall silhouette is celestial instrument precision and noble arc geometry, with a visible tilted partial lunar orbit crossing behind the grip. Frame is saturated deep-blue crystal, inlaid opaline lunar surfaces, minimal silver guide lines. Keep the bow readable as one weapon, not a staff, not a crossbow, not a huge disk; no wing feathers, no crown horns, no random decorations.",
+      "mode": "builtin",
+      "tool": "image_gen.imagegen",
+      "model": "built-in default; model identifier not exposed by tool",
+      "original_local_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-2dd9098c-d2d9-4f1c-a72f-a9043dc2c712.png",
+      "workspace_path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\noble-moon-15\\bow-03.png",
+      "review": {
+        "complete_single_longbow": true,
+        "distinct_silhouette": true,
+        "string_on_right": true,
+        "no_text_or_people": true,
+        "no_excessive_external_halo": true,
+        "notes": "Open intersecting armillary orbit arcs around the center grip, opal limbs, restrained lunar nodes; structurally unlike the other four.",
+        "local_copy_verified": true
+      },
+      "width": 1024,
+      "height": 1536,
+      "sha256": "bad2e21a1cf98ee7a3d63d9dd43c37231a66652c94d599580f047d8fc61680d7"
+    },
+    {
+      "id": "B4",
+      "name": "달빛 물결",
+      "file": "bow-04.png",
+      "prompt": "Use case: stylized-concept. Asset type: standalone fantasy MMORPG longbow concept for the 'Blue Moon Twilight' series, expressing noble blue elegance. Render ONE complete upright longbow, not a sheet or a collage. Clean orthographic side/front elevation showing the whole bow silhouette and its center grip; the straight delicate bowstring is on the RIGHT. Portrait composition with clear margins around both tips. Very dark navy clean plain background. No person, no hand, no arrow, no labels, no text, no watermark. The weapon must visually be deep azure sapphire and iridescent pale-blue moonstone/opal, not gray iron sprayed blue. Silver is allowed only as extremely thin restrained edging. The BLUE MOON is part of the structural silhouette itself, not a flat attached moon badge. Elegant sophisticated game weapon concept illustration with coherent dimensional facets, sharpened graceful tips, readable solid contour, minimal external glow; no floating particles, no excessive halo, no excessive filigree that obscures the silhouette. Unique design: MOONLIT TIDE. A boldly asymmetric flowing S-curve forms the physical bow body. The upper limb is a long narrow streaming sapphire wave swept outward then strongly recurved; the lower limb is shorter, broader and curls into a broken crescent fin. A large negative-space crescent appears naturally between the irregular liquid-moonstone wave crests beside the center grip. Use three or four unevenly spaced flowing blade fins of different lengths, like dignified frozen moonlit water rather than feathers. Silhouette should be visibly irregular, fluid and highly distinctive, still a practical upright longbow with a straight right bowstring. No circular orbit rings, no large single central C-ring, no crown spikes.",
+      "mode": "builtin",
+      "tool": "image_gen.imagegen",
+      "model": "built-in default; model identifier not exposed by tool",
+      "original_local_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-6612cfef-77f0-4dd4-ab8e-de46b7bac034.png",
+      "workspace_path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\noble-moon-15\\bow-04.png",
+      "review": {
+        "complete_single_longbow": true,
+        "distinct_silhouette": true,
+        "string_on_right": true,
+        "no_text_or_people": true,
+        "no_excessive_external_halo": true,
+        "notes": "Irregular asymmetric S-wave with a long upper streaming limb, crescent wave opening near grip, curled broader lower fin.",
+        "local_copy_verified": true
+      },
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6368e2e29877e3da11241a403af368cb65d1f1e17328ae0eabd5d98a90a9cd23"
+    },
+    {
+      "id": "B5",
+      "name": "월식 왕관",
+      "file": "bow-05.png",
+      "prompt": "Use case: stylized-concept. Asset type: standalone fantasy MMORPG longbow concept for the 'Blue Moon Twilight' series, expressing noble blue elegance. Render ONE complete upright longbow, not a sheet or a collage. Clean orthographic side/front elevation showing the whole bow silhouette and its center grip; the straight delicate bowstring is on the RIGHT. Portrait composition with clear margins around both tips. Very dark navy clean plain background. No person, no hand, no arrow, no labels, no text, no watermark. The weapon must visually be deep azure sapphire and iridescent pale-blue moonstone/opal, not gray iron sprayed blue. Silver is allowed only as extremely thin restrained edging. The BLUE MOON is part of the structural silhouette itself, not a flat attached moon badge. Elegant sophisticated game weapon concept illustration with coherent dimensional facets, sharpened graceful tips, readable solid contour, minimal external glow; no floating particles, no excessive halo, no excessive filigree that obscures the silhouette. Unique design: ECLIPSE CROWN. A darker and stately royal bow with a striking angular crown silhouette. Deep midnight sapphire body, substantial clean blue-black planes, intensely pale-blue cutting edges. Upper limb opens into three unequal upward sweeping crescent crown prongs; the lower limb echoes them in two longer downward recurved points. Between the limbs a slim central grip is framed by an open crescent-shaped aperture carved directly into the body. One small moonstone nucleus is structurally enclosed in the crescent, not an attached badge. Sharp elegant royal crescent horns, noble rather than demonic. Dark blue dominates but strong icy-blue edges make the whole silhouette immediately readable. No gray iron, no bird wings, no orbit rings, no messy flame or particles.",
+      "mode": "builtin",
+      "tool": "image_gen.imagegen",
+      "model": "built-in default; model identifier not exposed by tool",
+      "original_local_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-19001cbe-673e-41e1-b3ce-ef931d984132.png",
+      "workspace_path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\noble-moon-15\\bow-05.png",
+      "review": {
+        "complete_single_longbow": true,
+        "distinct_silhouette": true,
+        "string_on_right": true,
+        "no_text_or_people": true,
+        "no_excessive_external_halo": true,
+        "notes": "Dark sapphire angular limbs, three upper crown prongs and two lower crescent tips; highest edge contrast and darkest body.",
+        "local_copy_verified": true
+      },
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4b852f5fee96d8eaa401c7fd99516a0fcb0073802f32dd66bb6f6f8a22c01a87"
+    }
+  ]
+}

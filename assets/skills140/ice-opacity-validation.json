@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "opacity": 0,
+      "alphaByte": 0,
+      "surfaces": 135
+    },
+    {
+      "opacity": 25,
+      "alphaByte": 64,
+      "surfaces": 135
+    },
+    {
+      "opacity": 85,
+      "alphaByte": 217,
+      "surfaces": 135
+    },
+    {
+      "opacity": 100,
+      "alphaByte": 255,
+      "surfaces": 135
+    }
+  ],
+  "rgbGeometryAndOtherLayersUnchanged": true,
+  "previewNativeAlphaParity": true,
+  "savedValuesPreserved": 63,
+  "nativeRendererRequirement": "ice-opacity-v1",
+  "inGameDirect3DTest": false
+}

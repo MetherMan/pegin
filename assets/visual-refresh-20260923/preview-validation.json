@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "preview_only": true,
+  "apply_endpoint_status": 403,
+  "meteor_major": 7,
+  "meteor_minor": 9,
+  "seal_layers": 3,
+  "existing_installation_modified": false,
+  "in_game_visual_test": false
+}

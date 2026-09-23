@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "design": "eclipse-hook-staff",
+  "timestamp": "20260923-154837",
+  "files": [
+    {
+      "root": "family",
+      "path": "Equip/mt_staff_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_staff_1.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\eclipse-hook-staff-20260923-154837\\Equip\\mt_staff_1.mod",
+      "before": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
+    },
+    {
+      "root": "family",
+      "path": "Equip/mt_staff_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_staff_2.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\eclipse-hook-staff-20260923-154837\\Equip\\mt_staff_2.mod",
+      "before": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
+    },
+    {
+      "root": "family",
+      "path": "Equip/mt_staff_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_staff_3.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\eclipse-hook-staff-20260923-154837\\Equip\\mt_staff_3.mod",
+      "before": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
+    },
+    {
+      "root": "family",
+      "path": "Texture/Equip/mt_staff_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Texture\\Equip\\mt_staff_atlas.wtm",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\eclipse-hook-staff-20260923-154837\\Texture\\Equip\\mt_staff_atlas.wtm",
+      "before": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f",
+      "sha256": "0e81ca9ca31d9fc781c529dbcf65daca5a41fa9f50c4aa6df4ebbc87dbf48ae1"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_staff_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_staff_1.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\eclipse-hook-staff-20260923-154837\\Equip\\mt_staff_1.mod",
+      "before": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_staff_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_staff_2.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\eclipse-hook-staff-20260923-154837\\Equip\\mt_staff_2.mod",
+      "before": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_staff_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_staff_3.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\eclipse-hook-staff-20260923-154837\\Equip\\mt_staff_3.mod",
+      "before": "0b7519a444d1cbe695df29aabe27bd6194c6726994c38daa90eed08fca2be323",
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
+    },
+    {
+      "root": "workspace",
+      "path": "Texture/Equip/mt_staff_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Texture\\Equip\\mt_staff_atlas.wtm",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\eclipse-hook-staff-20260923-154837\\Texture\\Equip\\mt_staff_atlas.wtm",
+      "before": "81daa2f9429e9f1fd56d248913b12effb82fcf095ac39745792df38ab830e90f",
+      "sha256": "0e81ca9ca31d9fc781c529dbcf65daca5a41fa9f50c4aa6df4ebbc87dbf48ae1"
+    }
+  ],
+  "protected_files_unchanged": 59,
+  "existing_launch_paths_preserved": true,
+  "bow_sword_unchanged": true,
+  "skill_installation_changed": false,
+  "in_game_visual_test": false
+}

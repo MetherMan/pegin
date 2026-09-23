@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "browser": "isolated Chrome CDP 9237",
+  "url": "http://127.0.0.1:8878/",
+  "layout": "stationary-broken-ice-ring-clusters",
+  "images": [
+    {
+      "file": "ice-organic-v11-before.png",
+      "source": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\ice-v11-browser\\screenshots\\screenshot_1790147792223.png",
+      "sha256": "d56bd47e5d5aac20180233332016a38bd0ad388505dbe5c776d6c2cd5330a7ac",
+      "timeSeconds": 0.9,
+      "stage": "previous evenly spaced rings",
+      "unalteredScreenshot": true
+    },
+    {
+      "file": "ice-organic-v11-outer.png",
+      "source": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\ice-v11-browser\\screenshots\\screenshot_1790147973346.png",
+      "sha256": "9e3715eab3e4df0a17c74d7399a31d88b67c2351d1d42221378475db91c06ea1",
+      "timeSeconds": 0.21,
+      "stage": "irregular outer clusters",
+      "unalteredScreenshot": true
+    },
+    {
+      "file": "ice-organic-v11-inner.png",
+      "source": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\ice-v11-browser\\screenshots\\screenshot_1790147949631.png",
+      "sha256": "1ff457256db3c5400293ad82e0b68e68b75756c878b00fe3d3b06733d8f4a1d3",
+      "timeSeconds": 0.92,
+      "stage": "irregular completed bands",
+      "unalteredScreenshot": true
+    },
+    {
+      "file": "ice-organic-v11-pillar.png",
+      "source": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\ice-v11-browser\\screenshots\\screenshot_1790147994164.png",
+      "sha256": "e8d0eb47ffd078d5976b415ed94621fb42d221afd0fb7456364403854de48850",
+      "timeSeconds": 1.32,
+      "stage": "central monolith and blizzard",
+      "unalteredScreenshot": true
+    }
+  ],
+  "visualFindings": [
+    "Outer phase contains distinct clusters and large gaps instead of equally spaced posts.",
+    "Tall leaning spears and low wide slabs are visibly different in size and direction.",
+    "The inner phase retains outside-in progression without a tidy crystal fence.",
+    "Central monolith, three seals, snow and frozen ground remain."
+  ],
+  "settingsChanged": false,
+  "saveButtonUsed": false,
+  "consoleErrorsCaptured": 0,
+  "inGameVisualTest": false
+}

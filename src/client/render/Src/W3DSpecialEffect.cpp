@@ -25,11 +25,27 @@
 #include "SpecialEffectMesh.h"
 #include "Texture.h"
 #include <stdio.h>
+#include <string.h>
 #include <vector>
 #include <string>
 #include <map>
 
 using std::vector;
+
+// Keep solid ice opacity separate from additive rims, fog and magic circles.
+// This is also the classifier used by the guarded ice-opacity-v1 Render.dll hook.
+static BOOL UsesCocytusSurfaceAlpha( const std::string& fullName )
+{
+    const char* name = fullName.c_str();
+    for( const char* p = name; *p; ++p )
+        if( *p == '/' || *p == '\\' ) name = p + 1;
+    const size_t size = strlen( name );
+    if( size < 4 || _stricmp( name + size - 4, ".wed" ) != 0 ) return FALSE;
+    return _stricmp( name, "mf_cocytus_pillar.wed" ) == 0
+        || _strnicmp( name, "mf_eruption_", 12 ) == 0
+        || _strnicmp( name, "mf_crown_spike", 14 ) == 0;
+}
+
 
 /**
  *
@@ -300,6 +316,17 @@ BOOL CW3DSpecialEffect::Render( const int nINFrame, const Matrix4& matWorld, con
 		return FALSE;
 	} //if
 
+    const BOOL bIceAlpha = UsesCocytusSurfaceAlpha( m_sName );
+    DWORD alphaOp = 0, alphaArg1 = 0, alphaArg2 = 0;
+    if( bIceAlpha )
+    {
+        // Never alter shared state unless every original value was captured.
+        if( FAILED( g_pd3dDevice->GetTextureStageState( 0, D3DTSS_ALPHAOP, &alphaOp ) )
+            || FAILED( g_pd3dDevice->GetTextureStageState( 0, D3DTSS_ALPHAARG1, &alphaArg1 ) )
+            || FAILED( g_pd3dDevice->GetTextureStageState( 0, D3DTSS_ALPHAARG2, &alphaArg2 ) ) )
+            return FALSE;
+    }
+
 	int		nFrame = CheckCount( nINFrame );
 
 	if( !bTool )
@@ -320,7 +347,25 @@ BOOL CW3DSpecialEffect::Render( const int nINFrame, const Matrix4& matWorld, con
 
 	SetRenderState();
 
+    if( bIceAlpha )
+    {
+        // WED dwColor keeps its authored RGB; its high byte is true opacity.
+        g_pd3dDevice->SetRenderState( D3DRS_SRCBLEND, D3DBLEND_SRCALPHA );
+        g_pd3dDevice->SetRenderState( D3DRS_DESTBLEND, D3DBLEND_INVSRCALPHA );
+        g_pd3dDevice->SetTextureStageState( 0, D3DTSS_ALPHAOP, D3DTOP_SELECTARG1 );
+        g_pd3dDevice->SetTextureStageState( 0, D3DTSS_ALPHAARG1, D3DTA_TFACTOR );
+    }
+
 	m_pMesh->Render();
+
+    if( bIceAlpha )
+    {
+        g_pd3dDevice->SetTextureStageState( 0, D3DTSS_ALPHAOP, alphaOp );
+        g_pd3dDevice->SetTextureStageState( 0, D3DTSS_ALPHAARG1, alphaArg1 );
+        g_pd3dDevice->SetTextureStageState( 0, D3DTSS_ALPHAARG2, alphaArg2 );
+        g_pd3dDevice->SetRenderState( D3DRS_SRCBLEND, D3DBLEND_ONE );
+        g_pd3dDevice->SetRenderState( D3DRS_DESTBLEND, D3DBLEND_ONE );
+    }
 
 	return TRUE;
 } //CW3DSpecialEffect::Render

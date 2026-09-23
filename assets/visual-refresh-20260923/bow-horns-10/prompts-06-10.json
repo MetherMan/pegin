@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "generator": "built-in image_gen.imagegen",
+  "intent": "Five independent new horn-focused asymmetric noble blue moon bows with two actual design references",
+  "images": [
+    {
+      "id": "H06",
+      "name": "월익 삼지궁",
+      "file": "bow-06.png",
+      "prompt": "Use case: stylized-concept. Create a NEW elegant legendary fantasy longbow of the \"Twilight of the Blue Moon\" family. Both supplied images are DESIGN REFERENCES ONLY, NOT editing targets and NOT images to show inside the result. Reference 1 is A04, with softly branching moon horns; reference 2 is V01, with a sweeping wide crystal horn. Use their noble luminous blue moonstone material, fine gold edging, open curves and dramatic structural asymmetry. This time the sculptural HORNS ARE THE MAIN SUBJECT OF THE BOW'S DESIGN. The blue limbs themselves grow into gracefully branching, curving, subtly twisting CRYSTAL LUNAR ANTLERS, with polished slender tapering three-dimensional tines like an otherworldly royal reindeer's antlers sculpted from luminous cobalt and sapphire moonlit glass. No brown horn, bone, wood, opaque steel, grey metal or blue-painted iron. Deep noble blue is the dominant body material. Hair-thin restrained gold filigree follows only some edges. Moon symbolism comes mainly from crescent-shaped NEGATIVE SPACES between curved horns; at most ONE SMALL luminous crescent gemstone near the grip. NO stack of large filled crescent-moon plates. Curves must flow continuously from the functional bow body: no randomly pasted blades, floating antlers or excessive clutter. Clearly different upper and lower limb lengths, volumes, curves and decoration; never mirror upper and lower halves.\n\nComposition: exactly ONE complete longbow upright, single near-front view with a slight three-quarter depth, on a clean uniform near-black midnight navy background. Portrait image, 1024 by 1536 pixels. Allow a generous uniform EMPTY BORDER of AT LEAST 7% on ALL sides: top tip must be at or below y=110; bottom tip at or above y=1425; all side horns stay inside x=75 to x=949. Scale the entire weapon to only 84-85% of canvas height, not edge-to-edge. Show the entire upper and lower tips, ALL horn tips, clear usable wrapped grip and ONE fine taut bowstring on the RIGHT visibly connected to both tips. The real functional bow curvature must stay legible. Crisp refined fantasy concept-art craft, deep cobalt body with translucent pale-blue horn edges and internal moonlight; restrained glow that does not obscure the silhouette. No people, hands, arrows, other weapons, second bow, multiple views, collage, inset, text, label or watermark.\n\nSpecific design for this new single bow:\nAn upper-heavy winglike antler bow. Above a slightly low grip, the outer LEFT upper limb unfurls into THREE sweeping long crystal horns branching from one coherent blue root, spreading widely sideways left at three UNEQUAL heights and lengths, almost like a wing but unmistakably smooth antler tines, NOT feather plates. The top tine is longest and nearly horizontal before curling upward; the middle tine sweeps diagonally left-up; the lowest is shorter, slender and hooks softly inward. Their irregular airy gaps describe a crescent without a filled moon plate. The upper main recurve still reaches a separate clear string tip; the lower limb is shorter, narrow and simple with a clean elegant inward recurve and no antler cluster. One tiny blue crescent gem may sit just above the grip. Wide, open, gracefully branching silhouette.",
+      "referenced_image_paths": [
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-asymmetric-10/bow-04.png",
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-a04-a05-10/bow-01.png"
+      ],
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-528a8eb3-6082-418a-a5be-cad8d2b5caf1.png",
+      "sha256": "d3fde62565e055415ec8675fc73e5b6f617257deb6d4f7f14728ee0004b7781a",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "inspected_with": "view_image on each saved original PNG",
+        "status": "pass_with_framing_note",
+        "exactly_one_complete_bow": true,
+        "upper_lower_and_branch_tips_uncropped": true,
+        "grip_visible": true,
+        "single_continuous_connected_string": true,
+        "horns_dominate_design": true,
+        "strong_upper_lower_asymmetry": true,
+        "noble_blue_crystal_and_thin_gold": true,
+        "no_large_filled_moon_stack": true,
+        "small_single_crescent_near_grip": true,
+        "no_text_other_weapons_people_or_multiple_views": true,
+        "exact_seven_percent_margin": false,
+        "framing_note": "상하 여백은 육안상 약 3~6%로 요청한 7%보다 좁지만 모든 활 끝과 뿔 끝이 온전히 들어 있다. 생성 원본 바이트를 유지했다.",
+        "design_notes": "상단 바깥쪽으로 길이가 다른 세 갈래 주된 월뿔이 넓게 뻗는다. 두꺼운 푸른 주줄기와 열린 초승 공간, 짧고 단순한 하단의 대비가 분명하다."
+      }
+    },
+    {
+      "id": "H07",
+      "name": "유월 편가지궁",
+      "file": "bow-07.png",
+      "prompt": "Use case: stylized-concept. Create a NEW elegant legendary fantasy longbow of the \"Twilight of the Blue Moon\" family. Both supplied images are DESIGN REFERENCES ONLY, NOT editing targets and NOT images to show inside the result. Reference 1 is A04, with softly branching moon horns; reference 2 is V01, with a sweeping wide crystal horn. Use their noble luminous blue moonstone material, fine gold edging, open curves and dramatic structural asymmetry. This time the sculptural HORNS ARE THE MAIN SUBJECT OF THE BOW'S DESIGN. The blue limbs themselves grow into gracefully branching, curving, subtly twisting CRYSTAL LUNAR ANTLERS, with polished slender tapering three-dimensional tines like an otherworldly royal reindeer's antlers sculpted from luminous cobalt and sapphire moonlit glass. No brown horn, bone, wood, opaque steel, grey metal or blue-painted iron. Deep noble blue is the dominant body material. Hair-thin restrained gold filigree follows only some edges. Moon symbolism comes mainly from crescent-shaped NEGATIVE SPACES between curved horns; at most ONE SMALL luminous crescent gemstone near the grip. NO stack of large filled crescent-moon plates. Curves must flow continuously from the functional bow body: no randomly pasted blades, floating antlers or excessive clutter. Clearly different upper and lower limb lengths, volumes, curves and decoration; never mirror upper and lower halves.\n\nComposition: exactly ONE complete longbow upright, single near-front view with a slight three-quarter depth, on a clean uniform near-black midnight navy background. Portrait image, 1024 by 1536 pixels. Allow a generous uniform EMPTY BORDER of AT LEAST 7% on ALL sides: top tip must be at or below y=110; bottom tip at or above y=1425; all side horns stay inside x=75 to x=949. Scale the entire weapon to only 84-85% of canvas height, not edge-to-edge. Show the entire upper and lower tips, ALL horn tips, clear usable wrapped grip and ONE fine taut bowstring on the RIGHT visibly connected to both tips. The real functional bow curvature must stay legible. Crisp refined fantasy concept-art craft, deep cobalt body with translucent pale-blue horn edges and internal moonlight; restrained glow that does not obscure the silhouette. No people, hands, arrows, other weapons, second bow, multiple views, collage, inset, text, label or watermark.\n\nSpecific design for this new single bow:\nA very tall, exceptionally slender wave-antler longbow. One elongated cobalt-glass horn runs as the upper outer limb in a flowing, gently twisted double S curve with a long needle-fine upturned end. A single SMALL secondary fork halfway up sweeps left, bends back up, and divides once into two delicate unequal tines. Keep this fork compact and airy; there is no bulky antler crown. The grip lies below the vertical midpoint. The lower limb is shorter, subtly thicker at its root, shaped as one uninterrupted backward wave ending in a fine hook. Crescent negative space appears between the main tall upper horn and the small side branch. Sleek narrow outline, asymmetrical vertical rhythm, noble spare elegance, almost no pendants; a tiny blue crescent inset on the grip collar only if needed. Clearly slimmer and less spread than a winglike bow.",
+      "referenced_image_paths": [
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-asymmetric-10/bow-04.png",
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-a04-a05-10/bow-01.png"
+      ],
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-387c3b3a-d3bf-48f7-a2b7-b892fc3ae2dd.png",
+      "sha256": "ebf0e4c58205f5d32528218d34e413c32d5e80e0b8f0165241a874f317ada90e",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "inspected_with": "view_image on each saved original PNG",
+        "status": "pass_with_framing_note",
+        "exactly_one_complete_bow": true,
+        "upper_lower_and_branch_tips_uncropped": true,
+        "grip_visible": true,
+        "single_continuous_connected_string": true,
+        "horns_dominate_design": true,
+        "strong_upper_lower_asymmetry": true,
+        "noble_blue_crystal_and_thin_gold": true,
+        "no_large_filled_moon_stack": true,
+        "small_single_crescent_near_grip": true,
+        "no_text_other_weapons_people_or_multiple_views": true,
+        "exact_seven_percent_margin": false,
+        "framing_note": "상하 여백은 육안상 약 3~6%로 요청한 7%보다 좁지만 모든 활 끝과 뿔 끝이 온전히 들어 있다. 생성 원본 바이트를 유지했다.",
+        "design_notes": "상단은 길고 가는 이중 물결 곡선이며 한쪽에 작은 분지가 갈라진다. 다른 네 장보다 폭이 좁고 비어 있는 공간이 크다."
+      }
+    },
+    {
+      "id": "H08",
+      "name": "하현 월각궁",
+      "file": "bow-08.png",
+      "prompt": "Use case: stylized-concept. Create a NEW elegant legendary fantasy longbow of the \"Twilight of the Blue Moon\" family. Both supplied images are DESIGN REFERENCES ONLY, NOT editing targets and NOT images to show inside the result. Reference 1 is A04, with softly branching moon horns; reference 2 is V01, with a sweeping wide crystal horn. Use their noble luminous blue moonstone material, fine gold edging, open curves and dramatic structural asymmetry. This time the sculptural HORNS ARE THE MAIN SUBJECT OF THE BOW'S DESIGN. The blue limbs themselves grow into gracefully branching, curving, subtly twisting CRYSTAL LUNAR ANTLERS, with polished slender tapering three-dimensional tines like an otherworldly royal reindeer's antlers sculpted from luminous cobalt and sapphire moonlit glass. No brown horn, bone, wood, opaque steel, grey metal or blue-painted iron. Deep noble blue is the dominant body material. Hair-thin restrained gold filigree follows only some edges. Moon symbolism comes mainly from crescent-shaped NEGATIVE SPACES between curved horns; at most ONE SMALL luminous crescent gemstone near the grip. NO stack of large filled crescent-moon plates. Curves must flow continuously from the functional bow body: no randomly pasted blades, floating antlers or excessive clutter. Clearly different upper and lower limb lengths, volumes, curves and decoration; never mirror upper and lower halves.\n\nComposition: exactly ONE complete longbow upright, single near-front view with a slight three-quarter depth, on a clean uniform near-black midnight navy background. Portrait image, 1024 by 1536 pixels. Allow a generous uniform EMPTY BORDER of AT LEAST 7% on ALL sides: top tip must be at or below y=110; bottom tip at or above y=1425; all side horns stay inside x=75 to x=949. Scale the entire weapon to only 84-85% of canvas height, not edge-to-edge. Show the entire upper and lower tips, ALL horn tips, clear usable wrapped grip and ONE fine taut bowstring on the RIGHT visibly connected to both tips. The real functional bow curvature must stay legible. Crisp refined fantasy concept-art craft, deep cobalt body with translucent pale-blue horn edges and internal moonlight; restrained glow that does not obscure the silhouette. No people, hands, arrows, other weapons, second bow, multiple views, collage, inset, text, label or watermark.\n\nSpecific design for this new single bow:\nA strongly LOWER-HEAVY asymmetrical lunar antler bow. The upper limb is long, clean and slender, a simple clear sapphire recurve with no crown or cluster. Place the grip distinctly ABOVE the vertical midpoint. BELOW the grip on the OUTER LEFT lower limb grows an elaborate but refined branching blue moon-antler arrangement: one long downward-flowing horn curves left then back up, and three unequal slimmer tines branch from it at different distances and angles like fluid reindeer antlers. Two tines curl inward to create an open crescent-shaped dark gap, with NO filled moon slab. Their bases integrate into the lower limb and return smoothly to a clean continuous recurve and fully visible bottom string-tip. Bottom hemisphere wider and more sculptural, upper hemisphere sparse. Thin gold edge veins, glass-like dimensional round horn taper, rather than flat blade shapes.",
+      "referenced_image_paths": [
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-asymmetric-10/bow-04.png",
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-a04-a05-10/bow-01.png"
+      ],
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-ef1d8347-5443-409e-ba08-e72272540c79.png",
+      "sha256": "3fbd9675f0af64596dc216e50e7779c8a712bc5d3720ed07b1c0867ce337d3cb",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "inspected_with": "view_image on each saved original PNG",
+        "status": "pass_with_framing_note",
+        "exactly_one_complete_bow": true,
+        "upper_lower_and_branch_tips_uncropped": true,
+        "grip_visible": true,
+        "single_continuous_connected_string": true,
+        "horns_dominate_design": true,
+        "strong_upper_lower_asymmetry": true,
+        "noble_blue_crystal_and_thin_gold": true,
+        "no_large_filled_moon_stack": true,
+        "small_single_crescent_near_grip": true,
+        "no_text_other_weapons_people_or_multiple_views": true,
+        "exact_seven_percent_margin": false,
+        "framing_note": "상하 여백은 육안상 약 3~6%로 요청한 7%보다 좁지만 모든 활 끝과 뿔 끝이 온전히 들어 있다. 생성 원본 바이트를 유지했다.",
+        "design_notes": "상단은 길고 단순한 장궁 형태이고, 그립 아래 외측에 여러 푸른 뿔이 집중된다. 아래쪽 중심의 부피와 분지가 뚜렷하다."
+      }
+    },
+    {
+      "id": "H09",
+      "name": "교차 월간궁",
+      "file": "bow-09.png",
+      "prompt": "Use case: stylized-concept. Create a NEW elegant legendary fantasy longbow of the \"Twilight of the Blue Moon\" family. Both supplied images are DESIGN REFERENCES ONLY, NOT editing targets and NOT images to show inside the result. Reference 1 is A04, with softly branching moon horns; reference 2 is V01, with a sweeping wide crystal horn. Use their noble luminous blue moonstone material, fine gold edging, open curves and dramatic structural asymmetry. This time the sculptural HORNS ARE THE MAIN SUBJECT OF THE BOW'S DESIGN. The blue limbs themselves grow into gracefully branching, curving, subtly twisting CRYSTAL LUNAR ANTLERS, with polished slender tapering three-dimensional tines like an otherworldly royal reindeer's antlers sculpted from luminous cobalt and sapphire moonlit glass. No brown horn, bone, wood, opaque steel, grey metal or blue-painted iron. Deep noble blue is the dominant body material. Hair-thin restrained gold filigree follows only some edges. Moon symbolism comes mainly from crescent-shaped NEGATIVE SPACES between curved horns; at most ONE SMALL luminous crescent gemstone near the grip. NO stack of large filled crescent-moon plates. Curves must flow continuously from the functional bow body: no randomly pasted blades, floating antlers or excessive clutter. Clearly different upper and lower limb lengths, volumes, curves and decoration; never mirror upper and lower halves.\n\nComposition: exactly ONE complete longbow upright, single near-front view with a slight three-quarter depth, on a clean uniform near-black midnight navy background. Portrait image, 1024 by 1536 pixels. Allow a generous uniform EMPTY BORDER of AT LEAST 7% on ALL sides: top tip must be at or below y=110; bottom tip at or above y=1425; all side horns stay inside x=75 to x=949. Scale the entire weapon to only 84-85% of canvas height, not edge-to-edge. Show the entire upper and lower tips, ALL horn tips, clear usable wrapped grip and ONE fine taut bowstring on the RIGHT visibly connected to both tips. The real functional bow curvature must stay legible. Crisp refined fantasy concept-art craft, deep cobalt body with translucent pale-blue horn edges and internal moonlight; restrained glow that does not obscure the silhouette. No people, hands, arrows, other weapons, second bow, multiple views, collage, inset, text, label or watermark.\n\nSpecific design for this new single bow:\nAn asymmetrical bow organized around TWO STAGGERED, OFFSET blue antler horns above the grip. One long horn originates higher on the main upper limb and sweeps left and downward before turning up; a smaller second horn originates lower, crosses BEHIND the first in perspective, then curls left and up at a different angle. Their offset smooth curves frame one large airy CRESCENT-SHAPED NEGATIVE SPACE through which the dark background is plainly visible. Give each main horn only one or two elegant secondary tines, at UNEVEN spacing, and leave their tips clear and separate. No filled crescent plates. The main upper recurve remains taller, while the lower limb has a broader short wave root then an unusually fine long taper. Readable layered depth at the crossing, sculptural rounded crystal horns, a little torsion, brilliant blue edge highlights, fine gold tracery. Not a symmetrical ring.",
+      "referenced_image_paths": [
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-asymmetric-10/bow-04.png",
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-a04-a05-10/bow-01.png"
+      ],
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-62722fd0-4396-468d-9076-5eea03882a3e.png",
+      "sha256": "0ce77eb307427941b7b56ad50d2297d06baf46480485604a098c26ee28cdbc53",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "inspected_with": "view_image on each saved original PNG",
+        "status": "pass_with_framing_note",
+        "exactly_one_complete_bow": true,
+        "upper_lower_and_branch_tips_uncropped": true,
+        "grip_visible": true,
+        "single_continuous_connected_string": true,
+        "horns_dominate_design": true,
+        "strong_upper_lower_asymmetry": true,
+        "noble_blue_crystal_and_thin_gold": true,
+        "no_large_filled_moon_stack": true,
+        "small_single_crescent_near_grip": true,
+        "no_text_other_weapons_people_or_multiple_views": true,
+        "exact_seven_percent_margin": false,
+        "framing_note": "상하 여백은 육안상 약 3~6%로 요청한 7%보다 좁지만 모든 활 끝과 뿔 끝이 온전히 들어 있다. 생성 원본 바이트를 유지했다.",
+        "design_notes": "높이와 곡률이 다른 두 주된 뿔이 위에서 어긋나며 열린 초승 공간을 만든다. 결과는 깊은 교차보다는 분지 연결이 더 두드러진다."
+      }
+    },
+    {
+      "id": "H10",
+      "name": "월각 부채왕관",
+      "file": "bow-10.png",
+      "prompt": "Use case: stylized-concept. Create a NEW elegant legendary fantasy longbow of the \"Twilight of the Blue Moon\" family. Both supplied images are DESIGN REFERENCES ONLY, NOT editing targets and NOT images to show inside the result. Reference 1 is A04, with softly branching moon horns; reference 2 is V01, with a sweeping wide crystal horn. Use their noble luminous blue moonstone material, fine gold edging, open curves and dramatic structural asymmetry. This time the sculptural HORNS ARE THE MAIN SUBJECT OF THE BOW'S DESIGN. The blue limbs themselves grow into gracefully branching, curving, subtly twisting CRYSTAL LUNAR ANTLERS, with polished slender tapering three-dimensional tines like an otherworldly royal reindeer's antlers sculpted from luminous cobalt and sapphire moonlit glass. No brown horn, bone, wood, opaque steel, grey metal or blue-painted iron. Deep noble blue is the dominant body material. Hair-thin restrained gold filigree follows only some edges. Moon symbolism comes mainly from crescent-shaped NEGATIVE SPACES between curved horns; at most ONE SMALL luminous crescent gemstone near the grip. NO stack of large filled crescent-moon plates. Curves must flow continuously from the functional bow body: no randomly pasted blades, floating antlers or excessive clutter. Clearly different upper and lower limb lengths, volumes, curves and decoration; never mirror upper and lower halves.\n\nComposition: exactly ONE complete longbow upright, single near-front view with a slight three-quarter depth, on a clean uniform near-black midnight navy background. Portrait image, 1024 by 1536 pixels. Allow a generous uniform EMPTY BORDER of AT LEAST 7% on ALL sides: top tip must be at or below y=110; bottom tip at or above y=1425; all side horns stay inside x=75 to x=949. Scale the entire weapon to only 84-85% of canvas height, not edge-to-edge. Show the entire upper and lower tips, ALL horn tips, clear usable wrapped grip and ONE fine taut bowstring on the RIGHT visibly connected to both tips. The real functional bow curvature must stay legible. Crisp refined fantasy concept-art craft, deep cobalt body with translucent pale-blue horn edges and internal moonlight; restrained glow that does not obscure the silhouette. No people, hands, arrows, other weapons, second bow, multiple views, collage, inset, text, label or watermark.\n\nSpecific design for this new single bow:\nA magnificent but airy asymmetrical FAN of crystal moon antlers above and to the LEFT of the grip. TWO large smoothly curving blue horns rise from one flowing upper-limb root at different angles and heights: one arches far left, the other climbs steeply upward. From these two horns sprout FIVE very thin tapering subsidiary tines in an irregular fan, each with different length, spacing and curvature. They should feel like graceful branching reindeer antlers grown from sapphire moonlight, not flat feathers, sword blades or spikes evenly arrayed. Large open gaps dominate the fan; one gap forms a subtle crescent silhouette and one SMALL crescent gem rests near the grip only. The actual upper string-tip remains clean and separate, and the lower limb is a restrained longer thin curved horn without a matching fan. Dramatic top-left volume with lower taper, restrained polished high craft, gold only in hairline edge veins.",
+      "referenced_image_paths": [
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-asymmetric-10/bow-04.png",
+        "C:/Users/dayba/Downloads/라버 2/LAQIA-THE-LEGEND/assets/visual-refresh-20260923/bow-a04-a05-10/bow-01.png"
+      ],
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-263322f0-e42c-446a-badf-1e782d2e5be1.png",
+      "sha256": "627687802e4fa55d9e4f77845e0df03f47f9afe0dc9311a9c9400a94630ca4fe",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "inspected_with": "view_image on each saved original PNG",
+        "status": "pass_with_framing_note",
+        "exactly_one_complete_bow": true,
+        "upper_lower_and_branch_tips_uncropped": true,
+        "grip_visible": true,
+        "single_continuous_connected_string": true,
+        "horns_dominate_design": true,
+        "strong_upper_lower_asymmetry": true,
+        "noble_blue_crystal_and_thin_gold": true,
+        "no_large_filled_moon_stack": true,
+        "small_single_crescent_near_grip": true,
+        "no_text_other_weapons_people_or_multiple_views": true,
+        "exact_seven_percent_margin": false,
+        "framing_note": "상하 여백은 육안상 약 3~6%로 요청한 7%보다 좁지만 모든 활 끝과 뿔 끝이 온전히 들어 있다. 생성 원본 바이트를 유지했다.",
+        "design_notes": "두 큰 주줄기에서 높이와 길이가 다른 가는 월뿔들이 부채처럼 뻗는다. 상단 가지 수와 방향이 가장 풍부하고 하단은 길게 가늘어진다."
+      }
+    }
+  ]
+}

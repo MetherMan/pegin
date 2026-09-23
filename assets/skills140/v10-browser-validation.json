@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "outside_inside_center_frames": [
+    0.21,
+    0.9,
+    1.24
+  ],
+  "heaven_three_lines_at": 2.1,
+  "body_front_and_back_penetration": true,
+  "no_radial_heaven_burst": true,
+  "ring_roots_do_not_slide": true,
+  "live_controls": {
+    "iceDensity": {
+      "changed_pixels": 27221,
+      "comparison": [
+        1,
+        2
+      ],
+      "paused_time_preserved": true,
+      "restored_to": 1
+    },
+    "piercingLength": {
+      "changed_pixels": 14484,
+      "comparison": [
+        1,
+        2
+      ],
+      "paused_time_preserved": true,
+      "restored_to": 1
+    }
+  },
+  "screenshots": [
+    "v10-heaven-piercing.png",
+    "v10-heaven-length-2.png",
+    "v10-ice-outer-ring.png",
+    "v10-ice-all-rings.png",
+    "v10-ice-central-pillar.png",
+    "v10-ice-density-2.png"
+  ],
+  "settings_saved_during_qa": false,
+  "console_errors_captured": 0,
+  "in_game_direct3d_test": false
+}

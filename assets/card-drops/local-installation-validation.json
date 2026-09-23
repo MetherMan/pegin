@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "server_sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1",
+  "server_status": "active",
+  "save_tables_before": "418fec10bcfdc041c7715b2bbe2403e3c638f8bf22f6ebdd7e268decca3bf98e",
+  "save_tables_after": "418fec10bcfdc041c7715b2bbe2403e3c638f8bf22f6ebdd7e268decca3bf98e",
+  "character_and_inventory_tables_unchanged": true,
+  "experience_and_card_rates_unchanged": true,
+  "father_pc_applied": false
+}

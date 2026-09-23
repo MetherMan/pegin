@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "defaultBlueNativeByteIdentity": 394,
+  "defaultIceColor": "#2374D8",
+  "independentBodySurfaces": 154,
+  "cases": [
+    {
+      "color": "#D82F4A",
+      "changedBodyResources": 154,
+      "checkedFrames": 13325,
+      "neutralTextures": 1,
+      "opacityAndGeometryUnchanged": true,
+      "unrelatedNativeResourcesUnchanged": true,
+      "compactPreviewMatchesNative": true
+    },
+    {
+      "color": "#31D85A",
+      "changedBodyResources": 154,
+      "checkedFrames": 13325,
+      "neutralTextures": 1,
+      "opacityAndGeometryUnchanged": true,
+      "unrelatedNativeResourcesUnchanged": true,
+      "compactPreviewMatchesNative": true
+    },
+    {
+      "color": "#884CDB",
+      "changedBodyResources": 154,
+      "checkedFrames": 13325,
+      "neutralTextures": 1,
+      "opacityAndGeometryUnchanged": true,
+      "unrelatedNativeResourcesUnchanged": true,
+      "compactPreviewMatchesNative": true
+    },
+    {
+      "color": "#FFFFFF",
+      "changedBodyResources": 154,
+      "checkedFrames": 13325,
+      "neutralTextures": 1,
+      "opacityAndGeometryUnchanged": true,
+      "unrelatedNativeResourcesUnchanged": true,
+      "compactPreviewMatchesNative": true
+    },
+    {
+      "color": "#000000",
+      "changedBodyResources": 154,
+      "checkedFrames": 13325,
+      "neutralTextures": 1,
+      "opacityAndGeometryUnchanged": true,
+      "unrelatedNativeResourcesUnchanged": true,
+      "compactPreviewMatchesNative": true
+    },
+    {
+      "color": "#2374D8",
+      "changedBodyResources": 0,
+      "checkedFrames": 13325,
+      "neutralTextures": 0,
+      "opacityAndGeometryUnchanged": true,
+      "unrelatedNativeResourcesUnchanged": true,
+      "compactPreviewMatchesNative": true
+    }
+  ],
+  "auxiliaryColorIndependent": true,
+  "invalidInputsRejected": 12,
+  "savePreviewRoundTrip": true,
+  "legacyPanelPreservesSavedIceColor": true,
+  "savedNumericFieldsPreserved": 64,
+  "currentUserOpacity": 90,
+  "savedColorsUnchanged": true,
+  "rendererUnchanged": true,
+  "writesOnlyToTaskCache": true,
+  "inGameDirect3DTest": false
+}

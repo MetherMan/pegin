@@ -1,0 +1,195 @@
+{
+  "title": "청색 월뿔 활 H01~H05",
+  "images": [
+    {
+      "id": "H01",
+      "name": "높게 갈라진 왕관 월뿔",
+      "file": "bow-01.png",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04 branching moon-horn bow. Input image 2 role=design reference: V01 sweeping moon-horn bow. Use their noble sapphire-blue/cobalt glow, delicate pale-gold trim and graceful asymmetry, but redesign ONE bow so HORN SCULPTURE is the unmistakable main theme. Do not reproduce the reference pictures side by side. Exactly ONE newly designed BOW total, one coherent pair of limbs, one clear wrapped handgrip, one continuous connected taut string. Portrait 1024x1536, one near-front three-quarter product view on uniform midnight-navy background. Zoom out enough that ALL horn tips and both limb tips have at least 7% clean margin around the weapon; no cropped points, no tip touching an image border. IMPORTANT MATERIAL AND SHAPE: gracefully branching, elongated, sharp, organically TWISTED ANTLER HORNS made of luminous translucent sapphire crystal, rich cobalt cores and moonlit glass surfaces. The horns have rounded or softly ridged THREE-DIMENSIONAL cross sections and taper to needle-fine points, not broad flat sword blades, plates, crescent panels or steel fins. Let irregular antler branches visibly grow from and curve around a continuous blue-crystal bow spine. Delicate thin gold seams only, tasteful sparse star engraving. Moon symbol is secondary: one small brilliant BLUE crescent gem or a clear CRESCENT-SHAPED EMPTY SPACE between curving horns. DO NOT stack multiple large filled crescent-moon pieces. Strong upper/lower and lateral structural asymmetry, elegant sweeping branches, open breathing space, spectacular refined royal craftsmanship. Must remain an identifiable functional BOW with usable grip, attached tips and string path kept open, not a staff or antler ornament. No animal head, skull, people, hands, arrows, swords, second weapon, multi-view sheet, inset, collage, words, labels, captions or watermark. H01. Build a very tall upper antler crown: THREE unequal long slender sapphire horn branches rise from the upper shoulder, one near-vertical, one curving high and far LEFT, and a shorter third returning inward, with distinct irregular heights and twists. The principal upper limb continues to the string attachment tip; the branches do not carry extra strings. The grip sits visibly below midpoint. The lower limb is much shorter and slimmer, one simple inward hook with only a tiny horn spur. A small luminous blue crescent gem rests where the antlers fork, above the grip. Strong upward-reaching crown silhouette, no broad flat lunar slabs.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-a04-a05-10\\bow-01.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-9aef1f32-6958-41ef-8bba-bf131be003be.png",
+      "sha256": "3fc9b34661232a1d2947643f9f0a118a9611e633f4609f91366e8662c3f90e48",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "method": "view_image(detail=original), local copied file",
+        "single_bow": true,
+        "full_bow_and_all_tips_visible": true,
+        "grip_visible": true,
+        "single_continuous_string_visible": true,
+        "no_text_or_collage": true,
+        "horn_branching_is_primary_silhouette": true,
+        "one_small_blue_crescent": true,
+        "no_large_stacked_filled_moon_plates": true,
+        "strong_upper_lower_asymmetry": true,
+        "requested_seven_percent_margin_fully_satisfied": false,
+        "note": "위로 높게 갈라진 세 개의 불균등한 뿔과 짧고 가벼운 하단. 열린 공간에 작은 발광 초승달 하나. 전체 활과 끝이 보이며 상단 여백은 요청한 7%보다 좁다.",
+        "material_note": "청색 투명 결정과 가는 금색 지지선. 일부 뿔 표면은 둥근 뿔보다 면이 잡힌 결정형으로 표현됐다."
+      }
+    },
+    {
+      "id": "H02",
+      "name": "옆으로 휘도는 장월뿔",
+      "file": "bow-02.png",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04 branching moon-horn bow. Input image 2 role=design reference: V01 sweeping moon-horn bow. Use their noble sapphire-blue/cobalt glow, delicate pale-gold trim and graceful asymmetry, but redesign ONE bow so HORN SCULPTURE is the unmistakable main theme. Do not reproduce the reference pictures side by side. Exactly ONE newly designed BOW total, one coherent pair of limbs, one clear wrapped handgrip, one continuous connected taut string. Portrait 1024x1536, one near-front three-quarter product view on uniform midnight-navy background. Zoom out enough that ALL horn tips and both limb tips have at least 7% clean margin around the weapon; no cropped points, no tip touching an image border. IMPORTANT MATERIAL AND SHAPE: gracefully branching, elongated, sharp, organically TWISTED ANTLER HORNS made of luminous translucent sapphire crystal, rich cobalt cores and moonlit glass surfaces. The horns have rounded or softly ridged THREE-DIMENSIONAL cross sections and taper to needle-fine points, not broad flat sword blades, plates, crescent panels or steel fins. Let irregular antler branches visibly grow from and curve around a continuous blue-crystal bow spine. Delicate thin gold seams only, tasteful sparse star engraving. Moon symbol is secondary: one small brilliant BLUE crescent gem or a clear CRESCENT-SHAPED EMPTY SPACE between curving horns. DO NOT stack multiple large filled crescent-moon pieces. Strong upper/lower and lateral structural asymmetry, elegant sweeping branches, open breathing space, spectacular refined royal craftsmanship. Must remain an identifiable functional BOW with usable grip, attached tips and string path kept open, not a staff or antler ornament. No animal head, skull, people, hands, arrows, swords, second weapon, multi-view sheet, inset, collage, words, labels, captions or watermark. H02. The dominant horn projects very far LEFT almost horizontally from the upper shoulder, sweeps outward in a long gentle curve, then hooks back inward and UP like a reindeer's expressive lateral antler. Add one shorter unequal recurving branch beneath it, creating a wide crescent-shaped negative space, with only ONE small blue moon gem near the branch root. Keep the main bow tall: a slim upper spine reaches the string tip, and the lower limb is a long unbranched smooth S-curve. The lateral antler must be the silhouette's focal point, not a giant crescent plate; rounded tapering horn volume, irregular elegant twist and thin gold ridges.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-a04-a05-10\\bow-01.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-1e95cb8a-2291-404d-bec4-7fb7a5149260.png",
+      "sha256": "b51a032b491b01ff14bc0876d49dee94da33de9c697e87a1fac837cfbdecfdc7",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "method": "view_image(detail=original), local copied file",
+        "single_bow": true,
+        "full_bow_and_all_tips_visible": true,
+        "grip_visible": true,
+        "single_continuous_string_visible": true,
+        "no_text_or_collage": true,
+        "horn_branching_is_primary_silhouette": true,
+        "one_small_blue_crescent": true,
+        "no_large_stacked_filled_moon_plates": true,
+        "strong_upper_lower_asymmetry": true,
+        "requested_seven_percent_margin_fully_satisfied": false,
+        "note": "왼쪽으로 길게 뻗고 위로 휘도는 주된 뿔, 그 아래 짧은 곡선 가지. 하단은 길고 유려한 S 곡선. 작은 발광달 하나이며 전체 끝이 보인다.",
+        "material_note": "청색 투명 결정과 가는 금색 지지선. 일부 뿔 표면은 둥근 뿔보다 면이 잡힌 결정형으로 표현됐다."
+      }
+    },
+    {
+      "id": "H03",
+      "name": "뒤틀린 쌍나선 월각",
+      "file": "bow-03.png",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04 branching moon-horn bow. Input image 2 role=design reference: V01 sweeping moon-horn bow. Use their noble sapphire-blue/cobalt glow, delicate pale-gold trim and graceful asymmetry, but redesign ONE bow so HORN SCULPTURE is the unmistakable main theme. Do not reproduce the reference pictures side by side. Exactly ONE newly designed BOW total, one coherent pair of limbs, one clear wrapped handgrip, one continuous connected taut string. Portrait 1024x1536, one near-front three-quarter product view on uniform midnight-navy background. Zoom out enough that ALL horn tips and both limb tips have at least 7% clean margin around the weapon; no cropped points, no tip touching an image border. IMPORTANT MATERIAL AND SHAPE: gracefully branching, elongated, sharp, organically TWISTED ANTLER HORNS made of luminous translucent sapphire crystal, rich cobalt cores and moonlit glass surfaces. The horns have rounded or softly ridged THREE-DIMENSIONAL cross sections and taper to needle-fine points, not broad flat sword blades, plates, crescent panels or steel fins. Let irregular antler branches visibly grow from and curve around a continuous blue-crystal bow spine. Delicate thin gold seams only, tasteful sparse star engraving. Moon symbol is secondary: one small brilliant BLUE crescent gem or a clear CRESCENT-SHAPED EMPTY SPACE between curving horns. DO NOT stack multiple large filled crescent-moon pieces. Strong upper/lower and lateral structural asymmetry, elegant sweeping branches, open breathing space, spectacular refined royal craftsmanship. Must remain an identifiable functional BOW with usable grip, attached tips and string path kept open, not a staff or antler ornament. No animal head, skull, people, hands, arrows, swords, second weapon, multi-view sheet, inset, collage, words, labels, captions or watermark. H03. A double-forked TWISTED upper horn spirals backward toward the LEFT in two unequal open corkscrew curves, one broad and high, the second smaller and lower, both grown from the same continuous crystalline bow spine. Keep the spirals open rather than closed rings; the negative space between them suggests a luminous crescent. Use only one small crescent-blue gem within the larger opening, no other filled moon forms. Lower limb is a short diagonal swept-back horn with a different curve, not a mirrored spiral. Asymmetric off-center grip, round ridged sapphire horn sections, elongated sharp tips, a coherent single string.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-a04-a05-10\\bow-01.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-06bc1d8c-f278-4a72-915c-c87686f4dea9.png",
+      "sha256": "7fc6dd5f4ff469a629c6669efe83cdf6a8586cafde3b82dfe2cfd2b122dd7dd4",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "method": "view_image(detail=original), local copied file",
+        "single_bow": true,
+        "full_bow_and_all_tips_visible": true,
+        "grip_visible": true,
+        "single_continuous_string_visible": true,
+        "no_text_or_collage": true,
+        "horn_branching_is_primary_silhouette": true,
+        "one_small_blue_crescent": true,
+        "no_large_stacked_filled_moon_plates": true,
+        "strong_upper_lower_asymmetry": true,
+        "requested_seven_percent_margin_fully_satisfied": false,
+        "note": "상단에 굽이쳐 갈라진 길이가 다른 뿔과 아래쪽 짧은 돌기. 결과는 완전한 코르크 나선 두 개보다는 비틀린 두 갈래 곡선에 가깝다. 활 전체와 끝이 보인다.",
+        "material_note": "청색 투명 결정과 가는 금색 지지선. 일부 뿔 표면은 둥근 뿔보다 면이 잡힌 결정형으로 표현됐다."
+      }
+    },
+    {
+      "id": "H04",
+      "name": "하현으로 뻗은 월뿔",
+      "file": "bow-04.png",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04 branching moon-horn bow. Input image 2 role=design reference: V01 sweeping moon-horn bow. Use their noble sapphire-blue/cobalt glow, delicate pale-gold trim and graceful asymmetry, but redesign ONE bow so HORN SCULPTURE is the unmistakable main theme. Do not reproduce the reference pictures side by side. Exactly ONE newly designed BOW total, one coherent pair of limbs, one clear wrapped handgrip, one continuous connected taut string. Portrait 1024x1536, one near-front three-quarter product view on uniform midnight-navy background. Zoom out enough that ALL horn tips and both limb tips have at least 7% clean margin around the weapon; no cropped points, no tip touching an image border. IMPORTANT MATERIAL AND SHAPE: gracefully branching, elongated, sharp, organically TWISTED ANTLER HORNS made of luminous translucent sapphire crystal, rich cobalt cores and moonlit glass surfaces. The horns have rounded or softly ridged THREE-DIMENSIONAL cross sections and taper to needle-fine points, not broad flat sword blades, plates, crescent panels or steel fins. Let irregular antler branches visibly grow from and curve around a continuous blue-crystal bow spine. Delicate thin gold seams only, tasteful sparse star engraving. Moon symbol is secondary: one small brilliant BLUE crescent gem or a clear CRESCENT-SHAPED EMPTY SPACE between curving horns. DO NOT stack multiple large filled crescent-moon pieces. Strong upper/lower and lateral structural asymmetry, elegant sweeping branches, open breathing space, spectacular refined royal craftsmanship. Must remain an identifiable functional BOW with usable grip, attached tips and string path kept open, not a staff or antler ornament. No animal head, skull, people, hands, arrows, swords, second weapon, multi-view sheet, inset, collage, words, labels, captions or watermark. H04. Reverse the reference's balance: place the handgrip ABOVE the vertical midpoint. The UPPER limb is a short quiet slender cobalt arc with one small fork near the tip. The LOWER limb carries the major antler mass: TWO very long unequal sapphire horns branch outward LEFT and downward, one sweeping broadly then hooking inward, one curling diagonally under it at a different angle; the main lower spine still connects to the one string endpoint. Form a large crescent-shaped EMPTY SPACE inside the lower antler fork, with one small blue crescent gem near the lower shoulder. Clearly bottom-heavy horn sculpture, graceful, airy, sharp and organically curved, never a stack of crescent blades.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-a04-a05-10\\bow-01.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-f5b71a4b-3f7a-4227-9742-7a73ba5170b6.png",
+      "sha256": "461dcc7b173f3ace8a55f4079b8c497c4560f274235f4b9e6e44b9b3fcaa2ed0",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "method": "view_image(detail=original), local copied file",
+        "single_bow": true,
+        "full_bow_and_all_tips_visible": true,
+        "grip_visible": true,
+        "single_continuous_string_visible": true,
+        "no_text_or_collage": true,
+        "horn_branching_is_primary_silhouette": true,
+        "one_small_blue_crescent": true,
+        "no_large_stacked_filled_moon_plates": true,
+        "strong_upper_lower_asymmetry": true,
+        "requested_seven_percent_margin_fully_satisfied": false,
+        "note": "그립이 위에 있으며 큰 뿔 구조와 넓은 열린 초승 공간이 하단에 집중된다. 좌측으로 뻗는 큰 뿔과 아래로 휘는 가지, 작은 발광달 하나. 전체 끝이 보인다.",
+        "material_note": "청색 투명 결정과 가는 금색 지지선. 일부 뿔 표면은 둥근 뿔보다 면이 잡힌 결정형으로 표현됐다."
+      }
+    },
+    {
+      "id": "H05",
+      "name": "거대한 외뿔과 두 갈래",
+      "file": "bow-05.png",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04 branching moon-horn bow. Input image 2 role=design reference: V01 sweeping moon-horn bow. Use their noble sapphire-blue/cobalt glow, delicate pale-gold trim and graceful asymmetry, but redesign ONE bow so HORN SCULPTURE is the unmistakable main theme. Do not reproduce the reference pictures side by side. Exactly ONE newly designed BOW total, one coherent pair of limbs, one clear wrapped handgrip, one continuous connected taut string. Portrait 1024x1536, one near-front three-quarter product view on uniform midnight-navy background. Zoom out enough that ALL horn tips and both limb tips have at least 7% clean margin around the weapon; no cropped points, no tip touching an image border. IMPORTANT MATERIAL AND SHAPE: gracefully branching, elongated, sharp, organically TWISTED ANTLER HORNS made of luminous translucent sapphire crystal, rich cobalt cores and moonlit glass surfaces. The horns have rounded or softly ridged THREE-DIMENSIONAL cross sections and taper to needle-fine points, not broad flat sword blades, plates, crescent panels or steel fins. Let irregular antler branches visibly grow from and curve around a continuous blue-crystal bow spine. Delicate thin gold seams only, tasteful sparse star engraving. Moon symbol is secondary: one small brilliant BLUE crescent gem or a clear CRESCENT-SHAPED EMPTY SPACE between curving horns. DO NOT stack multiple large filled crescent-moon pieces. Strong upper/lower and lateral structural asymmetry, elegant sweeping branches, open breathing space, spectacular refined royal craftsmanship. Must remain an identifiable functional BOW with usable grip, attached tips and string path kept open, not a staff or antler ornament. No animal head, skull, people, hands, arrows, swords, second weapon, multi-view sheet, inset, collage, words, labels, captions or watermark. H05. One enormous SINGLE OUTER HORN dominates the bow, sweeping from the upper shoulder far LEFT and then very high upward like an elongated majestic sickle-shaped antler with a rounded tapering cross section. At its inner root, exactly TWO short unequal horn branches curl inward at different heights, opening a clear crescent-shaped dark gap. A single small luminous blue crescent moon gem floats visually within that gap but is attached by a fine gold setting. The main upper bow spine remains slender and reaches a separate string notch to the right; lower limb is a compact angular recurved sapphire horn with no decorative branches. Powerful high asymmetry, extremely refined horn curvature and restrained fine gold trim.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-a04-a05-10\\bow-01.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-fed0d8c4-ccea-4184-8087-f41d31431c43.png",
+      "sha256": "bffd57faf4d1d7e8581c008c6afca6e4aec61c443819d6b6748640c0ad40f001",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "method": "view_image(detail=original), local copied file",
+        "single_bow": true,
+        "full_bow_and_all_tips_visible": true,
+        "grip_visible": true,
+        "single_continuous_string_visible": true,
+        "no_text_or_collage": true,
+        "horn_branching_is_primary_silhouette": true,
+        "one_small_blue_crescent": true,
+        "no_large_stacked_filled_moon_plates": true,
+        "strong_upper_lower_asymmetry": true,
+        "requested_seven_percent_margin_fully_satisfied": false,
+        "note": "왼쪽 위로 높이 뻗는 지배적인 외뿔과 안쪽의 짧은 두 곡선 가지. 하단은 단순한 S 곡선이며 발광달 하나. 전체 활과 끝이 보인다.",
+        "material_note": "청색 투명 결정과 가는 금색 지지선. 일부 뿔 표면은 둥근 뿔보다 면이 잡힌 결정형으로 표현됐다."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+      "sha256": "1f5aad87d791b9b3666a1ab3bfcf6f6572ce22dbd7ba25fd7433149421f8eabf"
+    },
+    {
+      "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-a04-a05-10\\bow-01.png",
+      "sha256": "8ae6262f9f2aa170e51bcf92b825a2f2d895a9bee1e75606a89962f133984310"
+    }
+  ],
+  "validation": {
+    "status": "PASS_WITH_FRAMING_AND_DESIGN_NOTES",
+    "image_count": 5,
+    "unique_sha256_count": 5,
+    "dimensions_each": [
+      1024,
+      1536
+    ],
+    "original_bytes_preserved": true,
+    "all_local_images_visually_inspected": true,
+    "generation_successes": 5,
+    "generation_attempts": 6,
+    "retry_note": "H05 first attempt failed before generation while reading a reference through the filesystem helper; identical prompt and references succeeded on retry.",
+    "limits": "All tips visible; requested 7% margin is not fully met. H03 is a branching twisted curve rather than two literal corkscrew spirals. Some crystal horn surfaces remain faceted."
+  }
+}

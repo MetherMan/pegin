@@ -1,5 +1,19 @@
 # 태초의 바포메트
 
+현재 버전은 **black-keratin-v5: 어두운 각질 뿔·균일한 무늬 밀도·부드러운 표면 명암**이다. 원본 1.7배·칼날 하향·가운데 외눈·비대칭 뿔·몸 돌기 13개는 v4와 동일하다. 기본 경험치는 일반 바포메트 14,328의 두 배인 **28,656**이다.
+
+뿔 질감 강도 조절 패널은 `http://127.0.0.1:8879/assets/primordial-baphomet/`이다. 0~8배 슬라이더는 즉시 미리보기에 반영되고, **이 강도로 저장·게임 적용**을 누르면 설정·게임 텍스처·업데이트 매니페스트 및 기존 두 로컬 실행본에 반영된다. 강도는 `horn-settings.json`에 보존되어 재빌드에도 유지된다. 패널 서버 실행: `runtime/python/python.exe -B -X utf8 tools/horn_preview_server.py`.
+
+- [전체 미리보기](http://127.0.0.1:8876/assets/primordial-baphomet/?v=black-keratin-v5)
+- [검 단독 미리보기](http://127.0.0.1:8876/assets/primordial-baphomet/cleaver.html?v=black-keratin-v5)
+- [v5 뿔 표면 보정·ImageGen 프롬프트·검증](V5-REVIEW.md)
+- [v4 변경 및 검증](V4-REVIEW.md)
+- [변경 내용·시안·검증](../visual-refresh-20260923/BAPHOMET-V3-REVIEW.md)
+
+현재 총 5,861개 정점 / 11,416개 삼각형 / 원래 29개 뼈다. v5 검증은 v5-horn-validation.json, v5-final-installation.json에 있다. 기존 가족용 설치 폴더와 workspace 실행본의 모델·몸체·대검 텍스처 3개씩을 백업 후 적용했다. 미리보기와 native 모델·텍스처 픽셀 일치, 설치 리소스 1,428개 해시 일치, 보호 파일 320개 불변을 확인했다. 원격 아버지 PC에 직접 적용한 것은 아니다. 이전 크기·검 방향 검증은 v4-geometry-validation.json, v4-final-installation.json에 보존한다.
+
+## 초기 제작 기록
+
 - Lv.231 / HP 23,162 / 공격력 1,470~1,610.
 - 기존 기본 바포메트(ID 44)의 `Monster/p-warrior.mod`를 별도 모델로 복제했다.
 - 크기 1.4배. 메시뿐 아니라 모든 본의 기준 위치와 8개 애니메이션의 이동 좌표도 같은 비율로 확대했다. 본 회전, 애니메이션 프레임 수, 스키닝 인덱스, 삼각형 연결 구조와 원본 사운드는 유지한다.
@@ -23,3 +37,8 @@
 잊혀진 타로스의 원본 바포메트 배치 106곳을 연결했다 (`../forgotten-taros/custom-monsters.json`: 44 → 80). 네이티브 방식대로 212개 리셋 항목을 만든다. 다른 몬스터 그룹의 준비된 위치는 계속 비활성이다. 실제 살아 있는 몬스터 수도 새 종류만 존재함을 확인했다.
 
 재생성: `runtime/python/python.exe -B -X utf8 tools/build_primordial_baphomet.py` 후 `build_forgotten_taros.py`로 맵 표식을 갱신한다. 배포는 기존 아버지용 매니페스트/업데이터를 사용하며 배포 버전은 `2026-09-22-primordial-baphomet`이다. 원래 outputs 실행본에 로컬 적용한 상태로 검증했다.
+
+
+## 2026-09-23 변경
+
+정수리 뿔 2개, 실제 가슴 공동과 검은 핏줄, 톱니형 대검을 추가. tools/sculpt_primordial_baphomet.py는 보존한 sculpt-baseline.mod에서 재현하며 원래 29개 뼈/동작을 유지한다. 원래 빌드 도구에서도 마지막에 조형을 적용한다. 검증: sculpt-validation.json.

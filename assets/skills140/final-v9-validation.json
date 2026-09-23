@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "protected_files_unchanged": 67,
+  "meteor_six_files_unchanged": 170,
+  "prior_saved_values_preserved": 56,
+  "total_controls": 60,
+  "colors_preserved": true,
+  "sword_installation_files_verified": 8,
+  "skills_installed": false,
+  "manifest_files_verified": 666,
+  "manifest_version_preserved": "2026-09-23-local-growth-card-fix",
+  "pair_images": 10,
+  "image_dimensions": [
+    1536,
+    1024
+  ],
+  "browser_validation": "v9-browser-validation.json",
+  "in_game_direct3d_test": false,
+  "commit_push_or_release": false
+}

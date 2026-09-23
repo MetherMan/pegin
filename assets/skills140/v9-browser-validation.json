@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8878/",
+  "heaven_no_ground_circle": true,
+  "heaven_body_impact": true,
+  "frozen_time_preserved": true,
+  "density_comparison": [
+    0.25,
+    2.0
+  ],
+  "mist_comparison": [
+    0,
+    3
+  ],
+  "range_comparison": {
+    "default": [
+      0.95,
+      0.1
+    ],
+    "tested": [
+      1.6,
+      0.4
+    ]
+  },
+  "visual_differences": {
+    "density": {
+      "changed_canvas_pixels": 16378,
+      "maximum_channel_delta": 198
+    },
+    "mist": {
+      "changed_canvas_pixels": 24860,
+      "maximum_channel_delta": 218
+    }
+  },
+  "test_values_restored": true,
+  "settings_saved_during_qa": false,
+  "console_errors_captured": 0,
+  "screenshots": [
+    "v9-heaven-body-hit.png",
+    "v9-ice-density-low.png",
+    "v9-ice-density-high.png",
+    "v9-ice-range-expanded.png",
+    "v9-ice-mist-off.png",
+    "v9-ice-mist-high.png",
+    "v9-ice-pressure-default.png",
+    "v9-ice-pillar-default.png"
+  ],
+  "in_game_direct3d_test": false
+}

@@ -24,84 +24,153 @@ def main():
                         for sound in ([part['SOUND']['name']] if 'SOUND' in part else [])+([part['HITSOUND']] if 'HITSOUND' in part else []):
                             relsound='Sound/'+sound
                             assert (out[relsound] if relsound in out else read(relsound))[:4]==b'RIFF'
-            elif rel.startswith('Effect/'):
+            elif rel.startswith('Effect/') and rel.lower().endswith('.wed'):
                 effect=read_wed(data)
                 assert effect=={k:v for k,v in preview['effects'][Path(rel).name].items() if k!='tintable'}
                 assert all(math.isfinite(v) for f in effect['frames'] for v in f[:11])
         # A changed UI parameter must produce real installed bytes, not just a
         # playback multiplier or a browser-only mesh transform.
-        circles=[e for e in preview['scripts']['meteor']['B'] if (e['wed'] or '').startswith('mm_fireball02')]
-        assert len(circles)==7
-        assert max(e['parts'][0]['STARTTIME'] for e in circles)<meta['meteor']['first']
-        assert {e['parts'][0]['STARTTIME']+e['parts'][0]['TIMELIMIT'] for e in circles}=={meta['meteor']['fadeEnd']}
-        for e in circles:
-            frames=preview['effects'][e['wed']]['frames'];delay=e['parts'][0]['STARTTIME']
-            fade=[max((f[11]>>16)&255,(f[11]>>8)&255,f[11]&255) for j,f in enumerate(frames) if j*1000/30+delay>=meta['meteor']['fadeStart']]
-            assert fade[-1]==0 and all(a>=b for a,b in zip(fade,fade[1:]))
-        ice=[e for e in preview['scripts']['frost']['B'] if e['wed'] in ('mf_spikeice01.wed','mf_spikeice02.wed')];stations=meta['frost']['stations']
-        assert len(ice)==3*stations
-        for branch,angle in enumerate((0,-cfg['frost']['spreadAngle'],cfg['frost']['spreadAngle'])):
-            arm=ice[branch*stations:(branch+1)*stations]
-            assert abs(math.hypot(*arm[-1]['parts'][0]['POS'][:2])-cfg['frost']['distance'])<1e-4
-            for e in arm:
-                x,y,z=e['parts'][0]['POS'];assert abs(math.degrees(math.atan2(-x,y))-angle)<.001
-        mist=[e for e in preview['scripts']['frost']['B'] if e['wed']=='mf_pajang03.wed']
-        rings=[e for e in preview['scripts']['frost']['B'] if e['wed']=='mf_pajang02.wed']
-        assert len(mist)==9 and len(rings)==3
-        assert all(e['parts'][0]['POS'][2]==.06 for e in mist+rings)
-        assert sorted(e['parts'][0]['STARTTIME'] for e in mist)==sorted([cfg['frost']['startDelay']+i*cfg['frost']['stepGap'] for i in (1,3,4)]*3)
-        assert all(f[:3]==[0,0,0] for f in preview['effects']['mf_pajang03.wed']['frames'])
-        # Never replay the combined original B cue: launch follows each shot,
-        # and impact belongs to its arrival PART, so distance/speed cannot
-        # desynchronise the seven impacts as a fixed wall-clock timer would.
-        meteor=preview['scripts']['meteor']['B']
+        meteor=preview['scripts']['meteor']['B'];mt=meta['meteor']
+        circles=[e for e in meteor if (e['wed'] or '').startswith('mm_battery_')]
+        assert len(circles)==24
+        assert max(e['parts'][0]['STARTTIME'] for e in circles)<mt['first']
+        assert len({tuple(e['parts'][0]['TARGET']) for e in circles})==24
+        normals={tuple(preview['effects'][e['wed']]['frames'][10][3:6]) for e in circles};assert len(normals)==8
+        final_seals=[e for e in meteor if (e['wed'] or '').startswith('mm_final_seal')]
+        assert len(final_seals)==3 and min(e['parts'][0]['STARTTIME'] for e in final_seals)>=mt['barrageEnd']
+        assert max(e['parts'][0]['STARTTIME'] for e in final_seals)<mt['last']
+        assert mt['finalSealAt'] - mt['barrageEnd'] == cfg['meteor']['finalSealDelay']
+        assert mt['last'] - mt['finalSealAt'] == cfg['meteor']['finalFallDelay']
+        balls=[e for e in meteor if e['wed'] in ('mm_cannon.wed','mm_final_fireball.wed')]
         launches=[e for e in meteor if e['parts'][0].get('SOUND',{}).get('name')=='mm_meteor_launch.wav']
-        balls=[e for e in meteor if e['wed']=='mm_fireball01.wed']
-        assert len(launches)==len(balls)==7
-        assert all(p.get('SOUND',{}).get('name')!='mb_0004_B.wav' for e in meteor for p in e['parts'])
+        assert len(balls)==len(launches)==9
         for launch,ball in zip(launches,balls):
-            shot,hit,linger=ball['parts']
-            assert launch['parts'][0]['STARTTIME']==shot['STARTTIME']
-            assert launch['parts'][0]['POS']==shot['POS']
-            assert shot['ATTACK'] and shot['TIMELIMIT']==0
-            assert hit['HITSOUND']=='mm_meteor_hit.wav' and hit.get('STARTTIME',0)==0
-            assert shot['TARGET']==[0,0,1] and hit['ENEMY']
-            assert hit['TARGET']==[0,0,cfg['meteor']['impactHeight']]
-            # Native NextStep initially adds POS to the previous endpoint;
-            # ENEMY then uses target feet + TARGET on every later update.
-            for target_height in (0,2.75,-1.5):
-                entry=target_height+shot['TARGET'][2]+hit['POS'][2]
-                subsequent=target_height+hit['TARGET'][2]
-                assert abs(entry-subsequent)<1e-6
-            assert hit['TIMELIMIT']==500 and linger['NOSHOW']
-            with wave.open(io.BytesIO(out['Sound/mm_meteor_hit.wav']),'rb') as wav:
-                assert hit['TIMELIMIT']+linger['TIMELIMIT']>=wav.getnframes()/wav.getframerate()*1000
+            anchor,shot,hit=ball['parts'];assert anchor['ENEMY'] and shot['ATTACK']
+            assert launch['parts'][0]['STARTTIME']==anchor['STARTTIME']+80
+            assert hit['ENEMY'] and hit['TARGET'][:2]==shot['TARGET'][:2]
+            assert hit['TARGET'][2]==cfg['meteor']['impactHeight']
+            assert abs(shot['TARGET'][2]+hit['POS'][2]-hit['TARGET'][2])<1e-6
+        followers=[e for e in meteor if any(p.get('TAIL','').startswith(('mm_fire_vortex','mm_magma','mm_final_wave')) for p in e['parts'])]
+        assert len(followers)==14
+        for e in followers:
+            assert e['parts'][:2]==[dict(balls[-1]['parts'][0]),dict(balls[-1]['parts'][1],NOSHOW=True)]
+        shells=[e for e in meteor if any(p.get('TAIL','').startswith(('mm_shell_bloom','mm_shell_wave')) for p in e['parts'])]
+        assert len(shells)==16
+        for i in range(8):
+            for e in shells[i*2:i*2+2]:
+                assert e['parts'][:2]==[dict(balls[i]['parts'][0]),dict(balls[i]['parts'][1],NOSHOW=True)]
+                assert e['parts'][2]['TARGET'][:2]==balls[i]['parts'][1]['TARGET'][:2]
+                assert e['parts'][2]['POS'][:2]==[0,0],'Arrival displacement applied twice'
+        storm=[e for e in meteor if any(p.get('TAIL','').startswith('mm_stormfront') for p in e['parts'])]
+        blast_scale=cfg['meteor'].get('finalImpactSize',1)
+        assert len(storm)==18 and mt['stormReach']>12*min(1,blast_scale)
+        for e in storm:
+            assert e['parts'][:2]==[dict(balls[-1]['parts'][0]),dict(balls[-1]['parts'][1],NOSHOW=True)]
+            fs=preview['effects'][e['parts'][-1]['TAIL']]['frames']
+            radii=[math.hypot(g[0]*g[9],g[2]*g[10]) for g in fs]
+            assert radii[-1]>10*blast_scale and all(a<=b+1e-5 for a,b in zip(radii,radii[1:])), 'Final blast failed to expand outward'
+            assert fs[-1][11]&0xffffff==0
+        pressure=preview['effects']['mm_storm_pressure.wed']
+        assert pressure['texture']=='ta_06ani.wtm' and (pressure['cols'],pressure['rows'])==(3,3)
+        assert all(g[3:7]==[1,0,0,270] for g in pressure['frames'])
+        assert preview['effects']['mm_final_fireball.wed']['mesh']=='pl_05.WEM'
+        assert preview['effects']['mm_final_fireball.wed']['texture']=='fireball01.wtm'
+        assert preview['effects']['mm_fire_vortex0.wed']['mesh']=='mm_fire_funnel.WEM'
+        assert preview['effects']['mm_fire_vortex0.wed']['texture']=='fire_03.wtm'
+        assert preview['effects']['mm_cannon_hit.wed']['texture']=='fire_02.wtm'
+        assert len({preview['effects'][e['wed']]['texture'] for e in final_seals})==3
+        # Each battery's plane normal points back along its actual shot path.
+        for i,ball in enumerate(balls[:-1]):
+            origin=ball['parts'][0]['TARGET'];dest=ball['parts'][1]['TARGET']
+            expected=(origin[0]-dest[0],origin[2]-dest[2],origin[1]-dest[1])
+            n=preview['effects'][f'mm_battery_{i}_0.wed']['frames'][10][3:6]
+            assert sum(a*b for a,b in zip(expected,n))/math.sqrt(sum(v*v for v in expected))>.9999
+        magma=preview['effects']['mm_magma.wed']['frames'];assert magma[-1][11]&0xffffff==0
+        assert meta['meteor']['fadeEnd']-meta['meteor']['finalImpact']==3800
+        frost=preview['scripts']['frost']['B'];ft=meta['frost']
+        ice=[e for e in frost if (e['wed'] or '').startswith('mf_eruption_')]
+        assert len(ice)==ft['stations'] and len(ice)>=32 and all(e['parts'][0]['ENEMY'] for e in ice)
+        assert all(e['parts'][0]['STARTTIME']+e['parts'][0]['TIMELIMIT']==ft['fadeEnd'] for e in ice)
+        fronts=[e for e in frost if (e['wed'] or '').startswith('mf_pressure_front')]
+        assert len(fronts)==ft['pressureFronts']==0
+        assert ft['supportsTrueOpacity'] is True
+        # Stationary broken bands rise outside-in with unequal clustered roots.
+        radii=[]
+        for e in ice:
+            fs=preview['effects'][e['wed']]['frames']
+            assert all(g[:3]==[0,0,0] for g in fs),'Ice slid away from its ground root'
+            assert fs[0][8]<fs[10][8] and max(g[8] for g in fs)<=fs[-1][8]*1.08
+            assert preview['effects'][e['wed']]['texture']=='ice_02.wtm'
+            radii.append(math.hypot(*e['parts'][0]['TARGET'][:2]))
+        offset=0
+        assert all(a<b for a,b in zip(ft['ringTimes'],ft['ringTimes'][1:]))
+        assert all(a>b for a,b in zip(ft['ringRadii'],ft['ringRadii'][1:]))
+        for at,radius,count,half_width,last_at in zip(ft['ringTimes'],ft['ringRadii'],ft['ringCounts'],ft['ringBandHalfWidths'],ft['ringEndTimes']):
+            values=radii[offset:offset+count]
+            times=[e['parts'][0]['STARTTIME'] for e in ice[offset:offset+count]]
+            assert all(abs(r-radius)<=half_width+2e-5 for r in values)
+            assert max(values)-min(values)>half_width*.6
+            assert min(times)==at and max(times)==last_at and len(set(times))>=3
+            offset+=count
+        assert offset==len(ice)
+        assert max(e['parts'][0]['STARTTIME'] for e in ice)<ft['pillarAt']
+        aftershocks=[e for e in frost if (e['wed'] or '').startswith('mf_aftershock_')]
+        assert len(aftershocks)==ft['aftershocks']==0
+        snow=[e for e in frost if (e['wed'] or '').startswith('mf_blizzard')]
+        assert len(snow)==3 and ft['blizzardEnd']>ft['fadeEnd']
+        for e in snow:
+            fs=preview['effects'][e['wed']]['frames']
+            assert fs[0][6]!=fs[-1][6] and fs[-1][11]&0xffffff==0
+            assert e['parts'][0]['STARTTIME']+e['parts'][0]['TIMELIMIT']==ft['blizzardEnd']
+        assert ft['pillarRiseMs']<250
+        floor=[e for e in frost if (e['wed'] or '').startswith('mf_frozen_ground')]
+        assert len(floor)==6 and ft['floorEnd']>ft['fadeEnd']+1000
+        assert all(e['parts'][0]['STARTTIME']+e['parts'][0]['TIMELIMIT']==ft['floorEnd'] for e in floor)
+        for e in floor:
+            assert preview['effects'][e['wed']]['frames'][-1][11]&0xffffff==0
+        seals=[e for e in frost if (e['wed'] or '').startswith('mf_cocytus_seal')]
+        assert len(seals)==3 and all(e['parts'][0]['ENEMY'] for e in seals)
+        heights=[e['parts'][0]['TARGET'][2] for e in seals]
+        assert all(math.isfinite(h) for h in heights)
+        assert all(e['parts'][0]['TARGET'][:2]==[cfg['frost'].get('sealOffsetX',0),cfg['frost'].get('sealOffsetY',0)] for e in seals)
+        assert all(e['parts'][0]['STARTTIME']+e['parts'][0]['TIMELIMIT']==ft['fadeEnd'] for e in seals)
+        pillar=next(e for e in frost if e['wed']=='mf_cocytus_pillar.wed')
+        assert pillar['parts'][0]['STARTTIME']+pillar['parts'][0]['TIMELIMIT']==ft['fadeEnd']
+        spikes=[e for e in frost if (e['wed'] or '').startswith('mf_crown_spike')]
+        assert len(spikes)==ft['radialSpikes']
+        assert all(e['parts'][0]['STARTTIME']+e['parts'][0]['TIMELIMIT']==ft['fadeEnd'] for e in spikes)
         for kind,phase,hits in [('heaven','B',3),('six','B',6),('six','N',6)]:
-            arrows=[e for e in preview['scripts'][kind][phase] if e['wed']]
+            arrows=[e for e in preview['scripts'][kind][phase] if any(p.get('ATTACK') for p in e['parts']) and any('HITSOUND' in p for p in e['parts'])]
             assert len(arrows)==hits
             assert [e['parts'][0]['STARTTIME'] for e in arrows]==[cfg[kind]['startDelay']+i*cfg[kind]['shotGap'] for i in range(hits)]
             assert all(e['parts'][1]['SPEED']==cfg[kind]['flightSpeed'] for e in arrows)
-            assert all(e['parts'][1]['TARGET']==[0,0,0.9 if kind=='heaven' else 1.1] for e in arrows)
+            assert len(set(e['parts'][1]['TARGET'][2] for e in arrows))==hits
+            muzzle=[e for e in preview['scripts'][kind][phase] if (e['wed'] or '').endswith('_launch.wed')]
+            assert len(muzzle)==hits
+            assert [e['parts'][0]['STARTTIME'] for e in muzzle]==[e['parts'][0]['STARTTIME'] for e in arrows]
+            assert all(e['parts'][0]['POS'][1]>0 and not e['parts'][0].get('ENEMY') for e in muzzle)
+            for e in muzzle:
+                for f in preview['effects'][e['wed']]['frames']:
+                    assert abs(f[1]*f[8]-1.25)<1e-5,'Launch flash moved away from bow height'
         # Changing impactSize must enlarge around the arrow's hit point,
         # without also scaling vb0001's original one-unit upward offset.
         hit=preview['effects']['mh_vb0001.wed']
         assert all(f[:3]==[0,0,0] for f in hit['frames'])
     base,_=compile_resources(read,saved,colors)
-    # The impact is the original Fireball mesh/animation, with only its
-    # existing 1.4x scale and user tint. Height edits must not alter its art.
-    original=read_wed(read('Effect/ta_fire.wed'));private=read_wed(base['Effect/mm_ta_fire.wed'])
-    assert original['mesh']==private['mesh']
-    assert (original['start'],original['end'],original['cols'],original['rows'])==(private['start'],private['end'],private['cols'],private['rows'])
-    for before,after in zip(original['frames'],private['frames']):
-        assert before[:8]==after[:8] and before[12]==after[12]
-        assert all(abs(before[i]*1.4-after[i])<1e-5 for i in (8,9,10))
+    # Custom rocks and three glyph planes are native meshes in both outputs.
+    from native_assets import read_wem
+    for rel,data in base.items():
+        if rel.endswith('.WEM'):
+            mesh=read_wem(data)
+            assert len(mesh['indices'])%3==0 and len(mesh['vertices'])<65535
+    assert read_wed(base['Effect/mm_cannon.wed'])['mesh']=='pl_05.WEM'
     for kind,fields in FIELDS.items():
         for key,field in fields.items():
             cfg=copy.deepcopy(saved);cfg[kind][key]=field[2] if cfg[kind][key]!=field[2] else field[1]
             changed,_=compile_resources(read,cfg,colors)
-            assert any(base[p]!=v for p,v in changed.items() if not p.endswith('.json')),(kind,key)
-            if key=='impactHeight':
-                assert [p for p,v in changed.items() if base[p]!=v and not p.endswith('.json')]==['Magic/mt_meteorB.ms']
+            assert any(base.get(p)!=v for p,v in changed.items() if not p.endswith('.json')),(kind,key)
+            if kind=='meteor' and key=='impactHeight':
+                assert changed['Magic/mt_meteorB.ms']!=base['Magic/mt_meteorB.ms']
     for bad in ({},dict(saved,unknown={})):
         try:validate_settings(bad)
         except ValueError:pass
@@ -119,7 +188,19 @@ def main():
             assert (clip.getnchannels(),clip.getsampwidth(),clip.getframerate())==(1,2,22050)
             pcm=struct.unpack('<'+'h'*clip.getnframes(),clip.readframes(clip.getnframes()))
             assert pcm[0]==pcm[-1]==0 and max(map(abs,pcm))>1000
-    # Existing user values must survive adding the two frost controls.
+    # Upgrade the original twenty-control schema without resetting user values.
+    original_keys={
+        'meteor':{'portalGap','readyHold','shotGap','flightSpeed','impactHeight'},
+        'frost':{'startDelay','stepGap','distance','size','riseSpeed','brightness','spreadAngle','mistStrength'},
+        'heaven':{'startDelay','shotGap','flightSpeed','impactSize'},
+        'six':{'startDelay','shotGap','flightSpeed'},
+    }
+    original={kind:{key:saved[kind][key] for key in keys} for kind,keys in original_keys.items()}
+    migrated=upgrade_settings(original)
+    assert all(migrated[kind][key]==value for kind,fields in original.items() for key,value in fields.items())
+    assert all(migrated[kind][key]==DEFAULTS[kind][key] for kind,fields in FIELDS.items() for key in fields if key not in original_keys[kind] and key != 'pierceWidth')
+    assert migrated['heaven']['pierceWidth'] == original['heaven']['impactSize']
+    # Also keep migration from the older seventeen-control editor working.
     legacy=copy.deepcopy(saved)
     for key in ('spreadAngle','mistStrength'):legacy['frost'].pop(key)
     legacy['meteor'].pop('impactHeight')
@@ -136,6 +217,6 @@ def main():
     for rel,data in base.items():assert (D/rel).read_bytes()==data,rel
     report=dict(passed=True,configurations=len(variants),controls=sum(map(len,FIELDS.values())),timing=full['timing'],original_sound_files=list(full['sounds']),original_character_frames=arrow['frames'],source_hashes=full['sources'],in_game_visual_test=False,limitations=['Browser uses native assets; 30 Hz projectile timing is approximate.','Frost visual reach does not change server AoE 6.','The shipped Death Penetration ps_0001.wav is absent; the existing blue-arrow family arrow100048.wav is used.'])
     (R/'assets/skills140/tuning-validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    print('PASS',sum(map(len,FIELDS.values())),'controls, settings migration, 7 launch/arrival cues, sound lifetimes, frost waves/angles, native loader and preview parity')
+    print('PASS',sum(map(len,FIELDS.values())),'controls, settings migration, 9 launch cues / 7 damage events, sound lifetimes, frost waves/angles, native loader and preview parity')
 
 if __name__=='__main__':main()

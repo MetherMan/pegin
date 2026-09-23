@@ -10,6 +10,7 @@ import urllib.request, urllib.error, urllib.parse
 REPOSITORY = 'MetherMan/pegin'
 MANIFEST = 'distribution/update-manifest.json'
 SERVER = '/opt/laqia/server/LAQIA_GameServer'
+RUNTIME_SUPPORT = {'local_control.py', 'ssh_vm.py', 'start_vm.py'}
 
 def sha(path):
     with Path(path).open('rb') as f:
@@ -47,6 +48,7 @@ def read_manifest(folder):
         if kind == 'client':
             if source != 'client-overlay/'+name: raise ValueError('Invalid client source')
             if name.lower() in ('config.ini','server.ini'): raise ValueError('Personal client settings excluded')
+            if '__pycache__' in PurePosixPath(name).parts or name.lower().endswith(('.pyc','.pyo')):raise ValueError('Compiled local Python caches excluded')
         elif kind == 'server':
             if name != 'LAQIA_GameServer' and not name.startswith('DATA/'): raise ValueError('Only static server files may be updated')
             if name=='DATA/ADMIN_INFO.txt':raise ValueError('Local administrator settings excluded')
@@ -56,7 +58,26 @@ def read_manifest(folder):
             if name != 'update/father_update.py' or source != 'distribution/father_update.py': raise ValueError('Invalid updater source')
         else: raise ValueError('Unknown update file category')
         if len(entry['sha256']) != 64 or entry['bytes'] <= 0: raise ValueError('Invalid file metadata')
+    # Separate optional field keeps old updater manifests backward-compatible.
+    runtime_seen=set()
+    for entry in data.get('runtime_files',[]):
+        name=entry['path']
+        if entry.get('kind')!='runtime' or name not in RUNTIME_SUPPORT:
+            raise ValueError('Only approved VM startup helpers may be updated')
+        if name in runtime_seen or entry['source']!='tools/runtime/'+name:
+            raise ValueError('Invalid runtime helper source')
+        runtime_seen.add(name)
+        if len(entry['sha256'])!=64 or entry['bytes']<=0:raise ValueError('Invalid runtime metadata')
     return data
+
+def payload_entries(manifest):
+    return manifest['files']+manifest.get('runtime_files',[])
+
+def validate_payloads(source,manifest):
+    for e in payload_entries(manifest):
+        p=safe_path(source,e['source'])
+        if not p.is_file() or p.stat().st_size!=e['bytes'] or sha(p)!=e['sha256']:
+            raise RuntimeError('적용 전 파일 검증 실패: '+e['path'])
 
 def download(url, target, expected=None, length=None):
     request = urllib.request.Request(url, headers={'User-Agent':'LAQIA-Family-Updater','Accept':'application/vnd.github+json'})
@@ -74,6 +95,7 @@ def download(url, target, expected=None, length=None):
 def local_target(root, runtime, entry):
     if entry['kind']=='client': return safe_path(runtime/'client/GameClient',entry['path'])
     if entry['kind']=='updater': return safe_path(root,entry['path'])
+    if entry['kind']=='runtime': return safe_path(runtime,entry['path'])
     return None
 
 def fetch(root, runtime):
@@ -90,7 +112,7 @@ def fetch(root, runtime):
     cache = root/'update/cache'
     cache.mkdir(parents=True,exist_ok=True)
     downloaded=0
-    for e in manifest['files']:
+    for e in payload_entries(manifest):
         target = safe_path(staging,e['source'])
         cached = cache/e['sha256']
         local = local_target(root,runtime,e)
@@ -123,22 +145,48 @@ class LocalTransaction:
             if existed: atomic_copy(saved,target)
             elif target.exists(): target.unlink()
 
+def install_runtime_support(runtime,source,manifest,backup):
+    transaction=LocalTransaction(backup/'startup-support')
+    try:
+        for entry in manifest.get('runtime_files',[]):
+            target=safe_path(runtime,entry['path'])
+            if not target.is_file() or sha(target)!=entry['sha256']:
+                transaction.put(safe_path(source,entry['source']),target)
+    except BaseException:
+        transaction.rollback()
+        raise
+    if transaction.entries:print('서버 시작 도구 수정본을 먼저 적용했습니다.',flush=True)
+
+def run_latest_updater(root,runtime,source):
+    """Execute verified downloaded code before attempting the legacy VM startup."""
+    manifest=read_manifest(source)
+    validate_payloads(source,manifest)
+    entries=[e for e in manifest['files'] if e['kind']=='updater']
+    if not entries:return None
+    entry=entries[0]
+    if sha(Path(__file__))==entry['sha256']:return None
+    script=safe_path(source,entry['source'])
+    print('새 업데이트 프로그램으로 이어서 진행합니다.',flush=True)
+    return subprocess.run([sys.executable,'-B','-X','utf8',str(script),
+                           '--root',str(root),'--runtime',str(runtime),'--source',str(source)]).returncode
+
 def apply(root, runtime, source):
     import shlex
     manifest=read_manifest(source)
-    for e in manifest['files']:
-        p=safe_path(source,e['source'])
-        if not p.is_file() or p.stat().st_size!=e['bytes'] or sha(p)!=e['sha256']:
-            raise RuntimeError('적용 전 파일 검증 실패: '+e['path'])
+    validate_payloads(source,manifest)
     sys.path[:0]=[str(runtime),str(runtime/'pylibs')]
-    import local_control as ctl
-    from ssh_vm import connect
     from family_network import SessionLock
+    from portable_support import client_running
     with SessionLock():
-        if ctl.client_running(): raise RuntimeError('게임을 종료한 뒤 다시 눌러 주세요.')
-        was_online=ctl.online();started=False
+        if client_running(): raise RuntimeError('게임을 종료한 뒤 다시 눌러 주세요.')
         stamp=time.strftime('%Y%m%d-%H%M%S')+'-'+uuid.uuid4().hex[:8]
         backup=runtime/'backups'/('auto-update-'+stamp)
+        # Bootstrap repairs are independent of the game's update transaction.
+        # Keep them installed after a boot failure, so the next attempt uses them.
+        install_runtime_support(runtime,source,manifest,backup)
+        import local_control as ctl
+        from ssh_vm import connect
+        was_online=ctl.online();started=False
         local=LocalTransaction(backup/'files')
         try:
             ctl.start();started=True
@@ -214,14 +262,22 @@ def main():
     parser.add_argument('--download-only',action='store_true')
     args=parser.parse_args()
     root=args.root.resolve();runtime=(args.runtime or root/'work/laqia-runtime').resolve()
+    if runtime!=(root/'work/laqia-runtime').resolve():
+        raise RuntimeError('기존 outputs와 연결된 work/laqia-runtime만 업데이트할 수 있습니다. 다른 서버 경로는 사용하지 않았습니다.')
+    if not (root/'outputs').is_dir():
+        raise RuntimeError('outputs와 work가 함께 있는 기존 설치 폴더를 선택해 주세요.')
     if not (runtime/'python/python.exe').is_file() or not (runtime/'local_control.py').is_file():
         raise RuntimeError('라키아 폴더 안에 덮어씌워 주세요. work/laqia-runtime 폴더를 찾을 수 없습니다.')
     source=args.source or fetch(root,runtime)
-    if not args.download_only:apply(root,runtime,source)
+    if not args.download_only:
+        status=run_latest_updater(root,runtime,source)
+        if status is not None:return status
+        apply(root,runtime,source)
+    return 0
 
 if __name__=='__main__':
     sys.stdout.reconfigure(encoding='utf-8')
-    try:main()
+    try:sys.exit(main())
     except Exception as error:
         print('\n업데이트 중단: '+str(error),flush=True)
         print('실패 상태를 성공으로 처리하지 않았습니다. 창의 내용을 확인해 주세요.',flush=True)

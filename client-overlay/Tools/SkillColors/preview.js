@@ -7,8 +7,9 @@ uniform vec4 atlas;
 void main(){texUV=uv*atlas.xy+atlas.zw;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}`;
 const fragmentShader=`uniform sampler2D sourceTexture;
 uniform vec3 tint;
+uniform float opacity;
 varying vec2 texUV;
-void main(){gl_FragColor=vec4(texture2D(sourceTexture,texUV).rgb*tint,1.0);}`;
+void main(){gl_FragColor=vec4(texture2D(sourceTexture,texUV).rgb*tint,opacity);}`;
 const up=new THREE.Vector3(0,1,0);
 const labels={meteor:'메테오',frost:'얼음',heaven:'헤븐',six:'식스폴드'};
 
@@ -103,13 +104,16 @@ export class SkillPreview{
   makeMesh(name){
     const effect=this.assets.effects[name];
     if(!effect)throw Error('이펙트 원본을 찾지 못했습니다: '+name);
+    const alphaBlended=Boolean(this.assets.timing.frost?.alphaSurfaces?.includes(name));
     const material=new THREE.ShaderMaterial({
-      uniforms:{sourceTexture:{value:this.textures[effect.texture]},tint:{value:new THREE.Vector3(1,1,1)},atlas:{value:new THREE.Vector4(1,1,0,0)}},
+      uniforms:{sourceTexture:{value:this.textures[effect.texture]},tint:{value:new THREE.Vector3(1,1,1)},opacity:{value:1},atlas:{value:new THREE.Vector4(1,1,0,0)}},
       vertexShader,fragmentShader,transparent:true,depthTest:true,depthWrite:false,side:THREE.FrontSide,
-      blending:THREE.CustomBlending,blendEquation:THREE.AddEquation,blendSrc:THREE.OneFactor,blendDst:THREE.OneFactor,toneMapped:false
+      blending:THREE.CustomBlending,blendEquation:THREE.AddEquation,
+      blendSrc:alphaBlended?THREE.SrcAlphaFactor:THREE.OneFactor,
+      blendDst:alphaBlended?THREE.OneMinusSrcAlphaFactor:THREE.OneFactor,toneMapped:false
     });
     const mesh=new THREE.Mesh(this.geometries[effect.mesh],material);mesh.matrixAutoUpdate=false;mesh.frustumCulled=false;
-    this.group.add(mesh);return {mesh,effect};
+    this.group.add(mesh);return {mesh,effect,name,alphaBlended};
   }
   makeTrace(name,width){
     const source=this.assets.traces[name],count=source.level+1,geometry=new THREE.BufferGeometry();
@@ -157,7 +161,7 @@ export class SkillPreview{
         elapsed+=part.STARTTIME||0;
         // Native ENEMY anchors the impact at the target, independently of
         // the preceding projectile's body-height endpoint.
-        if(part.ENEMY)position=scriptPosition(part.TARGET).applyQuaternion(this.facing).add(this.targetAnchor);
+        if(part.ENEMY){const p=part.TARGET||[0,0,0];position=new THREE.Vector3(p[0],p[2],p[1]).applyQuaternion(this.facing).add(this.targetAnchor);}
         else if(previousBone===14)position=this.actor.bonePosition(elapsed,'Bip01 R Hand');
         else if(part.POS)position=scriptPosition(part.POS).applyQuaternion(this.facing);
         const start=position.clone();let end=start.clone(),duration=part.TIMELIMIT||0;
@@ -173,6 +177,9 @@ export class SkillPreview{
         const moving=!!part.ATTACK,loop=effect.loop||part.LOOP;
         const orientation=this.facing.clone();
         if(moving)orientation.setFromRotationMatrix(new THREE.Matrix4().lookAt(start,end,up));
+        // Native UpdateEnemyPos points the impact from the caster origin to
+        // the struck body height. The long Heaven lance exposes this pitch.
+        if(part.ENEMY&&this.kind==='heaven')orientation.setFromRotationMatrix(new THREE.Matrix4().lookAt(new THREE.Vector3(),start,up));
         const add=(name,age,primary=false)=>{
           const entry={...this.makeMesh(name),start:elapsed,end:elapsed+duration,from:start.clone(),to:end.clone(),orientation,moving,loop,pause:part.PAUSE,age};
           if(primary&&moving&&effect.trace)entry.trail=this.makeTrace(effect.trace,part.TRACEDIST??.25);
@@ -193,21 +200,46 @@ export class SkillPreview{
     if(this.kind==='frost')this.card.querySelector('.timing-note').textContent+=` · 좌우 ${timing.spreadAngle}도`;
     if(this.kind==='meteor')this.card.querySelector('.timing-note').textContent+=` · 불꽃 높이 ${timing.impactHeight.toFixed(2)}`;
   }
-  applyAssets(partial){
-    const pausedTime=this.playing?null:this.time;
-    this.assets={...this.assets,...partial,meshes:this.assets.meshes,textures:this.assets.textures,actors:this.assets.actors,sounds:this.assets.sounds,soundDurations:this.assets.soundDurations};
+  async applyAssets(partial){
+    const revision=this.assetRevision=(this.assetRevision||0)+1;
+    const geometries={},textures={},loader=new THREE.TextureLoader();
+    for(const [name,data] of Object.entries(partial.meshes||{})){
+      if(this.geometries[name]&&partial.sources['Effect/'+name]===this.assets.sources['Effect/'+name])continue;
+      const geometry=new THREE.BufferGeometry();
+      geometry.setAttribute('position',new THREE.Float32BufferAttribute(data.vertices.flatMap(v=>v.slice(0,3)),3));
+      geometry.setAttribute('uv',new THREE.Float32BufferAttribute(data.vertices.flatMap(v=>v.slice(3,5)),2));
+      geometry.setIndex(data.indices);geometries[name]=geometry;
+    }
+    await Promise.all(Object.entries(partial.textures||{}).map(async([name,url])=>{
+      if(this.textures[name]&&this.assets.textures[name]===url)return;
+      const texture=await loader.loadAsync(url);texture.flipY=false;texture.colorSpace=THREE.NoColorSpace;
+      texture.wrapS=texture.wrapT=THREE.RepeatWrapping;texture.magFilter=THREE.LinearFilter;texture.minFilter=THREE.LinearMipmapLinearFilter;
+      texture.needsUpdate=true;textures[name]=texture;
+    }));
+    if(revision!==this.assetRevision){
+      Object.values(geometries).forEach(g=>g.dispose());Object.values(textures).forEach(t=>t.dispose());return false;
+    }
+    // Rebuilding the native timeline must not restart a playing skill or move
+    // a paused frame. Otherwise slider input repeatedly hides the actual hit.
+    const currentTime=this.time,wasPlaying=this.playing;
+    const oldGeometry=Object.keys(geometries).map(k=>this.geometries[k]).filter(Boolean),oldTextures=Object.keys(textures).map(k=>this.textures[k]).filter(Boolean);
+    Object.assign(this.geometries,geometries);Object.assign(this.textures,textures);
+    this.assets={...this.assets,...partial,effects:{...this.assets.effects,...partial.effects},scripts:{...this.assets.scripts,...partial.scripts},timing:{...this.assets.timing,...partial.timing},traces:{...this.assets.traces,...partial.traces},meshes:{...this.assets.meshes,...partial.meshes},textures:{...this.assets.textures,...partial.textures},sources:{...this.assets.sources,...partial.sources},actors:this.assets.actors,sounds:this.assets.sounds,soundDurations:this.assets.soundDurations};
     this.setPhase(this.phase);
-    if(pausedTime!==null)this.time=Math.min(pausedTime,this.duration);
-    this.setPlaying(pausedTime===null);this.render();
+    oldGeometry.forEach(g=>g.dispose());oldTextures.forEach(t=>t.dispose());
+    this.time=Math.min(currentTime,this.duration);this.lastSoundTime=this.time;
+    this.setPlaying(wasPlaying);this.render();return true;
   }
-  fitView(){
+  fitView(current=false){
     // Fit actual animated vertices, including the expanding ground-wave mesh.
     const bounds=new THREE.Box3();
     bounds.expandByPoint(new THREE.Vector3(-.8,0,.8));bounds.expandByPoint(new THREE.Vector3(.8,2,0));
     bounds.expandByPoint(this.targetAnchor.clone().add(new THREE.Vector3(0,2,0)));
     for(const entry of this.timeline){
+      if(current&&(this.time<entry.start||this.time>=entry.end))continue;
       const geometry=this.assets.meshes[entry.effect.mesh];
-      for(const frame of entry.effect.frames){
+      const visibleFrame=current?this.nativeFrame(entry,this.time-entry.start+entry.age):null;
+      for(const frame of (current?(visibleFrame?[visibleFrame]:[]):entry.effect.frames)){
         if(!frame[7]||Math.max((frame[11]>>16)&255,(frame[11]>>8)&255,frame[11]&255)<40)continue;
         const local=nativeMatrix(frame);
         for(const origin of [entry.from,entry.to]){
@@ -262,6 +294,7 @@ export class SkillPreview{
       ?[1,3,5].map(i=>Math.round(parseInt(this.color.slice(i,i+2),16)*luminosity/255)/255)
       :[16,8,0].map(shift=>((frame[11]>>>shift)&255)/255);
     entry.mesh.material.uniforms.tint.value.set(...rgb);
+    entry.mesh.material.uniforms.opacity.value=entry.alphaBlended?((frame[11]>>>24)&255)/255:1;
     const id=frame[12]-1,cols=entry.effect.cols,rows=entry.effect.rows;
     entry.mesh.material.uniforms.atlas.value.set(id<0?1:1/cols,id<0?1:1/rows,id<0?0:(id%cols)/cols,id<0?0:Math.floor(id/cols)/rows);
   }
@@ -271,8 +304,22 @@ export class SkillPreview{
     button.setAttribute('aria-label',labels[this.kind]+' '+(value?'일시정지':'재생'));
   }
   bindControls(){
+    {
+      const stages=document.createElement('div');stages.className='toolbar stage-bar';
+      const hits=()=>this.timeline.filter(e=>e.name===(this.kind==='heaven'?'mh_vb0001.wed':this.phase==='N'?'ms_impact.wed':'msb_impact.wed')).map(e=>e.start);
+      const firstHit=()=>Math.min(...hits()),lastHit=()=>Math.max(...hits());
+      const moments=this.kind==='meteor'
+        ?[['연쇄 착탄',m=>m.first+750],['최종 마법진',m=>m.finalSealAt+380],['거대 화염탄',m=>m.last+220],['폭풍 폭발',m=>m.finalImpact+520],['화염 회오리',m=>m.finalImpact+1150],['마그마 잔열',m=>m.finalImpact+2600]]
+        :this.kind==='frost'?[['바깥 얼음 고리',m=>(m.ringTimes?.[0]??m.first)+110],['안쪽 얼음 고리',m=>(m.ringTimes?.at(-1)??m.pillarAt-140)+100],['중앙 거대 얼음',m=>m.pillarAt+230],['눈보라',m=>m.pillarAt+850],['얼음 지대',m=>m.blizzardEnd+150]]
+        :[['활 앞 발사',m=>m.first+60],['첫 적중',()=>firstHit()+70],[this.kind==='heaven'?'3발 몸통 관통':'연속 적중',()=>lastHit()+(this.kind==='heaven'?70:170)]];
+      for(const [label,at] of moments){const button=document.createElement('button');button.className='quiet';button.textContent=label;button.onclick=()=>{if(this.phase==='A')this.setPhase('B');this.setPlaying(false);this.time=at(this.assets.timing[this.kind]);this.lastSoundTime=this.time;this.fitView(true);this.render()};stages.append(button)}
+      this.card.querySelector('.playback').prepend(stages);
+    }
+    const expand=document.createElement('button');expand.className='quiet';expand.textContent='확대 보기';
+    expand.onclick=()=>{const large=this.card.classList.toggle('expanded');expand.textContent=large?'확대 닫기':'확대 보기';requestAnimationFrame(()=>{this.resize();this.fitView();this.render()})};
+    this.card.querySelector('.toolbar.extra').prepend(expand);
     this.card.querySelector('.play').onclick=()=>this.setPlaying(!this.playing);
-    this.card.querySelector('.restart').onclick=()=>{this.sound.stop();this.time=0;this.lastSoundTime=-1;this.setPlaying(true)};
+    this.card.querySelector('.restart').onclick=()=>{this.sound.stop();this.time=0;this.lastSoundTime=-1;this.fitView();this.setPlaying(true)};
     this.card.querySelector('.phase').onchange=event=>{this.setPhase(event.target.value);this.render()};
     this.card.querySelector('.speed').onchange=event=>{this.sound.stop();this.speed=Number(event.target.value)};
     this.card.querySelector('.seek').oninput=event=>{this.setPlaying(false);this.time=Number(event.target.value);this.lastSoundTime=this.time;this.render()};

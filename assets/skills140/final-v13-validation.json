@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "selection": {
+    "sword": "S4",
+    "longbow": "H03",
+    "staff": "월식 갈고리"
+  },
+  "installedWeaponFiles": 24,
+  "changedWeaponFiles": 8,
+  "backupsVerified": true,
+  "protectedFilesUnchanged": 99,
+  "controls": 64,
+  "colors": 3,
+  "userNumericValuesPreserved": true,
+  "currentIceOpacity": 90,
+  "iceColorIndependent": true,
+  "compiledResourcesVerified": 395,
+  "manifestVersion": "2026-09-23-local-growth-card-fix",
+  "manifestFilesVerified": 753,
+  "gameLaunchPathsChanged": false,
+  "accountFilesChanged": false,
+  "skillsInstalled": false,
+  "inGameDirect3DTest": false
+}

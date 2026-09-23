@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "revision": "black-keratin-v5",
+  "changedHornUvCorners": [
+    14304,
+    12000
+  ],
+  "changedHornNormalCorners": [
+    13248,
+    11328
+  ],
+  "geometryBonesUnchanged": true,
+  "nonHornNormalsUnchanged": true,
+  "nonHornUvUnchanged": true,
+  "textures": [
+    {
+      "native": "mt_prime_body.wtm",
+      "nonHornPixelsUnchanged": 1048576,
+      "sourceHornPixelsExact": true,
+      "nativePreviewPixelsIdentical": true
+    },
+    {
+      "native": "mt_prime_cleaver.wtm",
+      "nonHornPixelsUnchanged": 1572864,
+      "sourceHornPixelsExact": true,
+      "nativePreviewPixelsIdentical": true
+    }
+  ],
+  "changedResources": [
+    "Monster/mt_prime_baphomet.mod",
+    "Texture/Monster/mt_prime_body.wtm",
+    "Texture/Monster/mt_prime_cleaver.wtm"
+  ],
+  "protectedOverlayFilesUnchanged": 713,
+  "scale": 1.7,
+  "bladeRollDegrees": 180,
+  "animationsUnchanged": true,
+  "inGameVisualTest": false
+}

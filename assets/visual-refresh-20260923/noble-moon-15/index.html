@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>푸른달의 트와일라잇 · 15개 시안</title>
+<style>
+:root{color-scheme:dark;--bg:#070e1c;--panel:#101c30;--line:#283c59;--blue:#8ed9ff;--muted:#a1b4d1}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#162e4a 0,transparent 720px),var(--bg);color:#eef5ff;font:15px/1.6 system-ui,sans-serif}main{max-width:1660px;margin:auto;padding:46px 32px 75px}header{max-width:900px;margin-bottom:28px}.eyebrow{font-size:11px;letter-spacing:3px;color:var(--blue)}h1{font-size:clamp(29px,3.5vw,48px);letter-spacing:-1.5px;margin:8px 0}header p{color:var(--muted);margin:0}.toolbar{position:sticky;top:0;z-index:3;padding:14px 0;background:#070e1ced;backdrop-filter:blur(18px);display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid var(--line)}.filters,.choices{display:flex;gap:8px;align-items:center;flex-wrap:wrap}button,a{touch-action:manipulation}button{font:inherit;cursor:pointer;border:1px solid var(--line);color:#d9e9ff;background:#111f34;border-radius:7px;padding:7px 14px}button:hover{border-color:var(--blue)}button.active,button[aria-pressed="true"]{background:#254b70;border-color:#8ed9ff;color:white}button:focus-visible,a:focus-visible{outline:2px solid #d1f0ff;outline-offset:4px}.selection{font-size:12px;color:#b4d6f3}.choices button{font-size:12px}.section{margin-top:34px}.section[hidden]{display:none}h2{font-size:23px;letter-spacing:-.5px;margin:0 0 15px}h2 span{font:12px system-ui;color:var(--muted);margin-left:12px}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);transition:border-color .15s}.card.selected{border:2px solid var(--blue)}.image-button{padding:0;width:100%;display:block;border:0;border-radius:0;background:#070e1c;position:relative;aspect-ratio:2/3;overflow:hidden}.image-button img{width:100%;height:100%;object-fit:contain;display:block}.image-button .badge{position:absolute;top:12px;left:12px;border:1px solid #5d7c9d;background:#091423df;color:#d2edff;font-weight:700;font-size:12px;padding:3px 9px;border-radius:5px}.image-button::after{content:'확대 보기';position:absolute;bottom:12px;left:50%;transform:translateX(-50%);font-size:11px;background:#0a162bd9;padding:4px 10px;border-radius:20px;opacity:0}.image-button:hover::after,.image-button:focus-visible::after{opacity:1}.info{padding:15px}h3{font-size:16px;line-height:1.35;margin:0 0 8px}.description{color:#a8bdd7;font-size:12px;min-height:40px;margin:0 0 14px}.card-actions{display:flex;align-items:center;justify-content:space-between;gap:8px}.pick{font-size:12px;padding:6px 10px}.original{font-size:11px;color:#9ec9ed;text-decoration:none}.footnote{margin-top:28px;color:#8da2bf;font-size:12px}.footnote a{color:#b8dfff}dialog{border:1px solid #45617d;border-radius:14px;padding:0;background:#080e19;color:#eef5ff;width:min(980px,96vw);max-width:96vw;height:94vh;max-height:94vh}dialog::backdrop{background:#000b;backdrop-filter:blur(7px)}.dialog-inner{display:flex;flex-direction:column;height:100%}.dialog-head{padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid var(--line)}.dialog-title{font-size:17px;font-weight:700}.dialog-image{flex:1;min-height:0;display:flex;justify-content:center;background:#040916}.dialog-image img{height:100%;width:100%;object-fit:contain}.dialog-bottom{display:flex;gap:10px;align-items:center;justify-content:center;padding:12px;flex-wrap:wrap}.dialog-bottom p{width:100%;margin:0;text-align:center;color:#adc1db;font-size:12px}.notice{font-size:12px;color:#8ed9ff;min-height:20px} @media(max-width:1050px){main{padding:30px 20px 55px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}main{padding:25px 12px}.info{padding:11px}.toolbar{gap:8px}.choices{width:100%}.selection{flex:1}.description{min-height:58px}.filters button{padding:6px 10px}.section{margin-top:25px}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">TWILIGHT OF THE BLUE MOON</div><h1>푸른달, 열다섯 가지 시안</h1><p>고결한 푸르름과 달의 형태를 중심으로 만든 검·활·지팡이 각 5종입니다.<br>이미지를 누르면 크게 볼 수 있습니다. 마음에 드는 시안을 종류별로 표시해 비교하세요.</p></header>
+<div class="toolbar"><nav class="filters" aria-label="무기 종류"><button data-filter="all" class="active" aria-pressed="true">전체 15</button><button data-filter="sword" aria-pressed="false">검 5</button><button data-filter="bow" aria-pressed="false">활 5</button><button data-filter="staff" aria-pressed="false">지팡이 5</button></nav><div class="choices"><span class="selection" id="selection">선택한 시안 없음</span><button id="copy">선택 요약 복사</button><button id="clear">선택 해제</button></div></div>
+<div id="sections"></div><p class="notice" id="notice" aria-live="polite"></p>
+<p class="footnote">15종 모두 새 ImageGen 시안입니다. 이 화면의 선택은 비교용으로만 저장됩니다.<br>생성 프롬프트: <a href="sword-prompts.json">검</a> · <a href="bow-prompts.json">활</a> · <a href="staff-prompts.json">지팡이</a></p>
+</main>
+<dialog id="viewer"><div class="dialog-inner"><div class="dialog-head"><span class="dialog-title" id="dialogTitle"></span><button id="close" aria-label="확대 보기 닫기">닫기 ×</button></div><div class="dialog-image"><img id="fullImage" alt=""></div><div class="dialog-bottom"><p id="dialogDescription"></p><button id="previous">← 이전</button><button id="dialogPick">이 시안 선택</button><a class="original" id="dialogOriginal" target="_blank" rel="noopener">원본 열기 ↗</a><button id="next">다음 →</button></div></div></dialog>
+<script>
+const catalog=[
+ ['sword','검','S1','초승달 궁정','큰 초승달 가드와 곧고 날카로운 청색 칼날.'],
+ ['sword','검','S2','쌍월의 날개','엇갈린 초승달과 날개처럼 열린 곡선.'],
+ ['sword','검','S3','성월의 궤도','달과 천체 궤도가 칼날 아래를 감싸는 형태.'],
+ ['sword','검','S4','달빛 물결','비대칭으로 흐르는 칼날과 달빛 곡선.'],
+ ['sword','검','S5','월식의 왕관','짙은 푸르름과 초승달 왕관의 대비.'],
+ ['bow','활','B1','초승달 궁정','큰 단일 초승달이 활의 중심을 이루는 형태.'],
+ ['bow','활','B2','쌍월의 날개','위아래가 엇갈리며 뻗는 유려한 날개.'],
+ ['bow','활','B3','성월 관측궁','열린 고리와 천체 궤도가 만드는 활.'],
+ ['bow','활','B4','달빛 물결','불규칙한 S자 곡선이 흐르는 비대칭 활.'],
+ ['bow','활','B5','월식의 왕관','짙은 청색 몸체와 왕관처럼 뻗은 끝.'],
+ ['staff','지팡이','T1','만월 성소','큰 달을 초승달이 받치는 성소형 머리.'],
+ ['staff','지팡이','T2','삼중 월관','세 초승달이 엇갈리는 높은 왕관.'],
+ ['staff','지팡이','T3','성월 관측의','비대칭 궤도 고리가 달을 감싸는 형태.'],
+ ['staff','지팡이','T4','달빛 꽃','청색 꽃잎과 초승달 중심이 피어난 형태.'],
+ ['staff','지팡이','T5','월식 왕홀','커다란 C자 달과 비대칭 광륜.']
+].map(([kind,kindName,id,name,description])=>({kind,kindName,id,name,description,file:kind+'-0'+id.slice(1)+'.png'}));
+const sections=document.querySelector('#sections'),viewer=document.querySelector('#viewer');let selected={};try{selected=JSON.parse(localStorage.getItem('noble-moon-15-selection')||'{}')}catch{}let current=0;
+for(const [kind,title] of [['sword','검'],['bow','활'],['staff','지팡이']]){
+ const section=document.createElement('section');section.className='section';section.dataset.kind=kind;section.innerHTML='<h2>'+title+'<span>5 DESIGNS</span></h2><div class="grid"></div>';sections.append(section);
+ for(const item of catalog.filter(i=>i.kind===kind)){
+  const card=document.createElement('article');card.className='card';card.dataset.id=item.id;
+  card.innerHTML='<button class="image-button" aria-label="'+item.id+' '+item.name+' 확대"><img src="'+item.file+'" alt="'+item.id+' '+title+' · '+item.name+'" width="1024" height="1536" loading="lazy" decoding="async"><span class="badge">'+item.id+'</span></button><div class="info"><h3>'+item.name+'</h3><p class="description">'+item.description+'</p><div class="card-actions"><button class="pick" aria-pressed="false">이 시안 선택</button><a class="original" href="'+item.file+'" target="_blank" rel="noopener">원본 ↗</a></div></div>';
+  card.querySelector('.image-button').onclick=()=>open(catalog.indexOf(item));card.querySelector('.pick').onclick=()=>pick(item);section.querySelector('.grid').append(card);
+ }
+}
+function update(){
+ for(const card of document.querySelectorAll('.card')){const item=catalog.find(i=>i.id===card.dataset.id),active=selected[item.kind]===item.id;card.classList.toggle('selected',active);const b=card.querySelector('.pick');b.textContent=active?'선택됨 ✓':'이 시안 선택';b.setAttribute('aria-pressed',active)}
+ const summary=catalog.filter(i=>selected[i.kind]===i.id).map(i=>i.kindName+' '+i.id+' '+i.name).join(' / ');document.querySelector('#selection').textContent=summary||'선택한 시안 없음';try{localStorage.setItem('noble-moon-15-selection',JSON.stringify(selected))}catch{}
+ if(viewer.open)updateDialog();
+}
+function pick(item){if(selected[item.kind]===item.id)delete selected[item.kind];else selected[item.kind]=item.id;update()}
+function updateDialog(){const item=catalog[current];document.querySelector('#dialogTitle').textContent=item.id+' · '+item.kindName+' · '+item.name;const img=document.querySelector('#fullImage');img.src=item.file;img.alt=item.id+' '+item.name;document.querySelector('#dialogDescription').textContent=item.description;document.querySelector('#dialogOriginal').href=item.file;document.querySelector('#dialogPick').textContent=selected[item.kind]===item.id?'선택됨 ✓':'이 시안 선택'}
+function open(index){current=index;updateDialog();viewer.showModal()}
+function move(delta){const kind=catalog[current].kind,items=catalog.filter(i=>i.kind===kind),i=items.indexOf(catalog[current]);current=catalog.indexOf(items[(i+delta+items.length)%items.length]);updateDialog()}
+document.querySelector('#close').onclick=()=>viewer.close();viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});document.querySelector('#previous').onclick=()=>move(-1);document.querySelector('#next').onclick=()=>move(1);document.querySelector('#dialogPick').onclick=()=>pick(catalog[current]);viewer.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();move(-1)}if(e.key==='ArrowRight'){e.preventDefault();move(1)}});
+for(const button of document.querySelectorAll('[data-filter]'))button.onclick=()=>{for(const b of document.querySelectorAll('[data-filter]')){b.classList.toggle('active',b===button);b.setAttribute('aria-pressed',b===button)}for(const s of document.querySelectorAll('.section'))s.hidden=button.dataset.filter!=='all'&&s.dataset.kind!==button.dataset.filter};
+document.querySelector('#clear').onclick=()=>{selected={};update()};document.querySelector('#copy').onclick=async()=>{const text=catalog.filter(i=>selected[i.kind]===i.id).map(i=>i.kindName+' '+i.id+' '+i.name).join(', ');if(!text){document.querySelector('#notice').textContent='먼저 비교할 시안을 선택하세요.';return}try{await navigator.clipboard.writeText(text);document.querySelector('#notice').textContent='복사했습니다: '+text}catch{document.querySelector('#notice').textContent=text}};update();
+</script>
+</body></html>

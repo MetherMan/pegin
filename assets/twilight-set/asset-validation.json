@@ -6,35 +6,33 @@
   "models": [
     {
       "model": "mt_longbow",
-      "triangles": 4968,
-      "thickness": 0.06800000369548798,
-      "side_mean": 117.81454811104153,
-      "side_std": 60.28638901855724,
+      "triangles": 26580,
+      "thickness": 0.11116821318864822,
+      "side_mean": 115.57806610123856,
+      "side_std": 61.42278633258874,
       "meshes": 1,
-      "sha256": "a573d5ca2ca2393ab0b1cb9e932111cdbe75cc1b88ec71dc8bf9c2ac6e3599cb"
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c"
     },
     {
       "model": "mt_staff",
-      "triangles": 7052,
-      "thickness": 0.0820000022649765,
-      "side_mean": 124.93504129917402,
-      "side_std": 60.49998392827628,
+      "triangles": 10996,
+      "thickness": 0.1877564787864685,
+      "side_mean": 101.43289495869162,
+      "side_std": 66.10372724276493,
       "meshes": 1,
-      "sha256": "4c625fa9f5d8afea6838e4301bacfb40670871350bfbae165e99f3799adccede"
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
     },
     {
       "model": "mt_twilight",
-      "triangles": 6836,
-      "thickness": 0.06448730826377869,
-      "side_mean": 115.40550676911819,
-      "side_std": 62.205281261934445,
+      "triangles": 11332,
+      "thickness": 0.054999999701976776,
+      "side_mean": 92.95597484276729,
+      "side_std": 70.3626152825177,
       "meshes": 1,
-      "sha256": "28a581a0a8494a16101d316a609339078664fbbd7bcb484d61a32006c07d8232"
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
     }
   ],
-  "sword_cutting_rim": 0.004869846627116203,
-  "sword_body": 0.033753685653209686,
-  "sword_guard": 0.06448730826377869,
+  "design": "noble-blue-moon",
   "native_preview_reviewed": true,
   "in_game_visual_test": false
 }

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "resources_written_this_run": [
+    "Effect/mf_incoming_mist0.wed",
+    "Effect/mf_incoming_mist1.wed",
+    "Effect/mf_incoming_mist2.wed",
+    "Effect/mf_incoming_mist3.wed",
+    "Effect/mf_incoming_mist4.wed",
+    "Effect/mf_incoming_mist5.wed",
+    "Effect/mf_incoming_mist6.wed",
+    "Effect/mf_incoming_mist7.wed",
+    "Effect/mf_settling_mist0.wed",
+    "Effect/mf_settling_mist1.wed",
+    "Effect/mf_settling_mist2.wed",
+    "Effect/mf_settling_mist3.wed",
+    "Effect/mf_settling_mist4.wed",
+    "Effect/mf_settling_mist5.wed"
+  ],
+  "preserved_old_values": 56,
+  "colors_preserved": true,
+  "meteor_six_resources_unchanged": 170,
+  "control_count": 60,
+  "skills_installed": false,
+  "heaven_ground_layers": 0
+}

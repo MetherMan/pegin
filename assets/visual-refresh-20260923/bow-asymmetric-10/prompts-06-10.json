@@ -1,0 +1,148 @@
+{
+  "mode": "built-in image_gen",
+  "intent": "generate",
+  "model": null,
+  "model_note": "The built-in tool does not expose a model identifier.",
+  "images": [
+    {
+      "id": "A06",
+      "name": "상현 거월·장미월",
+      "file": "bow-06.png",
+      "prompt": "Use case: stylized-concept. A brand-new legendary high-fantasy MMORPG weapon concept for Twilight of the Blue Moon. ONE SINGLE COMPLETE BOW ONLY on a portrait 1024x1536 image (2:3). Upright, near-front with just a slight three-quarter angle, weapon fills about 86% of the canvas height. Leave at least 5% completely empty margin on all four sides; ALL upper and lower tips fully visible. Clean flat almost-black midnight background. No text, captions, labels, watermark, borders, grid, inset or alternate views, second bow, arrows, hands, characters, swords or staffs.\nThe crucial requirement is bold STRUCTURAL UPPER-LOWER ASYMMETRY clearly visible from the silhouette at thumbnail size: upper and lower limbs must have DIFFERENT lengths, widths, mass distribution, shapes and ornament rhythm. Do not mirror the upper limb onto the lower limb and do not solve asymmetry with tiny accessories. Keep a legible functional central handgrip, open space behind the grip, coherent recurve limb construction and ONE taut fine bowstring directly connecting the limb tips. Elegant flowing fantastical construction, strong beautiful silhouette, not a random pile of blades.\nNoble radiant blue is the primary material: rich cobalt moonstone, translucent azure crystal and pearl-blue lunar glass, with a visibly recognizable BLUE MOON built into the physical design. Metal only as sparse fine joining lines. No predominant grey steel, no blue-painted ordinary metal. Crisp exquisite surface detail and strong material depth, restrained luminosity, no huge halo, no fog, no floating debris. Asymmetric concept: MASSIVE BROAD CRESCENT UPPER LIMB versus a VERY LONG THIN LOWER LIMB. The upper section is one large sculpted cobalt crescent, its open bite visible, about twice the width of anything below the grip; its upper hooked tip curls inward. Place the grip somewhat above the bow's overall vertical midpoint. The lower limb extends much farther down as a spare elegant tapering blue-moonlight reed with one gentle S-bend and a tiny recurved endpoint. The lower half must NOT have a second matching crescent, fan, wing or bulky ornament. Contrasting compact heavy crescent above and stretched graceful fine line below is the defining silhouette.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-17100d14-5c93-4ff9-95fb-1a7fcb24d9a8.png",
+      "tool": "image_gen.imagegen",
+      "status": "generated",
+      "visual_qa": {
+        "status": "reviewed",
+        "structural_upper_lower_asymmetry": true,
+        "distinct_mass_length_and_curve": true,
+        "single_bow": true,
+        "full_upper_lower_tips": true,
+        "visible_grip": true,
+        "continuous_single_bowstring": true,
+        "blue_moon_visible": true,
+        "no_other_weapons": true,
+        "no_text_or_multiple_views": true,
+        "note": "상단의 넓고 묵직한 초승달과 하단의 아주 길고 가는 곡선이 대조된다. 중앙보다 높은 그립과 연결된 단일 시위, 양 끝 모두 확인.",
+        "framing_note": "All tips are fully within the frame. Generated vertical margins are narrower than the requested 5%; original bytes are preserved without resizing or editing."
+      },
+      "sha256": "96dc974ea758401398ebfa8f265e19f69d9e2c0e9a84058a2cad973e60f55da6",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A07",
+      "name": "외익 장월궁",
+      "file": "bow-07.png",
+      "prompt": "Use case: stylized-concept. A brand-new legendary high-fantasy MMORPG weapon concept for Twilight of the Blue Moon. ONE SINGLE COMPLETE BOW ONLY on a portrait 1024x1536 image (2:3). Upright, near-front with just a slight three-quarter angle, weapon fills about 86% of the canvas height. Leave at least 5% completely empty margin on all four sides; ALL upper and lower tips fully visible. Clean flat almost-black midnight background. No text, captions, labels, watermark, borders, grid, inset or alternate views, second bow, arrows, hands, characters, swords or staffs.\nThe crucial requirement is bold STRUCTURAL UPPER-LOWER ASYMMETRY clearly visible from the silhouette at thumbnail size: upper and lower limbs must have DIFFERENT lengths, widths, mass distribution, shapes and ornament rhythm. Do not mirror the upper limb onto the lower limb and do not solve asymmetry with tiny accessories. Keep a legible functional central handgrip, open space behind the grip, coherent recurve limb construction and ONE taut fine bowstring directly connecting the limb tips. Elegant flowing fantastical construction, strong beautiful silhouette, not a random pile of blades.\nNoble radiant blue is the primary material: rich cobalt moonstone, translucent azure crystal and pearl-blue lunar glass, with a visibly recognizable BLUE MOON built into the physical design. Metal only as sparse fine joining lines. No predominant grey steel, no blue-painted ordinary metal. Crisp exquisite surface detail and strong material depth, restrained luminosity, no huge halo, no fog, no floating debris. Asymmetric concept: LOW GRIP AND ONE HIGH LUNAR WING. Put the handgrip distinctly below the vertical midpoint, about 65 percent down from the top. From it, one exceptionally long upper limb rises in a long slanting clean recurve; only its outside edge carries a broad single pale-blue wing-like moonstone sweep that fans out high above the hand and tapers upward. Below the grip, a MUCH SHORTER compact cobalt return limb curls inward like a crescent talon, with no wing. Integrate a clear small blue crescent in the wing root near the grip. Aim for a tall, noble asymmetrical Japanese-longbow-like rhythm but an ornate magical moonstone fantasy design, NOT a literal historical bow.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-b2102466-8124-4989-a2f4-46da29f4b943.png",
+      "tool": "image_gen.imagegen",
+      "status": "generated",
+      "visual_qa": {
+        "status": "reviewed",
+        "structural_upper_lower_asymmetry": true,
+        "distinct_mass_length_and_curve": true,
+        "single_bow": true,
+        "full_upper_lower_tips": true,
+        "visible_grip": true,
+        "continuous_single_bowstring": true,
+        "blue_moon_visible": true,
+        "no_other_weapons": true,
+        "no_text_or_multiple_views": true,
+        "note": "그립이 낮으며 긴 한쪽 달날개가 상단을 차지한다. 하단은 짧은 갈고리 형태로 길이와 부피가 뚜렷하게 다르다.",
+        "framing_note": "All tips are fully within the frame. Generated vertical margins are narrower than the requested 5%; original bytes are preserved without resizing or editing."
+      },
+      "sha256": "efacb6775ece09adfd00a83d9f85225dc03703566b544f715c34abfb86777960",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A08",
+      "name": "편월 골궁",
+      "file": "bow-08.png",
+      "prompt": "Use case: stylized-concept. A brand-new legendary high-fantasy MMORPG weapon concept for Twilight of the Blue Moon. ONE SINGLE COMPLETE BOW ONLY on a portrait 1024x1536 image (2:3). Upright, near-front with just a slight three-quarter angle, weapon fills about 86% of the canvas height. Leave at least 5% completely empty margin on all four sides; ALL upper and lower tips fully visible. Clean flat almost-black midnight background. No text, captions, labels, watermark, borders, grid, inset or alternate views, second bow, arrows, hands, characters, swords or staffs.\nThe crucial requirement is bold STRUCTURAL UPPER-LOWER ASYMMETRY clearly visible from the silhouette at thumbnail size: upper and lower limbs must have DIFFERENT lengths, widths, mass distribution, shapes and ornament rhythm. Do not mirror the upper limb onto the lower limb and do not solve asymmetry with tiny accessories. Keep a legible functional central handgrip, open space behind the grip, coherent recurve limb construction and ONE taut fine bowstring directly connecting the limb tips. Elegant flowing fantastical construction, strong beautiful silhouette, not a random pile of blades.\nNoble radiant blue is the primary material: rich cobalt moonstone, translucent azure crystal and pearl-blue lunar glass, with a visibly recognizable BLUE MOON built into the physical design. Metal only as sparse fine joining lines. No predominant grey steel, no blue-painted ordinary metal. Crisp exquisite surface detail and strong material depth, restrained luminosity, no huge halo, no fog, no floating debris. Asymmetric concept: ONE ENORMOUS OPEN LUNAR BONE ARCH ABOVE THE GRIP AND ONE SMALL LOWER HOOK. The upper limb forms a bold elongated open arch of blue lunar glass, like a single sculpted moonbone crescent with one wide open interior window and slender inner support. Its arc projects strongly to one side and creates spacious architectural negative space. The lower limb is a shorter narrow single J-shaped hook with a sharp polished blue return, no corresponding arch and no round window. Grip offset toward the lower third, subtly angled transitions. The blue moon should be the upper crescent's material and shape, not an extra circular ornament or globe glued to the grip. Luxurious spare structural asymmetry.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-e9fba09e-ebfb-45e6-adc1-223879e7dea2.png",
+      "tool": "image_gen.imagegen",
+      "status": "generated",
+      "visual_qa": {
+        "status": "reviewed",
+        "structural_upper_lower_asymmetry": true,
+        "distinct_mass_length_and_curve": true,
+        "single_bow": true,
+        "full_upper_lower_tips": true,
+        "visible_grip": true,
+        "continuous_single_bowstring": true,
+        "blue_moon_visible": true,
+        "no_other_weapons": true,
+        "no_text_or_multiple_views": true,
+        "note": "상단의 커다란 푸른 초승달 아치와 열린 지지구조, 하단의 작은 J형 갈고리가 명확히 비대칭이다. 시위·그립·끝 온전.",
+        "framing_note": "All tips are fully within the frame. Generated vertical margins are narrower than the requested 5%; original bytes are preserved without resizing or editing."
+      },
+      "sha256": "b660e06090992929d9e7f0645a40e9e5d62c3728201098831b363b3b4b1e64d5",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A09",
+      "name": "파월 편관궁",
+      "file": "bow-09.png",
+      "prompt": "Use case: stylized-concept. A brand-new legendary high-fantasy MMORPG weapon concept for Twilight of the Blue Moon. ONE SINGLE COMPLETE BOW ONLY on a portrait 1024x1536 image (2:3). Upright, near-front with just a slight three-quarter angle, weapon fills about 86% of the canvas height. Leave at least 5% completely empty margin on all four sides; ALL upper and lower tips fully visible. Clean flat almost-black midnight background. No text, captions, labels, watermark, borders, grid, inset or alternate views, second bow, arrows, hands, characters, swords or staffs.\nThe crucial requirement is bold STRUCTURAL UPPER-LOWER ASYMMETRY clearly visible from the silhouette at thumbnail size: upper and lower limbs must have DIFFERENT lengths, widths, mass distribution, shapes and ornament rhythm. Do not mirror the upper limb onto the lower limb and do not solve asymmetry with tiny accessories. Keep a legible functional central handgrip, open space behind the grip, coherent recurve limb construction and ONE taut fine bowstring directly connecting the limb tips. Elegant flowing fantastical construction, strong beautiful silhouette, not a random pile of blades.\nNoble radiant blue is the primary material: rich cobalt moonstone, translucent azure crystal and pearl-blue lunar glass, with a visibly recognizable BLUE MOON built into the physical design. Metal only as sparse fine joining lines. No predominant grey steel, no blue-painted ordinary metal. Crisp exquisite surface detail and strong material depth, restrained luminosity, no huge halo, no fog, no floating debris. Asymmetric concept: ONE-SIDED SHATTERED-MOON CROWN ABOVE, SMOOTH UNINTERRUPTED WAVE BELOW. The upper recurve limb curves outward diagonally and carries a crown of three broad unequal cobalt moonstone crescent fragments, joined as one purposeful structural fan on only its upper outside edge. One fragment is very long, another medium, another short; their refined broken blue-glass contours frame a clear crescent opening. The lower limb has ZERO shards, spikes or crown: it is one silky smooth long cerulean ribbon arc ending in a restrained hook. Upper mass is broad and angular, lower mass narrow and flowing; lengths also unequal. Keep the taut bowstring clear and continuous.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-7818b6a8-bc82-4a0c-ae38-82f07f2077a6.png",
+      "tool": "image_gen.imagegen",
+      "status": "generated",
+      "visual_qa": {
+        "status": "reviewed",
+        "structural_upper_lower_asymmetry": true,
+        "distinct_mass_length_and_curve": true,
+        "single_bow": true,
+        "full_upper_lower_tips": true,
+        "visible_grip": true,
+        "continuous_single_bowstring": true,
+        "blue_moon_visible": true,
+        "no_other_weapons": true,
+        "no_text_or_multiple_views": true,
+        "note": "상단에만 세 크기의 파월 왕관과 푸른 초승달이 있고 하단은 매끈한 긴 물결이다. 좌우 및 상하 복제 대칭 없음.",
+        "framing_note": "All tips are fully within the frame. Generated vertical margins are narrower than the requested 5%; original bytes are preserved without resizing or editing."
+      },
+      "sha256": "6be8d7504a3a412d5ae7931dc3ccde4a9d85f8e93d7e9f107b362cbd7ffacfdf",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "id": "A10",
+      "name": "하현 월류궁",
+      "file": "bow-10.png",
+      "prompt": "Use case: stylized-concept. A brand-new legendary high-fantasy MMORPG weapon concept for Twilight of the Blue Moon. ONE SINGLE COMPLETE BOW ONLY on a portrait 1024x1536 image (2:3). Upright, near-front with just a slight three-quarter angle, weapon fills about 86% of the canvas height. Leave at least 5% completely empty margin on all four sides; ALL upper and lower tips fully visible. Clean flat almost-black midnight background. No text, captions, labels, watermark, borders, grid, inset or alternate views, second bow, arrows, hands, characters, swords or staffs.\nThe crucial requirement is bold STRUCTURAL UPPER-LOWER ASYMMETRY clearly visible from the silhouette at thumbnail size: upper and lower limbs must have DIFFERENT lengths, widths, mass distribution, shapes and ornament rhythm. Do not mirror the upper limb onto the lower limb and do not solve asymmetry with tiny accessories. Keep a legible functional central handgrip, open space behind the grip, coherent recurve limb construction and ONE taut fine bowstring directly connecting the limb tips. Elegant flowing fantastical construction, strong beautiful silhouette, not a random pile of blades.\nNoble radiant blue is the primary material: rich cobalt moonstone, translucent azure crystal and pearl-blue lunar glass, with a visibly recognizable BLUE MOON built into the physical design. Metal only as sparse fine joining lines. No predominant grey steel, no blue-painted ordinary metal. Crisp exquisite surface detail and strong material depth, restrained luminosity, no huge halo, no fog, no floating debris. Asymmetric concept: VERY LONG THIN UPPER LIMB versus RICH SCULPTURAL LOWER LIMB. Place the handgrip near the vertical midpoint but slightly high. Above it, one long narrow cobalt crescent-horn limb reaches high in a restrained almost straight taper, only gently recurving at the tip, with almost no ornaments. Below it, a MUCH BROADER shorter sculptural limb of flowing blue-moonstone ribbons forms a deep sweeping S and an offset wide BLUE crescent aperture; its curves have rich opaline inner surfaces and a few fine architectural joining lines. The lower limb is the visual focal point, clearly wider and more elaborate than the upper. The ribbon shapes are the physical limb, not trailing cloth or loose decorative ribbons. Avoid mirroring any lower curve above the grip.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-564f-7501-bfae-0b0d388e922b\\exec-5b95c04b-2f36-4f68-b71e-3a7286b72258.png",
+      "tool": "image_gen.imagegen",
+      "status": "generated",
+      "visual_qa": {
+        "status": "reviewed",
+        "structural_upper_lower_asymmetry": true,
+        "distinct_mass_length_and_curve": true,
+        "single_bow": true,
+        "full_upper_lower_tips": true,
+        "visible_grip": true,
+        "continuous_single_bowstring": true,
+        "blue_moon_visible": true,
+        "no_other_weapons": true,
+        "no_text_or_multiple_views": true,
+        "note": "아주 가늘고 긴 상단과 넓고 풍부한 하단의 달·월류 구조가 대비된다. 그립·연결 활줄·상하 끝 모두 프레임 안.",
+        "framing_note": "All tips are fully within the frame. Generated vertical margins are narrower than the requested 5%; original bytes are preserved without resizing or editing."
+      },
+      "sha256": "c7640b578f58865524d5d363d095218fdd999c40483c122b35100e1e2edc5c84",
+      "dimensions": [
+        1024,
+        1536
+      ]
+    }
+  ]
+}

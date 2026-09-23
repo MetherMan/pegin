@@ -1,0 +1,16 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>바포메트 대검 · 네이티브 3D 모델</title>
+<style>body{margin:0;background:#171a20;color:#eee;font:14px system-ui}header{position:absolute;top:20px;left:28px}h1{font-size:23px;margin:0 0 6px}p{color:#afb5bd}nav{position:absolute;bottom:22px;left:28px;display:flex;gap:10px}button,a{background:#34313a;border:1px solid #68616f;border-radius:5px;padding:10px;color:#eee;text-decoration:none}canvas{display:block}</style>
+<header><h1>태초의 바포메트 · 순록뿔 대검</h1><p>게임용 모델에서 직접 읽은 입체 형상 · 드래그 회전 / 휠 확대</p></header><nav><button id="front">정면</button><button id="quarter">입체</button><button id="back">뒷면</button><button id="wire">와이어</button><a href="./?v=satin-keratin-v5">바포메트 전체</a></nav>
+<script type="importmap">{"imports":{"three":"../twilight/vendor/three.module.js","controls":"../twilight/vendor/OrbitControls.js"}}</script><script type="module">
+import * as T from 'three';import{OrbitControls}from'controls';
+const data=await(await fetch('model.json?v=satin-keratin-v5',{cache:'no-store'})).json(),c=data.primordial[1],s=new T.Scene();s.background=new T.Color('#282c32');
+s.add(new T.AmbientLight(0xffffff,.8));const keyLight=new T.DirectionalLight(0xffffff,2.8);keyLight.position.set(-3,7,5);s.add(keyLight);const fillLight=new T.DirectionalLight(0xffffff,1.2);fillLight.position.set(4,3,-2);s.add(fillLight);
+const r=new T.WebGLRenderer({antialias:true});r.setSize(innerWidth,innerHeight);r.setPixelRatio(Math.min(devicePixelRatio,2));r.outputColorSpace=T.SRGBColorSpace;document.body.append(r.domElement);
+const geometry=new T.BufferGeometry(),cc=[];for(let i=0;i<c.corners.length;i+=3)cc.push(c.corners[i],c.corners[i+2],c.corners[i+1]);
+geometry.setAttribute('position',new T.Float32BufferAttribute(cc.flatMap(v=>{const p=c.points[v[0]];return[p[2],-p[0],p[1]]}),3));geometry.setAttribute('normal',new T.Float32BufferAttribute(cc.flatMap(v=>[v[3],-v[1],v[2]]),3));geometry.setAttribute('uv',new T.Float32BufferAttribute(cc.flatMap(v=>v.slice(4,6)),2));
+const tex=await new T.TextureLoader().loadAsync('cleaver-atlas.png?v=satin-keratin-v5');tex.flipY=false;tex.colorSpace=T.SRGBColorSpace;const mat=new T.MeshLambertMaterial({map:tex,side:T.FrontSide}),mesh=new T.Mesh(geometry,mat);s.add(mesh);
+const box=new T.Box3().setFromObject(mesh),center=box.getCenter(new T.Vector3()),size=box.getSize(new T.Vector3()),cam=new T.PerspectiveCamera(32,innerWidth/innerHeight,.01,100),controls=new OrbitControls(cam,r.domElement);controls.target.copy(center);controls.enableDamping=true;
+function view(x,z){const d=Math.max(size.y,size.x/cam.aspect)/2/Math.tan(16*Math.PI/180)*1.25;cam.position.copy(center).add(new T.Vector3(x,.04,z).normalize().multiplyScalar(d));controls.update()}
+document.querySelector('#front').onclick=()=>view(0,1);document.querySelector('#back').onclick=()=>view(0,-1);document.querySelector('#quarter').onclick=()=>view(.5,1);document.querySelector('#wire').onclick=()=>mat.wireframe=!mat.wireframe;
+addEventListener('resize',()=>{r.setSize(innerWidth,innerHeight);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()});view(0,1);r.setAnimationLoop(()=>{controls.update();r.render(s,cam)});
+</script></html>

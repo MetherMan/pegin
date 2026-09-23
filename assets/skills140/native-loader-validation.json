@@ -9,18 +9,18 @@
       "blows": 1
     },
     "mt_heaven": {
-      "effects": 6,
-      "parts": 12,
+      "effects": 22,
+      "parts": 52,
       "blows": 3
     },
     "mt_six": {
-      "effects": 12,
-      "parts": 24,
+      "effects": 25,
+      "parts": 49,
       "blows": 6
     },
     "mt_six_blue": {
-      "effects": 12,
-      "parts": 24,
+      "effects": 25,
+      "parts": 49,
       "blows": 6
     },
     "mt_meteorA": {
@@ -34,13 +34,13 @@
       "blows": 0
     },
     "mt_meteorB": {
-      "effects": 22,
-      "parts": 36,
+      "effects": 105,
+      "parts": 241,
       "blows": 7
     },
     "mt_frostB": {
-      "effects": 32,
-      "parts": 35,
+      "effects": 185,
+      "parts": 185,
       "blows": 3
     }
   },

@@ -1,0 +1,70 @@
+{
+  "checked_at_utc": "2026-09-23T09:00:10.739241+00:00",
+  "passed": true,
+  "files": {
+    "server_bin": {
+      "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\server-bin\\LAQIA_GameServer",
+      "bytes": 1812236,
+      "sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1"
+    },
+    "workspace_build": {
+      "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\build\\LAQIA_GameServer",
+      "bytes": 1812236,
+      "sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1"
+    },
+    "family_server_local": {
+      "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\server-local\\LAQIA_GameServer\\LAQIA_GameServer",
+      "bytes": 1812236,
+      "sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1"
+    }
+  },
+  "all_three_local_binaries_identical": true,
+  "cumulative_build_contains_growth_and_card_fix": true,
+  "source": {
+    "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\src\\server\\LAQIA_GameServer\\fight.cpp",
+    "sha256": "3d373fdb5055d5636e339cce0ae4a7ad43e578063fc69c0202a4bff2e3d597f7",
+    "guarded_award_branches": 4,
+    "recipient_level_used": true,
+    "table_entries": 401,
+    "build_override_fight_files": [],
+    "build_path": "tools/manage.py uploads src/server/LAQIA_GameServer then UTF-8 overrides; none override fight.cpp",
+    "historical_dataserver_fight_not_built": "src/server/LAQIA_DataServer/Makefile OBJS excludes fight.o"
+  },
+  "regression": {
+    "report": "final-application-regression.json",
+    "tested_file": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\server-local\\LAQIA_GameServer\\LAQIA_GameServer",
+    "cases": 51,
+    "world_time_and_branch_cases": 28,
+    "total_level_boundaries": 15,
+    "level_up_and_carry_cases": 4,
+    "level_cap_cases": 4,
+    "passed": true
+  },
+  "vm": {
+    "ports_open": {
+      "22222": false,
+      "44444": false,
+      "8030": false,
+      "2560": false
+    },
+    "started_or_stopped": false,
+    "db_accessed": false,
+    "ssh_checked": false,
+    "reason": "SSH port 22222 is closed; VM was not started. Current VM-internal bytes and live service state are not independently verified in this turn."
+  },
+  "historical_installation": {
+    "passed": true,
+    "server_sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1",
+    "server_status": "active",
+    "save_tables_before": "418fec10bcfdc041c7715b2bbe2403e3c638f8bf22f6ebdd7e268decca3bf98e",
+    "save_tables_after": "418fec10bcfdc041c7715b2bbe2403e3c638f8bf22f6ebdd7e268decca3bf98e",
+    "character_and_inventory_tables_unchanged": true,
+    "experience_and_card_rates_unchanged": true,
+    "father_pc_applied": false
+  },
+  "limitations": [
+    "The old 5280d2… hash is the experience-only revision; the current ed4a6e… revision includes the later card change and passed the actual x86 experience regression.",
+    "Offline checks execute the real server instructions but stub UI/network/drop/persistence side effects. No native game hunting was performed.",
+    "No server start/stop, database/account changes, source changes, or binary installation was performed."
+  ]
+}

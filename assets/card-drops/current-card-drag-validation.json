@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "source": "Existing card-drag test loop extracted by AST; no patch/build/write code executed",
+  "full_drag_function_cases": [
+    [
+      "0x10000000",
+      10193,
+      10193,
+      "move"
+    ],
+    [
+      "0x10000000",
+      10194,
+      10194,
+      "move"
+    ],
+    [
+      "0x10000000",
+      10193,
+      10194,
+      "enchant"
+    ],
+    [
+      "0x10000000",
+      10193,
+      1,
+      "enchant"
+    ],
+    [
+      "0x10000000",
+      10194,
+      3970,
+      "enchant"
+    ],
+    [
+      "0x10000000",
+      10095,
+      10095,
+      "move"
+    ],
+    [
+      "0x10000000",
+      10193,
+      0,
+      "move"
+    ],
+    [
+      "0x3500000",
+      10193,
+      10193,
+      "move"
+    ],
+    [
+      "0x3500000",
+      10194,
+      10194,
+      "move"
+    ],
+    [
+      "0x3500000",
+      10193,
+      10194,
+      "enchant"
+    ],
+    [
+      "0x3500000",
+      10193,
+      1,
+      "enchant"
+    ],
+    [
+      "0x3500000",
+      10194,
+      3970,
+      "enchant"
+    ],
+    [
+      "0x3500000",
+      10095,
+      10095,
+      "move"
+    ],
+    [
+      "0x3500000",
+      10193,
+      0,
+      "move"
+    ]
+  ],
+  "installed_dll_hashes": {
+    "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\client-overlay\\UInterface.dll": "5cb2f787c02d53ecc559ea5b08812f9d1b394e9039734b5de39992f30979de96",
+    "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\UInterface.dll": "5cb2f787c02d53ecc559ea5b08812f9d1b394e9039734b5de39992f30979de96",
+    "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\UInterface.dll": "5cb2f787c02d53ecc559ea5b08812f9d1b394e9039734b5de39992f30979de96"
+  },
+  "source_condition_present": true,
+  "game_or_database_started": false,
+  "installed_resources_changed": false
+}

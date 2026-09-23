@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "revision": "matte-down-v4",
+  "scale": 1.7,
+  "experience": 28656,
+  "bodySource": "body-matte-v4-imagegen.png",
+  "hornSource": "horn-material-matte-v4-imagegen.png",
+  "nativePreviewModelIdentical": true,
+  "nativePreviewTexturePixelsIdentical": true,
+  "sourceAtlasRegionsExact": true,
+  "browserViewsChecked": [
+    "quarter",
+    "upper-body",
+    "original-comparison",
+    "attack-animation"
+  ],
+  "closedSideEyesAndGoldForeheadEyePreserved": true,
+  "browserConsoleErrors": [],
+  "gripVisualChecked": true,
+  "bladeRolledAroundGripAxis": true,
+  "inGameDirect3DTest": false
+}

@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "clientInstallation": "final-local-installation.json",
+  "selectedWeapons": {
+    "sword": "S4",
+    "longbow": "H03",
+    "staff": "월식 갈고리"
+  },
+  "iceColor": "#527DFF",
+  "iceOpacity": 90,
+  "verifiedClientResources": 1428,
+  "protectedFiles": 303,
+  "backupsVerified": true,
+  "manifestSourcesVerified": 753,
+  "baphometPreviewNativeIdentical": true,
+  "baphometTexturesPixelIdentical": true,
+  "cardDropReport": "../card-drops/current-card-drop-validation.json",
+  "cardDragReport": "../card-drops/current-card-drag-validation.json",
+  "experienceReport": "../experience-growth/final-application-review.json",
+  "inGameDirect3DTest": false,
+  "liveVmChecked": false,
+  "remoteFatherPcUpdated": false
+}

@@ -2,13 +2,13 @@
   "passed": true,
   "checks": [
     "server, plain client and compressed UI skill tables match; names fit native buffers",
-    "7 magic scripts: native dependencies resolved, 3/6/7/3 blows, staggered shots and saved frost branch angles",
+    "7 magic scripts: native dependencies resolved, 3/6/7/3 blows, target-centered Cocytus with three seals",
     "801 native effect frames recolor reversibly while preserving alpha, geometry, timing and scale",
     "all inventory/equipment gold frame pixels identical to Black Knight",
     "all four scrolls retain original red ribbon/paper pixels, with black background and native gold frame",
     "four distinct learned-skill icons resolve for both genders; 28px native gold borders and original scrolls preserved",
     "Windows CRT and legacy nested parser regression: all Twilight scripts load with complete effect, part and blow counts"
   ],
-  "native_resources": 22,
+  "native_resources": 278,
   "in_game_visual_test": false
 }

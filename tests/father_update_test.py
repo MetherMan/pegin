@@ -1,5 +1,6 @@
 from pathlib import Path
-import importlib.util,json,unittest,uuid,contextlib,shutil
+import importlib.util,json,unittest,uuid,contextlib,shutil,hashlib
+from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1]
 TEMPROOT=ROOT/'.cache/updater-tests'
 TEMPROOT.mkdir(parents=True,exist_ok=True)
@@ -53,4 +54,38 @@ class UpdaterTests(unittest.TestCase):
             bad=p/'broken';bad.write_bytes(b'wrong')
             with self.assertRaises(RuntimeError):u.download(bad.as_uri(),p/'staging/file','0'*64,5)
             self.assertEqual(live.read_bytes(),b'live')
+    def test_runtime_repairs_are_verified_before_install_and_confined(self):
+        with test_directory() as d:
+            p=Path(d);source=p/'release';runtime=p/'existing/work/laqia-runtime'
+            helper=source/'tools/runtime/local_control.py';helper.parent.mkdir(parents=True);helper.write_bytes(b'new startup')
+            runtime.mkdir(parents=True);(runtime/'local_control.py').write_bytes(b'old startup')
+            protected={'laqia-vm.qcow2':b'father disk','vm-ssh-key':b'father key','family-local.json':b'father settings'}
+            for name,data in protected.items():(runtime/name).write_bytes(data)
+            entry=dict(kind='runtime',path='local_control.py',source='tools/runtime/local_control.py',sha256=u.sha(helper),bytes=helper.stat().st_size)
+            m=dict(format=1,repository=u.REPOSITORY,files=[],runtime_files=[entry]);(source/'distribution').mkdir();(source/u.MANIFEST).write_text(json.dumps(m))
+            loaded=u.read_manifest(source);u.validate_payloads(source,loaded)
+            u.install_runtime_support(runtime,source,loaded,p/'backup')
+            self.assertEqual((runtime/'local_control.py').read_bytes(),helper.read_bytes())
+            for name,data in protected.items():self.assertEqual((runtime/name).read_bytes(),data)
+            helper.write_bytes(b'tampered')
+            with self.assertRaises(RuntimeError):u.validate_payloads(source,loaded)
+            for forbidden in ['laqia-vm.qcow2','vm-ssh-key','family-local.json','../start_vm.py']:
+                m['runtime_files'][0]['path']=forbidden;(source/u.MANIFEST).write_text(json.dumps(m))
+                with self.assertRaises(ValueError):u.read_manifest(source)
+    def test_repair_zip_handoff_preserves_installation_and_failure_status(self):
+        with test_directory() as d:
+            p=Path(d);(p/'distribution').mkdir();script=p/'distribution/father_update.py';script.write_bytes(b'new verified updater')
+            e=dict(kind='updater',path='update/father_update.py',source='distribution/father_update.py',sha256=u.sha(script),bytes=script.stat().st_size)
+            (p/u.MANIFEST).write_text(json.dumps(dict(format=1,repository=u.REPOSITORY,files=[e])))
+            root=p/'father installation';runtime=root/'work/laqia-runtime'
+            with patch.object(u.subprocess,'run') as run:
+                run.return_value.returncode=7
+                self.assertEqual(u.run_latest_updater(root,runtime,p),7)
+                args=run.call_args.args[0]
+                self.assertEqual(args[args.index('--root')+1],str(root))
+                self.assertEqual(args[args.index('--runtime')+1],str(runtime))
+    def test_payload_entries_include_bootstrap_repairs(self):
+        manifest=u.read_manifest(ROOT)
+        self.assertEqual({e['path'] for e in manifest['runtime_files']},u.RUNTIME_SUPPORT)
+        u.validate_payloads(ROOT,manifest)
 if __name__=='__main__':unittest.main()

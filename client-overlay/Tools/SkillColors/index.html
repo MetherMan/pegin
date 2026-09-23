@@ -15,16 +15,16 @@
         <div class="toolbar"><button class="secondary play" aria-label="메테오 일시정지">일시정지</button><button class="quiet restart" aria-label="메테오 다시 재생">↺ 다시</button><select class="phase" aria-label="메테오 미리보기 단계"><option value="B">모션 + 전체 공격</option></select><select class="speed" aria-label="메테오 재생 속도"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></div>
         <div class="toolbar extra"><button class="quiet sound">소리 켜기</button><button class="quiet camera">전체 보기</button><span class="actor-note">남성 원본 모션 · 트와일라잇 무기</span></div><div class="timing-note"></div><div class="timeline"><input class="seek" type="range" min="0" max="3000" step="1" value="0" aria-label="메테오 재생 위치"><output class="time">0.00초</output></div>
       </div>
-      <div class="body"><p class="description">마법진 7개를 위아래로 펼친 뒤 7발 발사 → 함께 서서히 소멸<br>포탄마다 발사음 · 실제 적중 시 타격음 재생<br>원본 파이어볼의 적중 불꽃 · 높이는 0이 발밑 기준, 값을 올리면 위로 이동<br>대상 중심 범위 6 · 마법진을 이전보다 1.2배 확대</p><label for="meteor">마법진 · 포탄 · 폭발 색상</label><div class="color"><input aria-label="메테오 색상 선택" type="color" id="meteor"><input aria-label="메테오 HEX 색상" id="meteorHex" type="text" maxlength="7" spellcheck="false"><span class="swatch-note">미리보기에 즉시 반영</span></div></div>
+      <div class="body"><p class="description">불규칙한 포격마다 큰 화염과 충격파가 연속 폭발<br>마지막 대형 마법진 → 거대 화염탄 → 바깥으로 퍼지는 폭풍 폭발<br>화염 회오리가 뒤따르고 마그마 잔열이 남습니다<br>피해 7회 · 대상 중심 범위 6 유지</p><label for="meteor">시전 · 마법진 색상</label><div class="color"><input aria-label="메테오 색상 선택" type="color" id="meteor"><input aria-label="메테오 HEX 색상" id="meteorHex" type="text" maxlength="7" spellcheck="false"><span class="swatch-note">미리보기에 즉시 반영</span></div></div>
     </article>
     <article data-kind="frost">
-      <div class="heading"><div><span class="eyebrow">BLACK MAGIC · 140</span><h2>트라이스파이크 프로스트</h2></div><span class="badge">원본 캐릭터 · 모션</span></div>
+      <div class="heading"><div><span class="eyebrow">BLACK MAGIC · 140</span><h2>아일랜드 오브 코시투스</h2></div><span class="badge">원본 캐릭터 · 모션</span></div>
       <div class="viewport"><canvas id="frostCanvas" aria-label="프로스트 실제 모델 3D 미리보기"></canvas><span class="loading">게임 이펙트 불러오는 중…</span><span class="gesture">드래그로 회전 · 휠로 확대</span></div>
       <div class="playback">
         <div class="toolbar"><button class="secondary play" aria-label="얼음 일시정지">일시정지</button><button class="quiet restart" aria-label="얼음 다시 재생">↺ 다시</button><select class="phase" aria-label="얼음 미리보기 단계"><option value="B">모션 + 전체 공격</option></select><select class="speed" aria-label="얼음 재생 속도"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></div>
         <div class="toolbar extra"><button class="quiet sound">소리 켜기</button><button class="quiet camera">전체 보기</button><span class="actor-note">남성 원본 모션 · 트와일라잇 무기</span></div><div class="timing-note"></div><div class="timeline"><input class="seek" type="range" min="0" max="2400" step="1" value="0" aria-label="얼음 재생 위치"><output class="time">0.00초</output></div>
       </div>
-      <div class="body"><p class="description">정면과 좌우로 뻗는 얼음기둥 세 갈래 · 각도 조절 가능<br>전개 간격은 작을수록, 솟는 속도는 클수록 빨라집니다.<br>대상 중심 범위 6 · 소환 안개·파동 선명도 별도 조절</p><label for="frost">시전 · 얼음기둥 · 파동 색상</label><div class="color"><input aria-label="얼음 색상 선택" type="color" id="frost"><input aria-label="얼음 HEX 색상" id="frostHex" type="text" maxlength="7" spellcheck="false"><span class="swatch-note">미리보기에 즉시 반영</span></div></div>
+      <div class="body"><p class="description">바깥쪽 원형 얼음 고리부터 안쪽 고리까지 순서대로 솟아납니다<br>마지막에 중앙 거대 얼음 완성 → 눈보라와 얼음 지대<br>얼음 색상·불투명도·표면 진하기·안개량·고리의 시작·도착 반경을 조절할 수 있습니다</p><label for="frostIce">얼음 몸체 색상</label><div class="color"><input aria-label="얼음 몸체 색상 선택" type="color" id="frostIce"><input aria-label="얼음 몸체 HEX 색상" id="frostIceHex" type="text" maxlength="7" spellcheck="false"><span class="swatch-note">결정 · 기둥 · 가시 · 빙편</span></div><label for="frost">시전 · 보조 마법진 색상</label><div class="color"><input aria-label="얼음 마법진 색상 선택" type="color" id="frost"><input aria-label="얼음 마법진 HEX 색상" id="frostHex" type="text" maxlength="7" spellcheck="false"><span class="swatch-note">몸체 색상과 별도로 조절</span></div></div>
     </article>
   </div>
   <p class="note">게임의 남성 캐릭터 모델과 원본 모션을 재생합니다. 배경·조명은 확인용이며, 게임 화면을 직접 캡처한 것은 아닙니다. 비행은 30Hz 기준으로 근사하므로 실제 프레임 속도·거리·지형에 따라 차이가 있습니다. 얼음 거리는 연출 거리이며 피해 범위는 기존 대상 중심 6입니다. 0.5×는 확인용 재생 배속이고 저장되는 스킬 속도는 아래 조절값입니다.</p>
@@ -37,7 +37,7 @@
         <div class="toolbar"><button class="secondary play" aria-label="헤븐 일시정지">일시정지</button><button class="quiet restart" aria-label="헤븐 다시 재생">↺ 다시</button><select class="phase" aria-label="헤븐 미리보기 종류"><option value="B">푸른 관통 화살</option></select><select class="speed" aria-label="헤븐 재생 속도"><option value="1" selected>1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></div>
         <div class="toolbar extra"><button class="quiet sound">소리 켜기</button><button class="quiet camera">전체 보기</button><span class="actor-note">남성 원본 모션 · 트와일라잇 무기</span></div><div class="timing-note"></div><div class="timeline"><input class="seek" type="range" min="0" max="3600" step="1" value="0" aria-label="헤븐 재생 위치"><output class="time">0.00초</output></div>
       </div>
-      <div class="body"><p class="description">푸른 화살을 빠르게 3연사 · 피해 3회<br>대상 중심 범위 5 · 원거리 숙련도 140</p></div>
+      <div class="body"><p class="description">푸른 화살을 빠르게 3연사 · 피해 3회<br>기존 발사·타격 연출에 몸 앞뒤로 뻗는 일자 관통선을 추가<br>기존 적중 크기와 추가 관통선의 굵기·길이를 각각 조절<br>대상 중심 범위 5 · 원거리 숙련도 140</p></div>
     </article>
     <article data-kind="six">
       <div class="heading"><div><span class="eyebrow">ARCHER · 140</span><h2>식스폴드 샷</h2></div><span class="badge">원본 캐릭터 · 모션</span></div>
@@ -49,7 +49,7 @@
       <div class="body"><p class="description">무기에 맞는 화살을 빠르게 6연사 · 피해 6회<br>단일 대상 · 원거리 숙련도 140</p></div>
     </article>
   </div>
-  <footer><button id="apply" disabled>게임에 전체 설정 적용</button><span>게임을 종료한 상태에서 적용해 주세요.</span><span id="status" role="status"></span></footer>
+  <footer><button id="apply" disabled>게임에 전체 설정 적용</button><button id="savePreview" hidden disabled>미리보기 설정 저장</button><span>게임을 종료한 상태에서 적용해 주세요.</span><span id="status" role="status"></span></footer>
 </main>
 <script id="settings" type="application/json">{"colors":__COLORS__,"tuning":__TUNING__,"fields":__FIELDS__,"defaults":__DEFAULTS__,"token":"__TOKEN__"}</script>
 <script type="module" src="/controls.js"></script>

@@ -1,0 +1,6 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Create one production game VFX ground-decal texture, square image, directly top-down orthographic. An irregular roughly circular ISLAND OF COCYTUS frozen ground, diameter 84% of canvas, isolated against perfectly pure BLACK RGB 0 background for additive blending. Deep midnight navy ice with cyan and pale blue fractured crystalline plates, sparse bright fissures radiating outward from a dark central impact socket, hoarfrost crust and jagged frozen boundary, long fine branching frost veins, chipped shards embedded FLAT in the ground. Strong readable silhouette, rich dark blue midtones, controlled highlights (NOT a white snow disc), ancient sinister ice magic, realistic hand-painted 2000s dark fantasy MMORPG spell texture. Keep center relatively dark so a separate ice pillar and magic seal will be readable. No standing pillars, no perspective, no scenery, no text, no border, no UI, no watermark, no drop shadow, no full-screen white glow. Outer 8% of every edge completely black. All visual details are inside the frozen island. Material texture only, not an illustration or a rendered scene.",
+  "source": "cocytus-frozen-ground-imagegen.png",
+  "usage": "Native additive frozen-ground texture; format conversion only"
+}

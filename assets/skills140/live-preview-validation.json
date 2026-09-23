@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "targeted_requests": {
+    "meteor": {
+      "seconds": 0.504,
+      "bytes": 615854
+    },
+    "frost": {
+      "seconds": 0.664,
+      "bytes": 1962645
+    },
+    "heaven": {
+      "seconds": 0.255,
+      "bytes": 24884
+    },
+    "six": {
+      "seconds": 0.419,
+      "bytes": 36858
+    }
+  },
+  "delta_trace_pixels_match": true,
+  "delta_blizzard_mesh_matches": true,
+  "saved_settings_unchanged": {
+    "colors.json": "8ce6f1faff12af6a54c24fcd95b7fc111e4e4ea2c234e98c74df672abd5f9682",
+    "tuning.json": "1556d94ac509a219e6b6b122a60bb8f62d916f7fb1214f3314f571868eddb353"
+  },
+  "in_game_visual_test": false
+}

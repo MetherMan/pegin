@@ -1,7 +1,7 @@
 """Loopback-only color editor for the local game's private level-140 effects."""
 from pathlib import Path
 from http.server import HTTPServer,BaseHTTPRequestHandler
-import argparse,json,secrets,re,struct,webbrowser,hashlib,os,ctypes,socket,sys
+import argparse,json,secrets,re,struct,webbrowser,hashlib,os,ctypes,socket,sys,time
 sys.dont_write_bytecode=True
 from ctypes import wintypes
 from urllib.request import urlopen
@@ -9,7 +9,7 @@ HERE=Path(__file__).resolve().parent
 CLIENT=HERE.parents[1]
 if str(HERE) not in sys.path:sys.path.insert(0,str(HERE))
 from native_assets import load_preview
-from tuning import DEFAULTS,FIELDS,load_settings,validate_settings,resource_reader,compile_resources
+from tuning import DEFAULTS,FIELDS,load_settings,validate_settings,validate_colors,resource_reader,compile_resources
 
 class ColorServer(HTTPServer):
  allow_reuse_address=False
@@ -18,9 +18,13 @@ class ColorServer(HTTPServer):
    self.socket.setsockopt(socket.SOL_SOCKET,socket.SO_EXCLUSIVEADDRUSE,1)
   super().server_bind()
 def validate(value):
- if not isinstance(value,dict) or set(value)!={'meteor','frost'}:raise ValueError('두 스킬의 색상 값이 필요합니다.')
- if not all(isinstance(v,str) and re.fullmatch(r'#[0-9a-fA-F]{6}',v) for v in value.values()):raise ValueError('색상은 #RRGGBB 형식이어야 합니다.')
- return {k:v.upper() for k,v in value.items()}
+ colors=validate_colors(value)
+ # A panel opened before frostIce existed still posts two keys. Preserve the
+ # latest saved body colour instead of silently resetting it to default blue.
+ if 'frostIce' not in value and (HERE/'colors.json').is_file():
+  saved=validate_colors(json.loads((HERE/'colors.json').read_text()))
+  colors['frostIce']=saved['frostIce']
+ return colors
 def recolor(raw,color):
  b=bytearray(raw);at=31
  for _ in range(2):n=struct.unpack_from('<i',b,at)[0];at+=4+n
@@ -55,6 +59,19 @@ def apply(colors,mirror=None,settings=None):
   if mirror!=CLIENT:roots.append(mirror)
  settings=load_settings(HERE) if settings is None else validate_settings(settings)
  prepared,meta=compile_resources(resource_reader(CLIENT,mirror),settings,colors)
+ store_resources(prepared,roots)
+ return {'ok':True,'message':'색상·속도·거리·크기 적용 완료. 평소 게임 시작 버튼으로 다시 실행해 주세요.','colors':colors,'tuning':settings,'timing':meta}
+
+def save_preview(colors,settings):
+ # Preview saving is deliberately limited to the development overlay. It must
+ # never silently become a write to a playable installation or mirror.
+ if CLIENT.name!='client-overlay':raise ValueError('이 설치에서는 미리보기 설정 저장을 지원하지 않습니다.')
+ colors=validate(colors);settings=validate_settings(settings)
+ prepared,meta=compile_resources(resource_reader(CLIENT),settings,colors)
+ store_resources(prepared,[CLIENT])
+ return {'ok':True,'message':'미리보기 설정을 저장했습니다. 새로고침해도 유지되며 설치된 게임에는 반영되지 않습니다.','colors':colors,'tuning':settings,'timing':meta}
+
+def store_resources(prepared,roots):
  originals={}
  try:
   for root in roots:
@@ -76,12 +93,11 @@ def apply(colors,mirror=None,settings=None):
    if data is None:p.unlink(missing_ok=True)
    else:p.write_bytes(data)
   raise
- return {'ok':True,'message':'색상·속도·거리·크기 적용 완료. 평소 게임 시작 버튼으로 다시 실행해 주세요.','colors':colors,'tuning':settings,'timing':meta}
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--mirror');parser.add_argument('--no-browser',action='store_true');parser.add_argument('--port',type=int,default=8874);args=parser.parse_args()
+ parser=argparse.ArgumentParser();parser.add_argument('--mirror');parser.add_argument('--no-browser',action='store_true');parser.add_argument('--preview-only',action='store_true');parser.add_argument('--port',type=int,default=8874);args=parser.parse_args()
  token=secrets.token_urlsafe(32)
  url=f'http://127.0.0.1:{args.port}/'
- instance=hashlib.sha256((str(CLIENT)+'|'+str(Path(args.mirror).resolve() if args.mirror else '')).encode()).hexdigest()
+ instance=hashlib.sha256((str(CLIENT)+'|'+str(Path(args.mirror).resolve() if args.mirror else '')+('|preview-only' if args.preview_only else '')).encode()).hexdigest()
  class Handler(BaseHTTPRequestHandler):
   def log_message(self,*args):pass
   def reply(self,code,data,kind='application/json; charset=utf-8'):
@@ -92,23 +108,31 @@ def main():
    if self.path=='/preview.json':
     try:return self.reply(200,json.dumps(load_preview(HERE,CLIENT,args.mirror),separators=(',',':')).encode())
     except Exception as e:return self.reply(500,json.dumps({'error':str(e)},ensure_ascii=False).encode())
-   static={'/preview.js':'text/javascript; charset=utf-8','/actor.js':'text/javascript; charset=utf-8','/controls.js':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8','/vendor/three.module.js':'text/javascript; charset=utf-8','/vendor/OrbitControls.js':'text/javascript; charset=utf-8'}
+   static={'/preview.js':'text/javascript; charset=utf-8','/actor.js':'text/javascript; charset=utf-8','/controls.js':'text/javascript; charset=utf-8','/live_preview_queue.js':'text/javascript; charset=utf-8','/style.css':'text/css; charset=utf-8','/vendor/three.module.js':'text/javascript; charset=utf-8','/vendor/OrbitControls.js':'text/javascript; charset=utf-8'}
    if self.path in static:return self.reply(200,(HERE/self.path[1:]).read_bytes(),static[self.path])
    if self.path!='/':return self.reply(404,b'{}')
-   cfg=json.loads((HERE/'colors.json').read_text());s=(HERE/'index.html').read_text(encoding='utf-8').replace('__TOKEN__',token).replace('__COLORS__',json.dumps(cfg)).replace('__TUNING__',json.dumps(load_settings(HERE))).replace('__FIELDS__',json.dumps(FIELDS,ensure_ascii=False)).replace('__DEFAULTS__',json.dumps(DEFAULTS))
+   cfg=validate(json.loads((HERE/'colors.json').read_text()));s=(HERE/'index.html').read_text(encoding='utf-8').replace('__TOKEN__',token).replace('__COLORS__',json.dumps(cfg)).replace('__TUNING__',json.dumps(load_settings(HERE))).replace('__FIELDS__',json.dumps(FIELDS,ensure_ascii=False)).replace('__DEFAULTS__',json.dumps(DEFAULTS))
+   if args.preview_only:s=s.replace('<body>','<body data-preview-only="true">').replace('<h1>스킬 연출 조절</h1>','<h1>스킬 연출 미리보기</h1>').replace('<button id="apply" disabled>','<button id="apply" disabled style="display:none">').replace('게임을 종료한 상태에서 적용해 주세요.','미리보기 시안 · 이 창의 조절은 설치된 게임에 반영되지 않습니다.')
    self.reply(200,s.encode('utf-8'),'text/html; charset=utf-8')
   def do_POST(self):
    if self.headers.get('Host')!=f'127.0.0.1:{args.port}' or self.headers.get('Origin',url[:-1])!=url[:-1]:return self.reply(403,b'{}')
-   if self.path not in ('/apply','/preview') or self.headers.get('X-Local-Token')!=token:return self.reply(403,b'{}')
+   if self.path not in ('/apply','/preview','/save-preview') or self.headers.get('X-Local-Token')!=token:return self.reply(403,b'{}')
+   if self.path=='/apply' and args.preview_only:return self.reply(403,json.dumps({'ok':False,'message':'미리보기 전용 창입니다.'},ensure_ascii=False).encode())
+   if self.path=='/save-preview' and not args.preview_only:return self.reply(403,b'{}')
    try:
     n=int(self.headers.get('Content-Length','0'))
-    if not 0<n<8192:raise ValueError('잘못된 요청 크기입니다.')
+    if not 0<n<131072:raise ValueError('잘못된 요청 크기입니다.')
     payload=json.loads(self.rfile.read(n))
-    if not isinstance(payload,dict) or set(payload)!={'colors','tuning'}:raise ValueError('잘못된 설정 요청입니다.')
+    if not isinstance(payload,dict) or not {'colors','tuning'}<=set(payload) or not set(payload)<={'colors','tuning','kinds','knownSources'}:raise ValueError('잘못된 설정 요청입니다.')
     colors=validate(payload['colors']);settings=validate_settings(payload['tuning'])
     if self.path=='/preview':
-     generated,meta=compile_resources(resource_reader(CLIENT,args.mirror),settings,colors)
-     result=load_preview(HERE,CLIENT,args.mirror,generated=generated,metadata=meta,compact=True)
+     started=time.perf_counter();kinds=payload.get('kinds');known=payload.get('knownSources',{})
+     if kinds is not None and (not isinstance(kinds,list) or not 1<=len(kinds)<=4 or not all(isinstance(k,str) and k in DEFAULTS for k in kinds)):raise ValueError('잘못된 미리보기 스킬입니다.')
+     if not isinstance(known,dict) or len(known)>1000 or not all(isinstance(k,str) and isinstance(v,str) and re.fullmatch(r'[0-9a-f]{64}',v) for k,v in known.items()):raise ValueError('잘못된 미리보기 자산 정보입니다.')
+     generated,meta=compile_resources(resource_reader(CLIENT,args.mirror),settings,colors,only=kinds)
+     result=load_preview(HERE,CLIENT,args.mirror,generated=generated,metadata=meta,compact=True,kinds=kinds,known_sources=known)
+     result['previewMetrics']={'serverMilliseconds':round((time.perf_counter()-started)*1000,1),'kinds':list(meta)}
+    elif self.path=='/save-preview':result=save_preview(colors,settings)
     else:result=apply(colors,args.mirror,settings)
     self.reply(200,json.dumps(result,ensure_ascii=False,separators=(',',':')).encode())
    except Exception as e:self.reply(400,json.dumps({'ok':False,'message':str(e)},ensure_ascii=False).encode())

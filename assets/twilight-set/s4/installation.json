@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "design": "noble-blue-moon-s4-sword",
+  "timestamp": "20260923-145821",
+  "files": [
+    {
+      "root": "family",
+      "path": "Equip/mt_twilight_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_twilight_1.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\s4-sword-20260923-145821\\Equip\\mt_twilight_1.mod",
+      "before": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+    },
+    {
+      "root": "family",
+      "path": "Equip/mt_twilight_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_twilight_2.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\s4-sword-20260923-145821\\Equip\\mt_twilight_2.mod",
+      "before": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+    },
+    {
+      "root": "family",
+      "path": "Equip/mt_twilight_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Equip\\mt_twilight_3.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\s4-sword-20260923-145821\\Equip\\mt_twilight_3.mod",
+      "before": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+    },
+    {
+      "root": "family",
+      "path": "Texture/Equip/mt_twilight_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\client\\GameClient\\Texture\\Equip\\mt_twilight_atlas.wtm",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\s4-sword-20260923-145821\\Texture\\Equip\\mt_twilight_atlas.wtm",
+      "before": "5277dce405783b30472064e0dc7da0d17a6766bd4969b4aeb382814df2d50bb3",
+      "sha256": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_twilight_1.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_twilight_1.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\s4-sword-20260923-145821\\Equip\\mt_twilight_1.mod",
+      "before": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_twilight_2.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_twilight_2.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\s4-sword-20260923-145821\\Equip\\mt_twilight_2.mod",
+      "before": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+    },
+    {
+      "root": "workspace",
+      "path": "Equip/mt_twilight_3.mod",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Equip\\mt_twilight_3.mod",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\s4-sword-20260923-145821\\Equip\\mt_twilight_3.mod",
+      "before": "5778ca345c00514b1070beab36814011c99c28cbf61f79f545541e0da5ea8ddd",
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+    },
+    {
+      "root": "workspace",
+      "path": "Texture/Equip/mt_twilight_atlas.wtm",
+      "destination": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\runtime\\client\\GameClient\\Texture\\Equip\\mt_twilight_atlas.wtm",
+      "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\.cache\\s4-sword-20260923-145821\\Texture\\Equip\\mt_twilight_atlas.wtm",
+      "before": "5277dce405783b30472064e0dc7da0d17a6766bd4969b4aeb382814df2d50bb3",
+      "sha256": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf"
+    }
+  ],
+  "protected_files_unchanged": 67,
+  "existing_launch_paths_preserved": true,
+  "bow_staff_unchanged": true,
+  "skill_installation_changed": false,
+  "in_game_visual_test": false
+}

@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "controls": [
+    "heaven.brightness",
+    "heaven.intensity",
+    "heaven.projectileSize",
+    "heaven.launchSize",
+    "heaven.impactSize",
+    "heaven.areaSize",
+    "heaven.pierceWidth",
+    "heaven.impactHeight",
+    "six.brightness",
+    "six.intensity",
+    "six.projectileSize",
+    "six.launchSize",
+    "six.impactSize",
+    "six.impactHeight"
+  ],
+  "damage_events": [
+    3,
+    6,
+    6
+  ],
+  "target_followers": {
+    "mt_heaven": 12,
+    "mt_six": 6,
+    "mt_six_blue": 6
+  },
+  "original_trace_records_preserved": 19,
+  "trace_aliases_idempotent": true,
+  "compact_native_mesh_texture_parity": true,
+  "in_game_visual_test": false
+}

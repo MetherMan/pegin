@@ -1,0 +1,1164 @@
+{
+  "anchored_roots": [
+    {
+      "bone": 5,
+      "surface": [
+        0.257820076266133,
+        4.560882421348104,
+        0.17811228230668194
+      ],
+      "root": [
+        0.0940837711046291,
+        4.407853484226,
+        0.09224863007048854
+      ],
+      "inset": 0.24,
+      "requested_surface_distance": 0.05198
+    },
+    {
+      "bone": 5,
+      "surface": [
+        -0.2597785797435467,
+        4.559058732895588,
+        0.18350119280194827
+      ],
+      "root": [
+        -0.10627529512208234,
+        4.415594524918548,
+        0.1030042199399675
+      ],
+      "inset": 0.22499999999999998,
+      "requested_surface_distance": 0.03323
+    },
+    {
+      "bone": 7,
+      "surface": [
+        0.9093941757595674,
+        3.824142017941292,
+        0.46732645075108603
+      ],
+      "root": [
+        0.8485347385298301,
+        3.795256967847792,
+        0.20586558794141874
+      ],
+      "inset": 0.27,
+      "requested_surface_distance": 0.1079
+    },
+    {
+      "bone": 7,
+      "surface": [
+        1.5188456649357223,
+        3.6144055597438607,
+        0.0074868548256944445
+      ],
+      "root": [
+        1.4598432053498325,
+        3.5146133421543766,
+        0.11410051751199607
+      ],
+      "inset": 0.1575,
+      "requested_surface_distance": 0.04712
+    },
+    {
+      "bone": 12,
+      "surface": [
+        -0.9331398124930144,
+        3.850764291815008,
+        0.4666874343106108
+      ],
+      "root": [
+        -0.8756601719404367,
+        3.8234810919201516,
+        0.21975279128650257
+      ],
+      "inset": 0.255,
+      "requested_surface_distance": 0.10789
+    },
+    {
+      "bone": 12,
+      "surface": [
+        -1.4085370957061287,
+        3.5896227327033072,
+        0.4238076259536041
+      ],
+      "root": [
+        -1.376061608413767,
+        3.573471330814096,
+        0.2782587511996685
+      ],
+      "inset": 0.15000000000000002,
+      "requested_surface_distance": 0.01626
+    },
+    {
+      "bone": 8,
+      "surface": [
+        2.0669527945544397,
+        3.6141006786230547,
+        0.297854587123608
+      ],
+      "root": [
+        2.0219105548543705,
+        3.44788426965649,
+        0.22369562250663588
+      ],
+      "inset": 0.1875,
+      "requested_surface_distance": 0.03912
+    },
+    {
+      "bone": 13,
+      "surface": [
+        -2.3023029423216212,
+        3.4272577690600796,
+        -0.0342037857809451
+      ],
+      "root": [
+        -2.3018802424192693,
+        3.5160136648315374,
+        0.12239191112864017
+      ],
+      "inset": 0.18,
+      "requested_surface_distance": 0.01922
+    },
+    {
+      "bone": 13,
+      "surface": [
+        -1.88614341614373,
+        3.6457254104157126,
+        0.3000622568504253
+      ],
+      "root": [
+        -1.8741507876869439,
+        3.5694462518953896,
+        0.22890983708743418
+      ],
+      "inset": 0.10500000000000001,
+      "requested_surface_distance": 0.04143
+    },
+    {
+      "bone": 18,
+      "surface": [
+        0.5884156503912015,
+        0.8875482909117468,
+        0.44906135998179636
+      ],
+      "root": [
+        0.4366968594780329,
+        0.8612362523149846,
+        0.3420784870126677
+      ],
+      "inset": 0.1875,
+      "requested_surface_distance": 0.03255
+    },
+    {
+      "bone": 23,
+      "surface": [
+        -0.6743088469507381,
+        0.6728771956489628,
+        -0.09582633437001581
+      ],
+      "root": [
+        -0.5903322922047894,
+        0.5624106713516837,
+        -0.006551000359554943
+      ],
+      "inset": 0.165,
+      "requested_surface_distance": 0.07377
+    },
+    {
+      "bone": 22,
+      "surface": [
+        -0.5388081765482858,
+        1.2842577363849876,
+        0.37365528337186205
+      ],
+      "root": [
+        -0.43263144881771487,
+        1.157657747189463,
+        0.3022483843765884
+      ],
+      "inset": 0.18,
+      "requested_surface_distance": 0.11849
+    },
+    {
+      "bone": 3,
+      "surface": [
+        0.14935350294473285,
+        4.044590017419428,
+        0.5334180198909991
+      ],
+      "root": [
+        0.09840530836283078,
+        3.9223950473699665,
+        0.4006440737891534
+      ],
+      "inset": 0.1875,
+      "requested_surface_distance": 0.02953
+    },
+    {
+      "bone": 3,
+      "surface": [
+        -0.2516298767931325,
+        3.7154943727249248,
+        0.6405754414855389
+      ],
+      "root": [
+        -0.19919067228257575,
+        3.74555775910079,
+        0.44730730487239867
+      ],
+      "inset": 0.2025,
+      "requested_surface_distance": 0.02113
+    },
+    {
+      "bone": 3,
+      "surface": [
+        0.3376520766145428,
+        3.3020419164016053,
+        0.4927165770504508
+      ],
+      "root": [
+        0.26633434100349973,
+        3.367530995428371,
+        0.3684941510737401
+      ],
+      "inset": 0.1575,
+      "requested_surface_distance": 0.0897
+    }
+  ],
+  "branched_antlers": 2,
+  "antler_branches": 7,
+  "body_horn_growths": 13,
+  "asymmetric_growths": true,
+  "curved_centerlines": true,
+  "original_ram_horns_removed": true,
+  "crown_horns": 0,
+  "cavity_is_through_hole": false,
+  "dripping_strands": 0,
+  "horn_uv": [
+    {
+      "key": "body-horn-0",
+      "corners": 1200,
+      "centerline_length": 3.006131,
+      "density_v_per_world_unit": 0.234624,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.103782,
+      "tip_u_span": 0.001474,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 1152,
+      "changed_normal_corners": 1152,
+      "smoothed_positions": 200,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-1",
+      "corners": 1200,
+      "centerline_length": 2.830114,
+      "density_v_per_world_unit": 0.228013,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.094555,
+      "tip_u_span": 0.001433,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 1152,
+      "changed_normal_corners": 1152,
+      "smoothed_positions": 200,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-2",
+      "corners": 480,
+      "centerline_length": 1.052264,
+      "density_v_per_world_unit": 0.239235,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.064636,
+      "tip_u_span": 0.001503,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 432,
+      "changed_normal_corners": 432,
+      "smoothed_positions": 80,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-3",
+      "corners": 480,
+      "centerline_length": 1.229724,
+      "density_v_per_world_unit": 0.256914,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.066184,
+      "tip_u_span": 0.001614,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 432,
+      "changed_normal_corners": 432,
+      "smoothed_positions": 80,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-4",
+      "corners": 480,
+      "centerline_length": 1.038738,
+      "density_v_per_world_unit": 0.237698,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.056006,
+      "tip_u_span": 0.001494,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 432,
+      "changed_normal_corners": 432,
+      "smoothed_positions": 80,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-5",
+      "corners": 480,
+      "centerline_length": 0.927656,
+      "density_v_per_world_unit": 0.239082,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.065345,
+      "tip_u_span": 0.001502,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 432,
+      "changed_normal_corners": 432,
+      "smoothed_positions": 80,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-6",
+      "corners": 480,
+      "centerline_length": 1.198861,
+      "density_v_per_world_unit": 0.257836,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.064801,
+      "tip_u_span": 0.00162,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 432,
+      "changed_normal_corners": 432,
+      "smoothed_positions": 80,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-7",
+      "corners": 480,
+      "centerline_length": 1.057382,
+      "density_v_per_world_unit": 0.234777,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.049417,
+      "tip_u_span": 0.001475,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 432,
+      "changed_normal_corners": 432,
+      "smoothed_positions": 80,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-8",
+      "corners": 480,
+      "centerline_length": 0.966393,
+      "density_v_per_world_unit": 0.259373,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.057039,
+      "tip_u_span": 0.00163,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 432,
+      "changed_normal_corners": 432,
+      "smoothed_positions": 80,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-9",
+      "corners": 768,
+      "centerline_length": 1.331703,
+      "density_v_per_world_unit": 0.245538,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.122187,
+      "tip_u_span": 0.001543,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 720,
+      "changed_normal_corners": 720,
+      "smoothed_positions": 128,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-10",
+      "corners": 624,
+      "centerline_length": 0.695281,
+      "density_v_per_world_unit": 0.247998,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.07199,
+      "tip_u_span": 0.001558,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-11",
+      "corners": 768,
+      "centerline_length": 1.239559,
+      "density_v_per_world_unit": 0.244769,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.115037,
+      "tip_u_span": 0.001538,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 720,
+      "changed_normal_corners": 720,
+      "smoothed_positions": 128,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-12",
+      "corners": 624,
+      "centerline_length": 0.770006,
+      "density_v_per_world_unit": 0.234777,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.064907,
+      "tip_u_span": 0.001475,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-13",
+      "corners": 768,
+      "centerline_length": 0.963094,
+      "density_v_per_world_unit": 0.238928,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.082568,
+      "tip_u_span": 0.001501,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 720,
+      "changed_normal_corners": 720,
+      "smoothed_positions": 128,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-14",
+      "corners": 624,
+      "centerline_length": 0.804098,
+      "density_v_per_world_unit": 0.229089,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.076001,
+      "tip_u_span": 0.001439,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-15",
+      "corners": 624,
+      "centerline_length": 0.447814,
+      "density_v_per_world_unit": 0.239696,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.046387,
+      "tip_u_span": 0.001506,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-16",
+      "corners": 624,
+      "centerline_length": 0.699583,
+      "density_v_per_world_unit": 0.254454,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.087933,
+      "tip_u_span": 0.001599,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-17",
+      "corners": 624,
+      "centerline_length": 0.663504,
+      "density_v_per_world_unit": 0.231088,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.070275,
+      "tip_u_span": 0.001452,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-18",
+      "corners": 624,
+      "centerline_length": 0.805992,
+      "density_v_per_world_unit": 0.234009,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.077633,
+      "tip_u_span": 0.00147,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-19",
+      "corners": 624,
+      "centerline_length": 0.860692,
+      "density_v_per_world_unit": 0.258451,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.089314,
+      "tip_u_span": 0.001624,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-20",
+      "corners": 624,
+      "centerline_length": 0.782038,
+      "density_v_per_world_unit": 0.252148,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.094107,
+      "tip_u_span": 0.001584,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "body-horn-21",
+      "corners": 624,
+      "centerline_length": 0.783823,
+      "density_v_per_world_unit": 0.244616,
+      "atlas_bounds": [
+        0.521953125,
+        0.06390625,
+        0.978046875,
+        0.95609375
+      ],
+      "root_u_span": 0.071008,
+      "tip_u_span": 0.001537,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    }
+  ],
+  "approved_concept_reconstructed": true,
+  "blade_outline_points": 47,
+  "raised_horn_spine": true,
+  "curved_guard": true,
+  "original_red_blade_removed": true,
+  "weapon_concept_pending": false,
+  "weapon_hand_bone": 14,
+  "blade_roll_degrees": 180,
+  "blade_roll_axis": [
+    0,
+    0,
+    1
+  ],
+  "grip_pivot_baseline": [
+    -2.92578,
+    3.2614,
+    0
+  ],
+  "blade_long_axis_preserved": true,
+  "cleaver_horn_uv": [
+    {
+      "key": "cleaver-horn-0",
+      "corners": 2160,
+      "centerline_length": 2.907663,
+      "density_v_per_world_unit": 0.231395,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.074367,
+      "tip_u_span": 0.002399,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 2112,
+      "changed_normal_corners": 2112,
+      "smoothed_positions": 360,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-1",
+      "corners": 1200,
+      "centerline_length": 1.265347,
+      "density_v_per_world_unit": 0.247229,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.056388,
+      "tip_u_span": 0.000769,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 1152,
+      "changed_normal_corners": 1152,
+      "smoothed_positions": 200,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-2",
+      "corners": 816,
+      "centerline_length": 0.78441,
+      "density_v_per_world_unit": 0.24108,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.042489,
+      "tip_u_span": 0.00075,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 768,
+      "changed_normal_corners": 768,
+      "smoothed_positions": 136,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-3",
+      "corners": 816,
+      "centerline_length": 0.789047,
+      "density_v_per_world_unit": 0.248305,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.041188,
+      "tip_u_span": 0.000772,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 768,
+      "changed_normal_corners": 768,
+      "smoothed_positions": 136,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-4",
+      "corners": 816,
+      "centerline_length": 0.700897,
+      "density_v_per_world_unit": 0.256914,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.05327,
+      "tip_u_span": 0.000799,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 768,
+      "changed_normal_corners": 768,
+      "smoothed_positions": 136,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-5",
+      "corners": 816,
+      "centerline_length": 0.926074,
+      "density_v_per_world_unit": 0.255069,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.039665,
+      "tip_u_span": 0.000793,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 768,
+      "changed_normal_corners": 768,
+      "smoothed_positions": 136,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-6",
+      "corners": 1008,
+      "centerline_length": 0.603231,
+      "density_v_per_world_unit": 0.253224,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.036753,
+      "tip_u_span": 0.000788,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 960,
+      "changed_normal_corners": 960,
+      "smoothed_positions": 168,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-7",
+      "corners": 624,
+      "centerline_length": 0.46014,
+      "density_v_per_world_unit": 0.264446,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.032899,
+      "tip_u_span": 0.000822,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-8",
+      "corners": 624,
+      "centerline_length": 0.414667,
+      "density_v_per_world_unit": 0.229243,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.026143,
+      "tip_u_span": 0.000713,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-9",
+      "corners": 624,
+      "centerline_length": 0.463987,
+      "density_v_per_world_unit": 0.26214,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.029894,
+      "tip_u_span": 0.000815,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-10",
+      "corners": 624,
+      "centerline_length": 0.288098,
+      "density_v_per_world_unit": 0.247536,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.023096,
+      "tip_u_span": 0.00077,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-11",
+      "corners": 432,
+      "centerline_length": 0.117475,
+      "density_v_per_world_unit": 0.245999,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.017852,
+      "tip_u_span": 0.000765,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 384,
+      "changed_normal_corners": 384,
+      "smoothed_positions": 72,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-12",
+      "corners": 816,
+      "centerline_length": 0.622748,
+      "density_v_per_world_unit": 0.241541,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.050082,
+      "tip_u_span": 0.000751,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 768,
+      "changed_normal_corners": 768,
+      "smoothed_positions": 136,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    },
+    {
+      "key": "cleaver-horn-13",
+      "corners": 624,
+      "centerline_length": 0.414116,
+      "density_v_per_world_unit": 0.22663,
+      "atlas_bounds": [
+        0.759953125,
+        0.04890625,
+        0.990046875,
+        0.90609375
+      ],
+      "root_u_span": 0.039942,
+      "tip_u_span": 0.000705,
+      "uses_arc_length": true,
+      "taper_aware": true,
+      "smooth_horn_normals": true,
+      "normal_weighting": "adjacent_side_face_area",
+      "smoothed_side_corners": 576,
+      "changed_normal_corners": 576,
+      "smoothed_positions": 104,
+      "cap_normals_preserved": true,
+      "normal_seam_welded": true
+    }
+  ],
+  "passed": true,
+  "revision": "black-keratin-v5",
+  "original_bones": 29,
+  "original_animation_rotations_unchanged": true,
+  "scale": 1.7,
+  "sculpt_baseline_scale": 1.4,
+  "sculpt_scale_factor": 1.2142857142857144,
+  "baseline_sha256": "02d1c782760615fce09384d04a170d901d1c81a6483c98ecfedf7f3c7f380921",
+  "animations": {
+    "p-warrior_bla_pst.ani": {
+      "output": "mt_prime_pst.ani",
+      "frames": 71,
+      "source_sha256": "ac78ad542aa6b14414b4c06b8388aba0a16d16d2196e8360cf4a73568304a0a1",
+      "sha256": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b"
+    },
+    "p-warrior_bla_pwa.ani": {
+      "output": "mt_prime_pwa.ani",
+      "frames": 42,
+      "source_sha256": "a5f4c0923a97b2de43a5f5d68cd5d5e1c1b56951b4fac8adaaf3c6634fb28436",
+      "sha256": "f5b00d844ec3c0bfa898612a82b3c3934659031e6a67665e14bfc0f1796b8df3"
+    },
+    "p-warrior_bla_pa1.ani": {
+      "output": "mt_prime_pa1.ani",
+      "frames": 71,
+      "source_sha256": "ac78ad542aa6b14414b4c06b8388aba0a16d16d2196e8360cf4a73568304a0a1",
+      "sha256": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b"
+    },
+    "p-warrior_bla_ded.ani": {
+      "output": "mt_prime_ded.ani",
+      "frames": 93,
+      "source_sha256": "6697ac212754d779c73500783ccdd82c7b505b3be585787c8ce8cd5174a0d155",
+      "sha256": "0d6458c30373e0b8ab6e0e0f1f1c260347d27926228a2b7b1119d8d641264e2d"
+    },
+    "p-warrior_bla_wst.ani": {
+      "output": "mt_prime_wst.ani",
+      "frames": 71,
+      "source_sha256": "ac78ad542aa6b14414b4c06b8388aba0a16d16d2196e8360cf4a73568304a0a1",
+      "sha256": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b"
+    },
+    "p-warrior_bla_wru.ani": {
+      "output": "mt_prime_wru.ani",
+      "frames": 26,
+      "source_sha256": "8597ebedb8ff939ff906c50231055ea031a3a8d77cbde7869cd9e0f3d4e97b4a",
+      "sha256": "1ea5a05d110a2928611e0d5b9767b04fae6734e63fc77ec7e8e74649c518fae5"
+    },
+    "p-warrior_bla_wa1.ani": {
+      "output": "mt_prime_wa1.ani",
+      "frames": 104,
+      "source_sha256": "86368ded87a596737f5b3473e789a938de1ec29111d899f94b72a1db29db1195",
+      "sha256": "336f108980cee52b05efa9584649c4c8ee48a317909f71844fb3f83a44af9ae9"
+    },
+    "p-warrior_bla_ht.ani": {
+      "output": "mt_prime_ht.ani",
+      "frames": 34,
+      "source_sha256": "c1d035aa1828ea8a9cfea487c88005a6cde5b848a68116548dea6c8ac1c302c9",
+      "sha256": "5f6d59ca3e2062bc6eeaa9bc162f44928aafba53317d3369aae2f5b49260448e"
+    }
+  },
+  "body_source": "body-matte-v4-imagegen.png",
+  "horn_source": "horn-satin-keratin-v5-imagegen.png",
+  "vertices": 5861,
+  "triangles": 11416,
+  "texture_readback": [
+    {
+      "texture": "mt_prime_body.wtm",
+      "preview": "body-cyclops-atlas.png",
+      "sha256": "5c9c73c5d6acdb5390967889fc74b6dd0e25b50958b51047c1c7d64ff596fa1a"
+    },
+    {
+      "texture": "mt_prime_cleaver.wtm",
+      "preview": "cleaver-atlas.png",
+      "sha256": "f1ae6fed99133552739df1986645d4eb2a9d022f5d61ccf81da7830751ff7024"
+    }
+  ],
+  "in_game_visual_test": false
+}

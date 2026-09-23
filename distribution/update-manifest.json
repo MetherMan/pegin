@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-22-primordial-baphomet",
+  "version": "2026-09-23-local-growth-card-fix",
   "files": [
     {
       "kind": "client",
@@ -14,57 +14,3186 @@
       "kind": "client",
       "path": "DeicideOnline.exe",
       "source": "client-overlay/DeicideOnline.exe",
-      "bytes": 520192,
-      "sha256": "f1465e05d3ebe7db3a3c825ccc464b8d7652bcda9d5cf8477cba05b92cdbfac4"
+      "bytes": 524288,
+      "sha256": "ccda166cd52a804d594bbbc8c850284836244dc01fb3a4374a770b775e0422eb"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_0.wed",
+      "source": "client-overlay/Effect/mf_aftershock_0.wed",
+      "bytes": 3782,
+      "sha256": "f44bdd85c52e86830592f61fb8a21b5b9e9149e475977c03508df71783934fa7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_1.wed",
+      "source": "client-overlay/Effect/mf_aftershock_1.wed",
+      "bytes": 3574,
+      "sha256": "111a4208297029db720eccbc9cb4f3bb46e24bc346468a1138b12dfa57fb2a48"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_10.wed",
+      "source": "client-overlay/Effect/mf_aftershock_10.wed",
+      "bytes": 1806,
+      "sha256": "45b15b3f3763462a80f5e8b32502be01aff131a3ae4cbe9ac810e98805cc0014"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_11.wed",
+      "source": "client-overlay/Effect/mf_aftershock_11.wed",
+      "bytes": 1598,
+      "sha256": "52dbff893c7e00c156faaa0caa9a22cff102d5d505fc97cc3ff320766bc8acd0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_12.wed",
+      "source": "client-overlay/Effect/mf_aftershock_12.wed",
+      "bytes": 1390,
+      "sha256": "bb749cead6601be2b91182e85fa248fa04f45ed20f28798b5b5ccda5526cdec6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_13.wed",
+      "source": "client-overlay/Effect/mf_aftershock_13.wed",
+      "bytes": 1234,
+      "sha256": "3786c04ae85d4a4a7abcd463a4f87ef3c4909f8ba5d2e2194a50edb89735b838"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_14.wed",
+      "source": "client-overlay/Effect/mf_aftershock_14.wed",
+      "bytes": 1026,
+      "sha256": "73b8d95b204bdf8a8cb20603ca74ea0d17e758f31b4b9d22d10d15e19a56dbbd"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_15.wed",
+      "source": "client-overlay/Effect/mf_aftershock_15.wed",
+      "bytes": 818,
+      "sha256": "3e773b0fcf82ff37eafb460f1e38ce37d6bf8fef5f02029981d55560411e6d6b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_16.wed",
+      "source": "client-overlay/Effect/mf_aftershock_16.wed",
+      "bytes": 1385,
+      "sha256": "877770d17e221607403d9070d5c651beb166e82c37b88855506542ef5044f9bb"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_17.wed",
+      "source": "client-overlay/Effect/mf_aftershock_17.wed",
+      "bytes": 1229,
+      "sha256": "568357eebc7d07dd51095733d65f3bf04cf6ccfd56998d85b05d83d2750fcc34"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_2.wed",
+      "source": "client-overlay/Effect/mf_aftershock_2.wed",
+      "bytes": 3418,
+      "sha256": "48a67311b7eb5c48e9673f8aac372625fa5ab011a4c13a56abf80811ca625672"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_3.wed",
+      "source": "client-overlay/Effect/mf_aftershock_3.wed",
+      "bytes": 3210,
+      "sha256": "0c48f225c5f9af5155f64fe2664fb5a3c169d8366ce8df2dd3cb0c9d5bce9d43"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_4.wed",
+      "source": "client-overlay/Effect/mf_aftershock_4.wed",
+      "bytes": 3002,
+      "sha256": "055abb333de4d6be1111d18e49082e06957763cba2a70a9141dd1233a0abd3ed"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_5.wed",
+      "source": "client-overlay/Effect/mf_aftershock_5.wed",
+      "bytes": 2794,
+      "sha256": "723875a41abf0dacea36252001184d3b172b1f92d795a02312fec2f50023df7c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_6.wed",
+      "source": "client-overlay/Effect/mf_aftershock_6.wed",
+      "bytes": 2586,
+      "sha256": "125ec2dbed596e8a6d0cd5fc574a8cac1daafbd768246a93ce0449e88bee3dc6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_7.wed",
+      "source": "client-overlay/Effect/mf_aftershock_7.wed",
+      "bytes": 2430,
+      "sha256": "765cc7cca9967721d0df2343fe9598d53a19799ee6577e623888565f4142f12a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_8.wed",
+      "source": "client-overlay/Effect/mf_aftershock_8.wed",
+      "bytes": 2222,
+      "sha256": "b6d9d3bcb6e1be53fda9fa8bf215f3ab9e975ba6f04e0573c3a109efea1cc66b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_aftershock_9.wed",
+      "source": "client-overlay/Effect/mf_aftershock_9.wed",
+      "bytes": 2014,
+      "sha256": "5ccdd68a777d383533bc7261f353e492a096319f3c878234cb6e8f71f45555ea"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_blizzard0.wed",
+      "source": "client-overlay/Effect/mf_blizzard0.wed",
+      "bytes": 4562,
+      "sha256": "a39377002fe0909d79a6043af582801808bd4eafeb743db59813596c5de97f03"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_blizzard0.WEM",
+      "source": "client-overlay/Effect/mf_blizzard0.WEM",
+      "bytes": 20124,
+      "sha256": "b1e81df25dd135b24428e5bae9cfce2d088ec64547e658f6cb0c2cf22c21abd3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_blizzard1.wed",
+      "source": "client-overlay/Effect/mf_blizzard1.wed",
+      "bytes": 4458,
+      "sha256": "c173d85bb53f54ed0649c5203f4d0a220c8909baceef9fb088cd7e2e34a8c770"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_blizzard1.WEM",
+      "source": "client-overlay/Effect/mf_blizzard1.WEM",
+      "bytes": 20124,
+      "sha256": "5a0aaf58d0a0c3f07b93d1a22ee5022380b5be178bcbc969d65434e053596b6f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_blizzard2.wed",
+      "source": "client-overlay/Effect/mf_blizzard2.wed",
+      "bytes": 4354,
+      "sha256": "36deff02b99b1f5d82138d01cb6031fb79f34fce286f4f3dafb030f6f0e3b109"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_blizzard2.WEM",
+      "source": "client-overlay/Effect/mf_blizzard2.WEM",
+      "bytes": 20124,
+      "sha256": "906cf0f6bde52804505aff4604fb0dbb0f5c76ecf0e733414f357ffe0c68b81c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_broken_crag0.WEM",
+      "source": "client-overlay/Effect/mf_broken_crag0.WEM",
+      "bytes": 864,
+      "sha256": "2599d28912186fd6ee06909d3ed7af6950559703b1f45df469b5694d5588572e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_broken_crag1.WEM",
+      "source": "client-overlay/Effect/mf_broken_crag1.WEM",
+      "bytes": 982,
+      "sha256": "4734e4c2b1fe314a4474a55c46e389a839821d2fd59caa0b92e33d04a94b30ad"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_broken_crag2.WEM",
+      "source": "client-overlay/Effect/mf_broken_crag2.WEM",
+      "bytes": 746,
+      "sha256": "b608b5cd0993096be75b72c48e18c35bf8db556f38f7b9a31115bc211a0b003d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_broken_crag3.WEM",
+      "source": "client-overlay/Effect/mf_broken_crag3.WEM",
+      "bytes": 864,
+      "sha256": "be8d964cd3c7f400ec7c97bc08c5705013654c3ad0573f6e73152c3489769d79"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_broken_crag4.WEM",
+      "source": "client-overlay/Effect/mf_broken_crag4.WEM",
+      "bytes": 982,
+      "sha256": "5918b07fe2fb32a52f82a450791920f5d015abc6da2f0c2ef30a5a58da07f511"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_broken_crag5.WEM",
+      "source": "client-overlay/Effect/mf_broken_crag5.WEM",
+      "bytes": 746,
+      "sha256": "d37e085a86cd445310ebb631cb9015b8402a90a1471ecc36bf36ab7288145b9d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_broken_crag6.WEM",
+      "source": "client-overlay/Effect/mf_broken_crag6.WEM",
+      "bytes": 864,
+      "sha256": "fc3d595ed989a4d3a0fcd08a140c6afa674f9e6751d6a4028a2fb5e44f9af4ba"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_broken_crag7.WEM",
+      "source": "client-overlay/Effect/mf_broken_crag7.WEM",
+      "bytes": 982,
+      "sha256": "a481e2a4d0e49dfb0c8940bbad60a7131ab168379060b97e5d28b42a5dbce65c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_broken_crag8.WEM",
+      "source": "client-overlay/Effect/mf_broken_crag8.WEM",
+      "bytes": 746,
+      "sha256": "550d35c471f051948c0c1bcb00a8bbd53ae97b679dc1a2a53ba73cab1e068075"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard0.wed",
+      "source": "client-overlay/Effect/mf_burst_shard0.wed",
+      "bytes": 1487,
+      "sha256": "c375c6a0b433cc051b5d92bf42f0a16de87db0e3d1451fa78f9e60c162e9f139"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard1.wed",
+      "source": "client-overlay/Effect/mf_burst_shard1.wed",
+      "bytes": 1591,
+      "sha256": "d0cea465f79fb118cbfd9fb55b20a5bcdb52966b60206a596acca9f327b640f0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard10.wed",
+      "source": "client-overlay/Effect/mf_burst_shard10.wed",
+      "bytes": 1383,
+      "sha256": "7ca1a181a2904da36072f1c95dd90120d0515aa2c5ec3be1bb43bf505ba39d19"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard11.wed",
+      "source": "client-overlay/Effect/mf_burst_shard11.wed",
+      "bytes": 1383,
+      "sha256": "ef3b2dc6158948f403daafc867b70843295b4c53be806c98f13769e37cec3003"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard12.wed",
+      "source": "client-overlay/Effect/mf_burst_shard12.wed",
+      "bytes": 1435,
+      "sha256": "f5d5a56c2819dd16308f43151df6681aed38ee00e56014ec9ad1b74d42ca60f5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard13.wed",
+      "source": "client-overlay/Effect/mf_burst_shard13.wed",
+      "bytes": 1435,
+      "sha256": "9f1057aa602526af6039d8fca3505d043e094072f61a38925be72b61db71deab"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard14.wed",
+      "source": "client-overlay/Effect/mf_burst_shard14.wed",
+      "bytes": 1383,
+      "sha256": "710b99df18e506f553777caf28f80757aea5d220493cac6bc7be9e9644ca698a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard15.wed",
+      "source": "client-overlay/Effect/mf_burst_shard15.wed",
+      "bytes": 1383,
+      "sha256": "b8abd0f5f491c190a393e23d04cf0dec5c5ef70ef6af5d1d5e29be559096d4f8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard16.wed",
+      "source": "client-overlay/Effect/mf_burst_shard16.wed",
+      "bytes": 1539,
+      "sha256": "33d82cceb33fc03221fd35d6fe084f199f0bbb54e188715285d248f335e89893"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard17.wed",
+      "source": "client-overlay/Effect/mf_burst_shard17.wed",
+      "bytes": 1383,
+      "sha256": "1ce1e640895f5485584ce638fbec8e385a152337330e574f6ff2e3e287fa77b1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard2.wed",
+      "source": "client-overlay/Effect/mf_burst_shard2.wed",
+      "bytes": 1383,
+      "sha256": "e1b5a593481c7799678dfd80c5dd7bf90feed388876620d48867739bf05dfe97"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard3.wed",
+      "source": "client-overlay/Effect/mf_burst_shard3.wed",
+      "bytes": 1435,
+      "sha256": "fac1c3e90c6d613737e282c6c3036c4833ef37e104a715cc5d76b9872f069854"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard4.wed",
+      "source": "client-overlay/Effect/mf_burst_shard4.wed",
+      "bytes": 1539,
+      "sha256": "a0823f694e3071fe6cd270c7d8fa7d05d2c909315ad0aa058e3046b80998f289"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard5.wed",
+      "source": "client-overlay/Effect/mf_burst_shard5.wed",
+      "bytes": 1383,
+      "sha256": "9e45fcf6cb961866c9011cf79421b9c35e907ffd5515366acc3ee95f6672baaf"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard6.wed",
+      "source": "client-overlay/Effect/mf_burst_shard6.wed",
+      "bytes": 1539,
+      "sha256": "57ba1d9a9a6f09d247879129ae340a67f648af542fb9afe343372c821e55ff90"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard7.wed",
+      "source": "client-overlay/Effect/mf_burst_shard7.wed",
+      "bytes": 1435,
+      "sha256": "5d55ad34c3fcf17f7a3975d102e153d2a4d8659b686f79c3d059b6ff2a8cc611"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard8.wed",
+      "source": "client-overlay/Effect/mf_burst_shard8.wed",
+      "bytes": 1487,
+      "sha256": "9c9169bbe7bcfa5de326ebc3c976603ab50a08e5288666dbc8ff4208fb6f33e5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_burst_shard9.wed",
+      "source": "client-overlay/Effect/mf_burst_shard9.wed",
+      "bytes": 1383,
+      "sha256": "1326a43432a1f690b5ec9b8924a6e8863fbfedf44bd4dde69761e3995f1e8dd6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cocytus_pillar.wed",
+      "source": "client-overlay/Effect/mf_cocytus_pillar.wed",
+      "bytes": 3936,
+      "sha256": "dd90d5adef8f3dc18911c291c1fad1c661ca5f0738ac2163942db5af6c35b716"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cocytus_pillar_rim.wed",
+      "source": "client-overlay/Effect/mf_cocytus_pillar_rim.wed",
+      "bytes": 3940,
+      "sha256": "0b00978e4f681be3624e7b4811a97a72e5ac58a39c9e5bbf10d8fe441a229719"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cocytus_seal.WEM",
+      "source": "client-overlay/Effect/mf_cocytus_seal.WEM",
+      "bytes": 444,
+      "sha256": "0791725fdb0ec48b2774d0cf9bca5e23d741cae5edc28ba6b5f19b5629bc0d12"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cocytus_seal0.wed",
+      "source": "client-overlay/Effect/mf_cocytus_seal0.wed",
+      "bytes": 5085,
+      "sha256": "7363c1283bfbf10fade504db49d771f14ad77a1ddf080ee3d031024b4760cde8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cocytus_seal0.WEM",
+      "source": "client-overlay/Effect/mf_cocytus_seal0.WEM",
+      "bytes": 260,
+      "sha256": "92b98da4156dcf2a332a3dce943d91d84488b4ab6aa9a48f6e0428858376eff6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cocytus_seal1.wed",
+      "source": "client-overlay/Effect/mf_cocytus_seal1.wed",
+      "bytes": 4931,
+      "sha256": "f281c0211a48fa95a53f10d60dd6801d2f7d806fbca6a844035c13280bf5a4c2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cocytus_seal1.WEM",
+      "source": "client-overlay/Effect/mf_cocytus_seal1.WEM",
+      "bytes": 260,
+      "sha256": "92b98da4156dcf2a332a3dce943d91d84488b4ab6aa9a48f6e0428858376eff6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cocytus_seal2.wed",
+      "source": "client-overlay/Effect/mf_cocytus_seal2.wed",
+      "bytes": 4775,
+      "sha256": "ea1ce41d741150e16192dab17e1fd5a3202d3ee0683124fe40cb24f7aa84ed44"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cocytus_seal2.WEM",
+      "source": "client-overlay/Effect/mf_cocytus_seal2.WEM",
+      "bytes": 260,
+      "sha256": "92b98da4156dcf2a332a3dce943d91d84488b4ab6aa9a48f6e0428858376eff6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_cold_mist.WEM",
+      "source": "client-overlay/Effect/mf_cold_mist.WEM",
+      "bytes": 468,
+      "sha256": "c03d3066283dc6c3d8a6c7f2ef142f20538a82fb7c138fe55e6b13baa7b2773e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike.WEM",
+      "source": "client-overlay/Effect/mf_crown_spike.WEM",
+      "bytes": 2664,
+      "sha256": "65f7feb71f1d5ff8812cad8db0edf7e53144e5f5fc9212762d3c78513c66f70b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike0.wed",
+      "source": "client-overlay/Effect/mf_crown_spike0.wed",
+      "bytes": 3785,
+      "sha256": "1e491f376cb291c2ff95a124d2d4641544288a0a920e537707a952cf1eeedd30"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike1.wed",
+      "source": "client-overlay/Effect/mf_crown_spike1.wed",
+      "bytes": 3889,
+      "sha256": "7f442a8805334f08250ea77f7dea7683c3da4712f5ab19bc9ce270afbbf3c524"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike10.wed",
+      "source": "client-overlay/Effect/mf_crown_spike10.wed",
+      "bytes": 3785,
+      "sha256": "fbfe18fbca8cc0c0414b7c8ed6e28688f038f70714b2bb4c515e7944e6910eed"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike11.wed",
+      "source": "client-overlay/Effect/mf_crown_spike11.wed",
+      "bytes": 5188,
+      "sha256": "79846e720bc8db2df8a890a1a3973b0a44d85a8ae4515dd88eb44afaada48ade"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike2.wed",
+      "source": "client-overlay/Effect/mf_crown_spike2.wed",
+      "bytes": 3785,
+      "sha256": "3fb57c8891e40119d40f50a6b1b10f6cd78eb467c6959b68a3a25518e7dcc205"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike3.wed",
+      "source": "client-overlay/Effect/mf_crown_spike3.wed",
+      "bytes": 3837,
+      "sha256": "8b064eb89248dd8f950b1545348d06071308dae78cdc8fca885c15cc01db78b6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike4.wed",
+      "source": "client-overlay/Effect/mf_crown_spike4.wed",
+      "bytes": 3889,
+      "sha256": "756a063ed38e99120b1f5bf28bdc6e50267b0800f8661db45667689ec50de2f6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike5.wed",
+      "source": "client-overlay/Effect/mf_crown_spike5.wed",
+      "bytes": 3837,
+      "sha256": "56e6d2d0e4519ccaa22265459cef66d704c7e82dc21f0491b20a8ff55dcf09fe"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike6.wed",
+      "source": "client-overlay/Effect/mf_crown_spike6.wed",
+      "bytes": 3785,
+      "sha256": "432b9ce8c300ed75c4054e3c9d6d983d672b1251e7698250697f16727a0a069f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike7.wed",
+      "source": "client-overlay/Effect/mf_crown_spike7.wed",
+      "bytes": 3889,
+      "sha256": "30d7418cf6f7d2590f742c1331c3324da6c739eec19136515f783048afdd909f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike8.wed",
+      "source": "client-overlay/Effect/mf_crown_spike8.wed",
+      "bytes": 3889,
+      "sha256": "541b1157e4928fbf586b1e42ede5dbce4f0e6ab0107e6c3eb9f123f422e46acd"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crown_spike9.wed",
+      "source": "client-overlay/Effect/mf_crown_spike9.wed",
+      "bytes": 3785,
+      "sha256": "b8243bc44df34d072c2501068b4043cc71c566490a2912041cfb1894a7293dd7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crystal.WEM",
+      "source": "client-overlay/Effect/mf_crystal.WEM",
+      "bytes": 746,
+      "sha256": "e35ca0618487205ae18b9164aadc2b3eccba01e316e9ef2b33a26839046b29db"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_crystal_rim.WEM",
+      "source": "client-overlay/Effect/mf_crystal_rim.WEM",
+      "bytes": 2236,
+      "sha256": "bac78753a1725406943891c5151111c4e0efb54f53beee4d5000a7b678bb2fa2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_0.wed",
+      "source": "client-overlay/Effect/mf_eruption_0.wed",
+      "bytes": 5502,
+      "sha256": "1a60cac2b029a5f2b10a0da8a3ba9f6c47d15979821c751ba63efa1d9f10453a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_1.wed",
+      "source": "client-overlay/Effect/mf_eruption_1.wed",
+      "bytes": 5450,
+      "sha256": "619fff8b5bab6fda68c095b64aad1dad32a1b10e672a888d59f1ca9daa000273"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_10.wed",
+      "source": "client-overlay/Effect/mf_eruption_10.wed",
+      "bytes": 5502,
+      "sha256": "28f21f5f98881917788455f6868fa989e058d0f1874e53252e60c068a63d9c3a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_100.wed",
+      "source": "client-overlay/Effect/mf_eruption_100.wed",
+      "bytes": 4930,
+      "sha256": "6ed79401d4d5b97180a073d7aff63b677f5dcadfdb65022bc722dc89e28e8aec"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_101.wed",
+      "source": "client-overlay/Effect/mf_eruption_101.wed",
+      "bytes": 4930,
+      "sha256": "e27f3a6244611f07ca09ba83b0506182fc8ddc0f5b05663a0fb2a6d211e28efa"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_102.wed",
+      "source": "client-overlay/Effect/mf_eruption_102.wed",
+      "bytes": 4618,
+      "sha256": "7d74493ab08cf22c5c15e55ba800ad8e58776c64e2012aeb45fa800d01dfb7ee"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_103.wed",
+      "source": "client-overlay/Effect/mf_eruption_103.wed",
+      "bytes": 4618,
+      "sha256": "fa9ab374ea520d0aa6c6b4abd1a6897391b390f706ab63cb6f342f3ecd08986b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_104.wed",
+      "source": "client-overlay/Effect/mf_eruption_104.wed",
+      "bytes": 4618,
+      "sha256": "5d828e33e6d878c08ce9ac44d6025f77dcc2865770326a0ee29e43a166deee94"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_105.wed",
+      "source": "client-overlay/Effect/mf_eruption_105.wed",
+      "bytes": 4618,
+      "sha256": "5d23981c321a00fe11f20092b6f85b48208d5c1a2d605b6be62ba9c48eee7beb"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_106.wed",
+      "source": "client-overlay/Effect/mf_eruption_106.wed",
+      "bytes": 4670,
+      "sha256": "258017ada199f8a02ed17e2ceeffeac89647eb2811e7bc8339bbf7459d512323"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_107.wed",
+      "source": "client-overlay/Effect/mf_eruption_107.wed",
+      "bytes": 4670,
+      "sha256": "1084dd8477c2e5b8e9bde335847385fc08eb7fd9f8212be9f2d0b45edb6c9c4c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_108.wed",
+      "source": "client-overlay/Effect/mf_eruption_108.wed",
+      "bytes": 4670,
+      "sha256": "d5911475769d67e6fb798a2320be65b538e4837b12c2291db2f2e0ee701c669d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_109.wed",
+      "source": "client-overlay/Effect/mf_eruption_109.wed",
+      "bytes": 4670,
+      "sha256": "2e2ffce27e4cc358bc51c962d3340de04e972d852bdd6976cbedab0dbc39728c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_11.wed",
+      "source": "client-overlay/Effect/mf_eruption_11.wed",
+      "bytes": 5502,
+      "sha256": "277cbf68c6628c970edb253578776bee2ce9a4d4fa881450c1dcb4921f0fbc52"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_110.wed",
+      "source": "client-overlay/Effect/mf_eruption_110.wed",
+      "bytes": 4670,
+      "sha256": "9fcf6effa2a7dbac32b4983a4a585cfbfb626e2df4e3a6e49b5776df4943cea0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_111.wed",
+      "source": "client-overlay/Effect/mf_eruption_111.wed",
+      "bytes": 4670,
+      "sha256": "e4b90a0c6450d435e205cf04989478266493e53fd203c39c13a0d43a97fc84f5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_112.wed",
+      "source": "client-overlay/Effect/mf_eruption_112.wed",
+      "bytes": 4670,
+      "sha256": "82373104733a242aea875bd4f7707391099cc879071facbbe8da53edfa71fe76"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_113.wed",
+      "source": "client-overlay/Effect/mf_eruption_113.wed",
+      "bytes": 4618,
+      "sha256": "ad532db61bdeac8d317d8a0a6702a5514b75a5e14bdc5a33a86dd6ba14341480"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_114.wed",
+      "source": "client-overlay/Effect/mf_eruption_114.wed",
+      "bytes": 4670,
+      "sha256": "10fe5e5ccae4e9cd2491e43ceda1240ea040b608a6ba77149c138ae3afc70705"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_115.wed",
+      "source": "client-overlay/Effect/mf_eruption_115.wed",
+      "bytes": 4306,
+      "sha256": "1f137a7f43a63c6062778c22b5fd55d95578d501572cd4f9abb53b7afded7128"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_116.wed",
+      "source": "client-overlay/Effect/mf_eruption_116.wed",
+      "bytes": 4358,
+      "sha256": "c40c6447873bf69bbc91b30167c47463ccc83a320128a031c13fb29aba5bd4c2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_117.wed",
+      "source": "client-overlay/Effect/mf_eruption_117.wed",
+      "bytes": 4358,
+      "sha256": "90ea9623507fcf32537abca85399ab7a681c78432ca5bba344df232a35d52ac2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_118.wed",
+      "source": "client-overlay/Effect/mf_eruption_118.wed",
+      "bytes": 4358,
+      "sha256": "4d7e4ae2b8ed21c9ba6fa31751f43eb940391298681a7ab11c2a12dd83d46acf"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_119.wed",
+      "source": "client-overlay/Effect/mf_eruption_119.wed",
+      "bytes": 4358,
+      "sha256": "d0cc88d7d9b55e5eba7fd0671cbbc5088043072f1c46ae3cc3da496f038b06ff"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_12.wed",
+      "source": "client-overlay/Effect/mf_eruption_12.wed",
+      "bytes": 5502,
+      "sha256": "b9674592735f66ad66222e8b8679da0179c91fddc6a6f54477a69bb2919c7cf6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_120.wed",
+      "source": "client-overlay/Effect/mf_eruption_120.wed",
+      "bytes": 4358,
+      "sha256": "ac6a64ff9b7e497eaf599a566ed1d3183b8dfc2cf010b46a52bd3514b77d70cd"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_121.wed",
+      "source": "client-overlay/Effect/mf_eruption_121.wed",
+      "bytes": 4358,
+      "sha256": "21d224be5e3d0125e73f57138d7fe2690d61b217cd8c324121394048f0815bb3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_122.wed",
+      "source": "client-overlay/Effect/mf_eruption_122.wed",
+      "bytes": 4410,
+      "sha256": "3262460e241a08270424bee5476654f8b018041b1b167747dc89eeef0ef04e2f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_13.wed",
+      "source": "client-overlay/Effect/mf_eruption_13.wed",
+      "bytes": 5502,
+      "sha256": "f23331598ba2c76063d65449d65277e6e38319b388e42d7a31c5b77f4410bf6b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_14.wed",
+      "source": "client-overlay/Effect/mf_eruption_14.wed",
+      "bytes": 5502,
+      "sha256": "064246e148db33181930989b06d35e8be37b5bb0d3ffaba7e63dd9ed9ff28aa1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_15.wed",
+      "source": "client-overlay/Effect/mf_eruption_15.wed",
+      "bytes": 5502,
+      "sha256": "59afd2a86fc667344ae85e63be9ca943efd89cdf7ce6382032639581fa8ff72d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_16.wed",
+      "source": "client-overlay/Effect/mf_eruption_16.wed",
+      "bytes": 5502,
+      "sha256": "fb29f29298b9e8c93370f4f383e0634e4f207a12703889bedef58c88a14ab071"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_17.wed",
+      "source": "client-overlay/Effect/mf_eruption_17.wed",
+      "bytes": 5502,
+      "sha256": "a4bdf1b28274a3a9c49b183507e3960a16f72efac559b9c9b69c88d430df3a2d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_18.wed",
+      "source": "client-overlay/Effect/mf_eruption_18.wed",
+      "bytes": 5502,
+      "sha256": "39415e6628db7451c03f33aaba04f4ba3c0e3dcdf79ed53dd32e90481f375c68"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_19.wed",
+      "source": "client-overlay/Effect/mf_eruption_19.wed",
+      "bytes": 5502,
+      "sha256": "2524473a3aea1d5b2f06f03d1c6fac36287a7ad926c8f278b5ec8c8f54a74473"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_2.wed",
+      "source": "client-overlay/Effect/mf_eruption_2.wed",
+      "bytes": 5450,
+      "sha256": "a3ea73371a5beba0cf6bbe2a40378316c77ea82734337ad70ab44e54dca4d393"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_20.wed",
+      "source": "client-overlay/Effect/mf_eruption_20.wed",
+      "bytes": 5450,
+      "sha256": "4a5b1d6bfd41a8860440996c56fdcce0db26d3a21055b46d80cb1fdc8079ad61"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_21.wed",
+      "source": "client-overlay/Effect/mf_eruption_21.wed",
+      "bytes": 5450,
+      "sha256": "bf962828514bd16eaf99d6c0f037dbed1ce848cb795310e044338b4e1ff76616"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_22.wed",
+      "source": "client-overlay/Effect/mf_eruption_22.wed",
+      "bytes": 5450,
+      "sha256": "0b8dbd45c9230b4d6adc9a6e8eb055f18a3e157995421f5576698726bc1df36d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_23.wed",
+      "source": "client-overlay/Effect/mf_eruption_23.wed",
+      "bytes": 5450,
+      "sha256": "40d6ef70d216783bcf471287c3871485e4c03596f80d1b221acbc90a17bcb8b9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_24.wed",
+      "source": "client-overlay/Effect/mf_eruption_24.wed",
+      "bytes": 5450,
+      "sha256": "432f7826e4d50990eee64325f3703ed0110867cac98d8c840766d0047c759ee9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_25.wed",
+      "source": "client-overlay/Effect/mf_eruption_25.wed",
+      "bytes": 5502,
+      "sha256": "9c48106eabd8b17e7f7d3c218cfd3225ce87b7c270bbb12910926b7257992966"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_26.wed",
+      "source": "client-overlay/Effect/mf_eruption_26.wed",
+      "bytes": 5450,
+      "sha256": "4a21839b9cf77101aeb317b0316c6800853f0c621c8a5f5902f694d2a4023be4"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_27.wed",
+      "source": "client-overlay/Effect/mf_eruption_27.wed",
+      "bytes": 5502,
+      "sha256": "ec60ce54658458495ffad86428ce7aa6e954aeb95ebef25768aa7a4702e73b48"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_28.wed",
+      "source": "client-overlay/Effect/mf_eruption_28.wed",
+      "bytes": 5450,
+      "sha256": "8b717db9b381e5fc8bf709c5825aa0b3a368caa199839ff692b2b5313a5bd86d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_29.wed",
+      "source": "client-overlay/Effect/mf_eruption_29.wed",
+      "bytes": 5450,
+      "sha256": "fc93d4b96f81f9359429432f6e156f59a58328d73a2651ebb1b28c091d41f712"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_3.wed",
+      "source": "client-overlay/Effect/mf_eruption_3.wed",
+      "bytes": 5450,
+      "sha256": "542307f5b96a669b9fc9114da92faf1b30af97f930dfdf9c9964ae3acfa47ea8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_30.wed",
+      "source": "client-overlay/Effect/mf_eruption_30.wed",
+      "bytes": 5450,
+      "sha256": "3cfb54783b5cba3352a1add94c267ed5680edc7eafc36bea4f179d1bc46f5388"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_31.wed",
+      "source": "client-overlay/Effect/mf_eruption_31.wed",
+      "bytes": 5450,
+      "sha256": "069812bd10e17b7e9dcf311eaa3317f5e19fa2b5c104c45d916b137e4ca908df"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_32.wed",
+      "source": "client-overlay/Effect/mf_eruption_32.wed",
+      "bytes": 5450,
+      "sha256": "cf32ac9c09244b1998f2851a0bad889b762148d8b44e38596ead499bcc3e89cc"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_33.wed",
+      "source": "client-overlay/Effect/mf_eruption_33.wed",
+      "bytes": 5450,
+      "sha256": "15ee995e545ed7ac1113fb73f9ca7c05030a4e2735c14460d99854f7c86e76e6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_34.wed",
+      "source": "client-overlay/Effect/mf_eruption_34.wed",
+      "bytes": 5450,
+      "sha256": "56ad0770a9715fcf3f2492b744747bc5aaad92634e81a3b2787f2d9238f865cc"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_35.wed",
+      "source": "client-overlay/Effect/mf_eruption_35.wed",
+      "bytes": 5450,
+      "sha256": "bea5019da6a6f5518b5e694ed2f33c092b7dfb139568f8a48a7634508f927212"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_36.wed",
+      "source": "client-overlay/Effect/mf_eruption_36.wed",
+      "bytes": 5450,
+      "sha256": "a69e3e0fdb75054ab5aef957e1273780f9b9a48a7a2a956dfb4f4d9de37723a7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_37.wed",
+      "source": "client-overlay/Effect/mf_eruption_37.wed",
+      "bytes": 5502,
+      "sha256": "4fc1656912a6ef4134d042442952e8ca00978f8c4933f98fd66a097edb8b1656"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_38.wed",
+      "source": "client-overlay/Effect/mf_eruption_38.wed",
+      "bytes": 5450,
+      "sha256": "4c522e9143a306c3c83ea6656d59517098b1d8158e16c6aa00479e88e4f6cdb0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_39.wed",
+      "source": "client-overlay/Effect/mf_eruption_39.wed",
+      "bytes": 5450,
+      "sha256": "960e732401bbc57eb9510d98591c2e62bf4a9a59513e2b3aa51a9956391dabd7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_4.wed",
+      "source": "client-overlay/Effect/mf_eruption_4.wed",
+      "bytes": 5450,
+      "sha256": "710737383730b8f0c1d2bd9faea1f4c087eb94a3a5e44dfe1f697fa5fd4ccd91"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_40.wed",
+      "source": "client-overlay/Effect/mf_eruption_40.wed",
+      "bytes": 5450,
+      "sha256": "cd954de3800adc7a006d52deabcd43dd4bf1847621f021a328794ef6f3c5ff58"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_41.wed",
+      "source": "client-overlay/Effect/mf_eruption_41.wed",
+      "bytes": 5450,
+      "sha256": "52d0a3613667af5ce070e9c13198684a43f70ee6e06476f4f975bccd827f93cf"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_42.wed",
+      "source": "client-overlay/Effect/mf_eruption_42.wed",
+      "bytes": 5450,
+      "sha256": "f0ae8a1e59594891e7c3597f89febaa6bf8cd43869f07ab5e4f7696f3a799285"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_43.wed",
+      "source": "client-overlay/Effect/mf_eruption_43.wed",
+      "bytes": 5450,
+      "sha256": "15678fe488f6b22d77090c7b21fc33269766d22d5663a1a551915f193dc5c021"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_44.wed",
+      "source": "client-overlay/Effect/mf_eruption_44.wed",
+      "bytes": 5242,
+      "sha256": "ed4563fd1726c673842eda4ee88d316f1893494c0f4b3e5ea8bf86121405b512"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_45.wed",
+      "source": "client-overlay/Effect/mf_eruption_45.wed",
+      "bytes": 5190,
+      "sha256": "84513797bf5a6cde447b4b253cefe5ab0749364109574c6737729173e38d11cc"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_46.wed",
+      "source": "client-overlay/Effect/mf_eruption_46.wed",
+      "bytes": 5242,
+      "sha256": "c98f9fa67a13f9a96ecd9dc6ae062093309da22ffadb8f034e76ff197c8515d1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_47.wed",
+      "source": "client-overlay/Effect/mf_eruption_47.wed",
+      "bytes": 5190,
+      "sha256": "1fcec760b4ffaf0192ca585df0df07bd507714e72b18dbc0a92646bfc3406c83"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_48.wed",
+      "source": "client-overlay/Effect/mf_eruption_48.wed",
+      "bytes": 5190,
+      "sha256": "99ea9e414300b0944a0f41c3a57402c9fba05ced3c3ac53975619380b0ea1ca3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_49.wed",
+      "source": "client-overlay/Effect/mf_eruption_49.wed",
+      "bytes": 5190,
+      "sha256": "f5e917f14e94728364bb12c91aab241b06ea7a5d3929bad289ef57029818222c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_5.wed",
+      "source": "client-overlay/Effect/mf_eruption_5.wed",
+      "bytes": 5502,
+      "sha256": "59deda390f9685ba208d62a8420885f0c714f74b8ca98751cca25147d3a28b46"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_50.wed",
+      "source": "client-overlay/Effect/mf_eruption_50.wed",
+      "bytes": 5190,
+      "sha256": "e54f234f5f8ec5ed4a2fca2143bea1647eb5e64d17e5df3127391907b6b81a2e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_51.wed",
+      "source": "client-overlay/Effect/mf_eruption_51.wed",
+      "bytes": 5190,
+      "sha256": "1c8ee176fe6fa442f8245846994f381f0dbdf94096684cd253b6c83dd03c15f0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_52.wed",
+      "source": "client-overlay/Effect/mf_eruption_52.wed",
+      "bytes": 5190,
+      "sha256": "347278c476271b4da91468bcda66e5e54175ee433e93b16d29047f33448fc3d3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_53.wed",
+      "source": "client-overlay/Effect/mf_eruption_53.wed",
+      "bytes": 5190,
+      "sha256": "f48c1e7a0599dc213b17cceb7f441b5f3c814320940ef8740dd65090e8ef0be3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_54.wed",
+      "source": "client-overlay/Effect/mf_eruption_54.wed",
+      "bytes": 5190,
+      "sha256": "f659413c7724604d16bdf858b1dd720c7f12d44bf9eccc432634b2c657e9c022"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_55.wed",
+      "source": "client-overlay/Effect/mf_eruption_55.wed",
+      "bytes": 5190,
+      "sha256": "92c2767ad099adc036d971423292cd0f94f4f095afa3ecc496f2cfc42cf6a06e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_56.wed",
+      "source": "client-overlay/Effect/mf_eruption_56.wed",
+      "bytes": 5190,
+      "sha256": "ef3d4133d743b94178286e2ee90b92750aa7cdc19dcd48cbed54466458a00ff7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_57.wed",
+      "source": "client-overlay/Effect/mf_eruption_57.wed",
+      "bytes": 5138,
+      "sha256": "1463366cdec63f572bebbe58a442f7b5f853e52dfbe052e4a406039bc9782a9d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_58.wed",
+      "source": "client-overlay/Effect/mf_eruption_58.wed",
+      "bytes": 5190,
+      "sha256": "256384dd612ec335d8a6608bc28cdafa26810d00a69cbd3b35d6e481f9b1bda5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_59.wed",
+      "source": "client-overlay/Effect/mf_eruption_59.wed",
+      "bytes": 5138,
+      "sha256": "c66ddaa28575e0e1261817bf117fbe3421340096a0b22897bc8fac23d84ef25a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_6.wed",
+      "source": "client-overlay/Effect/mf_eruption_6.wed",
+      "bytes": 5502,
+      "sha256": "6006d6f2037be6bcb8db7d8b3e4bb3cc8810d649f1df505487f8266e4e690ab7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_60.wed",
+      "source": "client-overlay/Effect/mf_eruption_60.wed",
+      "bytes": 5190,
+      "sha256": "e928b3f8b2ac2cceab40fb4f4b659238a8f81c393f1f81d35ad59a8a0684e4a0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_61.wed",
+      "source": "client-overlay/Effect/mf_eruption_61.wed",
+      "bytes": 5242,
+      "sha256": "3e4089ff6d8877c0b0034766ff06592195bc25402d7b8fc45ccadd45cb08c615"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_62.wed",
+      "source": "client-overlay/Effect/mf_eruption_62.wed",
+      "bytes": 5190,
+      "sha256": "a9b5abf86f74e2c5767b12e872f8470f27cfa0a1252d3eb1615155466edd63a4"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_63.wed",
+      "source": "client-overlay/Effect/mf_eruption_63.wed",
+      "bytes": 5190,
+      "sha256": "d01b346a50c7ab41f7ff2e1a982570d0b5f32e6d08324053ffc57033708fb87f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_64.wed",
+      "source": "client-overlay/Effect/mf_eruption_64.wed",
+      "bytes": 5190,
+      "sha256": "7702ece66fabca1acc33d4d6261150de5bf56756a1b70136e08f681a794530fd"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_65.wed",
+      "source": "client-overlay/Effect/mf_eruption_65.wed",
+      "bytes": 5190,
+      "sha256": "7da3425e71b1b8ebadf3ae76ff599f48945de5dd21f477a9ab953656f645d0e5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_66.wed",
+      "source": "client-overlay/Effect/mf_eruption_66.wed",
+      "bytes": 5190,
+      "sha256": "363a39ae037752e496f08803d85738b682e96143356f7a0a0cd699e30e2c91df"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_67.wed",
+      "source": "client-overlay/Effect/mf_eruption_67.wed",
+      "bytes": 5190,
+      "sha256": "188db30029e11558bbc8ace64648b4a5d5b1cd23d174f8f2b0fd70b35e3f7389"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_68.wed",
+      "source": "client-overlay/Effect/mf_eruption_68.wed",
+      "bytes": 5190,
+      "sha256": "814ca4bea273557b997836924a033b5f816e8021f4e47b5e14e677ca310fbfb0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_69.wed",
+      "source": "client-overlay/Effect/mf_eruption_69.wed",
+      "bytes": 5190,
+      "sha256": "9197d64a3f05deef1ef7ef961c197f33292775d4bd8b96376fb21ca544eeb90d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_7.wed",
+      "source": "client-overlay/Effect/mf_eruption_7.wed",
+      "bytes": 5450,
+      "sha256": "b929340dc7b94e7d7750be8f87c6fae2cce99770f947f5fef0e20c57241c4d74"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_70.wed",
+      "source": "client-overlay/Effect/mf_eruption_70.wed",
+      "bytes": 5242,
+      "sha256": "f54cbd5bd3a3d1c89dea4e8235750f20ff75fadd54604e7e7aeab0e95da2ebbe"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_71.wed",
+      "source": "client-overlay/Effect/mf_eruption_71.wed",
+      "bytes": 5190,
+      "sha256": "359e59c87f3d71a30f0c26cdb6b3e2e40f47b45ccecaf03295c4fe5e3030ae6e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_72.wed",
+      "source": "client-overlay/Effect/mf_eruption_72.wed",
+      "bytes": 5190,
+      "sha256": "1e3c28504590860ba6ca31e26305d0832b4ae01c88cfeaa610a20970e2d7be3b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_73.wed",
+      "source": "client-overlay/Effect/mf_eruption_73.wed",
+      "bytes": 5242,
+      "sha256": "e64639ac99474b8b9ba062d875fef041a006dab35bf121d196d2ca2e9a85246b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_74.wed",
+      "source": "client-overlay/Effect/mf_eruption_74.wed",
+      "bytes": 5242,
+      "sha256": "6b22a8e931d28869176dbf2e9bff519f069b33ddc5b34287f7e47d4051bf8c08"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_75.wed",
+      "source": "client-overlay/Effect/mf_eruption_75.wed",
+      "bytes": 5190,
+      "sha256": "de6b52e21cb29dcd684a3246245c381180962e64144adb20ec415213c0d74156"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_76.wed",
+      "source": "client-overlay/Effect/mf_eruption_76.wed",
+      "bytes": 5242,
+      "sha256": "9cbd7e8c14bc10c848f8097f9c9b9fdaef4faac148547a0cfa577e9d5404487a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_77.wed",
+      "source": "client-overlay/Effect/mf_eruption_77.wed",
+      "bytes": 5242,
+      "sha256": "0c41602cb0bf26e2c349e529edba4247f6533dc0857061fea6ea4412c7598371"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_78.wed",
+      "source": "client-overlay/Effect/mf_eruption_78.wed",
+      "bytes": 4930,
+      "sha256": "3c0909686cd56559b3727552cf8f97eb88a674191568e797b7d0a42a589ff4a4"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_79.wed",
+      "source": "client-overlay/Effect/mf_eruption_79.wed",
+      "bytes": 4930,
+      "sha256": "c5b58be31c14000f2d63f5f18589f048933a1580001f58b78692bac1271b5194"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_8.wed",
+      "source": "client-overlay/Effect/mf_eruption_8.wed",
+      "bytes": 5450,
+      "sha256": "6dd4470a35a3a1e07e5e1e156df0e11a7fd03cd57fb9d929ef09b3b4b4da9f68"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_80.wed",
+      "source": "client-overlay/Effect/mf_eruption_80.wed",
+      "bytes": 4930,
+      "sha256": "d3fcb9e899ee6ece4fcd21798cb036f010520fbba7c0c604ff3c167a4478cf0b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_81.wed",
+      "source": "client-overlay/Effect/mf_eruption_81.wed",
+      "bytes": 4930,
+      "sha256": "27bd686f65995e5ea54a861b7349be8f8b1d02ff88b1eb9b92fc0085fd34cb46"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_82.wed",
+      "source": "client-overlay/Effect/mf_eruption_82.wed",
+      "bytes": 4930,
+      "sha256": "acc6d11ba391f61c7c1b0260eb4677d050fdf36ea6b64dd4bae30708571fd5f8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_83.wed",
+      "source": "client-overlay/Effect/mf_eruption_83.wed",
+      "bytes": 4982,
+      "sha256": "987a40d9ddc2b9e39db1c11abc888490c5b9cbed6b122a2234d759ead49698e9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_84.wed",
+      "source": "client-overlay/Effect/mf_eruption_84.wed",
+      "bytes": 4930,
+      "sha256": "66125416a2309773abb5dccaadc6e19d8b2d2e30405d85d816b831ee1a6ee531"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_85.wed",
+      "source": "client-overlay/Effect/mf_eruption_85.wed",
+      "bytes": 4930,
+      "sha256": "a0f40a894d0edec501bf09b4ac1df1284e1542265d3a27c0bcc24a4ac36f5ba6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_86.wed",
+      "source": "client-overlay/Effect/mf_eruption_86.wed",
+      "bytes": 4930,
+      "sha256": "f9fce23e5a54a90c1c7ba7efa9e6309e3a27cbaa3e7a1c5d9d3c848fd14aeefd"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_87.wed",
+      "source": "client-overlay/Effect/mf_eruption_87.wed",
+      "bytes": 4982,
+      "sha256": "63f1482aa3e7e0876f639a77e67923f29bd2dcf616745d5deab918dbfad2ba58"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_88.wed",
+      "source": "client-overlay/Effect/mf_eruption_88.wed",
+      "bytes": 4930,
+      "sha256": "0825d59eadf93644179a9e28416e505c09574c72094eed482723cb8c1c0b29a7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_89.wed",
+      "source": "client-overlay/Effect/mf_eruption_89.wed",
+      "bytes": 4930,
+      "sha256": "c1b9b8fe4ef3353df59e3287f2ef164f238745ab3f74132dc7f1e1e317ec9995"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_9.wed",
+      "source": "client-overlay/Effect/mf_eruption_9.wed",
+      "bytes": 5450,
+      "sha256": "d6f462481d96e1876db0d3fadd6dc4033081a0f743b5b8f72c7cecce2ef31e73"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_90.wed",
+      "source": "client-overlay/Effect/mf_eruption_90.wed",
+      "bytes": 4930,
+      "sha256": "319651369a40d5d86ab6e8a66536364f11823260037ebb0f5634580a6eccdb48"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_91.wed",
+      "source": "client-overlay/Effect/mf_eruption_91.wed",
+      "bytes": 4930,
+      "sha256": "cf649179017ef7c15af0cc8a518679df0093ddd843f5f18622d6a81320cbccb7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_92.wed",
+      "source": "client-overlay/Effect/mf_eruption_92.wed",
+      "bytes": 4930,
+      "sha256": "cc670435826072bbb85ff8a7dd1ef86208407d770e41e352c8a720e35b0859f8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_93.wed",
+      "source": "client-overlay/Effect/mf_eruption_93.wed",
+      "bytes": 4930,
+      "sha256": "b8453df45d49c609a4a2571b132a1b2015430753c63bb847ea9237e7c4b35416"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_94.wed",
+      "source": "client-overlay/Effect/mf_eruption_94.wed",
+      "bytes": 4930,
+      "sha256": "aea87175239ba467dce907dedd30052abc5999a9082d3c2a3e9617cb870578cf"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_95.wed",
+      "source": "client-overlay/Effect/mf_eruption_95.wed",
+      "bytes": 4930,
+      "sha256": "97abd207a278fbcdccd45c294fa8959d1cf0113c63ad6f09f2cd32e0cb118441"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_96.wed",
+      "source": "client-overlay/Effect/mf_eruption_96.wed",
+      "bytes": 4930,
+      "sha256": "685d40d03c84df271889defd5d62593ef61ff2099ba85504e54e16474562913b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_97.wed",
+      "source": "client-overlay/Effect/mf_eruption_97.wed",
+      "bytes": 4930,
+      "sha256": "71c361f72ccae78e5feb09b4f25fdd317867d17fac2a3362c0db47757ef56756"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_98.wed",
+      "source": "client-overlay/Effect/mf_eruption_98.wed",
+      "bytes": 4930,
+      "sha256": "29b43ca43115a6fc85ac8e7f04d6ff492fadee026d2a0ca0f2943256e97668d5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_eruption_99.wed",
+      "source": "client-overlay/Effect/mf_eruption_99.wed",
+      "bytes": 4930,
+      "sha256": "2b69df6077ee8c5f51adce2f62f573d6391c5b4198e3f3ab99ac7460fb623cc5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground0.wed",
+      "source": "client-overlay/Effect/mf_frozen_ground0.wed",
+      "bytes": 7122,
+      "sha256": "132f49fc954bf58c0207a990f463ed58fdfe51cd6077cdcbe83d420c1b9b34ac"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground0.WEM",
+      "source": "client-overlay/Effect/mf_frozen_ground0.WEM",
+      "bytes": 1444,
+      "sha256": "e54dc3efa91c81d1e9fc0da17d3c27184ea46ebf4080a9800cc7a23072e394d8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground1.wed",
+      "source": "client-overlay/Effect/mf_frozen_ground1.wed",
+      "bytes": 6966,
+      "sha256": "229c69e303333aca7fc75ff9da1e722bb46e49effac91dbd5c11a31c760a1c90"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground1.WEM",
+      "source": "client-overlay/Effect/mf_frozen_ground1.WEM",
+      "bytes": 1444,
+      "sha256": "bfde0c30761ad4998a21100be45be303ffb79badd449232570d81df1ee78edc1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground2.wed",
+      "source": "client-overlay/Effect/mf_frozen_ground2.wed",
+      "bytes": 7174,
+      "sha256": "357095fa1501010e11fd37a71396dcf4ce42eaa3aa1f8293f9fea6f1b62252df"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground2.WEM",
+      "source": "client-overlay/Effect/mf_frozen_ground2.WEM",
+      "bytes": 1444,
+      "sha256": "b9e31e9b738847b3c8294771c8e99263707c1faff57a194b287c09ac35eafb3a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground3.wed",
+      "source": "client-overlay/Effect/mf_frozen_ground3.wed",
+      "bytes": 7018,
+      "sha256": "86e655bfdcdc849ad66f25e705cddf61c5f66d29d918d2972380366f2b96a9e3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground3.WEM",
+      "source": "client-overlay/Effect/mf_frozen_ground3.WEM",
+      "bytes": 1444,
+      "sha256": "9e37b5ffd7b38091367da4f98fcf7b74814250b161e61389e81144ab0507d608"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground4.wed",
+      "source": "client-overlay/Effect/mf_frozen_ground4.wed",
+      "bytes": 7226,
+      "sha256": "b06b92588a052b0bde03cdad0af93a7dbd707f850e3daa00ada270ba402b3152"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground4.WEM",
+      "source": "client-overlay/Effect/mf_frozen_ground4.WEM",
+      "bytes": 1444,
+      "sha256": "71b9c97a08bea65ffe9d6f91e2bd6f3d326773c45af5af258da1885f764b3281"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground5.wed",
+      "source": "client-overlay/Effect/mf_frozen_ground5.wed",
+      "bytes": 6914,
+      "sha256": "2c3c348480aac45c8160bcc3110c32f4be6070f8ff97196946a173785d9167e8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_frozen_ground5.WEM",
+      "source": "client-overlay/Effect/mf_frozen_ground5.WEM",
+      "bytes": 1444,
+      "sha256": "e459473d46d5c0b4a323e1a3935a75f94aeb731f1eb75f657dfa9bc2582a552f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_incoming_mist0.wed",
+      "source": "client-overlay/Effect/mf_incoming_mist0.wed",
+      "bytes": 1609,
+      "sha256": "65115e974022e11ae2e71b19d7275bab9d6b814ac5ea9d6a99d73d35bfe157e9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_incoming_mist1.wed",
+      "source": "client-overlay/Effect/mf_incoming_mist1.wed",
+      "bytes": 1557,
+      "sha256": "549aed66572496acd10e205c15a8e352fe196b86169391643e645dbd09c64ee1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_incoming_mist2.wed",
+      "source": "client-overlay/Effect/mf_incoming_mist2.wed",
+      "bytes": 1505,
+      "sha256": "4dd3673e16a57f74df76da236515563df32f04dc442d5234df17b75c2ef155cc"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_incoming_mist3.wed",
+      "source": "client-overlay/Effect/mf_incoming_mist3.wed",
+      "bytes": 1609,
+      "sha256": "56470055d41e7ca4013d1535ff316aa0c8c854ee82d9dc89ae9b111d899a6b0f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_incoming_mist4.wed",
+      "source": "client-overlay/Effect/mf_incoming_mist4.wed",
+      "bytes": 1453,
+      "sha256": "1e8cca02d236a95805bafba7e99b18158c3252aa38985ecbc36a4e86e3f1647b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_incoming_mist5.wed",
+      "source": "client-overlay/Effect/mf_incoming_mist5.wed",
+      "bytes": 1557,
+      "sha256": "c96d83e83e1e7e6ccc5dbf086960a368634ad37d270ae7eab2e8de86c72e93b6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_incoming_mist6.wed",
+      "source": "client-overlay/Effect/mf_incoming_mist6.wed",
+      "bytes": 1609,
+      "sha256": "ccec2600474995a7bf3a69a0c0fb15267512d88431cf8c0849188bae937158c3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_incoming_mist7.wed",
+      "source": "client-overlay/Effect/mf_incoming_mist7.wed",
+      "bytes": 1505,
+      "sha256": "a6583490b92edf8350ed4f130f7c9dec0f9414f150c5473e0100564993a580b0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_0.wed",
+      "source": "client-overlay/Effect/mf_inward_0.wed",
+      "bytes": 2007,
+      "sha256": "97109cb10bc45dea1450b780e82edf426156bc6d935551ef36e8d15124c59db4"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_1.wed",
+      "source": "client-overlay/Effect/mf_inward_1.wed",
+      "bytes": 2007,
+      "sha256": "2394e33a7af68f23cbf7074e2407fcb61d87c90bf572e7be07aae9fcf9ae9d72"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_10.wed",
+      "source": "client-overlay/Effect/mf_inward_10.wed",
+      "bytes": 2007,
+      "sha256": "61538b5977ae775b6ad71a21992aeda51df9aafc0d1c90f7dc8a2026a91f3206"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_11.wed",
+      "source": "client-overlay/Effect/mf_inward_11.wed",
+      "bytes": 2007,
+      "sha256": "38e3a889b9d6e06ce3c08f5548ac55281694da5a56f727a4f42edbca55cfa6e0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_12.wed",
+      "source": "client-overlay/Effect/mf_inward_12.wed",
+      "bytes": 2007,
+      "sha256": "4cb5324bebadde418eda35d075cefcfc80c9a8f877cf07b06e542157d1e4ff79"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_13.wed",
+      "source": "client-overlay/Effect/mf_inward_13.wed",
+      "bytes": 2007,
+      "sha256": "48f59ef3174b80a537c1808fefb815c35143f27c5da975babcb2d5c52f6f3c43"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_14.wed",
+      "source": "client-overlay/Effect/mf_inward_14.wed",
+      "bytes": 2007,
+      "sha256": "e4921b73326e17d058e2abbffc69f21fa174cce021ff6c13cc8eb433b0af070a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_15.wed",
+      "source": "client-overlay/Effect/mf_inward_15.wed",
+      "bytes": 2007,
+      "sha256": "4b2beb87c0a7c7b3551f60ddef3b9d14dd5b7e8c9070d0db574626933174eedf"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_16.wed",
+      "source": "client-overlay/Effect/mf_inward_16.wed",
+      "bytes": 2007,
+      "sha256": "1cee8780df7e8bcc49e8b2d919f79962d3247ce64e590908eba4e9f6390378a6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_17.wed",
+      "source": "client-overlay/Effect/mf_inward_17.wed",
+      "bytes": 2007,
+      "sha256": "fb5162c740dae5c2f0b70cf8138f167c10e864a9f1e668bc6047e9934122c813"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_18.wed",
+      "source": "client-overlay/Effect/mf_inward_18.wed",
+      "bytes": 2007,
+      "sha256": "198886c360812d6331df0274f398eac624cf628fb801f65d2b547acb0813ecf7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_19.wed",
+      "source": "client-overlay/Effect/mf_inward_19.wed",
+      "bytes": 2007,
+      "sha256": "9d89e2043860e91b25df521f9db4574a728e1fe921f2ea7d744cb78e35323c10"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_2.wed",
+      "source": "client-overlay/Effect/mf_inward_2.wed",
+      "bytes": 2007,
+      "sha256": "081b08ccfb4e3a78321ef2aa5f45dfda50e60b583cc1be747627b6cad6fa9cd5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_20.wed",
+      "source": "client-overlay/Effect/mf_inward_20.wed",
+      "bytes": 2007,
+      "sha256": "b0e199532f5f2a7766eab29e99bd1a706bc9182c31087ef9002bbd326348ab73"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_21.wed",
+      "source": "client-overlay/Effect/mf_inward_21.wed",
+      "bytes": 2007,
+      "sha256": "d14baea3da27c0adf8a4c066abf31002486c36374603c1235afc3aff751277d2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_22.wed",
+      "source": "client-overlay/Effect/mf_inward_22.wed",
+      "bytes": 2007,
+      "sha256": "c2e70e86bfee8d1730b83d6ee32790c717d06f2536ef032faf31497a0ad23066"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_23.wed",
+      "source": "client-overlay/Effect/mf_inward_23.wed",
+      "bytes": 2007,
+      "sha256": "84c5f92adadd6de4eb305bcf8f306ca3fad7ca459ed27be70796256160794b14"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_24.wed",
+      "source": "client-overlay/Effect/mf_inward_24.wed",
+      "bytes": 2007,
+      "sha256": "b5ee06254e4855f3bbadb81a6a19c75d07c30909d2b32d4357355370981f8e28"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_25.wed",
+      "source": "client-overlay/Effect/mf_inward_25.wed",
+      "bytes": 2007,
+      "sha256": "acab6d908e0d862aa4668ffc4200b0c3c93733383bcbe52f04b1a3c504c07f2b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_26.wed",
+      "source": "client-overlay/Effect/mf_inward_26.wed",
+      "bytes": 2007,
+      "sha256": "f3794263350b296f624fde740a633919a0764697f369a1196865ab5b84aa3d06"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_27.wed",
+      "source": "client-overlay/Effect/mf_inward_27.wed",
+      "bytes": 2007,
+      "sha256": "7c1ecbc2da39fcd5b94eb4fb5c9e3fb81ff83502a32a0bdfc3f323629b0a2485"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_28.wed",
+      "source": "client-overlay/Effect/mf_inward_28.wed",
+      "bytes": 2007,
+      "sha256": "6e6d7b4772a5c9a8f179fb09478f0b43b089a9b39b898e5e15d062537faec8f2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_29.wed",
+      "source": "client-overlay/Effect/mf_inward_29.wed",
+      "bytes": 2007,
+      "sha256": "4dad8f129bcfed106e0e2de3ceb2c29f5f6050a4efce3106c045a604aa7ced30"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_3.wed",
+      "source": "client-overlay/Effect/mf_inward_3.wed",
+      "bytes": 2007,
+      "sha256": "b663332274100836eb409793ac862aea9aa32c56215643db4b98aaaefe9eda6c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_30.wed",
+      "source": "client-overlay/Effect/mf_inward_30.wed",
+      "bytes": 2007,
+      "sha256": "52e4bb4d30a278510216a34d74595ea5045dbc61fad5268bef370336be56a903"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_31.wed",
+      "source": "client-overlay/Effect/mf_inward_31.wed",
+      "bytes": 2007,
+      "sha256": "c2f073bd90b70d122d32f852de8cd5bd9af7a53850d27879d971dde40fbb4f3a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_32.wed",
+      "source": "client-overlay/Effect/mf_inward_32.wed",
+      "bytes": 2007,
+      "sha256": "59e17ec58869ac365659bd4fa4d03d4f1b2bd4cc0310c16aeebe15b0d5201d5f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_33.wed",
+      "source": "client-overlay/Effect/mf_inward_33.wed",
+      "bytes": 2007,
+      "sha256": "10900bf401975c893e26a67e27393c5dd5df892b2841f60e4377a18d401b0804"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_34.wed",
+      "source": "client-overlay/Effect/mf_inward_34.wed",
+      "bytes": 2007,
+      "sha256": "ccf24cdba6a9ea142227feeb3a5c811c156422593d2ca9cec5b1ed9732e72bf2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_35.wed",
+      "source": "client-overlay/Effect/mf_inward_35.wed",
+      "bytes": 2007,
+      "sha256": "09b0954de84cb3d232974ae457057033c46718ea9ee921519c8478a8a2d072ec"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_36.wed",
+      "source": "client-overlay/Effect/mf_inward_36.wed",
+      "bytes": 2007,
+      "sha256": "360b0a1e64332ccf9b67e0c192693c434317cb22abf5d71513da690679b6c5fe"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_37.wed",
+      "source": "client-overlay/Effect/mf_inward_37.wed",
+      "bytes": 2007,
+      "sha256": "2d9140efad327edcd852c01f3c2d4e3f2223c200485e4fbf4369d3df2df73216"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_38.wed",
+      "source": "client-overlay/Effect/mf_inward_38.wed",
+      "bytes": 2007,
+      "sha256": "db3e31c8bb7136e4093e770ce4312d20ab3d64e826b2f06a6efd89f7204c2f9d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_39.wed",
+      "source": "client-overlay/Effect/mf_inward_39.wed",
+      "bytes": 2007,
+      "sha256": "c1ace66f81e5d2564a49164c869c86dfb370e44ab948e152d906132a2d63b8c9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_4.wed",
+      "source": "client-overlay/Effect/mf_inward_4.wed",
+      "bytes": 2007,
+      "sha256": "1919d8932bfb4bb8848ec73dca69a5513aff39f0b2a1ad155983973e4316b079"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_40.wed",
+      "source": "client-overlay/Effect/mf_inward_40.wed",
+      "bytes": 2007,
+      "sha256": "aba99c15c16292dd7b6460a55dade57b13f708851878dd22c9bbd6f907fa7878"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_41.wed",
+      "source": "client-overlay/Effect/mf_inward_41.wed",
+      "bytes": 2007,
+      "sha256": "37613c0a1434ee0764d7d0519e447918b4f0cdc65fea6da3dce3af443704a482"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_42.wed",
+      "source": "client-overlay/Effect/mf_inward_42.wed",
+      "bytes": 2007,
+      "sha256": "1348b0949a8e65ff307a8558d5974d6cfdb485a1f14edb60b7a89c8c95011e67"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_43.wed",
+      "source": "client-overlay/Effect/mf_inward_43.wed",
+      "bytes": 2007,
+      "sha256": "889d7533517c62a8e61ef5c98395ea9f78609526810d05f42565a1ba397aa391"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_44.wed",
+      "source": "client-overlay/Effect/mf_inward_44.wed",
+      "bytes": 2007,
+      "sha256": "e8c190358c79927a1542e5c464beb428e89524a479f5916158e77959f61604c6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_45.wed",
+      "source": "client-overlay/Effect/mf_inward_45.wed",
+      "bytes": 2007,
+      "sha256": "07731697fbc822544eb550d043c88ac895d581dd94a36fb5d97a11755720d383"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_46.wed",
+      "source": "client-overlay/Effect/mf_inward_46.wed",
+      "bytes": 2007,
+      "sha256": "8c30b26652607afbab862a4c5cc417afcfa56715b62b4ee11e7b7f9c28fd0c45"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_47.wed",
+      "source": "client-overlay/Effect/mf_inward_47.wed",
+      "bytes": 2007,
+      "sha256": "dd6a9a676b10d5d999567c6247f01e2a2b38ce528eba471adf6e11f769356e30"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_48.wed",
+      "source": "client-overlay/Effect/mf_inward_48.wed",
+      "bytes": 2007,
+      "sha256": "97f12cee1c806064c5d4432505b5b30f9cb0e6d27585e1081d95c1fe1907ecc9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_49.wed",
+      "source": "client-overlay/Effect/mf_inward_49.wed",
+      "bytes": 2007,
+      "sha256": "645acc731bc5ac28be01809b7772fa4d39b1b093bd374406d7e1b05fb53e5cc2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_5.wed",
+      "source": "client-overlay/Effect/mf_inward_5.wed",
+      "bytes": 2007,
+      "sha256": "d1c8f4259d02cf31deab21b8201d92e21811940cfcb55e6eefd311bacdd6bb2e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_50.wed",
+      "source": "client-overlay/Effect/mf_inward_50.wed",
+      "bytes": 2007,
+      "sha256": "c2e3bd35fd28a0d599ccde1834e69ac6d783ef4259630823fe848467cd9700a8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_51.wed",
+      "source": "client-overlay/Effect/mf_inward_51.wed",
+      "bytes": 2007,
+      "sha256": "9f66784e53b3f9e806194615ea8ccb571e2fa607678b0d58c4de13b845883f09"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_52.wed",
+      "source": "client-overlay/Effect/mf_inward_52.wed",
+      "bytes": 2007,
+      "sha256": "7162a6e85fb76d88a243df1eebb153be23ca7268ac0a126aefff81826e02ce16"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_53.wed",
+      "source": "client-overlay/Effect/mf_inward_53.wed",
+      "bytes": 2007,
+      "sha256": "52bac46d8c623480e179234b34deec214ec5f61c0850de3fe0977659c2f26304"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_54.wed",
+      "source": "client-overlay/Effect/mf_inward_54.wed",
+      "bytes": 2007,
+      "sha256": "7ccbf7953bfcaafc64880bfc25b371898053857d222f6c2926b31d4d5893bc53"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_55.wed",
+      "source": "client-overlay/Effect/mf_inward_55.wed",
+      "bytes": 2007,
+      "sha256": "2136f47b1ec2b1f21ffc632a7453b5c9bf0c82ce2581daa89611a01051cd12aa"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_56.wed",
+      "source": "client-overlay/Effect/mf_inward_56.wed",
+      "bytes": 2007,
+      "sha256": "74105c94ca7f3ac89196a257ed1f5528f1d9f5dec7d38fd26744a0969ad8015b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_57.wed",
+      "source": "client-overlay/Effect/mf_inward_57.wed",
+      "bytes": 2007,
+      "sha256": "0c351da7c2c38109a58e2051b2b01c9df7227b4ca7f3ce254ef4ade67f0be76b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_58.wed",
+      "source": "client-overlay/Effect/mf_inward_58.wed",
+      "bytes": 2007,
+      "sha256": "cd455654795144d8a0554fa75c089f450fdc93cfecf9396c57d9cda7ba87a877"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_59.wed",
+      "source": "client-overlay/Effect/mf_inward_59.wed",
+      "bytes": 2007,
+      "sha256": "2e3382ac22874b50131ba712901cc30f2ee2e02f40c75b63c6c0be37958621a7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_6.wed",
+      "source": "client-overlay/Effect/mf_inward_6.wed",
+      "bytes": 2007,
+      "sha256": "f4b41be8337bf9fd79f013fc0b58952714228cda2a689ccbd507168dd926ccac"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_60.wed",
+      "source": "client-overlay/Effect/mf_inward_60.wed",
+      "bytes": 2007,
+      "sha256": "e3e5c391e9902b1f282254b8176c0c17aa28639a65c9c914d17b34cf84047e22"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_61.wed",
+      "source": "client-overlay/Effect/mf_inward_61.wed",
+      "bytes": 2007,
+      "sha256": "77660c46bad9026449cc6edd90f03d714a57213da8b482bc7d28cee40d54313b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_62.wed",
+      "source": "client-overlay/Effect/mf_inward_62.wed",
+      "bytes": 2007,
+      "sha256": "ae1bc8625a42e96ed8be0fbbaa2bf24c2215f6a9b968a6df204b55ca09117250"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_63.wed",
+      "source": "client-overlay/Effect/mf_inward_63.wed",
+      "bytes": 2007,
+      "sha256": "f57d89c07f87c6f627dd4140177d348bcf0754afd32978d03e57f7bc592b8e81"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_64.wed",
+      "source": "client-overlay/Effect/mf_inward_64.wed",
+      "bytes": 1955,
+      "sha256": "e95bfcf90da9908cf596a94cef1f96fbd6775236e147c9595743a27bae5062a6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_65.wed",
+      "source": "client-overlay/Effect/mf_inward_65.wed",
+      "bytes": 1903,
+      "sha256": "f5fb2246d52cf52856009af208dbe47fe4e6b9fb47d05543e2e28f62ce4710a1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_66.wed",
+      "source": "client-overlay/Effect/mf_inward_66.wed",
+      "bytes": 1643,
+      "sha256": "07d7a3ec6e3c01fd61a8e3b91f43a5757adcf2a83c91e8f1aa86cfe37759249c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_67.wed",
+      "source": "client-overlay/Effect/mf_inward_67.wed",
+      "bytes": 1591,
+      "sha256": "954532f221c98debaa37627c73dca6523ba36950fc36e61264210f205fa5ab3d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_68.wed",
+      "source": "client-overlay/Effect/mf_inward_68.wed",
+      "bytes": 1591,
+      "sha256": "ed115c2827f4766069ce13c1fd1982e41a7ac4e81dc7e170f5e3489cd2e328e5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_69.wed",
+      "source": "client-overlay/Effect/mf_inward_69.wed",
+      "bytes": 1539,
+      "sha256": "a0b8dbbd2dafc051eac66896bb6a087d71f14981c294e04c857c6a539e555656"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_7.wed",
+      "source": "client-overlay/Effect/mf_inward_7.wed",
+      "bytes": 2007,
+      "sha256": "686a3339674f76bb0132f884fec9b9ca3a22df2c74ff5fb3221ad962411b98f1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_70.wed",
+      "source": "client-overlay/Effect/mf_inward_70.wed",
+      "bytes": 1487,
+      "sha256": "f471b4481809d85b6ffe6d1f4a88b0f7caf2c647b517db0aa4291402b388f037"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_71.wed",
+      "source": "client-overlay/Effect/mf_inward_71.wed",
+      "bytes": 1487,
+      "sha256": "66a4b4d7491c22ddfecf72d208b843358c2eff517f678cfc66dc882abde7df46"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_72.wed",
+      "source": "client-overlay/Effect/mf_inward_72.wed",
+      "bytes": 1175,
+      "sha256": "6b128c8f2b23de769fe7013db01db59aa8308dc051d310fb8d14bef20d962060"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_73.wed",
+      "source": "client-overlay/Effect/mf_inward_73.wed",
+      "bytes": 1175,
+      "sha256": "f7034c4826869108bd4161ff6c5c467152244ec87e8c9461e015518a67aba0f3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_74.wed",
+      "source": "client-overlay/Effect/mf_inward_74.wed",
+      "bytes": 1123,
+      "sha256": "3f40cd8ed5d174d94402062cfe4032ef45ef2b6af2b2ab80a9f03c852af15c8a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_75.wed",
+      "source": "client-overlay/Effect/mf_inward_75.wed",
+      "bytes": 1071,
+      "sha256": "88d45b0d31bd963419f9ebc2616ce61adbf1874728ff3fc6a7c03976179c42c2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_76.wed",
+      "source": "client-overlay/Effect/mf_inward_76.wed",
+      "bytes": 1071,
+      "sha256": "bfb907beeaf4ebb756361d62cb46748bd3b5b4197ea54751c512a51ccad214eb"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_77.wed",
+      "source": "client-overlay/Effect/mf_inward_77.wed",
+      "bytes": 1019,
+      "sha256": "9ed668181c68247eedae7f31ee3bce0a8a481aa3279c7b717f623ec09a031c43"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_78.wed",
+      "source": "client-overlay/Effect/mf_inward_78.wed",
+      "bytes": 759,
+      "sha256": "02011ba69d1e93a958d1c9354896d2d383851210c019c9a783e511781d50aa45"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_79.wed",
+      "source": "client-overlay/Effect/mf_inward_79.wed",
+      "bytes": 707,
+      "sha256": "eda93589c1a60eb68243a445eb63a872bbb54d53302d29dcc5326eb163c2e39b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_8.wed",
+      "source": "client-overlay/Effect/mf_inward_8.wed",
+      "bytes": 2007,
+      "sha256": "f7409e03f55f16362b404d2df7c5b0544f79bfc879fa1053bd9c910c6575f544"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_80.wed",
+      "source": "client-overlay/Effect/mf_inward_80.wed",
+      "bytes": 655,
+      "sha256": "3ac6615b2697ff387bc734b5f44ce1312ff35a890a796e7964133e4029ade51d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_81.wed",
+      "source": "client-overlay/Effect/mf_inward_81.wed",
+      "bytes": 655,
+      "sha256": "eef0ac76764ff5d7bd57f911ffcb3cfcbe47ba61fb9796dfb73b5d50a210d899"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_82.wed",
+      "source": "client-overlay/Effect/mf_inward_82.wed",
+      "bytes": 603,
+      "sha256": "73c271f3c870c2134bf598ed77e1571d6c51b0907f81cb6d7918b9453d46f9d4"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_83.wed",
+      "source": "client-overlay/Effect/mf_inward_83.wed",
+      "bytes": 551,
+      "sha256": "61e46d45d1efad80223501a2cf93ed06174ec2576bf79b3727a2f5b88db821e7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_inward_9.wed",
+      "source": "client-overlay/Effect/mf_inward_9.wed",
+      "bytes": 2007,
+      "sha256": "1d84afc32b6453032bb6f429c0804fe7211a2a5a29439dca51dd784357150c7e"
     },
     {
       "kind": "client",
       "path": "Effect/mf_pajang02.wed",
       "source": "client-overlay/Effect/mf_pajang02.wed",
-      "bytes": 1590,
-      "sha256": "e2162233af91f83c561f3e000e488a78855154714dccfd96e24c8f4032597b64"
+      "bytes": 1538,
+      "sha256": "1d2b33d8bf01fd4952bc65eb1faf5fbef8824e6eb252ada620ee843ffb8561d0"
     },
     {
       "kind": "client",
       "path": "Effect/mf_pajang03.wed",
       "source": "client-overlay/Effect/mf_pajang03.wed",
-      "bytes": 1590,
-      "sha256": "b58de97bda4c30f2974ec311f27db3addd0b7219ca73ae5748ed4d487814ba88"
+      "bytes": 6634,
+      "sha256": "2990ab5097819966b8bdd5ac7d3b5f3364a9676d42ca21044883e557c87c7a10"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_front0.wed",
+      "source": "client-overlay/Effect/mf_pressure_front0.wed",
+      "bytes": 1341,
+      "sha256": "d5c8f56b2ca2b9e9dcd9dd39a0b874270e828dd2d44ec5c0d39c60a64bd5984f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_front1.wed",
+      "source": "client-overlay/Effect/mf_pressure_front1.wed",
+      "bytes": 1289,
+      "sha256": "edfef62358afdecece84be1212f4cef8a40335e97bb12b79a7e6bc6ed64ebe69"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_front2.wed",
+      "source": "client-overlay/Effect/mf_pressure_front2.wed",
+      "bytes": 1185,
+      "sha256": "5aa2c2fc22107fa0b4b1409fe4e1a92183e86f64cbf193a1cb9dc4b2c97374d9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_front3.wed",
+      "source": "client-overlay/Effect/mf_pressure_front3.wed",
+      "bytes": 1289,
+      "sha256": "702ad00e3a232feabfcae8a3ea5878ecd66f1fa6b9af977daec2c10007b5d21e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_front4.wed",
+      "source": "client-overlay/Effect/mf_pressure_front4.wed",
+      "bytes": 1133,
+      "sha256": "1a8757e4926eca444644b4f040b29b71f5a8b5f5196973bb57be725db24b96a7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_front5.wed",
+      "source": "client-overlay/Effect/mf_pressure_front5.wed",
+      "bytes": 1237,
+      "sha256": "20cc3c1382ed4aeb3d5afac886c25c146394be7ac5b22d69f9df5a82115fea03"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_front6.wed",
+      "source": "client-overlay/Effect/mf_pressure_front6.wed",
+      "bytes": 1341,
+      "sha256": "df01d1ee9596f08bac57ffd1f732cc8a1e4dd1ae8955a21c6e13dfde66847d53"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_front7.wed",
+      "source": "client-overlay/Effect/mf_pressure_front7.wed",
+      "bytes": 1237,
+      "sha256": "a222dd4d30d54e678822cdebf0fe781d8f1abb5c1157e6706822698dd49121d6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_mist.WEM",
+      "source": "client-overlay/Effect/mf_pressure_mist.WEM",
+      "bytes": 468,
+      "sha256": "c03d3066283dc6c3d8a6c7f2ef142f20538a82fb7c138fe55e6b13baa7b2773e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_plate0.WEM",
+      "source": "client-overlay/Effect/mf_pressure_plate0.WEM",
+      "bytes": 2220,
+      "sha256": "277f487e03b3c01d9f2914543943224e2b1e4011d1d354ee2d5c9bda7d599881"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_plate1.WEM",
+      "source": "client-overlay/Effect/mf_pressure_plate1.WEM",
+      "bytes": 2220,
+      "sha256": "80525e66a94a5cb203ec50d79c5da2154fab37a8e37f1fde94d46b8bdf72a7b3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_plate2.WEM",
+      "source": "client-overlay/Effect/mf_pressure_plate2.WEM",
+      "bytes": 2220,
+      "sha256": "2ed8b43d7d2aa8e5ede1824145e7579a2010038a5cfeeb6643150dea612f8850"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_plate3.WEM",
+      "source": "client-overlay/Effect/mf_pressure_plate3.WEM",
+      "bytes": 2220,
+      "sha256": "d63d5b7e1a550acf9baedc0198dfe30e81ed6d1538e3c163ca01c569f45530a1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_plate4.WEM",
+      "source": "client-overlay/Effect/mf_pressure_plate4.WEM",
+      "bytes": 2220,
+      "sha256": "193b54ecc6a34a40bed635fe24fcd51d4132999c8d86530a3c71c804b629e6f6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_plate5.WEM",
+      "source": "client-overlay/Effect/mf_pressure_plate5.WEM",
+      "bytes": 2220,
+      "sha256": "c558eba889762a76a389294cf36012001a094d061db8fc416543faa82388e98f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_plate6.WEM",
+      "source": "client-overlay/Effect/mf_pressure_plate6.WEM",
+      "bytes": 2220,
+      "sha256": "f1f9674b8c478536116f81f074331de8023db4cec08b46767a712da15a962e2b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_plate7.WEM",
+      "source": "client-overlay/Effect/mf_pressure_plate7.WEM",
+      "bytes": 2220,
+      "sha256": "588ce97abc5ca12f2e109fe09a89bf6dfdc908b486a0e3cffee4d2b3c0250b5f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_pressure_plate8.WEM",
+      "source": "client-overlay/Effect/mf_pressure_plate8.WEM",
+      "bytes": 2220,
+      "sha256": "f231e386bc126d3f807fc3898c95527f8a4062d08d8c4b201c2433aea0a65697"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_crystal0.WEM",
+      "source": "client-overlay/Effect/mf_ring_crystal0.WEM",
+      "bytes": 982,
+      "sha256": "336b256ab0ca371d36e0f9a4aa7827e9250a303dee7a5014b537233726a482fb"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_crystal1.WEM",
+      "source": "client-overlay/Effect/mf_ring_crystal1.WEM",
+      "bytes": 746,
+      "sha256": "35255801f57f51b256e163d111a4c6ff229beff87d66926d7559c1956b926f5d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_crystal2.WEM",
+      "source": "client-overlay/Effect/mf_ring_crystal2.WEM",
+      "bytes": 864,
+      "sha256": "426a3a78171a26c6a8b3ff242b762d001b1999b832bd727ca8c579b6aec3e17b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_crystal3.WEM",
+      "source": "client-overlay/Effect/mf_ring_crystal3.WEM",
+      "bytes": 982,
+      "sha256": "a2a58b920b4f1f40dac964d2950144a85843bb3fba048a51dd09aa14ed0f87b9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_crystal4.WEM",
+      "source": "client-overlay/Effect/mf_ring_crystal4.WEM",
+      "bytes": 746,
+      "sha256": "a705bd43335cbd2d20bc661fa507ce7b5579b8c04732a4d17c6e997c48b30a8f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_crystal5.WEM",
+      "source": "client-overlay/Effect/mf_ring_crystal5.WEM",
+      "bytes": 864,
+      "sha256": "9acbe24a8c7ed2b599bf05f677b653636d0eb39c83444ca05de3ce35ab43a15a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_crystal6.WEM",
+      "source": "client-overlay/Effect/mf_ring_crystal6.WEM",
+      "bytes": 982,
+      "sha256": "e05a8f785016e0b86446f594f1865e4fb7a35ee1c0ab94d023b8b77abe87a7e9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_crystal7.WEM",
+      "source": "client-overlay/Effect/mf_ring_crystal7.WEM",
+      "bytes": 746,
+      "sha256": "2073fa72210233d72837cc6f492271b271c9a1319b1d94257a17dc6157d9a2f2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_crystal8.WEM",
+      "source": "client-overlay/Effect/mf_ring_crystal8.WEM",
+      "bytes": 864,
+      "sha256": "439044c28f2d4353646bc8be4829c88b946e64603415b93efbfffb22e77b6888"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist0_0.wed",
+      "source": "client-overlay/Effect/mf_ring_mist0_0.wed",
+      "bytes": 5501,
+      "sha256": "b1ce48fd8f4cf650625e16f43a1f9f174884813392b1385f07aed1c0a4bcb9be"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist0_1.wed",
+      "source": "client-overlay/Effect/mf_ring_mist0_1.wed",
+      "bytes": 5501,
+      "sha256": "4937f9f165af8da47e961928dfcf2d78c6a41fdc09a3c4f2498e6ce7e75a6879"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist1_0.wed",
+      "source": "client-overlay/Effect/mf_ring_mist1_0.wed",
+      "bytes": 5241,
+      "sha256": "3f73a5494fa44ba3ffbcdbca9f60e6a20ed5edc791cfddaf0ce7d0c42dc55050"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist1_1.wed",
+      "source": "client-overlay/Effect/mf_ring_mist1_1.wed",
+      "bytes": 5241,
+      "sha256": "b907cf15a54b2f05c1758b87e04cadd3825473c0d3680711ad1773cae7b2662c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist2_0.wed",
+      "source": "client-overlay/Effect/mf_ring_mist2_0.wed",
+      "bytes": 4981,
+      "sha256": "8f2b6fbb53b6b8d49d136e1fd3016273e20d2de4db873c576e9551a191e3a334"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist2_1.wed",
+      "source": "client-overlay/Effect/mf_ring_mist2_1.wed",
+      "bytes": 4981,
+      "sha256": "5ca824b3fdcc5a1e2b5144055f7c1416ebf556a3fc6c10a0bd2e657483a475c3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist3_0.wed",
+      "source": "client-overlay/Effect/mf_ring_mist3_0.wed",
+      "bytes": 4669,
+      "sha256": "0528ea0a73c0e8742bd04ce99d01c7c0a5faf7194a166faa220fd3c45f3ad343"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist3_1.wed",
+      "source": "client-overlay/Effect/mf_ring_mist3_1.wed",
+      "bytes": 4669,
+      "sha256": "79dcd358a4308e0b5ea8b15b1201b1a3f74387fb1c6533847fa05ac984c34317"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist4_0.wed",
+      "source": "client-overlay/Effect/mf_ring_mist4_0.wed",
+      "bytes": 4409,
+      "sha256": "dd6f666bd0826d063755adf9cfb1d92777e28f41a746db6f6e8e3d776c07afbe"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_ring_mist4_1.wed",
+      "source": "client-overlay/Effect/mf_ring_mist4_1.wed",
+      "bytes": 4409,
+      "sha256": "a477153ed39a2f44e8f9821b8dcb18ef5fd29e2788a45aa8173271f2858e4ad9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_settling_mist0.wed",
+      "source": "client-overlay/Effect/mf_settling_mist0.wed",
+      "bytes": 2077,
+      "sha256": "d66063e2d2af4c35cb2d50a833ff57a053a06d3ab11206bb91c0347f442c9059"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_settling_mist1.wed",
+      "source": "client-overlay/Effect/mf_settling_mist1.wed",
+      "bytes": 2389,
+      "sha256": "64e6a26f7e3e17e8c810c0e296eec28953d4ac54295d68cedbd93405d417914a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_settling_mist2.wed",
+      "source": "client-overlay/Effect/mf_settling_mist2.wed",
+      "bytes": 2701,
+      "sha256": "d8e5369cb00f4c36c69d26a19581e244eccbe8a39648f5bfb27e60f13a30de48"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_settling_mist3.wed",
+      "source": "client-overlay/Effect/mf_settling_mist3.wed",
+      "bytes": 2077,
+      "sha256": "1d7da61178bd72ef44c094f951fe43c6d8beb47403a708decd80aa2c2c8fe41f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_settling_mist4.wed",
+      "source": "client-overlay/Effect/mf_settling_mist4.wed",
+      "bytes": 2389,
+      "sha256": "5b5af5b58170b856b7780e9309f4f50317fa499d45b6c4fa8a75659116c0f90c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_settling_mist5.wed",
+      "source": "client-overlay/Effect/mf_settling_mist5.wed",
+      "bytes": 2701,
+      "sha256": "ebe0106785df3affd61779107303a1a80a5194a33f41d720af9eb8c048c60d43"
     },
     {
       "kind": "client",
       "path": "Effect/mf_spikeice01.wed",
       "source": "client-overlay/Effect/mf_spikeice01.wed",
       "bytes": 1591,
-      "sha256": "484628dd3283e2be29a0ee0a76b181127340185cf71ad76a688b73ab1233acf0"
+      "sha256": "8a4f3085e9b779f1899ef11a90d9733ee92ad63f3d8fcee26c695fc774f41142"
     },
     {
       "kind": "client",
       "path": "Effect/mf_spikeice02.wed",
       "source": "client-overlay/Effect/mf_spikeice02.wed",
       "bytes": 1591,
-      "sha256": "b2fe2f706b55317afdca4c41d3a64d58493081ab1719496db07d5a9bbcbe2440"
+      "sha256": "637e81a6448a5638862b19d825db364d603f8883b3e8f5b5b8158e7b59546413"
     },
     {
       "kind": "client",
       "path": "Effect/mf_spikeice_a.wed",
       "source": "client-overlay/Effect/mf_spikeice_a.wed",
       "bytes": 914,
-      "sha256": "754da44ec75b9735825598b97def83599525b359da954e383dd03f1738b7e6bc"
+      "sha256": "d71f653e191f7c5c2a3550a32a07c5d3a512d1f4005bfa21c8a3e139c5c18bf7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_squall0.wed",
+      "source": "client-overlay/Effect/mf_squall0.wed",
+      "bytes": 3939,
+      "sha256": "93aba19e71918a08d8fcdf10679042f3ee9f206bfc99423c2b40a6d0db7f30d7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_squall0.WEM",
+      "source": "client-overlay/Effect/mf_squall0.WEM",
+      "bytes": 2244,
+      "sha256": "8835b14f548643e9ad6fcd0d3013c6d89388b076fa02dfc0bb6c28a51dfb1362"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_squall1.wed",
+      "source": "client-overlay/Effect/mf_squall1.wed",
+      "bytes": 3887,
+      "sha256": "b3f88f567554366e1a64e4a63715038b6403c3ed85d801632cf5efc0a89b3f11"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_squall1.WEM",
+      "source": "client-overlay/Effect/mf_squall1.WEM",
+      "bytes": 2244,
+      "sha256": "224ebb225bc780847af3064fc17ac665a940a9d35b3f7ba08bf19ccd12f8fa58"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_squall2.wed",
+      "source": "client-overlay/Effect/mf_squall2.wed",
+      "bytes": 3783,
+      "sha256": "5e70e9a40a74a4bc11a65cfb8366ce6effba7a86937e5faa32034c1efa381830"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_squall2.WEM",
+      "source": "client-overlay/Effect/mf_squall2.WEM",
+      "bytes": 2244,
+      "sha256": "2728e45672364ded354c0d4b68eb13019ba9abe6439557c5f7da820f17f9b969"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_squall3.wed",
+      "source": "client-overlay/Effect/mf_squall3.wed",
+      "bytes": 3731,
+      "sha256": "f6bf5182acb667979e6ef114cb8109755369f4b6024a27785ffd8206e5413f92"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mf_squall3.WEM",
+      "source": "client-overlay/Effect/mf_squall3.WEM",
+      "bytes": 2244,
+      "sha256": "fe10ad24d3057026c3704b703a671038ffd994152fa36a345734b8334a1b6dbf"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_charge.wed",
+      "source": "client-overlay/Effect/mh_charge.wed",
+      "bytes": 603,
+      "sha256": "68e4930fdbfd28d789f0246bd04f651cca9897eccd92ce02707e7221ce365feb"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_launch.wed",
+      "source": "client-overlay/Effect/mh_launch.wed",
+      "bytes": 603,
+      "sha256": "331d296d9489ef810b18a9df4108b6f378f0d6793050505a1ccb62710784c6db"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_pierce_core.wed",
+      "source": "client-overlay/Effect/mh_pierce_core.wed",
+      "bytes": 978,
+      "sha256": "2c8d9677d2c2434c923c0ad7f4687551cbcee281e7a020a96154097bbd249be2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_pierce_core.WEM",
+      "source": "client-overlay/Effect/mh_pierce_core.WEM",
+      "bytes": 748,
+      "sha256": "eb647fd2f19946c8dafab8191e8e96a120d704ef6b8fb551a0ad6cd77795ed76"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_pierce_glow.wed",
+      "source": "client-overlay/Effect/mh_pierce_glow.wed",
+      "bytes": 978,
+      "sha256": "40cd3a9001605ed6e9c39af4fd662308cee25e239b9661ac9805d3e369365041"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_pierce_glow.WEM",
+      "source": "client-overlay/Effect/mh_pierce_glow.WEM",
+      "bytes": 748,
+      "sha256": "5f114e931ad1812914cabf76617cbeaa68628959d7384f2c48b543e4e9d9fd88"
     },
     {
       "kind": "client",
       "path": "Effect/mh_ps0002_1.wed",
       "source": "client-overlay/Effect/mh_ps0002_1.wed",
       "bytes": 1697,
-      "sha256": "af26e1d6f2ee3fcbf6fb5af60fcb593431fdee9d695dde8feb83b71a77880ae3"
+      "sha256": "7e38b3aa4d814cb1b463b30ff27592283b734781d540cc32d8b8ccf4f23561c3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_target_burst.wed",
+      "source": "client-overlay/Effect/mh_target_burst.wed",
+      "bytes": 1187,
+      "sha256": "51271ab6bfc4e04e14bb9405dd2088c54315202deea0c911f3b0b694c6355a84"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_target_rune.wed",
+      "source": "client-overlay/Effect/mh_target_rune.wed",
+      "bytes": 1445,
+      "sha256": "75130853e5f3e7f417680ba0201a4df84028e99b792d0e593f64b678ac9c3ae9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_target_rune.WEM",
+      "source": "client-overlay/Effect/mh_target_rune.WEM",
+      "bytes": 260,
+      "sha256": "92b98da4156dcf2a332a3dce943d91d84488b4ab6aa9a48f6e0428858376eff6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_target_shards.wed",
+      "source": "client-overlay/Effect/mh_target_shards.wed",
+      "bytes": 1394,
+      "sha256": "b7df737d8114e3e37086e50096d6e9763a2d6d99a84af0e60ebecd6613647a27"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_target_shards.WEM",
+      "source": "client-overlay/Effect/mh_target_shards.WEM",
+      "bytes": 2652,
+      "sha256": "d6af1a901b2c0011519d3fb46c4bcb51b0c7b0f8d2efc50af2be10adb58ea79b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mh_target_wave.wed",
+      "source": "client-overlay/Effect/mh_target_wave.wed",
+      "bytes": 1174,
+      "sha256": "17502cf481c6df7144eef393b8e1406fad3cb831120439c2dad7aa97ff120e6c"
     },
     {
       "kind": "client",
       "path": "Effect/mh_vb0001.wed",
       "source": "client-overlay/Effect/mh_vb0001.wed",
       "bytes": 1174,
-      "sha256": "170985e27b9dbea760ed8d644e35a7c23980cdea78c2b319282ab3e42102c106"
+      "sha256": "93528b08e01567778e508fa17c7721c38e57f317c2d67551ee409b5525579953"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_0_0.wed",
+      "source": "client-overlay/Effect/mm_battery_0_0.wed",
+      "bytes": 1965,
+      "sha256": "606c9c2282493d72a10595d86b37d765ca6445c61bc78ef503ae8e6371a9fdc5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_0_0.WEM",
+      "source": "client-overlay/Effect/mm_battery_0_0.WEM",
+      "bytes": 260,
+      "sha256": "2ed8d12bd18b28824765d9c8aa983adc0a9bce5b5b080ddf83685cf781fd8d05"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_0_1.wed",
+      "source": "client-overlay/Effect/mm_battery_0_1.wed",
+      "bytes": 1911,
+      "sha256": "8982f7022740f099043383d5e8cc9d529069dbe3da99b24b35f37da0fc7db68a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_0_1.WEM",
+      "source": "client-overlay/Effect/mm_battery_0_1.WEM",
+      "bytes": 260,
+      "sha256": "2ed8d12bd18b28824765d9c8aa983adc0a9bce5b5b080ddf83685cf781fd8d05"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_0_2.wed",
+      "source": "client-overlay/Effect/mm_battery_0_2.wed",
+      "bytes": 1859,
+      "sha256": "f5c08e50d5bfc10902a61b54b23a45bf101761c9ad5a45f826957cc6897d1068"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_0_2.WEM",
+      "source": "client-overlay/Effect/mm_battery_0_2.WEM",
+      "bytes": 260,
+      "sha256": "2ed8d12bd18b28824765d9c8aa983adc0a9bce5b5b080ddf83685cf781fd8d05"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_1_0.wed",
+      "source": "client-overlay/Effect/mm_battery_1_0.wed",
+      "bytes": 2017,
+      "sha256": "b62f1150b9bbbc56842ba6b2031cbab9b01bfc0d020d8d245d7b47668a8666f2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_1_0.WEM",
+      "source": "client-overlay/Effect/mm_battery_1_0.WEM",
+      "bytes": 260,
+      "sha256": "a202e9b773837533d8981b8f9ad20ac9e2969ad9fd8051304bb457abc3a42697"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_1_1.wed",
+      "source": "client-overlay/Effect/mm_battery_1_1.wed",
+      "bytes": 1963,
+      "sha256": "ac2aafcb39f1daedc46acc42b5edf66f8838683ecb10ac349e96a3c810cefa54"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_1_1.WEM",
+      "source": "client-overlay/Effect/mm_battery_1_1.WEM",
+      "bytes": 260,
+      "sha256": "a202e9b773837533d8981b8f9ad20ac9e2969ad9fd8051304bb457abc3a42697"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_1_2.wed",
+      "source": "client-overlay/Effect/mm_battery_1_2.wed",
+      "bytes": 1911,
+      "sha256": "df9f5516227dcd7d799c7338479bd0280763599e5200b7d9b2d307726cf95acf"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_1_2.WEM",
+      "source": "client-overlay/Effect/mm_battery_1_2.WEM",
+      "bytes": 260,
+      "sha256": "a202e9b773837533d8981b8f9ad20ac9e2969ad9fd8051304bb457abc3a42697"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_2_0.wed",
+      "source": "client-overlay/Effect/mm_battery_2_0.wed",
+      "bytes": 2121,
+      "sha256": "476ee5cb7ef1ae9afb23ab594e24d5018072f56463b1252350cbd4514a005cb2"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_2_0.WEM",
+      "source": "client-overlay/Effect/mm_battery_2_0.WEM",
+      "bytes": 260,
+      "sha256": "b2b5f4083c14051a9ac4ad4194d75b241595387a51866ef973c27cf0b8fd708d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_2_1.wed",
+      "source": "client-overlay/Effect/mm_battery_2_1.wed",
+      "bytes": 2015,
+      "sha256": "16c6e363e60ee3c69b7c30310d64a25dc939d7faaa74a1ba6857a581260d86b0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_2_1.WEM",
+      "source": "client-overlay/Effect/mm_battery_2_1.WEM",
+      "bytes": 260,
+      "sha256": "b2b5f4083c14051a9ac4ad4194d75b241595387a51866ef973c27cf0b8fd708d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_2_2.wed",
+      "source": "client-overlay/Effect/mm_battery_2_2.wed",
+      "bytes": 1963,
+      "sha256": "a4f153ce8b8a9ef8f29d2de3c2e0c9bc8bfb4d747b9a7b1d0d25ca5dbbb983bd"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_2_2.WEM",
+      "source": "client-overlay/Effect/mm_battery_2_2.WEM",
+      "bytes": 260,
+      "sha256": "b2b5f4083c14051a9ac4ad4194d75b241595387a51866ef973c27cf0b8fd708d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_3_0.wed",
+      "source": "client-overlay/Effect/mm_battery_3_0.wed",
+      "bytes": 2173,
+      "sha256": "f298bfdec54f634c457fa43b8e3e5ad179376ec342405f23cd49619168b9a512"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_3_0.WEM",
+      "source": "client-overlay/Effect/mm_battery_3_0.WEM",
+      "bytes": 260,
+      "sha256": "701a7b4c7c47af2b88eacebd932318bc6780db42ce6acbef3cb796937b3529c4"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_3_1.wed",
+      "source": "client-overlay/Effect/mm_battery_3_1.wed",
+      "bytes": 2119,
+      "sha256": "4da35151c0f555f8797d9c4b89934b3222d3a59dc67c63a0cd25a932fb461b04"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_3_1.WEM",
+      "source": "client-overlay/Effect/mm_battery_3_1.WEM",
+      "bytes": 260,
+      "sha256": "701a7b4c7c47af2b88eacebd932318bc6780db42ce6acbef3cb796937b3529c4"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_3_2.wed",
+      "source": "client-overlay/Effect/mm_battery_3_2.wed",
+      "bytes": 2015,
+      "sha256": "d06d56d059b7d160ae09d7b89c3c1a7aa3dd29400e5f163d21e408b756fefc9a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_3_2.WEM",
+      "source": "client-overlay/Effect/mm_battery_3_2.WEM",
+      "bytes": 260,
+      "sha256": "701a7b4c7c47af2b88eacebd932318bc6780db42ce6acbef3cb796937b3529c4"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_4_0.wed",
+      "source": "client-overlay/Effect/mm_battery_4_0.wed",
+      "bytes": 2277,
+      "sha256": "aa24d540e2239a48910da67596d7ddd24ea49b13c27b86755aae948212ce6071"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_4_0.WEM",
+      "source": "client-overlay/Effect/mm_battery_4_0.WEM",
+      "bytes": 260,
+      "sha256": "53e8cee7a959c52c69b075e5cae8d07e20e2c651d755d1574e0c476a545215f1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_4_1.wed",
+      "source": "client-overlay/Effect/mm_battery_4_1.wed",
+      "bytes": 2223,
+      "sha256": "91d2f8473d13d606a81843d1652cb792ec0d6c65c8268e700c29f8cf91dc0768"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_4_1.WEM",
+      "source": "client-overlay/Effect/mm_battery_4_1.WEM",
+      "bytes": 260,
+      "sha256": "53e8cee7a959c52c69b075e5cae8d07e20e2c651d755d1574e0c476a545215f1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_4_2.wed",
+      "source": "client-overlay/Effect/mm_battery_4_2.wed",
+      "bytes": 2119,
+      "sha256": "1a2b200a92656ec50d64692650ef4b96bec3e10b23d289f1b45b9ba9d1c7ae9c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_4_2.WEM",
+      "source": "client-overlay/Effect/mm_battery_4_2.WEM",
+      "bytes": 260,
+      "sha256": "53e8cee7a959c52c69b075e5cae8d07e20e2c651d755d1574e0c476a545215f1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_5_0.wed",
+      "source": "client-overlay/Effect/mm_battery_5_0.wed",
+      "bytes": 2381,
+      "sha256": "2d9e40bee3c7e8838e31b84e0111b379d3e7eb44cf0caa7a9580dfb433ad6948"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_5_0.WEM",
+      "source": "client-overlay/Effect/mm_battery_5_0.WEM",
+      "bytes": 260,
+      "sha256": "0cc3dd583f884ec7e3679174423033bdf02ff41af00c64e3aa43d93ae006e442"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_5_1.wed",
+      "source": "client-overlay/Effect/mm_battery_5_1.wed",
+      "bytes": 2275,
+      "sha256": "e76526ebb8f64cabc2e4198993749fff70fcc8cfdbb85f07b7ccfadd78a6cf02"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_5_1.WEM",
+      "source": "client-overlay/Effect/mm_battery_5_1.WEM",
+      "bytes": 260,
+      "sha256": "0cc3dd583f884ec7e3679174423033bdf02ff41af00c64e3aa43d93ae006e442"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_5_2.wed",
+      "source": "client-overlay/Effect/mm_battery_5_2.wed",
+      "bytes": 2223,
+      "sha256": "f93a1b93fff107929be444456fae9d634cf0aac85d1d805565e1db10612af0bd"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_5_2.WEM",
+      "source": "client-overlay/Effect/mm_battery_5_2.WEM",
+      "bytes": 260,
+      "sha256": "0cc3dd583f884ec7e3679174423033bdf02ff41af00c64e3aa43d93ae006e442"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_6_0.wed",
+      "source": "client-overlay/Effect/mm_battery_6_0.wed",
+      "bytes": 2537,
+      "sha256": "7c684d0973629d04678c321e851b76482215dd468d22a3373d4f43075e2c7c38"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_6_0.WEM",
+      "source": "client-overlay/Effect/mm_battery_6_0.WEM",
+      "bytes": 260,
+      "sha256": "cb30dd2e3f8d96578dab1292a1ce1d0951fa47a1f63ac154870a2e2c15eb8ec6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_6_1.wed",
+      "source": "client-overlay/Effect/mm_battery_6_1.wed",
+      "bytes": 2483,
+      "sha256": "c61f6e290e477f110f52257d5ad43cdaf8150e17549d7218d0b63314bfe2e797"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_6_1.WEM",
+      "source": "client-overlay/Effect/mm_battery_6_1.WEM",
+      "bytes": 260,
+      "sha256": "cb30dd2e3f8d96578dab1292a1ce1d0951fa47a1f63ac154870a2e2c15eb8ec6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_6_2.wed",
+      "source": "client-overlay/Effect/mm_battery_6_2.wed",
+      "bytes": 2431,
+      "sha256": "543d6ce907ae21af0a35e68839e74cc96b0c3fed538436b4ee73d3caa988fafb"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_6_2.WEM",
+      "source": "client-overlay/Effect/mm_battery_6_2.WEM",
+      "bytes": 260,
+      "sha256": "cb30dd2e3f8d96578dab1292a1ce1d0951fa47a1f63ac154870a2e2c15eb8ec6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_7_0.wed",
+      "source": "client-overlay/Effect/mm_battery_7_0.wed",
+      "bytes": 2745,
+      "sha256": "fd5922b21cf7d1e836eb972db8e8d4b3ce6b46fc94652647276f337712fab80e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_7_0.WEM",
+      "source": "client-overlay/Effect/mm_battery_7_0.WEM",
+      "bytes": 260,
+      "sha256": "a1aa6a4a2621d69f49c8be1ba3efb7b6232d072166f06fa3abf78d478148637b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_7_1.wed",
+      "source": "client-overlay/Effect/mm_battery_7_1.wed",
+      "bytes": 2639,
+      "sha256": "a9b711e03f0cd099a229130132f0956dffe8aec5e50008dce5ee65620352477e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_7_1.WEM",
+      "source": "client-overlay/Effect/mm_battery_7_1.WEM",
+      "bytes": 260,
+      "sha256": "a1aa6a4a2621d69f49c8be1ba3efb7b6232d072166f06fa3abf78d478148637b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_7_2.wed",
+      "source": "client-overlay/Effect/mm_battery_7_2.wed",
+      "bytes": 2587,
+      "sha256": "9175860eccfb4a28116cb446332f92ce71bc1175ae578fd0882a74cd8c1637f6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_battery_7_2.WEM",
+      "source": "client-overlay/Effect/mm_battery_7_2.WEM",
+      "bytes": 260,
+      "sha256": "a1aa6a4a2621d69f49c8be1ba3efb7b6232d072166f06fa3abf78d478148637b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_cannon.wed",
+      "source": "client-overlay/Effect/mm_cannon.wed",
+      "bytes": 916,
+      "sha256": "2f8894d5980240f57e4866c6f78cb9aa238d1af2f881362976a930b57c2ec437"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_cannon_hit.wed",
+      "source": "client-overlay/Effect/mm_cannon_hit.wed",
+      "bytes": 1693,
+      "sha256": "98f08c5769deea7fe5a92aa9acd3e913de32459cf503c0b3d49a488ef597bccf"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_ejecta0.wed",
+      "source": "client-overlay/Effect/mm_ejecta0.wed",
+      "bytes": 2476,
+      "sha256": "5d4b9207332c921a37d0e332b943698944dcad6e4c545ed479437daadcfd7c78"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_ejecta1.wed",
+      "source": "client-overlay/Effect/mm_ejecta1.wed",
+      "bytes": 2476,
+      "sha256": "8db1ca8787bc9bd6c946c393b1af2b7ebc3876a359d46ea70f3b2607d332ad3e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_ejecta2.wed",
+      "source": "client-overlay/Effect/mm_ejecta2.wed",
+      "bytes": 2476,
+      "sha256": "11b74e03dc1b4b3da79b851d5b8920eadcdd33f5eac2ae1b531861788b51945a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_ejecta3.wed",
+      "source": "client-overlay/Effect/mm_ejecta3.wed",
+      "bytes": 2476,
+      "sha256": "596dc085202fa1c50bccdcaf4c1d01d41ab9b3e3067d17cef158ece0f21eba1e"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_ejecta4.wed",
+      "source": "client-overlay/Effect/mm_ejecta4.wed",
+      "bytes": 2476,
+      "sha256": "f03244e1e596736946f123325a3530e61c9646a9fa1467893060eff34b64676d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_ejecta5.wed",
+      "source": "client-overlay/Effect/mm_ejecta5.wed",
+      "bytes": 2476,
+      "sha256": "c2e5ea2a233f032a81fd3e683d30e684a8e11ee66b4c3ec80ffddcc581c444f5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_ejecta6.wed",
+      "source": "client-overlay/Effect/mm_ejecta6.wed",
+      "bytes": 2476,
+      "sha256": "41bf66ad7f533825ae574167eab780bbfd18862600422332c7cdec667aeb2933"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_ejecta7.wed",
+      "source": "client-overlay/Effect/mm_ejecta7.wed",
+      "bytes": 2476,
+      "sha256": "40e2f5f5e175e64e89fb35f5148ed1de3a48c75154581c62c6f82514de3151f5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_final_fireball.wed",
+      "source": "client-overlay/Effect/mm_final_fireball.wed",
+      "bytes": 916,
+      "sha256": "7dbc4c37c48d054367fd06398cbee8c498f0b6f7e1c56ae8d0a52a4b9e141909"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_final_hit.wed",
+      "source": "client-overlay/Effect/mm_final_hit.wed",
+      "bytes": 2161,
+      "sha256": "bcd86865bf771bd3a850303f6dca2589eb7d634156bfd774a8b986e2c82031ae"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_final_seal0.wed",
+      "source": "client-overlay/Effect/mm_final_seal0.wed",
+      "bytes": 3265,
+      "sha256": "3ffd723d1a0e2e12fb9109e83cec64f39ce5da4dde4df5aac5091374970e0739"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_final_seal0.WEM",
+      "source": "client-overlay/Effect/mm_final_seal0.WEM",
+      "bytes": 260,
+      "sha256": "c35589fce38654a9c4d4e843810eceeeacb6de3964a86f66e155dd2364891c89"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_final_seal1.wed",
+      "source": "client-overlay/Effect/mm_final_seal1.wed",
+      "bytes": 3107,
+      "sha256": "ea1faf1ccd314385455ce64c26f2fd65ef4c73bbe92d55f86954db0c80ad4ec0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_final_seal1.WEM",
+      "source": "client-overlay/Effect/mm_final_seal1.WEM",
+      "bytes": 260,
+      "sha256": "c35589fce38654a9c4d4e843810eceeeacb6de3964a86f66e155dd2364891c89"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_final_seal2.wed",
+      "source": "client-overlay/Effect/mm_final_seal2.wed",
+      "bytes": 2951,
+      "sha256": "d1b28ee43a64e74e8dabc7d49d34d5f134c0a424cd549d013b4a5c7bd829ec09"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_final_seal2.WEM",
+      "source": "client-overlay/Effect/mm_final_seal2.WEM",
+      "bytes": 260,
+      "sha256": "c35589fce38654a9c4d4e843810eceeeacb6de3964a86f66e155dd2364891c89"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_final_wave.wed",
+      "source": "client-overlay/Effect/mm_final_wave.wed",
+      "bytes": 2162,
+      "sha256": "486f2743d198f7e3acb9d098e40d7555d607ff731dae41000872f6afdae79ca5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_funnel.WEM",
+      "source": "client-overlay/Effect/mm_fire_funnel.WEM",
+      "bytes": 3900,
+      "sha256": "ab1aa7738068b381539672442ac417c8e59dc8f513ad033dd4df33193a61fa91"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_sheath.WEM",
+      "source": "client-overlay/Effect/mm_fire_sheath.WEM",
+      "bytes": 23352,
+      "sha256": "7de45390fe6f2935fc0da823b26b7708f8944f0d428f3e5fa424b393987abc6d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex0.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex0.wed",
+      "bytes": 3938,
+      "sha256": "578b86dbf8ed77a7a959940723a2166e171cdfff93b75948298dd0a2c9a19516"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex1.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex1.wed",
+      "bytes": 3938,
+      "sha256": "55bb9848e23a0023f9a176d5b787b069554782d2a085bafb635bd7650f3da43c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex2.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex2.wed",
+      "bytes": 3938,
+      "sha256": "c9bcd77aa16cbc9d9827854799d08491af3b517ad87e2ba1edbfdf8b69942c7b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex3.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex3.wed",
+      "bytes": 3938,
+      "sha256": "e2c9f322a302be77260dbeb01ee5d7fa31962817d334799c7235495381fad541"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex4.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex4.wed",
+      "bytes": 3938,
+      "sha256": "b0eb093ecd52c855a94917979002576ace1add0d14b656363e85a77e956c1880"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex5.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex5.wed",
+      "bytes": 3938,
+      "sha256": "c132ea3577a01d4d1abb82e35f8954e347074e64cbf8e7f5aaf46c10c59608fa"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex_sheath0.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex_sheath0.wed",
+      "bytes": 3939,
+      "sha256": "34a1863e22dfb50d2eb058dbcd81fd3ce6e8d16ec5ad5625c55d8ba313b01565"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex_sheath1.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex_sheath1.wed",
+      "bytes": 3939,
+      "sha256": "c8c903de3bf0fce9e15f5c8f786902f874e1f884f6f002f491542da126df8ffb"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex_sheath2.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex_sheath2.wed",
+      "bytes": 3939,
+      "sha256": "7e9762db592a2884011439be0763833eeadd6f290cbaa05988831b9a3557063d"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex_sheath3.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex_sheath3.wed",
+      "bytes": 3939,
+      "sha256": "c0a51a3aa6cd10752aeb86f7d925962509807120b3c5b923c72fb82aeeb8e0a5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex_sheath4.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex_sheath4.wed",
+      "bytes": 3939,
+      "sha256": "a86a95de31f26380fcc8746fc4b7a3babcf7bcc4d508dcce4f3033dfbd04c172"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_fire_vortex_sheath5.wed",
+      "source": "client-overlay/Effect/mm_fire_vortex_sheath5.wed",
+      "bytes": 3939,
+      "sha256": "2ac2d10fdd1116f90b134b0499947d351bb3b82c91ae433884df352ae0fee852"
     },
     {
       "kind": "client",
@@ -127,14 +3256,301 @@
       "path": "Effect/mm_firepierce_a01.wed",
       "source": "client-overlay/Effect/mm_firepierce_a01.wed",
       "bytes": 2483,
-      "sha256": "0f5e1d235b94b2e2f33655ca31cf2d02e363afab160b2df4097c9e8ff520a283"
+      "sha256": "c6bf3f1ce9101c74f7a69a2256cb955ce49cf8cc86086be3cafee4ceceb83a87"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_magma.wed",
+      "source": "client-overlay/Effect/mm_magma.wed",
+      "bytes": 6125,
+      "sha256": "c7de14fe27b88570f64b5c6cfdecdfb20812a5517cd00d9c4b488b1c6207f890"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_magma.WEM",
+      "source": "client-overlay/Effect/mm_magma.WEM",
+      "bytes": 260,
+      "sha256": "92b98da4156dcf2a332a3dce943d91d84488b4ab6aa9a48f6e0428858376eff6"
     },
     {
       "kind": "client",
       "path": "Effect/mm_protecfire_a01.wed",
       "source": "client-overlay/Effect/mm_protecfire_a01.wed",
       "bytes": 2483,
-      "sha256": "2b82594f950716cf4d65fd765e541d296d98ca90a06e300136341f8f23031c05"
+      "sha256": "3f5245cd6457cc0a4876b8a4cce5ad569ad03cb3d34e682c3322848e404e33d1"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_shell_bloom.wed",
+      "source": "client-overlay/Effect/mm_shell_bloom.wed",
+      "bytes": 1858,
+      "sha256": "6e1c5171cdcf1b83161e3a26f75b2be717be87afb32a7282e2c372312f64bc23"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_shell_bloom.WEM",
+      "source": "client-overlay/Effect/mm_shell_bloom.WEM",
+      "bytes": 2444,
+      "sha256": "1890c172302ffaa188aa060aff3155745163eeb5d0159f3da7f18f7324131a0b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_shell_wave.wed",
+      "source": "client-overlay/Effect/mm_shell_wave.wed",
+      "bytes": 1434,
+      "sha256": "4c25f7f0ec08053d2a9493d2530950394bd3f1cd9eaf6d2122cd86a69adb002a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_ember.wed",
+      "source": "client-overlay/Effect/mm_storm_ember.wed",
+      "bytes": 1957,
+      "sha256": "0b8c5658f806a99fc7717fcdfa44e708f264139794e5e1a92d429c8bf5cbfb24"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_final.wed",
+      "source": "client-overlay/Effect/mm_storm_final.wed",
+      "bytes": 771,
+      "sha256": "30c1e7be6c61079af0f8f9a87298b6dcdf0b62327f1d416f3a472ab899f26819"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_final_hit.wed",
+      "source": "client-overlay/Effect/mm_storm_final_hit.wed",
+      "bytes": 1125,
+      "sha256": "5607f0d61f0c3621afca78283be34012c822906739211d227a983409336b1674"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_final_shock.wed",
+      "source": "client-overlay/Effect/mm_storm_final_shock.wed",
+      "bytes": 1226,
+      "sha256": "a2b4e83e567a40c9d56bc1d04577b5a1fce74190ca43f0176ce0c86f027d759b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_hit.wed",
+      "source": "client-overlay/Effect/mm_storm_hit.wed",
+      "bytes": 1125,
+      "sha256": "4b53ca4361c8f7c3d17bd2be418c34db06fa4d2ae6070a00d2794d7ee18e4fc3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_pressure.wed",
+      "source": "client-overlay/Effect/mm_storm_pressure.wed",
+      "bytes": 2006,
+      "sha256": "706f4e0155cff122d9510af5c0e25c5843472ed30a71b6725b90e504292aff7f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_rim0.wed",
+      "source": "client-overlay/Effect/mm_storm_rim0.wed",
+      "bytes": 2627,
+      "sha256": "68a4622f9decbde0e7f9bb72f80b6bf98b6d626ee4af16b577f6e7c6f3a21f16"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_rim1.wed",
+      "source": "client-overlay/Effect/mm_storm_rim1.wed",
+      "bytes": 2627,
+      "sha256": "31f5f3f8c123c61dd48dd6546ca5abd23653100c0da39cac2fc7681bd15f9971"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_rock.wed",
+      "source": "client-overlay/Effect/mm_storm_rock.wed",
+      "bytes": 771,
+      "sha256": "91386f50498119736c8f1dea1a3390090b41cc5725e8a67811f29c0434342d4b"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_rock.WEM",
+      "source": "client-overlay/Effect/mm_storm_rock.WEM",
+      "bytes": 2712,
+      "sha256": "3811e8a4beecdf5e564824dc07d983d4fa94bae98780a36da492f07c16800904"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_seal0.wed",
+      "source": "client-overlay/Effect/mm_storm_seal0.wed",
+      "bytes": 4932,
+      "sha256": "3b197f0db1b77582e1a56b877a20797353019a885d542ba5bc20492633aa8c75"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_seal0.WEM",
+      "source": "client-overlay/Effect/mm_storm_seal0.WEM",
+      "bytes": 25116,
+      "sha256": "3df0849338bcaf89d7b48f95959bcf9549e8e2318d192b15e46d17a1e852f3a7"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_seal1.wed",
+      "source": "client-overlay/Effect/mm_storm_seal1.wed",
+      "bytes": 4568,
+      "sha256": "60edf8200fe5414fb3e59392a225599797de068a5dcd22096ad8aa3f9c0b638a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_seal1.WEM",
+      "source": "client-overlay/Effect/mm_storm_seal1.WEM",
+      "bytes": 11908,
+      "sha256": "fd50051c5e8f275ada9419e35f9e98e77352de0d34a0573b4b0b17801109050c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_seal2.wed",
+      "source": "client-overlay/Effect/mm_storm_seal2.wed",
+      "bytes": 4204,
+      "sha256": "2bdab14db4797bcbd6ee8563e27be0b475d99f1ef60ebfa1af58c4f9770812bb"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_seal2.WEM",
+      "source": "client-overlay/Effect/mm_storm_seal2.WEM",
+      "bytes": 11700,
+      "sha256": "185f3e43e83e506eb3b63a8dbb9b07996764a3c909934853665e32d27d3b2db5"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_shock.wed",
+      "source": "client-overlay/Effect/mm_storm_shock.wed",
+      "bytes": 1226,
+      "sha256": "180d4fd549d361c0c88ebab6cd18b415d160b045b95063fd695f1da1fe7cd8c0"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_storm_small.wed",
+      "source": "client-overlay/Effect/mm_storm_small.wed",
+      "bytes": 771,
+      "sha256": "0c1ae1ae0546f69cfe1ddba4c383583fb2d3139e05c0cb24689e5c7ad1920ee6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront0.wed",
+      "source": "client-overlay/Effect/mm_stormfront0.wed",
+      "bytes": 2629,
+      "sha256": "8faeaabe23c2329c67f0cb83fc918d8880182bc66a41edc0d0901f7f17e751d8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront1.wed",
+      "source": "client-overlay/Effect/mm_stormfront1.wed",
+      "bytes": 2629,
+      "sha256": "365a15fd2540fded9c951cd332da300f94a8b75ed70f3d16729310b4a6fdff42"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront10.wed",
+      "source": "client-overlay/Effect/mm_stormfront10.wed",
+      "bytes": 2629,
+      "sha256": "f57919c3193758be4c37a4f9c5c46e51665adabbcc7da06b4c2d2926cb7f75c9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront11.wed",
+      "source": "client-overlay/Effect/mm_stormfront11.wed",
+      "bytes": 2629,
+      "sha256": "85939ce74bb6d98ccfaea33aad9ba05adf3f8a6c77ebb184f66e782adc32b619"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront12.wed",
+      "source": "client-overlay/Effect/mm_stormfront12.wed",
+      "bytes": 2629,
+      "sha256": "6ade9e6ca6911becac895961565e51fd04ee395bff18cd999a51666f454a1aa6"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront13.wed",
+      "source": "client-overlay/Effect/mm_stormfront13.wed",
+      "bytes": 2629,
+      "sha256": "eb5d813d97bb01f811cc2251ae7bb8f7199256f4b816e0929a6997e0c54e7703"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront14.wed",
+      "source": "client-overlay/Effect/mm_stormfront14.wed",
+      "bytes": 2629,
+      "sha256": "fff7050a17f554074d1c0c18e1950f0332c5a6d65bacfa23811c5557f7833934"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront15.wed",
+      "source": "client-overlay/Effect/mm_stormfront15.wed",
+      "bytes": 2629,
+      "sha256": "89b03d81839b03b99cd910c3f23e5533f20d2508fd6920387f1c3337593855ba"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront16.wed",
+      "source": "client-overlay/Effect/mm_stormfront16.wed",
+      "bytes": 2629,
+      "sha256": "7afa08953f735a4ed8f640b7330f04ecdacf7cb829da07b0a9e56bb0927d2971"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront17.wed",
+      "source": "client-overlay/Effect/mm_stormfront17.wed",
+      "bytes": 2629,
+      "sha256": "77ef251d033b8fdc12251c33de8c1a52b7723b2044866cf15c97059ec8de3691"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront2.wed",
+      "source": "client-overlay/Effect/mm_stormfront2.wed",
+      "bytes": 2629,
+      "sha256": "2483bcdf7a5414a7c33d8c765e9452ffbf1dad636cc5faae76bf4cb2428b15ab"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront3.wed",
+      "source": "client-overlay/Effect/mm_stormfront3.wed",
+      "bytes": 2629,
+      "sha256": "302b06b06759206999a54ae8bc82a43fa745a72bd21e3f9d5cf31c3a4136bf89"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront4.wed",
+      "source": "client-overlay/Effect/mm_stormfront4.wed",
+      "bytes": 2629,
+      "sha256": "1dfbf29e1153ed05f8539f01c8a1c0db5f2960b3d01d8b2891b5d983e1da75e9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront5.wed",
+      "source": "client-overlay/Effect/mm_stormfront5.wed",
+      "bytes": 2629,
+      "sha256": "246cec17e13b327df2c09e27dfe3eb5cd69068e439de64cb77b290355113cc2c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront6.wed",
+      "source": "client-overlay/Effect/mm_stormfront6.wed",
+      "bytes": 2629,
+      "sha256": "7ddedf3dbb72ecd4238844635773de056a639b76b9b07a5a12c915f3810df500"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront7.wed",
+      "source": "client-overlay/Effect/mm_stormfront7.wed",
+      "bytes": 2629,
+      "sha256": "77b3e5a1180cff3cad1f447a81b91733597861a99a1bc21142b23e548971df85"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront8.wed",
+      "source": "client-overlay/Effect/mm_stormfront8.wed",
+      "bytes": 2629,
+      "sha256": "50c8c7fb9b0430f0d4cc92eb9468ff23727fda93ca577e2735928c865d115a1a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/mm_stormfront9.wed",
+      "source": "client-overlay/Effect/mm_stormfront9.wed",
+      "bytes": 2629,
+      "sha256": "c272b4c4ad80d66be66625d994ef34f7f999d9258cea4e8c809ca6057971718e"
     },
     {
       "kind": "client",
@@ -142,6 +3558,76 @@
       "source": "client-overlay/Effect/mm_ta_fire.wed",
       "bytes": 1125,
       "sha256": "314f7373aa6bc8472df4116eb47247240869876d52c4a1fab14c4d433503db2f"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/ms_charge.wed",
+      "source": "client-overlay/Effect/ms_charge.wed",
+      "bytes": 603,
+      "sha256": "3161c10934454e09bf275d0acb576ff47d68e59783a821124c282367fb1ab0d3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/ms_impact.wed",
+      "source": "client-overlay/Effect/ms_impact.wed",
+      "bytes": 1070,
+      "sha256": "febcfdf184c25f7b780080c86602f6c323c7c6c89adc7f40f78520204f24a404"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/ms_launch.wed",
+      "source": "client-overlay/Effect/ms_launch.wed",
+      "bytes": 602,
+      "sha256": "73242f8b27512634d0b620131e3a2b199d562005b66caa6df9daa1931c699590"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/ms_projectile.wed",
+      "source": "client-overlay/Effect/ms_projectile.wed",
+      "bytes": 1695,
+      "sha256": "77a1f04e63ab18453213da060e9b5c46eba8deae056b4e2e7ddb1f4e27878a7c"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/ms_target_burst.wed",
+      "source": "client-overlay/Effect/ms_target_burst.wed",
+      "bytes": 867,
+      "sha256": "54ae92f81e9561e7258acff88395d50904e41486f438aec954597faf4d2b68a3"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/msb_charge.wed",
+      "source": "client-overlay/Effect/msb_charge.wed",
+      "bytes": 604,
+      "sha256": "c4946031cf276b0299502c45cecbfb6e5d00288c5e38d6ad2ac37284bff24fb9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/msb_impact.wed",
+      "source": "client-overlay/Effect/msb_impact.wed",
+      "bytes": 1071,
+      "sha256": "1cd071e89cb3c9f6fcb4b003881ba6cf6b6ed2a263991e21cf8ab2c58c76beb8"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/msb_launch.wed",
+      "source": "client-overlay/Effect/msb_launch.wed",
+      "bytes": 603,
+      "sha256": "f633932b7ad34ed56ee76b10d2eeeee6392c4606eb706945f7534dc20740b05a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/msb_projectile.wed",
+      "source": "client-overlay/Effect/msb_projectile.wed",
+      "bytes": 1696,
+      "sha256": "7e3da406a54043cc2a07e9229405c8580aada3ad84e7bc7a9ebf934e334a74e9"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/msb_target_burst.wed",
+      "source": "client-overlay/Effect/msb_target_burst.wed",
+      "bytes": 868,
+      "sha256": "958e14fed0bdbacee38a2e678be48d83c0898c28d91a1bed9d2d70e1838d0ec9"
     },
     {
       "kind": "client",
@@ -159,10 +3645,17 @@
     },
     {
       "kind": "client",
+      "path": "Effect/particle.ptc",
+      "source": "client-overlay/Effect/particle.ptc",
+      "bytes": 45690,
+      "sha256": "18dac99f1b12789c00446115dceb4347582ae1fba68a5249f402d76096adc1d1"
+    },
+    {
+      "kind": "client",
       "path": "Effect/trace.tdf",
       "source": "client-overlay/Effect/trace.tdf",
-      "bytes": 647,
-      "sha256": "e747d441249745083acf30b4792d7eafd82580875866e92a871c77d47eef471a"
+      "bytes": 799,
+      "sha256": "f4c08653bc4988adac03004b6edadaf23f051fec83508115adc976809add9927"
     },
     {
       "kind": "client",
@@ -196,64 +3689,64 @@
       "kind": "client",
       "path": "Equip/mt_longbow_1.mod",
       "source": "client-overlay/Equip/mt_longbow_1.mod",
-      "bytes": 387868,
-      "sha256": "a573d5ca2ca2393ab0b1cb9e932111cdbe75cc1b88ec71dc8bf9c2ac6e3599cb"
+      "bytes": 2074492,
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c"
     },
     {
       "kind": "client",
       "path": "Equip/mt_longbow_2.mod",
       "source": "client-overlay/Equip/mt_longbow_2.mod",
-      "bytes": 387868,
-      "sha256": "a573d5ca2ca2393ab0b1cb9e932111cdbe75cc1b88ec71dc8bf9c2ac6e3599cb"
+      "bytes": 2074492,
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c"
     },
     {
       "kind": "client",
       "path": "Equip/mt_longbow_3.mod",
       "source": "client-overlay/Equip/mt_longbow_3.mod",
-      "bytes": 387868,
-      "sha256": "a573d5ca2ca2393ab0b1cb9e932111cdbe75cc1b88ec71dc8bf9c2ac6e3599cb"
+      "bytes": 2074492,
+      "sha256": "632443413eeb81254cafeea185347b72d659b119d08c6654ca94208b5142fd7c"
     },
     {
       "kind": "client",
       "path": "Equip/mt_staff_1.mod",
       "source": "client-overlay/Equip/mt_staff_1.mod",
-      "bytes": 551044,
-      "sha256": "4c625fa9f5d8afea6838e4301bacfb40670871350bfbae165e99f3799adccede"
+      "bytes": 858508,
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
     },
     {
       "kind": "client",
       "path": "Equip/mt_staff_2.mod",
       "source": "client-overlay/Equip/mt_staff_2.mod",
-      "bytes": 551044,
-      "sha256": "4c625fa9f5d8afea6838e4301bacfb40670871350bfbae165e99f3799adccede"
+      "bytes": 858508,
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
     },
     {
       "kind": "client",
       "path": "Equip/mt_staff_3.mod",
       "source": "client-overlay/Equip/mt_staff_3.mod",
-      "bytes": 551044,
-      "sha256": "4c625fa9f5d8afea6838e4301bacfb40670871350bfbae165e99f3799adccede"
+      "bytes": 858508,
+      "sha256": "0076e75e089a2aa6dd0764f367a1ac611efc75299a0e57c61f774d498acc79c2"
     },
     {
       "kind": "client",
       "path": "Equip/mt_twilight_1.mod",
       "source": "client-overlay/Equip/mt_twilight_1.mod",
-      "bytes": 533392,
-      "sha256": "28a581a0a8494a16101d316a609339078664fbbd7bcb484d61a32006c07d8232"
+      "bytes": 884332,
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
     },
     {
       "kind": "client",
       "path": "Equip/mt_twilight_2.mod",
       "source": "client-overlay/Equip/mt_twilight_2.mod",
-      "bytes": 533392,
-      "sha256": "28a581a0a8494a16101d316a609339078664fbbd7bcb484d61a32006c07d8232"
+      "bytes": 884332,
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
     },
     {
       "kind": "client",
       "path": "Equip/mt_twilight_3.mod",
       "source": "client-overlay/Equip/mt_twilight_3.mod",
-      "bytes": 533392,
-      "sha256": "28a581a0a8494a16101d316a609339078664fbbd7bcb484d61a32006c07d8232"
+      "bytes": 884332,
+      "sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
     },
     {
       "kind": "client",
@@ -266,15 +3759,15 @@
       "kind": "client",
       "path": "Interface/item.dat",
       "source": "client-overlay/Interface/item.dat",
-      "bytes": 374512,
-      "sha256": "5cb48966f1d98b3ab3a2be9abe043fdff4fe91bc454de6034533c04b11706565"
+      "bytes": 374519,
+      "sha256": "b7fd7b4c995c70a9f862fa5a80173830825048fea17fdaa1fb8f997d35bedb94"
     },
     {
       "kind": "client",
       "path": "Interface/skill.dat",
       "source": "client-overlay/Interface/skill.dat",
-      "bytes": 8050,
-      "sha256": "f6fabaf9692ce75986e915fac5410ad5ba979efe58d37d4ca189ab4191c2cbb7"
+      "bytes": 8060,
+      "sha256": "cb178246dd16ccfc25266e3bb9d9c156b59d5f17f7bee288fac8d893e9fcce12"
     },
     {
       "kind": "client",
@@ -294,8 +3787,8 @@
       "kind": "client",
       "path": "Item/ITEM.dat",
       "source": "client-overlay/Item/ITEM.dat",
-      "bytes": 4198651,
-      "sha256": "22acd510db558be8202957a7cdec0adb03d4332ac5717ce4c441916f3fb1630e"
+      "bytes": 4198650,
+      "sha256": "ba6e26b00c984b75bfb4b66ddd5acda3418a6c25c2df2586db142a9f950beed4"
     },
     {
       "kind": "client",
@@ -357,8 +3850,8 @@
       "kind": "client",
       "path": "Item/Skill.dat",
       "source": "client-overlay/Item/Skill.dat",
-      "bytes": 26716,
-      "sha256": "cabb4e996296c8dcfad0340975968ad1180eff15cdb212a8d908973cab79fc82"
+      "bytes": 26714,
+      "sha256": "224b3cd4822a21ba478ff4a4d001b5a8016d29cdeef8ee1c060e3aba239ac2f5"
     },
     {
       "kind": "client",
@@ -392,15 +3885,15 @@
       "kind": "client",
       "path": "Magic/mt_frostB.ms",
       "source": "client-overlay/Magic/mt_frostB.ms",
-      "bytes": 4303,
-      "sha256": "8e9a2b554e937fa4e9c5d9f6b39059dfbee09913055bb791a90cd6b007e6310a"
+      "bytes": 26629,
+      "sha256": "a0eeeb93c65ea69374b2b5238e0235186a8060b414292bf6cb1c7056aec12a40"
     },
     {
       "kind": "client",
       "path": "Magic/mt_heaven.ms",
       "source": "client-overlay/Magic/mt_heaven.ms",
-      "bytes": 1578,
-      "sha256": "c67038234f82e6ec46bfaac20bf465f5b1c06d98c6adf7375532990274e8f703"
+      "bytes": 6446,
+      "sha256": "42794cb00b92eb7285963527b12a1365dd62876643acdf4b2afd2152693a6ed2"
     },
     {
       "kind": "client",
@@ -413,22 +3906,22 @@
       "kind": "client",
       "path": "Magic/mt_meteorB.ms",
       "source": "client-overlay/Magic/mt_meteorB.ms",
-      "bytes": 4742,
-      "sha256": "f7661f020af42b52837b0410ce7474d43ddf23c1b470576bc60f0e0aae9c5658"
+      "bytes": 29278,
+      "sha256": "d832fad6c0d3572c87ae993ae70be562527622b508c7bfa9602604109183cd3c"
     },
     {
       "kind": "client",
       "path": "Magic/mt_six.ms",
       "source": "client-overlay/Magic/mt_six.ms",
-      "bytes": 3036,
-      "sha256": "7d30e4197bdb291c2d44fbd45c9a8878b0d0258f164643cc22a430870fc2b216"
+      "bytes": 6362,
+      "sha256": "3572e616549d4835dfa1157d321f27c0fad31418efe15d86f13351f6c7c730d0"
     },
     {
       "kind": "client",
       "path": "Magic/mt_six_blue.ms",
       "source": "client-overlay/Magic/mt_six_blue.ms",
-      "bytes": 3131,
-      "sha256": "cfd6804eff4329ae97c4e71254dc890ccf8df2384ba6d0621233f8a9f156d845"
+      "bytes": 6398,
+      "sha256": "fb4e8c47890e356e5cdf0bd05250dd4675e789f1d8046bc1b19cda4f7df7fba3"
     },
     {
       "kind": "client",
@@ -505,56 +3998,56 @@
       "path": "Monster/Animation/mt_prime_ded.ani",
       "source": "client-overlay/Monster/Animation/mt_prime_ded.ani",
       "bytes": 78460,
-      "sha256": "60d1b312256c7626ccda3984f1bf548168cb39d56ee5336c5e0a7829058104aa"
+      "sha256": "0d6458c30373e0b8ab6e0e0f1f1c260347d27926228a2b7b1119d8d641264e2d"
     },
     {
       "kind": "client",
       "path": "Monster/Animation/mt_prime_ht.ani",
       "source": "client-overlay/Monster/Animation/mt_prime_ht.ani",
       "bytes": 30552,
-      "sha256": "5b590ead557ddf8e266b0280a75c39d37b9b37ca720161236b8e8997cfe195c7"
+      "sha256": "5f6d59ca3e2062bc6eeaa9bc162f44928aafba53317d3369aae2f5b49260448e"
     },
     {
       "kind": "client",
       "path": "Monster/Animation/mt_prime_pa1.ani",
       "source": "client-overlay/Monster/Animation/mt_prime_pa1.ani",
       "bytes": 60596,
-      "sha256": "f73aebf647804d47278bac013f74fe1e373e9c8f24532b45fad21a937575505e"
+      "sha256": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b"
     },
     {
       "kind": "client",
       "path": "Monster/Animation/mt_prime_pst.ani",
       "source": "client-overlay/Monster/Animation/mt_prime_pst.ani",
       "bytes": 60596,
-      "sha256": "f73aebf647804d47278bac013f74fe1e373e9c8f24532b45fad21a937575505e"
+      "sha256": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b"
     },
     {
       "kind": "client",
       "path": "Monster/Animation/mt_prime_pwa.ani",
       "source": "client-overlay/Monster/Animation/mt_prime_pwa.ani",
       "bytes": 37048,
-      "sha256": "524e8e745ea89d2c586a50a13acae6b7189441ce05b09c1090cdbbc591e62de0"
+      "sha256": "f5b00d844ec3c0bfa898612a82b3c3934659031e6a67665e14bfc0f1796b8df3"
     },
     {
       "kind": "client",
       "path": "Monster/Animation/mt_prime_wa1.ani",
       "source": "client-overlay/Monster/Animation/mt_prime_wa1.ani",
       "bytes": 87392,
-      "sha256": "bef0ec4d89ef580153c9462507264f0211397a5642dcde6bb8dab04e71acc84f"
+      "sha256": "336f108980cee52b05efa9584649c4c8ee48a317909f71844fb3f83a44af9ae9"
     },
     {
       "kind": "client",
       "path": "Monster/Animation/mt_prime_wru.ani",
       "source": "client-overlay/Monster/Animation/mt_prime_wru.ani",
       "bytes": 24056,
-      "sha256": "90ef14e4f65e8cfa1ceb74a970358cf01489dceb881e35cced7bd0db40d76607"
+      "sha256": "1ea5a05d110a2928611e0d5b9767b04fae6734e63fc77ec7e8e74649c518fae5"
     },
     {
       "kind": "client",
       "path": "Monster/Animation/mt_prime_wst.ani",
       "source": "client-overlay/Monster/Animation/mt_prime_wst.ani",
       "bytes": 60596,
-      "sha256": "f73aebf647804d47278bac013f74fe1e373e9c8f24532b45fad21a937575505e"
+      "sha256": "d82599f0f18d93dbc66d9f260983e679bb2f3bdd1dcad85cb11c8955bf31c84b"
     },
     {
       "kind": "client",
@@ -567,8 +4060,8 @@
       "kind": "client",
       "path": "Monster/monster.dat",
       "source": "client-overlay/Monster/monster.dat",
-      "bytes": 11638,
-      "sha256": "b2ed1ba1fb2799c71d9043d3d698c8d6d2a66d3cd9cc19cda9220f4f16264351"
+      "bytes": 11639,
+      "sha256": "92c8b6ad2923efcd0a8ef395c775fce11ee18c59ed898650c9bbef41aebb2aa0"
     },
     {
       "kind": "client",
@@ -581,15 +4074,15 @@
       "kind": "client",
       "path": "Monster/mt_prime_baphomet.mod",
       "source": "client-overlay/Monster/mt_prime_baphomet.mod",
-      "bytes": 130069,
-      "sha256": "02d1c782760615fce09384d04a170d901d1c81a6483c98ecfedf7f3c7f380921"
+      "bytes": 898429,
+      "sha256": "8a54f16fee3670e5e585550d8d099b040bad721cd31a9487a7e881f37b0a0db9"
     },
     {
       "kind": "client",
       "path": "Render.dll",
       "source": "client-overlay/Render.dll",
-      "bytes": 598016,
-      "sha256": "1361ad946b6657635e24c9432017115e4d23fa22213af7caf672e0c98327ce50"
+      "bytes": 602112,
+      "sha256": "bd17a76aa45ee3f750cbbd8bb5b52a9eede5444da9019e6c7b5c49207e322001"
     },
     {
       "kind": "client",
@@ -691,10 +4184,59 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Effect/mf_cold_mist.wtm",
+      "source": "client-overlay/Texture/Effect/mf_cold_mist.wtm",
+      "bytes": 3414,
+      "sha256": "6a01697500a7798a062bb97d3574a904091b961b5a6ee4c00c8d4195e08e1d19"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_fireball01.wtm",
+      "source": "client-overlay/Texture/Effect/mf_fireball01.wtm",
+      "bytes": 5486,
+      "sha256": "87709919a9bae9eccc4e72b9174cf1a9e21f81880ffad4d9c4ba7c4011a84f7e"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_frozen_ground.wtm",
+      "source": "client-overlay/Texture/Effect/mf_frozen_ground.wtm",
+      "bytes": 1958104,
+      "sha256": "63d39eb9e4bfab1a36a3c647b196e2bf012b15b8344d18f650bc43e30610f82c"
+    },
+    {
+      "kind": "client",
       "path": "Texture/Effect/mf_ice_02.wtm",
       "source": "client-overlay/Texture/Effect/mf_ice_02.wtm",
       "bytes": 52905,
       "sha256": "f5e6a84925bdf83e0d04f4eb169a126d1853878a0e825273709b1c6975b18e08"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_jin01_2.wtm",
+      "source": "client-overlay/Texture/Effect/mf_jin01_2.wtm",
+      "bytes": 65582,
+      "sha256": "3fe69a14c35e02aee70c5d4473f4bc88cb4d2d726d528cbc36593f9070c259dd"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_jin01_4.wtm",
+      "source": "client-overlay/Texture/Effect/mf_jin01_4.wtm",
+      "bytes": 54977,
+      "sha256": "59393a1afbf82488f454c78e4f47fcda60614553c03e6f2d9aefe80d7b9e2d4b"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_jin02.wtm",
+      "source": "client-overlay/Texture/Effect/mf_jin02.wtm",
+      "bytes": 52116,
+      "sha256": "c197a5194054f7a4ba36439bff2a7ed4e8c6b8a75c4f7c886a471ee38feeeedc"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_jin03_2.wtm",
+      "source": "client-overlay/Texture/Effect/mf_jin03_2.wtm",
+      "bytes": 47285,
+      "sha256": "a829cbf664bbed792a489d1899ccc36668596feaeac98441c19939355dedf97c"
     },
     {
       "kind": "client",
@@ -705,10 +4247,59 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Effect/mf_pressure_mist.wtm",
+      "source": "client-overlay/Texture/Effect/mf_pressure_mist.wtm",
+      "bytes": 3414,
+      "sha256": "6a01697500a7798a062bb97d3574a904091b961b5a6ee4c00c8d4195e08e1d19"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_protecfire_a01.wtm",
+      "source": "client-overlay/Texture/Effect/mf_protecfire_a01.wtm",
+      "bytes": 17810,
+      "sha256": "c8c52c5dc4a74e500270b93ccc02596545c3f9b2569c901fe7ee9cd1f3457c4a"
+    },
+    {
+      "kind": "client",
       "path": "Texture/Effect/mf_ta_05.wtm",
       "source": "client-overlay/Texture/Effect/mf_ta_05.wtm",
       "bytes": 13158,
       "sha256": "88d4da831510be57df64bd527ee25ee95448da14eb81fd52d8ca1a63bed161ba"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mf_winds_a01.wtm",
+      "source": "client-overlay/Texture/Effect/mf_winds_a01.wtm",
+      "bytes": 2885,
+      "sha256": "b277f03451e28db30f4a2fd4e890fe1e7f1df758ad8623c1eb072b26aadc62b1"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mh_jin03_2.wtm",
+      "source": "client-overlay/Texture/Effect/mh_jin03_2.wtm",
+      "bytes": 47285,
+      "sha256": "a829cbf664bbed792a489d1899ccc36668596feaeac98441c19939355dedf97c"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mh_lightningarrow_a01.wtm",
+      "source": "client-overlay/Texture/Effect/mh_lightningarrow_a01.wtm",
+      "bytes": 78030,
+      "sha256": "5f9477396d9cac4c1112507c3e47746efdb071dada384456d51cc6eda7300c41"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mh_ps0001.wtm",
+      "source": "client-overlay/Texture/Effect/mh_ps0001.wtm",
+      "bytes": 5242,
+      "sha256": "597ad3fd2d652877f1302359aa362d81ea27db9a544ce3945343abb0bb46b29a"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mh_ps0002.wtm",
+      "source": "client-overlay/Texture/Effect/mh_ps0002.wtm",
+      "bytes": 8797,
+      "sha256": "ac807d88e378898c59e758240efdafa4e801637ad9bb972d25f93499415c49e7"
     },
     {
       "kind": "client",
@@ -719,10 +4310,24 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Effect/mh_ta_05.wtm",
+      "source": "client-overlay/Texture/Effect/mh_ta_05.wtm",
+      "bytes": 13158,
+      "sha256": "88d4da831510be57df64bd527ee25ee95448da14eb81fd52d8ca1a63bed161ba"
+    },
+    {
+      "kind": "client",
       "path": "Texture/Effect/mh_ta_06.wtm",
       "source": "client-overlay/Texture/Effect/mh_ta_06.wtm",
       "bytes": 13445,
       "sha256": "03023834cd68f760855cc66ce58858a728d60b4e386dc54cd69747aee57c0baf"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mh_tuned_trace.wtm",
+      "source": "client-overlay/Texture/Effect/mh_tuned_trace.wtm",
+      "bytes": 15030,
+      "sha256": "a9b4cb9611c29cc9e32dd6affb5258470f39fe8bf3aaa5c1f95f50de581c04bb"
     },
     {
       "kind": "client",
@@ -740,6 +4345,41 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Effect/mm_jin01_4.wtm",
+      "source": "client-overlay/Texture/Effect/mm_jin01_4.wtm",
+      "bytes": 54977,
+      "sha256": "59393a1afbf82488f454c78e4f47fcda60614553c03e6f2d9aefe80d7b9e2d4b"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mm_jin02.wtm",
+      "source": "client-overlay/Texture/Effect/mm_jin02.wtm",
+      "bytes": 52116,
+      "sha256": "c197a5194054f7a4ba36439bff2a7ed4e8c6b8a75c4f7c886a471ee38feeeedc"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mm_jin03_2.wtm",
+      "source": "client-overlay/Texture/Effect/mm_jin03_2.wtm",
+      "bytes": 47285,
+      "sha256": "a829cbf664bbed792a489d1899ccc36668596feaeac98441c19939355dedf97c"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mm_jin05.wtm",
+      "source": "client-overlay/Texture/Effect/mm_jin05.wtm",
+      "bytes": 19085,
+      "sha256": "7a4d343a84eb89ea8835c48a3353fd143a3715e656a8b8f8d4270c5b361cb138"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mm_magma_surface.wtm",
+      "source": "client-overlay/Texture/Effect/mm_magma_surface.wtm",
+      "bytes": 1937330,
+      "sha256": "efceeb3b1e8af98ae1f0a60e56858fa63808c499139467dfcec855cb24a93bd5"
+    },
+    {
+      "kind": "client",
       "path": "Texture/Effect/mm_protecfire_a01.wtm",
       "source": "client-overlay/Texture/Effect/mm_protecfire_a01.wtm",
       "bytes": 17810,
@@ -747,10 +4387,108 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Effect/mm_ta_05.wtm",
+      "source": "client-overlay/Texture/Effect/mm_ta_05.wtm",
+      "bytes": 13158,
+      "sha256": "88d4da831510be57df64bd527ee25ee95448da14eb81fd52d8ca1a63bed161ba"
+    },
+    {
+      "kind": "client",
       "path": "Texture/Effect/mm_ta_06ani.wtm",
       "source": "client-overlay/Texture/Effect/mm_ta_06ani.wtm",
       "bytes": 168800,
       "sha256": "df93cca35d50eeeed3c641e46118c445d4394cb607d5487abf2c908a7936e847"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/mm_windstrike.wtm",
+      "source": "client-overlay/Texture/Effect/mm_windstrike.wtm",
+      "bytes": 14607,
+      "sha256": "d958eeae804eec5a4ffb753373b95a8a63dbc3c541c53c0484d2a1eaad268bad"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/ms_fire_m_012.wtm",
+      "source": "client-overlay/Texture/Effect/ms_fire_m_012.wtm",
+      "bytes": 31090,
+      "sha256": "5aea5d05eb2ee7efae2f9cad35b52b0d8d841ec16371a168c92962bf464eddff"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/ms_hwasal.wtm",
+      "source": "client-overlay/Texture/Effect/ms_hwasal.wtm",
+      "bytes": 1394,
+      "sha256": "f6a73886d3dc2ee0a6f77f33fe25bcfc65f6041dfb70583657393340abcba4fd"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/ms_ps0002.wtm",
+      "source": "client-overlay/Texture/Effect/ms_ps0002.wtm",
+      "bytes": 8797,
+      "sha256": "ac807d88e378898c59e758240efdafa4e801637ad9bb972d25f93499415c49e7"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/ms_ta_03.wtm",
+      "source": "client-overlay/Texture/Effect/ms_ta_03.wtm",
+      "bytes": 20232,
+      "sha256": "cad4cce565c32411e25467f6c7141aa9b83e6ac3b3c3297912491a6843bf472e"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/ms_ta_04.wtm",
+      "source": "client-overlay/Texture/Effect/ms_ta_04.wtm",
+      "bytes": 14047,
+      "sha256": "50e70e9b2e0602e263d034ee11c3a5e72e2cce3c7ac31a2420be22d2e382b198"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/ms_tuned_trace.wtm",
+      "source": "client-overlay/Texture/Effect/ms_tuned_trace.wtm",
+      "bytes": 17853,
+      "sha256": "fe487a545ba7f73dd175b4ae892dc5e7d8ea870c9fd9333afabc165537bf6384"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/msb_fire_m_012.wtm",
+      "source": "client-overlay/Texture/Effect/msb_fire_m_012.wtm",
+      "bytes": 31090,
+      "sha256": "5aea5d05eb2ee7efae2f9cad35b52b0d8d841ec16371a168c92962bf464eddff"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/msb_hwasal.wtm",
+      "source": "client-overlay/Texture/Effect/msb_hwasal.wtm",
+      "bytes": 1394,
+      "sha256": "f6a73886d3dc2ee0a6f77f33fe25bcfc65f6041dfb70583657393340abcba4fd"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/msb_ps0002.wtm",
+      "source": "client-overlay/Texture/Effect/msb_ps0002.wtm",
+      "bytes": 8797,
+      "sha256": "ac807d88e378898c59e758240efdafa4e801637ad9bb972d25f93499415c49e7"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/msb_ta_03.wtm",
+      "source": "client-overlay/Texture/Effect/msb_ta_03.wtm",
+      "bytes": 20232,
+      "sha256": "cad4cce565c32411e25467f6c7141aa9b83e6ac3b3c3297912491a6843bf472e"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/msb_ta_04.wtm",
+      "source": "client-overlay/Texture/Effect/msb_ta_04.wtm",
+      "bytes": 14047,
+      "sha256": "50e70e9b2e0602e263d034ee11c3a5e72e2cce3c7ac31a2420be22d2e382b198"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/msb_tuned_trace.wtm",
+      "source": "client-overlay/Texture/Effect/msb_tuned_trace.wtm",
+      "bytes": 15030,
+      "sha256": "a9b4cb9611c29cc9e32dd6affb5258470f39fe8bf3aaa5c1f95f50de581c04bb"
     },
     {
       "kind": "client",
@@ -868,8 +4606,8 @@
       "kind": "client",
       "path": "Texture/Equip/mt_longbow_atlas.wtm",
       "source": "client-overlay/Texture/Equip/mt_longbow_atlas.wtm",
-      "bytes": 3704063,
-      "sha256": "79a17d305a313cf07b94e6fed45dbf5094a4d9ac5d8931c8a3b1789729edc6bc"
+      "bytes": 1079751,
+      "sha256": "56d3f3077ca72da189ec94cd80067b8ed3c9fd96729ed158ffacb89d4f8d2f72"
     },
     {
       "kind": "client",
@@ -931,15 +4669,15 @@
       "kind": "client",
       "path": "Texture/Equip/mt_staff_atlas.wtm",
       "source": "client-overlay/Texture/Equip/mt_staff_atlas.wtm",
-      "bytes": 3832899,
-      "sha256": "4a5862d440970bab5fbd5a3f0e9269d05270132244748ad0d406a07a3db0f5ec"
+      "bytes": 473189,
+      "sha256": "0e81ca9ca31d9fc781c529dbcf65daca5a41fa9f50c4aa6df4ebbc87dbf48ae1"
     },
     {
       "kind": "client",
       "path": "Texture/Equip/mt_twilight_atlas.wtm",
       "source": "client-overlay/Texture/Equip/mt_twilight_atlas.wtm",
-      "bytes": 2948837,
-      "sha256": "657248c3b4b7ab7f9fa0008a192f8bc9a6cf7828d70e6fbc2b16b435e2073bc9"
+      "bytes": 753583,
+      "sha256": "4cc1289c6876b1d4d462869f31151c2b75ad22da346ef419496290b78c5ffaaf"
     },
     {
       "kind": "client",
@@ -952,8 +4690,15 @@
       "kind": "client",
       "path": "Texture/Monster/mt_prime_body.wtm",
       "source": "client-overlay/Texture/Monster/mt_prime_body.wtm",
-      "bytes": 1881266,
-      "sha256": "8d36845b4ea536d70ebf4893aa7858047d0ecf6bdee6ca881cd5b198b53d00b3"
+      "bytes": 3563159,
+      "sha256": "898ba82537dd197e7b1a05d449fd7fcba58d88b6e6e13c42232904d3266f4a06"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Monster/mt_prime_cleaver.wtm",
+      "source": "client-overlay/Texture/Monster/mt_prime_cleaver.wtm",
+      "bytes": 2847743,
+      "sha256": "62d28e3c0a44c28039813ae22362c6176a68ad9609b637989fbc8835ef2d4a2d"
     },
     {
       "kind": "client",
@@ -971,31 +4716,87 @@
     },
     {
       "kind": "client",
+      "path": "Tools/SkillColors/archer_effects.py",
+      "source": "client-overlay/Tools/SkillColors/archer_effects.py",
+      "bytes": 12357,
+      "sha256": "ea241410201c52ba7c59d72121358bbe5089f5c15921fc1fe7acb9792bcb5d6c"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/cocytus.py",
+      "source": "client-overlay/Tools/SkillColors/cocytus.py",
+      "bytes": 16905,
+      "sha256": "29df01e1f0220888aa05ffe8f58a168c1290192b56c313e1902973d9441df152"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/cocytus_layout.py",
+      "source": "client-overlay/Tools/SkillColors/cocytus_layout.py",
+      "bytes": 2569,
+      "sha256": "9e85004c185167ec762cd18fa53423e3da7bf88bb20aa292d38e7910ceb551cb"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/cocytus_shapes.py",
+      "source": "client-overlay/Tools/SkillColors/cocytus_shapes.py",
+      "bytes": 7232,
+      "sha256": "654bf163108fb9f844d2007bd274ffaea4817902aba113aa3e0eb2b0c39fd24b"
+    },
+    {
+      "kind": "client",
       "path": "Tools/SkillColors/colors.json",
       "source": "client-overlay/Tools/SkillColors/colors.json",
-      "bytes": 48,
-      "sha256": "e4e52d441c68e845bd40ac0555119d93f7181ecad06cda208b5dd0045c05ad86"
+      "bytes": 73,
+      "sha256": "40878753023e282719ea57cc30aa385ca13646ac8084d148f82582964d287da1"
     },
     {
       "kind": "client",
       "path": "Tools/SkillColors/controls.js",
       "source": "client-overlay/Tools/SkillColors/controls.js",
-      "bytes": 4733,
-      "sha256": "e7eadb0a725c8b709f192f8281a03f3b25a70920232e495d07f877f59ad76de0"
+      "bytes": 12397,
+      "sha256": "10c9d8c548a8a87c776fb09bab0ce74880085ec67929e043e4bd0beb82f0ab9a"
     },
     {
       "kind": "client",
       "path": "Tools/SkillColors/edit_colors.py",
       "source": "client-overlay/Tools/SkillColors/edit_colors.py",
-      "bytes": 8445,
-      "sha256": "16dce28ed2e2d579f8922608012f2945801eea46ba84e7236743d76d8bb4384c"
+      "bytes": 10963,
+      "sha256": "b3ac9634701861030ed72c33e476ee9f3b564c8e495283cc4f77288a8e37074c"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/ice_opacity.py",
+      "source": "client-overlay/Tools/SkillColors/ice_opacity.py",
+      "bytes": 540,
+      "sha256": "2b64d3f47bae1d24c0c75ce071666fe3a076eb19796803f7a5d21642155e3395"
     },
     {
       "kind": "client",
       "path": "Tools/SkillColors/index.html",
       "source": "client-overlay/Tools/SkillColors/index.html",
-      "bytes": 9361,
-      "sha256": "d895c11b866721b092632a30ba6871da88e1e9bdba372d71af475be38387915e"
+      "bytes": 9888,
+      "sha256": "c5b7501d5526a6236623eba954d9aa766d87ee09b1d141f1f08f48d1ac9fde35"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/live_preview_queue.js",
+      "source": "client-overlay/Tools/SkillColors/live_preview_queue.js",
+      "bytes": 1926,
+      "sha256": "357c26bb2ee6997d1f35c6bad0c46352e148e5c39342598bffedaf84a05ad94a"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/meteor_blast.py",
+      "source": "client-overlay/Tools/SkillColors/meteor_blast.py",
+      "bytes": 4928,
+      "sha256": "dc7b9319b362e3af7bf5d19d89a008b546b791f072c6d74f3ec23011997af8d8"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/meteor_storm.py",
+      "source": "client-overlay/Tools/SkillColors/meteor_storm.py",
+      "bytes": 8368,
+      "sha256": "8b861bb8e462abd725ce022b236a83aa4ab3c8dbb43f96ebf82c5be5415c8f68"
     },
     {
       "kind": "client",
@@ -1008,8 +4809,15 @@
       "kind": "client",
       "path": "Tools/SkillColors/native_assets.py",
       "source": "client-overlay/Tools/SkillColors/native_assets.py",
-      "bytes": 9530,
-      "sha256": "c7d8f44b0f4f63b716d5d741946d6000d09649417f0155c1cf77ce679aa9f61c"
+      "bytes": 10236,
+      "sha256": "d6f0c28fdb927279482608d6989074ade954a48e2f7af51d9a15463f3be54f42"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/native_vfx.py",
+      "source": "client-overlay/Tools/SkillColors/native_vfx.py",
+      "bytes": 5877,
+      "sha256": "d4f9619ab3c27300409a3edb0f86119624c6e1966b6b593fab7e43dcd6f9e0e1"
     },
     {
       "kind": "client",
@@ -1022,15 +4830,22 @@
       "kind": "client",
       "path": "Tools/SkillColors/preview.js",
       "source": "client-overlay/Tools/SkillColors/preview.js",
-      "bytes": 20650,
-      "sha256": "10ed5eaee601e8c85c6a85c74963bc42843f08b816b65e5087aeb38640cddee3"
+      "bytes": 25529,
+      "sha256": "a01ced51178448cea83258e7ed355ddc86a52eee01b0002e22fb5b3fb623eb88"
+    },
+    {
+      "kind": "client",
+      "path": "Tools/SkillColors/skill_tuning_frames.py",
+      "source": "client-overlay/Tools/SkillColors/skill_tuning_frames.py",
+      "bytes": 1151,
+      "sha256": "1496f295206f2873fcf26f15685834fd11b05f50c5eb2c26c2416565746301a7"
     },
     {
       "kind": "client",
       "path": "Tools/SkillColors/style.css",
       "source": "client-overlay/Tools/SkillColors/style.css",
-      "bytes": 4828,
-      "sha256": "992602521c11505a0af1db94d6c82bc508bb798bf58ebef4c7317c32d71cd2ee"
+      "bytes": 6607,
+      "sha256": "942c9fbcc37dd3bdd28b047eb35bfae5536152c477b1725f4b1b6e8f36caf6d2"
     },
     {
       "kind": "client",
@@ -1134,15 +4949,15 @@
       "kind": "client",
       "path": "Tools/SkillColors/tuning.json",
       "source": "client-overlay/Tools/SkillColors/tuning.json",
-      "bytes": 513,
-      "sha256": "0002b5c7d2788b0eae3359210c198c95594709ddfb7a998dbd2a9d55468bf27c"
+      "bytes": 1575,
+      "sha256": "1556d94ac509a219e6b6b122a60bb8f62d916f7fb1214f3314f571868eddb353"
     },
     {
       "kind": "client",
       "path": "Tools/SkillColors/tuning.py",
       "source": "client-overlay/Tools/SkillColors/tuning.py",
-      "bytes": 14561,
-      "sha256": "a779697664892c08c1e61b2b57c7c01d6d36c625c3c4d13f48d68c36f6e188e7"
+      "bytes": 17132,
+      "sha256": "61375bc9ae48eeda3cbf3a63b0b712ffd2d2ab7e1ec8b472e061f4193a425d02"
     },
     {
       "kind": "client",
@@ -1281,8 +5096,8 @@
       "kind": "server",
       "path": "DATA/ITEM_DATA.txt",
       "source": "game-data/DATA/ITEM_DATA.txt",
-      "bytes": 4213176,
-      "sha256": "9d6bb084b5f5e586b99f6aa240110f12dc66765781c0fa6819756ac3a058591b"
+      "bytes": 4213175,
+      "sha256": "a2ab4165da1b2a6cd15e4d536b8f7cbffc03a8ad5e5f6d1bf88b33d38996c448"
     },
     {
       "kind": "server",
@@ -1338,7 +5153,7 @@
       "path": "DATA/MOB_DATA.txt",
       "source": "game-data/DATA/MOB_DATA.txt",
       "bytes": 43296,
-      "sha256": "5bebfdca5305132878ee72ae6e8163e294602be8f7511b5469468a18760138bc"
+      "sha256": "0f3ae2d097e16b1dbdd443e2007eb13926d194283f87830180fa589176863126"
     },
     {
       "kind": "server",
@@ -1379,8 +5194,8 @@
       "kind": "server",
       "path": "DATA/skill_data.txt",
       "source": "game-data/DATA/skill_data.txt",
-      "bytes": 25177,
-      "sha256": "02356d58a8b0cefb614fe9ce4c13d51922771e2944cd63ce815769e5c3632531"
+      "bytes": 25175,
+      "sha256": "672af90ae9d18436aa7be753f67781f7ea8e06b0eb50c8f206d2379834a3207e"
     },
     {
       "kind": "server",
@@ -1428,15 +5243,38 @@
       "kind": "server",
       "path": "LAQIA_GameServer",
       "source": "server-bin/LAQIA_GameServer",
-      "bytes": 1812060,
-      "sha256": "3c2636a65cdcb33c29079fd914c91e33e25b78c3de4f0cb059e344ee33dd4342"
+      "bytes": 1812236,
+      "sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1"
     },
     {
       "kind": "updater",
       "path": "update/father_update.py",
       "source": "distribution/father_update.py",
-      "bytes": 13024,
-      "sha256": "ffc21f44f243c02addd0f3c23a614a6ed0f2066544041d45a2deafbc76233157"
+      "bytes": 16136,
+      "sha256": "c4dd3768ec7d10a61feac9664f7d7a9eeaba8f13effc29a85b8ad15f29f6936e"
+    }
+  ],
+  "runtime_files": [
+    {
+      "kind": "runtime",
+      "path": "local_control.py",
+      "source": "tools/runtime/local_control.py",
+      "bytes": 6769,
+      "sha256": "4ec9e1654e4639ebff3c0b2e99fda987d3323e4b084994ea005695c106fe7a29"
+    },
+    {
+      "kind": "runtime",
+      "path": "ssh_vm.py",
+      "source": "tools/runtime/ssh_vm.py",
+      "bytes": 1409,
+      "sha256": "7855f5e9e084dce7ff7975213032154d6ddeb3ddd44c2f1e47d3ebc84626485f"
+    },
+    {
+      "kind": "runtime",
+      "path": "start_vm.py",
+      "source": "tools/runtime/start_vm.py",
+      "bytes": 1690,
+      "sha256": "91149b92cbdab4b6cc42f42347ab543bbf1bab8ef3a60d6ddaf82e7b8f5a9a68"
     }
   ]
 }

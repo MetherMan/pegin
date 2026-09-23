@@ -12,8 +12,10 @@ import re
 import struct
 import wave
 import zlib
+from functools import lru_cache
 
 
+@lru_cache(maxsize=96)
 def png_from_wtm(raw):
     bmp = zlib.decompress(raw[13:])
     tga=bmp[:2]!=b'BM'
@@ -135,7 +137,7 @@ def read_traces(raw):
     return traces
 
 
-def load_preview(here, client, mirror=None,generated=None,metadata=None,compact=False):
+def load_preview(here, client, mirror=None,generated=None,metadata=None,compact=False,kinds=None,known_sources=None):
     roots = [client]
     if mirror:
         roots.append(Path(mirror).resolve())
@@ -155,10 +157,12 @@ def load_preview(here, client, mirror=None,generated=None,metadata=None,compact=
     result = dict(effects={}, meshes={}, textures={}, scripts={}, traces={}, sounds={}, soundDurations={}, sources=sources, fps=30)
     if generated is None:
         from tuning import compile_resources,load_settings
-        generated,metadata=compile_resources(read,load_settings(here),json.loads((here/'colors.json').read_text()))
+        generated,metadata=compile_resources(read,load_settings(here),json.loads((here/'colors.json').read_text()),only=kinds)
     result['timing']=metadata
     scripts = dict(meteor=dict(A='mt_meteorA',B='mt_meteorB'), frost=dict(A='mt_frostA',B='mt_frostB'),
                    heaven=dict(B='mt_heaven'), six=dict(B='mt_six_blue',N='mt_six'))
+    if kinds is not None:scripts={k:v for k,v in scripts.items() if k in kinds}
+    known_sources=known_sources or {}
     required, trace_names = set(), set()
     for kind, phases in scripts.items():
         result['scripts'][kind] = {}
@@ -179,19 +183,24 @@ def load_preview(here, client, mirror=None,generated=None,metadata=None,compact=
                                 result['soundDurations'][name]=sound.getnframes()/sound.getframerate()*1000
     def texture(name):
         if name not in result['textures']:
-            png = png_from_wtm(read('Texture/Effect/' + name))
+            path='Texture/Effect/'+name;raw=read(path)
+            if compact and known_sources.get(path)==sources[path]:return
+            png = png_from_wtm(raw)
             result['textures'][name] = 'data:image/png;base64,' + base64.b64encode(png).decode('ascii')
     for name in sorted(required):
         raw = read('Effect/' + name)
         effect = dict(read_wed(raw), tintable=False)
         result['effects'][name] = effect
-        if not compact and effect['mesh'] not in result['meshes']:
-            result['meshes'][effect['mesh']] = read_wem(read('Effect/' + effect['mesh']))
-        if not compact:texture(effect['texture'])
+        # Tuning can change native geometry (portal axes, snow density) and
+        # generated trace textures. Include those resources in live updates.
+        if (not compact or 'Effect/'+effect['mesh'] in generated) and effect['mesh'] not in result['meshes']:
+            path='Effect/'+effect['mesh'];raw=read(path)
+            if not compact or known_sources.get(path)!=sources[path]:result['meshes'][effect['mesh']] = read_wem(raw)
+        if not compact or 'Texture/Effect/'+effect['texture'] in generated:texture(effect['texture'])
     traces = read_traces(read('Effect/trace.tdf'))
     for name in sorted(trace_names):
         result['traces'][name] = traces[name]
-        if not compact:texture(traces[name]['texture'])
+        if not compact or 'Texture/Effect/'+traces[name]['texture'] in generated:texture(traces[name]['texture'])
     if not compact:
         from native_actor import load_actors
         result['actors']=load_actors(read,png_from_wtm)

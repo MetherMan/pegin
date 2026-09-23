@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "source": "exported mt_twilight_1.mod",
+  "blade_middle_full_depth": 0.044312357902526855,
+  "blade_tip_full_depth": 0.013951911590993404,
+  "cutting_rim_full_depth_max": 0.0007,
+  "thin_rim_vertices": 272,
+  "moon_scale": {
+    "sword": 1.15,
+    "longbow": 1.2
+  },
+  "moon_texture": "approved concept, cropped UV atlas",
+  "in_game_visual_test": false
+}

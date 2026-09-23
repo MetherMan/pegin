@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "server_sha256": "5280d2bbabfea3adc99559d1652183d11043ec026d49ad4568bf15b169e54b7d",
+  "server_status": "active",
+  "save_tables_before": "418fec10bcfdc041c7715b2bbe2403e3c638f8bf22f6ebdd7e268decca3bf98e",
+  "save_tables_after": "418fec10bcfdc041c7715b2bbe2403e3c638f8bf22f6ebdd7e268decca3bf98e",
+  "character_and_inventory_tables_unchanged": true,
+  "experience_and_card_rates_unchanged": true,
+  "installation": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia",
+  "father_pc_applied": false
+}

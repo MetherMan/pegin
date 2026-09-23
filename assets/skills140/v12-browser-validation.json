@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "visualOpacityValues": [
+    0,
+    25,
+    100
+  ],
+  "pausedTimeSeconds": 1.32,
+  "backgroundOcclusionVisibleAt100": true,
+  "backgroundVisibleAt0": true,
+  "rimAndOtherLayersPreserved": true,
+  "liveAppliedSeconds": [
+    1.22,
+    1.06
+  ],
+  "savedOpacityRestored": 85,
+  "settingsSavedDuringQA": false,
+  "screenshots": [
+    "v12-ice-opacity-0.png",
+    "v12-ice-opacity-25.png",
+    "v12-ice-opacity-100.png"
+  ],
+  "inGameDirect3DTest": false
+}

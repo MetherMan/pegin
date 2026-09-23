@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "method": "Existing Codex browser tabs, read-only DOM verification and screenshots; real form input changes",
+  "iceColorsVisuallyChecked": [
+    "#D82F4A",
+    "#FFFFFF",
+    "#2374D8"
+  ],
+  "bodyColorIndependentOfSeals": true,
+  "liveAppliedSeconds": [
+    0.74,
+    0.95
+  ],
+  "pausedTimeSeconds": 1.32,
+  "restoredIceColor": "#2374D8",
+  "preservedUserValues": [
+    {
+      "kind": "frost",
+      "key": "brightness",
+      "from": 1.2,
+      "to": 1.6
+    },
+    {
+      "kind": "frost",
+      "key": "iceDensity",
+      "from": 1,
+      "to": 2.5
+    },
+    {
+      "kind": "frost",
+      "key": "iceOpacity",
+      "from": 85,
+      "to": 90
+    }
+  ],
+  "weaponViews": [
+    "front",
+    "quarter",
+    "character140px"
+  ],
+  "modelViewerHeaderDoesNotOverlapWeapon": true,
+  "skillInstallChanged": false,
+  "inGameDirect3DTest": false
+}

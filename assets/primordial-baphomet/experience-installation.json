@@ -1,0 +1,118 @@
+{
+  "client_installation_delegated_to_final_visual_installer": true,
+  "host": {
+    "path": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\server-local\\LAQIA_GameServer\\DATA\\MOB_DATA.txt",
+    "before_sha256": "5bebfdca5305132878ee72ae6e8163e294602be8f7511b5469468a18760138bc",
+    "after_sha256": "0f3ae2d097e16b1dbdd443e2007eb13926d194283f87830180fa589176863126",
+    "rows": [
+      {
+        "id": 80,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 280,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 380,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 480,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 580,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 680,
+        "before": 14328,
+        "after": 28656
+      }
+    ],
+    "changed": true,
+    "applied": true,
+    "backup": "C:\\Users\\dayba\\Downloads\\라버 2\\https-laqia-co-kr-https-laqia\\work\\laqia-runtime\\backups\\primordial-exp-20260923-182423-392551\\MOB_DATA.txt"
+  },
+  "vm": {
+    "remote": "/opt/laqia/server/LAQIA_GameServer/DATA/MOB_DATA.txt",
+    "accounts_or_database_modified": false,
+    "services_before": {
+      "LAQIA_LoginServer": "active",
+      "LAQIA_GameServer": "active",
+      "LAQIA_DataServer": "active"
+    },
+    "server_sha256": "ed4a6efdc13b897a33cc8312d1e2c3e52b0ac227a709eebec9e3a5f9bd2471b1",
+    "save_tables_before": "418fec10bcfdc041c7715b2bbe2403e3c638f8bf22f6ebdd7e268decca3bf98e",
+    "rows": [
+      {
+        "id": 80,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 280,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 380,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 480,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 580,
+        "before": 14328,
+        "after": 28656
+      },
+      {
+        "id": 680,
+        "before": 14328,
+        "after": 28656
+      }
+    ],
+    "before_sha256": "5bebfdca5305132878ee72ae6e8163e294602be8f7511b5469468a18760138bc",
+    "after_sha256": "0f3ae2d097e16b1dbdd443e2007eb13926d194283f87830180fa589176863126",
+    "services_after": {
+      "LAQIA_LoginServer": "active",
+      "LAQIA_GameServer": "active",
+      "LAQIA_DataServer": "active"
+    },
+    "save_tables_after": "418fec10bcfdc041c7715b2bbe2403e3c638f8bf22f6ebdd7e268decca3bf98e",
+    "passed": true,
+    "backup": "/opt/laqia/update-backups/primordial-exp-20260923-182428-191016/MOB_DATA.txt",
+    "only_remote_payload_written": "/opt/laqia/server/LAQIA_GameServer/DATA/MOB_DATA.txt",
+    "five_save_tables_unchanged": true,
+    "binary_card_growth_fixes_preserved": true
+  },
+  "loaded_server_experience": {
+    "44": 14328,
+    "80": 28656,
+    "280": 28656,
+    "380": 28656,
+    "480": 28656,
+    "580": 28656,
+    "680": 28656
+  },
+  "save_tables_after_clean_stop": "418fec10bcfdc041c7715b2bbe2403e3c638f8bf22f6ebdd7e268decca3bf98e",
+  "clean_shutdown_requested": true,
+  "vm_restored_to_off": true,
+  "ports_after": {
+    "22222": false,
+    "44444": false,
+    "8030": false,
+    "2560": false
+  },
+  "passed": true
+}

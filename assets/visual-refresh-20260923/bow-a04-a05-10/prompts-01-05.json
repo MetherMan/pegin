@@ -1,0 +1,201 @@
+{
+  "title": "A04·A05 기반 푸른달 활 V01~V05",
+  "images": [
+    {
+      "id": "V01",
+      "name": "휘감긴 상현 월뿔",
+      "file": "bow-01.png",
+      "exactprompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V01, A04-dominant variation. Move the grip noticeably below midpoint. The upper limb is long and forward-sweeping, with TWO very unequal elongated sapphire horn branches curling toward the outer LEFT at staggered heights; together they frame a large, clean, elongated teardrop of negative space holding a bright blue crescent. Let the larger upper horn curve almost horizontally outward before sweeping UP, visibly different from A04's short prongs. The lower limb is a short smooth inward hook with no branches or extra moon layers. Fluid elegant open crescent architecture, large upper silhouette versus compact lower silhouette. Take A05 only for its rich crystalline blue texture and thin edge ornament.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V01, A04-dominant variation. Move the grip noticeably below midpoint. The upper limb is long and forward-sweeping, with TWO very unequal elongated sapphire horn branches curling toward the outer LEFT at staggered heights; together they frame a large, clean, elongated teardrop of negative space holding a bright blue crescent. Let the larger upper horn curve almost horizontally outward before sweeping UP, visibly different from A04's short prongs. The lower limb is a short smooth inward hook with no branches or extra moon layers. Fluid elegant open crescent architecture, large upper silhouette versus compact lower silhouette. Take A05 only for its rich crystalline blue texture and thin edge ornament.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-f161daca-f962-4044-a035-3562c1c521f4.png",
+      "sha256": "8ae6262f9f2aa170e51bcf92b825a2f2d895a9bee1e75606a89962f133984310",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original), individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "visible_grip_and_one_connected_string": true,
+        "blue_crescent_moon_visible": true,
+        "asymmetric_silhouette": true,
+        "reference_color_and_craft_retained": true,
+        "new_silhouette_variation": true,
+        "no_second_bow_panels_people_text": true,
+        "note": "A04의 두 월뿔을 왼쪽으로 훨씬 길게 펼친 상부와 작은 하부 곡선. 초승달 주변이 크게 열린 단일 활이며 참고작의 푸른 유리와 가는 금세공을 유지한다.",
+        "framing_note": "양 끝과 모든 분지가 잘리지 않고 보임. 요청한 5%보다 상단 여백은 좁게 생성되어 원본을 그대로 보존하고 기록함."
+      }
+    },
+    {
+      "id": "V02",
+      "name": "열린 월관의 대궁",
+      "file": "bow-02.png",
+      "exactprompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V02, A04-dominant variation. A broad airy upper fork forms an OPEN crescent crown leaning LEFT: one long slender main limb rises through the RIGHT side of the fork to the string tip, and one major smooth branch describes a wide near-semicircle far to the LEFT before turning upward, with one smaller inner curl. The unmistakable luminous blue crescent sits at the lowest point of this open crown just above the grip. Make the upper crown wide and expansive but built from slender flowing moonstone beams, no closed ring. Lower limb is a very slim long reverse-S counterstroke ending in a small hook; no mirrored crown below. The grip sits slightly below midpoint, with upper volume dramatically larger than lower.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V02, A04-dominant variation. A broad airy upper fork forms an OPEN crescent crown leaning LEFT: one long slender main limb rises through the RIGHT side of the fork to the string tip, and one major smooth branch describes a wide near-semicircle far to the LEFT before turning upward, with one smaller inner curl. The unmistakable luminous blue crescent sits at the lowest point of this open crown just above the grip. Make the upper crown wide and expansive but built from slender flowing moonstone beams, no closed ring. Lower limb is a very slim long reverse-S counterstroke ending in a small hook; no mirrored crown below. The grip sits slightly below midpoint, with upper volume dramatically larger than lower.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-373630ef-0e3d-4e23-96ec-93e157ab3c4e.png",
+      "sha256": "68d333def9ec9df5bb4cab1056b69bc0cccfe30d964712be25e617e7bedc37da",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original), individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "visible_grip_and_one_connected_string": true,
+        "blue_crescent_moon_visible": true,
+        "asymmetric_silhouette": true,
+        "reference_color_and_craft_retained": true,
+        "new_silhouette_variation": true,
+        "no_second_bow_panels_people_text": true,
+        "note": "넓은 반원형 월관 가지와 작은 안쪽 갈래가 열린 초승 공간을 형성한다. 큰 상부 공간과 가는 하부 S곡선의 대비가 분명하다.",
+        "framing_note": "양 끝과 모든 분지가 잘리지 않고 보임. 요청한 5%보다 상단 여백은 좁게 생성되어 원본을 그대로 보존하고 기록함."
+      }
+    },
+    {
+      "id": "V03",
+      "name": "나선의 초승 가지",
+      "file": "bow-03.png",
+      "exactprompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V03, A04-dominant variation. Transform the upper branches into one large elegant BACKWARD spiral horn and one shorter downward-facing crescent curl, joined to a tall undulating cobalt upper limb. The large spiral is OPEN and sweeps LEFT and DOWN toward the shoulder without touching the grip, creating a dramatic broad circular negative space with a bright floating-looking but delicately supported blue crescent moon inside. The lower limb is a single long broad-to-thin azure wave sweeping in the opposite direction, unbranched and clearly slimmer. Upper and lower curves should feel like different calligraphic strokes, one richly branched spiral and one quiet flowing return, not mirror symmetry.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V03, A04-dominant variation. Transform the upper branches into one large elegant BACKWARD spiral horn and one shorter downward-facing crescent curl, joined to a tall undulating cobalt upper limb. The large spiral is OPEN and sweeps LEFT and DOWN toward the shoulder without touching the grip, creating a dramatic broad circular negative space with a bright floating-looking but delicately supported blue crescent moon inside. The lower limb is a single long broad-to-thin azure wave sweeping in the opposite direction, unbranched and clearly slimmer. Upper and lower curves should feel like different calligraphic strokes, one richly branched spiral and one quiet flowing return, not mirror symmetry.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-001b93ad-262a-4a40-83db-2b25f98a857e.png",
+      "sha256": "8e50ef6cf1fbf407e0d7c57354d7d25771ba7fa685678ac6aa4a7028114feeb0",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original), individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "visible_grip_and_one_connected_string": true,
+        "blue_crescent_moon_visible": true,
+        "asymmetric_silhouette": true,
+        "reference_color_and_craft_retained": true,
+        "new_silhouette_variation": true,
+        "no_second_bow_panels_people_text": true,
+        "note": "상부 월뿔을 큰 열린 나선으로 돌리고 그 안에 선명한 초승달을 둔 형태. 아래쪽 작은 역방향 갈고리와 긴 하부 곡선으로 실루엣을 달리했다.",
+        "framing_note": "양 끝과 모든 분지가 잘리지 않고 보임. 요청한 5%보다 상단 여백은 좁게 생성되어 원본을 그대로 보존하고 기록함."
+      }
+    },
+    {
+      "id": "V04",
+      "name": "갈라진 뿔과 삼중 월호",
+      "file": "bow-04.png",
+      "exactprompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V04, combine A04's lunar horns with A05's layered crescents. A tall narrow main upper limb forks into two long gracefully curved LEFT-facing horns at different heights. Within the fork and extending outward LEFT only, integrate THREE unequal blue crescent moonstone arcs at different tilts, clearly connected by delicate cobalt-and-gold supports. One large crescent follows the outer horn, a medium crescent sits diagonally deeper inside, and the smallest curls near the grip; leave generous dark open gaps between them. The lower limb is dramatically shorter, one restrained sharp recurve with no layers. An ornate but clearly legible upper-heavy legendary bow, one clean taut string.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V04, combine A04's lunar horns with A05's layered crescents. A tall narrow main upper limb forks into two long gracefully curved LEFT-facing horns at different heights. Within the fork and extending outward LEFT only, integrate THREE unequal blue crescent moonstone arcs at different tilts, clearly connected by delicate cobalt-and-gold supports. One large crescent follows the outer horn, a medium crescent sits diagonally deeper inside, and the smallest curls near the grip; leave generous dark open gaps between them. The lower limb is dramatically shorter, one restrained sharp recurve with no layers. An ornate but clearly legible upper-heavy legendary bow, one clean taut string.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-155319e6-b020-48af-9fff-195b5e43caa7.png",
+      "sha256": "012b7a491f8640b6cbd4503a3d855e129ab703889955bf285b286fb4ce43ed28",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original), individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "visible_grip_and_one_connected_string": true,
+        "blue_crescent_moon_visible": true,
+        "asymmetric_silhouette": true,
+        "reference_color_and_craft_retained": true,
+        "new_silhouette_variation": true,
+        "no_second_bow_panels_people_text": true,
+        "note": "A04의 유려한 상부 분지에 A05의 크기와 각도가 다른 세 초승달을 연결했다. 상부에 층이 집중되고 하부는 짧은 단순 곡선이다.",
+        "framing_note": "양 끝과 모든 분지가 잘리지 않고 보임. 요청한 5%보다 상단 여백은 좁게 생성되어 원본을 그대로 보존하고 기록함."
+      }
+    },
+    {
+      "id": "V05",
+      "name": "아래로 흐르는 월뿔 궤도",
+      "file": "bow-05.png",
+      "exactprompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V05, combine both references while changing their balance decisively. Make the upper limb long and SLENDER, with just one large curling A04-style lunar horn projecting LEFT above the grip and one small return curl. Shift A05's layered BLUE CRESCENTS to the LOWER outer shoulder: two large unequal luminous crescent arcs sweep downward LEFT around a third small inner crescent, integrated into a wide deep-cobalt lower recurve. The grip lies above the middle of the heavy crescent cluster, and the visual mass is concentrated below it. Keep the top airy and the bottom richly layered, so this is a conspicuously bottom-weighted asymmetric bow, not the upper-heavy reference repeated. Long flowing joins, elegant open spaces and one continuous string.",
+      "referenced_image_paths": [
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+        "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-05.png"
+      ],
+      "mode": "built-in image_gen",
+      "status": "reviewed",
+      "prompt": "Use case: stylized-concept. Input image 1 role=design reference: A04, the elegant blue-moon bow with branching curved lunar horns and open crescent space. Input image 2 role=design reference: A05, the blue-moon bow with three unequal crescent layers on one side. These are DESIGN REFERENCES, not two objects to reproduce together and not an image to which another weapon should be added. Create exactly ONE NEW VARIATION BOW based on their visual language. The final image must contain only ONE bow total, one continuous taut tip-to-tip bowstring and one clear usable wrapped grip. Portrait 1024x1536, near-front three-quarter product concept. Show the entire long bow with both tips and all branches fully visible. Pull the camera slightly back: reserve at least 5% clean background margin on every side, with about 80-100 pixels of breathing room above the highest tip and below the lowest tip. Plain very dark midnight-navy background. Preserve the references' noble sapphire and deep-cobalt moonlit-glass surfaces, brilliantly legible BLUE CRESCENT MOON motif, thin delicate pale-gold filigree along structural edges, refined star tracery, luminous clear azure edges and elegant open negative spaces. Strengthen the intentional upper/lower asymmetry and graceful sweeping form. This is a significant silhouette variation, not simply a recolor or tiny ornament edit. Long functional bow limbs, coherent string attachment and arrow clearance; metal only as fine supports, no heavy steel plates or ordinary jagged weapon parts. No second bow, extra weapons, hands, people, inset views, panels, collage, words, labels or watermark. V05, combine both references while changing their balance decisively. Make the upper limb long and SLENDER, with just one large curling A04-style lunar horn projecting LEFT above the grip and one small return curl. Shift A05's layered BLUE CRESCENTS to the LOWER outer shoulder: two large unequal luminous crescent arcs sweep downward LEFT around a third small inner crescent, integrated into a wide deep-cobalt lower recurve. The grip lies above the middle of the heavy crescent cluster, and the visual mass is concentrated below it. Keep the top airy and the bottom richly layered, so this is a conspicuously bottom-weighted asymmetric bow, not the upper-heavy reference repeated. Long flowing joins, elegant open spaces and one continuous string.",
+      "source_path": "C:\\Users\\dayba\\.codex\\generated_images\\01a0cc82-a39f-7fc0-b4db-4f2558e79a7c\\exec-ee59a329-d802-49d4-8d21-c0a60cd969e9.png",
+      "sha256": "f63faeeb1ee4654b95ade0b27ffd2e3abf905620960639fda5512a64f8e447a9",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "visual_qa": {
+        "status": "reviewed",
+        "method": "generatedImage output and local view_image(original), individually inspected",
+        "bow_count": 1,
+        "full_length_visible": true,
+        "visible_grip_and_one_connected_string": true,
+        "blue_crescent_moon_visible": true,
+        "asymmetric_silhouette": true,
+        "reference_color_and_craft_retained": true,
+        "new_silhouette_variation": true,
+        "no_second_bow_panels_people_text": true,
+        "note": "상부는 길고 가는 월뿔 곡선으로 남기고 A05의 초승달 층을 하부로 옮겼다. 아래쪽에 부피가 집중돼 다른 네 활과 균형이 확실히 다르다.",
+        "framing_note": "양 끝과 모든 분지가 잘리지 않고 보임. 요청한 5%보다 상단 여백은 좁게 생성되어 원본을 그대로 보존하고 기록함."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-04.png",
+      "sha256": "1f5aad87d791b9b3666a1ab3bfcf6f6572ce22dbd7ba25fd7433149421f8eabf",
+      "role": "design reference"
+    },
+    {
+      "path": "C:\\Users\\dayba\\Downloads\\라버 2\\LAQIA-THE-LEGEND\\assets\\visual-refresh-20260923\\bow-asymmetric-10\\bow-05.png",
+      "sha256": "67bca8c1b75b1331e8ddabdb17c70f9a09bade5a9734c719acbda29631c1492c",
+      "role": "design reference"
+    }
+  ],
+  "validation": {
+    "status": "PASS_WITH_FRAMING_NOTE",
+    "images": 5,
+    "builtin_imagegen_calls": 5,
+    "each_call_received_reference_paths": 2,
+    "failures": 0,
+    "missing": 0,
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "unique_sha256": 5,
+    "original_bytes_preserved": true,
+    "png_integrity": "PASS",
+    "all_images_locally_viewed": true,
+    "clipped_weapon_tips": false,
+    "five_percent_margin_fully_satisfied": false,
+    "scope": "V01-V05 only; no previous images, game resources, model, skill, installation or gallery source edited."
+  }
+}

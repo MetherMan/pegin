@@ -1,0 +1,123 @@
+{
+  "original_sha256": "f1465e05d3ebe7db3a3c825ccc464b8d7652bcda9d5cf8477cba05b92cdbfac4",
+  "original_size": 520192,
+  "sha256": "ccda166cd52a804d594bbbc8c850284836244dc01fb3a4374a770b775e0422eb",
+  "section_rva": 532480,
+  "undo": [
+    [
+      140217,
+      "ff9290000000"
+    ],
+    [
+      832,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0900"
+    ],
+    [
+      304,
+      "00200800"
+    ],
+    [
+      252,
+      "00d00600"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "hell horse movement embers",
+      "va": 4334521,
+      "original": "ff9290000000",
+      "replacement": "e952fc050090",
+      "target": 4726800,
+      "resume": 4334527,
+      "assembly": "push eax; call here; here: pop eax; sub eax,22; cmp dword ptr [ebx+0x24],4; jne original; mov dword ptr [esp+4],eax; original: pop eax; call dword ptr [edx+0x90]",
+      "code": "50e8000000005883e816837b240475048944240458ff9290000000e98f03faff"
+    }
+  ],
+  "validation": {
+    "cases": [
+      {
+        "base": 4194304,
+        "mount": 0,
+        "hell_sparks": false
+      },
+      {
+        "base": 4194304,
+        "mount": 1,
+        "hell_sparks": false
+      },
+      {
+        "base": 4194304,
+        "mount": 2,
+        "hell_sparks": false
+      },
+      {
+        "base": 4194304,
+        "mount": 3,
+        "hell_sparks": false
+      },
+      {
+        "base": 4194304,
+        "mount": 4,
+        "hell_sparks": true
+      },
+      {
+        "base": 4194304,
+        "mount": 5,
+        "hell_sparks": false
+      },
+      {
+        "base": 4194304,
+        "mount": 4294967295,
+        "hell_sparks": false
+      },
+      {
+        "base": 6291456,
+        "mount": 0,
+        "hell_sparks": false
+      },
+      {
+        "base": 6291456,
+        "mount": 1,
+        "hell_sparks": false
+      },
+      {
+        "base": 6291456,
+        "mount": 2,
+        "hell_sparks": false
+      },
+      {
+        "base": 6291456,
+        "mount": 3,
+        "hell_sparks": false
+      },
+      {
+        "base": 6291456,
+        "mount": 4,
+        "hell_sparks": true
+      },
+      {
+        "base": 6291456,
+        "mount": 5,
+        "hell_sparks": false
+      },
+      {
+        "base": 6291456,
+        "mount": 4294967295,
+        "hell_sparks": false
+      }
+    ],
+    "movement_gate_unchanged": true,
+    "original_particle_records_unchanged": true,
+    "particle_lifetime_ms": 550,
+    "particles_per_update": 2,
+    "in_game_visual_test": false
+  }
+}
