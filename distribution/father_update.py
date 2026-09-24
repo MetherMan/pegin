@@ -4,13 +4,18 @@ No Git installation, login, database import, or VM replacement is needed.
 Only manifest-listed client assets, static server DATA and GameServer change.
 """
 from pathlib import Path, PurePosixPath
-import argparse, hashlib, json, os, shutil, subprocess, sys, time, uuid
+import argparse, hashlib, json, os, re, shutil, subprocess, sys, time, uuid
 import urllib.request, urllib.error, urllib.parse
 
 REPOSITORY = 'MetherMan/pegin'
 MANIFEST = 'distribution/update-manifest.json'
 SERVER = '/opt/laqia/server/LAQIA_GameServer'
 RUNTIME_SUPPORT = {'local_control.py', 'ssh_vm.py', 'start_vm.py'}
+# Read by local_control.py to re-download missing or truncated game files at game start.
+INSTALLED_MANIFEST = 'installed-manifest.json'
+KEEP_BACKUPS = 3
+STAMP = r'\d{8}-\d{6}-[0-9a-f]{8}'
+REMOTE_STAMP_GLOB = '20??????-??????-????????'
 
 def sha(path):
     with Path(path).open('rb') as f:
@@ -79,16 +84,20 @@ def validate_payloads(source,manifest):
         if not p.is_file() or p.stat().st_size!=e['bytes'] or sha(p)!=e['sha256']:
             raise RuntimeError('적용 전 파일 검증 실패: '+e['path'])
 
-def download(url, target, expected=None, length=None):
-    request = urllib.request.Request(url, headers={'User-Agent':'LAQIA-Family-Updater','Accept':'application/vnd.github+json'})
+def download(url, target, expected=None, length=None, accept='application/vnd.github+json'):
+    request = urllib.request.Request(url, headers={'User-Agent':'LAQIA-Family-Updater','Accept':accept})
     target.parent.mkdir(parents=True,exist_ok=True)
     try:
         with urllib.request.urlopen(request, timeout=60) as response, target.open('wb') as out:
             shutil.copyfileobj(response, out)
     except urllib.error.HTTPError as error:
+        if error.code in (403,429) and error.headers.get('X-RateLimit-Remaining')=='0':
+            raise RuntimeError('GitHub 확인 횟수 제한에 걸렸습니다. 1시간 뒤에 다시 눌러 주세요. 게임 파일은 아직 변경하지 않았습니다.') from error
         if error.code in (401,403,404):
             raise RuntimeError('업데이트에 접근할 수 없습니다. 저장소가 public인지 확인해 주세요. 게임 파일은 아직 변경하지 않았습니다.') from error
         raise
+    except (urllib.error.URLError, TimeoutError, ConnectionError) as error:
+        raise RuntimeError('인터넷 연결을 확인한 뒤 다시 눌러 주세요. 게임 파일은 아직 변경하지 않았습니다.') from error
     if expected and (sha(target)!=expected or target.stat().st_size!=length):
         raise RuntimeError('다운로드 파일 검증 실패: '+target.name)
 
@@ -98,12 +107,32 @@ def local_target(root, runtime, entry):
     if entry['kind']=='runtime': return safe_path(runtime,entry['path'])
     return None
 
+def prune_downloads(folder, age=3600):
+    """Remove staging folders left by earlier runs. A concurrent run's folder is still recent."""
+    if not folder.is_dir(): return
+    for p in folder.iterdir():
+        if not p.is_dir() or not re.fullmatch('[0-9a-f]{32}',p.name): continue
+        try:
+            if time.time()-p.stat().st_mtime>age: shutil.rmtree(p)
+        except OSError: pass
+
 def fetch(root, runtime):
-    staging = root/'update/downloads'/uuid.uuid4().hex
+    downloads = root/'update/downloads'
+    prune_downloads(downloads)
+    staging = downloads/uuid.uuid4().hex
     staging.mkdir(parents=True)
-    info = staging/'revision.json'
-    download('https://api.github.com/repos/'+REPOSITORY+'/commits/main',info)
-    revision = json.loads(info.read_text())['sha']
+    try:
+        return fetch_into(root, runtime, staging)
+    except BaseException:
+        shutil.rmtree(staging, ignore_errors=True)
+        raise
+
+def fetch_into(root, runtime, staging):
+    info = staging/'revision.txt'
+    # Only the SHA; the default JSON also carries the whole diff of the latest commit.
+    download('https://api.github.com/repos/'+REPOSITORY+'/commits/main',info,accept='application/vnd.github.sha')
+    text = info.read_text(encoding='utf-8').strip()
+    revision = json.loads(text)['sha'] if text.startswith('{') else text
     if len(revision)!=40 or any(c not in '0123456789abcdef' for c in revision): raise ValueError('Invalid revision')
     base = 'https://raw.githubusercontent.com/'+REPOSITORY+'/'+revision+'/'
     download(base+MANIFEST, staging/MANIFEST)
@@ -170,6 +199,48 @@ def run_latest_updater(root,runtime,source):
     return subprocess.run([sys.executable,'-B','-X','utf8',str(script),
                            '--root',str(root),'--runtime',str(runtime),'--source',str(source)]).returncode
 
+def wait_game_server(cmd, timeout=600, clock=time):
+    """Wait for the restarted GameServer inside the VM.
+
+    QEMU's host-side port forward accepts connections even with no guest listener,
+    so only the VM's own socket table proves the new server is serving.
+    """
+    deadline=clock.monotonic()+timeout
+    while True:
+        state=cmd('systemctl is-active LAQIA_GameServer || true').strip()
+        if state in ('failed','inactive'):raise RuntimeError('새 서버가 시작 직후 종료됐습니다.')
+        if state=='active' and cmd("ss -Hltn 'sport = :2560'").strip():
+            # A server that crashes while loading DATA exits within seconds of binding.
+            clock.sleep(5)
+            if cmd('systemctl is-active LAQIA_GameServer || true').strip()=='active':return
+            raise RuntimeError('새 서버가 시작 직후 종료됐습니다.')
+        if clock.monotonic()>=deadline:raise RuntimeError('새 서버가 접속 포트를 열지 않았습니다.')
+        clock.sleep(2)
+
+def save_installed_manifest(runtime,manifest):
+    target=runtime/INSTALLED_MANIFEST
+    temporary=target.with_name(target.name+'.tmp')
+    temporary.write_text(json.dumps(manifest,ensure_ascii=False,indent=1),encoding='utf-8')
+    os.replace(temporary,target)
+
+def prune_remote(cmd):
+    """Keep the newest VM backups; staging folders are only needed during an update."""
+    for folder,keep in (('/opt/laqia/update-backups',KEEP_BACKUPS),('/opt/laqia/update-stage',0)):
+        try:cmd('cd '+folder+' 2>/dev/null && ls -1d '+REMOTE_STAMP_GLOB+' 2>/dev/null | sort | head -n -'+str(keep)+' | xargs -r rm -rf --')
+        except Exception:pass
+
+def prune_local(root,runtime,manifest):
+    """Keep the newest local update backups and only cached files of the installed version."""
+    backups=sorted(p for p in (runtime/'backups').glob('auto-update-*') if p.is_dir() and re.fullmatch('auto-update-'+STAMP,p.name))
+    for p in backups[:-KEEP_BACKUPS]:shutil.rmtree(p,ignore_errors=True)
+    wanted={e['sha256'] for e in payload_entries(manifest)}
+    cache=root/'update/cache'
+    if not cache.is_dir():return
+    for p in cache.iterdir():
+        if p.is_file() and re.fullmatch('[0-9a-f]{64}',p.name) and p.name not in wanted:
+            try:p.unlink()
+            except OSError:pass
+
 def apply(root, runtime, source):
     import shlex
     manifest=read_manifest(source)
@@ -225,9 +296,8 @@ def apply(root, runtime, source):
                             dest=SERVER+'/'+e['path']
                             cmd('mkdir -p '+shlex.quote(str(PurePosixPath(dest).parent))+' && cp '+shlex.quote(stage+'/'+e['path'])+' '+shlex.quote(dest))
                         cmd('chmod 755 '+SERVER+'/LAQIA_GameServer && chown -R laqia:laqia '+SERVER+'/DATA '+SERVER+'/LAQIA_GameServer')
-                        cmd('systemctl start LAQIA_GameServer');time.sleep(3)
-                        if cmd('systemctl is-active LAQIA_GameServer').strip()!='active':raise RuntimeError('새 서버 시작 실패')
-                        if not ctl.port_open(2560):raise RuntimeError('새 서버 접속 포트 확인 실패')
+                        cmd('systemctl start LAQIA_GameServer')
+                        wait_game_server(cmd)
                     for e in manifest['files']:
                         dest=local_target(root,runtime,e)
                         if dest and (not dest.is_file() or sha(dest)!=e['sha256']):
@@ -241,6 +311,7 @@ def apply(root, runtime, source):
                     result={'version':manifest['version'],'revision':manifest.get('revision'),'server_files_changed':len(changed),'local_files_changed':len(local.entries),'database_replaced':False,'backup':str(backup)}
                     state=root/'update/installed.json';state.parent.mkdir(parents=True,exist_ok=True)
                     state.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+                    save_installed_manifest(runtime,manifest)
                     print(json.dumps(result,ensure_ascii=False),flush=True)
                 except BaseException:
                     try:local.rollback()
@@ -250,6 +321,13 @@ def apply(root, runtime, source):
                             # Preserve the failed static data for diagnosis; never touch SQL data.
                             cmd('mv '+SERVER+'/DATA '+remote_backup+'/failed-DATA && cp -a '+remote_backup+'/DATA '+SERVER+'/ && cp -p '+remote_backup+'/LAQIA_GameServer '+SERVER+'/LAQIA_GameServer && systemctl start LAQIA_GameServer')
                     raise
+                finally:
+                    if changed:
+                        try:cmd('rm -rf '+stage)
+                        except Exception:pass
+                # Only after success: the newest backups stay for manual recovery.
+                prune_remote(cmd)
+            prune_local(root,runtime,manifest)
         finally:
             if started and not was_online and ctl.online() and not ctl.client_running():ctl.stop()
     print('업데이트 완료! 기존 실행 버튼으로 게임을 켜 주세요. 계정·캐릭터·장비는 유지했습니다.',flush=True)
@@ -268,11 +346,16 @@ def main():
         raise RuntimeError('outputs와 work가 함께 있는 기존 설치 폴더를 선택해 주세요.')
     if not (runtime/'python/python.exe').is_file() or not (runtime/'local_control.py').is_file():
         raise RuntimeError('라키아 폴더 안에 덮어씌워 주세요. work/laqia-runtime 폴더를 찾을 수 없습니다.')
+    fetched=args.source is None
     source=args.source or fetch(root,runtime)
-    if not args.download_only:
+    if args.download_only:return 0
+    try:
         status=run_latest_updater(root,runtime,source)
         if status is not None:return status
         apply(root,runtime,source)
+    finally:
+        # Only the process that downloaded the staging copy removes it (84 MB per run).
+        if fetched:shutil.rmtree(source,ignore_errors=True)
     return 0
 
 if __name__=='__main__':

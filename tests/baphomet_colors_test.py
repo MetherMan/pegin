@@ -1,8 +1,11 @@
-"""Verify tint/native texture equivalence and transactional writes in an isolated fixture."""
+"""The retired 1024x1024 skin editor must never overwrite the current primordial texture.
+
+Its tint, native encoding and transactional writes are still checked in an isolated fixture.
+"""
 from pathlib import Path
 from io import BytesIO
 from unittest.mock import patch
-import base64, hashlib, importlib.util, json, struct, subprocess, sys, tempfile, zlib
+import base64, hashlib, importlib.util, json, shutil, struct, subprocess, sys, tempfile, zlib
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'runtime/pylibs'))
@@ -11,22 +14,34 @@ spec=importlib.util.spec_from_file_location('baphomet_editor',ROOT/'client-overl
 editor=importlib.util.module_from_spec(spec);spec.loader.exec_module(editor)
 tool=ROOT/'client-overlay/Tools/BaphometColors'
 settings=json.loads((tool/'settings.json').read_text())
-raw=(ROOT/'client-overlay/Texture/Monster/mt_prime_body.wtm').read_bytes()
+texture=ROOT/'client-overlay/Texture/Monster/mt_prime_body.wtm'
+raw=texture.read_bytes()
 assert raw[:9]==b'TEAMMAY\0\0'
-bmp=zlib.decompress(raw[13:]);assert len(bmp)==struct.unpack_from('<I',raw,9)[0]
-wtm,png=editor.encode(bmp)
-atlas=Image.open(ROOT/'assets/primordial-baphomet/body-atlas.png').convert('RGBA')
-assert Image.open(BytesIO(bmp)).convert('RGBA').tobytes()==atlas.tobytes()
-assert Image.open(BytesIO(png)).convert('RGBA').tobytes()==atlas.tobytes()
-checks=['native BMP/WTM and saved PNG pixel equivalence']
+current=zlib.decompress(raw[13:]);assert len(current)==struct.unpack_from('<I',raw,9)[0]
+assert editor.texture_size(texture)==struct.unpack_from('<ii',current,18)!=(1024,1024)
+checks=['current primordial texture is not the old 1024x1024 skin layout']
 
 with tempfile.TemporaryDirectory(prefix='baphomet-test-') as temporary:
     folder=Path(temporary)
     (folder/'source.rgba').write_bytes(Image.open(tool/'base-body.png').convert('RGBA').tobytes())
     (folder/'settings.json').write_text(json.dumps(settings))
     subprocess.run([str(ROOT/'runtime/node/node.exe'),str(ROOT/'tests/baphomet_colors_test.mjs'),str(folder)],check=True)
-    assert (folder/'tinted.rgba').read_bytes()==atlas.tobytes(), 'saved game pixels must match the editor tint'
-    checks.append('browser saved texture matches tint of immutable baseline and final settings')
+    tinted=Image.frombytes('RGBA',(1024,1024),(folder/'tinted.rgba').read_bytes()).convert('RGB')
+    stream=BytesIO();tinted.save(stream,'BMP');bmp=stream.getvalue()
+    wtm,png=editor.encode(bmp)
+    assert zlib.decompress(wtm[13:])==bmp
+    assert Image.open(BytesIO(png)).convert('RGB').tobytes()==tinted.tobytes()
+    checks.append('tinted old skin encodes to native WTM and PNG with identical pixels')
+
+    guarded=folder/'current'/'client-overlay';(guarded/'Texture/Monster').mkdir(parents=True)
+    shutil.copyfile(texture,guarded/'Texture/Monster/mt_prime_body.wtm')
+    before={p:p.read_bytes() for p in guarded.rglob('*') if p.is_file()}
+    payload=dict(settings=settings,bmp=base64.b64encode(bmp).decode())
+    with patch.object(editor,'CLIENT',guarded),patch.object(editor,'HERE',guarded/'Tools/BaphometColors'),patch.object(editor,'game_running',return_value=False):
+        try:editor.apply(payload);raise AssertionError('old skin replaced the current texture')
+        except ValueError:pass
+    assert {p:p.read_bytes() for p in guarded.rglob('*') if p.is_file()}==before
+    checks.append('saving the old skin over the current texture is refused without writes')
 
     repo=folder/'fixture';client=repo/'client-overlay';here=client/'Tools/BaphometColors'
     (repo/'assets/primordial-baphomet').mkdir(parents=True);(repo/'distribution').mkdir()

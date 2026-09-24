@@ -58,9 +58,9 @@ class StartupTests(unittest.TestCase):
         with mock.patch.object(ctl,'online',return_value=False),mock.patch.object(ctl,'preflight'):
             with mock.patch.object(ctl,'port_open',return_value=True),mock.patch.object(ctl,'wait_for_vm') as wait:
                 with mock.patch.object(ctl.subprocess,'run') as launch,mock.patch.object(ctl,'connect',return_value=connection):
-                    with mock.patch.object(ctl,'command',return_value='active'),mock.patch.object(ctl.socket,'create_connection',return_value=mock.MagicMock()):
+                    with mock.patch.object(ctl,'command',return_value='active'),mock.patch.object(ctl,'wait_for_services') as services:
                         with contextlib.redirect_stdout(io.StringIO()):ctl.start()
-                    wait.assert_called_once_with();launch.assert_not_called()
+                    wait.assert_called_once_with();launch.assert_not_called();services.assert_called_once_with(connection.__enter__.return_value)
 
     def test_probe_retains_connection_failure_reason(self):
         with mock.patch.object(ctl,'connect',side_effect=OSError('connection refused')):

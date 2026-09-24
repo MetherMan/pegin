@@ -19,13 +19,14 @@ class StartupTests(unittest.TestCase):
         with patch.dict(sys.modules,ssh_vm=ssh,portable_support=portable),patch('logging.basicConfig'):spec.loader.exec_module(self.ctl)
     def test_already_booting_server_is_waited_for_without_launching_second_vm(self):
         c=self.ctl;clock=Clock()
-        with patch.object(c,'online',return_value=False) as online,patch.object(c,'port_open',return_value=True),patch.object(c.subprocess,'run') as launch,patch.object(c,'time',clock),patch.object(c,'command',return_value='active'),patch.object(c.socket,'create_connection',return_value=MagicMock()):
+        with patch.object(c,'online',return_value=False) as online,patch.object(c,'port_open',return_value=True),patch.object(c.subprocess,'run') as launch,patch.object(c,'time',clock),patch.object(c,'command',return_value='active'),patch.object(c,'wait_for_services') as services:
             with patch.object(c,'vm_status',side_effect=[(False,'booting'),(False,'booting'),(True,'')]) as probe,contextlib.redirect_stdout(io.StringIO()):
                 c.start()
             launch.assert_not_called()
             online.assert_called_once_with()
             self.assertEqual(probe.call_count,3)
             self.assertEqual(clock.now,4)
+            services.assert_called_once()
     def test_slow_boot_has_a_ten_minute_budget(self):
         c=self.ctl
         clock=Clock()

@@ -12,6 +12,10 @@
 
 `distribution/father_update.py`는 공개 GitHub의 manifest에 있는 게임 파일과 정적 서버 데이터만 교체합니다. 계정, 비밀번호, 캐릭터 DB, VM 디스크, 개인 설정은 교체하지 않습니다. 커밋·푸시하지 않은 로컬 변경은 아버지 PC로 배포되지 않습니다.
 
+업데이트는 새 게임서버가 VM 안에서 실제로 2560 포트를 열 때까지 확인하고, 실패하면 이전 서버 파일로 되돌립니다. 내려받은 임시 사본은 매번 지우고 백업은 최근 3개만 남깁니다. 적용한 목록은 `work/laqia-runtime/installed-manifest.json`에 남으며, 게임을 시작할 때 빠졌거나 크기가 달라진 게임 파일(예: 백신이 격리한 DLL)을 같은 버전에서 해시 검증 후 다시 받습니다.
+
+기존 설치본의 업데이트 프로그램이 새 manifest를 먼저 검사하므로 manifest의 파일 종류나 `runtime_files` 이름을 늘리면 안 됩니다. `tests/update_maintenance_test.py`가 이전 두 버전으로 이를 확인합니다.
+
 ## VM 시작 오류 복구
 
 `WHPX: No accelerator found` / `failed to initialize whpx` 뒤에 `VM did not become ready`가 나타났다면, [복구 업데이트 ZIP](distribution/father-updater-repair.zip)을 받아 압축을 푼다. 안의 `라키아` 폴더에서 `자동업데이트.cmd`와 `update` 폴더를 기존 설치본의 `outputs`·`work`가 보이는 위치에 한 번 덮어쓰고 실행한다. 기존 업데이트는 VM이 켜진 뒤에야 자기 코드를 교체하므로, 이미 이 오류가 난 PC는 단순 재실행만으로 복구 코드를 받을 수 없다.
@@ -41,10 +45,14 @@ runtime/python/python.exe -X utf8 distribution/father_update.py --root '<기존 
 
 최상위 스킬 습득 요구치는 근거리 90 / 원거리 140 / 흑마법 140 / 백마법 115입니다. 스킬 자체의 강화 한도나 캐릭터 총레벨 제한을 뜻하지 않습니다.
 
+## 이동·회전 렉 수정
+
+`client-overlay/Render.dll`은 엔진이 원래 설계한 MIXED 정점 처리로 되돌렸습니다. 뼈대 애니메이션과 지형 블록은 지금처럼 CPU, 나머지는 GPU가 처리합니다. 정점 셰이더 1.0 미만 GPU나 생성 실패 시 기존 방식으로 자동 전환합니다. `client-overlay/UInterface.dll`은 채팅 중이 아닐 때 한글 조합 메시지를 Windows 기본 처리로 넘기지 않습니다. 원본 해시를 확인하는 `tools/patch_render_mixed_vp.py`와 `tools/patch_uinterface_ime_idle.py`로 재생성하고, `tools/verify_render_mixed_vp.py`로 실제 게임 모델의 원본/패치 화면과 프레임 시간을 비교합니다. 근거는 `assets/performance/`와 `WORKLOG.md`에 있습니다.
+
 ## 태초의 바포메트 뿔 질감
 
 `runtime/python/python.exe -B -X utf8 tools/horn_preview_server.py` 실행 후 `http://127.0.0.1:8879/assets/primordial-baphomet/`를 엽니다. 뿔 질감 강도 0~8배는 실시간 표시되며 **이 강도로 저장·게임 적용**으로 확정합니다. 현재 모델은 원본 1.7배, 가운데 외눈, 어두운 비대칭 뿔과 아래로 향한 칼날을 사용합니다.
 
-저장하면 배포 텍스처·설정·manifest 해시와 기존 두 로컬 실행본이 함께 갱신됩니다. 커밋·푸시 후 아버지는 기존 `자동업데이트.cmd`로 받고, 평소 outputs의 **혼자 게임 시작**을 사용합니다. 이전 BaphometColors 피부색 편집기는 이전 조형용 도구입니다.
+저장하면 배포 텍스처·설정·manifest 해시와 기존 두 로컬 실행본이 함께 갱신됩니다. 커밋·푸시 후 아버지는 기존 `자동업데이트.cmd`로 받고, 평소 outputs의 **혼자 게임 시작**을 사용합니다. 이전 BaphometColors 피부색 편집기는 이전 조형용 도구이며, 현재 텍스처를 덮어쓰지 않도록 저장을 거부합니다.
 
 현재 선택값과 경험치 비교, 재생성 및 검증 기록은 `assets/primordial-baphomet/README.md`를 참고하세요.

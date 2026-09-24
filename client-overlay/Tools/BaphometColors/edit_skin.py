@@ -30,9 +30,23 @@ def encode(bmp):
  png=b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',1024,1024,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(scan,9))+chunk(b'IEND',b'')
  return b'TEAMMAY\0\0'+struct.pack('<I',len(bmp))+zlib.compress(bmp,9),png
 
+def texture_size(path):
+ """(width, height) of an existing WTM texture, or None when it is absent or not a WTM."""
+ try:
+  raw=Path(path).read_bytes()
+  if raw[:9]!=b'TEAMMAY\0\0':return None
+  bmp=zlib.decompressobj().decompress(raw[13:],54)
+  return struct.unpack_from('<ii',bmp,18) if bmp[:2]==b'BM' else None
+ except (OSError,zlib.error,struct.error):return None
+
 def apply(payload,mirror=None):
  if set(payload)!={'settings','bmp'}:raise ValueError('잘못된 저장 요청입니다.')
  settings=validate(payload['settings']);bmp=base64.b64decode(payload['bmp'],validate=True);wtm,png=encode(bmp)
+ # This editor tints the earlier 1024x1024 skin. The current primordial model uses a
+ # different atlas, and saving here would replace it with the old skin layout.
+ current=texture_size(CLIENT/'Texture/Monster/mt_prime_body.wtm')
+ if current is not None and current!=(1024,1024):
+  raise ValueError('이 피부색 편집기는 이전 바포메트 모델용입니다. 현재 모델의 텍스처는 바꾸지 않았습니다.')
  if game_running():raise ValueError('게임을 완전히 종료한 뒤 저장해 주세요.')
  cfg=(json.dumps(settings,indent=2)+'\n').encode()
  roots=[CLIENT]

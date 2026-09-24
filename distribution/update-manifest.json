@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-24-sixfold-effect-scale",
+  "version": "2026-09-24-mixed-vp-ime-updater-repair",
   "files": [
     {
       "kind": "client",
@@ -4305,8 +4305,8 @@
       "kind": "client",
       "path": "Render.dll",
       "source": "client-overlay/Render.dll",
-      "bytes": 606208,
-      "sha256": "1aff9c55db7e490fb089a9d37921d22d3f85424036634d45eccbbf906712af29"
+      "bytes": 610304,
+      "sha256": "e547b3e610f4ea3de39be0117857bf8812e758f783417f46917f13f22fd2f92a"
     },
     {
       "kind": "client",
@@ -4998,8 +4998,8 @@
       "kind": "client",
       "path": "Tools/BaphometColors/edit_skin.py",
       "source": "client-overlay/Tools/BaphometColors/edit_skin.py",
-      "bytes": 7537,
-      "sha256": "032ac0648034303ce801c181385a98eb8f09744fd366562ba1a23ffd4b2a5630"
+      "bytes": 8331,
+      "sha256": "6553e5c92619980d0b12ab2b4391500135ce4997092235f9f83244b1d5dead2d"
     },
     {
       "kind": "client",
@@ -5320,8 +5320,8 @@
       "kind": "client",
       "path": "UInterface.dll",
       "source": "client-overlay/UInterface.dll",
-      "bytes": 507904,
-      "sha256": "42b35656203734794acc3b067ca7a0d0e7391001968715f16c28f8e2e0dd4352"
+      "bytes": 512000,
+      "sha256": "c404bc928f375676fe69ee68deb41a4439e72302d4f365475ad90fe1d6b71922"
     },
     {
       "kind": "client",
@@ -5600,8 +5600,8 @@
       "kind": "updater",
       "path": "update/father_update.py",
       "source": "distribution/father_update.py",
-      "bytes": 16136,
-      "sha256": "c4dd3768ec7d10a61feac9664f7d7a9eeaba8f13effc29a85b8ad15f29f6936e"
+      "bytes": 20401,
+      "sha256": "a87af7e0d77794a2638111e16a94b9b457cde831da5fe221cbcce479a5e413f1"
     }
   ],
   "runtime_files": [
@@ -5609,8 +5609,8 @@
       "kind": "runtime",
       "path": "local_control.py",
       "source": "tools/runtime/local_control.py",
-      "bytes": 7532,
-      "sha256": "4411a0016c97ae828196abdf55549a5f97684ca92b40f704b9718ea3c8d22071"
+      "bytes": 11085,
+      "sha256": "9bc1371d6ad0576aca43c8a5c9f453764e316ddf90c623330deca840affb073e"
     },
     {
       "kind": "runtime",

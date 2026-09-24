@@ -1,9 +1,12 @@
 from pathlib import Path
-import sys, subprocess, time, socket, json, logging, re
+import sys, subprocess, time, socket, json, logging, re, hashlib, os, uuid
+import urllib.request, urllib.parse
 from ssh_vm import connect
 from portable_support import client_running,client_drive,release_drive,preflight
 ROOT=Path(__file__).resolve().parent
 SERVICES='LAQIA_DataServer LAQIA_GameServer LAQIA_LoginServer'
+SERVICE_PORTS=(8030,2560)
+REPOSITORY='MetherMan/pegin'
 logging.basicConfig(filename=str(ROOT/'local-control.log'), encoding='utf-8', level=logging.WARNING)
 def command(c,cmd):
     _,out,err=c.exec_command(cmd,timeout=30)
@@ -57,6 +60,22 @@ def port_open(port):
     try:
         with socket.create_connection(('127.0.0.1',port),timeout=.5):return True
     except OSError:return False
+
+def listening_ports(c):
+    return {int(p) for p in re.findall(r':(\d+)\s',command(c,'ss -Hltn')+'\n')}
+
+def wait_for_services(c,timeout=600):
+    """QEMU's host port forward accepts even before a guest server listens, so ask the VM."""
+    start_time=time.monotonic();deadline=start_time+timeout;notice=start_time+15
+    while True:
+        if set(SERVICE_PORTS)<=listening_ports(c):return
+        now=time.monotonic()
+        if now>=deadline:
+            raise RuntimeError('게임 서버가 접속 준비를 마치지 못했습니다. 잠시 뒤 다시 실행해 주세요. 게임 파일과 DB는 변경하지 않았습니다.')
+        if now>=notice:
+            print('게임 서버 접속 준비 확인 중... '+str(int(now-start_time))+'초',flush=True)
+            notice=now+15
+        time.sleep(2)
 def start():
     preflight(client=False)
     print('기존 게임 서버를 준비합니다. 느린 PC는 최대 10분 정도 걸릴 수 있습니다.', flush=True)
@@ -75,15 +94,63 @@ def start():
     with connect() as c:
         command(c,'systemctl start '+SERVICES)
         print(command(c,'systemctl is-active '+SERVICES))
-    for port in (8030,2560):
-        for attempt in range(30):
-            try:
-                with socket.create_connection(('127.0.0.1',port),timeout=1): break
-            except OSError:
-                if attempt==29: raise
-                time.sleep(1)
+        wait_for_services(c)
     print('Local server ready. Owner account: developer (use your configured password).')
+
+def file_sha(path):
+    with Path(path).open('rb') as f:
+        return hashlib.file_digest(f,'sha256').hexdigest()
+
+def repair_client_files():
+    """Restore missing or truncated game files of the installed update before the game starts.
+
+    The updater saves its verified manifest and GitHub revision next to this file.
+    Only a missing file or a size change counts (for example a DLL quarantined by
+    antivirus); same-size local edits are left for the next update to reconcile.
+    Files come from the updater cache when present, otherwise from that exact
+    revision, and are written only after their size and SHA-256 match.
+    """
+    try:manifest=json.loads((ROOT/'installed-manifest.json').read_text(encoding='utf-8'))
+    except (OSError,ValueError):return 0
+    revision=manifest.get('revision') or ''
+    if not re.fullmatch('[0-9a-f]{40}',revision):return 0
+    client=(ROOT/'client/GameClient').resolve()
+    cache=ROOT.parent.parent/'update/cache'
+    broken=[]
+    for e in manifest.get('files',[]):
+        if e.get('kind')!='client' or e.get('path','').lower() in ('config.ini','server.ini'):continue
+        target=(client/e['path']).resolve()
+        if not target.is_relative_to(client) or e.get('source')!='client-overlay/'+e['path']:continue
+        try:
+            if target.stat().st_size==e['bytes']:continue
+        except OSError:pass
+        broken.append((e,target))
+    repaired=0
+    if broken:print('빠지거나 손상된 게임 파일 '+str(len(broken))+'개를 다시 받습니다.',flush=True)
+    for e,target in broken:
+        try:
+            cached=cache/e['sha256']
+            if cached.is_file() and file_sha(cached)==e['sha256']:data=cached.read_bytes()
+            else:
+                url='https://raw.githubusercontent.com/'+REPOSITORY+'/'+revision+'/'+urllib.parse.quote(e['source'],safe='/')
+                request=urllib.request.Request(url,headers={'User-Agent':'LAQIA-Family-Updater'})
+                with urllib.request.urlopen(request,timeout=60) as response:data=response.read(e['bytes']+1)
+            if len(data)!=e['bytes'] or hashlib.sha256(data).hexdigest()!=e['sha256']:
+                raise ValueError('hash mismatch')
+            target.parent.mkdir(parents=True,exist_ok=True)
+            temporary=target.with_name(target.name+'.repair-'+uuid.uuid4().hex)
+            try:
+                temporary.write_bytes(data);os.replace(temporary,target)
+            finally:
+                if temporary.exists():temporary.unlink()
+            repaired+=1
+        except Exception as error:
+            # Offline or blocked: start anyway; preflight still stops on missing core files.
+            logging.warning('Could not repair %s: %s',e['path'],error)
+    return repaired
 def launch_client(host='127.0.0.1'):
+    try:repair_client_files()
+    except Exception as error:logging.warning('Client file check skipped: %s',error)
     preflight(server=False)
     if client_running(): raise RuntimeError('게임이 이미 실행 중입니다. 작업 표시줄의 게임 창을 열어 주세요.')
     # Only validated numeric IPv4 addresses reach the legacy INI parser.

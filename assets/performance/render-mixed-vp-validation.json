@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cases": 34,
+  "bases": [
+    "0x10000000",
+    "0x03500000"
+  ],
+  "changedOutsideHooks": "PE headers only (new .mixvp section)",
+  "limitation": "Unicorn checks the native call sites; tools/verify_render_mixed_vp.py renders real models",
+  "idempotent": true,
+  "overlayApplied": true,
+  "sha256": "e547b3e610f4ea3de39be0117857bf8812e758f783417f46917f13f22fd2f92a"
+}

@@ -1,7 +1,8 @@
 {
   "checks": [
-    "native BMP/WTM and saved PNG pixel equivalence",
-    "browser saved texture matches tint of immutable baseline and final settings",
+    "current primordial texture is not the old 1024x1024 skin layout",
+    "tinted old skin encodes to native WTM and PNG with identical pixels",
+    "saving the old skin over the current texture is refused without writes",
     "running game blocked without writes",
     "mid-save failure rolls back every original file",
     "successful save updates texture/settings/manifest; backups outside payload",
@@ -12,6 +13,6 @@
     "strength": 0.75,
     "brightness": 1
   },
-  "texture_sha256": "6bb3a1576f42a03ed5cb4e3e5b0ba518c87dd6fda9b1f9de4a9626dd7dacb819",
+  "texture_sha256": "898ba82537dd197e7b1a05d449fd7fcba58d88b6e6e13c42232904d3266f4a06",
   "actual_game_run": false
 }

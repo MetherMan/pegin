@@ -1,0 +1,51 @@
+{
+  "original_sha256": "42b35656203734794acc3b067ca7a0d0e7391001968715f16c28f8e2e0dd4352",
+  "original_size": 507904,
+  "sha256": "c404bc928f375676fe69ee68deb41a4439e72302d4f365475ad90fe1d6b71922",
+  "section_rva": 520192,
+  "undo": [
+    [
+      137028,
+      "c786d401000000000000"
+    ],
+    [
+      912,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0b00"
+    ],
+    [
+      304,
+      "00f00700"
+    ],
+    [
+      252,
+      "00080600"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "IMEProc without editor: handle composition messages",
+      "va": 268572484,
+      "original": "c786d401000000000000",
+      "replacement": "e9b7d805009090909090",
+      "target": 268955648,
+      "resume": 268572494,
+      "assembly": "\n    mov dword ptr [esi+0x1d4], 0\n    cmp edi, 269\n    jb keep\n    cmp edi, 271\n    ja keep\n    mov ebx, 1\nkeep:\n",
+      "code": "c786d40100000000000081ff0d010000720d81ff0f0100007705bb01000000e92a27faff"
+    }
+  ],
+  "protocol": "uinterface-ime-idle-v1",
+  "handled_without_editor": [
+    "0x10d",
+    "0x10e",
+    "0x10f"
+  ],
+  "source": "src/client/uinterface/Src/W3DGUIInput.cpp:3290-3329"
+}
