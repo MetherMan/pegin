@@ -3037,6 +3037,9 @@ BYTE GetRideSpeed( sPDESC_DATA pPlayer )
 		case dRIDE_TYPE4:
 			speed = 100;
 			break;
+		case dRIDE_TYPE5:		// Blue Moon horse
+			speed = 120;
+			break;
 		}
 	}
 

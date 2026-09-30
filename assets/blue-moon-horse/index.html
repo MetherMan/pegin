@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>푸른달 말 · 원본 말 모델 시안</title>
+<style>
+*{box-sizing:border-box}body{margin:0;overflow:hidden;background:#0d1322;color:#e3ecf8;font:14px system-ui}header{position:absolute;left:30px;top:22px;z-index:2;pointer-events:none}h1{font-size:25px;margin:6px 0 10px}small{color:#7fc8ff;letter-spacing:2px}p{line-height:1.7;color:#a8b8cf;margin:8px 0;max-width:330px}
+.controls{position:fixed;bottom:48px;left:30px;right:30px;display:flex;flex-direction:column;gap:7px;pointer-events:auto}.row{display:flex;gap:7px;flex-wrap:wrap;align-items:center}.row b{font-weight:500;color:#8fa6c4;min-width:44px;font-size:12px}
+button{border:1px solid #3c5378;background:#18233a;color:#dbe8fb;border-radius:6px;padding:8px 12px;cursor:pointer}button.active{background:#1f4f86;border-color:#7fc8ff}
+footer{position:absolute;bottom:18px;left:30px;color:#8193ad;pointer-events:none}canvas{display:block}#status{position:absolute;bottom:18px;right:25px;font-size:12px;color:#7fa6d4}
+@media(max-width:700px){header{left:16px}.controls{left:16px;right:16px}}
+</style>
+<header><small>BLUE MOON HORSE / NATIVE MODEL</small><h1>푸른달 말</h1><p>원본 갈색말의 골격·움직임·UV 그대로<br>푸른 몸체 · 풍성한 하늘색 갈기·꼬리 · 푸른 안광 · 나선형 유니콘 뿔</p></header>
+<div class="controls">
+<div class="row"><b>몸 색</b><button data-coat="midnight" class="active">심야 청마</button><button data-coat="moonlight">달빛 은청</button><button data-coat="twilight">황혼 청보라</button><button data-coat="original">원본 갈색말</button></div>
+<div class="row"><b>안장</b><button data-saddle="original" class="active">원본 안장</button><button data-saddle="bluemoon">푸른달 안장</button></div>
+<div class="row"><b>보기</b><button id="idle" class="active">대기</button><button id="run">달리기</button><button id="pause">일시정지</button><button data-view="quarter">사선</button><button data-view="side">옆면</button><button data-view="front">정면</button><button data-view="horn">머리·뿔 확대</button><button data-view="eyes">눈 확대</button><button data-view="mane">갈기 확대</button></div>
+</div>
+<footer>드래그 회전 · 휠 확대</footer><div id="status">원본 모델을 불러오는 중…</div>
+<script type="importmap">{"imports":{"three":"../twilight/vendor/three.module.js","controls":"../twilight/vendor/OrbitControls.js"}}</script>
+<script type="module" src="viewer.js"></script></html>

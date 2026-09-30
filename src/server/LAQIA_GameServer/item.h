@@ -72,6 +72,8 @@ void ConsumeOneEnchantCard(sPDESC_DATA player, sPITEM_DATA card);
 
 #define dRIDE_ITEM4 19130 // Hell horse ownership certificate
 #define dRIDE_TYPE4 4
+#define dRIDE_ITEM5 19131 // Blue Moon horse ownership certificate
+#define dRIDE_TYPE5 5
 
 #define dRIDE_TYPE1				1			// 갈색말
 #define dRIDE_TYPE2				2			// 검정말

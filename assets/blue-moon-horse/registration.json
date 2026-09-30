@@ -1,0 +1,20 @@
+{
+  "item": 19131,
+  "name": "푸른달의 말 소유증서",
+  "ride_type": 5,
+  "speed": 120,
+  "coat": "midnight",
+  "saddle": "original",
+  "icon": "mt_bluemoonhorse_icon.bmp",
+  "copied_from": 19130,
+  "files": {
+    "client-overlay/Vehicle/mt_bluemoonhorse.mod": "025aa445e282495f64a886b86391f16b66d718895d5761d118bd79fc37cfc5f6",
+    "client-overlay/Vehicle/mt_bluemoonhorse.act": "10d52ac141897baf40e72e49b6fd3a9d947b81430dcf76793bce001e7e6edd5e",
+    "client-overlay/Texture/Vehicle/mt_bluemoonhorse.wtm": "e80fbc76486026ff08c21d64e0c2f51fe4cd1c5220b17b5c9866f2f16a3f20ed",
+    "client-overlay/Item/mt_bluemoonhorse_icon.wtm": "af7854a49a171344753978a70d0fa2d676fec791977993c79858099d5bbd656f",
+    "client-overlay/Texture/Body/mt_bluemoonhorse_icon.wtm": "af7854a49a171344753978a70d0fa2d676fec791977993c79858099d5bbd656f",
+    "client-overlay/Item/ITEM.dat": "2b53dd394b159bff2df09fa186141733dd2fefc2f977dd3e99cd754b440fd824",
+    "client-overlay/Interface/item.dat": "34957b71ba5dfbee56836f2bda0fdee8e368c343c866c0799afcf8b883e096c8",
+    "game-data/DATA/ITEM_DATA.txt": "5f2869169fe803b762f6ab6d1aad693571e431ae2ccb772ec2f0e1c69b0becef"
+  }
+}

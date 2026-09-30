@@ -1,0 +1,58 @@
+{
+  "original_sha256": "42b35656203734794acc3b067ca7a0d0e7391001968715f16c28f8e2e0dd4352",
+  "original_size": 507904,
+  "sha256": "c9d5cdb8cece889cbbdebcb00d4b746c690287d4fd95d35eec75c6b4363a3db8",
+  "section_rva": 520192,
+  "undo": [
+    [
+      153528,
+      "e943880500"
+    ],
+    [
+      912,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0b00"
+    ],
+    [
+      304,
+      "00f00700"
+    ],
+    [
+      252,
+      "00080600"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "Blue Moon horse certificate uses the native horse whinny and item handling",
+      "va": 268588984,
+      "original": "e943880500",
+      "replacement": "e943980500",
+      "target": 268955648,
+      "resume": 268588989,
+      "assembly": "cmp eax,19131; je 0x100257cd; jmp 0x1007e000",
+      "code": "3dbb4a00000f84c267faffe9f0efffffe9a867faff"
+    }
+  ],
+  "validation": {
+    "item_sound_cases": 18,
+    "relocated_bases": [
+      268435456,
+      318767104
+    ],
+    "horse_items": [
+      10188,
+      10189,
+      10190,
+      19130,
+      19131
+    ]
+  }
+}

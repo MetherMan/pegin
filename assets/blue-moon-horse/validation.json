@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "preview_only": true,
+  "registered_as_ride_item": false,
+  "installed": false,
+  "source": "Vehicle/horse_1.mod",
+  "source_texture": "Texture/Vehicle/horse21.wtm",
+  "source_sha256": "12f00b951753487168c82ea0f28515bce236b408c84cef7edb7e82ba66e1691c",
+  "model_sha256": "025aa445e282495f64a886b86391f16b66d718895d5761d118bd79fc37cfc5f6",
+  "original_vertices": 393,
+  "original_triangles": 718,
+  "horn_vertices": 257,
+  "horn_triangles": 496,
+  "horn_bone": "Bip02 Head",
+  "horn_length": 0.46,
+  "horn_base_radius": 0.048,
+  "hair_parts": {
+    "locks": 95,
+    "under_layer": 20,
+    "outer_mane": 40,
+    "crest": 12,
+    "forelock": 9,
+    "tail": 14
+  },
+  "hair_vertices": 3515,
+  "hair_triangles": 6650,
+  "hair_bones": [
+    "Bip02 Head",
+    "Bip02 Neck",
+    "Bip02 Neck1",
+    "Bip02 Neck2",
+    "Bip02 Tail",
+    "Bip02 Tail1",
+    "Bip02 Tail2"
+  ],
+  "total_vertices": 4165,
+  "total_triangles": 7864,
+  "texture_rects": {
+    "horn": [
+      8,
+      328,
+      84,
+      300
+    ],
+    "hair": [
+      104,
+      600,
+      128,
+      256
+    ]
+  },
+  "eye": "painted luminous blue with a halo (texture only, no emissive material)",
+  "original_skin_weights_uvs_topology_preserved": true,
+  "texture_size": [
+    1024,
+    1024
+  ],
+  "textures": {
+    "atlas-midnight-original.png": "0f7989332254c2bca0d1e53243424399cc775a9aa980b53e23e9a1bad7868d9b",
+    "atlas-midnight-bluemoon.png": "a2bd7996f13f607891f3361f51b2fbade8e36aab821304e0022a536db05b0875",
+    "atlas-moonlight-original.png": "374e6bde076566f635128d71c336319761ea6e452a89903524f192bc38d2956b",
+    "atlas-moonlight-bluemoon.png": "0fcc9ccb0bb702d00371bd06407c03d5dd14f4b9d46806153a83dbe9a8238f07",
+    "atlas-twilight-original.png": "618f2e4716cc8bed50f17ac090fb388897b1aceee58379302ab8867da0de7eff",
+    "atlas-twilight-bluemoon.png": "f207e025de2f2f6261bd5f178b0ae92d7b25f1044704fd68664d8b303919c3de"
+  },
+  "note": "Preview only. Horn and hair appended to chunk 0 with the native corner layout; not installed."
+}

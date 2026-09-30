@@ -147,6 +147,6 @@
   ],
   "resource_readback_passed": true,
   "night_table_passed": true,
-  "exe_sha256": "7face79a37389b75b15f629f335a4d8bfe61a2127530b2fa43d88bafa50e3a6d",
+  "exe_sha256": "112ac56c521a88b2dc3df3635d8de9b98cec9f98d11550ea453f3f401cead93d",
   "actual_game_audio_visual_tested": false
 }

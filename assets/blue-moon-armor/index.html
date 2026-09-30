@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>푸른달 갑옷 · 원본 세트 비교</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0d1322;color:#e3ecf8;font:14px system-ui}main{max-width:1500px;margin:auto;padding:22px 16px 30px}
+small{color:#7fc8ff;letter-spacing:2px;font-size:11px}h1{font-size:23px;margin:4px 0 6px}p.lead{color:#a8b8cf;line-height:1.7;margin:0 0 12px;max-width:820px}
+nav{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:14px}nav b{font-weight:500;color:#8fa6c4;font-size:12px;margin-left:6px}
+button{border:1px solid #3c5378;background:#18233a;color:#dbe8fb;border-radius:6px;padding:8px 12px;cursor:pointer;font:inherit}button.active{background:#1f4f86;border-color:#7fc8ff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.grid{grid-template-columns:1fr}}
+article{border:1px solid #2b3b57;border-radius:10px;overflow:hidden;background:#111a2d;display:flex;flex-direction:column}article.ref{border-color:#5a4a2b}
+.head{padding:12px 14px 4px}.step{font-size:12px;color:#7fc8ff}.ref .step{color:#e2b865}h2{font-size:18px;margin:3px 0 2px}.def{font-size:12px;color:#94a6c0}
+canvas{width:100%;height:440px;display:block;cursor:grab;touch-action:none}canvas:active{cursor:grabbing}
+ul{list-style:none;margin:0;padding:6px 14px 12px;font-size:12px;color:#a8b8cf;display:grid;grid-template-columns:1fr auto;gap:2px 10px}ul li:nth-child(even){text-align:right;color:#cfe0f5}
+#status{color:#7fa6d4;font-size:12px;margin-top:10px}.links{margin:0 0 10px;font-size:13px}.links a{color:#9fd4ff}
+</style>
+<main>
+<small>BLUE MOON ARMOR / NATIVE SETS</small><h1>푸른달 갑옷 · 바탕 후보 비교</h1>
+<p class="lead">템플나이트보다 1~8단계 낮은 전사 갑옷(티탄 → 강철)을 아머·팬츠·건틀렛·부츠 4부위 모두 착용한 모습입니다. 게임 원본 MOD·텍스처와 맨손 대기 모션을 그대로 읽었고, 첫 칸은 비교 기준인 템플나이트입니다. 아무 화면이나 드래그하면 모든 캐릭터가 같이 돌아갑니다.</p>
+<p class="links"><a href="index.html">바탕 후보 9세트</a> · <a href="index.html?data=golden-bluemoon">황금 세트 푸른달 색 시안</a></p>
+<nav><b>성별</b><button data-sex="0" class="active">남자</button><button data-sex="1">여자</button>
+<b>방향</b><button data-yaw="0.55">사선</button><button data-yaw="0">정면</button><button data-yaw="1.5708">옆면</button><button data-yaw="3.1416">뒷면</button><button id="spin">자동 회전 켜기</button>
+<b>배경</b><button id="bg">밝은 배경</button></nav>
+<div class="grid" id="grid"></div>
+<p id="status">게임 모델을 읽는 중…</p>
+</main>
+<script type="importmap">{"imports":{"three":"../twilight/vendor/three.module.js"}}</script>
+<script type="module">
+import * as T from 'three';
+const source=new URLSearchParams(location.search).get('data')==='golden-bluemoon'?'golden-bluemoon':'armor-sets';
+const data=await (await fetch(source+'.json')).json(),loader=new T.TextureLoader(),textures={};
+async function tex(name){if(!textures[name]){const t=await loader.loadAsync(data.textures[name]);t.flipY=false;t.colorSpace=T.SRGBColorSpace;textures[name]=t;}return textures[name];}
+const PART=['아머','팬츠','건틀렛','부츠'],NAME={temple:'템플나이트',titan:'티탄',dwarf:'드워프',elf:'엘프',orichalcum:'오리하르콘',mithril:'미스릴',golden:'황금',alloy:'합금',steel:'강철'};
+function pose(p){return new T.Matrix4().compose(new T.Vector3(...p.slice(0,3)),new T.Quaternion(-p[3],-p[4],-p[5],p[6]),new T.Vector3(1,1,1));}
+let sex='0',yaw=.55,spin=false,light=false,time=0;const views=[];
+if(data.page){document.title=data.page.title;document.querySelector('h1').textContent=data.page.title;document.querySelector('.lead').textContent=data.page.lead;}
+for(const set of data.sets){
+ const card=document.createElement('article');if(!set.step&&!set.title||set.key==='golden-original')card.className='ref';
+ const rows=set.items.map((it,i)=>`<li>${it.name}</li><li>방어 ${it.defense}</li>`).join('');
+ const heading=set.title?`<div class="step">${set.note}</div><h2>${set.title}</h2>`:`<div class="step">${set.step?`템플나이트보다 ${set.step}단계 아래`:'기준 · 템플나이트'}</div><h2>${NAME[set.key]} 세트</h2>`;
+ card.innerHTML=`<div class="head">${heading}<div class="def">4부위 방어 합계 ${set.defense} (+0 기준) · ITEM_DATA 등급 ${set.tier}</div></div><canvas></canvas><ul>${rows}</ul>`;
+ document.querySelector('#grid').append(card);
+ const canvas=card.querySelector('canvas'),renderer=new T.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=T.SRGBColorSpace;
+ const scene=new T.Scene();scene.background=new T.Color('#141e33');const camera=new T.PerspectiveCamera(30,1,.05,100);
+ const floor=new T.Mesh(new T.CircleGeometry(.9,64),new T.MeshBasicMaterial({color:0x1d2a45}));floor.rotation.x=-Math.PI/2;floor.position.y=-.005;scene.add(floor);
+ const group=new T.Group();scene.add(group);views.push({set,canvas,renderer,scene,camera,group,floor,entries:[]});
+}
+let generation=0;
+async function build(view,gen){
+ // Build the new body off-scene, then swap meshes and motion together so the render loop never mixes sexes.
+ const person=data.people[sex],chunks=[...view.set.parts[sex],...person.head],entries=[];
+ for(const chunk of chunks){
+  const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(chunk.corners.flatMap(c=>chunk.points[c[0]]),3));g.setAttribute('uv',new T.Float32BufferAttribute(chunk.corners.flatMap(c=>c.slice(4,6)),2));
+  const mesh=new T.Mesh(g,new T.MeshBasicMaterial({map:await tex(chunk.texture),side:T.DoubleSide,alphaTest:.02}));mesh.frustumCulled=false;entries.push({chunk,mesh});
+ }
+ if(gen!==generation){entries.forEach(e=>{e.mesh.geometry.dispose();e.mesh.material.dispose();});return;}
+ for(const {mesh} of view.entries){view.group.remove(mesh);mesh.geometry.dispose();mesh.material.dispose();}
+ entries.forEach(e=>view.group.add(e.mesh));view.entries=entries;
+ view.clip=person.idle;view.inverse=view.clip.bones.map(b=>new T.Matrix4().fromArray(b.rest).invert());view.last=-1;animate(view,time);
+}
+function animate(view,t){
+ if(!view.clip)return;
+ const clip=view.clip,index=Math.floor(t%clip.duration/clip.duration*clip.frames);if(index===view.last)return;view.last=index;
+ const skin=clip.bones.map((b,i)=>pose(b.poses[index]).multiply(view.inverse[i])),p=new T.Vector3();
+ for(const {chunk,mesh} of view.entries){if(!chunk.bones)continue;const pos=chunk.points.map((v,i)=>p.fromArray(v).applyMatrix4(skin[chunk.bones[i]]).toArray()),a=mesh.geometry.attributes.position;chunk.corners.forEach((c,i)=>a.setXYZ(i,...pos[c[0]]));a.needsUpdate=true;}
+}
+let height=1.8;
+function frame(){
+ for(const v of views){const w=v.canvas.clientWidth,h=v.canvas.clientHeight;if(!w||!h)continue;if(v.size!==w+'x'+h){v.size=w+'x'+h;v.renderer.setSize(w,h,false);v.camera.aspect=w/h;v.camera.updateProjectionMatrix();}
+  const d=height*1.08/(2*Math.tan(T.MathUtils.degToRad(v.camera.fov/2)))/Math.min(1,v.camera.aspect*1.6),c=new T.Vector3(0,height*.5,0);
+  v.camera.position.set(Math.sin(yaw)*d,0,-Math.cos(yaw)*d);v.camera.position.y=c.y+d*.12;v.camera.lookAt(c);}
+}
+async function load(){
+ const gen=++generation;await Promise.all(views.map(v=>build(v,gen)));if(gen!==generation)return;
+ const box=new T.Box3();for(const v of views)box.union(new T.Box3().setFromObject(v.group));height=box.max.y-Math.min(0,box.min.y);
+ document.querySelectorAll('[data-sex]').forEach(b=>b.classList.toggle('active',b.dataset.sex===sex));
+}
+document.querySelectorAll('[data-sex]').forEach(b=>b.onclick=async()=>{sex=b.dataset.sex;await load();});
+document.querySelectorAll('[data-yaw]').forEach(b=>b.onclick=()=>{yaw=Number(b.dataset.yaw);});
+document.querySelector('#spin').onclick=e=>{spin=!spin;e.target.textContent=spin?'자동 회전 끄기':'자동 회전 켜기';e.target.classList.toggle('active',spin);};
+document.querySelector('#bg').onclick=e=>{light=!light;for(const v of views){v.scene.background.set(light?'#8a93a3':'#141e33');v.floor.material.color.set(light?'#9aa3b3':'#1d2a45');}e.target.textContent=light?'어두운 배경':'밝은 배경';};
+let drag=null;for(const v of views){v.canvas.addEventListener('pointerdown',e=>{drag=e.clientX;v.canvas.setPointerCapture(e.pointerId);});v.canvas.addEventListener('pointermove',e=>{if(drag===null)return;yaw-=(e.clientX-drag)*.012;drag=e.clientX;});v.canvas.addEventListener('pointerup',()=>drag=null);}
+await load();
+document.querySelector('#status').textContent=`게임 파일 읽기 완료 · 남자 맨손 대기 ${data.people['0'].idleSource} / 여자 ${data.people['1'].idleSource} · 브라우저 재현 화면이며 게임 조명·그림자는 포함하지 않습니다.`;
+window.armorPreview={views,get state(){return {sex,yaw,spin}}};window.viewerReady=true;
+const clock=new T.Clock();(function tick(){requestAnimationFrame(tick);const dt=clock.getDelta();time+=dt*1000;if(spin)yaw+=dt*.6;frame();for(const v of views){animate(v,time);v.renderer.render(v.scene,v.camera);}})();
+</script></html>

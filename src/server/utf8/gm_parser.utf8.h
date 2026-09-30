@@ -88,7 +88,8 @@ static bool gmParse(const char* input,GMRequest& r){
   else if(gmEqual(t[2],"흑마")||gmEqual(t[2],"black"))r.subtype=2;
   else if(gmEqual(t[2],"백마")||gmEqual(t[2],"white"))r.subtype=3;
   else if(gmEqual(t[2],"지옥마")||gmEqual(t[2],"hell"))r.subtype=4;
-  else if(!gmNumber(t[2],1,4,r.subtype))return false;target=3;break;
+  else if(gmEqual(t[2],"푸른달")||gmEqual(t[2],"푸른달말")||gmEqual(t[2],"bluemoon"))r.subtype=5;
+  else if(!gmNumber(t[2],1,5,r.subtype))return false;target=3;break;
  case GM_ITEM:
   if(n<4||n>5||!gmNumber(t[2],1,65535,r.subtype)||!gmNumber(t[3],1,1000,r.value))return false;target=4;break;
  case GM_CATALOG:

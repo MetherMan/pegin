@@ -1,0 +1,6 @@
+[BEGIN]
+	[LOADANI]	vehicle/horse_1.ani
+	[ACTION]	정지	1	101
+	[ACTION]	이동	151	167
+	[ACTION]	공격	104	148
+[END]
