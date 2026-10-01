@@ -1,0 +1,5 @@
+{
+  "tool": "built-in image_gen",
+  "output": "hp-extra-large-v2-green.png",
+  "prompt": "Edit image 1 (the extra-large red HP potion icon). Image 2 is the original game's 28x28 inventory icon, provided ONLY as reference for the BACKGROUND. Keep image 1's existing bottle design, silhouette, size, position, red colors, brass stopper/collar, highlights, pixel-art shading and square composition unchanged. Replace the transparent/empty area outside the bottle with an opaque green inventory-icon background matching image 2: emerald/forest green, brighter green immediately behind the bottle, shaded dark green toward the outer edges, subtle thin dark square rim like the reference. Simple old Korean MMORPG painted pixel-art inventory tile, no scenery, no floor, no new objects, no writing, no decorative frame, no particles. Preserve the original bottle, only restore the green background. Entire output fully opaque, no transparent pixels."
+}

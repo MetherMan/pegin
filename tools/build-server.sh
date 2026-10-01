@@ -13,7 +13,9 @@ python3 - <<'PY'
 from pathlib import Path
 import re,subprocess
 s=Path('message.cpp').read_text(encoding='cp949')
-names=['PACKET_EnchantItem','GetItemProc','PACKET_BuyItem','PACKET_OpenGarbage','PACKET_MoveInvenItem']
+# Item double-click and quick-slot use carry the per-id potion switch (extra-large potion 19132).
+names=['PACKET_EnchantItem','GetItemProc','PACKET_BuyItem','PACKET_OpenGarbage','PACKET_MoveInvenItem',
+       'PACKET_ItemDBClick','PACKET_UseQuickItem']
 includes='\n'.join(line for line in s.splitlines() if line.startswith('#include '))
 bodies=[]
 for name in names:

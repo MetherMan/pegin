@@ -1,0 +1,1654 @@
+[
+  {
+    "id": 19140,
+    "level": 0,
+    "name": "푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 170,
+    "bonus_col34": 0,
+    "magic_defense": 52,
+    "price": 240299,
+    "black_knight": {
+      "id": 10521,
+      "defense": 118
+    },
+    "red_knight": {
+      "id": 10458,
+      "defense": 98
+    },
+    "step_ratio_at_0_and_20": {
+      "6": [
+        1.1987,
+        1.1791
+      ],
+      "33": [
+        1.0794,
+        1.2229
+      ],
+      "36": [
+        1.0757,
+        1.0137
+      ]
+    }
+  },
+  {
+    "id": 19141,
+    "level": 1,
+    "name": "+1 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 172,
+    "bonus_col34": 2,
+    "magic_defense": 53,
+    "price": 264329,
+    "black_knight": {
+      "id": 10522,
+      "defense": 120
+    },
+    "red_knight": {
+      "id": 10459,
+      "defense": 101
+    }
+  },
+  {
+    "id": 19142,
+    "level": 2,
+    "name": "+2 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 178,
+    "bonus_col34": 7,
+    "magic_defense": 54,
+    "price": 290761,
+    "black_knight": {
+      "id": 10523,
+      "defense": 124
+    },
+    "red_knight": {
+      "id": 10460,
+      "defense": 103
+    }
+  },
+  {
+    "id": 19143,
+    "level": 3,
+    "name": "+3 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 225,
+    "bonus_col34": 47,
+    "magic_defense": 55,
+    "price": 319840,
+    "black_knight": {
+      "id": 10524,
+      "defense": 157
+    },
+    "red_knight": {
+      "id": 10461,
+      "defense": 131
+    }
+  },
+  {
+    "id": 19144,
+    "level": 4,
+    "name": "+4 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 238,
+    "bonus_col34": 60,
+    "magic_defense": 55,
+    "price": 351825,
+    "black_knight": {
+      "id": 10525,
+      "defense": 167
+    },
+    "red_knight": {
+      "id": 10462,
+      "defense": 140
+    }
+  },
+  {
+    "id": 19145,
+    "level": 5,
+    "name": "+5 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 254,
+    "bonus_col34": 75,
+    "magic_defense": 56,
+    "price": 387010,
+    "black_knight": {
+      "id": 10526,
+      "defense": 178
+    },
+    "red_knight": {
+      "id": 10463,
+      "defense": 149
+    }
+  },
+  {
+    "id": 19146,
+    "level": 6,
+    "name": "+6 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 316,
+    "bonus_col34": 131,
+    "magic_defense": 58,
+    "price": 425714,
+    "black_knight": {
+      "id": 10527,
+      "defense": 222
+    },
+    "red_knight": {
+      "id": 10464,
+      "defense": 186
+    }
+  },
+  {
+    "id": 19147,
+    "level": 7,
+    "name": "+7 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 351,
+    "bonus_col34": 165,
+    "magic_defense": 61,
+    "price": 468288,
+    "black_knight": {
+      "id": 10528,
+      "defense": 247
+    },
+    "red_knight": {
+      "id": 10465,
+      "defense": 207
+    }
+  },
+  {
+    "id": 19148,
+    "level": 8,
+    "name": "+8 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 413,
+    "bonus_col34": 224,
+    "magic_defense": 65,
+    "price": 515118,
+    "black_knight": {
+      "id": 10529,
+      "defense": 291
+    },
+    "red_knight": {
+      "id": 10466,
+      "defense": 245
+    }
+  },
+  {
+    "id": 19149,
+    "level": 9,
+    "name": "+9 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 487,
+    "bonus_col34": 296,
+    "magic_defense": 70,
+    "price": 566633,
+    "black_knight": {
+      "id": 10530,
+      "defense": 344
+    },
+    "red_knight": {
+      "id": 10467,
+      "defense": 289
+    }
+  },
+  {
+    "id": 19150,
+    "level": 10,
+    "name": "+10 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 571,
+    "bonus_col34": 379,
+    "magic_defense": 76,
+    "price": 623296,
+    "black_knight": {
+      "id": 10531,
+      "defense": 404
+    },
+    "red_knight": {
+      "id": 10468,
+      "defense": 340
+    }
+  },
+  {
+    "id": 19151,
+    "level": 11,
+    "name": "+11 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 659,
+    "bonus_col34": 468,
+    "magic_defense": 84,
+    "price": 685629,
+    "black_knight": {
+      "id": 10532,
+      "defense": 467
+    },
+    "red_knight": {
+      "id": 10469,
+      "defense": 394
+    }
+  },
+  {
+    "id": 19152,
+    "level": 12,
+    "name": "+12 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 759,
+    "bonus_col34": 572,
+    "magic_defense": 92,
+    "price": 754194,
+    "black_knight": {
+      "id": 10533,
+      "defense": 539
+    },
+    "red_knight": {
+      "id": 10470,
+      "defense": 456
+    }
+  },
+  {
+    "id": 19153,
+    "level": 13,
+    "name": "+13 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 878,
+    "bonus_col34": 696,
+    "magic_defense": 101,
+    "price": 829617,
+    "black_knight": {
+      "id": 10534,
+      "defense": 624
+    },
+    "red_knight": {
+      "id": 10471,
+      "defense": 526
+    }
+  },
+  {
+    "id": 19154,
+    "level": 14,
+    "name": "+14 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 994,
+    "bonus_col34": 821,
+    "magic_defense": 111,
+    "price": 912582,
+    "black_knight": {
+      "id": 10535,
+      "defense": 708
+    },
+    "red_knight": {
+      "id": 10472,
+      "defense": 598
+    }
+  },
+  {
+    "id": 19155,
+    "level": 15,
+    "name": "+15 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 1124,
+    "bonus_col34": 964,
+    "magic_defense": 122,
+    "price": 1003839,
+    "black_knight": {
+      "id": 10536,
+      "defense": 802
+    },
+    "red_knight": {
+      "id": 10473,
+      "defense": 677
+    }
+  },
+  {
+    "id": 19156,
+    "level": 16,
+    "name": "+16 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 1271,
+    "bonus_col34": 1127,
+    "magic_defense": 134,
+    "price": 1104223,
+    "black_knight": {
+      "id": 10537,
+      "defense": 908
+    },
+    "red_knight": {
+      "id": 10474,
+      "defense": 768
+    }
+  },
+  {
+    "id": 19157,
+    "level": 17,
+    "name": "+17 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 1438,
+    "bonus_col34": 1315,
+    "magic_defense": 147,
+    "price": 1214646,
+    "black_knight": {
+      "id": 10538,
+      "defense": 1029
+    },
+    "red_knight": {
+      "id": 10475,
+      "defense": 871
+    }
+  },
+  {
+    "id": 19158,
+    "level": 18,
+    "name": "+18 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 1626,
+    "bonus_col34": 1531,
+    "magic_defense": 160,
+    "price": 1336111,
+    "black_knight": {
+      "id": 10539,
+      "defense": 1166
+    },
+    "red_knight": {
+      "id": 10476,
+      "defense": 986
+    }
+  },
+  {
+    "id": 19159,
+    "level": 19,
+    "name": "+19 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 1837,
+    "bonus_col34": 1775,
+    "magic_defense": 175,
+    "price": 1469721,
+    "black_knight": {
+      "id": 10540,
+      "defense": 1319
+    },
+    "red_knight": {
+      "id": 10477,
+      "defense": 1116
+    }
+  },
+  {
+    "id": 19160,
+    "level": 20,
+    "name": "+20 푸른달의 트와일라잇 아머",
+    "type": 19,
+    "rank": 9,
+    "defense": 2077,
+    "bonus_col34": 2058,
+    "magic_defense": 190,
+    "price": 1616696,
+    "black_knight": {
+      "id": 10541,
+      "defense": 1494
+    },
+    "red_knight": {
+      "id": 10478,
+      "defense": 1264
+    }
+  },
+  {
+    "id": 19170,
+    "level": 0,
+    "name": "푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 114,
+    "bonus_col34": 0,
+    "magic_defense": 32,
+    "price": 192242,
+    "black_knight": {
+      "id": 10710,
+      "defense": 81
+    },
+    "red_knight": {
+      "id": 10647,
+      "defense": 68
+    },
+    "step_ratio_at_0_and_20": {
+      "6": [
+        1.1845,
+        1.1672
+      ],
+      "33": [
+        1.0985,
+        1.1959
+      ],
+      "36": [
+        1.0813,
+        1.0051
+      ]
+    }
+  },
+  {
+    "id": 19171,
+    "level": 1,
+    "name": "+1 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 116,
+    "bonus_col34": 2,
+    "magic_defense": 33,
+    "price": 211466,
+    "black_knight": {
+      "id": 10711,
+      "defense": 83
+    },
+    "red_knight": {
+      "id": 10648,
+      "defense": 70
+    }
+  },
+  {
+    "id": 19172,
+    "level": 2,
+    "name": "+2 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 119,
+    "bonus_col34": 5,
+    "magic_defense": 33,
+    "price": 232616,
+    "black_knight": {
+      "id": 10712,
+      "defense": 85
+    },
+    "red_knight": {
+      "id": 10649,
+      "defense": 72
+    }
+  },
+  {
+    "id": 19173,
+    "level": 3,
+    "name": "+3 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 152,
+    "bonus_col34": 35,
+    "magic_defense": 34,
+    "price": 255881,
+    "black_knight": {
+      "id": 10713,
+      "defense": 109
+    },
+    "red_knight": {
+      "id": 10650,
+      "defense": 93
+    }
+  },
+  {
+    "id": 19174,
+    "level": 4,
+    "name": "+4 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 165,
+    "bonus_col34": 46,
+    "magic_defense": 35,
+    "price": 281473,
+    "black_knight": {
+      "id": 10714,
+      "defense": 118
+    },
+    "red_knight": {
+      "id": 10651,
+      "defense": 99
+    }
+  },
+  {
+    "id": 19175,
+    "level": 5,
+    "name": "+5 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 177,
+    "bonus_col34": 58,
+    "magic_defense": 36,
+    "price": 309620,
+    "black_knight": {
+      "id": 10715,
+      "defense": 127
+    },
+    "red_knight": {
+      "id": 10652,
+      "defense": 107
+    }
+  },
+  {
+    "id": 19176,
+    "level": 6,
+    "name": "+6 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 220,
+    "bonus_col34": 98,
+    "magic_defense": 38,
+    "price": 340584,
+    "black_knight": {
+      "id": 10716,
+      "defense": 158
+    },
+    "red_knight": {
+      "id": 10653,
+      "defense": 134
+    }
+  },
+  {
+    "id": 19177,
+    "level": 7,
+    "name": "+7 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 244,
+    "bonus_col34": 122,
+    "magic_defense": 41,
+    "price": 374645,
+    "black_knight": {
+      "id": 10717,
+      "defense": 176
+    },
+    "red_knight": {
+      "id": 10654,
+      "defense": 150
+    }
+  },
+  {
+    "id": 19178,
+    "level": 8,
+    "name": "+8 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 290,
+    "bonus_col34": 166,
+    "magic_defense": 45,
+    "price": 412111,
+    "black_knight": {
+      "id": 10718,
+      "defense": 209
+    },
+    "red_knight": {
+      "id": 10655,
+      "defense": 178
+    }
+  },
+  {
+    "id": 19179,
+    "level": 9,
+    "name": "+9 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 343,
+    "bonus_col34": 218,
+    "magic_defense": 50,
+    "price": 453322,
+    "black_knight": {
+      "id": 10719,
+      "defense": 248
+    },
+    "red_knight": {
+      "id": 10656,
+      "defense": 211
+    }
+  },
+  {
+    "id": 19180,
+    "level": 10,
+    "name": "+10 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 402,
+    "bonus_col34": 276,
+    "magic_defense": 57,
+    "price": 498654,
+    "black_knight": {
+      "id": 10720,
+      "defense": 291
+    },
+    "red_knight": {
+      "id": 10657,
+      "defense": 249
+    }
+  },
+  {
+    "id": 19181,
+    "level": 11,
+    "name": "+11 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 467,
+    "bonus_col34": 341,
+    "magic_defense": 64,
+    "price": 548523,
+    "black_knight": {
+      "id": 10721,
+      "defense": 338
+    },
+    "red_knight": {
+      "id": 10658,
+      "defense": 289
+    }
+  },
+  {
+    "id": 19182,
+    "level": 12,
+    "name": "+12 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 540,
+    "bonus_col34": 416,
+    "magic_defense": 72,
+    "price": 603377,
+    "black_knight": {
+      "id": 10722,
+      "defense": 392
+    },
+    "red_knight": {
+      "id": 10659,
+      "defense": 334
+    }
+  },
+  {
+    "id": 19183,
+    "level": 13,
+    "name": "+13 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 625,
+    "bonus_col34": 503,
+    "magic_defense": 81,
+    "price": 663717,
+    "black_knight": {
+      "id": 10723,
+      "defense": 454
+    },
+    "red_knight": {
+      "id": 10660,
+      "defense": 387
+    }
+  },
+  {
+    "id": 19184,
+    "level": 14,
+    "name": "+14 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 708,
+    "bonus_col34": 591,
+    "magic_defense": 91,
+    "price": 730091,
+    "black_knight": {
+      "id": 10724,
+      "defense": 515
+    },
+    "red_knight": {
+      "id": 10661,
+      "defense": 439
+    }
+  },
+  {
+    "id": 19185,
+    "level": 15,
+    "name": "+15 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 803,
+    "bonus_col34": 692,
+    "magic_defense": 102,
+    "price": 803102,
+    "black_knight": {
+      "id": 10725,
+      "defense": 585
+    },
+    "red_knight": {
+      "id": 10662,
+      "defense": 499
+    }
+  },
+  {
+    "id": 19186,
+    "level": 16,
+    "name": "+16 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 909,
+    "bonus_col34": 805,
+    "magic_defense": 113,
+    "price": 883412,
+    "black_knight": {
+      "id": 10726,
+      "defense": 663
+    },
+    "red_knight": {
+      "id": 10663,
+      "defense": 566
+    }
+  },
+  {
+    "id": 19187,
+    "level": 17,
+    "name": "+17 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 1028,
+    "bonus_col34": 935,
+    "magic_defense": 126,
+    "price": 971754,
+    "black_knight": {
+      "id": 10727,
+      "defense": 751
+    },
+    "red_knight": {
+      "id": 10664,
+      "defense": 642
+    }
+  },
+  {
+    "id": 19188,
+    "level": 18,
+    "name": "+18 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 1164,
+    "bonus_col34": 1085,
+    "magic_defense": 139,
+    "price": 1068929,
+    "black_knight": {
+      "id": 10728,
+      "defense": 852
+    },
+    "red_knight": {
+      "id": 10665,
+      "defense": 728
+    }
+  },
+  {
+    "id": 19189,
+    "level": 19,
+    "name": "+19 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 1317,
+    "bonus_col34": 1254,
+    "magic_defense": 154,
+    "price": 1175825,
+    "black_knight": {
+      "id": 10729,
+      "defense": 965
+    },
+    "red_knight": {
+      "id": 10666,
+      "defense": 825
+    }
+  },
+  {
+    "id": 19190,
+    "level": 20,
+    "name": "+20 푸른달의 트와일라잇 팬츠",
+    "type": 20,
+    "rank": 9,
+    "defense": 1490,
+    "bonus_col34": 1449,
+    "magic_defense": 169,
+    "price": 1293407,
+    "black_knight": {
+      "id": 10730,
+      "defense": 1094
+    },
+    "red_knight": {
+      "id": 10667,
+      "defense": 934
+    }
+  },
+  {
+    "id": 19200,
+    "level": 0,
+    "name": "푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 63,
+    "bonus_col34": 0,
+    "magic_defense": 19,
+    "price": 144178,
+    "black_knight": {
+      "id": 10899,
+      "defense": 44
+    },
+    "red_knight": {
+      "id": 10836,
+      "defense": 37
+    },
+    "step_ratio_at_0_and_20": {
+      "6": [
+        1.1948,
+        1.1578
+      ],
+      "33": [
+        1.2658,
+        1.123
+      ],
+      "36": [
+        1.0599,
+        0.9987
+      ]
+    }
+  },
+  {
+    "id": 19201,
+    "level": 1,
+    "name": "+1 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 67,
+    "bonus_col34": 5,
+    "magic_defense": 20,
+    "price": 158595,
+    "black_knight": {
+      "id": 10900,
+      "defense": 47
+    },
+    "red_knight": {
+      "id": 10837,
+      "defense": 39
+    }
+  },
+  {
+    "id": 19202,
+    "level": 2,
+    "name": "+2 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 70,
+    "bonus_col34": 8,
+    "magic_defense": 21,
+    "price": 174456,
+    "black_knight": {
+      "id": 10901,
+      "defense": 49
+    },
+    "red_knight": {
+      "id": 10838,
+      "defense": 41
+    }
+  },
+  {
+    "id": 19203,
+    "level": 3,
+    "name": "+3 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 92,
+    "bonus_col34": 33,
+    "magic_defense": 22,
+    "price": 191901,
+    "black_knight": {
+      "id": 10902,
+      "defense": 65
+    },
+    "red_knight": {
+      "id": 10839,
+      "defense": 54
+    }
+  },
+  {
+    "id": 19204,
+    "level": 4,
+    "name": "+4 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 99,
+    "bonus_col34": 40,
+    "magic_defense": 23,
+    "price": 211091,
+    "black_knight": {
+      "id": 10903,
+      "defense": 70
+    },
+    "red_knight": {
+      "id": 10840,
+      "defense": 59
+    }
+  },
+  {
+    "id": 19205,
+    "level": 5,
+    "name": "+5 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 107,
+    "bonus_col34": 48,
+    "magic_defense": 24,
+    "price": 232203,
+    "black_knight": {
+      "id": 10904,
+      "defense": 76
+    },
+    "red_knight": {
+      "id": 10841,
+      "defense": 64
+    }
+  },
+  {
+    "id": 19206,
+    "level": 6,
+    "name": "+6 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 135,
+    "bonus_col34": 78,
+    "magic_defense": 26,
+    "price": 255425,
+    "black_knight": {
+      "id": 10905,
+      "defense": 96
+    },
+    "red_knight": {
+      "id": 10842,
+      "defense": 82
+    }
+  },
+  {
+    "id": 19207,
+    "level": 7,
+    "name": "+7 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 151,
+    "bonus_col34": 95,
+    "magic_defense": 29,
+    "price": 280969,
+    "black_knight": {
+      "id": 10906,
+      "defense": 108
+    },
+    "red_knight": {
+      "id": 10843,
+      "defense": 92
+    }
+  },
+  {
+    "id": 19208,
+    "level": 8,
+    "name": "+8 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 181,
+    "bonus_col34": 126,
+    "magic_defense": 33,
+    "price": 309068,
+    "black_knight": {
+      "id": 10907,
+      "defense": 130
+    },
+    "red_knight": {
+      "id": 10844,
+      "defense": 110
+    }
+  },
+  {
+    "id": 19209,
+    "level": 9,
+    "name": "+9 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 214,
+    "bonus_col34": 159,
+    "magic_defense": 38,
+    "price": 339974,
+    "black_knight": {
+      "id": 10908,
+      "defense": 154
+    },
+    "red_knight": {
+      "id": 10845,
+      "defense": 131
+    }
+  },
+  {
+    "id": 19210,
+    "level": 10,
+    "name": "+10 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 255,
+    "bonus_col34": 200,
+    "magic_defense": 44,
+    "price": 373972,
+    "black_knight": {
+      "id": 10909,
+      "defense": 184
+    },
+    "red_knight": {
+      "id": 10846,
+      "defense": 157
+    }
+  },
+  {
+    "id": 19211,
+    "level": 11,
+    "name": "+11 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 295,
+    "bonus_col34": 240,
+    "magic_defense": 52,
+    "price": 411371,
+    "black_knight": {
+      "id": 10910,
+      "defense": 214
+    },
+    "red_knight": {
+      "id": 10847,
+      "defense": 183
+    }
+  },
+  {
+    "id": 19212,
+    "level": 12,
+    "name": "+12 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 342,
+    "bonus_col34": 286,
+    "magic_defense": 60,
+    "price": 452508,
+    "black_knight": {
+      "id": 10911,
+      "defense": 249
+    },
+    "red_knight": {
+      "id": 10848,
+      "defense": 213
+    }
+  },
+  {
+    "id": 19213,
+    "level": 13,
+    "name": "+13 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 395,
+    "bonus_col34": 336,
+    "magic_defense": 69,
+    "price": 497758,
+    "black_knight": {
+      "id": 10912,
+      "defense": 288
+    },
+    "red_knight": {
+      "id": 10849,
+      "defense": 247
+    }
+  },
+  {
+    "id": 19214,
+    "level": 14,
+    "name": "+14 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 449,
+    "bonus_col34": 387,
+    "magic_defense": 79,
+    "price": 547534,
+    "black_knight": {
+      "id": 10913,
+      "defense": 329
+    },
+    "red_knight": {
+      "id": 10850,
+      "defense": 281
+    }
+  },
+  {
+    "id": 19215,
+    "level": 15,
+    "name": "+15 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 508,
+    "bonus_col34": 442,
+    "magic_defense": 89,
+    "price": 602285,
+    "black_knight": {
+      "id": 10914,
+      "defense": 373
+    },
+    "red_knight": {
+      "id": 10851,
+      "defense": 321
+    }
+  },
+  {
+    "id": 19216,
+    "level": 16,
+    "name": "+16 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 576,
+    "bonus_col34": 504,
+    "magic_defense": 101,
+    "price": 662512,
+    "black_knight": {
+      "id": 10915,
+      "defense": 424
+    },
+    "red_knight": {
+      "id": 10852,
+      "defense": 365
+    }
+  },
+  {
+    "id": 19217,
+    "level": 17,
+    "name": "+17 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 652,
+    "bonus_col34": 574,
+    "magic_defense": 114,
+    "price": 728763,
+    "black_knight": {
+      "id": 10916,
+      "defense": 482
+    },
+    "red_knight": {
+      "id": 10853,
+      "defense": 414
+    }
+  },
+  {
+    "id": 19218,
+    "level": 18,
+    "name": "+18 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 739,
+    "bonus_col34": 652,
+    "magic_defense": 127,
+    "price": 801637,
+    "black_knight": {
+      "id": 10917,
+      "defense": 548
+    },
+    "red_knight": {
+      "id": 10854,
+      "defense": 470
+    }
+  },
+  {
+    "id": 19219,
+    "level": 19,
+    "name": "+19 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 836,
+    "bonus_col34": 738,
+    "magic_defense": 141,
+    "price": 881798,
+    "black_knight": {
+      "id": 10918,
+      "defense": 622
+    },
+    "red_knight": {
+      "id": 10855,
+      "defense": 534
+    }
+  },
+  {
+    "id": 19220,
+    "level": 20,
+    "name": "+20 푸른달의 트와일라잇 건틀렛",
+    "type": 31,
+    "rank": 9,
+    "defense": 946,
+    "bonus_col34": 835,
+    "magic_defense": 157,
+    "price": 969973,
+    "black_knight": {
+      "id": 10919,
+      "defense": 706
+    },
+    "red_knight": {
+      "id": 10856,
+      "defense": 605
+    }
+  },
+  {
+    "id": 19230,
+    "level": 0,
+    "name": "푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 94,
+    "bonus_col34": 0,
+    "magic_defense": 32,
+    "price": 168204,
+    "black_knight": {
+      "id": 11088,
+      "defense": 63
+    },
+    "red_knight": {
+      "id": 11025,
+      "defense": 51
+    },
+    "step_ratio_at_0_and_20": {
+      "6": [
+        1.2235,
+        1.1765
+      ],
+      "33": [
+        1.1476,
+        1.1937
+      ],
+      "36": [
+        1.1366,
+        1.0051
+      ]
+    }
+  },
+  {
+    "id": 19231,
+    "level": 1,
+    "name": "+1 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 97,
+    "bonus_col34": 3,
+    "magic_defense": 33,
+    "price": 185024,
+    "black_knight": {
+      "id": 11089,
+      "defense": 65
+    },
+    "red_knight": {
+      "id": 11026,
+      "defense": 53
+    }
+  },
+  {
+    "id": 19232,
+    "level": 2,
+    "name": "+2 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 101,
+    "bonus_col34": 7,
+    "magic_defense": 34,
+    "price": 203527,
+    "black_knight": {
+      "id": 11090,
+      "defense": 68
+    },
+    "red_knight": {
+      "id": 11027,
+      "defense": 55
+    }
+  },
+  {
+    "id": 19233,
+    "level": 3,
+    "name": "+3 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 129,
+    "bonus_col34": 32,
+    "magic_defense": 35,
+    "price": 223879,
+    "black_knight": {
+      "id": 11091,
+      "defense": 87
+    },
+    "red_knight": {
+      "id": 11028,
+      "defense": 72
+    }
+  },
+  {
+    "id": 19234,
+    "level": 4,
+    "name": "+4 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 139,
+    "bonus_col34": 41,
+    "magic_defense": 36,
+    "price": 246269,
+    "black_knight": {
+      "id": 11092,
+      "defense": 94
+    },
+    "red_knight": {
+      "id": 11029,
+      "defense": 77
+    }
+  },
+  {
+    "id": 19235,
+    "level": 5,
+    "name": "+5 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 150,
+    "bonus_col34": 52,
+    "magic_defense": 37,
+    "price": 270896,
+    "black_knight": {
+      "id": 11093,
+      "defense": 102
+    },
+    "red_knight": {
+      "id": 11030,
+      "defense": 84
+    }
+  },
+  {
+    "id": 19236,
+    "level": 6,
+    "name": "+6 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 186,
+    "bonus_col34": 86,
+    "magic_defense": 39,
+    "price": 297989,
+    "black_knight": {
+      "id": 11094,
+      "defense": 127
+    },
+    "red_knight": {
+      "id": 11031,
+      "defense": 106
+    }
+  },
+  {
+    "id": 19237,
+    "level": 7,
+    "name": "+7 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 207,
+    "bonus_col34": 107,
+    "magic_defense": 42,
+    "price": 327790,
+    "black_knight": {
+      "id": 11095,
+      "defense": 142
+    },
+    "red_knight": {
+      "id": 11032,
+      "defense": 119
+    }
+  },
+  {
+    "id": 19238,
+    "level": 8,
+    "name": "+8 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 245,
+    "bonus_col34": 144,
+    "magic_defense": 46,
+    "price": 360570,
+    "black_knight": {
+      "id": 11096,
+      "defense": 169
+    },
+    "red_knight": {
+      "id": 11033,
+      "defense": 141
+    }
+  },
+  {
+    "id": 19239,
+    "level": 9,
+    "name": "+9 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 291,
+    "bonus_col34": 188,
+    "magic_defense": 51,
+    "price": 396630,
+    "black_knight": {
+      "id": 11097,
+      "defense": 201
+    },
+    "red_knight": {
+      "id": 11034,
+      "defense": 168
+    }
+  },
+  {
+    "id": 19240,
+    "level": 10,
+    "name": "+10 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 343,
+    "bonus_col34": 240,
+    "magic_defense": 57,
+    "price": 436294,
+    "black_knight": {
+      "id": 11098,
+      "defense": 238
+    },
+    "red_knight": {
+      "id": 11035,
+      "defense": 200
+    }
+  },
+  {
+    "id": 19241,
+    "level": 11,
+    "name": "+11 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 394,
+    "bonus_col34": 292,
+    "magic_defense": 65,
+    "price": 479923,
+    "black_knight": {
+      "id": 11099,
+      "defense": 275
+    },
+    "red_knight": {
+      "id": 11036,
+      "defense": 231
+    }
+  },
+  {
+    "id": 19242,
+    "level": 12,
+    "name": "+12 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 459,
+    "bonus_col34": 356,
+    "magic_defense": 73,
+    "price": 527916,
+    "black_knight": {
+      "id": 11100,
+      "defense": 321
+    },
+    "red_knight": {
+      "id": 11037,
+      "defense": 269
+    }
+  },
+  {
+    "id": 19243,
+    "level": 13,
+    "name": "+13 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 528,
+    "bonus_col34": 427,
+    "magic_defense": 82,
+    "price": 580710,
+    "black_knight": {
+      "id": 11101,
+      "defense": 371
+    },
+    "red_knight": {
+      "id": 11038,
+      "defense": 312
+    }
+  },
+  {
+    "id": 19244,
+    "level": 14,
+    "name": "+14 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 598,
+    "bonus_col34": 500,
+    "magic_defense": 92,
+    "price": 638781,
+    "black_knight": {
+      "id": 11102,
+      "defense": 422
+    },
+    "red_knight": {
+      "id": 11039,
+      "defense": 355
+    }
+  },
+  {
+    "id": 19245,
+    "level": 15,
+    "name": "+15 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 676,
+    "bonus_col34": 581,
+    "magic_defense": 102,
+    "price": 702662,
+    "black_knight": {
+      "id": 11103,
+      "defense": 479
+    },
+    "red_knight": {
+      "id": 11040,
+      "defense": 403
+    }
+  },
+  {
+    "id": 19246,
+    "level": 16,
+    "name": "+16 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 765,
+    "bonus_col34": 675,
+    "magic_defense": 114,
+    "price": 772928,
+    "black_knight": {
+      "id": 11104,
+      "defense": 544
+    },
+    "red_knight": {
+      "id": 11041,
+      "defense": 458
+    }
+  },
+  {
+    "id": 19247,
+    "level": 17,
+    "name": "+17 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 863,
+    "bonus_col34": 779,
+    "magic_defense": 126,
+    "price": 850221,
+    "black_knight": {
+      "id": 11105,
+      "defense": 616
+    },
+    "red_knight": {
+      "id": 11042,
+      "defense": 520
+    }
+  },
+  {
+    "id": 19248,
+    "level": 18,
+    "name": "+18 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 977,
+    "bonus_col34": 901,
+    "magic_defense": 139,
+    "price": 935245,
+    "black_knight": {
+      "id": 11106,
+      "defense": 700
+    },
+    "red_knight": {
+      "id": 11043,
+      "defense": 590
+    }
+  },
+  {
+    "id": 19249,
+    "level": 19,
+    "name": "+19 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 1103,
+    "bonus_col34": 1038,
+    "magic_defense": 152,
+    "price": 1028768,
+    "black_knight": {
+      "id": 11107,
+      "defense": 794
+    },
+    "red_knight": {
+      "id": 11044,
+      "defense": 669
+    }
+  },
+  {
+    "id": 19250,
+    "level": 20,
+    "name": "+20 푸른달의 트와일라잇 부츠",
+    "type": 34,
+    "rank": 9,
+    "defense": 1244,
+    "bonus_col34": 1191,
+    "magic_defense": 167,
+    "price": 1131646,
+    "black_knight": {
+      "id": 11108,
+      "defense": 899
+    },
+    "red_knight": {
+      "id": 11045,
+      "defense": 758
+    }
+  }
+]

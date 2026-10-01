@@ -975,7 +975,7 @@ void CW3DItemInfoMgr::DrawTipInfo(
 			dwColor = 0xffFF0000;
 			break;
 		}
-		const bool bTwilightItem = pItemInfoDat->wItemNum >= 19030 && pItemInfoDat->wItemNum <= 19110;
+		const bool bTwilightItem = ( pItemInfoDat->wItemNum >= 19030 && pItemInfoDat->wItemNum <= 19110 ) || ( pItemInfoDat->wItemNum >= 19140 && pItemInfoDat->wItemNum <= 19250 );
 		if( bTwilightItem ) dwColor = 0xff348BFF;
 		if( ISWEAPONITEM( pItemInfoDat->btItemType ) || ISDEFENSEITEM( pItemInfoDat->btItemType ) )
 		{

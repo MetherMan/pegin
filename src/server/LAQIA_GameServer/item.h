@@ -50,6 +50,7 @@ void ConsumeOneEnchantCard(sPDESC_DATA player, sPITEM_DATA card);
 #define dHP_POSION_S				10095			// HP 포션(소)
 #define dHP_POSION_M				10096			// HP 포션(중)
 #define dHP_POSION_L				10097			// HP 포션(대)
+#define dHP_POSION_XL			19132			// HP 포션(초대형), 회복량은 ITEM_DATA 7열
 
 #define dMP_POSION_S				10098			// MP 포션(소)
 #define dMP_POSION_M				10099			// MP 포션(중)

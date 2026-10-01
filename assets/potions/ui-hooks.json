@@ -1,0 +1,123 @@
+{
+  "original_sha256": "c9d5cdb8cece889cbbdebcb00d4b746c690287d4fd95d35eec75c6b4363a3db8",
+  "original_size": 512000,
+  "sha256": "73f571aa4e9c5df73e0356e77b3b05530c1cba453bd744f8e27976ff546d3764",
+  "section_rva": 524288,
+  "undo": [
+    [
+      144319,
+      "81fb722700007509"
+    ],
+    [
+      144687,
+      "81ff722700007509"
+    ],
+    [
+      145269,
+      "81fb722700007509"
+    ],
+    [
+      145621,
+      "81fb722700007509"
+    ],
+    [
+      257772,
+      "3d722700000f8589000000"
+    ],
+    [
+      952,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0c00"
+    ],
+    [
+      304,
+      "00000800"
+    ],
+    [
+      252,
+      "00180600"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "UI count normalisation 1: also accept 19132",
+      "va": 268579775,
+      "original": "81fb722700007509",
+      "replacement": "e93ccc0500909090",
+      "target": 268959744,
+      "resume": 268579783,
+      "assembly": "cmp ebx,0x2772; je 0x100233c7; cmp ebx,19132; je 0x100233c7; jmp 0x100233d0",
+      "code": "81fb722700000f84bb33faff81fbbc4a00000f84af33faffe9b333faffe9a533faff"
+    },
+    {
+      "label": "UI count normalisation 2: also accept 19132",
+      "va": 268580143,
+      "original": "81ff722700007509",
+      "replacement": "e9fcca0500909090",
+      "target": 268959792,
+      "resume": 268580151,
+      "assembly": "cmp edi,0x2772; je 0x10023537; cmp edi,19132; je 0x10023537; jmp 0x10023540",
+      "code": "81ff722700000f84fb34faff81ffbc4a00000f84ef34faffe9f334faffe9e534faff"
+    },
+    {
+      "label": "UI count normalisation 3: also accept 19132",
+      "va": 268580725,
+      "original": "81fb722700007509",
+      "replacement": "e9e6c80500909090",
+      "target": 268959840,
+      "resume": 268580733,
+      "assembly": "cmp ebx,0x2772; je 0x1002377d; cmp ebx,19132; je 0x1002377d; jmp 0x10023786",
+      "code": "81fb722700000f841137faff81fbbc4a00000f840537faffe90937faffe9fb36faff"
+    },
+    {
+      "label": "UI count normalisation 4: also accept 19132",
+      "va": 268581077,
+      "original": "81fb722700007509",
+      "replacement": "e9b6c70500909090",
+      "target": 268959888,
+      "resume": 268581085,
+      "assembly": "cmp ebx,0x2772; je 0x100238dd; cmp ebx,19132; je 0x100238dd; jmp 0x100238e6",
+      "code": "81fb722700000f844138faff81fbbc4a00000f843538faffe93938faffe92b38faff"
+    },
+    {
+      "label": "shop quantity box (W3DUIShop): also accept 19132",
+      "va": 268693228,
+      "original": "3d722700000f8589000000",
+      "replacement": "e9cf110400909090909090",
+      "target": 268959936,
+      "resume": 268693239,
+      "assembly": "cmp eax,0x2772; je 0x1003eef7; cmp eax,19132; je 0x1003eef7; jmp 0x1003ef80",
+      "code": "3d722700000f842ceefbff3dbc4a00000f8421eefbffe9a5eefbffe917eefbff"
+    }
+  ],
+  "validation": {
+    "cases": 338,
+    "relocated_bases": [
+      268435456,
+      318767104
+    ],
+    "potion_ids": [
+      10095,
+      10096,
+      10097,
+      10098,
+      10099,
+      10100,
+      19132
+    ],
+    "sites": [
+      "UI count normalisation 1",
+      "UI count normalisation 2",
+      "UI count normalisation 3",
+      "UI count normalisation 4",
+      "shop quantity box (W3DUIShop)"
+    ]
+  }
+}

@@ -2468,6 +2468,7 @@ BOOL PACKET_ItemDBClick( sPDESC_DATA pPlayer )
 					case dMP_POSION_S: // MP 포션
 						UseMPPotion( pPlayer, pItem->itemNum );
 						break;
+					case dHP_POSION_XL: // HP 포션(초대형)
 					case dHP_POSION_L: // HP 포션
 					case dHP_POSION_M: // HP 포션
 					case dHP_POSION_S: // HP 포션
@@ -2634,6 +2635,7 @@ BOOL PACKET_UseQuickItem( sPDESC_DATA pPlayer )
 		case dMP_POSION_S: // MP 포션
 			UseMPPotion( pPlayer, itemNum );
 			break;
+		case dHP_POSION_XL: // HP 포션(초대형)
 		case dHP_POSION_L: // HP 포션
 		case dHP_POSION_M: // HP 포션
 		case dHP_POSION_S: // HP 포션

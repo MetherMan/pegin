@@ -16,7 +16,7 @@ ul{list-style:none;margin:0;padding:6px 14px 12px;font-size:12px;color:#a8b8cf;d
 <main>
 <small>BLUE MOON ARMOR / NATIVE SETS</small><h1>푸른달 갑옷 · 바탕 후보 비교</h1>
 <p class="lead">템플나이트보다 1~8단계 낮은 전사 갑옷(티탄 → 강철)을 아머·팬츠·건틀렛·부츠 4부위 모두 착용한 모습입니다. 게임 원본 MOD·텍스처와 맨손 대기 모션을 그대로 읽었고, 첫 칸은 비교 기준인 템플나이트입니다. 아무 화면이나 드래그하면 모든 캐릭터가 같이 돌아갑니다.</p>
-<p class="links"><a href="index.html">바탕 후보 9세트</a> · <a href="index.html?data=golden-bluemoon">황금 세트 푸른달 색 시안</a></p>
+<p class="links"><a href="index.html">바탕 후보 9세트</a> · <a href="index.html?data=golden-bluemoon">황금 세트 푸른달 색 시안</a> · <a href="index.html?data=elf-bluemoon">엘프 세트 푸른달 색 시안</a></p>
 <nav><b>성별</b><button data-sex="0" class="active">남자</button><button data-sex="1">여자</button>
 <b>방향</b><button data-yaw="0.55">사선</button><button data-yaw="0">정면</button><button data-yaw="1.5708">옆면</button><button data-yaw="3.1416">뒷면</button><button id="spin">자동 회전 켜기</button>
 <b>배경</b><button id="bg">밝은 배경</button></nav>
@@ -26,7 +26,7 @@ ul{list-style:none;margin:0;padding:6px 14px 12px;font-size:12px;color:#a8b8cf;d
 <script type="importmap">{"imports":{"three":"../twilight/vendor/three.module.js"}}</script>
 <script type="module">
 import * as T from 'three';
-const source=new URLSearchParams(location.search).get('data')==='golden-bluemoon'?'golden-bluemoon':'armor-sets';
+const requested=new URLSearchParams(location.search).get('data'),source=['golden-bluemoon','elf-bluemoon','donor-sets'].includes(requested)?requested:'armor-sets';
 const data=await (await fetch(source+'.json')).json(),loader=new T.TextureLoader(),textures={};
 async function tex(name){if(!textures[name]){const t=await loader.loadAsync(data.textures[name]);t.flipY=false;t.colorSpace=T.SRGBColorSpace;textures[name]=t;}return textures[name];}
 const PART=['아머','팬츠','건틀렛','부츠'],NAME={temple:'템플나이트',titan:'티탄',dwarf:'드워프',elf:'엘프',orichalcum:'오리하르콘',mithril:'미스릴',golden:'황금',alloy:'합금',steel:'강철'};
@@ -34,7 +34,7 @@ function pose(p){return new T.Matrix4().compose(new T.Vector3(...p.slice(0,3)),n
 let sex='0',yaw=.55,spin=false,light=false,time=0;const views=[];
 if(data.page){document.title=data.page.title;document.querySelector('h1').textContent=data.page.title;document.querySelector('.lead').textContent=data.page.lead;}
 for(const set of data.sets){
- const card=document.createElement('article');if(!set.step&&!set.title||set.key==='golden-original')card.className='ref';
+ const card=document.createElement('article');if(!set.step&&!set.title||String(set.key).endsWith('-original'))card.className='ref';
  const rows=set.items.map((it,i)=>`<li>${it.name}</li><li>방어 ${it.defense}</li>`).join('');
  const heading=set.title?`<div class="step">${set.note}</div><h2>${set.title}</h2>`:`<div class="step">${set.step?`템플나이트보다 ${set.step}단계 아래`:'기준 · 템플나이트'}</div><h2>${NAME[set.key]} 세트</h2>`;
  card.innerHTML=`<div class="head">${heading}<div class="def">4부위 방어 합계 ${set.defense} (+0 기준) · ITEM_DATA 등급 ${set.tier}</div></div><canvas></canvas><ul>${rows}</ul>`;

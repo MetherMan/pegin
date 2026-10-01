@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-09-23-final-visuals-growth-card",
+  "version": "2026-09-30-blue-moon-horse-speed120",
   "files": [
     {
       "kind": "client",
@@ -14,8 +14,8 @@
       "kind": "client",
       "path": "DeicideOnline.exe",
       "source": "client-overlay/DeicideOnline.exe",
-      "bytes": 528384,
-      "sha256": "b39b3f74ff4b0673c0f23867e2cc20dbeae9ab1a11433982f96511bf368064a3"
+      "bytes": 532480,
+      "sha256": "112ac56c521a88b2dc3df3635d8de9b98cec9f98d11550ea453f3f401cead93d"
     },
     {
       "kind": "client",
@@ -3759,8 +3759,8 @@
       "kind": "client",
       "path": "Interface/item.dat",
       "source": "client-overlay/Interface/item.dat",
-      "bytes": 394841,
-      "sha256": "0597bc9abbb6651a7a6edee44173c53d601edcad386c7ae46c68f77064733b27"
+      "bytes": 374624,
+      "sha256": "34957b71ba5dfbee56836f2bda0fdee8e368c343c866c0799afcf8b883e096c8"
     },
     {
       "kind": "client",
@@ -3787,8 +3787,15 @@
       "kind": "client",
       "path": "Item/ITEM.dat",
       "source": "client-overlay/Item/ITEM.dat",
-      "bytes": 4198670,
-      "sha256": "f06d05bd9eab7f3265b874f46927a2ec3b3da1c77612f0aa517ad010ff7e5e73"
+      "bytes": 4199007,
+      "sha256": "2b53dd394b159bff2df09fa186141733dd2fefc2f977dd3e99cd754b440fd824"
+    },
+    {
+      "kind": "client",
+      "path": "Item/mt_bluemoonhorse_icon.wtm",
+      "source": "client-overlay/Item/mt_bluemoonhorse_icon.wtm",
+      "bytes": 1415,
+      "sha256": "af7854a49a171344753978a70d0fa2d676fec791977993c79858099d5bbd656f"
     },
     {
       "kind": "client",
@@ -4167,6 +4174,13 @@
       "source": "client-overlay/Texture/Body/bn_blood.wtm",
       "bytes": 2304894,
       "sha256": "6a185927b050e62ae251921021e3dc1bb650ec6457f48e07941c75ba4687d0c2"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/mt_bluemoonhorse_icon.wtm",
+      "source": "client-overlay/Texture/Body/mt_bluemoonhorse_icon.wtm",
+      "bytes": 1415,
+      "sha256": "af7854a49a171344753978a70d0fa2d676fec791977993c79858099d5bbd656f"
     },
     {
       "kind": "client",
@@ -4751,6 +4765,13 @@
     },
     {
       "kind": "client",
+      "path": "Texture/Vehicle/mt_bluemoonhorse.wtm",
+      "source": "client-overlay/Texture/Vehicle/mt_bluemoonhorse.wtm",
+      "bytes": 1298578,
+      "sha256": "e80fbc76486026ff08c21d64e0c2f51fe4cd1c5220b17b5c9866f2f16a3f20ed"
+    },
+    {
+      "kind": "client",
       "path": "Texture/Vehicle/mt_hellhorse.wtm",
       "source": "client-overlay/Texture/Vehicle/mt_hellhorse.wtm",
       "bytes": 2014036,
@@ -5110,8 +5131,22 @@
       "kind": "client",
       "path": "UInterface.dll",
       "source": "client-overlay/UInterface.dll",
-      "bytes": 507904,
-      "sha256": "42b35656203734794acc3b067ca7a0d0e7391001968715f16c28f8e2e0dd4352"
+      "bytes": 512000,
+      "sha256": "c9d5cdb8cece889cbbdebcb00d4b746c690287d4fd95d35eec75c6b4363a3db8"
+    },
+    {
+      "kind": "client",
+      "path": "Vehicle/mt_bluemoonhorse.act",
+      "source": "client-overlay/Vehicle/mt_bluemoonhorse.act",
+      "bytes": 116,
+      "sha256": "10d52ac141897baf40e72e49b6fd3a9d947b81430dcf76793bce001e7e6edd5e"
+    },
+    {
+      "kind": "client",
+      "path": "Vehicle/mt_bluemoonhorse.mod",
+      "source": "client-overlay/Vehicle/mt_bluemoonhorse.mod",
+      "bytes": 620637,
+      "sha256": "025aa445e282495f64a886b86391f16b66d718895d5761d118bd79fc37cfc5f6"
     },
     {
       "kind": "client",
@@ -5229,8 +5264,8 @@
       "kind": "server",
       "path": "DATA/ITEM_DATA.txt",
       "source": "game-data/DATA/ITEM_DATA.txt",
-      "bytes": 4213195,
-      "sha256": "a828b6ed7a2066bebf22a0beece9bf2f2dbca9f2cfade493ac5521b128bea336"
+      "bytes": 4213532,
+      "sha256": "5f2869169fe803b762f6ab6d1aad693571e431ae2ccb772ec2f0e1c69b0becef"
     },
     {
       "kind": "server",
@@ -5376,8 +5411,8 @@
       "kind": "server",
       "path": "LAQIA_GameServer",
       "source": "server-bin/LAQIA_GameServer",
-      "bytes": 1812236,
-      "sha256": "cc0db003c2a10e0947a144375bc1cc6216bf39876307c829733127b8e49246e4"
+      "bytes": 1812364,
+      "sha256": "089c576d8e1ebe475f6fd7844ba44ece09591369ca9c0a3f0527ee5597501363"
     },
     {
       "kind": "updater",

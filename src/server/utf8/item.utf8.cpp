@@ -2447,6 +2447,7 @@ void UseHPPotion( sPDESC_DATA pPlayer, int itemNum )
 			SendSoundEffect( pPlayer, SOUND_EFFECT_HPPOTION_M );
 			break;
 		case dHP_POSION_L:
+		case dHP_POSION_XL:
 			SendSoundEffect( pPlayer, SOUND_EFFECT_HPPOTION_L );
 			break;
 		}

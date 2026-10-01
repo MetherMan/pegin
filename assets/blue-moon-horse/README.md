@@ -34,6 +34,8 @@
 - 서버 소스: `item.h`(dRIDE_ITEM5 19131 / dRIDE_TYPE5 5), `item.cpp`(아이템 사용·접속 시 탑승 복원), `player.cpp` GetRideSpeed 120, `gm_parser`·`gm_commands`(`푸른달`/`5` 지급), `gm_catalog_data`(창고). UTF-8 빌드 입력과 CP949 원본을 같이 수정했다(`tools/add_blue_moon_horse_server.py`).
 - 수정 전 소스를 개발 VM에서 빌드한 결과가 현재 `server-bin/LAQIA_GameServer`와 빌드 ID 20바이트 외 동일함을 확인했다(소스가 기준).
 
-남은 작업: 수정된 소스의 서버 빌드와 개발 서버 설치, `tools/verify_blue_moon_horse_live.py` 실서버 검사(임시 캐릭터로 다섯 말 70/75/80/100/120 탑승·하차, 재접속 유지, GM 지급, 창고 목록, 저장 테이블 5개 불변). 이 단계는 배포 권한 확인이 필요해 아직 실행하지 않았으므로 현재 `server-bin`은 이전 서버 그대로다. 실제 게임 화면 검수, 아버지 설치본 적용, 커밋·푸시도 하지 않았다.
+서버: 수정된 소스를 개발 VM에서 빌드해 개발 서버와 `server-bin`에 설치했다(sha256 089c576d…). 실제 GetRideSpeed 기계어를 36가지 종류·탑승·도보 보너스 조건으로 실행해 종류 5 = 120, 기존 70/75/80/100과 도보 40(+15) 불변을 확인했다(`speed120-validation.json`). `tools/verify_blue_moon_horse_live.py` 실서버 검사 통과: 임시 캐릭터로 다섯 소유증서 실제 사용 패킷 탑승·하차 70/75/80/100/120, 재접속 후 푸른달 말 120 유지, `/재뽕 말 푸른달`·`/재뽕 말 5` 지급과 `/재뽕 말 지옥마` 유지, 재뽕 창고 목록 표시, 기존 저장 테이블 5개 불변(`live-validation.json`). 재생성·검사: `tools/build_and_verify_blue_moon_horse.py`.
+
+배포 버전 `2026-09-30-blue-moon-horse-speed120`: manifest에 새 말 파일 5개가 추가되고 클라이언트 실행 파일·UInterface·아이템 카탈로그 2종·서버 ITEM_DATA·GameServer 6개가 바뀐다. 자동업데이트 테스트 13개 통과. 아버지는 기존 `자동업데이트.cmd` 실행 후 outputs의 혼자 게임 시작을 사용한다. 실제 게임 화면에서 탑승한 모습과 아버지 PC 적용은 직접 검수하지 않았다.
 
 기존 말과 같은 한계: 탑승 중 소유증서 버리기·판매·휴지통 금지 검사(`message.cpp` 구형 처리)는 원래 갈색·흑·백마 세 종류만 확인하며 지옥마와 푸른달 말은 포함되지 않는다.

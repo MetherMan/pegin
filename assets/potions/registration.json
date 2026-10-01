@@ -1,0 +1,67 @@
+{
+  "item": 19132,
+  "name": "초대형 물약",
+  "heal": 600,
+  "markup": 1.2,
+  "prices_repair_sell_buy": {
+    "ITEM_DATA (server charge)": {
+      "10097": [
+        35,
+        300,
+        600
+      ],
+      "19132": [
+        42,
+        360,
+        720
+      ]
+    },
+    "Item/ITEM.dat (shop display)": {
+      "10097": [
+        24,
+        120,
+        250
+      ],
+      "19132": [
+        29,
+        144,
+        300
+      ]
+    },
+    "Interface/item.dat": {
+      "10097": [
+        8,
+        70,
+        300
+      ],
+      "19132": [
+        10,
+        84,
+        360
+      ]
+    }
+  },
+  "purchase_rule": "existing potion rule kept: quantity box up to 9999, server charges price*MIN(cnt,1)",
+  "copied_from": 10097,
+  "icon": "hppotion_xl.bmp",
+  "shops": [
+    9,
+    12,
+    15,
+    18,
+    21,
+    24,
+    30,
+    34,
+    36
+  ],
+  "stack_limit": "type 44 = 9999 (stack_limits.h)",
+  "files": {
+    "client-overlay/Item/hppotion_xl.wtm": "d21ef365bb1c1e9679b9f6680b7afbca83d85b8b735eceeb084617c2a12f64cb",
+    "client-overlay/Texture/Body/hppotion_xl.wtm": "d21ef365bb1c1e9679b9f6680b7afbca83d85b8b735eceeb084617c2a12f64cb",
+    "client-overlay/Item/ITEM.dat": "1c87fef16b3a8e29df5d120e79f0132bac5d22a2fc7814e89358293c892ccf79",
+    "client-overlay/Interface/item.dat": "d42a875c38426af6af8a34764ba28f5a502a15a50fa6b91f7a0ac5ec710eee88",
+    "game-data/DATA/ITEM_DATA.txt": "1b696b74f90cb079771dd840aee1dde8db698e2093de0650f53e09d54d81ba70",
+    "game-data/DATA/SHOP_INFO.txt": "2f77942c44e07bebafa519ff769c8ff696bb374f78d076586089095bc375ac08"
+  }
+}

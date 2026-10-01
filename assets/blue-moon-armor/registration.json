@@ -1,0 +1,185 @@
+{
+  "rank": 9,
+  "formula": "BK*(BK/RK)^2 per level and column",
+  "group": {
+    "index": 7,
+    "name": "푸른달 트와일라잇",
+    "entries": [
+      [
+        19030,
+        "푸른달의 트와일라잇 양손검",
+        2
+      ],
+      [
+        19060,
+        "푸른달의 트와일라잇 롱보우",
+        7
+      ],
+      [
+        19090,
+        "푸른달의 트와일라잇 스태프",
+        9
+      ],
+      [
+        19140,
+        "푸른달의 트와일라잇 아머",
+        10
+      ],
+      [
+        19170,
+        "푸른달의 트와일라잇 팬츠",
+        11
+      ],
+      [
+        19200,
+        "푸른달의 트와일라잇 건틀렛",
+        12
+      ],
+      [
+        19230,
+        "푸른달의 트와일라잇 부츠",
+        13
+      ]
+    ]
+  },
+  "models": {
+    "ma_tor": {
+      "elf_triangles": 620,
+      "pauldron_triangles": 576,
+      "race_variants": [
+        "0"
+      ],
+      "textures": [
+        "ma_tor_b050.bmp",
+        "ma_tor_b050a.bmp",
+        "ma_tor_b050b.bmp",
+        "ma_tor_b050c.bmp"
+      ]
+    },
+    "ma_leg": {
+      "elf_triangles": 254,
+      "pauldron_triangles": 0,
+      "race_variants": [
+        "0"
+      ],
+      "textures": [
+        "ma_leg_b050.bmp"
+      ]
+    },
+    "ma_gun": {
+      "elf_triangles": 140,
+      "pauldron_triangles": 0,
+      "race_variants": [
+        "0"
+      ],
+      "textures": [
+        "ma_gun_b050.bmp"
+      ]
+    },
+    "ma_boo": {
+      "elf_triangles": 236,
+      "pauldron_triangles": 0,
+      "race_variants": [
+        "0"
+      ],
+      "textures": [
+        "ma_boo_b050.bmp"
+      ]
+    },
+    "fe_tor": {
+      "elf_triangles": 710,
+      "pauldron_triangles": 296,
+      "race_variants": [
+        "0",
+        "1",
+        "2"
+      ],
+      "textures": [
+        "fe_tor_b050.bmp",
+        "fe_tor_b050a.bmp"
+      ]
+    },
+    "fe_leg": {
+      "elf_triangles": 398,
+      "pauldron_triangles": 0,
+      "race_variants": [
+        "0",
+        "1",
+        "2"
+      ],
+      "textures": [
+        "fe_leg_b050.bmp"
+      ]
+    },
+    "fe_gun": {
+      "elf_triangles": 190,
+      "pauldron_triangles": 0,
+      "race_variants": [
+        "0"
+      ],
+      "textures": [
+        "fe_gun_b050.bmp"
+      ]
+    },
+    "fe_boo": {
+      "elf_triangles": 128,
+      "pauldron_triangles": 0,
+      "race_variants": [
+        "0"
+      ],
+      "textures": [
+        "fe_boo_b050.bmp"
+      ]
+    }
+  },
+  "files": {
+    "client-overlay/Body/High/fe_boo_b050_1.mod": "d508d48650edb14f6fc142c652f99fd1be34bd6be0db13a8d9d12057f7523d4f",
+    "client-overlay/Body/High/fe_gun_b050_1.mod": "a4cc61253b2002fa6f141cebbbe7bedc3033f80203aeb0360f4ed578ae719f09",
+    "client-overlay/Body/High/fe_leg_b050_1.mod": "81e9a8af61bb2068d4e3a9d7ba4c8aff286715b4f4009fa4710b64c87e52a52d",
+    "client-overlay/Body/High/fe_leg_b150_1.mod": "b90f57401a14e9d863171b874b1617062908bdb06119765d5009356229cff76b",
+    "client-overlay/Body/High/fe_leg_b250_1.mod": "de2f6b068e8c9dfc9aaff882e91646ecadcdcfbb7465787afc984f8386fbbf07",
+    "client-overlay/Body/High/fe_tor_b050_1.mod": "7ea0993f210799a3ac65d5e5437528859ad19f5dbd528f535d03a4cce991afa7",
+    "client-overlay/Body/High/fe_tor_b150_1.mod": "f0db5335bd0b8bf32bb146ed3b1e1ae34f1cea56e4ce8b4cfbcae3ccccce4ee7",
+    "client-overlay/Body/High/fe_tor_b250_1.mod": "3a9b09af5d030c339fdd498fa674aa4ab19ee385ed61ed748eb847e221b2c6f1",
+    "client-overlay/Body/High/ma_boo_b050_1.mod": "47c5fdf95c67aa91a42960e8ace62df37b9832ae9124bb29e76c3a11f13cd8c6",
+    "client-overlay/Body/High/ma_gun_b050_1.mod": "ebc4ddadb8fddc3ee65dc3b3ec403833798caf5f4193fecf9db5b6996cb9869d",
+    "client-overlay/Body/High/ma_leg_b050_1.mod": "a740b79ec3933d002ea88842de0ed78fa8947938cf8a8bb6333af1e4092e3162",
+    "client-overlay/Body/High/ma_tor_b050_1.mod": "aa010e3a14f37a9ea560378a77b32e2f33d91bd6f1f40f1bf5c4f2fd20a958f9",
+    "client-overlay/Body/Sub/fe_boo_b050_2.mod": "5a0f0f6d1972b30635002b5ed675d73e39f48e93ca53a7ac07825d65234fc437",
+    "client-overlay/Body/Sub/fe_gun_b050_2.mod": "18b4d919a1d944e8648764fcc88478b983d9e0fdda0a8673f58abefd590c8d82",
+    "client-overlay/Body/Sub/fe_leg_b050_2.mod": "f48f3c909b56a3750b22ec14794058b76e751499589146a363d4dc4c3b4645e7",
+    "client-overlay/Body/Sub/fe_tor_b050_2.mod": "0de1e12f7eb90acfee55139ceb6d75637a21e487df57560ef82eeacc706c9f57",
+    "client-overlay/Body/Sub/ma_boo_b050_2.mod": "028995296c8200c6597aa13b88963cb46c41140562ffef6bd548ef763403190c",
+    "client-overlay/Body/Sub/ma_gun_b050_2.mod": "55b8a2cd4752924828b9589a1b77aada5577cd6b897fd391916ace949db1dff2",
+    "client-overlay/Body/Sub/ma_leg_b050_2.mod": "75947ca8014b851a1deb2361d0bf2739a83a0c8307e8fae3f8a70cadbd814596",
+    "client-overlay/Body/Sub/ma_tor_b050_2.mod": "81ed602a0e083fbddd02317d47b4e9436af3e0ce470fa6bb766b6019233f0e7a",
+    "client-overlay/Item/bm_fe_boo_icon.wtm": "59910a1d849799439ac1917ee5ae3a27ec4f26f7659578387ee8bd6058d32aea",
+    "client-overlay/Item/bm_fe_gun_icon.wtm": "ba68fe9f9e3acd3e26e54bf24afb17d86836a85f62a21da1be4416b1cc45579a",
+    "client-overlay/Item/bm_fe_leg_icon.wtm": "ed5bb8fca953afec6e138c16e60d2257161efbc85bf9f91dc2c3afefe8b05f4a",
+    "client-overlay/Item/bm_fe_tor_icon.wtm": "cf85210da9a50d735f88980eadcd4077158cc8dc8eb498f84a091e1734b8158e",
+    "client-overlay/Item/bm_ma_boo_icon.wtm": "b0af9914c5a2a96cb223d5996b59b32b677271613b9ead9d055769fc1a361f0e",
+    "client-overlay/Item/bm_ma_gun_icon.wtm": "da77a59181f020d2e4929121727352bdaabd07cd0b34b6418a8fb8bb34a4b710",
+    "client-overlay/Item/bm_ma_leg_icon.wtm": "c9dfe7d87f6ce9b48b7cb3405bba59396087a7f1976d6cc89892a208b613d554",
+    "client-overlay/Item/bm_ma_tor_icon.wtm": "43e3ce8e08a963aba11edcd87a2c813c366254fd81c53524dd8011f1582b5e61",
+    "client-overlay/Texture/Body/bm_fe_boo_icon.wtm": "59910a1d849799439ac1917ee5ae3a27ec4f26f7659578387ee8bd6058d32aea",
+    "client-overlay/Texture/Body/bm_fe_gun_icon.wtm": "ba68fe9f9e3acd3e26e54bf24afb17d86836a85f62a21da1be4416b1cc45579a",
+    "client-overlay/Texture/Body/bm_fe_leg_icon.wtm": "ed5bb8fca953afec6e138c16e60d2257161efbc85bf9f91dc2c3afefe8b05f4a",
+    "client-overlay/Texture/Body/bm_fe_tor_icon.wtm": "cf85210da9a50d735f88980eadcd4077158cc8dc8eb498f84a091e1734b8158e",
+    "client-overlay/Texture/Body/bm_ma_boo_icon.wtm": "b0af9914c5a2a96cb223d5996b59b32b677271613b9ead9d055769fc1a361f0e",
+    "client-overlay/Texture/Body/bm_ma_gun_icon.wtm": "da77a59181f020d2e4929121727352bdaabd07cd0b34b6418a8fb8bb34a4b710",
+    "client-overlay/Texture/Body/bm_ma_leg_icon.wtm": "c9dfe7d87f6ce9b48b7cb3405bba59396087a7f1976d6cc89892a208b613d554",
+    "client-overlay/Texture/Body/bm_ma_tor_icon.wtm": "43e3ce8e08a963aba11edcd87a2c813c366254fd81c53524dd8011f1582b5e61",
+    "client-overlay/Texture/Body/fe_boo_b050.wtm": "7f4eb50f0c7443fa40e5bed4ac9c2317c2ee0899b462595ebcf7be270f1e6c48",
+    "client-overlay/Texture/Body/fe_gun_b050.wtm": "d0310bd0334bba3d63178c7d73228449dac2f6bbf9bb1c9f05aa12d068e507f6",
+    "client-overlay/Texture/Body/fe_leg_b050.wtm": "4e98f71c9d8f6de3d372b58ca33520a32b7b2122494805c9b546da23f7e936de",
+    "client-overlay/Texture/Body/fe_tor_b050.wtm": "927a1ffa1aa028a35bda1c7103419706ea9d7063e5131b4416a8fc96adea4051",
+    "client-overlay/Texture/Body/fe_tor_b050a.wtm": "fb05815bb894c566252a7d3874563b034191b59beaffcd926b7257d8862d202a",
+    "client-overlay/Texture/Body/ma_boo_b050.wtm": "2d5f6853777a1183611b1241bd4130b8136a647309584f8c49d6f5999218f615",
+    "client-overlay/Texture/Body/ma_gun_b050.wtm": "3aa9fcad29991190805084151f3df0d9bf5026534c06fa786d4da7352913660a",
+    "client-overlay/Texture/Body/ma_leg_b050.wtm": "55aec8cbda22f36088b876a01d334abfd3e75afb50953e9e012b4064990d3d04",
+    "client-overlay/Texture/Body/ma_tor_b050.wtm": "0096918ba44c1487e6d071ed10006bebb734325204ecbd73b3fc7b8c74fd4d75",
+    "client-overlay/Texture/Body/ma_tor_b050a.wtm": "9b2109b8b5e883972baa688b9ee441edc39ed89d66e835fd8173d6057cb4b500",
+    "client-overlay/Texture/Body/ma_tor_b050b.wtm": "1c61c17133669b9e46336e16331e6059ea6707302b211f5c73892e85650c7c7f",
+    "client-overlay/Texture/Body/ma_tor_b050c.wtm": "1c61c17133669b9e46336e16331e6059ea6707302b211f5c73892e85650c7c7f"
+  }
+}

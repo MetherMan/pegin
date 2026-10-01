@@ -83,7 +83,7 @@ def main(runtime):
         events = p.command('/재뽕 말 지옥마')
         assert 19130 in [struct.unpack_from('<i', d, 4)[0] for t, d in events if t == 43]
         passed('GM aliases "푸른달" and "5" grant certificate 19131; "지옥마" still grants 19130')
-        events = p.command('/재뽕 창고 푸른달의 말')
+        events = p.command('/재뽕 창고 푸른달의')  # one search token; a second token is the page number
         listed = [d for t, d in events if struct.pack('<i', 19131) in d and struct.pack('<i', -1700000001) in d]
         assert listed, [(t, d[:24].hex()) for t, d in events]
         events = p.command('/재뽕 창고 소유증서')

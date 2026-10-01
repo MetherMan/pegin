@@ -1,0 +1,231 @@
+{
+  "server_sha256": "089c576d8e1ebe475f6fd7844ba44ece09591369ca9c0a3f0527ee5597501363",
+  "symbol": "0x806afbc",
+  "native_cases": 36,
+  "speeds": {
+    "1": 70,
+    "2": 75,
+    "3": 80,
+    "4": 100,
+    "5": 120
+  },
+  "walking": 40,
+  "cases": [
+    {
+      "kind": 0,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 0,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 55
+    },
+    {
+      "kind": 0,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 0,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 55
+    },
+    {
+      "kind": 1,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 1,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 1,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 70
+    },
+    {
+      "kind": 1,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 70
+    },
+    {
+      "kind": 2,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 2,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 2,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 75
+    },
+    {
+      "kind": 2,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 75
+    },
+    {
+      "kind": 3,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 3,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 3,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 80
+    },
+    {
+      "kind": 3,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 80
+    },
+    {
+      "kind": 4,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 4,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 4,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 100
+    },
+    {
+      "kind": 4,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 100
+    },
+    {
+      "kind": 5,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 5,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 5,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 120
+    },
+    {
+      "kind": 5,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 120
+    },
+    {
+      "kind": 6,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 6,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 6,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 6,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 255,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 255,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 255,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 255,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 65535,
+      "mounted": 0,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 65535,
+      "mounted": 0,
+      "walking_bonus": 1,
+      "speed": 40
+    },
+    {
+      "kind": 65535,
+      "mounted": 1,
+      "walking_bonus": 0,
+      "speed": 40
+    },
+    {
+      "kind": 65535,
+      "mounted": 1,
+      "walking_bonus": 1,
+      "speed": 40
+    }
+  ]
+}

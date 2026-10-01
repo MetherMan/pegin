@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "checks": [
+    "real item-use packets mount and dismount all five horses: 70 / 75 / 80 / 100 / 120; walking stays 40",
+    "Blue Moon horse remains mounted at speed 120 after relog",
+    "GM aliases \"푸른달\" and \"5\" grant certificate 19131; \"지옥마\" still grants 19130",
+    "GM warehouse lists 푸른달의 말 소유증서 next to the other four horse certificates",
+    "existing five save tables unchanged; disposable player removed"
+  ],
+  "horses": [
+    [
+      10188,
+      1,
+      70
+    ],
+    [
+      10189,
+      2,
+      75
+    ],
+    [
+      10190,
+      3,
+      80
+    ],
+    [
+      19130,
+      4,
+      100
+    ],
+    [
+      19131,
+      5,
+      120
+    ]
+  ],
+  "save_data_preserved": true
+}
