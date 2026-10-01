@@ -43,6 +43,15 @@ METAL = [(0, '#02040c'), (.2, '#060b26'), (.38, '#0f2266'), (.55, '#1f4cb4'), (.
 POLISHED = [(0, '#02040c'), (.2, '#070d2b'), (.38, '#10256c'), (.55, '#2150b8'), (.72, '#4c86e0'), (.86, '#93b8ec'),
             (.95, '#bcd3f3'), (1, '#d6e6fb')]
 CLOTH = [(0, '#02040c'), (.3, '#081233'), (.55, '#1a3577'), (.78, '#7d9fd6'), (1, '#eef4ff')]
+# In game the approved elf look (A) read like a blue bodysuit (2026-10-01). After trying lower
+# highlights the user asked for the opposite: more bright area. Same palette as A; the tone split
+# (fraction of Otsu's threshold) moves down so more surface counts as bright plate, and the plate
+# median/floor rise. levels = (threshold factor, dark range, bright median target, bright floor).
+ELF_LOOKS = {'prev': ('A · 처음 적용본', '첫 배포 색 · 게임에서 파란 쫄쫄이처럼 보인다는 의견', METAL, None),
+             'bright': ('D · 현재 적용본 (밝은 부분 더 많게)', '밝은 판금으로 보는 면적을 넓히고 판금 밝기를 한 단계 올림 · 게임 적용', METAL,
+                        (.68, (.16, .4), .53, .47)),
+             'brighter': ('E · 밝은 부분 훨씬 많게', 'D보다 한 단계 더: 어두운 곳은 틈새·가장자리 위주로만 남김', METAL,
+                          (.56, (.18, .42), .6, .52))}
 VARIANTS = {
     'contrast': dict(
         title='푸른달 시안 A · 흑남 / 백청',
@@ -122,9 +131,10 @@ def recolour(image, spec, single=False, levels=(1.0, (0, .33), .4, .4), back=Non
     return Image.fromarray(np.clip(out+.5, 0, 255).astype(np.uint8))
 
 
-def elf_texture(image, tris, spec, info, torso, polished):
+def elf_texture(image, tris, spec, info, torso, polished, palette=None, levels=None):
     """Elf/donor texture: Blue Moon tones, own back-plate range, optional polish, chest/back emblems."""
     back = decor.back_mask(tris, image.size) if torso else None
+    levels = levels or info['tone']
     if polished:
         # Cleaner metal: drop the painted grain, then bake top-front light and a soft sheen from the
         # actual surface normals.
@@ -133,7 +143,7 @@ def elf_texture(image, tris, spec, info, torso, polished):
         normals, covered = decor.normal_map(tris, image.size)
         rgb = decor.polish(rgb, normals, covered)
     else:
-        rgb = np.asarray(recolour(image, spec, True, info['tone'], back), float)
+        rgb = np.asarray(recolour(image, spec, True, levels, back, palette), float)
     return rgb
 
 
@@ -145,8 +155,8 @@ def build_elf(read, base, source, info, textures):
     cards = []
     # The user preferred the previous (unpolished) texture; the polished pass stays available in
     # elf_texture(..., polished=True) but is no longer shown.
-    for polished, title, note in ((False, '푸른달 갑옷 · 블랙나이트 견갑', 'A 색 · 블랙나이트 견갑 · 가슴·등 초승달 문양'),):
-        tag = 'new' if polished else 'prev'
+    polished = False
+    for tag, (title, note, palette, levels) in ELF_LOOKS.items():
         parts = {}
         for sex in ('0', '1'):
             pieces = kitbash.shoulder_parts(donor['parts'][sex], base['people'][sex]['idle']['bones'])
@@ -157,7 +167,7 @@ def build_elf(read, base, source, info, textures):
                     image = Image.open(BytesIO(png_from_wtm(read('Texture/Body/'+name))))
                     tris = decor.triangles({'x': [c for c in chunks if c['texture'] == name]}, name)
                     torso = '_tor_' in name and any(c['texture'] == name for c in source['parts'][sex])
-                    rgb = elf_texture(image, tris, spec, info, torso, polished)
+                    rgb = elf_texture(image, tris, spec, info, torso, polished, palette, levels)
                     for facing, height, radius in (EMBLEMS.get(name[:3], []) if torso else []):
                         rgb = decor.emblem3d(rgb, tris, facing, height, radius)
                     target = f'{set_key}/{tag}-{Path(name).stem}.png'

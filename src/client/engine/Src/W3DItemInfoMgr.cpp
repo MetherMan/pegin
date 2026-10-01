@@ -1198,7 +1198,7 @@ void CW3DItemInfoMgr::DrawTipInfo(
 		if( nMode == 0 )	
 		{ // 자신
 			sprintf( szBuff, "%s:", STR_ITEMINFO_SELLPRICE );
-			if( pItemInfoDat->wItemNum >= 12102 )
+			if( pItemInfoDat->wItemNum >= 12102 && pItemInfoDat->wItemNum < 19000 )
 				sprintf( szBuff1, "%s %s", GetUnitNum( pItemInfoDat->nSellPrice ), "캐쉬" );
 			else
 				sprintf( szBuff1, "%s %s", GetUnitNum( pItemInfoDat->nSellPrice ), STR_ITEMINFO_SHILD );
@@ -1206,7 +1206,7 @@ void CW3DItemInfoMgr::DrawTipInfo(
 		else if( nMode == 1 )
 		{ // 상대방			
 			sprintf( szBuff, "%s:", STR_ITEMINFO_BUYPRICE );
-			if( pItemInfoDat->wItemNum >= 12102 )
+			if( pItemInfoDat->wItemNum >= 12102 && pItemInfoDat->wItemNum < 19000 )
 				sprintf( szBuff1, "%s %s", GetUnitNum( pItemInfoDat->nPrice ), "캐쉬" );
 			else
 				sprintf( szBuff1, "%s %s", GetUnitNum( pItemInfoDat->nPrice ), STR_ITEMINFO_SHILD );

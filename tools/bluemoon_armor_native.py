@@ -1,6 +1,6 @@
 """Native game files for the confirmed Blue Moon armour (Elf set + Black Knight pauldrons).
 
-The look is the one approved in assets/blue-moon-armor/index.html?data=elf-bluemoon ("A" texture,
+The look is the one approved in assets/blue-moon-armor/index.html?data=elf-bluemoon (texture LOOK,
 Black Knight pauldrons, crescent emblem on chest and back). Models are written as Wind3D MOD files
 with the original chunk matrices/materials, so the game skins them exactly like the source sets:
 
@@ -20,6 +20,9 @@ from PIL import Image
 R = Path(__file__).resolve().parents[1]
 GAME = R/'runtime/client/GameClient'
 TEX = R/'assets/blue-moon-armor/elf'
+# Applied look from tools/build_bluemoon_golden_armor.py ELF_LOOKS: 'prev' = A (first release),
+# 'bright' = D, more bright plate area (user pick 2026-10-01 after A read like a blue bodysuit).
+LOOK = 'bright'
 NUM = 'b050'
 PARTS = ('tor', 'leg', 'gun', 'boo')
 SEXES = {'0': ('ma', 'b008', 'b032'), '1': ('fe', 'b011', 'b034')}
@@ -99,10 +102,10 @@ def texture_names(prefix, part, donor_textures=()):
     elf = next(e for p, e, _ in SEXES.values() if p == prefix)
     names = {}
     for ext in ('bmp', 'BMP'):
-        names[f'{prefix}_{part}_{elf}.{ext}'.lower()] = (f'{prefix}_{part}_{NUM}.bmp', TEX/f'prev-{prefix}_{part}_{elf}.png')
+        names[f'{prefix}_{part}_{elf}.{ext}'.lower()] = (f'{prefix}_{part}_{NUM}.bmp', TEX/f'{LOOK}-{prefix}_{part}_{elf}.png')
     for k, source in enumerate(sorted(donor_textures)):
         stem = Path(source).stem
-        names[source.lower()] = (f'{prefix}_{part}_{NUM}{"abc"[k]}.bmp', TEX/f'prev-{stem}.png')
+        names[source.lower()] = (f'{prefix}_{part}_{NUM}{"abc"[k]}.bmp', TEX/f'{LOOK}-{stem}.png')
     return names
 
 

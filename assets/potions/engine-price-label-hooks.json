@@ -1,0 +1,69 @@
+{
+  "original_sha256": "4420b3d2cc0a8d7e1352560b9dafe065abfbd3b7e1f35a06bf429ecc037d3d84",
+  "original_size": 323584,
+  "sha256": "b1e780bfa2ab9f681316f47dcd57c7d8ee5d73bdccbef3adb39a290f1e305bcd",
+  "section_rva": 331776,
+  "undo": [
+    [
+      151791,
+      "66813f462f720e"
+    ],
+    [
+      151853,
+      "66813f462f720e"
+    ],
+    [
+      816,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      254,
+      "0800"
+    ],
+    [
+      328,
+      "00100500"
+    ],
+    [
+      276,
+      "00f00300"
+    ],
+    [
+      336,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "own item: sell price: \uce90\uc26c only for 12102..18999",
+      "va": 268587247,
+      "original": "66813f462f720e",
+      "replacement": "e90cbf02009090",
+      "target": 268767232,
+      "resume": 268587254,
+      "assembly": "cmp word ptr [edi],12102; jb 0x10025104; cmp word ptr [edi],19000; jae 0x10025104; jmp 0x100250f6",
+      "code": "66813f462f0f82f940fdff66813f384a0f83ee40fdffe9db40fdffe9d640fdff"
+    },
+    {
+      "label": "shop: buy price: \uce90\uc26c only for 12102..18999",
+      "va": 268587309,
+      "original": "66813f462f720e",
+      "replacement": "e9eebe02009090",
+      "target": 268767264,
+      "resume": 268587316,
+      "assembly": "cmp word ptr [edi],12102; jb 0x10025142; cmp word ptr [edi],19000; jae 0x10025142; jmp 0x10025134",
+      "code": "66813f462f0f821741fdff66813f384a0f830c41fdffe9f940fdffe9f440fdff"
+    }
+  ],
+  "validation": {
+    "cases": 60,
+    "cash_range": [
+      12102,
+      18999
+    ],
+    "relocated_bases": [
+      268435456,
+      55574528
+    ]
+  }
+}

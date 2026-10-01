@@ -22,3 +22,5 @@
 재생성: `runtime/python/python.exe -X utf8 tools/register_extra_large_potion.py`, `runtime/python/python.exe -X utf8 tools/patch_extra_large_potion_client.py`. 실서버 검사는 `tools/verify_bluemoon_armor_potion_live.py`(푸른달 갑옷과 함께).
 
 실서버 검사(2026-10-01, `assets/blue-moon-armor/live-validation.json`): 상점 9 판매, 10개 7,200(대형 10개 6,000), 두 번째 구입이 같은 칸에 합쳐짐(15), 더블클릭·단축키 모두 600 회복(대형 120), 재접속 후 수량 유지.
+
+가격 단위 표시(2026-10-01): 게임 원본 툴팁은 번호 12102 이상을 모두 `캐쉬`로 표시해(파워 세트 등 캐쉬 아이템 구간) 초대형 물약 가격이 캐쉬로 보였다. 서버는 이 물약을 실드로 사고판다. `Engine.dll`의 두 분기(내 아이템 판매가, 상점 구입가)에 `.shild` 훅을 넣어 12102~18999만 캐쉬, 19000번 이후 직접 만든 아이템(초대형 물약, 트와일라잇 무기, 푸른달 갑옷, 말 소유증서)은 실드로 표시한다(`tools/patch_shild_price_label.py`, `engine-price-label-hooks.json`, 두 적재 주소 60경우). 상점 개수 입력창은 원래 실드 기준이다.
