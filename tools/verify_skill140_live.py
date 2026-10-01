@@ -36,8 +36,8 @@ end''')
   memory=json.loads(next(l.split('=',1)[1] for l in out.splitlines() if l.startswith('SKILL140=')))
   for i,v in enumerate(memory):
    assert v['reqr']==(140 if i<2 else 0) and v['reqb']==(140 if i>=2 else 0) and v['area']==[5,0,6,6][i] and 'SKILL_Level140Attack' in v['callback'],v
-   assert v['damage']==SPECS[i]['damage'],v
-  passed('all four live skill definitions, exact damage ranges, learn requirements, area and callbacks')
+   assert v['damage']==SPECS[i]['damage'] and v['cool']==SPECS[i]['cool'],v
+  passed('all four live skill definitions, exact damage ranges and cooldown seconds, learn requirements, area and callbacks')
   sql("INSERT INTO UserTable(id,name,mapNum,posX,posY,hp,mp,max_hp,max_mp,str_point,int_point,dex_point,charPos,lastSkill,isNewChar,skill_level1,skill_level2) "
    f"VALUES('{account}','{account}',3,266,272,30000,30000,30000,30000,100,100,100,0,10102,0,139,139)")
   seeds=[(10193,0),(10193,0),(10194,0),(10194,0),(10193,998),(10193,5)]+[(n,0) for n in range(19120,19124)]
@@ -82,6 +82,8 @@ end''')
    actual=[counts[n] for n in ids];want=[hits,hits if area>=5 else 0,hits if area>=6 else 0,0]
    assert actual==want,(skill,actual,want,out);assert all((h<1000000)==bool(w) for h,w in zip(hp,want)),(skill,hp,want)
    results.append(dict(skill=skill,target_and_radius_5_6_7_hits=actual));passed(f'{skill}: actual hit packets / radius 0,5,6,7 = {actual}')
+  from verify_mage_death_hold import verify as verify_death_hold
+  death_holds=verify_death_hold(gdb,account,passed)
   p.close();p=None;time.sleep(1);p=Player(account)
   learned=next(d for t,d in p.login_packets if t==113);ids=[struct.unpack_from('<H',learned,1+i*2)[0] for i in range(learned[0])]
   assert all(n in ids for n in range(19120,19124));assert p.quantities(10193)==[2,4,999] and p.quantities(10194)==[2]
@@ -92,7 +94,7 @@ end''')
   sql(f"DELETE FROM UserTable WHERE id='{account}'")
   after=cmd(digest).split()[0];assert before==after,'Existing save data changed';c.close()
  passed('all five existing save tables preserved; fixture removed')
- (O/'live-validation.json').write_text(json.dumps(dict(passed=True,checks=checks,skills=memory,hit_tests=results,save_data_preserved=True),ensure_ascii=False,indent=2),encoding='utf-8')
+ (O/'live-validation.json').write_text(json.dumps(dict(passed=True,checks=checks,skills=memory,hit_tests=results,death_holds=death_holds,save_data_preserved=True),ensure_ascii=False,indent=2),encoding='utf-8')
 if __name__=='__main__':
  import manage
  for port in [22222,2560,44444]:

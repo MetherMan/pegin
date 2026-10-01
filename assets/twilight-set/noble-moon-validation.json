@@ -13,7 +13,7 @@
           -0.027499999850988388
         ],
         [
-          1.6129112243652344,
+          1.751720905303955,
           0.13332004845142365,
           0.027499999850988388
         ]
@@ -75,22 +75,40 @@
       "separate_moon_badge": false,
       "parts": 2,
       "holes": 0,
-      "in_game_visual_test": false
+      "in_game_visual_test": false,
+      "blade_refinement": {
+        "passed": true,
+        "source_model_sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d",
+        "blade_root_native_x": 0.4561637031374044,
+        "parameters": {
+          "length_factor": 1.12,
+          "width_factor": 1.1,
+          "thickness_factor": 1.15,
+          "blend_pixels": 100,
+          "source_model_sha256": "5e5267cd8bedf5ee39060dc19e8f4d68d073199ca61ca2cc2cff8be8911adc3d"
+        },
+        "guard_handle_pommel_identical": true,
+        "topology_identical": true,
+        "source_uvs_identical": true,
+        "protected_geometry_sha256": "9a1f169dfdffa7d9bb3432da07ec80a3d88be51f1a3d942f4996fe4588e5e5b9",
+        "topology_uv_sha256": "8d1a86785c57e4d83425b4379e8ebe57833417b44f66ff6be5c986c3c9ad71a0"
+      },
+      "blade_refinement_report": "s4/blade-refinement-validation.json"
     },
     {
-      "triangles": 26580,
-      "vertices": 13381,
+      "triangles": 5148,
+      "vertices": 2602,
       "meshes": 1,
       "bounds": [
         [
-          -0.7864590287208557,
-          -0.1877003312110901,
-          -0.05558410659432411
+          -0.7905668020248413,
+          -0.30614474415779114,
+          -0.03240000084042549
         ],
         [
-          0.9569666981697083,
-          0.3926093280315399,
-          0.05558410659432411
+          1.213819980621338,
+          0.22293418645858765,
+          0.03240000084042549
         ]
       ],
       "atlas": {
@@ -101,72 +119,75 @@
           "0": {
             "x": 8,
             "y": 8,
-            "width": 505,
-            "height": 1442,
+            "width": 400,
+            "height": 1492,
             "source_size": [
-              505,
-              1442
+              400,
+              1492
             ],
             "resampled": false
           },
           "1": {
-            "x": 529,
+            "x": 424,
             "y": 8,
-            "width": 12,
-            "height": 33,
+            "width": 8,
+            "height": 24,
             "source_size": [
-              12,
-              33
+              8,
+              24
             ],
             "resampled": false
           },
           "2": {
-            "x": 557,
+            "x": 448,
             "y": 8,
             "width": 2,
-            "height": 18,
+            "height": 22,
             "source_size": [
               2,
-              18
+              22
             ],
             "resampled": false
           }
         },
         "source_pixels_preserved": true,
         "triangles_by_material": {
-          "0": 23924,
-          "1": 2616,
-          "2": 40
+          "0": 3422,
+          "1": 1702,
+          "2": 24
         },
         "surface_area_by_material": {
           "0": {
-            "source": 0.5852681795952173,
-            "atlas": 0.5852681795952173
+            "source": 0.7361912065565706,
+            "atlas": 0.7361912065565706
           },
           "1": {
-            "source": 0.015166132067214568,
-            "atlas": 0.015166132067214568
+            "source": 0.014736349600323906,
+            "atlas": 0.014736349600323906
           },
           "2": {
-            "source": 0.010606813810707858,
-            "atlas": 0.010606813810707858
+            "source": 0.009849129785409892,
+            "atlas": 0.009849129785409892
           }
         }
       },
       "reference": "wb_0040_1.mod",
       "reference_winding": 1.0,
       "kind": "longbow",
-      "source": "assets/visual-refresh-20260923/bow-horns-10/bow-03.png",
-      "source_sha256": "7fc6dd5f4ff469a629c6669efe83cdf6a8586cafde3b82dfe2cfd2b122dd7dd4",
+      "source": "assets/visual-refresh-20260923/longbow-tall-drafts/blue-moon-v3/06-twin-crescent-regalia-swept.png",
+      "source_sha256": "daf8323868d9f5aff0cb775b29a2c3147bf98d2220282015d22bf089db1673be",
       "grip": [
-        584,
-        818
+        555,
+        750
       ],
-      "scale": 0.001227,
+      "scale": 0.00154,
       "parts": 3,
-      "holes": 2,
+      "holes": 5,
+      "upper_length_factor": 1.22,
+      "lower_length_factor": 0.75,
+      "overall_scale": 0.9,
+      "body_side_scale": 0.72,
       "source_repainted": false,
-      "original_weapon_id_preserved": true,
       "in_game_visual_test": false
     }
   ],

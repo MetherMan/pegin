@@ -1,56 +1,194 @@
-"""Replace moving hell-horse dust with native short-lived embers; no new timers."""
+"""Build small, short-lived native flames at hell-horse hoof contacts.
+
+The contact hook supplies each animated hoof's actual landing position.
+The unique tick marker also scopes the renderer's fog correction to this row.
+Rebuilding this table alone never rewrites either executable or renderer.
+"""
 from pathlib import Path
-import hashlib,json,struct,sys
-R=Path(__file__).resolve().parents[1]
-sys.path[:0]=[str(R/'runtime/pylibs'),str(R/'.cache/weapon-build-deps'),str(R/'tools')]
-from pe_hooks import Hooks
-from patch_stack_client import machine
-from unicorn.x86_const import *
+import argparse
+import hashlib
+import json
+import math
+import struct
+import sys
+
+R = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(R/'runtime/pylibs'), str(R/'.cache/weapon-build-deps'), str(R/'tools')]
+
+PARTICLE_NAME = 'mt_hell_hoof'
+HEADER = 30
+STRIDE = 761
+# A multiple of (12 - 1) keeps native color/size interpolation in bounds for
+# every living millisecond. The movement hook budgets one particle per emission.
+LIFETIME_MS = 385
+PARTICLES_PER_EMISSION = 1
+HOOF_FOG_MARKER = 140041
+
+
+def name(row):
+    return row[:125].split(b'\0')[0].decode('cp949')
+
+
+def records(raw):
+    assert raw[:22] == b'#W3DParticleInfo File\0'
+    version, count = struct.unpack_from('<2i', raw, 22)
+    assert version == 101 and len(raw) == HEADER + count * STRIDE
+    rows = [raw[HEADER+i*STRIDE:HEADER+(i+1)*STRIDE] for i in range(count)]
+    assert len({name(row) for row in rows}) == count, 'Duplicate particle names'
+    return rows
+
+
+def fire_trail(source):
+    row = bytearray(source)
+    row[:125] = PARTICLE_NAME.encode().ljust(125, b'\0')
+    # A stamp stays at the landing point after the hoof lifts. nTick is NOT an
+    # emission interval here; it only controls randomized initial particle age.
+    # A private large value gives full life and identifies the no-fog draw hook.
+    struct.pack_into('<4i5f2i', row, 125,
+                     100, PARTICLES_PER_EMISSION, HOOF_FOG_MARKER, LIFETIME_MS,
+                     0, 0, 0, 0, 0, 0, 12)
+    for i in range(12):
+        age = i / 11
+        glow = (1 - age) ** 1.15
+        # Native SetWorld uses homogeneous W: side length = .06 / W.
+        # Requested 1.2x enlargement of the former .22 -> .20 billboard.
+        inverse_size = .06 / (1.2 * (.22 - .02 * age))
+        struct.pack_into('<7f', row, 425+i*28,
+                         160*glow, 56*glow, 4*glow,
+                         0, 0, 0, inverse_size)
+    return bytes(row)
+
+
+def build_table(raw):
+    rows = records(raw)
+    source = next(row for row in rows if name(row) == '불')
+    trail = fire_trail(source)
+    replaced = False
+    result = []
+    for row in rows:
+        if name(row) == PARTICLE_NAME:
+            result.append(trail)
+            replaced = True
+        else:
+            result.append(row)
+    if not replaced:
+        result.append(trail)
+    header = bytearray(raw[:HEADER])
+    struct.pack_into('<i', header, 26, len(result))
+    return bytes(header) + b''.join(result)
+
+
+def verify_table(before, after):
+    old_rows, new_rows = records(before), records(after)
+    original = [row for row in old_rows if name(row) != PARTICLE_NAME]
+    assert original == [row for row in new_rows if name(row) != PARTICLE_NAME]
+    assert build_table(after) == after, 'Rebuild must be byte-for-byte idempotent'
+    row = next(row for row in new_rows if name(row) == PARTICLE_NAME)
+    _, count, tick, life, speed, ax, ay, az, force, inverse, levels = struct.unpack_from('<4i5f2i', row, 125)
+    assert count == 1 and tick == HOOF_FOG_MARKER and life == LIFETIME_MS and levels == 12
+    assert (speed, ax, ay, az, force, inverse) == (0, 0, 0, 0, 0, 0)
+    keys = [struct.unpack_from('<7f', row, 425+i*28) for i in range(levels)]
+    assert all(math.isfinite(v) for key in keys for v in key)
+    assert all(0 <= v <= 255 for key in keys for v in key[:6])
+    assert all(0 < key[6] < 1 for key in keys)
+    assert keys[-1][:6] == (0, 0, 0, 0, 0, 0)
+    # Verify native Update indexing/positions, including the final living
+    # millisecond, for every rand()%6 direction used by the shipped renderer.
+    level_life = life // (levels - 1)
+    for age in range(life):
+        assert age // level_life + 1 < levels
+        travel = (speed / 1000) * age + force * age
+        for direction in range(-3, 3):
+            assert (direction + ax*age) * travel == 0
+            assert (direction + az*age) * travel == 0
+            assert (direction + ay*age) * travel == 0
+    texture = row[169:425].split(b'\0')[0].decode('cp949')
+    assert texture == next(r for r in old_rows if name(r) == '불')[169:425].split(b'\0')[0].decode('cp949')
+    texture_path = Path(texture).with_suffix('.wtm')
+    assert any((base/texture_path).exists() for base in (R/'client-overlay', R/'runtime/client/GameClient'))
+    return dict(original_particle_records_unchanged=True,
+                original_record_count=len(original), table_record_count=len(new_rows),
+                idempotent=True, stationary_world_space=True,
+                particle_lifetime_ms=life, particles_per_emission=count,
+                billboard_width_world_units=[.06/keys[0][6], .06/keys[-1][6]],
+                no_shadow_tint=all(key[3:6] == (0, 0, 0) for key in keys),
+                fog_scope_marker=tick,
+                native_interpolation_all_living_milliseconds_checked=True,
+                texture=texture, trail_sha256=hashlib.sha256(row).hexdigest(),
+                in_game_visual_test=False)
+
+
+def verify_existing_hook(executable, report):
+    """Require hoof contacts; the former center emitter is not sufficient."""
+    import pefile
+    data = executable.read_bytes()
+    pe = pefile.PE(data=data)
+    if not any(s.Name.rstrip(b'\0') == b'.hhoof' for s in pe.sections):
+        return dict(movement_fix_installed=False,
+                    required_command='tools/patch_hell_horse_hoof.py --apply',
+                    note='The former .htrail center emitter is superseded by animated hoof contacts.')
+    from patch_hell_horse_hoof import verify, REPORT
+    metadata = json.loads(REPORT.read_text(encoding='utf-8'))
+    for hook in metadata['hooks']:
+        for va, key in ((hook['va'], 'replacement'), (hook['target'], 'code')):
+            offset = pe.get_offset_from_rva(va-pe.OPTIONAL_HEADER.ImageBase)
+            expected = bytes.fromhex(hook[key])
+            assert data[offset:offset+len(expected)] == expected
+    return dict(movement_fix_installed=True, executable_unchanged=True,
+                actual_motion_validation=verify(data, metadata))
+
+
+def install_hook(executable, report):
+    """Explicit opt-in only; install the contact fix on the current PE."""
+    import pefile
+    before = executable.read_bytes()
+    if any(s.Name.rstrip(b'\0') == b'.hhoof' for s in pefile.PE(data=before).sections):
+        return
+    from patch_hell_horse_hoof import build, verify, REPORT
+    data, metadata = build(executable)
+    metadata['validation'] = verify(data, metadata)
+    assert executable.read_bytes() == before
+    executable.write_bytes(data)
+    REPORT.write_text(json.dumps(metadata, indent=2)+'\n', encoding='utf-8')
+
+
+def verify_fog_hook():
+    import pefile
+    from patch_hell_particle_fog import REPORT, DLL, MARKER
+    assert MARKER == HOOF_FOG_MARKER
+    data = DLL.read_bytes()
+    pe = pefile.PE(data=data)
+    if not any(s.Name.rstrip(b'\0') == b'.hpfog' for s in pe.sections):
+        return dict(scoped_particle_fog_fix_installed=False)
+    metadata = json.loads(REPORT.read_text(encoding='utf-8'))
+    for hook in metadata['hooks']:
+        for va, key in ((hook['va'], 'replacement'), (hook['target'], 'code')):
+            offset = pe.get_offset_from_rva(va-pe.OPTIONAL_HEADER.ImageBase)
+            expected = bytes.fromhex(hook[key])
+            assert data[offset:offset+len(expected)] == expected
+    return dict(scoped_particle_fog_fix_installed=True)
+
 
 def main():
-    d=R/'client-overlay';o=R/'assets/hell-horse'
-    raw=(R/'runtime/client/GameClient/Effect/particle.ptc').read_bytes()
-    header=30;stride=761;count=struct.unpack_from('<i',raw,26)[0]
-    assert raw[:22]==b'#W3DParticleInfo File\0'[:22] and len(raw)==header+count*stride
-    rows=[raw[header+i*stride:header+(i+1)*stride] for i in range(count)]
-    source=next(r for r in rows if r[:125].split(b'\0')[0].decode('cp949')=='불')
-    ember=bytearray(source);ember[:125]=b'mt_hell_hoof'.ljust(125,b'\0')
-    # 2 particles per movement update, 550ms lifetime. The native integration
-    # leaves emitted particles in world space, trailing behind the horse.
-    struct.pack_into('<4i5f2i',ember,125,100,2,33,550,.032,0,0,.00012,.00001,0,12)
-    for i in range(12):
-        fade=(1-i/11)**1.3
-        struct.pack_into('<7f',ember,425+i*28,255*fade,145*fade,28*fade,255*fade,65*fade,8*fade,.075*(1-i/14))
-    data=bytearray(raw);struct.pack_into('<i',data,26,count+1);data.extend(ember)
-    (d/'Effect/particle.ptc').write_bytes(data)
-    h=Hooks(d/'DeicideOnline.exe',o/'spark-hook.json',b'.hfire')
-    name=h.base+h.rva;h.code.extend(b'mt_hell_hoof\0')
-    # Call is inside CVehicle::Update STATE_MOVE. Nonmoving states never enter
-    # this block. Preserve the world virtual call, position and stack cleanup.
-    h.hook(0x4223b9,'ff9290000000',
-        'push eax; call here; here: pop eax; sub eax,22; '
-        'cmp dword ptr [ebx+0x24],4; jne original; mov dword ptr [esp+4],eax; '
-        'original: pop eax; call dword ptr [edx+0x90]', 'hell horse movement embers')
-    output,report=h.finish();cases=[]
-    for base,kind in [(base,kind) for base in (0x400000,0x600000) for kind in (0,1,2,3,4,5,0xffffffff)]:
-        delta=base-h.base;u,_=machine(output,base);obj=0x2001000;vt=0x2003000;stub=0x2004000;sp=0x201f000
-        u.mem_write(obj+0x24,struct.pack('<I',kind));u.mem_write(vt+0x90,struct.pack('<I',stub))
-        # Record the actual two arguments and return using the native ABI.
-        u.mem_write(stub,h.asm('mov eax,[esp+4]; mov [0x2005000],eax; mov eax,[esp+8]; mov [0x2005004],eax; mov eax,1; ret 8',stub))
-        u.mem_write(sp,struct.pack('<2I',0x4725b8+delta,obj+0x44))
-        u.reg_write(UC_X86_REG_EBX,obj);u.reg_write(UC_X86_REG_EDX,vt);u.reg_write(UC_X86_REG_ECX,0x2007000)
-        u.emu_start(0x4223b9+delta,0x4223bf+delta,count=80)
-        got,pos=struct.unpack('<2I',u.mem_read(0x2005000,8))
-        assert got==((name if kind==4 else 0x4725b8)+delta) and pos==obj+0x44
-        assert u.reg_read(UC_X86_REG_ESP)==sp+8 and u.reg_read(UC_X86_REG_EBX)==obj
-        cases.append(dict(base=base,mount=kind,hell_sparks=kind==4))
-    # Original state gate remains byte-for-byte intact.
-    pe=h.pe;off=pe.get_offset_from_rva(0x4223a3-h.base)
-    assert output[off:off+11]==h.original[off:off+11]
-    report['validation']=dict(cases=cases,movement_gate_unchanged=True,original_particle_records_unchanged=True,particle_lifetime_ms=550,particles_per_update=2,in_game_visual_test=False)
-    assert bytes(data[30:len(raw)])==raw[30:]
-    (o/'spark-hook.json').write_text(json.dumps(report,indent=2)+'\n')
-    (d/'DeicideOnline.exe').write_bytes(output)
-    print(json.dumps(report['validation']))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--install-hook', action='store_true', help='Explicitly install the animated-contact .hhoof fix')
+    args = parser.parse_args()
+    overlay = R/'client-overlay'
+    artifacts = R/'assets/hell-horse'
+    target = overlay/'Effect/particle.ptc'
+    baseline = target if target.exists() else R/'runtime/client/GameClient/Effect/particle.ptc'
+    before = baseline.read_bytes()
+    after = build_table(before)
+    validation = verify_table(before, after)
+    executable, hook_report = overlay/'DeicideOnline.exe', artifacts/'spark-hook.json'
+    if args.install_hook:
+        install_hook(executable, hook_report)
+    validation.update(verify_existing_hook(executable, hook_report))
+    validation.update(verify_fog_hook())
+    target.write_bytes(after)
+    (artifacts/'fire-trail-validation.json').write_text(json.dumps(validation, indent=2)+'\n', encoding='utf-8')
+    print(json.dumps(validation))
 
-if __name__=='__main__':main()
+
+if __name__ == '__main__':
+    main()

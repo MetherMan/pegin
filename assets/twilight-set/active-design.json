@@ -2,7 +2,7 @@
   "design": "noble-blue-moon",
   "sources": [
     "../visual-refresh-20260923/noble-moon-15/sword-04.png",
-    "../visual-refresh-20260923/bow-horns-10/bow-03.png",
+    "../visual-refresh-20260923/longbow-tall-drafts/blue-moon-v3/06-twin-crescent-regalia-swept.png",
     "../visual-refresh-20260923/moon-pairs-10/pair-03.png"
   ],
   "builder": "tools/build_noble_moon.py",
@@ -29,10 +29,10 @@
       "approved_by_user": true
     },
     "longbow": {
-      "design": "approved-h03-horn-bow",
-      "source": "../visual-refresh-20260923/bow-horns-10/bow-03.png",
-      "geometry_spec": "h03-horn-bow/geometry.json",
-      "builder": "tools/build_h03_horn_bow.py",
+      "design": "twin-moon-greatbow-06",
+      "source": "../visual-refresh-20260923/longbow-tall-drafts/blue-moon-v3/06-twin-crescent-regalia-swept.png",
+      "geometry_spec": "twin-moon-greatbow/geometry.json",
+      "builder": "tools/build_twin_moon_greatbow.py",
       "approved_by_user": true
     }
   }

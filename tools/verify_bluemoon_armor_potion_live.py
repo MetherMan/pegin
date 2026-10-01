@@ -49,6 +49,14 @@ def main(runtime):
         checks.append(s)
         print('PASS '+s, flush=True)
 
+    def healed(events, start=10):
+        """HP gained by the drink: UseHPPotion sends HP (30) just before the stack count (115).
+        A regeneration tick may come before or after it, so measure from the HP value before it."""
+        hp = [(k, struct.unpack_from('<i', d)[0]) for k, (t, d) in enumerate(events) if t == 30]
+        count = next(k for k, (t, _) in enumerate(events) if t in (115, 44))
+        before = [v for k, v in hp if k < count]
+        return before[-1]-(before[-2] if len(before) > 1 else start)
+
     def messages(events):
         return [d[2:2+struct.unpack_from('<H', d)[0]].decode('cp949', 'replace') for t, d in events if t == 150]
 
@@ -113,16 +121,15 @@ def main(runtime):
         state = [value(account, e) for e in ('$qa->ch.hp', '$qa->ch.max_hp', '$qa->ch2.addHP')]
         potion = p.select(19132)
         events = p.packet(111, struct.pack('<iB', potion, 0))
-        after = [value(account, e) for e in ('$qa->ch.hp', '$qa->ch.max_hp', '$qa->ch2.addHP')]
-        assert after[0] == 610 and p.items[potion]['qty'] == 14, (state, after, p.items[potion], [(t, d.hex()) for t, d in events])
+        assert healed(events) == 600 and p.items[potion]['qty'] == 14, (state, p.items[potion], [(t, d.hex()) for t, d in events])
         large = p.select(10097)
         gdb(f'set $qa=FindPlayerIdList("{account}")\nset $qa->ch.hp=10')
-        p.packet(111, struct.pack('<iB', large, 0))
-        assert value(account, '$qa->ch.hp') == 130
+        events = p.packet(111, struct.pack('<iB', large, 0))
+        assert healed(events) == 120, [(t, d.hex()) for t, d in events]
         passed('drinking heals 600 (large potion still 120) and leaves 14 in the stack')
         gdb(f'set $qa=FindPlayerIdList("{account}")\nset $qa->ch.hp=10')
-        p.packet(114, struct.pack('<H', 19132))
-        assert value(account, '$qa->ch.hp') == 610 and p.items[potion]['qty'] == 13, (value(account, '$qa->ch.hp'), p.items[potion])
+        events = p.packet(114, struct.pack('<H', 19132))
+        assert healed(events) == 600 and p.items[potion]['qty'] == 13, ([(t, d.hex()) for t, d in events], p.items[potion])
         passed('quick-slot use (packet 114) also heals 600 and leaves 13')
         p.close()
         players.remove(p)
@@ -176,6 +183,7 @@ def main(runtime):
         players.append(p)
         assert equip(account) == saved
         passed('GM enhance +10/+20 on armour, pants, gauntlets and boots; +20 set survives relog')
+        gdb(f'set $qa=FindPlayerIdList("{account}")\nset $qa->isAdmin=1\nset $qa->adminLevel=3')  # relog cleared it
         events = p.command('/재뽕 창고 초대형')
         assert any(i == 19132 and cat == 4 for i, cat, _, _ in shelf(events))
         events = p.command('/재뽕 창고 소유증서')

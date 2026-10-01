@@ -1,11 +1,14 @@
 from pathlib import Path
 import shutil,subprocess,sys,runpy,json
 ROOT=Path(__file__).resolve().parents[1];R=ROOT/'runtime';O=ROOT/'assets/twilight'
+current_icons=ROOT/'assets/twilight-set/icons-current/manifest.json'
 active=ROOT/'assets/twilight-set/active-design.json'
 if active.exists() and json.loads(active.read_text())['design'] in ['shattered-moon','noble-blue-moon']:
     builder='tools/build_noble_moon.py' if json.loads(active.read_text())['design']=='noble-blue-moon' else 'tools/build_shattered_moon.py'
     for script in [builder,'assets/twilight-set/preview_native.py','assets/twilight-set/verify_closed_surfaces.py']:
         subprocess.run([sys.executable,str(ROOT/script)],check=True,cwd=ROOT)
+    if current_icons.is_file():
+        subprocess.run([sys.executable,str(ROOT/'tools/build_current_weapon_icons.py')],check=True,cwd=ROOT)
     sys.exit(0)
 sys.path.insert(0,str(R/'pylibs'))
 subprocess.run([sys.executable,str(ROOT/'assets/twilight-set/build_sword_volume.py')],check=True)
@@ -16,8 +19,10 @@ dest=ROOT/'client-overlay'
 for p in (O/'payload').glob('mt_twilight_*.mod'):shutil.copy2(p,dest/'Equip'/p.name)
 for p in (O/'payload').glob('mt_mat_*.wtm'):shutil.copy2(p,dest/'Texture/Equip'/p.name)
 shutil.copy2(O/'payload/mt_twilight_atlas.wtm',dest/'Texture/Equip/mt_twilight_atlas.wtm')
-shutil.copy2(O/'payload/mt_twilight_icon.wtm',dest/'Item/mt_twilight_icon.wtm')
-shutil.copy2(O/'payload/mt_mat_00.wtm',dest/'Texture/Body/mt_twilight_icon.wtm')
+if not current_icons.is_file():
+    # build_icon.py already installs active icons directly when a manifest exists.
+    for folder in ['Item','Texture/Body']:
+        shutil.copy2(O/'payload/mt_twilight_icon.wtm',dest/folder/'mt_twilight_icon.wtm')
 scale=json.loads((O/'size_spec.json').read_text())['scale'];trace=dest/'Equip/Trace.txt';lines=trace.read_bytes().decode('cp949').splitlines()
 for i,line in enumerate(lines):
  if line.split() and line.split()[0] in [f'mt_twilight_{lod}.mod' for lod in [1,2,3]]:

@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "native_functions": [
+    "CMagic::Update",
+    "CMagicEffect::Update",
+    "CMagicEffect::NextStep"
+  ],
+  "target_removed_before_first_tick": true,
+  "tests": {
+    "meteor": [
+      {
+        "base": "0x10000000",
+        "previous": {
+          "retained": false,
+          "ended_ms": 33
+        },
+        "fixed": {
+          "retained": true,
+          "ended_ms": 7425,
+          "start": 3596,
+          "duration": 3800
+        }
+      },
+      {
+        "base": "0x16000000",
+        "previous": {
+          "retained": false,
+          "ended_ms": 33
+        },
+        "fixed": {
+          "retained": true,
+          "ended_ms": 7425,
+          "start": 3596,
+          "duration": 3800
+        }
+      }
+    ],
+    "frost": [
+      {
+        "base": "0x10000000",
+        "previous": {
+          "retained": false,
+          "ended_ms": 33
+        },
+        "fixed": {
+          "retained": true,
+          "ended_ms": 5148,
+          "start": 853,
+          "duration": 4292
+        }
+      },
+      {
+        "base": "0x16000000",
+        "previous": {
+          "retained": false,
+          "ended_ms": 33
+        },
+        "fixed": {
+          "retained": true,
+          "ended_ms": 5148,
+          "start": 853,
+          "duration": 4292
+        }
+      }
+    ]
+  },
+  "limit": "Terminal-layer lifecycle exercised; no renderer or live in-game visual test."
+}

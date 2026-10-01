@@ -69,13 +69,13 @@ def main():
         singleton=player.select(10194,1)
         events=player.packet(46,struct.pack('<iB',singleton,0))
         dropped=next(struct.unpack_from('<i',data)[0] for tag,data in events if tag==41)
-        player.packet(47,struct.pack('<i',dropped));assert player.quantities(10194)==[5,999]
+        player.packet(47,struct.pack('<i',dropped));assert player.quantities(10194)==[5,999],(player.quantities(10194),[(t,d.hex()) for t,d in events])
         passed('dropped armour card pickup stacks to 999')
         # Dropping and collecting a whole stack must also keep its entire amount.
         small=player.select(10194,5)
         events=player.packet(46,struct.pack('<iB',small,0))
         dropped=next(struct.unpack_from('<i',data)[0] for tag,data in events if tag==41)
-        player.packet(47,struct.pack('<i',dropped));assert player.quantities(10194)==[5,999]
+        player.packet(47,struct.pack('<i',dropped));assert player.quantities(10194)==[5,999],(player.quantities(10194),[(t,d.hex()) for t,d in events])
         passed('pickup at card cap preserves the excess in a separate stack')
         # Consume the only weapon card in its stack and remove exactly that object.
         singleton=player.select(10193,1);item=player.select(1)

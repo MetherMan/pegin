@@ -332,3 +332,7 @@ BOOL	GetAttackBuffSkill( sPDESC_DATA pPlayer );
 
 
 
+
+// Only the corpse presentation is delayed; HP and death are immediate.
+DWORD GetSkill140DeathHold();
+void LoadSkill140DeathTiming();

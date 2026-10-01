@@ -1,0 +1,1282 @@
+{
+  "passed": true,
+  "model": "C:\\Users\\c\\Downloads\\\ub77c\ud0a4\uc544\uc694\\client-overlay\\Equip\\mt_longbow_1.mod",
+  "sha256": "0560c4681332f0443c0c4b5b38819a260195c5125a207631d561b36cfe7a3aef",
+  "triangles": 5148,
+  "rendered_corners": 15444,
+  "triangle_budget": 8500,
+  "native_bounds": [
+    [
+      -0.7905668020248413,
+      -0.30614474415779114,
+      -0.03240000084042549
+    ],
+    [
+      1.213819980621338,
+      0.22293418645858765,
+      0.03240000084042549
+    ]
+  ],
+  "native_grip_origin": [
+    0,
+    0,
+    0
+  ],
+  "native_matrix_identity": true,
+  "coordinate_system": "Native ANI pose space; Y is up, ground plane is Y=0",
+  "minimum_clearance": 0.0,
+  "bowstring": {
+    "triangles": 24,
+    "bounds": [
+      [
+        -0.5587965250015259,
+        -0.22981500625610352,
+        -0.0009742786060087383
+      ],
+      [
+        0.8993595838546753,
+        -0.2275650054216385,
+        0.0009742786060087383
+      ]
+    ],
+    "span": [
+      1.4581561088562012,
+      0.002250000834465027,
+      0.0019485572120174766
+    ],
+    "same_rigid_hand_transform_as_bow": true,
+    "passed": true
+  },
+  "animations": {
+    "male": {
+      "path": "runtime\\client\\GameClient\\Skill\\Ani\\arrow_m.ani",
+      "sha256": "dcbc5a2442450f20e5d0768da1d78087cc7f2fd935d228eb2800297a72463c98",
+      "frames": 136,
+      "source_frame_range": [
+        0,
+        135
+      ],
+      "bone": "Bip01 L Finger0",
+      "world_bounds": [
+        [
+          -1.0662183279341564,
+          0.15386397266271878,
+          -1.475157716288446
+        ],
+        [
+          0.875458456705138,
+          2.725085411975442,
+          0.9860675031911141
+        ]
+      ],
+      "minimum_y": 0.15386397266271878,
+      "maximum_frame_minimum_y": 1.1116998907576185,
+      "below_clearance_frames": [],
+      "worst": {
+        "frame": 34,
+        "vertex": 334,
+        "local_point": [
+          -0.46833401918411255,
+          0.0940847247838974,
+          -0.0007128000142984092
+        ],
+        "world_point": [
+          -0.25958512887102286,
+          0.15386397266271878,
+          0.1077986369047021
+        ]
+      },
+      "quaternion_norm_max_error": 3.73935120645541e-08,
+      "native_origin_to_hand_max_error": 0.0,
+      "passed": true
+    },
+    "female": {
+      "path": "runtime\\client\\GameClient\\Skill\\Ani\\arrow_f.ani",
+      "sha256": "b083370e3efa40422eead76015eaee72933f2e6ac8737daa65a1a974a2d15fcd",
+      "frames": 136,
+      "source_frame_range": [
+        0,
+        135
+      ],
+      "bone": "Bip01 L Finger0",
+      "world_bounds": [
+        [
+          -1.1170475550581616,
+          0.21220318102720548,
+          -1.4548962851757938
+        ],
+        [
+          0.8004798650054352,
+          2.6653809987866532,
+          1.0495786840472403
+        ]
+      ],
+      "minimum_y": 0.21220318102720548,
+      "maximum_frame_minimum_y": 1.0155871746529754,
+      "below_clearance_frames": [],
+      "worst": {
+        "frame": 34,
+        "vertex": 334,
+        "local_point": [
+          -0.46833401918411255,
+          0.0940847247838974,
+          -0.0007128000142984092
+        ],
+        "world_point": [
+          -0.2555385397348992,
+          0.21220318102720548,
+          0.09564867710207453
+        ]
+      },
+      "quaternion_norm_max_error": 4.405936904205987e-08,
+      "native_origin_to_hand_max_error": 0.0,
+      "passed": true
+    }
+  },
+  "locomotion": {
+    "passed": true,
+    "table": "C:\\Users\\c\\Downloads\\\ub77c\ud0a4\uc544\uc694\\runtime\\client\\GameClient\\Body\\character.wad",
+    "table_sha256": "047b4caf7ea05d3edc69872ef9bc5c42264d0db122adc04a1403d362ac02352b",
+    "weapon_index": 15,
+    "weapon_mapping": "dITEMTYPE_LONGBOW -> WEAPON_SHORTBOW (15)",
+    "source_evidence": [
+      "src/client/gameclient/Src/CharacterAction.cpp:1136",
+      "src/client/gameclient/Src/ActionMgr.cpp:293",
+      "src/client/gameclient/Src/Character.cpp:3285"
+    ],
+    "total_pose_checks": 638,
+    "minimum_y": 0.31050804804972754,
+    "unused_motion_slots": [
+      {
+        "sex": "male",
+        "mode": "war",
+        "action": "idle",
+        "level": 1,
+        "record_offset": 438137,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "male",
+        "mode": "war",
+        "action": "idle",
+        "level": 2,
+        "record_offset": 438153,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "male",
+        "mode": "war",
+        "action": "walk",
+        "level": 1,
+        "record_offset": 438185,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "male",
+        "mode": "war",
+        "action": "walk",
+        "level": 2,
+        "record_offset": 438201,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "male",
+        "mode": "peace",
+        "action": "idle",
+        "level": 1,
+        "record_offset": 440537,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "male",
+        "mode": "peace",
+        "action": "idle",
+        "level": 2,
+        "record_offset": 440553,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "male",
+        "mode": "peace",
+        "action": "walk",
+        "level": 1,
+        "record_offset": 440585,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "male",
+        "mode": "peace",
+        "action": "walk",
+        "level": 2,
+        "record_offset": 440601,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "female",
+        "mode": "war",
+        "action": "idle",
+        "level": 1,
+        "record_offset": 1158141,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "female",
+        "mode": "war",
+        "action": "idle",
+        "level": 2,
+        "record_offset": 1158157,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "female",
+        "mode": "war",
+        "action": "walk",
+        "level": 1,
+        "record_offset": 1158189,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "female",
+        "mode": "war",
+        "action": "walk",
+        "level": 2,
+        "record_offset": 1158205,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "female",
+        "mode": "peace",
+        "action": "idle",
+        "level": 1,
+        "record_offset": 1160541,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "female",
+        "mode": "peace",
+        "action": "idle",
+        "level": 2,
+        "record_offset": 1160557,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "female",
+        "mode": "peace",
+        "action": "walk",
+        "level": 1,
+        "record_offset": 1160589,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      },
+      {
+        "sex": "female",
+        "mode": "peace",
+        "action": "walk",
+        "level": 2,
+        "record_offset": 1160605,
+        "animation_id": 0,
+        "weapon_animation_id": 0
+      }
+    ],
+    "clips": [
+      {
+        "sex": "male",
+        "mode": "war",
+        "action": "idle",
+        "level": 0,
+        "record_offset": 438121,
+        "animation_id": 24,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\male.ani",
+        "sha256": "fd14e968174db32fa1d77dc27320c14f8e8de65a6a246f453786c88c3eff08ff",
+        "frames": 89,
+        "source_frame_range": [
+          1,
+          89
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.8890135107878083,
+            0.6022152114637722,
+            -0.5157582179321801
+          ],
+          [
+            0.9578200375994759,
+            1.4404838669575524,
+            0.1484669199149325
+          ]
+        ],
+        "minimum_y": 0.6022152114637722,
+        "maximum_frame_minimum_y": 0.6393362689741482,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 67,
+          "vertex": 689,
+          "local_point": [
+            -0.28228363394737244,
+            0.18152956664562225,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.39012729337057694,
+            0.6022152114637722,
+            -0.15818175864839368
+          ]
+        },
+        "quaternion_norm_max_error": 2.3905074919561287e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "male",
+        "mode": "war",
+        "action": "walk",
+        "level": 0,
+        "record_offset": 438169,
+        "animation_id": 15,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\m_ohs_pe_wlk_33.ani",
+        "sha256": "ef03f23172367dae79ce294544830d4f13cd1716a2538e1d4f4537f2f00bb8f3",
+        "frames": 33,
+        "source_frame_range": [
+          1,
+          33
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            0.09070716385088673,
+            0.584900161322348,
+            -1.3620559338860447
+          ],
+          [
+            0.4381368106473307,
+            1.7327279556596258,
+            0.7691969599356285
+          ]
+        ],
+        "minimum_y": 0.584900161322348,
+        "maximum_frame_minimum_y": 0.7087269367620083,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 31,
+          "vertex": 335,
+          "local_point": [
+            -0.46833401918411255,
+            0.0940847247838974,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.27645425869758444,
+            0.584900161322348,
+            -0.04523847531398162
+          ]
+        },
+        "quaternion_norm_max_error": 3.633697331917318e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "male",
+        "mode": "war",
+        "action": "run",
+        "level": 0,
+        "record_offset": 438217,
+        "animation_id": 24,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\male.ani",
+        "sha256": "fd14e968174db32fa1d77dc27320c14f8e8de65a6a246f453786c88c3eff08ff",
+        "frames": 2,
+        "source_frame_range": [
+          145,
+          146
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.3052657604836244,
+            0.4132741773904819,
+            -0.7613040866155497
+          ],
+          [
+            0.5394591906039008,
+            2.3219945412314327,
+            -0.19970252972390368
+          ]
+        ],
+        "minimum_y": 0.4132741773904819,
+        "maximum_frame_minimum_y": 0.4258746816427328,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 145,
+          "vertex": 3,
+          "local_point": [
+            -0.7895398736000061,
+            -0.2924526631832123,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.4422239154505938,
+            0.4132741773904819,
+            -0.3201145780727856
+          ]
+        },
+        "quaternion_norm_max_error": 1.1039262060030808e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "male",
+        "mode": "war",
+        "action": "run",
+        "level": 1,
+        "record_offset": 438233,
+        "animation_id": 24,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\male.ani",
+        "sha256": "fd14e968174db32fa1d77dc27320c14f8e8de65a6a246f453786c88c3eff08ff",
+        "frames": 25,
+        "source_frame_range": [
+          122,
+          146
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.3088720923973549,
+            0.31050804804972754,
+            -1.2441930002614514
+          ],
+          [
+            0.5579938293838165,
+            2.3724494324329797,
+            0.8873468696964971
+          ]
+        ],
+        "minimum_y": 0.31050804804972754,
+        "maximum_frame_minimum_y": 0.9076431647051958,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 139,
+          "vertex": 2,
+          "local_point": [
+            -0.7895398736000061,
+            -0.2924526631832123,
+            -0.0007128000142984092
+          ],
+          "world_point": [
+            0.23689118471434567,
+            0.31050804804972754,
+            -0.07996463700291989
+          ]
+        },
+        "quaternion_norm_max_error": 3.0916671889258396e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "male",
+        "mode": "war",
+        "action": "run",
+        "level": 2,
+        "record_offset": 438249,
+        "animation_id": 24,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\male.ani",
+        "sha256": "fd14e968174db32fa1d77dc27320c14f8e8de65a6a246f453786c88c3eff08ff",
+        "frames": 2,
+        "source_frame_range": [
+          122,
+          123
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.3088720923973549,
+            0.4258746816427328,
+            -0.8664075163566891
+          ],
+          [
+            0.5579938293838165,
+            2.228962360704894,
+            0.015616943587523247
+          ]
+        ],
+        "minimum_y": 0.4258746816427328,
+        "maximum_frame_minimum_y": 0.4409325766876193,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 122,
+          "vertex": 5,
+          "local_point": [
+            -0.7843437194824219,
+            -0.2688967287540436,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.5178783668351965,
+            0.4258746816427328,
+            -0.23129817450910728
+          ]
+        },
+        "quaternion_norm_max_error": 1.7379667149874933e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "male",
+        "mode": "peace",
+        "action": "idle",
+        "level": 0,
+        "record_offset": 440521,
+        "animation_id": 24,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\male.ani",
+        "sha256": "fd14e968174db32fa1d77dc27320c14f8e8de65a6a246f453786c88c3eff08ff",
+        "frames": 89,
+        "source_frame_range": [
+          1,
+          89
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.8890135107878083,
+            0.6022152114637722,
+            -0.5157582179321801
+          ],
+          [
+            0.9578200375994759,
+            1.4404838669575524,
+            0.1484669199149325
+          ]
+        ],
+        "minimum_y": 0.6022152114637722,
+        "maximum_frame_minimum_y": 0.6393362689741482,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 67,
+          "vertex": 689,
+          "local_point": [
+            -0.28228363394737244,
+            0.18152956664562225,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.39012729337057694,
+            0.6022152114637722,
+            -0.15818175864839368
+          ]
+        },
+        "quaternion_norm_max_error": 2.3905074919561287e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "male",
+        "mode": "peace",
+        "action": "walk",
+        "level": 0,
+        "record_offset": 440569,
+        "animation_id": 15,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\m_ohs_pe_wlk_33.ani",
+        "sha256": "ef03f23172367dae79ce294544830d4f13cd1716a2538e1d4f4537f2f00bb8f3",
+        "frames": 33,
+        "source_frame_range": [
+          1,
+          33
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            0.09070716385088673,
+            0.584900161322348,
+            -1.3620559338860447
+          ],
+          [
+            0.4381368106473307,
+            1.7327279556596258,
+            0.7691969599356285
+          ]
+        ],
+        "minimum_y": 0.584900161322348,
+        "maximum_frame_minimum_y": 0.7087269367620083,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 31,
+          "vertex": 335,
+          "local_point": [
+            -0.46833401918411255,
+            0.0940847247838974,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.27645425869758444,
+            0.584900161322348,
+            -0.04523847531398162
+          ]
+        },
+        "quaternion_norm_max_error": 3.633697331917318e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "male",
+        "mode": "peace",
+        "action": "run",
+        "level": 0,
+        "record_offset": 440617,
+        "animation_id": 24,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\male.ani",
+        "sha256": "fd14e968174db32fa1d77dc27320c14f8e8de65a6a246f453786c88c3eff08ff",
+        "frames": 2,
+        "source_frame_range": [
+          145,
+          146
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.3052657604836244,
+            0.4132741773904819,
+            -0.7613040866155497
+          ],
+          [
+            0.5394591906039008,
+            2.3219945412314327,
+            -0.19970252972390368
+          ]
+        ],
+        "minimum_y": 0.4132741773904819,
+        "maximum_frame_minimum_y": 0.4258746816427328,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 145,
+          "vertex": 3,
+          "local_point": [
+            -0.7895398736000061,
+            -0.2924526631832123,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.4422239154505938,
+            0.4132741773904819,
+            -0.3201145780727856
+          ]
+        },
+        "quaternion_norm_max_error": 1.1039262060030808e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "male",
+        "mode": "peace",
+        "action": "run",
+        "level": 1,
+        "record_offset": 440633,
+        "animation_id": 24,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\male.ani",
+        "sha256": "fd14e968174db32fa1d77dc27320c14f8e8de65a6a246f453786c88c3eff08ff",
+        "frames": 25,
+        "source_frame_range": [
+          122,
+          146
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.3088720923973549,
+            0.31050804804972754,
+            -1.2441930002614514
+          ],
+          [
+            0.5579938293838165,
+            2.3724494324329797,
+            0.8873468696964971
+          ]
+        ],
+        "minimum_y": 0.31050804804972754,
+        "maximum_frame_minimum_y": 0.9076431647051958,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 139,
+          "vertex": 2,
+          "local_point": [
+            -0.7895398736000061,
+            -0.2924526631832123,
+            -0.0007128000142984092
+          ],
+          "world_point": [
+            0.23689118471434567,
+            0.31050804804972754,
+            -0.07996463700291989
+          ]
+        },
+        "quaternion_norm_max_error": 3.0916671889258396e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "male",
+        "mode": "peace",
+        "action": "run",
+        "level": 2,
+        "record_offset": 440649,
+        "animation_id": 24,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\male.ani",
+        "sha256": "fd14e968174db32fa1d77dc27320c14f8e8de65a6a246f453786c88c3eff08ff",
+        "frames": 2,
+        "source_frame_range": [
+          122,
+          123
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.3088720923973549,
+            0.4258746816427328,
+            -0.8664075163566891
+          ],
+          [
+            0.5579938293838165,
+            2.228962360704894,
+            0.015616943587523247
+          ]
+        ],
+        "minimum_y": 0.4258746816427328,
+        "maximum_frame_minimum_y": 0.4409325766876193,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 122,
+          "vertex": 5,
+          "local_point": [
+            -0.7843437194824219,
+            -0.2688967287540436,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.5178783668351965,
+            0.4258746816427328,
+            -0.23129817450910728
+          ]
+        },
+        "quaternion_norm_max_error": 1.7379667149874933e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "war",
+        "action": "idle",
+        "level": 0,
+        "record_offset": 1158125,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 83,
+        "source_frame_range": [
+          133,
+          215
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.2821557457222198,
+            0.39257666227657395,
+            -1.1767525680544972
+          ],
+          [
+            0.09799756274191962,
+            1.6264583401870265,
+            0.5039634807607855
+          ]
+        ],
+        "minimum_y": 0.39257666227657395,
+        "maximum_frame_minimum_y": 0.4409274732812126,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 178,
+          "vertex": 334,
+          "local_point": [
+            -0.46833401918411255,
+            0.0940847247838974,
+            -0.0007128000142984092
+          ],
+          "world_point": [
+            -0.25638077359278055,
+            0.39257666227657395,
+            -0.010659081128625458
+          ]
+        },
+        "quaternion_norm_max_error": 2.6978826173085224e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "war",
+        "action": "walk",
+        "level": 0,
+        "record_offset": 1158173,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 41,
+        "source_frame_range": [
+          1,
+          41
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.30047984334031497,
+            0.6753567287126694,
+            -1.1786026041277495
+          ],
+          [
+            0.04231539386782046,
+            1.3119463345676332,
+            0.8512263687475268
+          ]
+        ],
+        "minimum_y": 0.6753567287126694,
+        "maximum_frame_minimum_y": 0.7195275943945828,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 1,
+          "vertex": 688,
+          "local_point": [
+            -0.28228363394737244,
+            0.18152956664562225,
+            -0.0007128000142984092
+          ],
+          "world_point": [
+            -0.29540184282579685,
+            0.6753567287126694,
+            0.23901053472894596
+          ]
+        },
+        "quaternion_norm_max_error": 1.3253709352234466e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "war",
+        "action": "run",
+        "level": 0,
+        "record_offset": 1158221,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 2,
+        "source_frame_range": [
+          102,
+          103
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.398666884961212,
+            0.6280900817213928,
+            -1.2698281002942409
+          ],
+          [
+            0.5851261998498741,
+            1.327100170534756,
+            0.4414298571898435
+          ]
+        ],
+        "minimum_y": 0.6280900817213928,
+        "maximum_frame_minimum_y": 0.64050701558796,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 103,
+          "vertex": 334,
+          "local_point": [
+            -0.46833401918411255,
+            0.0940847247838974,
+            -0.0007128000142984092
+          ],
+          "world_point": [
+            -0.39345498397418144,
+            0.6280900817213928,
+            -0.04815113021267575
+          ]
+        },
+        "quaternion_norm_max_error": 1.4181642526978067e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "war",
+        "action": "run",
+        "level": 1,
+        "record_offset": 1158237,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 25,
+        "source_frame_range": [
+          79,
+          103
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.398666884961212,
+            0.5964500039836509,
+            -1.2737590266171779
+          ],
+          [
+            0.6532802368486229,
+            1.3662362226664089,
+            0.5052740174293596
+          ]
+        ],
+        "minimum_y": 0.5964500039836509,
+        "maximum_frame_minimum_y": 0.6796430677196128,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 82,
+          "vertex": 334,
+          "local_point": [
+            -0.46833401918411255,
+            0.0940847247838974,
+            -0.0007128000142984092
+          ],
+          "world_point": [
+            -0.3844831132558779,
+            0.5964500039836509,
+            -3.257774247072964e-05
+          ]
+        },
+        "quaternion_norm_max_error": 1.4181642526978067e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "war",
+        "action": "run",
+        "level": 2,
+        "record_offset": 1158253,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 2,
+        "source_frame_range": [
+          78,
+          79
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.39866681811270915,
+            0.6280901759883506,
+            -1.2674128008786525
+          ],
+          [
+            0.6322828177088351,
+            1.325515795473537,
+            0.7795412398866259
+          ]
+        ],
+        "minimum_y": 0.6280901759883506,
+        "maximum_frame_minimum_y": 0.8137130453716217,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 79,
+          "vertex": 334,
+          "local_point": [
+            -0.46833401918411255,
+            0.0940847247838974,
+            -0.0007128000142984092
+          ],
+          "world_point": [
+            -0.39345493849792046,
+            0.6280901759883506,
+            -0.04815116905106448
+          ]
+        },
+        "quaternion_norm_max_error": 2.7985667006014125e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "peace",
+        "action": "idle",
+        "level": 0,
+        "record_offset": 1160525,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 121,
+        "source_frame_range": [
+          218,
+          338
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.3854250066592664,
+            0.42284338988413295,
+            -0.6330463580770694
+          ],
+          [
+            0.2969200703953694,
+            2.2308043238292363,
+            0.1842144800847379
+          ]
+        ],
+        "minimum_y": 0.42284338988413295,
+        "maximum_frame_minimum_y": 0.44122438944925746,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 218,
+          "vertex": 4,
+          "local_point": [
+            -0.7843437194824219,
+            -0.2688967287540436,
+            -0.0007128000142984092
+          ],
+          "world_point": [
+            0.2602610554479958,
+            0.42284338988413295,
+            0.16412189848691683
+          ]
+        },
+        "quaternion_norm_max_error": 2.992444070315514e-10,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "peace",
+        "action": "walk",
+        "level": 0,
+        "record_offset": 1160573,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 33,
+        "source_frame_range": [
+          44,
+          76
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            -0.014724354031734443,
+            0.5046956504250445,
+            -1.2806750594580758
+          ],
+          [
+            0.36633305976197916,
+            1.4056473318586782,
+            0.8586115341485038
+          ]
+        ],
+        "minimum_y": 0.5046956504250445,
+        "maximum_frame_minimum_y": 0.6576509743576847,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 58,
+          "vertex": 2031,
+          "local_point": [
+            0.6863370537757874,
+            0.22293418645858765,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.2842030889559637,
+            0.5046956504250445,
+            -0.49186725131730324
+          ]
+        },
+        "quaternion_norm_max_error": 3.136677362292062e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "peace",
+        "action": "run",
+        "level": 0,
+        "record_offset": 1160621,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 2,
+        "source_frame_range": [
+          129,
+          130
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            0.15736625172489194,
+            0.5773327565775479,
+            -1.4080506417976826
+          ],
+          [
+            0.3293341122835902,
+            1.3491059939134586,
+            0.5801553606454796
+          ]
+        ],
+        "minimum_y": 0.5773327565775479,
+        "maximum_frame_minimum_y": 0.6075433241825505,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 130,
+          "vertex": 689,
+          "local_point": [
+            -0.28228363394737244,
+            0.18152956664562225,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.2949485422920415,
+            0.5773327565775479,
+            -0.05330266939284681
+          ]
+        },
+        "quaternion_norm_max_error": 2.339534865836157e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "peace",
+        "action": "run",
+        "level": 1,
+        "record_offset": 1160637,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 25,
+        "source_frame_range": [
+          106,
+          130
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            0.15706998920688875,
+            0.5532305628889177,
+            -1.4173485611189554
+          ],
+          [
+            0.41769212363272534,
+            1.3533260941380083,
+            0.7593045469148736
+          ]
+        ],
+        "minimum_y": 0.5532305628889177,
+        "maximum_frame_minimum_y": 0.684382486625882,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 109,
+          "vertex": 689,
+          "local_point": [
+            -0.28228363394737244,
+            0.18152956664562225,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.30147900664223204,
+            0.5532305628889177,
+            -0.0253526451977604
+          ]
+        },
+        "quaternion_norm_max_error": 3.624077238306711e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      },
+      {
+        "sex": "female",
+        "mode": "peace",
+        "action": "run",
+        "level": 2,
+        "record_offset": 1160653,
+        "animation_id": 40,
+        "weapon_animation_id": 0,
+        "path": "runtime\\client\\GameClient\\Body\\Animation\\female_bow.ani",
+        "sha256": "c175bc7847b8a2e72868912c8d7db5a03df5fb2d0ffe47f031e018b9a8228d71",
+        "frames": 2,
+        "source_frame_range": [
+          105,
+          106
+        ],
+        "bone": "Bip01 L Finger0",
+        "world_bounds": [
+          [
+            0.15736625172489194,
+            0.5773327565775479,
+            -1.4080506417976826
+          ],
+          [
+            0.6322828234215696,
+            1.328443392479293,
+            0.7795412414464788
+          ]
+        ],
+        "minimum_y": 0.5773327565775479,
+        "maximum_frame_minimum_y": 0.8137130572189458,
+        "below_clearance_frames": [],
+        "worst": {
+          "frame": 106,
+          "vertex": 689,
+          "local_point": [
+            -0.28228363394737244,
+            0.18152956664562225,
+            0.0007128000142984092
+          ],
+          "world_point": [
+            0.2949485422920415,
+            0.5773327565775479,
+            -0.05330266939284681
+          ]
+        },
+        "quaternion_norm_max_error": 2.34698257495225e-08,
+        "native_origin_to_hand_max_error": 0.0,
+        "passed": true
+      }
+    ]
+  },
+  "in_game_visual_test": false,
+  "idle_and_movement_tested": true,
+  "mounted_motion_tested": false,
+  "subframe_interpolation_tested": false
+}

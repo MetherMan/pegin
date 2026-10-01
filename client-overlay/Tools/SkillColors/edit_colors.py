@@ -59,7 +59,7 @@ def apply(colors,mirror=None,settings=None):
   if mirror!=CLIENT:roots.append(mirror)
  settings=load_settings(HERE) if settings is None else validate_settings(settings)
  prepared,meta=compile_resources(resource_reader(CLIENT,mirror),settings,colors)
- store_resources(prepared,roots)
+ store_resources(prepared,roots,meta)
  return {'ok':True,'message':'색상·속도·거리·크기 적용 완료. 평소 게임 시작 버튼으로 다시 실행해 주세요.','colors':colors,'tuning':settings,'timing':meta}
 
 def save_preview(colors,settings):
@@ -68,10 +68,10 @@ def save_preview(colors,settings):
  if CLIENT.name!='client-overlay':raise ValueError('이 설치에서는 미리보기 설정 저장을 지원하지 않습니다.')
  colors=validate(colors);settings=validate_settings(settings)
  prepared,meta=compile_resources(resource_reader(CLIENT),settings,colors)
- store_resources(prepared,[CLIENT])
+ store_resources(prepared,[CLIENT],meta)
  return {'ok':True,'message':'미리보기 설정을 저장했습니다. 새로고침해도 유지되며 설치된 게임에는 반영되지 않습니다.','colors':colors,'tuning':settings,'timing':meta}
 
-def store_resources(prepared,roots):
+def store_resources(prepared,roots,metadata=None):
  originals={}
  try:
   for root in roots:
@@ -83,10 +83,18 @@ def store_resources(prepared,roots):
   if CLIENT.name=='client-overlay' and (repo/'distribution/update-manifest.json').is_file():
    for name in ('colors.json','tuning.json'):
     cfg=repo/'assets/skills140'/name;originals[cfg]=cfg.read_bytes() if cfg.exists() else None;cfg.write_bytes(prepared['Tools/SkillColors/'+name])
+   if metadata:
+    timing=repo/'game-data/DATA/SKILL140_DEATH.txt'
+    originals[timing]=timing.read_bytes() if timing.exists() else None
+    timing.write_bytes(('19122 %d\n19123 %d\n'%(metadata['meteor']['finalImpact'],metadata['frost']['pillarAt'])).encode('ascii'))
+    report=repo/'assets/skills140/effect-timing.json';originals[report]=report.read_bytes() if report.exists() else None
+    report.write_text(json.dumps(metadata,indent=2)+'\n',encoding='utf-8')
    p=repo/'distribution/update-manifest.json';originals[p]=p.read_bytes();manifest=json.loads(originals[p])
    for entry in manifest['files']:
     if entry['kind']=='client' and entry['path'] in prepared:
      data=prepared[entry['path']];entry.update(bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
+    if metadata and entry['kind']=='server' and entry['path']=='DATA/SKILL140_DEATH.txt':
+     data=timing.read_bytes();entry.update(bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
    p.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  except BaseException:
   for p,data in originals.items():

@@ -149,8 +149,23 @@ BOOL CMagicEffect::Create( EFFECT* pEffect )
 		return FALSE;
 	} //if
 
-	m_pSound = MAKE_COMPONENT( SoundObject3D );
-	Assert( m_pSound );
+	// Only explicitly marked private visual layers may omit the unused sound
+	// object. Any sound or damage timing in any PART preserves the normal path.
+	BOOL bPrivateVisual = FALSE;
+	BOOL bNeedsSound = FALSE;
+	EFFECT::MagicDataList::iterator soundPart = pEffect->listMagic.begin();
+	for( ; soundPart != pEffect->listMagic.end(); ++soundPart )
+	{
+		PART* p = *soundPart;
+		if( !p ) continue;
+		if( p->bEnemyPos && p->dwSpeed == 140031 ) bPrivateVisual = TRUE;
+		if( p->bSound || p->bBlowTiming ) bNeedsSound = TRUE;
+	}
+	if( !bPrivateVisual || bNeedsSound )
+	{
+		m_pSound = MAKE_COMPONENT( SoundObject3D );
+		Assert( m_pSound );
+	}
 	
 	m_pEffectData = pEffect;
 
@@ -662,6 +677,9 @@ void CMagicEffect::UpdateEnemyPos( IW3DParticles* pParticles )
 	} //if..else..
 
 
+	// Private stationary spell layers stay level instead of tilting into ground.
+	// SPEED is otherwise unused by the [ENEMY] branch; moving parts are unchanged.
+	if( pMagic->dwSpeed == 140031 ) vDir.z = 0.0F;
 	m_qRot = GetDir( vDir );
 	m_vMove = m_vTarget;
 

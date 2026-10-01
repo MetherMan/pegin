@@ -17,6 +17,6 @@
   ],
   "potion_limit": 9999,
   "card_limit": 999,
-  "potion_rows": 104,
-  "server_sha256": "23297da8c7f39b15622a325678e49bc477bb5a6ce3851206bb4e719749ce571b"
+  "potion_rows": 105,
+  "server_sha256": "9e2fdfe3df93d897ae0478e7d57580ae0d1366ae217c1a67aaffa43608ae554c"
 }

@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "legacy_missing_trail_reproduced": true,
+  "actual_movement_with_legacy_state_zero": true,
+  "initialized_rw_slots": 64,
+  "bounded_collision_probing": true,
+  "code_rx_data_rw": true,
+  "frame_rate_cases": [
+    {
+      "base": 4194304,
+      "fps": 15,
+      "emissions_per_10_seconds": 75,
+      "stopped_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "fps": 30,
+      "emissions_per_10_seconds": 100,
+      "stopped_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "fps": 60,
+      "emissions_per_10_seconds": 120,
+      "stopped_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "fps": 144,
+      "emissions_per_10_seconds": 120,
+      "stopped_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "fps": 240,
+      "emissions_per_10_seconds": 120,
+      "stopped_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "fps": 15,
+      "emissions_per_10_seconds": 75,
+      "stopped_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "fps": 30,
+      "emissions_per_10_seconds": 100,
+      "stopped_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "fps": 60,
+      "emissions_per_10_seconds": 120,
+      "stopped_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "fps": 144,
+      "emissions_per_10_seconds": 120,
+      "stopped_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "fps": 240,
+      "emissions_per_10_seconds": 120,
+      "stopped_emissions": 0
+    }
+  ],
+  "minimum_interval_ms": 80,
+  "minimum_emit_distance": 0.25,
+  "maximum_step_before_reset": 8,
+  "ground_lift": 0.35,
+  "teleport_and_object_reuse_checked": true,
+  "original_epilogue_stack_and_nonvolatile_registers_preserved": true,
+  "timestamp_wrap_checked": true,
+  "other_mounts_unchanged": true,
+  "maximum_particles_per_second": 12.5,
+  "maximum_live_trail_particles": 23,
+  "in_game_visual_test": false
+}

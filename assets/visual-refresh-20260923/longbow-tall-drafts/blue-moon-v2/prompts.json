@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen",
+  "preview_only": true,
+  "reference_note": "Exact Black Knight Longbow name was not found in local item data. Reference screenshot uses verified Black Knight Greatsword 11424 / Ws_0081_1.mod, same-rank White Hunter Longbow 11739 / Wb_0040_1.mod, and Black Knight Spear. H03 blue bow is the palette/family reference.",
+  "reference_sources": [
+    "../../bow-horns-10/bow-03.png",
+    "../../knight-reference.html",
+    "../../knight-reference.json"
+  ]
+}

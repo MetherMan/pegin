@@ -1,0 +1,26 @@
+{
+  "tool": "built-in image_gen",
+  "frame": "native-frame.png",
+  "frame_origin": "runtime/client/GameClient/Item/ws_0081.wtm",
+  "icons": {
+    "sword": {
+      "source": "../icons-gold-20260923/sword-v4.png",
+      "art_box": [20, 20, 1234, 1234]
+    },
+    "longbow": {
+      "source": "../icons-gold-20260923/longbow-v4.png",
+      "art_box": [28, 28, 1226, 1226]
+    },
+    "staff": {
+      "source": "../icons-gold-20260923/staff-v2.png",
+      "art_box": [32, 32, 1222, 1222]
+    }
+  },
+  "composition": "approved-cropped-weapon-details-20260924",
+  "prompt_set": [
+    "../icons-gold-20260923/prompt-sword-v4.json",
+    "../icons-gold-20260923/prompt-longbow-v4.json",
+    "../icons-gold-20260923/prompts-v2.json"
+  ],
+  "reference_index": "reference/index.json"
+}

@@ -1,8 +1,8 @@
 {
-  "original_sha256": "fd282cd7c764880de68855c792f9357da86d5416dfdd509473b921ca022aa181",
-  "original_size": 311296,
-  "sha256": "8e98f8744ac5cdc43c84c657f60c357ff2e1010a45258c1fc4d531f67b8e6197",
-  "section_rva": 319488,
+  "original_sha256": "da26047849cf6fefc323ad2357b30708cb89256df9b978afba0911ac6eaa43a8",
+  "original_size": 319488,
+  "sha256": "4420b3d2cc0a8d7e1352560b9dafe065abfbd3b7e1f35a06bf429ecc037d3d84",
+  "section_rva": 327680,
   "undo": [
     [
       248832,
@@ -17,20 +17,20 @@
       "66813f564a720766813fa64a7611"
     ],
     [
-      696,
+      776,
       "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
     ],
     [
       254,
-      "0500"
+      "0700"
     ],
     [
       328,
-      "00e00400"
+      "00000500"
     ],
     [
       276,
-      "00c00300"
+      "00e00300"
     ],
     [
       336,
@@ -42,31 +42,31 @@
       "label": "Twilight colour range test at 0x1003cc00: also 19140..19250",
       "va": 268684288,
       "original": "66813f564a720766813fa64a760e",
-      "replacement": "e9fb130100909090909090909090",
-      "target": 268754944,
+      "replacement": "e9fb330100909090909090909090",
+      "target": 268763136,
       "resume": 268684302,
       "assembly": "cmp word ptr [edi],19030; jb 0x1003cc0e; cmp word ptr [edi],19110; jbe 0x1003cc1c; cmp word ptr [edi],19140; jb 0x1003cc0e; cmp word ptr [edi],19250; jbe 0x1003cc1c; jmp 0x1003cc0e",
-      "code": "66813f564a0f8203ecfeff66813fa64a0f8606ecfeff66813fc44a0f82edebfeff66813f324b0f86f0ebfeffe9ddebfeffe9d8ebfeff"
+      "code": "66813f564a0f8203ccfeff66813fa64a0f8606ccfeff66813fc44a0f82edcbfeff66813f324b0f86f0cbfeffe9ddcbfeffe9d8cbfeff"
     },
     {
       "label": "Twilight colour range test at 0x1003cc47: also 19140..19250",
       "va": 268684359,
       "original": "66813f564a720766813fa64a7611",
-      "replacement": "e9f4130100909090909090909090",
-      "target": 268755008,
+      "replacement": "e9f4330100909090909090909090",
+      "target": 268763200,
       "resume": 268684373,
       "assembly": "cmp word ptr [edi],19030; jb 0x1003cc55; cmp word ptr [edi],19110; jbe 0x1003cc66; cmp word ptr [edi],19140; jb 0x1003cc55; cmp word ptr [edi],19250; jbe 0x1003cc66; jmp 0x1003cc55",
-      "code": "66813f564a0f820aecfeff66813fa64a0f8610ecfeff66813fc44a0f82f4ebfeff66813f324b0f86faebfeffe9e4ebfeffe9dfebfeff"
+      "code": "66813f564a0f820accfeff66813fa64a0f8610ccfeff66813fc44a0f82f4cbfeff66813f324b0f86facbfeffe9e4cbfeffe9dfcbfeff"
     },
     {
       "label": "Twilight colour range test at 0x1003cc82: also 19140..19250",
       "va": 268684418,
       "original": "66813f564a720766813fa64a7611",
-      "replacement": "e9f9130100909090909090909090",
-      "target": 268755072,
+      "replacement": "e9f9330100909090909090909090",
+      "target": 268763264,
       "resume": 268684432,
       "assembly": "cmp word ptr [edi],19030; jb 0x1003cc90; cmp word ptr [edi],19110; jbe 0x1003cca1; cmp word ptr [edi],19140; jb 0x1003cc90; cmp word ptr [edi],19250; jbe 0x1003cca1; jmp 0x1003cc90",
-      "code": "66813f564a0f8205ecfeff66813fa64a0f860becfeff66813fc44a0f82efebfeff66813f324b0f86f5ebfeffe9dfebfeffe9daebfeff"
+      "code": "66813f564a0f8205ccfeff66813fa64a0f860bccfeff66813fc44a0f82efcbfeff66813f324b0f86f5cbfeffe9dfcbfeffe9dacbfeff"
     }
   ],
   "validation": {

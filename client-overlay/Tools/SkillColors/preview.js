@@ -41,12 +41,20 @@ export class SkillPreview{
     preview.setPhase('B');
     preview.bindControls();
     preview.render();
-    preview.renderer.setAnimationLoop(ms=>preview.tick(ms));
+    const animate=ms=>preview.tick(ms);
+    const visibilityChanged=()=>{
+      preview.lastTime=null;
+      if(document.hidden)preview.sound?.stop();
+      else preview.needsRender=true;
+      preview.renderer.setAnimationLoop(document.hidden?null:animate);
+    };
+    document.addEventListener('visibilitychange',visibilityChanged);
+    visibilityChanged();
     return preview;
   }
   constructor(card,assets,kind,color){
     this.card=card;this.assets=assets;this.kind=kind;this.color=color;
-    this.time=0;this.playing=true;this.speed=Number(card.querySelector('.speed').value);this.lastTime=null;this.lastSoundTime=-1;
+    this.time=0;this.playing=true;this.speed=Number(card.querySelector('.speed').value);this.lastTime=null;this.lastSoundTime=-1;this.needsRender=true;
     this.targetAnchor=['heaven','six'].includes(kind)?new THREE.Vector3(5,0,-5):new THREE.Vector3(0,0,-7);
     this.facing=new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().lookAt(new THREE.Vector3(),this.targetAnchor,up));
     this.canvas=card.querySelector('canvas');
@@ -57,6 +65,7 @@ export class SkillPreview{
     this.scene=new THREE.Scene();
     this.camera=new THREE.PerspectiveCamera(36,1,.05,120);
     this.orbit=new OrbitControls(this.camera,this.canvas);
+    this.orbit.addEventListener('change',()=>{this.needsRender=true});
     this.orbit.enableDamping=true;this.orbit.dampingFactor=.09;
     this.orbit.minDistance=3;this.orbit.maxDistance=70;
     this.orbit.maxPolarAngle=Math.PI*.485;
@@ -300,6 +309,7 @@ export class SkillPreview{
   }
   setPlaying(value){
     if(!value)this.sound?.stop();
+    this.lastTime=null;
     this.playing=value;const button=this.card.querySelector('.play');button.textContent=value?'일시정지':'재생';
     button.setAttribute('aria-label',labels[this.kind]+' '+(value?'일시정지':'재생'));
   }
@@ -340,6 +350,7 @@ export class SkillPreview{
     this.render();
   }
   render(){
+    if(document.hidden){this.needsRender=true;return}
     this.actor?.update(this.time);this.victim?.update(this.time);
     for(const entry of this.timeline)this.updateEntry(entry);
     this.renderer.render(this.scene,this.camera);
@@ -352,14 +363,20 @@ export class SkillPreview{
     }
     this.card.querySelector('.seek').value=Math.floor(this.time);
     this.card.querySelector('.time').textContent=(this.time/1000).toFixed(2)+'초';
+    this.needsRender=false;
   }
   tick(ms){
-    if(this.lastTime!==null&&this.playing&&!document.hidden){
+    if(document.hidden){this.lastTime=null;return}
+    if(this.lastTime!==null&&this.playing){
       this.time=(this.time+Math.min(ms-this.lastTime,100)*this.speed)%this.duration;
       if(this.time<this.lastSoundTime){this.sound?.stop();this.lastSoundTime=-1}
       if(this.audible)for(const e of this.soundEvents)if(e.time>this.lastSoundTime&&e.time<=this.time)this.sound.play(e.name,this.speed);
       this.lastSoundTime=this.time;
     }
-    this.lastTime=ms;this.orbit.update();this.render();
+    this.lastTime=ms;
+    const cameraChanged=this.orbit.update();
+    // OrbitControls can still damp after a paused camera drag. Draw those
+    // changes, but don't reskin actors/redraw every frame once it settles.
+    if(this.playing||cameraChanged||this.needsRender)this.render();
   }
 }

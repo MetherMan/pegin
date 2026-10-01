@@ -705,6 +705,8 @@ void AttackToPlayer( sPMOB_DATA pMob, sPDESC_DATA pPlayer, BYTE divid )
 		return;
 	}
 
+	// A pending corpse must never deal another attack.
+	if (pMob->isDead) return;
 	// Object Mob
 	if( pMob->mobNum > 1000 )
 		return;
@@ -1728,7 +1730,7 @@ BYTE CheckDeadMob( sPDESC_DATA pPlayer, sPMOB_DATA pMob )
 		}//if( splitPartyExp( ) )
 
 		pMob->isDead = 1;	
-		pMob->deadTimer = g_CurrTime + GetAttackDelay( pPlayer ); //+ PluseRangeAttackDelay( pMob, pPlayer, 40 );
+		pMob->deadTimer = g_CurrTime + (GetSkill140DeathHold() ? GetSkill140DeathHold() : GetAttackDelay( pPlayer )); //+ PluseRangeAttackDelay( pMob, pPlayer, 40 );
 
 		// µ·ÀÎµ¥ µ·ÀÌ ¾È³ª¿Â°æ¿ì
 #ifdef IS_TEST_SERVER
@@ -1766,8 +1768,19 @@ BYTE CheckDeadMob( sPDESC_DATA pPlayer, sPMOB_DATA pMob )
 		pPlayer->isUpdate[dDATA_UPDATE_CHA] = 1;
 #endif
 
-		stop_fighting_mob( pMob );		
+		stop_fighting_mob( pMob );
 		stop_fighting_enemy( pMob );
+        if (GetSkill140DeathHold())
+        {
+            // State 2 freezes the already-dead client model until MonsterDie.
+            // No damage, aggro, rewards or AI are postponed.
+            g_nPos = 2;
+            PutWord(g_Packet, dPACKET_MOB_STATE, g_nPos);
+            PutWord(g_Packet, pMob->idxNum, g_nPos);
+            PutByte(g_Packet, 2, g_nPos);
+            PutSize(g_Packet, g_nPos);
+            SendToMobArea(pMob, g_Packet, g_nPos);
+        }
 
 		DATASERV_SAVECHA( pPlayer );
 

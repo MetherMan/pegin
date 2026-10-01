@@ -1,8 +1,8 @@
 {
-  "original_sha256": "b39b3f74ff4b0673c0f23867e2cc20dbeae9ab1a11433982f96511bf368064a3",
-  "original_size": 528384,
-  "sha256": "112ac56c521a88b2dc3df3635d8de9b98cec9f98d11550ea453f3f401cead93d",
-  "section_rva": 540672,
+  "original_sha256": "d0c0eb6b4564505259c6c5cf0960d5d1c62a5859bcd6d265e71754c00cdd9a23",
+  "original_size": 548864,
+  "sha256": "3233202248ef90ffccf44e1d33db88c0e84392b3e177cfebc1143b2b1defdd12",
+  "section_rva": 561152,
   "undo": [
     [
       139808,
@@ -13,20 +13,20 @@
       "e973bb070090"
     ],
     [
-      912,
+      1112,
       "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
     ],
     [
       230,
-      "0b00"
+      "1000"
     ],
     [
       304,
-      "00400800"
+      "00900800"
     ],
     [
       252,
-      "00f00600"
+      "00200700"
     ],
     [
       312,
@@ -38,21 +38,21 @@
       "label": "ride type 5 loads the Blue Moon horse model",
       "va": 4334112,
       "original": "e9fbed0500",
-      "replacement": "e9fb1d0600",
-      "target": 4735008,
+      "replacement": "e9fb6d0600",
+      "target": 4755488,
       "resume": 4334117,
-      "assembly": "mov eax,[esp+4]; cmp eax,5; jne previous; mov eax,4734976; ret 4; previous: jmp 0x481020",
-      "code": "8b44240483f8057508b800404800c20400e9eacfffffe9eae1f9ff"
+      "assembly": "mov eax,[esp+4]; cmp eax,5; jne previous; mov eax,4755456; ret 4; previous: jmp 0x481020",
+      "code": "8b44240483f8057508b800904800c20400e9ea7fffffe9ea91f9ff"
     },
     {
       "label": "Blue Moon horse rider uses the original horse posture",
       "va": 4216040,
       "original": "e973bb070090",
-      "replacement": "e953eb070090",
-      "target": 4735040,
+      "replacement": "e9533b080090",
+      "target": 4755520,
       "resume": 4216046,
       "assembly": "mov edi,[esp+0xc]; cmp di,7; jne previous; mov edi,3; mov [esi],eax; jmp 0x4054ee; previous: jmp 0x481060",
-      "code": "8b7c240c6683ff07750cbf030000008906e99814f8ffe905d0ffffe98e14f8ff"
+      "code": "8b7c240c6683ff07750cbf030000008906e998c4f7ffe90580ffffe98ec4f7ff"
     }
   ],
   "validation": {

@@ -1,6 +1,10 @@
 """Small native mesh/frame helpers shared by the two private spell builders."""
 import math,struct
 
+# Stationary [ENEMY] layers use a reserved, otherwise unused SPEED marker.
+# Engine.dll keeps these layers level; flight PARTs retain their real speed.
+GROUND_SPEED = 140031
+
 def mesh(read,out,name,vertices,indices):
     out['Effect/'+name]=read('Effect/pl_06.WEM')[:100]+struct.pack('<3i',1,len(indices)//3,len(vertices))+b''.join(struct.pack('<5f',*v) for v in vertices)+struct.pack('<i',len(indices))+struct.pack('<'+'H'*len(indices),*indices)+bytes(40)
 

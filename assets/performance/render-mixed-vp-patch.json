@@ -1,0 +1,62 @@
+{
+  "original_sha256": "1aff9c55db7e490fb089a9d37921d22d3f85424036634d45eccbbf906712af29",
+  "original_size": 606208,
+  "sha256": "e547b3e610f4ea3de39be0117857bf8812e758f783417f46917f13f22fd2f92a",
+  "section_rva": 618496,
+  "undo": [
+    [
+      126174,
+      "8b086a20526a015350ff513c"
+    ],
+    [
+      128061,
+      "52508b08ff5138"
+    ],
+    [
+      784,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      262,
+      "0700"
+    ],
+    [
+      336,
+      "00700900"
+    ],
+    [
+      284,
+      "00400700"
+    ],
+    [
+      344,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "CreateDevice: MIXED on T&L hardware, SOFTWARE fallback",
+      "va": 268561630,
+      "original": "8b086a20526a015350ff513c",
+      "replacement": "e97d83070090909090909090",
+      "target": 269054048,
+      "resume": 268561642,
+      "assembly": "\n    push edi\n    mov edi, esp\n    sub esp, 220\n    mov [esp+212], edx\n    mov ecx, [eax]\n    push esp\n    push 1\n    push 0\n    push eax\n    call dword ptr [ecx+0x34]\n    test eax, eax\n    jl software\n    cmp dword ptr [esp+196], 4294836480\n    jb software\n    mov eax, [ebp+0x1c]\n    mov ecx, [eax]\n    push dword ptr [edi+8]\n    push dword ptr [edi+4]\n    push 128\n    push dword ptr [esp+224]\n    push 1\n    push 0\n    push eax\n    call dword ptr [ecx+0x3c]\n    test eax, eax\n    jl software\n    mov [esp+216], eax\n    mov ecx, [edi+8]\n    push dword ptr [ecx]\n    call 0x10097000\n    mov eax, [esp+216]\n    jmp created\nsoftware:\n    mov eax, [ebp+0x1c]\n    mov ecx, [eax]\n    push dword ptr [edi+8]\n    push dword ptr [edi+4]\n    push 32\n    push dword ptr [esp+224]\n    push 1\n    push 0\n    push eax\n    call dword ptr [ecx+0x3c]\ncreated:\n    mov esp, edi\n    pop edi\n    add esp, 8\n",
+      "code": "5789e781ecdc000000899424d40000008b08546a016a0050ff513485c07c4a81bc24c40000000001feff723d8b451c8b08ff7708ff77046880000000ffb424e00000006a016a0050ff513c85c07c1a898424d80000008b4f08ff31e840ffffff8b8424d8000000eb1c8b451c8b08ff7708ff77046a20ffb424e00000006a016a0050ff513c89fc5f83c408e9fa7bf8ff"
+    },
+    {
+      "label": "Reset: restore the MIXED no-fog default",
+      "va": 268563517,
+      "original": "52508b08ff5138",
+      "replacement": "e9ae7c07009090",
+      "target": 269054192,
+      "resume": 268563524,
+      "assembly": "\n    push ebx\n    mov ebx, eax\n    push edx\n    push eax\n    mov ecx, [eax]\n    call dword ptr [ecx+0x38]\n    test eax, eax\n    jl reset_done\n    push eax\n    push ebx\n    call 0x10097000\n    pop eax\nreset_done:\n    pop ebx\n",
+      "code": "5389c352508b08ff513885c07c085053e8fbfeffff585be93883f8ff"
+    }
+  ],
+  "protocol": "render-mixed-vp-v2",
+  "fog_default_va": 269053952,
+  "rule": "VertexShaderVersion >= 1.0 -> MIXED, else or on failure SOFTWARE; MIXED only: FOGVERTEXMODE=LINEAR, FOGSTART=10000, FOGEND=20000 after CreateDevice/Reset",
+  "source": "src/client/render/Src/W3DScene.cpp:846-856, 445-455, 1089-1112"
+}

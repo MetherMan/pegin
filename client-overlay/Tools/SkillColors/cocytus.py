@@ -2,7 +2,7 @@
 import math
 import random
 import colorsys
-from native_vfx import plane, arcane_texture, frames, rgb, envelope
+from native_vfx import plane, arcane_texture, frames, rgb, envelope, GROUND_SPEED
 from cocytus_shapes import crag, ring_crystal, snow_cloud, squall_arc, frozen_band, mist_planes, monolith
 from skill_tuning_frames import shade_generated
 from cocytus_layout import broken_ring
@@ -68,7 +68,7 @@ def build(read, out, wed, part, effect, sound, blow, f, color, ice_color=DEFAULT
     seal_textures = [arcane_texture(read, out, 'mf', n) for n in ('jin02', 'jin03_2', 'jin01_2')]
 
     def enemy(name, x, y, z, at, duration, hit=False):
-        return effect(name, part(f'[ENEMY]\n[TARGET] {x:.5f} {y:.5f} {z:.5f}\n[STARTTIME] {at}\n[TIMELIMIT] {duration}' + ('\n' + blow() if hit else '')))
+        return effect(name, part(f'[ENEMY]\n[SPEED] {GROUND_SPEED}\n[TARGET] {x:.5f} {y:.5f} {z:.5f}\n[STARTTIME] {at}\n[TIMELIMIT] {duration}' + ('\n' + blow() if hit else '')))
 
     def ice_rgb(tint, gain):
         # Preserve the blue face hue when density and light are both pushed up.

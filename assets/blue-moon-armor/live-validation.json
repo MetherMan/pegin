@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "live server: 19132 heal 600 / price 720 type 44; 84 armour rows Rank 9 with the planned defense and price",
+    "potion merchant 9 sells 19132; 10 cost 7,200 vs 6,000 for 10 large potions (+20%)",
+    "a second purchase merges into the same stack (15)",
+    "drinking heals 600 (large potion still 120) and leaves 14 in the stack",
+    "quick-slot use (packet 114) also heals 600 and leaves 13",
+    "potion stack of 13 survives relog",
+    "warehouse 세트 page \"푸른달 트와일라잇\": sword/longbow/staff in the weapon rows, 4 armour parts in the warrior row",
+    "shelf double-click copies each armour part",
+    "all four parts equip on a level-1 warrior (same class rule as Black Knight armour)",
+    "armour card enchant +0 -> +1 (19140 -> 19141) uses one card, like other armour",
+    "GM enhance +10/+20 on armour, pants, gauntlets and boots; +20 set survives relog",
+    "warehouse 기타 lists 초대형 물약 19132 and 푸른달의 말 소유증서 19131",
+    "existing five save tables unchanged; disposable players removed"
+  ],
+  "save_data_preserved": true,
+  "in_game_visual_test": false
+}

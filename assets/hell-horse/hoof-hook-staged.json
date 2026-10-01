@@ -1,0 +1,350 @@
+{
+  "original_sha256": "f7bee3ad9706e7695f132ed8e871bd08f19829870c728ee20afe26852a38b1f8",
+  "original_size": 540672,
+  "sha256": "31bdc91d9d9ebf1840e6244dc1947bf23c24a321da0e3dafe98d1c28b04b6c32",
+  "section_rva": 552960,
+  "undo": [
+    [
+      140195,
+      "e9782c060090"
+    ],
+    [
+      1032,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0e00"
+    ],
+    [
+      304,
+      "00700800"
+    ],
+    [
+      252,
+      "00100700"
+    ],
+    [
+      312,
+      "00000000"
+    ],
+    [
+      1072,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "0f00"
+    ],
+    [
+      304,
+      "00800800"
+    ],
+    [
+      256,
+      "00500100"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "four actual animated hoof contacts replace center trail",
+      "va": 4334499,
+      "original": "e9782c060090",
+      "replacement": "e9f84c060090",
+      "target": 4747424,
+      "resume": 4334505,
+      "assembly": "\n      cmp dword ptr [ebx+0x24],4; jne ordinary;\n      pushfd; pushad; sub esp,192; mov ebp,esp;\n      call pic; pic: pop esi; sub esi,pic; add esi,4194304;\n      call dword ptr [esi+0x6a100]; mov [ebp+168],eax;\n      mov edi,ebx; shr edi,4; and edi,63; shl edi,6;\n      add edi,esi; add edi,557056;\n      lea edx,[esi+561152]; mov ecx,64;\n      probe: cmp [edi],ebx; je found;\n      cmp dword ptr [edi],0; je reset;\n      mov eax,[ebp+168]; sub eax,[edi+8]; cmp eax,5000; jae reset;\n      add edi,64; cmp edi,edx; jb next_slot; sub edi,4096;\n      next_slot: loop probe; jmp reset;\n      found:\n      mov eax,[ebp+168]; sub eax,[edi+8]; cmp eax,5000; jae reset;\n      mov eax,[ebx+0x20]; cmp [edi+4],eax; jne reset;\n      mov eax,[ebx+4]; cmp [edi+24],eax; jne reset;\n      test eax,eax; jz reset;\n      mov edx,[eax]; cmp [edi+48],edx; jne reset;\n      mov edx,[eax+4]; cmp [edi+52],edx; jne reset;\n      mov edx,[eax+12]; cmp [edi+56],edx; jne reset;\n      mov eax,[ebx+0xc]; test eax,eax; jz reset;\n      mov eax,[eax+0x18]; cmp eax,[edi+60]; jb reset;\n      mov [edi+60],eax;\n      fld dword ptr [ebx+0x44]; fsub dword ptr [edi+12]; fmul st(0),st(0);\n      fld dword ptr [ebx+0x48]; fsub dword ptr [edi+16]; fmul st(0),st(0);\n      faddp st(1),st(0); fstp dword ptr [ebp+172];\n      mov eax,[ebp+168]; mov [edi+8],eax;\n      mov eax,[ebx+0x44]; mov [edi+12],eax;\n      mov eax,[ebx+0x48]; mov [edi+16],eax;\n      fld dword ptr [ebp+172]; fcomp dword ptr [esi+552976];\n      fnstsw ax; test ah,0x45; jnz reset;\n      fld dword ptr [ebp+172]; fcomp dword ptr [esi+552980];\n      fnstsw ax; test ah,1; jz reset;\n      cmp dword ptr [ebx],0; je reset;\n      cmp dword ptr [ebx+0x10],0; je reset;\n      mov eax,[ebx+0xc]; test eax,eax; jz reset;\n      mov eax,[eax+0x18]; mov [ebp+160],eax;\n      lea eax,[ebx+0x50]; push eax;\n      lea eax,[ebx+0x44]; push eax;\n      lea ecx,[ebp+64]; call dword ptr [esi+0x6a05c];\n      mov dword ptr [ebp+164],0;\n      foot_loop:\n      mov eax,[ebp+164]; shl eax,4; add eax,esi; add eax,553056;\n      mov [ebp+176],eax;\n      push dword ptr [ebp+160];\n      mov eax,[eax+12]; add eax,esi; push eax;\n      push ebp;\n      mov ecx,[ebx]; mov edx,[ecx]; call dword ptr [edx+0x3c];\n      mov edx,[ebp+176];\n      \n          fld dword ptr [edx]; fmul dword ptr [ebp+0];\n          fld dword ptr [edx+4]; fmul dword ptr [ebp+16];\n          faddp st(1),st(0);\n          fld dword ptr [edx+8]; fmul dword ptr [ebp+32];\n          faddp st(1),st(0); fadd dword ptr [ebp+48];\n          fstp dword ptr [ebp+128];\n        \n          fld dword ptr [edx]; fmul dword ptr [ebp+4];\n          fld dword ptr [edx+4]; fmul dword ptr [ebp+20];\n          faddp st(1),st(0);\n          fld dword ptr [edx+8]; fmul dword ptr [ebp+36];\n          faddp st(1),st(0); fadd dword ptr [ebp+52];\n          fstp dword ptr [ebp+132];\n        \n          fld dword ptr [edx]; fmul dword ptr [ebp+8];\n          fld dword ptr [edx+4]; fmul dword ptr [ebp+24];\n          faddp st(1),st(0);\n          fld dword ptr [edx+8]; fmul dword ptr [ebp+40];\n          faddp st(1),st(0); fadd dword ptr [ebp+56];\n          fstp dword ptr [ebp+136];\n        \n      mov ecx,[ebp+164]; mov eax,[edi+32+ecx*4]; mov [ebp+180],eax;\n      mov eax,[ebp+132]; mov [edi+32+ecx*4],eax;\n      fld dword ptr [ebp+132]; fcomp dword ptr [esi+552988];\n      fnstsw ax; test ah,0x45; jz arm;\n      bt dword ptr [edi+20],ecx; jnc next_foot;\n      fld dword ptr [ebp+132]; fcomp dword ptr [esi+552984];\n      fnstsw ax; test ah,0x41; jz next_foot;\n      test ah,4; jnz next_foot;\n      fld dword ptr [ebp+132]; fcomp dword ptr [ebp+180];\n      fnstsw ax; test ah,0x41; jz next_foot;\n      test ah,4; jnz next_foot;\n      btr dword ptr [edi+20],ecx;\n      \n          fld dword ptr [ebp+128]; fmul dword ptr [ebp+64];\n          fld dword ptr [ebp+128+4]; fmul dword ptr [ebp+80];\n          faddp st(1),st(0);\n          fld dword ptr [ebp+128+8]; fmul dword ptr [ebp+96];\n          faddp st(1),st(0); fadd dword ptr [ebp+112];\n          fstp dword ptr [ebp+144];\n        \n          fld dword ptr [ebp+128]; fmul dword ptr [ebp+68];\n          fld dword ptr [ebp+128+4]; fmul dword ptr [ebp+84];\n          faddp st(1),st(0);\n          fld dword ptr [ebp+128+8]; fmul dword ptr [ebp+100];\n          faddp st(1),st(0); fadd dword ptr [ebp+116];\n          fstp dword ptr [ebp+148];\n        \n          fld dword ptr [ebp+128]; fmul dword ptr [ebp+72];\n          fld dword ptr [ebp+128+4]; fmul dword ptr [ebp+88];\n          faddp st(1),st(0);\n          fld dword ptr [ebp+128+8]; fmul dword ptr [ebp+104];\n          faddp st(1),st(0); fadd dword ptr [ebp+120];\n          fstp dword ptr [ebp+152];\n        \n      lea eax,[ebp+144]; push eax;\n      mov ecx,[ebx+0x10]; mov edx,[ecx]; call dword ptr [edx+0xa4];\n      fadd dword ptr [esi+552992]; fstp dword ptr [ebp+152];\n      lea eax,[ebp+144]; push eax;\n      lea eax,[esi+552960]; push eax;\n      mov ecx,[ebx+0x10]; mov edx,[ecx]; call dword ptr [edx+0x90];\n      jmp next_foot;\n      arm: bts dword ptr [edi+20],ecx;\n      next_foot: inc dword ptr [ebp+164]; cmp dword ptr [ebp+164],4; jb foot_loop;\n      jmp done;\n      reset:\n      mov [edi],ebx; mov eax,[ebx+0x20]; mov [edi+4],eax;\n      mov eax,[ebp+168]; mov [edi+8],eax;\n      mov eax,[ebx+0x44]; mov [edi+12],eax;\n      mov eax,[ebx+0x48]; mov [edi+16],eax;\n      mov dword ptr [edi+20],0;\n      mov eax,[ebx+4]; mov [edi+24],eax;\n      xor edx,edx; test eax,eax; jz empty_action;\n      mov edx,[eax]; mov [edi+48],edx;\n      mov edx,[eax+4]; mov [edi+52],edx;\n      mov edx,[eax+12]; mov [edi+56],edx; jmp reset_tick;\n      empty_action: mov [edi+48],edx; mov [edi+52],edx; mov [edi+56],edx;\n      reset_tick: xor edx,edx; mov eax,[ebx+0xc]; test eax,eax; jz empty_tick;\n      mov edx,[eax+0x18];\n      empty_tick: mov [edi+60],edx;\n      mov dword ptr [edi+32],0; mov dword ptr [edi+36],0;\n      mov dword ptr [edi+40],0; mov dword ptr [edi+44],0;\n      done: add esp,192; popad; popfd; pop edi; pop esi; jmp 0x4223bf;\n      ordinary: mov eax,[ebx+0xb8]\n    ",
+      "code": "837b24040f85e20300009c6081ecc000000089e5e8000000005e81eeb970480081c600004000ff9600a106008985a800000089dfc1ef0483e73fc1e70601f781c7008008008d9600900800b940000000391f7431833f000f84090300008b85a80000002b47083d881300000f83f502000083c74039d7720681ef00100000e2d0e9e10200008b85a80000002b47083d881300000f83cd0200008b43203947040f85c10200008b43043947180f85b502000085c00f84ad0200008b103957300f85a20200008b50043957340f85960200008b500c3957380f858a0200008b430c85c00f847f0200008b40183b473c0f827302000089473cd94344d8670cd8c8d94348d86710d8c8dec1d99dac0000008b85a80000008947088b434489470c8b4348894710d985ac000000d89e10700800dfe0f6c4450f852c020000d985ac000000d89e14700800dfe0f6c4010f8415020000833b000f840c020000837b10000f84020200008b430c85c00f84f70100008b40188985a00000008d4350508d4344508d4d40ff965ca00600c785a4000000000000008b85a4000000c1e00401f005607008008985b0000000ffb5a00000008b400c01f050558b0b8b11ff523c8b95b0000000d902d84d00d94204d84d10dec1d94208d84d20dec1d84530d99d80000000d902d84d04d94204d84d14dec1d94208d84d24dec1d84534d99d84000000d902d84d08d94204d84d18dec1d94208d84d28dec1d84538d99d880000008b8da40000008b448f208985b40000008b858400000089448f20d98584000000d89e1c700800dfe0f6c4450f84ff0000000fa34f140f83f9000000d98584000000d89e18700800dfe0f6c4410f84e2000000f6c4040f85d9000000d98584000000d89db4000000dfe0f6c4410f84c2000000f6c4040f85b90000000fb34f14d98580000000d84d40d98584000000d84d50dec1d98588000000d84d60dec1d84570d99d90000000d98580000000d84d44d98584000000d84d54dec1d98588000000d84d64dec1d84574d99d94000000d98580000000d84d48d98584000000d84d58dec1d98588000000d84d68dec1d84578d99d980000008d8590000000508b4b108b11ff92a4000000d88620700800d99d980000008d8590000000508d8600700800508b4b108b11ff9290000000eb040fab4f14ff85a400000083bda4000000040f822ffeffffeb77891f8b43208947048b85a80000008947088b434489470c8b4348894710c74714000000008b430489471831d285c074138b108957308b50048957348b500c895738eb0989573089573489573831d28b430c85c074038b501889573cc7472000000000c7472400000000c7472800000000c7472c0000000081c4c0000000619d5f5ee933aff9ff8b83b8000000e912aff9ff"
+    }
+  ],
+  "state_section_rva": 557056,
+  "version": 2,
+  "supersedes": ".htrail center emitter; old sections retained for undo",
+  "feet": [
+    [
+      "Bip02 L Finger01",
+      [
+        0.128036912464,
+        -0.007704655553,
+        0.017997010834
+      ]
+    ],
+    [
+      "Bip02 R Finger01",
+      [
+        0.128054758531,
+        0.007704499051,
+        0.018100216139
+      ]
+    ],
+    [
+      "Bip02 L Toe0",
+      [
+        0.123759327335,
+        0.003451034783,
+        0.040027760792
+      ]
+    ],
+    [
+      "Bip02 R Toe0",
+      [
+        0.123718520184,
+        -0.003541369337,
+        0.040048668851
+      ]
+    ]
+  ],
+  "validation": {
+    "passed": true,
+    "actual_native_GetBoneMatrix": true,
+    "actual_native_Common_SetWorld": true,
+    "hidden_return_buffer_and_ret12_checked": true,
+    "native_animation_fps": 35,
+    "exact_raw_ANI_used": true,
+    "named_bones": [
+      "Bip02 L Finger01",
+      "Bip02 R Finger01",
+      "Bip02 L Toe0",
+      "Bip02 R Toe0"
+    ],
+    "ground_height_call_abi_checked": true,
+    "ground_lift": 0.1,
+    "landing": 0.16,
+    "lift": 0.22,
+    "descending_landing": true,
+    "first_sample_emissions": 0,
+    "stopped_bone_queries": 0,
+    "teleports_and_identity_reset_checked": true,
+    "other_mount_dust_unchanged": true,
+    "same_pointer_stale_reset_checked": true,
+    "in_place_action_change_checked": true,
+    "animation_clock_restart_checked": true,
+    "null_model_and_action_suppressed": true,
+    "low_fps_limitation": "10/15 fps are checked for bounded emissions and ABI safety; short contacts can be skipped, no catch-up bursts",
+    "original_epilogue_stack_registers_and_x87_preserved": true,
+    "code_rx_data_rw": true,
+    "existing_sections_retained": [
+      ".htrail",
+      ".htdata",
+      ".hfire",
+      ".mdeath"
+    ],
+    "frame_rate_cases": [
+      {
+        "base": 4194304,
+        "clip": "run",
+        "fps": 10,
+        "emissions_per_2_seconds": 15,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "run",
+        "fps": 15,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "run",
+        "fps": 30,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "run",
+        "fps": 60,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "run",
+        "fps": 144,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "run-bow",
+        "fps": 10,
+        "emissions_per_2_seconds": 12,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "run-bow",
+        "fps": 15,
+        "emissions_per_2_seconds": 14,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "run-bow",
+        "fps": 30,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "run-bow",
+        "fps": 60,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "run-bow",
+        "fps": 144,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "walk",
+        "fps": 10,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "walk",
+        "fps": 15,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "walk",
+        "fps": 30,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "walk",
+        "fps": 60,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 4194304,
+        "clip": "walk",
+        "fps": 144,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run",
+        "fps": 10,
+        "emissions_per_2_seconds": 15,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run",
+        "fps": 15,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run",
+        "fps": 30,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run",
+        "fps": 60,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run",
+        "fps": 144,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run-bow",
+        "fps": 10,
+        "emissions_per_2_seconds": 12,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run-bow",
+        "fps": 15,
+        "emissions_per_2_seconds": 14,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run-bow",
+        "fps": 30,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run-bow",
+        "fps": 60,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "run-bow",
+        "fps": 144,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "walk",
+        "fps": 10,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "walk",
+        "fps": 15,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "walk",
+        "fps": 30,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "walk",
+        "fps": 60,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      },
+      {
+        "base": 6291456,
+        "clip": "walk",
+        "fps": 144,
+        "emissions_per_2_seconds": 16,
+        "idle_emissions": 0
+      }
+    ],
+    "in_game_visual_test": false,
+    "binaries": {
+      "Render.dll": "1aff9c55db7e490fb089a9d37921d22d3f85424036634d45eccbbf906712af29",
+      "Common.dll": "a96743ea3f4cdaeafb930db6703206f3fb1cb9b5bfd87a4f34eb9e837d876431"
+    }
+  }
+}

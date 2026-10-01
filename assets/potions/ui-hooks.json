@@ -1,8 +1,8 @@
 {
-  "original_sha256": "c9d5cdb8cece889cbbdebcb00d4b746c690287d4fd95d35eec75c6b4363a3db8",
-  "original_size": 512000,
-  "sha256": "73f571aa4e9c5df73e0356e77b3b05530c1cba453bd744f8e27976ff546d3764",
-  "section_rva": 524288,
+  "original_sha256": "19baeb1549d126bfad9fef82b3bfce2892f660ae9afcb70c74885c9a762e4f03",
+  "original_size": 516096,
+  "sha256": "c0ceb6fa680f0a976780d8c1d6daa2f2a8b3019b352f4cfe0fc9f5063a3428c9",
+  "section_rva": 528384,
   "undo": [
     [
       144319,
@@ -25,20 +25,20 @@
       "3d722700000f8589000000"
     ],
     [
-      952,
+      992,
       "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
     ],
     [
       230,
-      "0c00"
+      "0d00"
     ],
     [
       304,
-      "00000800"
+      "00100800"
     ],
     [
       252,
-      "00180600"
+      "00280600"
     ],
     [
       312,
@@ -50,51 +50,51 @@
       "label": "UI count normalisation 1: also accept 19132",
       "va": 268579775,
       "original": "81fb722700007509",
-      "replacement": "e93ccc0500909090",
-      "target": 268959744,
+      "replacement": "e93cdc0500909090",
+      "target": 268963840,
       "resume": 268579783,
       "assembly": "cmp ebx,0x2772; je 0x100233c7; cmp ebx,19132; je 0x100233c7; jmp 0x100233d0",
-      "code": "81fb722700000f84bb33faff81fbbc4a00000f84af33faffe9b333faffe9a533faff"
+      "code": "81fb722700000f84bb23faff81fbbc4a00000f84af23faffe9b323faffe9a523faff"
     },
     {
       "label": "UI count normalisation 2: also accept 19132",
       "va": 268580143,
       "original": "81ff722700007509",
-      "replacement": "e9fcca0500909090",
-      "target": 268959792,
+      "replacement": "e9fcda0500909090",
+      "target": 268963888,
       "resume": 268580151,
       "assembly": "cmp edi,0x2772; je 0x10023537; cmp edi,19132; je 0x10023537; jmp 0x10023540",
-      "code": "81ff722700000f84fb34faff81ffbc4a00000f84ef34faffe9f334faffe9e534faff"
+      "code": "81ff722700000f84fb24faff81ffbc4a00000f84ef24faffe9f324faffe9e524faff"
     },
     {
       "label": "UI count normalisation 3: also accept 19132",
       "va": 268580725,
       "original": "81fb722700007509",
-      "replacement": "e9e6c80500909090",
-      "target": 268959840,
+      "replacement": "e9e6d80500909090",
+      "target": 268963936,
       "resume": 268580733,
       "assembly": "cmp ebx,0x2772; je 0x1002377d; cmp ebx,19132; je 0x1002377d; jmp 0x10023786",
-      "code": "81fb722700000f841137faff81fbbc4a00000f840537faffe90937faffe9fb36faff"
+      "code": "81fb722700000f841127faff81fbbc4a00000f840527faffe90927faffe9fb26faff"
     },
     {
       "label": "UI count normalisation 4: also accept 19132",
       "va": 268581077,
       "original": "81fb722700007509",
-      "replacement": "e9b6c70500909090",
-      "target": 268959888,
+      "replacement": "e9b6d70500909090",
+      "target": 268963984,
       "resume": 268581085,
       "assembly": "cmp ebx,0x2772; je 0x100238dd; cmp ebx,19132; je 0x100238dd; jmp 0x100238e6",
-      "code": "81fb722700000f844138faff81fbbc4a00000f843538faffe93938faffe92b38faff"
+      "code": "81fb722700000f844128faff81fbbc4a00000f843528faffe93928faffe92b28faff"
     },
     {
       "label": "shop quantity box (W3DUIShop): also accept 19132",
       "va": 268693228,
       "original": "3d722700000f8589000000",
-      "replacement": "e9cf110400909090909090",
-      "target": 268959936,
+      "replacement": "e9cf210400909090909090",
+      "target": 268964032,
       "resume": 268693239,
       "assembly": "cmp eax,0x2772; je 0x1003eef7; cmp eax,19132; je 0x1003eef7; jmp 0x1003ef80",
-      "code": "3d722700000f842ceefbff3dbc4a00000f8421eefbffe9a5eefbffe917eefbff"
+      "code": "3d722700000f842cdefbff3dbc4a00000f8421defbffe9a5defbffe917defbff"
     }
   ],
   "validation": {

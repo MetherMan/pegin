@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>지옥마 · 발굽 불꽃 수정</title>
+<style>
+*{box-sizing:border-box}body{margin:0;overflow:hidden;background:#1d1b1a;color:#eee7df;font:14px system-ui}canvas{display:block}header{position:absolute;top:24px;left:28px;pointer-events:none;max-width:340px}small{color:#d7a272;letter-spacing:2px}h1{font-size:24px;margin:6px 0 12px}p{color:#c1b6aa;line-height:1.8;margin:4px 0}.controls{position:absolute;bottom:52px;left:28px;display:flex;gap:7px;flex-wrap:wrap}button{border:1px solid #74614e;background:#302922;color:#f0e5d8;border-radius:6px;padding:10px 15px;cursor:pointer}button.active{background:#644129;border-color:#d09b67}footer{position:absolute;bottom:20px;left:28px;font-size:12px;color:#ad9e8f;pointer-events:none}#status{position:absolute;right:24px;bottom:20px;font-size:12px;color:#cab397}body.clean header,body.clean .controls,body.clean footer,body.clean #status{display:none}
+</style>
+<header><small>HELL HORSE / HOOF FIRE</small><h1>발이 닿는 곳에 작은 불꽃</h1><p>네 발굽의 착지에 맞춰 한 번씩<br>불꽃 폭 0.264 · 잔불 0.385초</p><p>실제 말 모델·달리기 모션으로 재현한 미리보기</p></header>
+<div class="controls"><button id="run" class="active">달리기</button><button id="stop">정지 · 잔불 확인</button><button id="pause">일시정지</button><button id="quarter">전체</button><button id="rear">뒤에서</button><button id="feet">발굽 확대</button></div>
+<footer>드래그 회전 · 휠 확대 · 게임 화면에서는 지형과 조명에 따라 달라질 수 있음</footer><div id="status">모델을 불러오는 중…</div>
+<script type="importmap">{"imports":{"three":"../../twilight/vendor/three.module.js","controls":"../../twilight/vendor/OrbitControls.js"}}</script>
+<script type="module" src="viewer.js"></script></html>

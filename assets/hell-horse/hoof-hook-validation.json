@@ -1,0 +1,253 @@
+{
+  "passed": true,
+  "actual_native_GetBoneMatrix": true,
+  "actual_native_Common_SetWorld": true,
+  "hidden_return_buffer_and_ret12_checked": true,
+  "native_animation_fps": 35,
+  "exact_raw_ANI_used": true,
+  "named_bones": [
+    "Bip02 L Finger01",
+    "Bip02 R Finger01",
+    "Bip02 L Toe0",
+    "Bip02 R Toe0"
+  ],
+  "ground_height_call_abi_checked": true,
+  "ground_lift": 0.2,
+  "landing": 0.16,
+  "lift": 0.22,
+  "descending_landing": true,
+  "first_sample_emissions": 0,
+  "stopped_bone_queries": 0,
+  "teleports_and_identity_reset_checked": true,
+  "other_mount_dust_unchanged": true,
+  "same_pointer_stale_reset_checked": true,
+  "in_place_action_change_checked": true,
+  "animation_clock_restart_checked": true,
+  "null_model_and_action_suppressed": true,
+  "low_fps_limitation": "10/15 fps are checked for bounded emissions and ABI safety; short contacts can be skipped, no catch-up bursts",
+  "original_epilogue_stack_registers_and_x87_preserved": true,
+  "code_rx_data_rw": true,
+  "existing_sections_retained": [
+    ".htrail",
+    ".htdata",
+    ".hfire",
+    ".mdeath"
+  ],
+  "frame_rate_cases": [
+    {
+      "base": 4194304,
+      "clip": "run",
+      "fps": 10,
+      "emissions_per_2_seconds": 15,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "run",
+      "fps": 15,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "run",
+      "fps": 30,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "run",
+      "fps": 60,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "run",
+      "fps": 144,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "run-bow",
+      "fps": 10,
+      "emissions_per_2_seconds": 12,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "run-bow",
+      "fps": 15,
+      "emissions_per_2_seconds": 14,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "run-bow",
+      "fps": 30,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "run-bow",
+      "fps": 60,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "run-bow",
+      "fps": 144,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "walk",
+      "fps": 10,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "walk",
+      "fps": 15,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "walk",
+      "fps": 30,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "walk",
+      "fps": 60,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 4194304,
+      "clip": "walk",
+      "fps": 144,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run",
+      "fps": 10,
+      "emissions_per_2_seconds": 15,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run",
+      "fps": 15,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run",
+      "fps": 30,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run",
+      "fps": 60,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run",
+      "fps": 144,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run-bow",
+      "fps": 10,
+      "emissions_per_2_seconds": 12,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run-bow",
+      "fps": 15,
+      "emissions_per_2_seconds": 14,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run-bow",
+      "fps": 30,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run-bow",
+      "fps": 60,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "run-bow",
+      "fps": 144,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "walk",
+      "fps": 10,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "walk",
+      "fps": 15,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "walk",
+      "fps": 30,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "walk",
+      "fps": 60,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    },
+    {
+      "base": 6291456,
+      "clip": "walk",
+      "fps": 144,
+      "emissions_per_2_seconds": 16,
+      "idle_emissions": 0
+    }
+  ],
+  "in_game_visual_test": false,
+  "binaries": {
+    "Render.dll": "1aff9c55db7e490fb089a9d37921d22d3f85424036634d45eccbbf906712af29",
+    "Common.dll": "a96743ea3f4cdaeafb930db6703206f3fb1cb9b5bfd87a4f34eb9e837d876431"
+  }
+}

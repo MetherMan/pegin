@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "render_dll_sha256": "e547b3e610f4ea3de39be0117857bf8812e758f783417f46917f13f22fd2f92a",
+  "scene": "select-screen stage + default male armour, intro_m.ani",
+  "timings": {
+    "original": {
+      "parts": 6,
+      "frames": 300,
+      "ms_per_frame": 11.542
+    },
+    "patched": {
+      "parts": 6,
+      "frames": 300,
+      "ms_per_frame": 0.641
+    }
+  },
+  "comparison": {
+    "0": {
+      "lit_original": 339419,
+      "lit_patched": 339560,
+      "differing": 15660,
+      "over_24": 1,
+      "max": 32
+    },
+    "400": {
+      "lit_original": 339222,
+      "lit_patched": 339362,
+      "differing": 15654,
+      "over_24": 1,
+      "max": 32
+    },
+    "900": {
+      "lit_original": 339139,
+      "lit_patched": 339278,
+      "differing": 15647,
+      "over_24": 1,
+      "max": 32
+    },
+    "1500": {
+      "lit_original": 339114,
+      "lit_patched": 339254,
+      "differing": 15660,
+      "over_24": 1,
+      "max": 32
+    },
+    "2300": {
+      "lit_original": 339373,
+      "lit_patched": 339513,
+      "differing": 15652,
+      "over_24": 1,
+      "max": 32
+    },
+    "fog-900": {
+      "lit_original": 459815,
+      "lit_patched": 459753,
+      "differing": 85668,
+      "over_24": 0,
+      "max": 20
+    }
+  },
+  "pose_changes_between_ticks": [
+    1455,
+    2402,
+    1411,
+    2244
+  ],
+  "gpu": "NVIDIA GeForce RTX 4060 Ti"
+}

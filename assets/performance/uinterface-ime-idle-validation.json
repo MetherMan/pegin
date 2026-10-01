@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "messages": 88,
+  "bases": [
+    "0x10000000",
+    "0x03500000"
+  ],
+  "editorPresentPath": "byte-identical (hook is only on the editor-absent branch)",
+  "limitation": "Unicorn runs the native IMEProc; Korean chat typing must still be checked in game",
+  "idempotent": true,
+  "overlayApplied": true,
+  "sha256": "c404bc928f375676fe69ee68deb41a4439e72302d4f365475ad90fe1d6b71922"
+}

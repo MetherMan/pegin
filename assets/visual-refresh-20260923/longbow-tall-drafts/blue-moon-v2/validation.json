@@ -1,0 +1,30 @@
+{
+  "preview_only": true,
+  "mode": "built-in image_gen",
+  "images": [
+    {
+      "file": "04-lunar-sovereign.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "916456fad7a06b7d67d84fcaf0c16b018a96fa0dcbceb517daf00e4a0e9def77"
+    },
+    {
+      "file": "05-eclipse-knight.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "44e81e656daf57afb6002ddf084ccfe251d3ad31a64ab5b65e4567cdc433e034"
+    },
+    {
+      "file": "06-twin-crescent-regalia.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "sha256": "4ba87a291171029c4d45550c316bfc0262cdcda56da4fc2961d832fe046bce54"
+    }
+  ]
+}

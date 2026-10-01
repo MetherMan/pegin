@@ -1,0 +1,210 @@
+{
+  "passed": true,
+  "baseline": "runtime/weapon-proportion-before/mt_longbow_1.mod",
+  "before_sha256": "e1da9f57db14c4b452d9c73dc5e7fcf493ad282169f22d5d570eddf645ccbc66",
+  "after_sha256": "0560c4681332f0443c0c4b5b38819a260195c5125a207631d561b36cfe7a3aef",
+  "triangles": 5148,
+  "vertices": 2602,
+  "rendered_corners": 15444,
+  "uv_bytes_unchanged": true,
+  "indices_unchanged": true,
+  "triangles_unchanged": true,
+  "texture_bytes_unchanged": true,
+  "texture_sha256": "be8d95cbb419311c4babbba84c4d0a20fe1786535cff3d31ec27965b2c83ba52",
+  "native_identity_transform_unchanged": true,
+  "lod_files_identical": true,
+  "float32_position_tolerance": 2e-07,
+  "components": [
+    {
+      "kind": "string",
+      "vertices": 16,
+      "triangles": 24,
+      "xyz_scale": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "max_position_error": 4.1723251298364517e-08,
+      "max_normal_error": 1.1657718124169492e-08,
+      "before_bounds": [
+        [
+          -0.6208850145339966,
+          -0.2553499937057495,
+          -0.0010825317585840821
+        ],
+        [
+          0.9992883801460266,
+          -0.2528499960899353,
+          0.0010825317585840821
+        ]
+      ],
+      "after_bounds": [
+        [
+          -0.5587965250015259,
+          -0.22981500625610352,
+          -0.0009742786060087383
+        ],
+        [
+          0.8993595838546753,
+          -0.2275650054216385,
+          0.0009742786060087383
+        ]
+      ]
+    },
+    {
+      "kind": "body",
+      "vertices": 884,
+      "triangles": 1748,
+      "xyz_scale": [
+        0.9,
+        0.9,
+        0.648
+      ],
+      "max_position_error": 5.364418032005602e-08,
+      "max_normal_error": 4.961498312194834e-08,
+      "before_bounds": [
+        [
+          -0.8784075379371643,
+          -0.3401608467102051,
+          -0.05000000074505806
+        ],
+        [
+          -0.08319879323244095,
+          0.2078614979982376,
+          0.05000000074505806
+        ]
+      ],
+      "after_bounds": [
+        [
+          -0.7905668020248413,
+          -0.30614474415779114,
+          -0.03240000084042549
+        ],
+        [
+          -0.07487890869379044,
+          0.18707534670829773,
+          0.03240000084042549
+        ]
+      ]
+    },
+    {
+      "kind": "round_grip",
+      "vertices": 70,
+      "triangles": 128,
+      "xyz_scale": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "max_position_error": 5.215406426173352e-09,
+      "max_normal_error": 2.554870059956471e-08,
+      "before_bounds": [
+        [
+          -0.09972833096981049,
+          -0.032147713005542755,
+          -0.023000000044703484
+        ],
+        [
+          0.09291832894086838,
+          0.030607711523771286,
+          0.023000000044703484
+        ]
+      ],
+      "after_bounds": [
+        [
+          -0.08975549787282944,
+          -0.02893294021487236,
+          -0.02070000022649765
+        ],
+        [
+          0.08362649381160736,
+          0.027546940371394157,
+          0.02070000022649765
+        ]
+      ]
+    },
+    {
+      "kind": "body",
+      "vertices": 72,
+      "triangles": 140,
+      "xyz_scale": [
+        0.9,
+        0.9,
+        0.648
+      ],
+      "max_position_error": 1.7881393421514957e-08,
+      "max_normal_error": 2.9594780515118657e-08,
+      "before_bounds": [
+        [
+          -0.04308149963617325,
+          -0.2771506607532501,
+          -0.0010999999940395355
+        ],
+        [
+          0.1688118278980255,
+          -0.23104873299598694,
+          0.0010999999940395355
+        ]
+      ],
+      "after_bounds": [
+        [
+          -0.03877335041761398,
+          -0.24943560361862183,
+          -0.0007128000142984092
+        ],
+        [
+          0.15193064510822296,
+          -0.2079438716173172,
+          0.0007128000142984092
+        ]
+      ]
+    },
+    {
+      "kind": "body",
+      "vertices": 1560,
+      "triangles": 3108,
+      "xyz_scale": [
+        0.9,
+        0.9,
+        0.648
+      ],
+      "max_position_error": 1.0728836064011205e-07,
+      "max_normal_error": 5.458366403310322e-08,
+      "before_bounds": [
+        [
+          0.07857897877693176,
+          -0.2679196298122406,
+          -0.05000000074505806
+        ],
+        [
+          1.3486888408660889,
+          0.2477046549320221,
+          0.05000000074505806
+        ]
+      ],
+      "after_bounds": [
+        [
+          0.0707210823893547,
+          -0.24112766981124878,
+          -0.03240000084042549
+        ],
+        [
+          1.213819980621338,
+          0.22293418645858765,
+          0.03240000084042549
+        ]
+      ]
+    }
+  ],
+  "gameplay_files_unchanged": {
+    "client-overlay/DeicideOnline.exe": "f7bee3ad9706e7695f132ed8e871bd08f19829870c728ee20afe26852a38b1f8",
+    "client-overlay/Engine.dll": "da26047849cf6fefc323ad2357b30708cb89256df9b978afba0911ac6eaa43a8",
+    "client-overlay/Effect/particle.ptc": "74b8530dd531c24a5d1c10a0c478722700ac8f0b53975bba81b846b61b2a312f"
+  },
+  "attachment_validation_passed": true,
+  "skill_pose_checks": 272,
+  "locomotion_pose_checks": 638,
+  "minimum_skill_y": 0.15386397266271878,
+  "in_game_visual_test": false,
+  "minimum_locomotion_y": 0.31050804804972754
+}

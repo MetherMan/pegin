@@ -1,0 +1,533 @@
+{
+  "original_sha256": "1cf254e9f2d1cc63fc73a80160c659a90f76db2ced5488f8ab4445716c38d4e2",
+  "original_size": 315392,
+  "sha256": "da26047849cf6fefc323ad2357b30708cb89256df9b978afba0911ac6eaa43a8",
+  "section_rva": 323584,
+  "undo": [
+    [
+      104496,
+      "53568b74240c"
+    ],
+    [
+      736,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      254,
+      "0600"
+    ],
+    [
+      328,
+      "00f00400"
+    ],
+    [
+      276,
+      "00d00300"
+    ],
+    [
+      336,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "Omit unused sound objects only for marked silent private layers",
+      "va": 268539952,
+      "original": "53568b74240c",
+      "replacement": "e9cb57030090",
+      "target": 268759040,
+      "resume": 268539958,
+      "assembly": "\n        push ebx;\n        push esi;\n        mov esi, dword ptr [esp+0x0c];\n        test esi, esi;\n        jz original;\n        push edi;\n        push ebp;\n        mov edi, dword ptr [esi+0x4c];\n        mov ebp, dword ptr [edi];\n        xor edx, edx;\n    scan:\n        cmp ebp, edi;\n        je scanned;\n        mov eax, dword ptr [ebp+8];\n        test eax, eax;\n        jz next;\n        cmp dword ptr [eax+0x74], 0;\n        jne needs_sound;\n        cmp dword ptr [eax+0x78], 0;\n        jne needs_sound;\n        cmp dword ptr [eax+0x6c], 0;\n        je next;\n        cmp dword ptr [eax+0x54], 140031;\n        jne next;\n        mov edx, 1;\n    next:\n        mov ebp, dword ptr [ebp];\n        jmp scan;\n    scanned:\n        test edx, edx;\n        jz needs_sound;\n        pop ebp;\n        pop edi;\n        mov ebx, ecx;\n        mov dword ptr [ebx+0x10c], 0;\n        jmp 0x10019889;\n    needs_sound:\n        pop ebp;\n        pop edi;\n    original:\n    ",
+      "code": "53568b74240c85f6745257558b7e4c8b2f31d239fd742c8b450885c0742083787400753683787800753083786c00740e817854ff2202007505ba010000008b6d00ebd085d274135d5f89cbc7830c01000000000000e92fa8fcff5d5fe9d5a7fcff"
+    }
+  ],
+  "protocol": "silent-private-mage-layers-v1",
+  "ground_patch_sha256": "1cf254e9f2d1cc63fc73a80160c659a90f76db2ced5488f8ab4445716c38d4e2",
+  "preserved": "All unmarked effects, every SOUND/BLOWTIMING part, visual resources and durations",
+  "validation": {
+    "passed": true,
+    "native_create_and_destructor_cases": [
+      {
+        "base": "0x10000000",
+        "parts": [],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 0,
+          "freed": 1
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 0,
+          "freed": 1
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          null
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 0,
+          "freed": 1
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 0,
+          "freed": 1
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          {}
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          {
+            "speed": 140031
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          {
+            "speed": 140031,
+            "enemy": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 0,
+          "released": 0,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          null,
+          {
+            "speed": 140031,
+            "enemy": true
+          },
+          null
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 0,
+          "released": 0,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          {},
+          {
+            "speed": 140031,
+            "enemy": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        },
+        "after": {
+          "factory": 0,
+          "released": 0,
+          "allocated": 2,
+          "freed": 3
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          {
+            "speed": 140031,
+            "enemy": true
+          },
+          {
+            "sound": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          {
+            "blow": true
+          },
+          {
+            "speed": 140031,
+            "enemy": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          {
+            "speed": 140031,
+            "enemy": true,
+            "sound": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x10000000",
+        "parts": [
+          {
+            "speed": 140031,
+            "enemy": true,
+            "blow": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 0,
+          "freed": 1
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 0,
+          "freed": 1
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          null
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 0,
+          "freed": 1
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 0,
+          "freed": 1
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          {}
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          {
+            "speed": 140031
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          {
+            "speed": 140031,
+            "enemy": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 0,
+          "released": 0,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          null,
+          {
+            "speed": 140031,
+            "enemy": true
+          },
+          null
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 0,
+          "released": 0,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          {},
+          {
+            "speed": 140031,
+            "enemy": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        },
+        "after": {
+          "factory": 0,
+          "released": 0,
+          "allocated": 2,
+          "freed": 3
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          {
+            "speed": 140031,
+            "enemy": true
+          },
+          {
+            "sound": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          {
+            "blow": true
+          },
+          {
+            "speed": 140031,
+            "enemy": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 2,
+          "freed": 3
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          {
+            "speed": 140031,
+            "enemy": true,
+            "sound": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        }
+      },
+      {
+        "base": "0x16000000",
+        "parts": [
+          {
+            "speed": 140031,
+            "enemy": true,
+            "blow": true
+          }
+        ],
+        "before": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        },
+        "after": {
+          "factory": 1,
+          "released": 1,
+          "allocated": 1,
+          "freed": 2
+        }
+      }
+    ],
+    "external_services_stubbed": [
+      "component factory",
+      "list-node allocator/free",
+      "sound Release"
+    ],
+    "unchanged_part_copy_and_cleanup": true,
+    "stack_and_nonvolatile_registers": true,
+    "saved_resource_sound_objects": {
+      "meteor": {
+        "before": 105,
+        "after": 19,
+        "removed": 86
+      },
+      "frost": {
+        "before": 215,
+        "after": 5,
+        "removed": 210
+      }
+    },
+    "ground_and_lifetime_native_regressions_passed": true,
+    "in_game_fps_measured": false
+  }
+}
