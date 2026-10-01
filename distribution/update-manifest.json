@@ -1,147 +1,147 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-10-01-bluemoon-armor-bright-shild-label",
+  "version": "2026-10-01-bluemoon-armor-blackknight",
   "files": [
     {
       "kind": "client",
       "path": "Body/High/fe_boo_b050_1.mod",
       "source": "client-overlay/Body/High/fe_boo_b050_1.mod",
-      "bytes": 10364,
-      "sha256": "d508d48650edb14f6fc142c652f99fd1be34bd6be0db13a8d9d12057f7523d4f"
+      "bytes": 22060,
+      "sha256": "cb4ad02ecdb911d2fb7c18aeb3ced4de64dda1a8571bffa4e71bb79f61d85191"
     },
     {
       "kind": "client",
       "path": "Body/High/fe_gun_b050_1.mod",
       "source": "client-overlay/Body/High/fe_gun_b050_1.mod",
-      "bytes": 15342,
-      "sha256": "a4cc61253b2002fa6f141cebbbe7bedc3033f80203aeb0360f4ed578ae719f09"
+      "bytes": 14656,
+      "sha256": "85ffb709dceee8df3ebea602327edc00d3d1c1a6990841e3bf06128c87115715"
     },
     {
       "kind": "client",
       "path": "Body/High/fe_leg_b050_1.mod",
       "source": "client-overlay/Body/High/fe_leg_b050_1.mod",
-      "bytes": 32600,
-      "sha256": "81e9a8af61bb2068d4e3a9d7ba4c8aff286715b4f4009fa4710b64c87e52a52d"
+      "bytes": 44501,
+      "sha256": "8ecaf792c5778bcfba94acc031f12ba60a57142a090770d55dd2c63228c27027"
     },
     {
       "kind": "client",
       "path": "Body/High/fe_leg_b150_1.mod",
       "source": "client-overlay/Body/High/fe_leg_b150_1.mod",
-      "bytes": 32600,
-      "sha256": "b90f57401a14e9d863171b874b1617062908bdb06119765d5009356229cff76b"
+      "bytes": 44501,
+      "sha256": "4543bf9c737e5aca752188b2374b1c56183a89af23d3db95bf2c5080062225f5"
     },
     {
       "kind": "client",
       "path": "Body/High/fe_leg_b250_1.mod",
       "source": "client-overlay/Body/High/fe_leg_b250_1.mod",
-      "bytes": 32600,
-      "sha256": "de2f6b068e8c9dfc9aaff882e91646ecadcdcfbb7465787afc984f8386fbbf07"
+      "bytes": 44501,
+      "sha256": "297ada63f3ec42592d26500638af4b7ec7d99c72b2e7cde67269ec8425de3de9"
     },
     {
       "kind": "client",
       "path": "Body/High/fe_tor_b050_1.mod",
       "source": "client-overlay/Body/High/fe_tor_b050_1.mod",
-      "bytes": 81642,
-      "sha256": "7ea0993f210799a3ac65d5e5437528859ad19f5dbd528f535d03a4cce991afa7"
+      "bytes": 53313,
+      "sha256": "e7397894b078c11991b82239f772748a9ffbcef75edde58ff92b32338c6b5e07"
     },
     {
       "kind": "client",
       "path": "Body/High/fe_tor_b150_1.mod",
       "source": "client-overlay/Body/High/fe_tor_b150_1.mod",
-      "bytes": 81642,
-      "sha256": "f0db5335bd0b8bf32bb146ed3b1e1ae34f1cea56e4ce8b4cfbcae3ccccce4ee7"
+      "bytes": 53313,
+      "sha256": "f8b1276425601efb381ebf8591fc070b52f1899f8f8d3e6bb0e47e70d654b62b"
     },
     {
       "kind": "client",
       "path": "Body/High/fe_tor_b250_1.mod",
       "source": "client-overlay/Body/High/fe_tor_b250_1.mod",
-      "bytes": 81642,
-      "sha256": "3a9b09af5d030c339fdd498fa674aa4ab19ee385ed61ed748eb847e221b2c6f1"
+      "bytes": 53313,
+      "sha256": "ac24329561f9840679dab9a21211b722ab8ea4b7ffb38fdc7b9868d22adc380e"
     },
     {
       "kind": "client",
       "path": "Body/High/ma_boo_b050_1.mod",
       "source": "client-overlay/Body/High/ma_boo_b050_1.mod",
-      "bytes": 18790,
-      "sha256": "47c5fdf95c67aa91a42960e8ace62df37b9832ae9124bb29e76c3a11f13cd8c6"
+      "bytes": 17168,
+      "sha256": "d614db170764a193057b45aed6af9b4b09772aa94e16c8d8e08f91ecf507db88"
     },
     {
       "kind": "client",
       "path": "Body/High/ma_gun_b050_1.mod",
       "source": "client-overlay/Body/High/ma_gun_b050_1.mod",
-      "bytes": 11202,
-      "sha256": "ebc4ddadb8fddc3ee65dc3b3ec403833798caf5f4193fecf9db5b6996cb9869d"
+      "bytes": 14656,
+      "sha256": "0d860302ea5d1d7ce480f3badc607101864bbc80a8ab63fecbfd8a7dd451339d"
     },
     {
       "kind": "client",
       "path": "Body/High/ma_leg_b050_1.mod",
       "source": "client-overlay/Body/High/ma_leg_b050_1.mod",
-      "bytes": 20977,
-      "sha256": "a740b79ec3933d002ea88842de0ed78fa8947938cf8a8bb6333af1e4092e3162"
+      "bytes": 25179,
+      "sha256": "e204250b7c5083299c117fbe16aec86bff00f17d67f51c5b98488ae03fd66bab"
     },
     {
       "kind": "client",
       "path": "Body/High/ma_tor_b050_1.mod",
       "source": "client-overlay/Body/High/ma_tor_b050_1.mod",
-      "bytes": 96836,
-      "sha256": "aa010e3a14f37a9ea560378a77b32e2f33d91bd6f1f40f1bf5c4f2fd20a958f9"
+      "bytes": 98867,
+      "sha256": "e70d4507c40c9d3aff80a4c50107ca0e202896f143f5401e60bb5f5b22378a68"
     },
     {
       "kind": "client",
       "path": "Body/Sub/fe_boo_b050_2.mod",
       "source": "client-overlay/Body/Sub/fe_boo_b050_2.mod",
-      "bytes": 7264,
-      "sha256": "5a0f0f6d1972b30635002b5ed675d73e39f48e93ca53a7ac07825d65234fc437"
+      "bytes": 14704,
+      "sha256": "ebd7eb144adde11b9a799e561d61064df0d1ffba358ebf64b500b764ea13ca84"
     },
     {
       "kind": "client",
       "path": "Body/Sub/fe_gun_b050_2.mod",
       "source": "client-overlay/Body/Sub/fe_gun_b050_2.mod",
-      "bytes": 8656,
-      "sha256": "18b4d919a1d944e8648764fcc88478b983d9e0fdda0a8673f58abefd590c8d82"
+      "bytes": 5992,
+      "sha256": "7f816a931a360877a7fdfff89072d7b652d26f94f0522969c6f472966d276388"
     },
     {
       "kind": "client",
       "path": "Body/Sub/fe_leg_b050_2.mod",
       "source": "client-overlay/Body/Sub/fe_leg_b050_2.mod",
-      "bytes": 7120,
-      "sha256": "f48f3c909b56a3750b22ec14794058b76e751499589146a363d4dc4c3b4645e7"
+      "bytes": 8656,
+      "sha256": "71279d7ea6d4697ac7c163594ae597592481d6caec371efd31769466b9d4f384"
     },
     {
       "kind": "client",
       "path": "Body/Sub/fe_tor_b050_2.mod",
       "source": "client-overlay/Body/Sub/fe_tor_b050_2.mod",
-      "bytes": 9820,
-      "sha256": "0de1e12f7eb90acfee55139ceb6d75637a21e487df57560ef82eeacc706c9f57"
+      "bytes": 10924,
+      "sha256": "a38e870d78d50e20fbbe6dd2e73cb7d8a7f6085f4db1cdd52b2db348666d73d9"
     },
     {
       "kind": "client",
       "path": "Body/Sub/ma_boo_b050_2.mod",
       "source": "client-overlay/Body/Sub/ma_boo_b050_2.mod",
-      "bytes": 9904,
-      "sha256": "028995296c8200c6597aa13b88963cb46c41140562ffef6bd548ef763403190c"
+      "bytes": 12784,
+      "sha256": "f153a28eada745b3762dc506fb6043ca9e1a3753ab20d2fa302a8d9638e03dbb"
     },
     {
       "kind": "client",
       "path": "Body/Sub/ma_gun_b050_2.mod",
       "source": "client-overlay/Body/Sub/ma_gun_b050_2.mod",
       "bytes": 6136,
-      "sha256": "55b8a2cd4752924828b9589a1b77aada5577cd6b897fd391916ace949db1dff2"
+      "sha256": "8aacdd653aef4cdd4ebf333e75d691006bb8c3dec79f29f925fd0e1b726a88eb"
     },
     {
       "kind": "client",
       "path": "Body/Sub/ma_leg_b050_2.mod",
       "source": "client-overlay/Body/Sub/ma_leg_b050_2.mod",
-      "bytes": 5524,
-      "sha256": "75947ca8014b851a1deb2361d0bf2739a83a0c8307e8fae3f8a70cadbd814596"
+      "bytes": 8716,
+      "sha256": "e50db4cb81d1e6c0416d687e7219d02f857c388fb6d043274e51d5b54234f6c0"
     },
     {
       "kind": "client",
       "path": "Body/Sub/ma_tor_b050_2.mod",
       "source": "client-overlay/Body/Sub/ma_tor_b050_2.mod",
-      "bytes": 12064,
-      "sha256": "81ed602a0e083fbddd02317d47b4e9436af3e0ce470fa6bb766b6019233f0e7a"
+      "bytes": 12916,
+      "sha256": "59aa7b876b9d3800efd047f056ad4045011bdd590fab017b7c0050f427948272"
     },
     {
       "kind": "client",
@@ -4130,57 +4130,57 @@
       "kind": "client",
       "path": "Item/bm_fe_boo_icon.wtm",
       "source": "client-overlay/Item/bm_fe_boo_icon.wtm",
-      "bytes": 910,
-      "sha256": "756364852fe2200722342487e50d567677491162b6282d86e6a8f866be106a94"
+      "bytes": 1167,
+      "sha256": "1d5fcff4c3a76fb4c5c4cbda5840ce79e67f5530cf9a1109fe9caa4d57001e2b"
     },
     {
       "kind": "client",
       "path": "Item/bm_fe_gun_icon.wtm",
       "source": "client-overlay/Item/bm_fe_gun_icon.wtm",
-      "bytes": 976,
-      "sha256": "79943ee501f8004c2d5820947c5f6b0c0feae0e363a29a0e14cbd0a013e60289"
+      "bytes": 992,
+      "sha256": "9b820aba032c175cf77819f4406a8ab8d0b5ecabcbe2d9638abf92046af0c12f"
     },
     {
       "kind": "client",
       "path": "Item/bm_fe_leg_icon.wtm",
       "source": "client-overlay/Item/bm_fe_leg_icon.wtm",
-      "bytes": 1316,
-      "sha256": "8c3ba0b6bb00f96c545d14b24d462ce9d732505104369a8299bfff90ed1719d4"
+      "bytes": 1379,
+      "sha256": "5e27a606765a9d4b6cb7ab1445b6b1621b6c982e2f55ecb62ef76c7ed861eda0"
     },
     {
       "kind": "client",
       "path": "Item/bm_fe_tor_icon.wtm",
       "source": "client-overlay/Item/bm_fe_tor_icon.wtm",
-      "bytes": 1358,
-      "sha256": "4722278f42977033d02e371e1e533f626fb795aba2b3919aa254cc447f303066"
+      "bytes": 1306,
+      "sha256": "58a85d7e89a5f108d7a66a934179d7e7d69d31b2b017da0f557b7ac7069e842a"
     },
     {
       "kind": "client",
       "path": "Item/bm_ma_boo_icon.wtm",
       "source": "client-overlay/Item/bm_ma_boo_icon.wtm",
-      "bytes": 1135,
-      "sha256": "5eb860b188838acf09dd64af70ccb104b5064bde0341bedb8a525f573b90e320"
+      "bytes": 1193,
+      "sha256": "bb1d963a8c44c176c9dbdedd0b62e88ddb3a9f2c5736033df29f993f75daa7a8"
     },
     {
       "kind": "client",
       "path": "Item/bm_ma_gun_icon.wtm",
       "source": "client-overlay/Item/bm_ma_gun_icon.wtm",
-      "bytes": 980,
-      "sha256": "e94b40a7b95820994d1dd04d2ac3ffd90c75184780b942016b59cea05061c064"
+      "bytes": 995,
+      "sha256": "d3494be8fe1897441b7e9443b3e7b1e6f2788202dd0dd5a6814f0faaf670eb25"
     },
     {
       "kind": "client",
       "path": "Item/bm_ma_leg_icon.wtm",
       "source": "client-overlay/Item/bm_ma_leg_icon.wtm",
-      "bytes": 1394,
-      "sha256": "f7c9f6bab24e20fd545ee92415916290ef3c5b8c15a6126723f5d2aa582c559c"
+      "bytes": 1458,
+      "sha256": "5f77e2072d1cbe4e711a52bf0cd6cf3999f729b59d3ecfc9c62ad0a3833848fb"
     },
     {
       "kind": "client",
       "path": "Item/bm_ma_tor_icon.wtm",
       "source": "client-overlay/Item/bm_ma_tor_icon.wtm",
-      "bytes": 1598,
-      "sha256": "bd4b1993c5401ddc4f49cd7c3377a5fba8c60b79f39d5fcdf85fabee60f136fc"
+      "bytes": 1352,
+      "sha256": "9e9edc2450e14ccb08aabc5632919e39206e39d7c08209c6d523a1a0b6342be2"
     },
     {
       "kind": "client",
@@ -4585,57 +4585,57 @@
       "kind": "client",
       "path": "Texture/Body/bm_fe_boo_icon.wtm",
       "source": "client-overlay/Texture/Body/bm_fe_boo_icon.wtm",
-      "bytes": 910,
-      "sha256": "756364852fe2200722342487e50d567677491162b6282d86e6a8f866be106a94"
+      "bytes": 1167,
+      "sha256": "1d5fcff4c3a76fb4c5c4cbda5840ce79e67f5530cf9a1109fe9caa4d57001e2b"
     },
     {
       "kind": "client",
       "path": "Texture/Body/bm_fe_gun_icon.wtm",
       "source": "client-overlay/Texture/Body/bm_fe_gun_icon.wtm",
-      "bytes": 976,
-      "sha256": "79943ee501f8004c2d5820947c5f6b0c0feae0e363a29a0e14cbd0a013e60289"
+      "bytes": 992,
+      "sha256": "9b820aba032c175cf77819f4406a8ab8d0b5ecabcbe2d9638abf92046af0c12f"
     },
     {
       "kind": "client",
       "path": "Texture/Body/bm_fe_leg_icon.wtm",
       "source": "client-overlay/Texture/Body/bm_fe_leg_icon.wtm",
-      "bytes": 1316,
-      "sha256": "8c3ba0b6bb00f96c545d14b24d462ce9d732505104369a8299bfff90ed1719d4"
+      "bytes": 1379,
+      "sha256": "5e27a606765a9d4b6cb7ab1445b6b1621b6c982e2f55ecb62ef76c7ed861eda0"
     },
     {
       "kind": "client",
       "path": "Texture/Body/bm_fe_tor_icon.wtm",
       "source": "client-overlay/Texture/Body/bm_fe_tor_icon.wtm",
-      "bytes": 1358,
-      "sha256": "4722278f42977033d02e371e1e533f626fb795aba2b3919aa254cc447f303066"
+      "bytes": 1306,
+      "sha256": "58a85d7e89a5f108d7a66a934179d7e7d69d31b2b017da0f557b7ac7069e842a"
     },
     {
       "kind": "client",
       "path": "Texture/Body/bm_ma_boo_icon.wtm",
       "source": "client-overlay/Texture/Body/bm_ma_boo_icon.wtm",
-      "bytes": 1135,
-      "sha256": "5eb860b188838acf09dd64af70ccb104b5064bde0341bedb8a525f573b90e320"
+      "bytes": 1193,
+      "sha256": "bb1d963a8c44c176c9dbdedd0b62e88ddb3a9f2c5736033df29f993f75daa7a8"
     },
     {
       "kind": "client",
       "path": "Texture/Body/bm_ma_gun_icon.wtm",
       "source": "client-overlay/Texture/Body/bm_ma_gun_icon.wtm",
-      "bytes": 980,
-      "sha256": "e94b40a7b95820994d1dd04d2ac3ffd90c75184780b942016b59cea05061c064"
+      "bytes": 995,
+      "sha256": "d3494be8fe1897441b7e9443b3e7b1e6f2788202dd0dd5a6814f0faaf670eb25"
     },
     {
       "kind": "client",
       "path": "Texture/Body/bm_ma_leg_icon.wtm",
       "source": "client-overlay/Texture/Body/bm_ma_leg_icon.wtm",
-      "bytes": 1394,
-      "sha256": "f7c9f6bab24e20fd545ee92415916290ef3c5b8c15a6126723f5d2aa582c559c"
+      "bytes": 1458,
+      "sha256": "5f77e2072d1cbe4e711a52bf0cd6cf3999f729b59d3ecfc9c62ad0a3833848fb"
     },
     {
       "kind": "client",
       "path": "Texture/Body/bm_ma_tor_icon.wtm",
       "source": "client-overlay/Texture/Body/bm_ma_tor_icon.wtm",
-      "bytes": 1598,
-      "sha256": "bd4b1993c5401ddc4f49cd7c3377a5fba8c60b79f39d5fcdf85fabee60f136fc"
+      "bytes": 1352,
+      "sha256": "9e9edc2450e14ccb08aabc5632919e39206e39d7c08209c6d523a1a0b6342be2"
     },
     {
       "kind": "client",
@@ -4648,36 +4648,29 @@
       "kind": "client",
       "path": "Texture/Body/fe_boo_b050.wtm",
       "source": "client-overlay/Texture/Body/fe_boo_b050.wtm",
-      "bytes": 26883,
-      "sha256": "214c910eff6100cb3d50d731e66cd1070f2cb18fb66d19136703938d58c421d6"
+      "bytes": 89600,
+      "sha256": "18ce9c2a8b1e01dc6c3e65a094123a92cbfe2073c36f8ae9e67273b0df98bb4f"
     },
     {
       "kind": "client",
       "path": "Texture/Body/fe_gun_b050.wtm",
       "source": "client-overlay/Texture/Body/fe_gun_b050.wtm",
-      "bytes": 29719,
-      "sha256": "a9b7302958f1423f700366cea3618fcdfdb1ea89ccde9ee6bb0fc14ca716dd9d"
+      "bytes": 30611,
+      "sha256": "7bb2db470084e5d0738f12f2e5fdd933afca45f483629e31c3e943c9c16c343a"
     },
     {
       "kind": "client",
       "path": "Texture/Body/fe_leg_b050.wtm",
       "source": "client-overlay/Texture/Body/fe_leg_b050.wtm",
-      "bytes": 107741,
-      "sha256": "db6b27c98e0697c38655dd2ae09eeaece5cea32a5358b13ee67b7db6df99074b"
+      "bytes": 85789,
+      "sha256": "f9746fb25d920bb7215f9bfc00d68ca9bb547033f87c96286f67d5a12eee8cc0"
     },
     {
       "kind": "client",
       "path": "Texture/Body/fe_tor_b050.wtm",
       "source": "client-overlay/Texture/Body/fe_tor_b050.wtm",
-      "bytes": 123182,
-      "sha256": "1232cb27995cb294e7030792418e22475e2d716b0d859fd5f2fc3bd6a57ac3ff"
-    },
-    {
-      "kind": "client",
-      "path": "Texture/Body/fe_tor_b050a.wtm",
-      "source": "client-overlay/Texture/Body/fe_tor_b050a.wtm",
-      "bytes": 65080,
-      "sha256": "37389c79649785b99ab8294956e7937feb1ecc2e87f262deded06b280322eb76"
+      "bytes": 65973,
+      "sha256": "352f5060a07f8b1d426a6ad67a6f5882f1b026eb9191fc4a763873ac107c3aee"
     },
     {
       "kind": "client",
@@ -4690,50 +4683,43 @@
       "kind": "client",
       "path": "Texture/Body/ma_boo_b050.wtm",
       "source": "client-overlay/Texture/Body/ma_boo_b050.wtm",
-      "bytes": 23172,
-      "sha256": "2c9a381b932d8611d21e0f6a63f6cff630d2d5aedf22f8af96bed278706004eb"
+      "bytes": 27795,
+      "sha256": "f80d24fab356b9bc6cdb8a06f83f6385238c94d501fa9dd56e9d07139d586a6c"
     },
     {
       "kind": "client",
       "path": "Texture/Body/ma_gun_b050.wtm",
       "source": "client-overlay/Texture/Body/ma_gun_b050.wtm",
-      "bytes": 14804,
-      "sha256": "9067bf2ba38fa155a6b12e22ca651d4c83d5ccc1ec67a9d1b6a5fad2365e5b60"
+      "bytes": 30209,
+      "sha256": "7052e2d32c76fa0645e89beab986bdbb2c47fea7b8ae62fc61146d3ed2add881"
     },
     {
       "kind": "client",
       "path": "Texture/Body/ma_leg_b050.wtm",
       "source": "client-overlay/Texture/Body/ma_leg_b050.wtm",
-      "bytes": 64102,
-      "sha256": "fc716784e5a1e419a9616b18aae4c5ca11879924a91e961bca9feb61294b7800"
+      "bytes": 101966,
+      "sha256": "61cad1fb1fbca50af84baf512294601b72e4c21e44c644db303b5857748fbc2d"
     },
     {
       "kind": "client",
       "path": "Texture/Body/ma_tor_b050.wtm",
       "source": "client-overlay/Texture/Body/ma_tor_b050.wtm",
-      "bytes": 105356,
-      "sha256": "307376e108684806096d81126eb188cf589dfc656eb5240b9153950ebbfd59ec"
+      "bytes": 100541,
+      "sha256": "d8c06f085a571dfcef14842eb7aa577cb84ecfa07a2d5a08bad2aeef6455ae8c"
     },
     {
       "kind": "client",
       "path": "Texture/Body/ma_tor_b050a.wtm",
       "source": "client-overlay/Texture/Body/ma_tor_b050a.wtm",
-      "bytes": 90277,
-      "sha256": "a038bb93e1cf594aac4a17350771bed00fe2aa41c861e3be470bf23c7710a605"
+      "bytes": 93081,
+      "sha256": "bdd0b24f622b445a167efa2a3c63d7d4323c7ebeb0f5c6f4834f75d2f56b30a7"
     },
     {
       "kind": "client",
       "path": "Texture/Body/ma_tor_b050b.wtm",
       "source": "client-overlay/Texture/Body/ma_tor_b050b.wtm",
-      "bytes": 96330,
-      "sha256": "a911e331d5d586be9a6eecc2768fb70bcaeaf0a5745a3917c0ce2f4c864bc86b"
-    },
-    {
-      "kind": "client",
-      "path": "Texture/Body/ma_tor_b050c.wtm",
-      "source": "client-overlay/Texture/Body/ma_tor_b050c.wtm",
-      "bytes": 96330,
-      "sha256": "a911e331d5d586be9a6eecc2768fb70bcaeaf0a5745a3917c0ce2f4c864bc86b"
+      "bytes": 98566,
+      "sha256": "43de35cd0beeeff7f27f43713c1228a64fb783fbed75649270e714d5f41a0ac9"
     },
     {
       "kind": "client",

@@ -8,6 +8,8 @@ the same distance from the Black Knight sword (x1.68 at +0, x1.75 at +20 vs (BK/
 Columns equal for both sets (class, weight, skin flags) are copied from Black Knight. Enchanting
 needs no code: PACKET_EnchantItem moves to id+1 with the armour success table by target level.
 
+Look: the Black Knight set in Blue Moon colours (bluemoon_armor_native.LOOK, approved in
+index.html?data=bk-bluemoon); the first release used the Elf set with Black Knight pauldrons.
 Writes the models/textures/icons from bluemoon_armor_native / build_bluemoon_armor_icons, the
 three item catalogues (same rows everywhere, like the Twilight weapons), the GM enhance table and
 the warehouse 세트 group "푸른달 트와일라잇" (sword, longbow, staff and the four armour parts).
@@ -163,8 +165,8 @@ def main():
     bones = {s: base['people'][s]['idle']['bones'] for s in ('0', '1')}
     files, summary = nat.build(bones)
     # The native models must be exactly the approved preview geometry.
-    preview = json.loads((O/'elf-bluemoon.json').read_text(encoding='utf-8'))
-    card = next(s for s in preview['sets'] if s['key'] == 'elf-bk-prev')
+    preview = json.loads((O/'bk-bluemoon.json').read_text(encoding='utf-8'))
+    card = next(s for s in preview['sets'] if s['key'] == 'bk-'+nat.LOOK)
     for sex, prefix in (('0', 'ma'), ('1', 'fe')):
         def shape(chunks):
             return sorted((len(c['points']), len(c['corners']), sum(sum(p) for p in c['points'])) for c in chunks)
@@ -178,6 +180,9 @@ def main():
     for rel, data in files.items():
         (D/rel).parent.mkdir(parents=True, exist_ok=True)
         (D/rel).write_bytes(data)
+    for rel in nat.RETIRED:
+        assert rel not in files
+        (D/rel).unlink(missing_ok=True)
     new, definitions = item_rows()
     catalogues(new)
     enhance(new)

@@ -1,33 +1,33 @@
-"""Native game files for the confirmed Blue Moon armour (Elf set + Black Knight pauldrons).
+"""Native game files for the confirmed Blue Moon armour (Black Knight set in Blue Moon colours).
 
-The look is the one approved in assets/blue-moon-armor/index.html?data=elf-bluemoon (texture LOOK,
-Black Knight pauldrons, crescent emblem on chest and back). Models are written as Wind3D MOD files
-with the original chunk matrices/materials, so the game skins them exactly like the source sets:
+History: the first release (2026-10-01) was the Elf set with kitbashed Black Knight pauldrons. In
+game it looked cheap and its chest crescent stretched, so the user switched to the whole Black Knight
+set (male ma_*_b032, female fe_*_b034) recoloured by tools/build_bluemoon_bk_armor.py, look LOOK:
+the applied D tone, a crescent on the outer chest plate, and the male back leather kept dark so the
+V-shaped back plate no longer reads as an Iron Man mask. Models keep the original chunk matrices,
+materials and skinning; only texture names change:
 
-- Body/High/<sex>_<part>_b050_1.mod: Elf model; the torso also carries the Black Knight
-  pauldron triangles (all three vertices on Clavicle/UpperArm), pushed 4% out from their own joint.
+- Body/High/<sex>_<part>_b050_1.mod: the Black Knight model.
 - Female torso/legs show skin, so the client loads race variants b150/b250 (it swaps the first
   model digit for the face's race). They differ only in the Girl_*_<race> skin texture, as in the
-  original fe_*_b111/b211 files.
-- Body/Sub/<sex>_<part>_b050_2.mod: the Elf ground (dropped item) model with the new textures.
+  original fe_*_b134/b234 files. Male Black Knight parts have no skin flag.
+- Body/Sub/<sex>_<part>_b050_2.mod: the Black Knight ground (dropped item) model, new textures.
 """
 from pathlib import Path
 from io import BytesIO
 import struct, zlib
-import numpy as np
 from PIL import Image
 
 R = Path(__file__).resolve().parents[1]
 GAME = R/'runtime/client/GameClient'
-TEX = R/'assets/blue-moon-armor/elf'
-# Applied look from tools/build_bluemoon_golden_armor.py ELF_LOOKS: 'prev' = A (first release),
-# 'bright' = D, more bright plate area (user pick 2026-10-01 after A read like a blue bodysuit).
-LOOK = 'bright'
+TEX = R/'assets/blue-moon-armor/bk'
+LOOK = 'd-moon-calm'  # tools/build_bluemoon_bk_armor.py LOOKS key (user pick 2026-10-01)
 NUM = 'b050'
 PARTS = ('tor', 'leg', 'gun', 'boo')
-SEXES = {'0': ('ma', 'b008', 'b032'), '1': ('fe', 'b011', 'b034')}
+SEXES = {'0': ('ma', 'b032'), '1': ('fe', 'b034')}
 SKIN = {'girl_torso_0-1.bmp': 'Girl_torso_{race}-1.bmp', 'girl_leg_0-.bmp': 'Girl_leg_{race}-.bmp'}
-SCALE = 1.04  # same push-out as tools/bluemoon_armor_kitbash.py (approved preview)
+# Texture files of the previous (Elf-based) release that the Black Knight look no longer uses.
+RETIRED = ['Texture/Body/ma_tor_b050c.wtm', 'Texture/Body/fe_tor_b050a.wtm']
 
 
 def parse(raw):
@@ -75,37 +75,15 @@ def write(header, chunks):
     return bytes(out)
 
 
-def pauldrons(donor, bone_list):
-    """Native twin of bluemoon_armor_kitbash.shoulder_parts (keeps matrix, material and kind)."""
-    names = [b['name'] for b in bone_list]
-    rest = [np.array(b['rest'][12:15], float) for b in bone_list]
-    keep = {i for i, n in enumerate(names) if 'UpperArm' in n or 'Clavicle' in n}
-    out = []
-    for c in donor:
-        cs = c['corners']
-        faces = [f for f in range(0, len(cs), 3) if all(c['bones'][cs[f+k][0]] in keep for k in range(3))]
-        if not faces:
-            continue
-        used = sorted({cs[f+k][0] for f in faces for k in range(3)})
-        index = {old: new for new, old in enumerate(used)}
-        points = []
-        for old in used:
-            centre = rest[c['bones'][old]]
-            points.append(list(map(float, centre+(np.array(c['points'][old])-centre)*SCALE)))
-        corners = [[index[k[0]], *k[1:]] for f in faces for k in cs[f:f+3]]
-        out.append(dict(c, points=points, corners=corners, bones=[c['bones'][o] for o in used]))
-    return out
-
-
-def texture_names(prefix, part, donor_textures=()):
-    """Source texture (lower case) -> (new texture name, approved preview PNG)."""
-    elf = next(e for p, e, _ in SEXES.values() if p == prefix)
+def texture_names(prefix, part, sources):
+    """Source texture (lower case) -> (new texture name, approved preview PNG). The part's own
+    texture (e.g. ma_tor_b032) keeps the plain name, any others get a, b, ... in name order."""
+    base = f'{prefix}_{part}_{SEXES["0" if prefix == "ma" else "1"][1]}'
+    order = sorted((s for s in sources if s.lower() not in SKIN), key=lambda s: (Path(s).stem.lower() != base, s.lower()))
     names = {}
-    for ext in ('bmp', 'BMP'):
-        names[f'{prefix}_{part}_{elf}.{ext}'.lower()] = (f'{prefix}_{part}_{NUM}.bmp', TEX/f'{LOOK}-{prefix}_{part}_{elf}.png')
-    for k, source in enumerate(sorted(donor_textures)):
-        stem = Path(source).stem
-        names[source.lower()] = (f'{prefix}_{part}_{NUM}{"abc"[k]}.bmp', TEX/f'{LOOK}-{stem}.png')
+    for k, source in enumerate(order):
+        suffix = '' if k == 0 else 'abcdefgh'[k-1]
+        names[source.lower()] = (f'{prefix}_{part}_{NUM}{suffix}.bmp', TEX/f'{LOOK}-{Path(source).stem}.png')
     return names
 
 
@@ -119,23 +97,20 @@ def wtm(image):
     return out
 
 
-def build(bones_by_sex):
+def build(bones_by_sex=None):
     """Returns ({relative client path: bytes}, summary). Reads only the original game files."""
     files, summary = {}, {}
-    for sex, (prefix, elf, black) in SEXES.items():
+    for sex, (prefix, black) in SEXES.items():
         for part in PARTS:
-            header, chunks = parse((GAME/f'Body/High/{prefix}_{part}_{elf}_1.mod').read_bytes())
-            assert write(header, chunks) == (GAME/f'Body/High/{prefix}_{part}_{elf}_1.mod').read_bytes()
-            extra = []
-            if part == 'tor':
-                _, donor = parse((GAME/f'Body/High/{prefix}_tor_{black}_1.mod').read_bytes())
-                extra = pauldrons(donor, bones_by_sex[sex])
-            rename = texture_names(prefix, part, {c['texture'] for c in extra})
+            source = (GAME/f'Body/High/{prefix}_{part}_{black}_1.mod').read_bytes()
+            header, chunks = parse(source)
+            assert write(header, chunks) == source
+            rename = texture_names(prefix, part, {c['texture'] for c in chunks})
             skin = {c['texture'].lower() for c in chunks} & set(SKIN)
             races = ['0', '1', '2'] if skin else ['0']
             for race in races:
                 out = []
-                for c in chunks+extra:
+                for c in chunks:
                     key = c['texture'].lower()
                     if key in SKIN:
                         name = SKIN[key].format(race=race)
@@ -146,17 +121,13 @@ def build(bones_by_sex):
                 model = f'Body/High/{prefix}_{part}_b{race}{NUM[2:]}_1.mod'
                 files[model] = write(header, out)
                 assert [len(c['points']) for c in parse(files[model])[1]] == [len(c['points']) for c in out]
-            header2, ground = parse((GAME/f'Body/Sub/{prefix}_{part}_{elf}_2.mod').read_bytes())
+            header2, ground = parse((GAME/f'Body/Sub/{prefix}_{part}_{black}_2.mod').read_bytes())
             for c in ground:
                 key = c['texture'].lower()
                 c['texture'] = SKIN[key].format(race='0') if key in SKIN else rename[key][0]
             files[f'Body/Sub/{prefix}_{part}_{NUM}_2.mod'] = write(header2, ground)
-            used = {c['texture'].lower() for c in chunks+extra}-set(SKIN)
-            for key in sorted(used):
-                name, png = rename[key]
+            for key, (name, png) in sorted(rename.items()):
                 files['Texture/Body/'+Path(name).with_suffix('.wtm').name] = wtm(Image.open(png))
-            summary[f'{prefix}_{part}'] = dict(
-                elf_triangles=sum(len(c['corners'])//3 for c in chunks),
-                pauldron_triangles=sum(len(c['corners'])//3 for c in extra),
-                race_variants=races, textures=sorted(rename[k][0] for k in used))
+            summary[f'{prefix}_{part}'] = dict(source=f'{prefix}_{part}_{black}', triangles=sum(len(c['corners'])//3 for c in chunks),
+                                              race_variants=races, textures=sorted(n for n, _ in rename.values()))
     return files, summary
