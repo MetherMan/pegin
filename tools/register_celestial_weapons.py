@@ -35,7 +35,7 @@ FAMILIES = {'sword': ('천상의 날개 양손검', 19260, 19030, (11424, 11403)
             'longbow': ('천상의 날개 롱보우', 19290, 19060, (11739, 11718), 'cw_longbow', 'wb_0040_1.mod', 7),
             'staff': ('천상의 날개 스태프', 19320, 19090, (11865, 11844), 'cw_staff', 'ww_0015_1.mod', 9)}
 STATS = [6, 7, 8, 9, 24, 25, 26, 67, 68]
-TRAIL = '검흔C'
+TRAIL = 'celestial_gold'  # gold copy of 검흔C, tools/build_celestial_effects.py
 
 
 def native():

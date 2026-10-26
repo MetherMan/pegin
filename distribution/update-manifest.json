@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-10-26-celestial-wings-weapons",
+  "version": "2026-10-26-celestial-gold-effects",
   "files": [
     {
       "kind": "client",
@@ -154,8 +154,22 @@
       "kind": "client",
       "path": "DeicideOnline.exe",
       "source": "client-overlay/DeicideOnline.exe",
-      "bytes": 552960,
-      "sha256": "3233202248ef90ffccf44e1d33db88c0e84392b3e177cfebc1143b2b1defdd12"
+      "bytes": 557056,
+      "sha256": "5db1295b8ff724baecda9faa4caa950902d1080028d9526ecf0d1cb41d5ddb04"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/cw_arrow.wed",
+      "source": "client-overlay/Effect/cw_arrow.wed",
+      "bytes": 1692,
+      "sha256": "3202d3c5068e222a6c9ff359e9e4dc9b7dfdb52c0f989f5a699ffac4b21f7e2a"
+    },
+    {
+      "kind": "client",
+      "path": "Effect/cw_arrow_hit.wed",
+      "source": "client-overlay/Effect/cw_arrow_hit.wed",
+      "bytes": 1067,
+      "sha256": "9e1bb41d0f76eada8fd45f6def877963b405e52ebe6f7b7b6d8ee861ac744c4d"
     },
     {
       "kind": "client",
@@ -4004,8 +4018,8 @@
       "kind": "client",
       "path": "Effect/trace.tdf",
       "source": "client-overlay/Effect/trace.tdf",
-      "bytes": 799,
-      "sha256": "f4c08653bc4988adac03004b6edadaf23f051fec83508115adc976809add9927"
+      "bytes": 899,
+      "sha256": "67a454617b4b94ad2fd06ec51de4d48eb729cfa0d49ee4f07de6c9e03aaf4109"
     },
     {
       "kind": "client",
@@ -4165,8 +4179,8 @@
       "kind": "client",
       "path": "Equip/Trace.txt",
       "source": "client-overlay/Equip/Trace.txt",
-      "bytes": 27046,
-      "sha256": "865e0aa562bfc0c3e54961fc9a201d53e447af02d9517a08493dbfe58416e008"
+      "bytes": 27073,
+      "sha256": "b79a0ab7c214c5a5c0b157b3ded6f81a5ded32d7166fb901d07d76128acdd5e8"
     },
     {
       "kind": "client",
@@ -4380,10 +4394,17 @@
     },
     {
       "kind": "client",
+      "path": "Magic/cw_arrow.ms",
+      "source": "client-overlay/Magic/cw_arrow.ms",
+      "bytes": 615,
+      "sha256": "1fbe2c96221b75b1c3234a1bd31cf663275e61beed4d0318a7bb0f72feb6e50e"
+    },
+    {
+      "kind": "client",
       "path": "Magic/MagicList.ml",
       "source": "client-overlay/Magic/MagicList.ml",
-      "bytes": 9686,
-      "sha256": "b3fc237c895aab704dd05a87cae73f407af9cb9b23e7ba4f8103a8819bfc5cf2"
+      "bytes": 9717,
+      "sha256": "3d9951ad0569a79f206f4ffa82e0085fbab6cd9acd99cbd0d437cd6bbc1020ec"
     },
     {
       "kind": "client",
@@ -4895,6 +4916,20 @@
       "source": "client-overlay/Texture/Body/mt_twilight_icon.wtm",
       "bytes": 1220,
       "sha256": "12ca809409a41ad1a4c79cb28c5785461cb143e7d3b66b13725ac6a20ada28bc"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/cw_arrow_trace.wtm",
+      "source": "client-overlay/Texture/Effect/cw_arrow_trace.wtm",
+      "bytes": 9196,
+      "sha256": "5e926b55db6cf1c9092c174c5094de73a49f7b11449bee2192cfb2ee2737855e"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Effect/cw_sword_trail.wtm",
+      "source": "client-overlay/Texture/Effect/cw_sword_trail.wtm",
+      "bytes": 6095,
+      "sha256": "85b186590649c87400037f85ec25e5f9cb1aa4938679f808b9239c7a7bcb5ad3"
     },
     {
       "kind": "client",

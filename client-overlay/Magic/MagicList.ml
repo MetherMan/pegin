@@ -284,3 +284,4 @@
 [MAGIC] mt_frostA	mt_frostA.ms
 [MAGIC] mt_meteorB	mt_meteorB.ms
 [MAGIC] mt_frostB	mt_frostB.ms
+[MAGIC] cw_arrow		cw_arrow.ms

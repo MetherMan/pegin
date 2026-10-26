@@ -4229,7 +4229,7 @@ BOOL CW3DCharacter::CastingMagic( DWORD dwID, DWORD dwMagicId )
  */
 void CW3DCharacter::SetArrowInfo( const int nBowIndex )
 {
-	m_sArrow = (nBowIndex >= 19060 && nBowIndex <= 19080) ? "mt_arrow" : "�ܱñ⺻";
+	m_sArrow = (nBowIndex >= 19290 && nBowIndex <= 19310) ? "cw_arrow" : (nBowIndex >= 19060 && nBowIndex <= 19080) ? "mt_arrow" : "�ܱñ⺻";
 /*	switch( nBowIndex )
 	{
 	case 901:	case 902:	case 903:	default:

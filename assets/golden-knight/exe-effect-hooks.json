@@ -1,0 +1,86 @@
+{
+  "original_sha256": "3233202248ef90ffccf44e1d33db88c0e84392b3e177cfebc1143b2b1defdd12",
+  "original_size": 552960,
+  "sha256": "5db1295b8ff724baecda9faa4caa950902d1080028d9526ecf0d1cb41d5ddb04",
+  "section_rva": 565248,
+  "undo": [
+    [
+      43817,
+      "e9f2e40500"
+    ],
+    [
+      64089,
+      "e9b2f50600"
+    ],
+    [
+      64216,
+      "e963f50600"
+    ],
+    [
+      1152,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      230,
+      "1100"
+    ],
+    [
+      304,
+      "00a00800"
+    ],
+    [
+      252,
+      "00300700"
+    ],
+    [
+      312,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "login sword trail keeps celestial_gold from the equipped Trace.txt entry",
+      "va": 4238121,
+      "original": "e9f2e40500",
+      "replacement": "e9f2f40700",
+      "target": 4759584,
+      "resume": 4238126,
+      "assembly": "pushfd; mov ecx,dword ptr [ebp+0x30c]; test ecx,ecx; jz other; mov ecx,dword ptr [ecx+0x18]; test ecx,ecx; jz other; cmp dword ptr [ecx],0x656c6563; jne other; cmp dword ptr [ecx+4],0x61697473; jne other; cmp dword ptr [ecx+8],0x6f675f6c; jne other; cmp word ptr [ecx+12],0x646c; jne other; cmp byte ptr [ecx+14],0; jne other; popfd; push ecx; jmp 0x40ab2e; other: popfd; jmp 0x469020",
+      "code": "9c8b8d0c03000085c974368b491885c9742f813963656c65752781790473746961751e8179086c5f676f75156681790c6c64750d80790e0075079d51e9cd0af8ff9de9b9effdffe9c20af8ff"
+    },
+    {
+      "label": "gold arrow cw_arrow for bows 19290..19310 at 0x40fa59",
+      "va": 4258393,
+      "original": "e9b2f50600",
+      "replacement": "e912a60700",
+      "target": 4759664,
+      "resume": 4258398,
+      "assembly": "pushfd; cmp dword ptr [esp+20],19290; jb other; cmp dword ptr [esp+20],19310; ja other; popfd; mov edi,0x48a00f; jmp 0x40fa5e; other: popfd; jmp 0x47f010",
+      "code": "9c817c24145a4b00007215817c24146e4b0000770b9dbf0fa04800e9ce59f8ff9de97a4fffffe9c359f8ff"
+    },
+    {
+      "label": "gold arrow cw_arrow for bows 19290..19310 at 0x40fad8",
+      "va": 4258520,
+      "original": "e963f50600",
+      "replacement": "e9c3a50700",
+      "target": 4759712,
+      "resume": 4258525,
+      "assembly": "pushfd; cmp dword ptr [esp+24],19290; jb other; cmp dword ptr [esp+24],19310; ja other; popfd; mov esi,0x48a00f; jmp 0x40fadd; other: popfd; jmp 0x47f040",
+      "code": "9c817c24185a4b00007215817c24186e4b0000770b9dbe0fa04800e91d5af8ff9de97a4fffffe9125af8ff"
+    }
+  ],
+  "strings": {
+    "trail": "0x48a000",
+    "arrow": "0x48a00f"
+  },
+  "validation": {
+    "trail_cases": 8,
+    "arrow_cases": 31,
+    "trail": "celestial_gold",
+    "arrow": "cw_arrow",
+    "bows": [
+      19290,
+      19310
+    ]
+  }
+}

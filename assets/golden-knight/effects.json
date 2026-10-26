@@ -1,0 +1,102 @@
+{
+  "gold_ramp": [
+    [
+      0,
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      0.35,
+      [
+        120,
+        70,
+        10
+      ]
+    ],
+    [
+      0.65,
+      [
+        235,
+        170,
+        40
+      ]
+    ],
+    [
+      0.85,
+      [
+        255,
+        215,
+        110
+      ]
+    ],
+    [
+      1,
+      [
+        255,
+        248,
+        215
+      ]
+    ]
+  ],
+  "effect_colour_multiply": [
+    1.0,
+    0.8,
+    0.32
+  ],
+  "wed": [
+    {
+      "source": "arrow01.wed",
+      "target": "cw_arrow.wed",
+      "frames": 31,
+      "only_rgb_changed": true
+    },
+    {
+      "source": "ta_arrow01.wed",
+      "target": "cw_arrow_hit.wed",
+      "frames": 19,
+      "only_rgb_changed": true
+    }
+  ],
+  "textures": [
+    {
+      "source": "arw01.wtm",
+      "target": "cw_arrow_trace.wtm",
+      "size": [
+        128,
+        128
+      ],
+      "bits": 24
+    },
+    {
+      "source": "swd08.wtm",
+      "target": "cw_sword_trail.wtm",
+      "size": [
+        128,
+        128
+      ],
+      "bits": 24
+    }
+  ],
+  "trace": {
+    "cw_arrow_trace": {
+      "texture": "cw_arrow_trace.bmp",
+      "frames_and_rate": [
+        50,
+        111
+      ],
+      "copied_from": "활"
+    },
+    "celestial_gold": {
+      "texture": "cw_sword_trail.bmp",
+      "frames_and_rate": [
+        16,
+        111
+      ],
+      "copied_from": "검흔C"
+    }
+  },
+  "sword_trail": "celestial_gold"
+}

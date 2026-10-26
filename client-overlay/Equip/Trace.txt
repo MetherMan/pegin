@@ -234,6 +234,6 @@ ws_0081_1.mod 八如A        0.194           -0.0          -0.052              1.4
 mt_twilight_1.mod twilight_blue 0.1458286 0.0 0.0 1.74186882 0.0 0.0
 mt_twilight_2.mod twilight_blue 0.1458286 0.0 0.0 1.74186882 0.0 0.0
 mt_twilight_3.mod twilight_blue 0.1458286 0.0 0.0 1.74186882 0.0 0.0
-cw_sword_1.mod 八如C 0.6092000 0.0 0.0 1.6573000 0.0 0.0
-cw_sword_2.mod 八如C 0.6092000 0.0 0.0 1.6573000 0.0 0.0
-cw_sword_3.mod 八如C 0.6092000 0.0 0.0 1.6573000 0.0 0.0
+cw_sword_1.mod celestial_gold 0.6092000 0.0 0.0 1.6573000 0.0 0.0
+cw_sword_2.mod celestial_gold 0.6092000 0.0 0.0 1.6573000 0.0 0.0
+cw_sword_3.mod celestial_gold 0.6092000 0.0 0.0 1.6573000 0.0 0.0
