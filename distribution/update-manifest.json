@@ -1,7 +1,7 @@
 {
   "format": 1,
   "repository": "MetherMan/pegin",
-  "version": "2026-10-01-bluemoon-armor-blackknight",
+  "version": "2026-10-26-celestial-wings-weapons",
   "files": [
     {
       "kind": "client",
@@ -4011,8 +4011,8 @@
       "kind": "client",
       "path": "Engine.dll",
       "source": "client-overlay/Engine.dll",
-      "bytes": 327680,
-      "sha256": "b1e780bfa2ab9f681316f47dcd57c7d8ee5d73bdccbef3adb39a290f1e305bcd"
+      "bytes": 331776,
+      "sha256": "c1cbb6021ae2746d515d85cab735f3fb37e408d8b011159d66e79fd5fb8609a7"
     },
     {
       "kind": "client",
@@ -4034,6 +4034,69 @@
       "source": "client-overlay/Equip/bn_blood_3.mod",
       "bytes": 3815900,
       "sha256": "97bf824e27ae00db472884ac32f49eacf5dbea89a96e6895dc38c94072bdd000"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/cw_longbow_1.mod",
+      "source": "client-overlay/Equip/cw_longbow_1.mod",
+      "bytes": 871840,
+      "sha256": "025f0312c8becf9fd98b2daa90cdd4c996f8fb9c4e627686e18b0dc665d06454"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/cw_longbow_2.mod",
+      "source": "client-overlay/Equip/cw_longbow_2.mod",
+      "bytes": 871840,
+      "sha256": "025f0312c8becf9fd98b2daa90cdd4c996f8fb9c4e627686e18b0dc665d06454"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/cw_longbow_3.mod",
+      "source": "client-overlay/Equip/cw_longbow_3.mod",
+      "bytes": 871840,
+      "sha256": "025f0312c8becf9fd98b2daa90cdd4c996f8fb9c4e627686e18b0dc665d06454"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/cw_staff_1.mod",
+      "source": "client-overlay/Equip/cw_staff_1.mod",
+      "bytes": 966340,
+      "sha256": "aa0de7b2410871a0aa5a4db04ac9d2190aa5ce6fc592e666d13e62d6da33e0c0"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/cw_staff_2.mod",
+      "source": "client-overlay/Equip/cw_staff_2.mod",
+      "bytes": 966340,
+      "sha256": "aa0de7b2410871a0aa5a4db04ac9d2190aa5ce6fc592e666d13e62d6da33e0c0"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/cw_staff_3.mod",
+      "source": "client-overlay/Equip/cw_staff_3.mod",
+      "bytes": 966340,
+      "sha256": "aa0de7b2410871a0aa5a4db04ac9d2190aa5ce6fc592e666d13e62d6da33e0c0"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/cw_sword_1.mod",
+      "source": "client-overlay/Equip/cw_sword_1.mod",
+      "bytes": 1402132,
+      "sha256": "a5ab4f9faca41be79173fd71dc5bce468908c71ef3cc50a612bfce349d22f844"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/cw_sword_2.mod",
+      "source": "client-overlay/Equip/cw_sword_2.mod",
+      "bytes": 1402132,
+      "sha256": "a5ab4f9faca41be79173fd71dc5bce468908c71ef3cc50a612bfce349d22f844"
+    },
+    {
+      "kind": "client",
+      "path": "Equip/cw_sword_3.mod",
+      "source": "client-overlay/Equip/cw_sword_3.mod",
+      "bytes": 1402132,
+      "sha256": "a5ab4f9faca41be79173fd71dc5bce468908c71ef3cc50a612bfce349d22f844"
     },
     {
       "kind": "client",
@@ -4102,15 +4165,15 @@
       "kind": "client",
       "path": "Equip/Trace.txt",
       "source": "client-overlay/Equip/Trace.txt",
-      "bytes": 26872,
-      "sha256": "c616b4da24e75bf28c478067576876e9fd87a575769bf53da6d59574fcf83299"
+      "bytes": 27046,
+      "sha256": "865e0aa562bfc0c3e54961fc9a201d53e447af02d9517a08493dbfe58416e008"
     },
     {
       "kind": "client",
       "path": "Interface/item.dat",
       "source": "client-overlay/Interface/item.dat",
-      "bytes": 377456,
-      "sha256": "80fc54726ebf501586532e0c37b22f101d3b9f7cb9df148c2e66b63672bcee71"
+      "bytes": 379399,
+      "sha256": "b0000b6a55309c3b244bcd35a02bdff920712562616b8930132a7326a7f18814"
     },
     {
       "kind": "client",
@@ -4191,6 +4254,27 @@
     },
     {
       "kind": "client",
+      "path": "Item/cw_longbow_icon.wtm",
+      "source": "client-overlay/Item/cw_longbow_icon.wtm",
+      "bytes": 827,
+      "sha256": "496f3f5a86560071bc38aef7d53ce88b24d6815612141331f98c039ec8e1a7a2"
+    },
+    {
+      "kind": "client",
+      "path": "Item/cw_staff_icon.wtm",
+      "source": "client-overlay/Item/cw_staff_icon.wtm",
+      "bytes": 1101,
+      "sha256": "bc818978d4cc165591217242130d1cc1a6d896f2592d607243fcc07bffa84426"
+    },
+    {
+      "kind": "client",
+      "path": "Item/cw_sword_icon.wtm",
+      "source": "client-overlay/Item/cw_sword_icon.wtm",
+      "bytes": 1025,
+      "sha256": "ab626a9ddc2e8e396e92b6c945272db20a6955faf15b951a51ce4cb16dfa77a3"
+    },
+    {
+      "kind": "client",
       "path": "Item/hppotion_xl.wtm",
       "source": "client-overlay/Item/hppotion_xl.wtm",
       "bytes": 2011,
@@ -4200,8 +4284,8 @@
       "kind": "client",
       "path": "Item/ITEM.dat",
       "source": "client-overlay/Item/ITEM.dat",
-      "bytes": 4231415,
-      "sha256": "f3e06830a17e8384cfe36352c5f4077428b1023caa926e8393e1e5cfcdaafef7"
+      "bytes": 4254025,
+      "sha256": "7f533509e75835a60ed1a2b8592f7aa4ef21258c2fcbb572c4f25b68b49d1402"
     },
     {
       "kind": "client",
@@ -4643,6 +4727,27 @@
       "source": "client-overlay/Texture/Body/bn_blood.wtm",
       "bytes": 2304894,
       "sha256": "6a185927b050e62ae251921021e3dc1bb650ec6457f48e07941c75ba4687d0c2"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/cw_longbow_icon.wtm",
+      "source": "client-overlay/Texture/Body/cw_longbow_icon.wtm",
+      "bytes": 827,
+      "sha256": "496f3f5a86560071bc38aef7d53ce88b24d6815612141331f98c039ec8e1a7a2"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/cw_staff_icon.wtm",
+      "source": "client-overlay/Texture/Body/cw_staff_icon.wtm",
+      "bytes": 1101,
+      "sha256": "bc818978d4cc165591217242130d1cc1a6d896f2592d607243fcc07bffa84426"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Body/cw_sword_icon.wtm",
+      "source": "client-overlay/Texture/Body/cw_sword_icon.wtm",
+      "bytes": 1025,
+      "sha256": "ab626a9ddc2e8e396e92b6c945272db20a6955faf15b951a51ce4cb16dfa77a3"
     },
     {
       "kind": "client",
@@ -5210,6 +5315,27 @@
       "source": "client-overlay/Texture/Equip/bn_surface.wtm",
       "bytes": 2304894,
       "sha256": "6a185927b050e62ae251921021e3dc1bb650ec6457f48e07941c75ba4687d0c2"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/cw_longbow_atlas.wtm",
+      "source": "client-overlay/Texture/Equip/cw_longbow_atlas.wtm",
+      "bytes": 619011,
+      "sha256": "cb72932614bc83ca8062359f97b81a4ff1e2d1954e0ba583dd554589f83ed747"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/cw_staff_atlas.wtm",
+      "source": "client-overlay/Texture/Equip/cw_staff_atlas.wtm",
+      "bytes": 565769,
+      "sha256": "ba29c93ca73da7a188a3e5dd928132329d55fb02338b21f01e70f2c59f3a4c88"
+    },
+    {
+      "kind": "client",
+      "path": "Texture/Equip/cw_sword_atlas.wtm",
+      "source": "client-overlay/Texture/Equip/cw_sword_atlas.wtm",
+      "bytes": 799599,
+      "sha256": "43a9597a47c8beecd2a0f3daae569b9e25bc0a4de91eb4cef9d24682e381d53d"
     },
     {
       "kind": "client",
@@ -5810,8 +5936,8 @@
       "kind": "server",
       "path": "DATA/ITEM_DATA.txt",
       "source": "game-data/DATA/ITEM_DATA.txt",
-      "bytes": 4245939,
-      "sha256": "5c8f32774a1ba36771665876bfcd89c06aa39686d3c87a3140d3256b3efa960a"
+      "bytes": 4268549,
+      "sha256": "ec883bdee5cc7e55bdbea8adefbc00d0fca041822082be360215ed9b5c0de614"
     },
     {
       "kind": "server",
@@ -5964,8 +6090,8 @@
       "kind": "server",
       "path": "LAQIA_GameServer",
       "source": "server-bin/LAQIA_GameServer",
-      "bytes": 1819812,
-      "sha256": "9e2fdfe3df93d897ae0478e7d57580ae0d1366ae217c1a67aaffa43608ae554c"
+      "bytes": 1819816,
+      "sha256": "256f4dcc68d605eb809fbd35fb90d9987575252c511cdbd99aa30c83b3ec0cd1"
     },
     {
       "kind": "updater",

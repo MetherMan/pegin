@@ -30,8 +30,8 @@ figcaption{padding:8px 14px 12px;color:var(--muted)}
 <body>
 <main>
 <h1><span>천상의 날개</span> 무기 3D 미리보기</h1>
-<p class="lead">고른 3번 컨셉을 무기별 단독 그림으로 다시 뽑아, 트와일라잇 무기와 같은 방식(실루엣 두께 + 둥근 모서리 + 앞뒤 그림 투영, 손잡이·활시위는 원통)으로 만든 3D 모델입니다. 길이는 지금 트와일라잇 양손검·롱보우·스태프와 같습니다. 아직 게임 파일은 만들지 않았습니다. <a href="concepts.html">컨셉 그림</a> · <a href="index.html">기존 무기 금색 시안</a></p>
-<div class="bar"><b>보기</b><button data-view="0" class="on">정면</button><button data-view="0.6">사선</button><button data-view="1.5708">옆면</button><button data-view="3.1416">뒷면</button><button id="spin">자동 회전</button></div>
+<p class="lead">고른 3번 컨셉을 무기별 단독 그림으로 다시 뽑아, 트와일라잇 무기와 같은 방식(실루엣 두께 + 둥근 모서리 + 앞뒤 그림 투영, 손잡이·활시위는 원통)으로 만든 3D 모델입니다. 길이는 지금 트와일라잇 양손검·롱보우·스태프와 같습니다. <b>게임 파일</b> 버튼은 실제로 게임에 들어가는 MOD·텍스처를 다시 읽어 보여줍니다. <a href="concepts.html">컨셉 그림</a> · <a href="index.html">기존 무기 금색 시안</a></p>
+<div class="bar"><b>보기</b><button data-view="0" class="on">정면</button><button data-view="0.6">사선</button><button data-view="1.5708">옆면</button><button data-view="3.1416">뒷면</button><button id="spin">자동 회전</button><b style="margin-left:12px">모델</b><button data-src="" class="on">원본 3D</button><button data-src="-native">게임 파일</button></div>
 <section><div class="stage"><canvas></canvas></div>
 <div class="names"><div><strong>천상의 날개 양손검</strong>celestial-sword</div><div><strong>천상의 날개 롱보우</strong>celestial-longbow</div><div><strong>천상의 날개 스태프</strong>celestial-staff</div></div></section>
 <section><figure><img src="concepts/golden-knight-03-celestial-wing.png" alt="천상의 날개 컨셉"><figcaption>원래 컨셉 보드</figcaption></figure></section>
@@ -46,23 +46,28 @@ const renderer=new T.WebGLRenderer({canvas,antialias:true});renderer.outputColor
 const scene=new T.Scene();scene.environment=new T.PMREMGenerator(renderer).fromScene(new RoomEnvironment(),.04).texture;
 scene.add(new T.HemisphereLight(0xfff4dc,0x1a2030,.9));const sun=new T.DirectionalLight(0xffffff,1.5);sun.position.set(2,4,5);scene.add(sun);
 const camera=new T.PerspectiveCamera(26,1,.01,100);
-let angle=0,spin=false,tall=0,span=0;const slots=[];
+let angle=0,spin=false,tall=0,span=0;let slots=[];
 const loader=new GLTFLoader();
-const models=await Promise.all(KINDS.map(k=>loader.loadAsync(`models/${k}.glb?v=${Date.now()}`).then(g=>g.scene).catch(()=>null)));
 const gap=1.05;
-models.forEach((m,i)=>{if(!m)return;m.traverse(o=>{if(o.material){o.material.side=T.DoubleSide}});
-  const box=new T.Box3().setFromObject(m),c=box.getCenter(new T.Vector3()),size=box.getSize(new T.Vector3());tall=Math.max(tall,size.y);
-  m.position.sub(c);const pivot=new T.Group();pivot.add(m);pivot.position.x=(i-1)*gap;scene.add(pivot);slots.push(pivot)});
-span=2*gap+.9;
+async function load(src){
+  const models=await Promise.all(KINDS.map(k=>loader.loadAsync(`models/${k}${src}.glb?v=${Date.now()}`).then(g=>g.scene).catch(()=>null)));
+  slots.forEach(s=>scene.remove(s));slots=[];tall=0;
+  models.forEach((m,i)=>{if(!m)return;m.traverse(o=>{if(o.material){o.material.side=T.DoubleSide}});
+    const box=new T.Box3().setFromObject(m),c=box.getCenter(new T.Vector3()),size=box.getSize(new T.Vector3());tall=Math.max(tall,size.y);
+    m.position.sub(c);const pivot=new T.Group();pivot.add(m);pivot.position.x=(i-1)*gap;scene.add(pivot);slots.push(pivot)});
+  span=2*gap+.9;fit();return models.filter(Boolean).length}
+const models=[];
 function fit(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(w,h,false);camera.aspect=w/h;
   const f=Math.tan(camera.fov*Math.PI/360),d=Math.max(tall*1.06/(2*f),span/(2*f*camera.aspect));camera.position.set(0,0,d);camera.lookAt(0,0,0);camera.updateProjectionMatrix()}
-addEventListener('resize',fit);fit();
+addEventListener('resize',fit);
+const loaded=await load('');
+document.querySelectorAll('[data-src]').forEach(b=>b.onclick=async()=>{document.querySelectorAll('[data-src]').forEach(x=>x.classList.toggle('on',x===b));window.modelsReady=await load(b.dataset.src)});
 canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);let x=e.clientX;setSpin(false);
   const move=ev=>{angle+=(ev.clientX-x)*.012;x=ev.clientX};canvas.addEventListener('pointermove',move);canvas.addEventListener('pointerup',()=>canvas.removeEventListener('pointermove',move),{once:true})});
 function setSpin(v){spin=v;document.querySelector('#spin').classList.toggle('on',v)}
 document.querySelector('#spin').onclick=()=>setSpin(!spin);
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{setSpin(false);angle=+b.dataset.view;document.querySelectorAll('[data-view]').forEach(x=>x.classList.toggle('on',x===b))});
-window.modelsReady=models.filter(Boolean).length;
+window.modelsReady=loaded;
 let last=performance.now();
 (function frame(t){requestAnimationFrame(frame);const dt=Math.min(.05,(t-last)/1000);last=t;if(spin)angle+=dt*.6;slots.forEach(s=>s.rotation.y=angle);
   if(canvas.clientWidth!==fit.w){fit.w=canvas.clientWidth;fit()}renderer.render(scene,camera)})(last);

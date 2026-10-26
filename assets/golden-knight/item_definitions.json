@@ -1,0 +1,1073 @@
+[
+  {
+    "id": 19260,
+    "level": 0,
+    "name": "천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 293,
+    "max": 327,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 263762,
+    "twilight": {
+      "id": 19030,
+      "min": 224,
+      "max": 259
+    }
+  },
+  {
+    "id": 19261,
+    "level": 1,
+    "name": "+1 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 298,
+    "max": 332,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 284880,
+    "twilight": {
+      "id": 19031,
+      "min": 228,
+      "max": 263
+    }
+  },
+  {
+    "id": 19262,
+    "level": 2,
+    "name": "+2 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 309,
+    "max": 343,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 307866,
+    "twilight": {
+      "id": 19032,
+      "min": 237,
+      "max": 272
+    }
+  },
+  {
+    "id": 19263,
+    "level": 3,
+    "name": "+3 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 395,
+    "max": 434,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 332562,
+    "twilight": {
+      "id": 19033,
+      "min": 303,
+      "max": 344
+    }
+  },
+  {
+    "id": 19264,
+    "level": 4,
+    "name": "+4 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 423,
+    "max": 463,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 358807,
+    "twilight": {
+      "id": 19034,
+      "min": 324,
+      "max": 367
+    }
+  },
+  {
+    "id": 19265,
+    "level": 5,
+    "name": "+5 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 452,
+    "max": 494,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 386975,
+    "twilight": {
+      "id": 19035,
+      "min": 347,
+      "max": 392
+    }
+  },
+  {
+    "id": 19266,
+    "level": 6,
+    "name": "+6 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 567,
+    "max": 617,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 417398,
+    "twilight": {
+      "id": 19036,
+      "min": 435,
+      "max": 489
+    }
+  },
+  {
+    "id": 19267,
+    "level": 7,
+    "name": "+7 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 633,
+    "max": 686,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 449853,
+    "twilight": {
+      "id": 19037,
+      "min": 486,
+      "max": 544
+    }
+  },
+  {
+    "id": 19268,
+    "level": 8,
+    "name": "+8 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 748,
+    "max": 808,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 484617,
+    "twilight": {
+      "id": 19038,
+      "min": 575,
+      "max": 641
+    }
+  },
+  {
+    "id": 19269,
+    "level": 9,
+    "name": "+9 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 886,
+    "max": 954,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 521926,
+    "twilight": {
+      "id": 19039,
+      "min": 681,
+      "max": 757
+    }
+  },
+  {
+    "id": 19270,
+    "level": 10,
+    "name": "+10 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 1045,
+    "max": 1122,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 5382178,
+    "twilight": {
+      "id": 19040,
+      "min": 804,
+      "max": 891
+    }
+  },
+  {
+    "id": 19271,
+    "level": 11,
+    "name": "+11 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 1209,
+    "max": 1297,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 5789580,
+    "twilight": {
+      "id": 19041,
+      "min": 931,
+      "max": 1030
+    }
+  },
+  {
+    "id": 19272,
+    "level": 12,
+    "name": "+12 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 1402,
+    "max": 1502,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 6224515,
+    "twilight": {
+      "id": 19042,
+      "min": 1080,
+      "max": 1193
+    }
+  },
+  {
+    "id": 19273,
+    "level": 13,
+    "name": "+13 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 1623,
+    "max": 1735,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 6688789,
+    "twilight": {
+      "id": 19043,
+      "min": 1251,
+      "max": 1379
+    }
+  },
+  {
+    "id": 19274,
+    "level": 14,
+    "name": "+14 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 1839,
+    "max": 1966,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 7183262,
+    "twilight": {
+      "id": 19044,
+      "min": 1418,
+      "max": 1563
+    }
+  },
+  {
+    "id": 19275,
+    "level": 15,
+    "name": "+15 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 2088,
+    "max": 2228,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 7710035,
+    "twilight": {
+      "id": 19045,
+      "min": 1611,
+      "max": 1772
+    }
+  },
+  {
+    "id": 19276,
+    "level": 16,
+    "name": "+16 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 2370,
+    "max": 2528,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 8270152,
+    "twilight": {
+      "id": 19046,
+      "min": 1830,
+      "max": 2011
+    }
+  },
+  {
+    "id": 19277,
+    "level": 17,
+    "name": "+17 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 2682,
+    "max": 2862,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 8865282,
+    "twilight": {
+      "id": 19047,
+      "min": 2072,
+      "max": 2277
+    }
+  },
+  {
+    "id": 19278,
+    "level": 18,
+    "name": "+18 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 3037,
+    "max": 3239,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 9496371,
+    "twilight": {
+      "id": 19048,
+      "min": 2348,
+      "max": 2578
+    }
+  },
+  {
+    "id": 19279,
+    "level": 19,
+    "name": "+19 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 3440,
+    "max": 3666,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 10165178,
+    "twilight": {
+      "id": 19049,
+      "min": 2661,
+      "max": 2919
+    }
+  },
+  {
+    "id": 19280,
+    "level": 20,
+    "name": "+20 천상의 날개 양손검",
+    "type": 2,
+    "rank": 10,
+    "min": 3895,
+    "max": 4150,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 10872945,
+    "twilight": {
+      "id": 19050,
+      "min": 3015,
+      "max": 3305
+    }
+  },
+  {
+    "id": 19290,
+    "level": 0,
+    "name": "천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 264,
+    "max": 285,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 212712,
+    "twilight": {
+      "id": 19060,
+      "min": 197,
+      "max": 218
+    }
+  },
+  {
+    "id": 19291,
+    "level": 1,
+    "name": "+1 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 268,
+    "max": 287,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 229742,
+    "twilight": {
+      "id": 19061,
+      "min": 200,
+      "max": 220
+    }
+  },
+  {
+    "id": 19292,
+    "level": 2,
+    "name": "+2 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 278,
+    "max": 299,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 248279,
+    "twilight": {
+      "id": 19062,
+      "min": 208,
+      "max": 229
+    }
+  },
+  {
+    "id": 19293,
+    "level": 3,
+    "name": "+3 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 353,
+    "max": 376,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 268195,
+    "twilight": {
+      "id": 19063,
+      "min": 264,
+      "max": 288
+    }
+  },
+  {
+    "id": 19294,
+    "level": 4,
+    "name": "+4 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 382,
+    "max": 404,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 289360,
+    "twilight": {
+      "id": 19064,
+      "min": 286,
+      "max": 310
+    }
+  },
+  {
+    "id": 19295,
+    "level": 5,
+    "name": "+5 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 409,
+    "max": 434,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 312077,
+    "twilight": {
+      "id": 19065,
+      "min": 307,
+      "max": 333
+    }
+  },
+  {
+    "id": 19296,
+    "level": 6,
+    "name": "+6 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 515,
+    "max": 541,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 336611,
+    "twilight": {
+      "id": 19066,
+      "min": 387,
+      "max": 416
+    }
+  },
+  {
+    "id": 19297,
+    "level": 7,
+    "name": "+7 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 570,
+    "max": 602,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 362784,
+    "twilight": {
+      "id": 19067,
+      "min": 429,
+      "max": 463
+    }
+  },
+  {
+    "id": 19298,
+    "level": 8,
+    "name": "+8 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 675,
+    "max": 705,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 390820,
+    "twilight": {
+      "id": 19068,
+      "min": 508,
+      "max": 543
+    }
+  },
+  {
+    "id": 19299,
+    "level": 9,
+    "name": "+9 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 804,
+    "max": 841,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 420908,
+    "twilight": {
+      "id": 19069,
+      "min": 606,
+      "max": 648
+    }
+  },
+  {
+    "id": 19300,
+    "level": 10,
+    "name": "+10 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 946,
+    "max": 985,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 4340466,
+    "twilight": {
+      "id": 19070,
+      "min": 714,
+      "max": 760
+    }
+  },
+  {
+    "id": 19301,
+    "level": 11,
+    "name": "+11 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 1095,
+    "max": 1140,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 4669016,
+    "twilight": {
+      "id": 19071,
+      "min": 827,
+      "max": 880
+    }
+  },
+  {
+    "id": 19302,
+    "level": 12,
+    "name": "+12 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 1272,
+    "max": 1322,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 5019770,
+    "twilight": {
+      "id": 19072,
+      "min": 962,
+      "max": 1021
+    }
+  },
+  {
+    "id": 19303,
+    "level": 13,
+    "name": "+13 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 1473,
+    "max": 1528,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 5394185,
+    "twilight": {
+      "id": 19073,
+      "min": 1115,
+      "max": 1181
+    }
+  },
+  {
+    "id": 19304,
+    "level": 14,
+    "name": "+14 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 1671,
+    "max": 1734,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 5792953,
+    "twilight": {
+      "id": 19074,
+      "min": 1266,
+      "max": 1342
+    }
+  },
+  {
+    "id": 19305,
+    "level": 15,
+    "name": "+15 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 1896,
+    "max": 1963,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 6217770,
+    "twilight": {
+      "id": 19075,
+      "min": 1438,
+      "max": 1520
+    }
+  },
+  {
+    "id": 19306,
+    "level": 16,
+    "name": "+16 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 2149,
+    "max": 2225,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 6669477,
+    "twilight": {
+      "id": 19076,
+      "min": 1632,
+      "max": 1724
+    }
+  },
+  {
+    "id": 19307,
+    "level": 17,
+    "name": "+17 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 2431,
+    "max": 2519,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 7149421,
+    "twilight": {
+      "id": 19077,
+      "min": 1848,
+      "max": 1954
+    }
+  },
+  {
+    "id": 19308,
+    "level": 18,
+    "name": "+18 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 2753,
+    "max": 2850,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 7658363,
+    "twilight": {
+      "id": 19078,
+      "min": 2095,
+      "max": 2212
+    }
+  },
+  {
+    "id": 19309,
+    "level": 19,
+    "name": "+19 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 3116,
+    "max": 3227,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 8197724,
+    "twilight": {
+      "id": 19079,
+      "min": 2374,
+      "max": 2507
+    }
+  },
+  {
+    "id": 19310,
+    "level": 20,
+    "name": "+20 천상의 날개 롱보우",
+    "type": 12,
+    "rank": 10,
+    "min": 3531,
+    "max": 3651,
+    "magic_min": 0,
+    "magic_max": 0,
+    "price": 8768504,
+    "twilight": {
+      "id": 19080,
+      "min": 2693,
+      "max": 2839
+    }
+  },
+  {
+    "id": 19320,
+    "level": 0,
+    "name": "천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 87,
+    "max": 94,
+    "magic_min": 181,
+    "magic_max": 189,
+    "price": 212712,
+    "twilight": {
+      "id": 19090,
+      "min": 67,
+      "max": 74
+    }
+  },
+  {
+    "id": 19321,
+    "level": 1,
+    "name": "+1 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 91,
+    "max": 98,
+    "magic_min": 183,
+    "magic_max": 192,
+    "price": 229742,
+    "twilight": {
+      "id": 19091,
+      "min": 70,
+      "max": 77
+    }
+  },
+  {
+    "id": 19322,
+    "level": 2,
+    "name": "+2 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 101,
+    "max": 108,
+    "magic_min": 196,
+    "magic_max": 203,
+    "price": 248279,
+    "twilight": {
+      "id": 19092,
+      "min": 78,
+      "max": 85
+    }
+  },
+  {
+    "id": 19323,
+    "level": 3,
+    "name": "+3 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 136,
+    "max": 144,
+    "magic_min": 255,
+    "magic_max": 261,
+    "price": 268195,
+    "twilight": {
+      "id": 19093,
+      "min": 105,
+      "max": 113
+    }
+  },
+  {
+    "id": 19324,
+    "level": 4,
+    "name": "+4 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 151,
+    "max": 158,
+    "magic_min": 272,
+    "magic_max": 279,
+    "price": 289360,
+    "twilight": {
+      "id": 19094,
+      "min": 117,
+      "max": 124
+    }
+  },
+  {
+    "id": 19325,
+    "level": 5,
+    "name": "+5 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 166,
+    "max": 173,
+    "magic_min": 293,
+    "magic_max": 302,
+    "price": 312077,
+    "twilight": {
+      "id": 19095,
+      "min": 129,
+      "max": 136
+    }
+  },
+  {
+    "id": 19326,
+    "level": 6,
+    "name": "+6 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 209,
+    "max": 217,
+    "magic_min": 370,
+    "magic_max": 378,
+    "price": 336611,
+    "twilight": {
+      "id": 19096,
+      "min": 162,
+      "max": 171
+    }
+  },
+  {
+    "id": 19327,
+    "level": 7,
+    "name": "+7 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 242,
+    "max": 250,
+    "magic_min": 416,
+    "magic_max": 423,
+    "price": 362784,
+    "twilight": {
+      "id": 19097,
+      "min": 188,
+      "max": 197
+    }
+  },
+  {
+    "id": 19328,
+    "level": 8,
+    "name": "+8 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 292,
+    "max": 300,
+    "magic_min": 492,
+    "magic_max": 500,
+    "price": 390820,
+    "twilight": {
+      "id": 19098,
+      "min": 227,
+      "max": 237
+    }
+  },
+  {
+    "id": 19329,
+    "level": 9,
+    "name": "+9 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 348,
+    "max": 358,
+    "magic_min": 589,
+    "magic_max": 596,
+    "price": 420908,
+    "twilight": {
+      "id": 19099,
+      "min": 271,
+      "max": 283
+    }
+  },
+  {
+    "id": 19330,
+    "level": 10,
+    "name": "+10 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 412,
+    "max": 423,
+    "magic_min": 693,
+    "magic_max": 702,
+    "price": 4340466,
+    "twilight": {
+      "id": 19100,
+      "min": 321,
+      "max": 334
+    }
+  },
+  {
+    "id": 19331,
+    "level": 11,
+    "name": "+11 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 483,
+    "max": 496,
+    "magic_min": 807,
+    "magic_max": 816,
+    "price": 4669016,
+    "twilight": {
+      "id": 19101,
+      "min": 377,
+      "max": 392
+    }
+  },
+  {
+    "id": 19332,
+    "level": 12,
+    "name": "+12 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 566,
+    "max": 580,
+    "magic_min": 936,
+    "magic_max": 945,
+    "price": 5019770,
+    "twilight": {
+      "id": 19102,
+      "min": 442,
+      "max": 459
+    }
+  },
+  {
+    "id": 19333,
+    "level": 13,
+    "name": "+13 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 660,
+    "max": 673,
+    "magic_min": 1083,
+    "magic_max": 1093,
+    "price": 5394185,
+    "twilight": {
+      "id": 19103,
+      "min": 516,
+      "max": 533
+    }
+  },
+  {
+    "id": 19334,
+    "level": 14,
+    "name": "+14 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 754,
+    "max": 771,
+    "magic_min": 1233,
+    "magic_max": 1244,
+    "price": 5792953,
+    "twilight": {
+      "id": 19104,
+      "min": 590,
+      "max": 611
+    }
+  },
+  {
+    "id": 19335,
+    "level": 15,
+    "name": "+15 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 855,
+    "max": 874,
+    "magic_min": 1403,
+    "magic_max": 1411,
+    "price": 6217770,
+    "twilight": {
+      "id": 19105,
+      "min": 670,
+      "max": 693
+    }
+  },
+  {
+    "id": 19336,
+    "level": 16,
+    "name": "+16 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 977,
+    "max": 997,
+    "magic_min": 1589,
+    "magic_max": 1601,
+    "price": 6669477,
+    "twilight": {
+      "id": 19106,
+      "min": 766,
+      "max": 791
+    }
+  },
+  {
+    "id": 19337,
+    "level": 17,
+    "name": "+17 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 1111,
+    "max": 1132,
+    "magic_min": 1799,
+    "magic_max": 1812,
+    "price": 7149421,
+    "twilight": {
+      "id": 19107,
+      "min": 872,
+      "max": 899
+    }
+  },
+  {
+    "id": 19338,
+    "level": 18,
+    "name": "+18 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 1258,
+    "max": 1283,
+    "magic_min": 2041,
+    "magic_max": 2055,
+    "price": 7658363,
+    "twilight": {
+      "id": 19108,
+      "min": 989,
+      "max": 1020
+    }
+  },
+  {
+    "id": 19339,
+    "level": 19,
+    "name": "+19 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 1429,
+    "max": 1457,
+    "magic_min": 2313,
+    "magic_max": 2328,
+    "price": 8197724,
+    "twilight": {
+      "id": 19109,
+      "min": 1124,
+      "max": 1159
+    }
+  },
+  {
+    "id": 19340,
+    "level": 20,
+    "name": "+20 천상의 날개 스태프",
+    "type": 18,
+    "rank": 10,
+    "min": 1629,
+    "max": 1658,
+    "magic_min": 2617,
+    "magic_max": 2632,
+    "price": 8768504,
+    "twilight": {
+      "id": 19110,
+      "min": 1283,
+      "max": 1320
+    }
+  }
+]

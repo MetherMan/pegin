@@ -19,7 +19,8 @@ O = R/'assets/golden-knight/models'
 SPEC = O/'geometry.json'
 
 
-def build(spec):
+def parts_for(spec):
+    """(named parts with material 0 face / 1 side / 2 string, images, scale) for one weapon."""
     image = Image.open(R/spec['source'])
     w, h = image.size
     rgb = image.convert('RGB')
@@ -56,6 +57,11 @@ def build(spec):
         remapped.append((name, material, (p, n, u)))
     images = [rgb.crop(spec['box']), Image.new('RGB', (8, 8), tuple(spec.get('side_rgb', [214, 178, 96]))),
               Image.new('RGB', (8, 8), (250, 236, 196))]
+    return remapped, images, scale, polys
+
+
+def build(spec):
+    remapped, images, scale, polys = parts_for(spec)
     write_glb(O/f'{spec["kind"]}.glb', remapped, images)
     points = np.concatenate([p for _, _, (p, _, _) in remapped])
     return dict(kind=spec['kind'], polygons=len(polys), holes=sum(len(p.interiors) for p in polys),

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "live server: 63 천상의 날개 definitions, Rank 10, planned attack/magic per level",
+    "19260: warehouse page slot, shelf copy, equipped by a level-1 character, GM +1/+10/+20, +20 kept after relog",
+    "19290: warehouse page slot, shelf copy, equipped by a level-1 character, GM +1/+10/+20, +20 kept after relog",
+    "19320: warehouse page slot, shelf copy, equipped by a level-1 character, GM +1/+10/+20, +20 kept after relog",
+    "existing five save tables unchanged; disposable players removed"
+  ],
+  "save_data_preserved": true,
+  "in_game_visual_test": false
+}

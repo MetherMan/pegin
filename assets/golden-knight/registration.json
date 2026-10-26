@@ -1,0 +1,142 @@
+{
+  "rank": 10,
+  "formula": "Twilight x fitted (Black Knight / Red Knight) step per level and column",
+  "group": {
+    "index": 8,
+    "name": "천상의 날개"
+  },
+  "trail": "검흔C",
+  "models": {
+    "sword": {
+      "prefix": "cw_sword",
+      "reference": "ws_0081_1.mod",
+      "scale": 0.001450381679389313,
+      "triangles": 17972,
+      "vertices": 8999,
+      "bounds": [
+        [
+          -0.39885497093200684,
+          -0.44961830973625183,
+          -0.027499999850988388
+        ],
+        [
+          1.6911450624465942,
+          0.44816794991493225,
+          0.027499999850988388
+        ]
+      ],
+      "polygons": 2,
+      "closed_surface": true,
+      "surface": {
+        "model": "cw_sword_1.mod",
+        "triangles": 17972,
+        "open_edges": 0,
+        "nonmanifold_edges": 0,
+        "reversed_seams": 0,
+        "closed_components": 3,
+        "component_volumes": [
+          0.0007454127734437396,
+          0.010709066423340179,
+          0.0003491093618234482
+        ],
+        "sha256": "a5ab4f9faca41be79173fd71dc5bce468908c71ef3cc50a612bfce349d22f844",
+        "passed": true
+      },
+      "trail": [
+        0.6092,
+        1.6573
+      ]
+    },
+    "longbow": {
+      "prefix": "cw_longbow",
+      "reference": "wb_0040_1.mod",
+      "scale": 0.0013917884481558804,
+      "triangles": 11176,
+      "vertices": 5584,
+      "bounds": [
+        [
+          -1.0702853202819824,
+          -0.35768961906433105,
+          -0.026912886649370193
+        ],
+        [
+          0.9297146797180176,
+          0.15031315386295319,
+          0.026912886649370193
+        ]
+      ],
+      "polygons": 1,
+      "closed_surface": true,
+      "surface": {
+        "model": "cw_longbow_1.mod",
+        "triangles": 11176,
+        "open_edges": 0,
+        "nonmanifold_edges": 0,
+        "reversed_seams": 0,
+        "closed_components": 2,
+        "component_volumes": [
+          0.006334854228915288,
+          5.954275069630017e-06
+        ],
+        "sha256": "025f0312c8becf9fd98b2daa90cdd4c996f8fb9c4e627686e18b0dc665d06454",
+        "passed": true
+      }
+    },
+    "staff": {
+      "prefix": "cw_staff",
+      "reference": "ww_0015_1.mod",
+      "scale": 0.0012525951557093426,
+      "triangles": 12388,
+      "vertices": 6187,
+      "bounds": [
+        [
+          -0.7565674781799316,
+          -0.276197224855423,
+          -0.023333827033638954
+        ],
+        [
+          1.053432583808899,
+          0.276197224855423,
+          0.023333827033638954
+        ]
+      ],
+      "polygons": 2,
+      "closed_surface": true,
+      "surface": {
+        "model": "cw_staff_1.mod",
+        "triangles": 12388,
+        "open_edges": 0,
+        "nonmanifold_edges": 0,
+        "reversed_seams": 0,
+        "closed_components": 3,
+        "component_volumes": [
+          0.0006923179921224058,
+          0.0030248421113943775,
+          0.00028596958068817746
+        ],
+        "sha256": "aa0de7b2410871a0aa5a4db04ac9d2190aa5ce6fc592e666d13e62d6da33e0c0",
+        "passed": true
+      }
+    }
+  },
+  "files": {
+    "client-overlay/Equip/cw_longbow_1.mod": "025f0312c8becf9fd98b2daa90cdd4c996f8fb9c4e627686e18b0dc665d06454",
+    "client-overlay/Equip/cw_longbow_2.mod": "025f0312c8becf9fd98b2daa90cdd4c996f8fb9c4e627686e18b0dc665d06454",
+    "client-overlay/Equip/cw_longbow_3.mod": "025f0312c8becf9fd98b2daa90cdd4c996f8fb9c4e627686e18b0dc665d06454",
+    "client-overlay/Equip/cw_staff_1.mod": "aa0de7b2410871a0aa5a4db04ac9d2190aa5ce6fc592e666d13e62d6da33e0c0",
+    "client-overlay/Equip/cw_staff_2.mod": "aa0de7b2410871a0aa5a4db04ac9d2190aa5ce6fc592e666d13e62d6da33e0c0",
+    "client-overlay/Equip/cw_staff_3.mod": "aa0de7b2410871a0aa5a4db04ac9d2190aa5ce6fc592e666d13e62d6da33e0c0",
+    "client-overlay/Equip/cw_sword_1.mod": "a5ab4f9faca41be79173fd71dc5bce468908c71ef3cc50a612bfce349d22f844",
+    "client-overlay/Equip/cw_sword_2.mod": "a5ab4f9faca41be79173fd71dc5bce468908c71ef3cc50a612bfce349d22f844",
+    "client-overlay/Equip/cw_sword_3.mod": "a5ab4f9faca41be79173fd71dc5bce468908c71ef3cc50a612bfce349d22f844",
+    "client-overlay/Item/cw_longbow_icon.wtm": "496f3f5a86560071bc38aef7d53ce88b24d6815612141331f98c039ec8e1a7a2",
+    "client-overlay/Item/cw_staff_icon.wtm": "bc818978d4cc165591217242130d1cc1a6d896f2592d607243fcc07bffa84426",
+    "client-overlay/Item/cw_sword_icon.wtm": "ab626a9ddc2e8e396e92b6c945272db20a6955faf15b951a51ce4cb16dfa77a3",
+    "client-overlay/Texture/Body/cw_longbow_icon.wtm": "496f3f5a86560071bc38aef7d53ce88b24d6815612141331f98c039ec8e1a7a2",
+    "client-overlay/Texture/Body/cw_staff_icon.wtm": "bc818978d4cc165591217242130d1cc1a6d896f2592d607243fcc07bffa84426",
+    "client-overlay/Texture/Body/cw_sword_icon.wtm": "ab626a9ddc2e8e396e92b6c945272db20a6955faf15b951a51ce4cb16dfa77a3",
+    "client-overlay/Texture/Equip/cw_longbow_atlas.wtm": "cb72932614bc83ca8062359f97b81a4ff1e2d1954e0ba583dd554589f83ed747",
+    "client-overlay/Texture/Equip/cw_staff_atlas.wtm": "ba29c93ca73da7a188a3e5dd928132329d55fb02338b21f01e70f2c59f3a4c88",
+    "client-overlay/Texture/Equip/cw_sword_atlas.wtm": "43a9597a47c8beecd2a0f3daae569b9e25bc0a4de91eb4cef9d24682e381d53d"
+  }
+}

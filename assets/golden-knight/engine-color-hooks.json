@@ -1,0 +1,94 @@
+{
+  "original_sha256": "b1e780bfa2ab9f681316f47dcd57c7d8ee5d73bdccbef3adb39a290f1e305bcd",
+  "original_size": 327680,
+  "sha256": "c1cbb6021ae2746d515d85cab735f3fb37e408d8b011159d66e79fd5fb8609a7",
+  "section_rva": 335872,
+  "undo": [
+    [
+      248832,
+      "e9fb330100909090909090909090"
+    ],
+    [
+      248903,
+      "e9f4330100909090909090909090"
+    ],
+    [
+      248962,
+      "e9f9330100909090909090909090"
+    ],
+    [
+      856,
+      "00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    [
+      254,
+      "0900"
+    ],
+    [
+      328,
+      "00200500"
+    ],
+    [
+      276,
+      "00000400"
+    ],
+    [
+      336,
+      "00000000"
+    ]
+  ],
+  "hooks": [
+    {
+      "label": "\ucc9c\uc0c1\uc758 \ub0a0\uac1c 19260..19340 gold at 0x1003cc00 (rank)",
+      "va": 268684288,
+      "original": "e9fb330100909090909090909090",
+      "replacement": "e9fb530100909090909090909090",
+      "target": 268771328,
+      "resume": 268684302,
+      "assembly": "cmp word ptr [edi],19260; jb 0x10050000; cmp word ptr [edi],19340; ja 0x10050000; call next; next: pop eax; mov dword ptr [eax+-0xc1bb],0xffffd966; mov eax,8; jmp 0x10023d28",
+      "code": "66813f3c4b0f82f5dfffff66813f8c4b0f87eadfffffe80000000058c780453effff66d9ffffb808000000e9f81cfdffe9d9abfeff"
+    },
+    {
+      "label": "\ucc9c\uc0c1\uc758 \ub0a0\uac1c 19260..19340 gold at 0x1003cc47 (eax)",
+      "va": 268684359,
+      "original": "e9f4330100909090909090909090",
+      "replacement": "e9f4530100909090909090909090",
+      "target": 268771392,
+      "resume": 268684373,
+      "assembly": "cmp word ptr [edi],19260; jb 0x10050040; cmp word ptr [edi],19340; ja 0x10050040; mov eax,0xffffd966; jmp 0x1003cc6b",
+      "code": "66813f3c4b0f82f5dfffff66813f8c4b0f87eadfffffb866d9ffffe90bacfeffe9f0abfeff"
+    },
+    {
+      "label": "\ucc9c\uc0c1\uc758 \ub0a0\uac1c 19260..19340 gold at 0x1003cc82 (ecx)",
+      "va": 268684418,
+      "original": "e9f9330100909090909090909090",
+      "replacement": "e9e9530100909090909090909090",
+      "target": 268771440,
+      "resume": 268684432,
+      "assembly": "cmp word ptr [edi],19260; jb 0x10050080; cmp word ptr [edi],19340; ja 0x10050080; mov ecx,0xffffd966; jmp 0x1003cca6",
+      "code": "66813f3c4b0f8205e0ffff66813f8c4b0f87fadfffffb966d9ffffe916acfeffe9fbabfeff"
+    }
+  ],
+  "validation": {
+    "cases": 112,
+    "gold": [
+      19260,
+      19340
+    ],
+    "blue": [
+      [
+        19030,
+        19110
+      ],
+      [
+        19140,
+        19250
+      ]
+    ],
+    "colour": "#FFD966",
+    "relocated_bases": [
+      268435456,
+      55574528
+    ]
+  }
+}
