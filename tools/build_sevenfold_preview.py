@@ -1,11 +1,13 @@
 """Preview data for the proposed melee 140 skill 칠익난무 (Sevenfold Wing Dance), not game files.
 
 Caster: native male character in the Blue Moon armour (Body/High/*_b050) holding the 천상의 날개
-sword, playing the real two-handed sword skill motion (character.wad weapon 4 state 14,
-m_ths_mgc_A: raise 1-56, release 57-89) and the two-handed stance as idle. Effect textures: four
-new additive sprites drawn here (crescent slash, X flash streak, star core, feather) plus the
-game's own radial burst (vb0001_1 / ta_03) and ring (bwind03 / bwind01) recoloured along the same
-gold ramp as the Celestial weapon effects, and the sword's own gold trail texture (celestial_gold,
+sword. The game has a single skill motion per weapon (m_ths_mgc_A, a slow raise that reads as
+spell casting), so the preview uses the real two-handed sword attack motions instead: A (diagonal
+downward cut, hit frame 9), B (rising cut, 12), C (thrust, 22) and the two-handed stance as idle.
+Effect textures: new additive sprites drawn here (X flash streak, star core, feather, light
+wing; the sword-energy arcs are drawn in the page along the real blade path) plus the game's own
+radial burst (vb0001_1 / ta_03) and ring (bwind03 / bwind01) recoloured along the same gold ramp
+as the Celestial weapon effects, and the sword's own gold trail texture (celestial_gold,
 cw_sword_trail.wtm). Sounds: two-handed sword swings and the normal hit (the 브레이크레볼루션
 vb_0002.wav is not in this client).
 Writes assets/golden-knight/skills/sevenfold/{actors.json, *.png}.
@@ -45,12 +47,13 @@ def actors(read):
     for part in ('tor', 'leg', 'boo', 'gun'):
         parts += load(f'Body/High/ma_{part}_b050_1.mod', 'Body')
     parts += load('Body/High/mb_hea_0001.mod', 'Body')+load('Body/High/mb_hir_0001.mod', 'Body')
-    skill = animation(read('Body/Animation/m_ths_mgc_A__56-57-89.ani'), list(range(1, 90)))
-    skill['duration'] = 89*1000/30
-    idle = animation(read('Body/Animation/m_ths_at_std_61.ani'), list(range(1, 62)))
-    idle['duration'] = 61*1000/30
-    out['people']['0'] = dict(parts=parts, skill=skill, idle=idle)
-    out['weapons']['skill'] = dict(parts=load('Equip/cw_sword_1.mod', 'Equip'), bone='Bip01 R Finger0')
+    clips = dict(idle=animation(read('Body/Animation/m_ths_at_std_61.ani'), list(range(1, 62))))
+    for key, name, frames in [('atkA', 'm_ths_atk_A_9_44', 44), ('atkB', 'm_ths_atk_B_12_51', 51), ('atkC', 'm_ths_atk_C_22_54', 54)]:
+        clips[key] = animation(read(f'Body/Animation/{name}.ani'), list(range(1, frames+1)))
+    for clip in clips.values():
+        clip['duration'] = clip['frames']*1000/30
+    out['people']['0'] = dict(parts=parts, **clips)
+    out['weapons']['atkA'] = dict(parts=load('Equip/cw_sword_1.mod', 'Equip'), bone='Bip01 R Finger0')
     for name in SOUNDS:
         out['sounds'][name] = data_url(read('Sound/'+name), 'audio/wav')
     return out
@@ -63,20 +66,6 @@ def ramp_image(rgb):
         for x in range(a.shape[1]):
             out[y, x] = gold(*a[y, x])
     return Image.fromarray(out.astype(np.uint8))
-
-
-def slash_arc():
-    """Crescent: an elliptical band thickest in the middle, bright leading (outer) edge, soft inside."""
-    w, h = 512, 256
-    u, v = np.meshgrid((np.arange(w)+.5)/w, (np.arange(h)+.5)/h)
-    d = np.sqrt(((u-.5)/.47)**2+((v-1.12)/.98)**2)-1
-    thick = .16*np.sin(np.pi*np.clip(u, 0, 1))**.8+1e-4
-    inside = np.clip(-d/thick, 0, None)
-    band = np.where(d <= 0, np.exp(-2.6*inside)*(inside <= 1.35), 0)
-    edge = np.exp(-(d/.010)**2)*np.sin(np.pi*u)**.6
-    glow = np.exp(-np.maximum(d, 0)/.035)*(d > 0)*.35*np.sin(np.pi*u)
-    i = np.clip(band*.95+edge*1.1+glow, 0, 1)
-    return ramp_image(np.dstack([i*255]*3))
 
 
 def x_flash():
@@ -98,6 +87,40 @@ def star():
         i += (along > 0)*np.exp(-(across/(.01+.03*along))**2)*np.exp(-along/(.2 if k % 2 else .1))
     i *= np.clip(1-r/.5, 0, 1)**.5
     return ramp_image(np.dstack([np.clip(i, 0, 1)*255]*3))
+
+
+def wing():
+    """One wing of light, root at the lower left: long primaries hanging from the arm, shorter
+    coverts along it, each feather a soft vane with a bright shaft."""
+    s = 1024
+    img = Image.new('L', (s, s), 0)
+    d = ImageDraw.Draw(img)
+
+    def vane(x, y, angle, length, width, fill):
+        c, n = np.cos(angle), np.sin(angle)
+        side = []
+        for k in range(25):
+            t = k/24
+            r = width*np.sin(np.pi*min(1, t*1.15))**.7
+            side.append((x+c*length*t, y+n*length*t, r))
+        pts = [(px-n*r, py+c*r) for px, py, r in side]+[(px+n*r, py-c*r) for px, py, r in reversed(side)]
+        d.polygon(pts, fill=fill)
+        d.line([(x, y), (x+c*length*.92, y+n*length*.92)], fill=255, width=5)
+    root, wrist = np.array([.06, .55])*s, np.array([.5, .08])*s    # root = WING_ROOT in the page
+    for k in range(14):                      # primaries hang from the arm, longest towards the wrist
+        t = k/13
+        x, y = root+(wrist-root)*t
+        angle = np.radians(82-62*t**1.2)
+        vane(x, y, angle, s*(.2+.34*np.sin(np.pi*min(1, t*.6))), s*.042, 120)
+    for k in range(11):                      # coverts along the arm
+        t = k/10
+        x, y = root+(wrist-root)*t
+        vane(x, y, np.radians(70-45*t), s*(.1+.07*t), s*.032, 95)
+    d.line([tuple(root), tuple(wrist)], fill=255, width=12)
+    img = img.filter(ImageFilter.GaussianBlur(4)).resize((512, 512), Image.LANCZOS)
+    a = np.asarray(img, float)
+    glow = np.asarray(img.filter(ImageFilter.GaussianBlur(14)), float)
+    return ramp_image(np.dstack([np.clip(a+glow*.6, 0, 255)]*3))
 
 
 def feather():
@@ -138,9 +161,9 @@ def main():
     O.mkdir(parents=True, exist_ok=True)
     read = resource_reader(R/'client-overlay')
     (O/'actors.json').write_text(json.dumps(actors(read), separators=(',', ':')), encoding='utf-8')
-    slash_arc().save(O/'slash.png')
     x_flash().save(O/'xflash.png')
     star().save(O/'star.png')
+    wing().save(O/'wing.png')
     feather().save(O/'feather.png')
     recoloured(read, 'ta_03.wtm', .12).save(O/'burst.png')    # vb0001_1.wed radial burst
     recoloured(read, 'bwind01.wtm', .3).save(O/'ring.png')    # bwind03.wed ring

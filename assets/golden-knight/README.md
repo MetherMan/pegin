@@ -23,7 +23,7 @@
 
 ## 스킬 제안 미리보기
 
-- `skills/sevenfold.html` 칠익난무(근거리 140 제안): 실제 양손검 스킬 모션 위에 금빛 초승달 7연참과 X섬광·깃털 폭발 마무리. 게임에는 아직 없음. 데이터 `tools/build_sevenfold_preview.py`.
+- `skills/sevenfold.html` 칠익난무(근거리 140 제안): 실제 양손검 공격 모션 A·B·C로 대상 주위 일곱 방향을 순간이동하며 베고, 금빛 잔상과 칼날 궤적 검기가 일곱 날개처럼 둘러싼 뒤 빛의 날개를 펼친 큰 내려베기로 마무리. 게임에는 아직 없음. 데이터 `tools/build_sevenfold_preview.py`.
 
 ## 컨셉과 이전 시안
 

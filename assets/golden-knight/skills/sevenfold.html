@@ -18,7 +18,7 @@ p.lead a{color:#ffd77a}
 button{background:#1d2232;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer}
 button.on{background:#3a2e10;border-color:var(--gold);color:#ffe7a6}
 section{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative}
-.stage{height:min(640px,72vh);position:relative}
+.stage{height:min(660px,74vh);position:relative}
 canvas{display:block;width:100%;height:100%}
 .phase{position:absolute;left:14px;top:10px;font-size:15px;color:#ffe7a6;text-shadow:0 1px 3px #000;pointer-events:none}
 .seekbar{display:flex;gap:10px;align-items:center;padding:8px 14px 12px}
@@ -26,13 +26,13 @@ canvas{display:block;width:100%;height:100%}
 .seekbar span{color:var(--muted);font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
 ol{margin:12px 0 0;padding-left:22px;color:var(--muted);max-width:980px}
 ol b{color:var(--text);font-weight:600}
-@media (max-width:700px){.stage{height:420px}}
+@media (max-width:700px){.stage{height:430px}}
 </style>
 </head>
 <body>
 <main>
 <h1><span>칠익난무</span> 미리보기 · 근거리 140 스킬 제안</h1>
-<p class="lead">푸른달 갑옷 + <b>천상의 날개 양손검</b>을 든 남자 캐릭터가 게임의 실제 양손검 스킬 모션(<code>m_ths_mgc_A</code>, 기 모으기 1~56 · 내려베기 57~89프레임)으로 시전합니다. 검을 내려치는 순간부터 대상 주위에 금빛 초승달 베기 7번이 각도를 바꿔 들어가고, 7번째에 일곱 줄기가 한꺼번에 번쩍이며 X자 섬광과 깃털 폭발로 끝납니다. 검선은 실제 게임에 들어간 <code>celestial_gold</code> 텍스처, 폭발·고리는 게임 이펙트 텍스처를 같은 금색 단계로 다시 칠한 것이고 초승달·X섬광·깃털은 새로 그렸습니다. <b>게임에는 아직 넣지 않은 브라우저 재현</b>입니다. 마우스로 돌려 볼 수 있습니다. <a href="../effects.html">평타 이펙트</a> · <a href="../models.html">무기 3D</a></p>
+<p class="lead">푸른달 갑옷 + <b>천상의 날개 양손검</b> 캐릭터가 게임의 실제 양손검 <b>공격 모션</b>(A 사선 내려베기 · B 올려베기 · C 찌르기)으로 대상 주위 일곱 방향을 순간이동하며 벱니다. 금빛 검기는 실제 칼날이 지나간 궤적을 따라 그리고, 벤 자리마다 금빛 잔상이 남아 일곱 날개처럼 대상을 둘러쌉니다. 마지막에 등 뒤로 빛의 날개를 펼치며 크게 내려베면 잔상 일곱이 함께 번쩍이고 깃털로 흩어집니다. 칼에 붙은 검선은 실제 게임의 <code>celestial_gold</code>입니다. <b>게임에는 아직 넣지 않은 브라우저 재현</b>이고, 마우스로 돌려 볼 수 있습니다. <a href="../effects.html">평타 이펙트</a> · <a href="../models.html">무기 3D</a></p>
 <div class="bar">
 <button id="play">일시정지</button><button id="restart">처음부터</button>
 <b>속도</b><button data-speed="1" class="on">1배</button><button data-speed="0.5">0.5배</button><button data-speed="0.25">0.25배</button>
@@ -40,12 +40,13 @@ ol b{color:var(--text);font-weight:600}
 </div>
 <section>
 <div class="stage"><canvas id="view"></canvas><div class="phase" id="phase"></div></div>
-<div class="seekbar"><input id="seek" type="range" min="0" max="4800" step="1" value="0"><span id="clock">0.00초</span></div>
+<div class="seekbar"><input id="seek" type="range" min="0" max="5600" step="1" value="0"><span id="clock">0.00초</span></div>
 </section>
 <ol>
-<li><b>기 모으기 (0 ~ 1.9초)</b> · 발밑에 금빛 고리 두 개가 반대로 돌며 밝아지고, 깃털이 나선으로 떠오릅니다. 검 끝에 빛이 모입니다.</li>
-<li><b>칠연참 (1.93 ~ 2.50초)</b> · 첫 베기는 실제 내려베기에 맞춰 들어가고, 이어서 0.095초 간격으로 날개 일곱 장처럼 방향을 바꾼 초승달이 대상을 가릅니다. 베일 때마다 작은 금빛 파열.</li>
-<li><b>마무리 (2.62초)</b> · 남아 있던 일곱 줄기가 동시에 번쩍인 뒤 X자 섬광, 큰 금빛 폭발, 바닥·공중 충격파 고리, 깃털 30장이 사방으로 흩날립니다.</li>
+<li><b>기 모으기 (0 ~ 0.6초)</b> · 발밑 금빛 고리, 떠오르는 깃털, 칼끝에 빛이 모입니다.</li>
+<li><b>칠연참 (0.6 ~ 2.56초)</b> · 0.28초마다 대상 주위 다른 방향으로 순간이동해 A·B·A·C·B·A·B 순서로 벱니다. 사라진 자리에 금빛 잔상이 남고, 베기마다 칼날 궤적의 금빛 검기(찌르기는 관통하는 빛 창)가 대상에 남습니다.</li>
+<li><b>천익 일섬 (2.56 ~ 3.09초)</b> · 정면으로 돌아와 등 뒤로 빛의 날개를 펼치고 천천히 칼을 들어 올립니다. 잔상 일곱이 빛을 모아 대상에게 빛줄기를 잇습니다.</li>
+<li><b>마무리 (3.09초)</b> · 큰 사선 내려베기와 함께 거대한 검기, 잔상 일곱과 검기 일곱이 동시에 번쩍이고 X자 섬광 · 금빛 폭발 · 충격파 · 잔상과 날개가 깃털로 흩어집니다.</li>
 </ol>
 </main>
 <script type="module">
@@ -54,83 +55,175 @@ import {OrbitControls} from '../../twilight/vendor/OrbitControls.js';
 import {NativeActor,NativeSound} from '../../../client-overlay/Tools/SkillColors/actor.js';
 
 const data=await (await fetch('sevenfold/actors.json')).json();
+const person=data.people['0'],BONE=data.weapons.atkA.bone;
 const up=new THREE.Vector3(0,1,0),ONE=new THREE.Vector3(1,1,1);
-const DURATION=4800,FPS=30;
-const VICTIM=new THREE.Vector3(0,0,-2.4),CHEST=new THREE.Vector3(0,1.15,-2.4);
-const SLASH_START=1930,SLASH_GAP=95,SLASH_ANGLES=[0,154,309,103,257,51,206],SLASH_YAW=[-.35,.3,-.12,.42,-.4,.15,.05];
-const FINALE=2620;
-const ROOT=new THREE.Vector3(.6092,0,0),TIP=new THREE.Vector3(1.6573,0,0);  // Equip/Trace.txt cw_sword blade line
-const TRAIL_LEVEL=16,TRAIL_WINDOWS=[[1880,2140],[2360,2967]];
+const DURATION=5600,FPS=30;
+const TARGET=new THREE.Vector3(0,0,0),CHEST=new THREE.Vector3(0,1.15,0);
+const RADIUS=2.5,START=new THREE.Vector3(0,0,5.0);
+const ROOT=.6092,TIP=1.6573;  // Equip/Trace.txt cw_sword blade line along the weapon's X
+// Played frame range, hit frame and the frames where the blade sweeps, per attack motion.
+const MOVES={atkA:{from:5,to:13,hit:9,w0:6.6,w1:11,sound:'m_swd_atk_1_b.wav'},atkB:{from:7,to:15,hit:11,w0:8.6,w1:13.2,sound:'m_swd_atk_2_b.wav'},
+  atkC:{from:18,to:26,hit:22,w0:20,w1:22.4,thrust:true,sound:'m_swd_atk_3_b.wav'}};
+const ORDER=['atkA','atkB','atkA','atkC','atkB','atkA','atkB'],SPOTS=[0,4,1,5,2,6,3];
+const T0=600,PERIOD=280,RATE=34.5/1000;  // strike spacing (ms) and playback (frames per ms)
+const FS=T0+7*PERIOD;                      // finale: blink to the front, slow raise, big cut
+const FINALE_KEYS=[[FS,1],[FS+440,7],[FS+540,10],[FS+840,12],[FS+1840,43]];
+const FINALE_HIT=FS+440+100*(9-7)/3,FINALE_END=FS+1840;
 
 // ---------- renderer ----------
 const canvas=document.querySelector('#view');
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});renderer.setClearColor(0x0b121c);
 const scene=new THREE.Scene();
 scene.add(new THREE.GridHelper(24,24,0x2a3d4c,0x1a2a38));
-const camera=new THREE.PerspectiveCamera(36,1,.05,80);
-const HOME={position:new THREE.Vector3(3.9,2.45,2.3),target:new THREE.Vector3(0,1.05,-1.25)};
+const camera=new THREE.PerspectiveCamera(38,1,.05,80);
+const HOME={position:new THREE.Vector3(6.0,5.4,8.2),target:new THREE.Vector3(0,.7,.3)};
 const orbit=new OrbitControls(camera,canvas);orbit.enableDamping=true;
 function home(){camera.position.copy(HOME.position);orbit.target.copy(HOME.target);orbit.update()}
 home();
 const fit=()=>{const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()};
 new ResizeObserver(fit).observe(canvas);fit();
 
-// ---------- actors ----------
-const facing=new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().lookAt(new THREE.Vector3(),VICTIM,up));
-const caster=await NativeActor.create(data,scene,facing,'skill');
-const victim=await NativeActor.create(data,scene,new THREE.Quaternion().setFromAxisAngle(up,Math.PI).multiply(facing),'skill',true);
-victim.group.position.copy(VICTIM);
-const bone=data.weapons.skill.bone;
-function blade(time){
-  const [clip,index]=caster.frame(time),p=clip.bones.find(b=>b.name===bone).poses[index];
-  const m=new THREE.Matrix4().compose(new THREE.Vector3(p[0],p[1],p[2]),new THREE.Quaternion(-p[3],-p[4],-p[5],p[6]),ONE).premultiply(caster.group.matrixWorld);
-  return [ROOT.clone().applyMatrix4(m),TIP.clone().applyMatrix4(m)];
+// ---------- posing (native frames, interpolated between them) ----------
+const faceTarget=p=>new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().lookAt(p,TARGET,up));
+const inverseRest=new Map();
+function restInverse(clip){let r=inverseRest.get(clip);if(!r){r=clip.bones.map(b=>new THREE.Matrix4().fromArray(b.rest).invert());inverseRest.set(clip,r)}return r}
+const qa=new THREE.Quaternion(),qb=new THREE.Quaternion(),va=new THREE.Vector3(),vb=new THREE.Vector3();
+function boneAt(bone,f,out=new THREE.Matrix4()){
+  const n=bone.poses.length,i0=Math.max(0,Math.min(n-1,Math.floor(f))),i1=Math.min(n-1,i0+1),a=Math.max(0,Math.min(1,f-i0)),p=bone.poses[i0],q=bone.poses[i1];
+  qa.set(-p[3],-p[4],-p[5],p[6]);qb.set(-q[3],-q[4],-q[5],q[6]);qa.slerp(qb,a);va.set(p[0],p[1],p[2]).lerp(vb.set(q[0],q[1],q[2]),a);return out.compose(va,qa,ONE);
+}
+function pose(target,clip,f){
+  const inv=restInverse(clip),world=clip.bones.map(b=>boneAt(b,f)),skin=world.map((m,i)=>m.clone().multiply(inv[i])),pt=new THREE.Vector3();
+  for(const {chunk,mesh} of target.parts){if(!chunk.bones)continue;const a=mesh.geometry.attributes.position;
+    const pos=chunk.points.map((v,i)=>pt.fromArray(v).applyMatrix4(skin[chunk.bones[i]]).toArray());chunk.corners.forEach((c,i)=>a.setXYZ(i,...pos[c[0]]));a.needsUpdate=true}
+  const b=clip.bones.findIndex(x=>x.name===BONE);
+  for(const {chunk,mesh} of target.weaponParts){mesh.matrix.copy(world[b]).multiply(new THREE.Matrix4().fromArray(chunk.matrix));mesh.matrixWorldNeedsUpdate=true}
+}
+function blade(clip,f,position,quaternion){
+  const m=boneAt(clip.bones.find(x=>x.name===BONE),f).premultiply(new THREE.Matrix4().compose(position,quaternion,ONE));
+  return [new THREE.Vector3(ROOT,0,0).applyMatrix4(m),new THREE.Vector3(TIP,0,0).applyMatrix4(m)];
 }
 
-// ---------- effect materials (additive One/One like the game's effects) ----------
+// ---------- actors and the caster's timeline ----------
+const caster=await NativeActor.create(data,scene,faceTarget(START),'atkA');
+const victim=await NativeActor.create(data,scene,new THREE.Quaternion(),'atkA',true);
+const strikes=ORDER.map((clip,i)=>{
+  const phi=(25.714+SPOTS[i]*51.429)*Math.PI/180,pos=new THREE.Vector3(Math.sin(phi)*RADIUS,0,Math.cos(phi)*RADIUS),move=MOVES[clip],start=T0+i*PERIOD;
+  return {i,clip,move,pos,quat:faceTarget(pos),start,hit:start+(move.hit-move.from)/RATE};
+});
+const FRONT=new THREE.Vector3(0,0,RADIUS),FRONT_Q=faceTarget(FRONT);
+const piecewise=(keys,t)=>{for(let k=1;k<keys.length;k++)if(t<=keys[k][0]){const [t0,a]=keys[k-1],[t1,b]=keys[k];return a+(b-a)*Math.max(0,(t-t0)/(t1-t0))}return keys[keys.length-1][1]};
+function casterState(t){
+  const idle=x=>({clip:person.idle,f:(x*FPS/1000)%person.idle.frames});
+  if(t<T0)return {...idle(t),pos:START,quat:faceTarget(START)};
+  if(t<FS){const s=strikes[Math.min(6,Math.floor((t-T0)/PERIOD))];return {clip:person[s.clip],f:Math.min(s.move.to,s.move.from+(t-s.start)*RATE),pos:s.pos,quat:s.quat,strike:s}}
+  if(t<FINALE_END)return {clip:person.atkA,f:piecewise(FINALE_KEYS,t),pos:FRONT,quat:FRONT_Q,finale:true};
+  return {...idle(t-FINALE_END),pos:FRONT,quat:FRONT_Q};
+}
+const blinks=[{time:T0,from:START,to:strikes[0].pos},...strikes.slice(1).map(s=>({time:s.start,from:strikes[s.i-1].pos,to:s.pos})),{time:FS,from:strikes[6].pos,to:FRONT}];
+
+// ---------- materials (additive One/One like the game's effects, gold ramp of the Celestial effects) ----------
+const additive={transparent:true,depthWrite:false,blending:THREE.CustomBlending,blendEquation:THREE.AddEquation,blendSrc:THREE.OneFactor,blendDst:THREE.OneFactor,toneMapped:false};
+const RAMP=`vec3 ramp(float x){x=clamp(x,0.,1.);vec3 b=vec3(.47,.27,.04),c=vec3(.92,.67,.16),d=vec3(1.,.84,.43),e=vec3(1.,.97,.84);
+if(x<.35)return b*(x/.35);if(x<.65)return mix(b,c,(x-.35)/.3);if(x<.85)return mix(c,d,(x-.65)/.2);return mix(d,e,(x-.85)/.15);}
+vec3 hot(float x){return ramp(min(x,1.))*max(1.,x);}`;
 const loader=new THREE.TextureLoader();
 async function texture(name,flip=true){const t=await loader.loadAsync('sevenfold/'+name);t.flipY=flip;t.colorSpace=THREE.NoColorSpace;t.wrapS=t.wrapT=THREE.ClampToEdgeWrapping;t.needsUpdate=true;return t}
-const T={slash:await texture('slash.png'),xflash:await texture('xflash.png'),star:await texture('star.png'),feather:await texture('feather.png'),burst:await texture('burst.png'),ring:await texture('ring.png'),trail:await texture('trail.png',false)};
-const additive={transparent:true,depthWrite:false,blending:THREE.CustomBlending,blendEquation:THREE.AddEquation,blendSrc:THREE.OneFactor,blendDst:THREE.OneFactor,toneMapped:false};
+const T={xflash:await texture('xflash.png'),star:await texture('star.png'),feather:await texture('feather.png'),burst:await texture('burst.png'),ring:await texture('ring.png'),wing:await texture('wing.png'),trail:await texture('trail.png',false)};
 const quadVertex='varying vec2 v;void main(){v=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}';
-// reveal/dir sweep a slash in along u with a bright leading head; other quads keep reveal=2 (fully shown).
-const quadFragment=`uniform sampler2D map;uniform float level,reveal,dir,head;varying vec2 v;
-void main(){float u=dir>0.?v.x:1.-v.x;float vis=1.-smoothstep(reveal-.08,reveal,u);
-float h=head*exp(-pow((reveal-u)/.045,2.))*step(u,reveal);gl_FragColor=vec4(texture2D(map,v).rgb*(level*vis+h),1.0);}`;
-function quad(map,w,h,parent=scene){
-  const m=new THREE.ShaderMaterial({uniforms:{map:{value:map},level:{value:0},reveal:{value:2},dir:{value:1},head:{value:0}},side:THREE.DoubleSide,...additive,vertexShader:quadVertex,fragmentShader:quadFragment});
-  const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,h),m);mesh.frustumCulled=false;mesh.visible=false;parent.add(mesh);return mesh;
+const quadFragment='uniform sampler2D map;uniform float level;varying vec2 v;void main(){gl_FragColor=vec4(texture2D(map,v).rgb*level,1.0);}';
+function quad(map,w=1,h=1,parent=scene,overlay=false){
+  const m=new THREE.ShaderMaterial({uniforms:{map:{value:map},level:{value:0}},side:THREE.DoubleSide,...additive,depthTest:!overlay,vertexShader:quadVertex,fragmentShader:quadFragment});
+  const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,h),m);mesh.frustumCulled=false;mesh.visible=false;if(overlay)mesh.renderOrder=10;parent.add(mesh);return mesh;
 }
 function show(mesh,level){mesh.visible=level>.002;mesh.material.uniforms.level.value=level}
 const clamp01=x=>Math.min(1,Math.max(0,x)),easeOut=x=>1-Math.pow(1-clamp01(x),3);
 const smooth=(a,b,x)=>{const t=clamp01((x-a)/(b-a));return t*t*(3-2*t)};
-let seed=7;const random=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const pulse=(t,at,rise,fall)=>t<at-rise||t>at+fall?0:t<at?smooth(at-rise,at,t):1-smooth(at,at+fall,t);
+let seed=11;const random=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const billboard=(mesh,position,rot=0)=>{mesh.position.copy(position);mesh.quaternion.copy(camera.quaternion).multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,0,1),rot))};
+const bx=new THREE.Vector3(),by=new THREE.Vector3(),bz=new THREE.Vector3(),basis=new THREE.Matrix4();
+function axisBillboard(mesh,a,b,width){  // quad stretched from a to b, turned about that axis toward the camera
+  const c=a.clone().add(b).multiplyScalar(.5);bx.subVectors(b,a);const len=bx.length();bx.normalize();
+  bz.subVectors(camera.position,c);bz.addScaledVector(bx,-bz.dot(bx)).normalize();by.crossVectors(bz,bx);
+  mesh.quaternion.setFromRotationMatrix(basis.makeBasis(bx,by,bz));mesh.position.copy(c);mesh.scale.set(len,width,1);
+}
+const flat=(mesh,position,size,rot)=>{mesh.position.copy(position);mesh.rotation.set(-Math.PI/2,0,rot);mesh.scale.setScalar(size)};
 
-// cast: two counter-rotating ground rings under the caster, spiralling feathers, glow at the blade tip
+// ---------- afterimages: the caster's own meshes frozen in the strike's follow-through, glowing gold ----------
+const ghostVertex=`varying vec2 v;varying vec3 n,e;void main(){v=uv;vec4 w=modelMatrix*vec4(position,1.0);n=normalize(mat3(modelMatrix)*normal);e=cameraPosition-w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}`;
+const ghostFragment=`uniform sampler2D map;uniform float level;varying vec2 v;varying vec3 n,e;${RAMP}
+void main(){float l=dot(texture2D(map,v).rgb,vec3(.3,.59,.11));float rim=pow(1.-abs(dot(normalize(n),normalize(e))),2.);
+gl_FragColor=vec4(hot((.12+.5*l+1.1*rim)*level),1.0);}`;
+function smoothNormals(entry){  // corners are unshared per triangle; average face normals per native point
+  const a=entry.mesh.geometry.attributes.position,acc=entry.chunk.points.map(()=>new THREE.Vector3()),p=[0,1,2].map(()=>new THREE.Vector3()),fn=new THREE.Vector3(),e1=new THREE.Vector3();
+  for(let i=0;i+2<a.count;i+=3){p.forEach((v,k)=>v.fromBufferAttribute(a,i+k));fn.subVectors(p[1],p[0]).cross(e1.subVectors(p[2],p[0]));for(let k=0;k<3;k++)acc[entry.chunk.corners[i+k][0]].add(fn)}
+  const normals=new Float32Array(a.count*3);entry.chunk.corners.forEach((c,i)=>{const v=acc[c[0]].clone().normalize();normals.set([v.x,v.y,v.z],i*3)});
+  entry.mesh.geometry.setAttribute('normal',new THREE.BufferAttribute(normals,3));
+}
+function makeGhost(s){
+  const group=new THREE.Group();group.position.copy(s.pos);group.quaternion.copy(s.quat);scene.add(group);const mats=[];
+  const clone=(entry,weapon)=>{const m=new THREE.ShaderMaterial({uniforms:{map:{value:entry.mesh.material.map},level:{value:0}},...additive,side:THREE.DoubleSide,vertexShader:ghostVertex,fragmentShader:ghostFragment});mats.push(m);
+    const mesh=new THREE.Mesh(entry.mesh.geometry.clone(),m);mesh.frustumCulled=false;if(weapon)mesh.matrixAutoUpdate=false;group.add(mesh);return {chunk:entry.chunk,mesh}};
+  const ghost={group,mats,parts:caster.parts.map(e=>clone(e,false)),weaponParts:caster.weaponParts.map(e=>clone(e,true))};
+  const f=s.move.hit+1.6;pose(ghost,person[s.clip],f);[...ghost.parts,...ghost.weaponParts].forEach(smoothNormals);
+  ghost.tip=blade(person[s.clip],f,s.pos,s.quat)[1];ghost.chest=s.pos.clone().lerp(TARGET,.3).setY(1.2);
+  ghost.level=v=>{group.visible=v>.002;mats.forEach(m=>m.uniforms.level.value=v)};ghost.level(0);return ghost;
+}
+const ghosts=strikes.map(makeGhost);
+ghosts.forEach((g,i)=>g.leave=i<6?strikes[i+1].start:FS);
+
+// ---------- sword energy: ribbon over the area the blade sweeps, out past the tip ----------
+const arcFragment=`uniform float level,reveal;varying vec2 v;${RAMP}
+void main(){float u=v.x,w=v.y;float shape=pow(w,2.2)*.65+exp(-pow((w-.9)/.05,2.))*1.25;float taper=pow(sin(3.14159*clamp(u,0.,1.)),.55);
+float vis=1.-smoothstep(reveal-.05,reveal,u);float head=exp(-pow((reveal-u)/.05,2.))*step(u,reveal)*(1.-step(.999,reveal))*1.4*w;
+gl_FragColor=vec4(hot((shape*taper*vis+head)*level),1.0);}`;
+function arcMesh(clip,w0,w1,position,quaternion,inner,reach){
+  const n=48,pos=new Float32Array(n*6),uv=new Float32Array(n*4);
+  for(let k=0;k<n;k++){const [r,tp]=blade(clip,w0+(w1-w0)*k/(n-1),position,quaternion),d=tp.clone().sub(r);
+    pos.set([...r.clone().addScaledVector(d,inner).toArray(),...r.clone().addScaledVector(d,reach).toArray()],k*6);uv.set([k/(n-1),0,k/(n-1),1],k*4)}
+  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));g.setAttribute('uv',new THREE.BufferAttribute(uv,2));
+  const idx=[];for(let k=0;k<n-1;k++){const a=k*2;idx.push(a,a+1,a+2,a+1,a+3,a+2)}g.setIndex(idx);
+  const mesh=new THREE.Mesh(g,new THREE.ShaderMaterial({uniforms:{level:{value:0},reveal:{value:0}},side:THREE.DoubleSide,...additive,vertexShader:quadVertex,fragmentShader:arcFragment}));
+  mesh.frustumCulled=false;mesh.visible=false;scene.add(mesh);return mesh;
+}
+const marks=strikes.map(s=>{
+  const clip=person[s.clip],m=s.move;
+  if(!m.thrust)return {s,arc:arcMesh(clip,m.w0,m.w1,s.pos,s.quat,.5,1.5)};
+  // thrust: a spear of light along the blade through the target, and a ring around the thrust line
+  const [r,tp]=blade(clip,m.hit,s.pos,s.quat),d=tp.clone().sub(r).normalize();
+  const ring=quad(T.ring);ring.position.copy(CHEST);ring.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),d);
+  return {s,spear:quad(T.xflash),ring,a:r.clone().addScaledVector(d,.3),b:r.clone().addScaledVector(d,4.6)};
+});
+const finaleArc=arcMesh(person.atkA,7.2,11,FRONT,FRONT_Q,.5,2.3);
+
+// ---------- one-off pieces ----------
 const castRings=[quad(T.ring,2.8,2.8),quad(T.ring,1.7,1.7)];
-const castFeathers=Array.from({length:9},(_,j)=>({mesh:quad(T.feather,.2,.2),start:250+j*165,angle:j*2.4,radius:.75+random()*.3}));
-const tipGlow=quad(T.burst,.9,.9);
-// seven slashes: pivot at the target chest (yawed a little each), spun by its angle, arc apex through the centre
-const SW=3.0,SH=1.5;
-const slashes=SLASH_ANGLES.map((deg,i)=>{
-  const pivot=new THREE.Group();pivot.position.copy(CHEST).add(new THREE.Vector3(0,0,((i%3)-1)*.12));pivot.rotation.y=SLASH_YAW[i];scene.add(pivot);
-  const spin=new THREE.Group();spin.rotation.z=deg*Math.PI/180;pivot.add(spin);
-  const mesh=quad(T.slash,SW,SH,spin);mesh.position.y=-.36*SH+.05;mesh.material.uniforms.dir.value=i%2?-1:1;
-  const spark=quad(T.burst,1,1);
-  return {mesh,spin,spark,start:SLASH_START+i*SLASH_GAP,offset:new THREE.Vector3((random()-.5)*.5,(random()-.5)*.5,.15)};
-});
-// finale
+const castFeathers=Array.from({length:8},(_,j)=>({mesh:quad(T.feather,.2,.2),start:40+j*55,angle:j*2.4,radius:.7+random()*.3}));
+const tipGlow=quad(T.burst,1,1,scene,true);
+const pillars=blinks.map(()=>[quad(T.xflash),quad(T.xflash)]),streaks=blinks.map(()=>quad(T.xflash));
+const hitBursts=strikes.map(()=>quad(T.burst,1,1,scene,true)),hitStars=strikes.map(()=>quad(T.star,1,1,scene,true));
+const beams=ghosts.map(()=>quad(T.xflash));
+const groundSeal=quad(T.ring);
 const xGroup=new THREE.Group();xGroup.position.copy(CHEST);scene.add(xGroup);
-const xBars=[Math.PI/4,-Math.PI/4].map(a=>{const g=new THREE.Group();g.rotation.z=a;xGroup.add(g);return quad(T.xflash,4.6,1,g)});
-const core=quad(T.star,1,1),bigBurst=quad(T.burst,1,1),airRing=quad(T.ring,1,1),groundRing=quad(T.ring,1,1);
-// the flash sits at the target's centre: draw it over the body instead of half hidden inside it
-for(const m of [...xBars,core,bigBurst,airRing]){m.material.depthTest=false;m.renderOrder=10}
-const feathers=Array.from({length:30},()=>{
-  const d=new THREE.Vector3(random()*2-1,random()*1.4-.35,random()*2-1).normalize();
-  return {mesh:quad(T.feather,1,1),v:d.multiplyScalar(2.2+random()*2.6),size:.22+random()*.16,spin:(random()-.5)*9,rot:random()*6.28,life:1300+random()*700,phase:random()*6.28};
+const xBars=[Math.PI/4,-Math.PI/4].map(a=>{const g=new THREE.Group();g.rotation.z=a;xGroup.add(g);return quad(T.xflash,4.8,1,g,true)});
+const core=quad(T.star,1,1,scene,true),bigBurst=quad(T.burst,1,1,scene,true),airRing=quad(T.ring,1,1,scene,true),groundRing=quad(T.ring);
+// light wings on the caster's back (texture root at u .06, v .45)
+const WING=2.3,wings=[1,-1].map(side=>{
+  const pivot=new THREE.Group(),hinge=new THREE.Group();scene.add(pivot);pivot.add(hinge);
+  const mesh=quad(T.wing,WING,WING,hinge);mesh.geometry.translate((.5-.06)*WING,(.5-.45)*WING,0);mesh.scale.x=side;return {side,pivot,hinge,mesh};
 });
+// feathers: from every afterimage, the centre and the wings
+const feathers=[];
+const addFeathers=(n,origin,spread,speed,start,life)=>{for(let k=0;k<n;k++){const d=new THREE.Vector3(random()*2-1,random()*1.3-.3,random()*2-1).normalize();
+  feathers.push({mesh:quad(T.feather),origin,v:d.multiplyScalar(speed*(.6+random()*.8)).add(spread),size:.2+random()*.16,spin:(random()-.5)*9,rot:random()*6.28,life:life*(.75+random()*.5),phase:random()*6.28,start})}};
+ghosts.forEach(g=>addFeathers(6,g.chest,g.chest.clone().sub(CHEST).setY(0).normalize().multiplyScalar(1.2),2,FINALE_HIT+60,1400));
+addFeathers(18,CHEST,new THREE.Vector3(),3.8,FINALE_HIT,1700);
+const wingPoint=new THREE.Vector3(0,1.8,RADIUS-.5);
+addFeathers(12,wingPoint,new THREE.Vector3(0,.6,.4),1.3,FINALE_HIT+520,1600);
+
 // sword trail (celestial_gold, same per-sample layout as the 평타 preview / native EtcEffect)
-const trail=(()=>{const n=TRAIL_LEVEL+2,g=new THREE.BufferGeometry();
+const trail=(()=>{const n=18,g=new THREE.BufferGeometry();
   g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(n*6),3));g.setAttribute('uv',new THREE.BufferAttribute(new Float32Array(n*4),2));g.setAttribute('brightness',new THREE.BufferAttribute(new Float32Array(n*2),1));
   const idx=[];for(let i=0;i<n-1;i++){const a=i*2;idx.push(a,a+1,a+2,a+1,a+3,a+2)}g.setIndex(idx);g.setDrawRange(0,0);
   const m=new THREE.ShaderMaterial({uniforms:{map:{value:T.trail}},side:THREE.DoubleSide,...additive,
@@ -146,54 +239,76 @@ function fillTrail(pairs){
 
 // ---------- sound ----------
 const sound=new NativeSound(data.sounds);let audible=false,lastSound=-1;
-const soundEvents=[...slashes.map((s,i)=>({time:s.start,name:`m_swd_atk_${i%4+1}_b.wav`})),{time:FINALE,name:'attack100049.wav'},{time:FINALE+30,name:'m_swd_atk_4_b.wav'}];
+const soundEvents=[...strikes.map(s=>({time:s.hit,name:s.move.sound})),{time:FINALE_HIT,name:'attack100049.wav'},{time:FINALE_HIT+20,name:'m_swd_atk_4_b.wav'}];
 
 // ---------- timeline ----------
-const billboard=(mesh,position,rot=0)=>{mesh.position.copy(position);mesh.quaternion.copy(camera.quaternion).multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,0,1),rot))};
-const flat=(mesh,position,size,rot)=>{mesh.position.copy(position);mesh.rotation.set(-Math.PI/2,0,rot);mesh.scale.setScalar(size)};
-let time=0,speed=1,playing=true,shake=new THREE.Vector3();
+let time=0,speed=1,playing=true,shake=new THREE.Vector3(),posed='';
 function update(){
-  caster.update(time);victim.update(time);
-  const t=time,phase=document.querySelector('#phase');
-  // cast
-  const charge=smooth(150,1700,t)*.75+Math.exp(-Math.pow((t-1900)/120,2))*.6;
-  const castFade=1-smooth(1950,2500,t);
-  castRings.forEach((r,i)=>{flat(r,new THREE.Vector3(0,.02+i*.01,0),1,(i?-1:1)*t*.0007);show(r,charge*castFade*(i?.8:1))});
-  for(const f of castFeathers){const k=(t-f.start)/1100;if(k<0||k>1){f.mesh.visible=false;continue}
-    const a=f.angle+k*2.2,r=f.radius*(1-.35*k);billboard(f.mesh,new THREE.Vector3(Math.cos(a)*r,.1+k*2.1,Math.sin(a)*r),a);show(f.mesh,Math.sin(Math.PI*k)*.85)}
-  const [root,tip]=blade(t);
-  const glow=smooth(1300,1860,t)*(1-smooth(1900,2000,t));billboard(tipGlow,tip,t*.004);tipGlow.scale.setScalar(.7+.25*Math.sin(t*.025));show(tipGlow,glow*1.2);
-  // trail: one sample per game frame inside the swing windows, kept for the trace length
-  const win=TRAIL_WINDOWS.find(([a,b])=>t>=a&&t<b);trail.visible=!!win;
-  if(win){const now=Math.floor(t*FPS/1000),first=Math.max(Math.ceil(win[0]*FPS/1000),now-TRAIL_LEVEL),pairs=[];
-    for(let f=first;f<=now;f++)pairs.push(blade(f*1000/FPS));pairs.push([root,tip]);fillTrail(pairs)}
-  // slashes
-  let landed=0;
-  slashes.forEach((s,i)=>{const a=t-s.start,u=s.mesh.material.uniforms;
-    if(a<0){s.mesh.visible=s.spark.visible=false;return}landed++;
-    u.reveal.value=easeOut(a/85)*1.12;u.head.value=1.6*(1-smooth(60,140,a));
-    let level=a<120?1.3:.4+.9*Math.exp(-(a-120)/110);
-    const f=t-FINALE;if(f>=0)level=(.4+1.9*Math.exp(-f/120))*(1-smooth(0,650,f));
-    s.mesh.scale.setScalar((.85+.15*easeOut(a/120))*(f>0?1+.15*easeOut(f/300):1));show(s.mesh,level);
-    const k=a/230;billboard(s.spark,CHEST.clone().add(s.offset),i);s.spark.scale.setScalar(.5+1.2*easeOut(k));show(s.spark,k<1?1.3*(1-k):0);
+  const t=time,F=t-FINALE_HIT;
+  // caster
+  const st=casterState(t);caster.group.position.copy(st.pos);caster.group.quaternion.copy(st.quat);caster.group.updateMatrixWorld(true);
+  const key=st.clip.frames+':'+st.f.toFixed(3);if(key!==posed){pose(caster,st.clip,st.f);posed=key}
+  victim.update(t);
+  const [root,tip]=blade(st.clip,st.f,st.pos,st.quat);
+  // gathering at the start
+  const charge=smooth(0,450,t)*(1-smooth(T0,T0+300,t));
+  castRings.forEach((r,i)=>{flat(r,new THREE.Vector3(START.x,.02+i*.01,START.z),1,(i?-1:1)*t*.0012);show(r,charge*(i?.8:1))});
+  for(const f of castFeathers){const k=(t-f.start)/650;if(k<0||k>1){f.mesh.visible=false;continue}
+    const a=f.angle+k*2.4,r=f.radius*(1-.3*k);billboard(f.mesh,new THREE.Vector3(START.x+Math.cos(a)*r,.1+k*2.2,START.z+Math.sin(a)*r),a);show(f.mesh,Math.sin(Math.PI*k)*.9)}
+  const glow=smooth(150,560,t)*(1-smooth(T0,T0+60,t))+smooth(FS+100,FINALE_HIT-40,t)*(1-smooth(FINALE_HIT,FINALE_HIT+80,t))*1.4;
+  billboard(tipGlow,tip,t*.004);tipGlow.scale.setScalar(.8+.3*Math.sin(t*.03));show(tipGlow,glow);
+  // blinks: a pillar where the caster leaves and where he lands, and a streak between them
+  blinks.forEach((b,k)=>{const a=t-b.time,[p0,p1]=pillars[k];
+    if(a<0||a>200){p0.visible=p1.visible=streaks[k].visible=false;return}
+    axisBillboard(p0,b.from.clone().setY(-.1),b.from.clone().setY(2.5),.9);show(p0,1.6*(1-a/200));
+    axisBillboard(p1,b.to.clone().setY(-.1),b.to.clone().setY(2.5),.9);show(p1,1.8*(1-a/160)*(a<160));
+    axisBillboard(streaks[k],b.from.clone().setY(1.1),b.to.clone().setY(1.1),.6);show(streaks[k],1.4*(1-a/140)*(a<140));
   });
-  // finale
-  const f=t-FINALE;
+  // sword energy and thrust spears: reveal with the blade, linger, gather for the finale, flare at the hit
+  const linger=(a,ready)=>{let l=a<0?0:a<160?1.5:.32+1.18*Math.exp(-(a-160)/140);if(t>=FS)l=.32+.5*smooth(FS,FINALE_HIT,t);if(F>=0)l=(.4+1.3*Math.exp(-F/130))*(1-smooth(0,700,F));return ready?l:0};
+  marks.forEach((m,i)=>{const s=m.s,a=t-s.hit,cur=st.strike===s?st.f:99;
+    if(m.arc){const reveal=clamp01((cur-s.move.w0)/(s.move.w1-s.move.w0));m.arc.material.uniforms.reveal.value=t<s.start?0:st.strike===s?reveal:1.05;
+      const l=t<s.start?0:st.strike===s&&a<0?1.5:linger(a,true);show(m.arc,l);return}
+    axisBillboard(m.spear,m.a,m.b,.9);show(m.spear,linger(a,a>=0)*1.2);
+    const k=a/320;m.ring.scale.setScalar(.3+1.6*easeOut(k));show(m.ring,a>=0&&k<1?1.3*(1-k):0);
+  });
+  // hit sparks on the target, and a small jolt
+  let jolt=new THREE.Vector3();
+  strikes.forEach((s,i)=>{const a=t-s.hit,k=a/220;
+    billboard(hitBursts[i],CHEST,i);hitBursts[i].scale.setScalar(.6+1.6*easeOut(k));show(hitBursts[i],a>=0&&k<1?1.4*(1-k):0);
+    billboard(hitStars[i],CHEST,i*.7);hitStars[i].scale.setScalar(1.6-.6*k);show(hitStars[i],a>=0&&k<1?1.8*Math.pow(1-k,2):0);
+    if(a>=0&&a<140)jolt.add(TARGET.clone().sub(s.pos).normalize().multiplyScalar(Math.sin(a*.09)*.06*(1-a/140)))});
+  victim.group.position.copy(TARGET).add(jolt);
+  // afterimages: bright when left behind, settle, gather light before the finale, flash and vanish
+  ghosts.forEach((g,i)=>{const a=t-g.leave;let l=a<0?0:.36+.9*Math.exp(-a/180);
+    if(t>=FS)l=Math.max(l,.36+.42*smooth(FS,FINALE_HIT,t));if(F>=0)l=(.8+.5*Math.exp(-F/90))*(1-smooth(60,380,F));g.level(a<0?0:l);
+    axisBillboard(beams[i],g.tip,CHEST,.5);show(beams[i],t>=FS+120&&F<120?smooth(FS+120,FINALE_HIT-60,t)*1.3*(F>0?1-F/120:1):0)});
+  flat(groundSeal,new THREE.Vector3(0,.025,0),RADIUS*2.4,t*.0006);show(groundSeal,smooth(T0,FS,t)*.35+smooth(FS,FINALE_HIT,t)*.5-(F>=0?smooth(0,500,F)*.85:0));
+  // light wings: unfold behind the caster during the slow raise, flare on the hit, dissolve into feathers
+  const sp=new THREE.Vector3().setFromMatrixPosition(boneAt(st.clip.bones.find(b=>b.name==='Bip01 Spine1'),st.f)).applyQuaternion(st.quat).add(st.pos);
+  const open=easeOut((t-FS-60)/360),wingLevel=t<FS+40||F>1100?0:(.85*open+.9*pulse(t,FINALE_HIT,40,350))*(1-smooth(500,1100,F));
+  wings.forEach(w=>{w.pivot.position.copy(sp).add(new THREE.Vector3(w.side*.1,.15,.22).applyQuaternion(st.quat));w.pivot.quaternion.copy(st.quat).multiply(new THREE.Quaternion().setFromAxisAngle(up,-w.side*.42));
+    w.hinge.rotation.z=w.side*(-1.25+1.4*open+.12*smooth(0,900,F));show(w.mesh,wingLevel)});
+  // the finale cut and the burst
+  const fr=st.finale?clamp01((st.f-7.2)/(11-7.2)):t>=FINALE_END?1:0;finaleArc.material.uniforms.reveal.value=fr>=1?1.05:fr;
+  show(finaleArc,t<FS+440?0:F<0?1.5:(.6+1.5*Math.exp(-F/180))*(1-smooth(300,1100,F)));
   xGroup.quaternion.copy(camera.quaternion);
-  xBars.forEach(x=>{x.scale.set(.1+.9*easeOut(f/90),1+.5*easeOut(f/300),1);show(x,f>=0&&f<700?2.8*Math.exp(-f/240):0)});
-  billboard(core,CHEST,f*.0006);core.scale.setScalar(f<160?.6+2.4*easeOut(f/160):3-.8*smooth(160,900,f));show(core,f>=0&&f<900?2.4*Math.exp(-f/260):0);
-  const kb=f/500;billboard(bigBurst,CHEST,f*.001);bigBurst.scale.setScalar(1+2*easeOut(kb));show(bigBurst,f>=0&&kb<1?1.1*Math.pow(1-kb,1.5):0);
-  const ka=f/420;billboard(airRing,CHEST);airRing.scale.setScalar(.4+3.4*easeOut(ka));show(airRing,f>=0&&ka<1?.85*Math.pow(1-ka,1.6):0);
-  const kg=f/800;flat(groundRing,new THREE.Vector3(VICTIM.x,.03,VICTIM.z),.6+5.4*easeOut(kg),f*.0008);show(groundRing,f>=0&&kg<1?Math.pow(1-kg,1.2):0);
-  for(const p of feathers){const s=f/1000,k=f/p.life;if(f<0||k>=1){p.mesh.visible=false;continue}
-    const drag=2.2,pos=CHEST.clone().addScaledVector(p.v,(1-Math.exp(-drag*s))/drag);pos.y-=.35*s*s;
+  xBars.forEach(x=>{x.scale.set(.1+.9*easeOut(F/90),1+.5*easeOut(F/300),1);show(x,F>=0&&F<700?2.2*Math.exp(-F/240):0)});
+  billboard(core,CHEST,F*.0006);core.scale.setScalar(F<160?.6+2.8*easeOut(F/160):3.4-1*smooth(160,900,F));show(core,F>=0&&F<900?2*Math.exp(-F/260):0);
+  const kb=F/520;billboard(bigBurst,CHEST,F*.001);bigBurst.scale.setScalar(1+2.4*easeOut(kb));show(bigBurst,F>=0&&kb<1?1.2*Math.pow(1-kb,1.5):0);
+  const ka=F/420;billboard(airRing,CHEST);airRing.scale.setScalar(.4+3.8*easeOut(ka));show(airRing,F>=0&&ka<1?.9*Math.pow(1-ka,1.6):0);
+  const kg=F/850;flat(groundRing,new THREE.Vector3(0,.03,0),.6+7*easeOut(kg),F*.0008);show(groundRing,F>=0&&kg<1?Math.pow(1-kg,1.2):0);
+  for(const p of feathers){const a=t-p.start,s=a/1000,k=a/p.life;if(a<0||k>=1){p.mesh.visible=false;continue}
+    const drag=2.2,pos=p.origin.clone().addScaledVector(p.v,(1-Math.exp(-drag*s))/drag);pos.y-=.35*s*s;
     billboard(p.mesh,pos,p.rot+p.spin*s);p.mesh.scale.set(p.size*(.75+.25*Math.sin(s*8+p.phase)),p.size,1);show(p.mesh,1.25*(1-smooth(.55,1,k)))}
-  // victim: small jolts on each slash, pushed back by the finale
-  const jolt=slashes.reduce((m,s)=>{const a=t-s.start;return a>=0&&a<120?m+Math.sin(a*.12)*.035*(1-a/120):m},0);
-  const push=f>=0?.28*easeOut(f/180)*(1-smooth(500,1600,f)):0;
-  victim.group.position.set(VICTIM.x+jolt,0,VICTIM.z-push);
-  shake.set(0,0,0);if(f>=0&&f<320){const amp=.05*(1-f/320);shake.set(Math.sin(f*.9)*amp,Math.cos(f*1.3)*amp,0)}
-  phase.textContent=t<1880?'기 모으기':t<FINALE?`칠연참 ${landed}/7`:t<3800?'마무리 · 일곱 날개 폭발':'';
+  // the sword's own gold trail during each swing
+  const w=st.strike?.move||(st.finale?MOVES.atkA:null),inSwing=w&&!w.thrust&&st.f>=w.w0&&st.f<=w.w1+1.2;trail.visible=!!inSwing;
+  if(inSwing){const pairs=[];const n=Math.min(14,2+Math.ceil((st.f-w.w0)*4));for(let k=0;k<=n;k++)pairs.push(blade(st.clip,w.w0+(st.f-w.w0)*k/n,st.pos,st.quat));fillTrail(pairs)}
+  // camera shake on hits
+  shake.set(0,0,0);const shakeAt=(a,amp,len)=>{if(a>=0&&a<len){const m=amp*(1-a/len);shake.x+=Math.sin(a*.9)*m;shake.y+=Math.cos(a*1.3)*m}};
+  strikes.forEach(s=>shakeAt(t-s.hit,.018,120));shakeAt(F,.07,380);
+  const landed=strikes.filter(s=>t>=s.hit).length;
+  document.querySelector('#phase').textContent=t<T0?'기 모으기':t<FS?`칠연참 ${landed}/7`:F<0?'천익 · 날개 펼침':F<1400?'마무리 · 일곱 날개 폭발':'';
 }
 function render(){update();camera.position.add(shake);renderer.render(scene,camera);camera.position.sub(shake);
   document.querySelector('#seek').value=Math.floor(time);document.querySelector('#clock').textContent=(time/1000).toFixed(2)+'초'}
@@ -222,10 +337,10 @@ renderer.setAnimationLoop(ms=>{
 // Verification aid: render one moment and summarise the drawn gold pixels (also works with the tab hidden).
 window.probe=t=>{setPlaying(false);time=t;render();
   const gl=renderer.getContext(),w=gl.drawingBufferWidth,h=gl.drawingBufferHeight,px=new Uint8Array(w*h*4);gl.readPixels(0,0,w,h,gl.RGBA,gl.UNSIGNED_BYTE,px);
-  let n=0,white=0,r=0,g=0,b=0;for(let i=0;i<px.length;i+=4){const R0=px[i],G0=px[i+1],B0=px[i+2];if(R0>200&&G0>200&&B0>180)white++;if(R0>90&&R0>B0+50){n++;r+=R0;g+=G0;b+=B0}}
-  return {phase:document.querySelector('#phase').textContent,gold:n,white,avg:n?[Math.round(r/n),Math.round(g/n),Math.round(b/n)]:null,trail:trail.visible,
-    slashes:slashes.filter(s=>s.mesh.visible).length,feathers:feathers.filter(p=>p.mesh.visible).length,tip:blade(t)[1].toArray().map(v=>+v.toFixed(2))}};
-window.sevenfold={caster,victim,trail,blade,camera,scene,renderer,xBars,core,bigBurst,airRing};
+  let n=0,white=0;for(let i=0;i<px.length;i+=4){const R0=px[i],G0=px[i+1],B0=px[i+2];if(R0>200&&G0>200&&B0>180)white++;if(R0>90&&R0>B0+50)n++}
+  return {phase:document.querySelector('#phase').textContent,gold:n,white,trail:trail.visible,ghosts:ghosts.filter(g=>g.group.visible).length,
+    arcs:marks.filter(m=>m.arc?.visible||m.spear?.visible).length,wings:wings[0].mesh.visible,feathers:feathers.filter(p=>p.mesh.visible).length}};
+window.sevenfold={caster,ghosts,strikes,camera,scene,renderer};
 window.sevenfoldReady=true;
 </script>
 </body>
