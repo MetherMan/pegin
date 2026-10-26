@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>칠익난무 미리보기</title>
+<script type="importmap">{"imports":{"three":"../../twilight/vendor/three.module.js"}}</script>
+<style>
+:root{--bg:#0d0f16;--panel:#151925;--line:#2a3042;--text:#e9ecf4;--muted:#9aa3b8;--gold:#f0c45a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 "Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif}
+main{max-width:1300px;margin:auto;padding:20px 16px}
+h1{margin:0 0 6px;font-size:22px}h1 span{color:var(--gold)}
+p.lead{margin:0 0 12px;color:var(--muted);max-width:980px}
+p.lead a{color:#ffd77a}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.bar b{color:var(--muted);font-weight:500;margin-left:6px}
+button{background:#1d2232;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer}
+button.on{background:#3a2e10;border-color:var(--gold);color:#ffe7a6}
+section{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;position:relative}
+.stage{height:min(640px,72vh);position:relative}
+canvas{display:block;width:100%;height:100%}
+.phase{position:absolute;left:14px;top:10px;font-size:15px;color:#ffe7a6;text-shadow:0 1px 3px #000;pointer-events:none}
+.seekbar{display:flex;gap:10px;align-items:center;padding:8px 14px 12px}
+.seekbar input{flex:1;accent-color:var(--gold)}
+.seekbar span{color:var(--muted);font-variant-numeric:tabular-nums;min-width:52px;text-align:right}
+ol{margin:12px 0 0;padding-left:22px;color:var(--muted);max-width:980px}
+ol b{color:var(--text);font-weight:600}
+@media (max-width:700px){.stage{height:420px}}
+</style>
+</head>
+<body>
+<main>
+<h1><span>칠익난무</span> 미리보기 · 근거리 140 스킬 제안</h1>
+<p class="lead">푸른달 갑옷 + <b>천상의 날개 양손검</b>을 든 남자 캐릭터가 게임의 실제 양손검 스킬 모션(<code>m_ths_mgc_A</code>, 기 모으기 1~56 · 내려베기 57~89프레임)으로 시전합니다. 검을 내려치는 순간부터 대상 주위에 금빛 초승달 베기 7번이 각도를 바꿔 들어가고, 7번째에 일곱 줄기가 한꺼번에 번쩍이며 X자 섬광과 깃털 폭발로 끝납니다. 검선은 실제 게임에 들어간 <code>celestial_gold</code> 텍스처, 폭발·고리는 게임 이펙트 텍스처를 같은 금색 단계로 다시 칠한 것이고 초승달·X섬광·깃털은 새로 그렸습니다. <b>게임에는 아직 넣지 않은 브라우저 재현</b>입니다. 마우스로 돌려 볼 수 있습니다. <a href="../effects.html">평타 이펙트</a> · <a href="../models.html">무기 3D</a></p>
+<div class="bar">
+<button id="play">일시정지</button><button id="restart">처음부터</button>
+<b>속도</b><button data-speed="1" class="on">1배</button><button data-speed="0.5">0.5배</button><button data-speed="0.25">0.25배</button>
+<button id="sound">소리 켜기</button><button id="camera">카메라 원위치</button>
+</div>
+<section>
+<div class="stage"><canvas id="view"></canvas><div class="phase" id="phase"></div></div>
+<div class="seekbar"><input id="seek" type="range" min="0" max="4800" step="1" value="0"><span id="clock">0.00초</span></div>
+</section>
+<ol>
+<li><b>기 모으기 (0 ~ 1.9초)</b> · 발밑에 금빛 고리 두 개가 반대로 돌며 밝아지고, 깃털이 나선으로 떠오릅니다. 검 끝에 빛이 모입니다.</li>
+<li><b>칠연참 (1.93 ~ 2.50초)</b> · 첫 베기는 실제 내려베기에 맞춰 들어가고, 이어서 0.095초 간격으로 날개 일곱 장처럼 방향을 바꾼 초승달이 대상을 가릅니다. 베일 때마다 작은 금빛 파열.</li>
+<li><b>마무리 (2.62초)</b> · 남아 있던 일곱 줄기가 동시에 번쩍인 뒤 X자 섬광, 큰 금빛 폭발, 바닥·공중 충격파 고리, 깃털 30장이 사방으로 흩날립니다.</li>
+</ol>
+</main>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from '../../twilight/vendor/OrbitControls.js';
+import {NativeActor,NativeSound} from '../../../client-overlay/Tools/SkillColors/actor.js';
+
+const data=await (await fetch('sevenfold/actors.json')).json();
+const up=new THREE.Vector3(0,1,0),ONE=new THREE.Vector3(1,1,1);
+const DURATION=4800,FPS=30;
+const VICTIM=new THREE.Vector3(0,0,-2.4),CHEST=new THREE.Vector3(0,1.15,-2.4);
+const SLASH_START=1930,SLASH_GAP=95,SLASH_ANGLES=[0,154,309,103,257,51,206],SLASH_YAW=[-.35,.3,-.12,.42,-.4,.15,.05];
+const FINALE=2620;
+const ROOT=new THREE.Vector3(.6092,0,0),TIP=new THREE.Vector3(1.6573,0,0);  // Equip/Trace.txt cw_sword blade line
+const TRAIL_LEVEL=16,TRAIL_WINDOWS=[[1880,2140],[2360,2967]];
+
+// ---------- renderer ----------
+const canvas=document.querySelector('#view');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,preserveDrawingBuffer:true});renderer.setClearColor(0x0b121c);
+const scene=new THREE.Scene();
+scene.add(new THREE.GridHelper(24,24,0x2a3d4c,0x1a2a38));
+const camera=new THREE.PerspectiveCamera(36,1,.05,80);
+const HOME={position:new THREE.Vector3(3.9,2.45,2.3),target:new THREE.Vector3(0,1.05,-1.25)};
+const orbit=new OrbitControls(camera,canvas);orbit.enableDamping=true;
+function home(){camera.position.copy(HOME.position);orbit.target.copy(HOME.target);orbit.update()}
+home();
+const fit=()=>{const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()};
+new ResizeObserver(fit).observe(canvas);fit();
+
+// ---------- actors ----------
+const facing=new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().lookAt(new THREE.Vector3(),VICTIM,up));
+const caster=await NativeActor.create(data,scene,facing,'skill');
+const victim=await NativeActor.create(data,scene,new THREE.Quaternion().setFromAxisAngle(up,Math.PI).multiply(facing),'skill',true);
+victim.group.position.copy(VICTIM);
+const bone=data.weapons.skill.bone;
+function blade(time){
+  const [clip,index]=caster.frame(time),p=clip.bones.find(b=>b.name===bone).poses[index];
+  const m=new THREE.Matrix4().compose(new THREE.Vector3(p[0],p[1],p[2]),new THREE.Quaternion(-p[3],-p[4],-p[5],p[6]),ONE).premultiply(caster.group.matrixWorld);
+  return [ROOT.clone().applyMatrix4(m),TIP.clone().applyMatrix4(m)];
+}
+
+// ---------- effect materials (additive One/One like the game's effects) ----------
+const loader=new THREE.TextureLoader();
+async function texture(name,flip=true){const t=await loader.loadAsync('sevenfold/'+name);t.flipY=flip;t.colorSpace=THREE.NoColorSpace;t.wrapS=t.wrapT=THREE.ClampToEdgeWrapping;t.needsUpdate=true;return t}
+const T={slash:await texture('slash.png'),xflash:await texture('xflash.png'),star:await texture('star.png'),feather:await texture('feather.png'),burst:await texture('burst.png'),ring:await texture('ring.png'),trail:await texture('trail.png',false)};
+const additive={transparent:true,depthWrite:false,blending:THREE.CustomBlending,blendEquation:THREE.AddEquation,blendSrc:THREE.OneFactor,blendDst:THREE.OneFactor,toneMapped:false};
+const quadVertex='varying vec2 v;void main(){v=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}';
+// reveal/dir sweep a slash in along u with a bright leading head; other quads keep reveal=2 (fully shown).
+const quadFragment=`uniform sampler2D map;uniform float level,reveal,dir,head;varying vec2 v;
+void main(){float u=dir>0.?v.x:1.-v.x;float vis=1.-smoothstep(reveal-.08,reveal,u);
+float h=head*exp(-pow((reveal-u)/.045,2.))*step(u,reveal);gl_FragColor=vec4(texture2D(map,v).rgb*(level*vis+h),1.0);}`;
+function quad(map,w,h,parent=scene){
+  const m=new THREE.ShaderMaterial({uniforms:{map:{value:map},level:{value:0},reveal:{value:2},dir:{value:1},head:{value:0}},side:THREE.DoubleSide,...additive,vertexShader:quadVertex,fragmentShader:quadFragment});
+  const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,h),m);mesh.frustumCulled=false;mesh.visible=false;parent.add(mesh);return mesh;
+}
+function show(mesh,level){mesh.visible=level>.002;mesh.material.uniforms.level.value=level}
+const clamp01=x=>Math.min(1,Math.max(0,x)),easeOut=x=>1-Math.pow(1-clamp01(x),3);
+const smooth=(a,b,x)=>{const t=clamp01((x-a)/(b-a));return t*t*(3-2*t)};
+let seed=7;const random=()=>(seed=(seed*16807)%2147483647)/2147483647;
+
+// cast: two counter-rotating ground rings under the caster, spiralling feathers, glow at the blade tip
+const castRings=[quad(T.ring,2.8,2.8),quad(T.ring,1.7,1.7)];
+const castFeathers=Array.from({length:9},(_,j)=>({mesh:quad(T.feather,.2,.2),start:250+j*165,angle:j*2.4,radius:.75+random()*.3}));
+const tipGlow=quad(T.burst,.9,.9);
+// seven slashes: pivot at the target chest (yawed a little each), spun by its angle, arc apex through the centre
+const SW=3.0,SH=1.5;
+const slashes=SLASH_ANGLES.map((deg,i)=>{
+  const pivot=new THREE.Group();pivot.position.copy(CHEST).add(new THREE.Vector3(0,0,((i%3)-1)*.12));pivot.rotation.y=SLASH_YAW[i];scene.add(pivot);
+  const spin=new THREE.Group();spin.rotation.z=deg*Math.PI/180;pivot.add(spin);
+  const mesh=quad(T.slash,SW,SH,spin);mesh.position.y=-.36*SH+.05;mesh.material.uniforms.dir.value=i%2?-1:1;
+  const spark=quad(T.burst,1,1);
+  return {mesh,spin,spark,start:SLASH_START+i*SLASH_GAP,offset:new THREE.Vector3((random()-.5)*.5,(random()-.5)*.5,.15)};
+});
+// finale
+const xGroup=new THREE.Group();xGroup.position.copy(CHEST);scene.add(xGroup);
+const xBars=[Math.PI/4,-Math.PI/4].map(a=>{const g=new THREE.Group();g.rotation.z=a;xGroup.add(g);return quad(T.xflash,4.6,1,g)});
+const core=quad(T.star,1,1),bigBurst=quad(T.burst,1,1),airRing=quad(T.ring,1,1),groundRing=quad(T.ring,1,1);
+// the flash sits at the target's centre: draw it over the body instead of half hidden inside it
+for(const m of [...xBars,core,bigBurst,airRing]){m.material.depthTest=false;m.renderOrder=10}
+const feathers=Array.from({length:30},()=>{
+  const d=new THREE.Vector3(random()*2-1,random()*1.4-.35,random()*2-1).normalize();
+  return {mesh:quad(T.feather,1,1),v:d.multiplyScalar(2.2+random()*2.6),size:.22+random()*.16,spin:(random()-.5)*9,rot:random()*6.28,life:1300+random()*700,phase:random()*6.28};
+});
+// sword trail (celestial_gold, same per-sample layout as the 평타 preview / native EtcEffect)
+const trail=(()=>{const n=TRAIL_LEVEL+2,g=new THREE.BufferGeometry();
+  g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(n*6),3));g.setAttribute('uv',new THREE.BufferAttribute(new Float32Array(n*4),2));g.setAttribute('brightness',new THREE.BufferAttribute(new Float32Array(n*2),1));
+  const idx=[];for(let i=0;i<n-1;i++){const a=i*2;idx.push(a,a+1,a+2,a+1,a+3,a+2)}g.setIndex(idx);g.setDrawRange(0,0);
+  const m=new THREE.ShaderMaterial({uniforms:{map:{value:T.trail}},side:THREE.DoubleSide,...additive,
+    vertexShader:'attribute float brightness;varying vec2 v;varying float l;void main(){v=uv;l=brightness;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',
+    fragmentShader:'uniform sampler2D map;varying vec2 v;varying float l;void main(){gl_FragColor=vec4(texture2D(map,v).rgb*l,1.0);}'});
+  const mesh=new THREE.Mesh(g,m);mesh.frustumCulled=false;scene.add(mesh);return mesh})();
+function fillTrail(pairs){
+  const g=trail.geometry,p=g.attributes.position,u=g.attributes.uv,b=g.attributes.brightness,count=pairs.length;
+  for(let i=0;i<count;i++){const [a,c]=pairs[i];p.setXYZ(i*2,a.x,a.y,a.z);p.setXYZ(i*2+1,c.x,c.y,c.z);
+    const uu=1-i/Math.max(1,count-1),light=(255-Math.floor(255/count)*(count-1-i))/255;u.setXY(i*2,uu,0);u.setXY(i*2+1,uu,1);b.setX(i*2,light);b.setX(i*2+1,light)}
+  p.needsUpdate=u.needsUpdate=b.needsUpdate=true;g.setDrawRange(0,Math.max(0,count-1)*6);
+}
+
+// ---------- sound ----------
+const sound=new NativeSound(data.sounds);let audible=false,lastSound=-1;
+const soundEvents=[...slashes.map((s,i)=>({time:s.start,name:`m_swd_atk_${i%4+1}_b.wav`})),{time:FINALE,name:'attack100049.wav'},{time:FINALE+30,name:'m_swd_atk_4_b.wav'}];
+
+// ---------- timeline ----------
+const billboard=(mesh,position,rot=0)=>{mesh.position.copy(position);mesh.quaternion.copy(camera.quaternion).multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,0,1),rot))};
+const flat=(mesh,position,size,rot)=>{mesh.position.copy(position);mesh.rotation.set(-Math.PI/2,0,rot);mesh.scale.setScalar(size)};
+let time=0,speed=1,playing=true,shake=new THREE.Vector3();
+function update(){
+  caster.update(time);victim.update(time);
+  const t=time,phase=document.querySelector('#phase');
+  // cast
+  const charge=smooth(150,1700,t)*.75+Math.exp(-Math.pow((t-1900)/120,2))*.6;
+  const castFade=1-smooth(1950,2500,t);
+  castRings.forEach((r,i)=>{flat(r,new THREE.Vector3(0,.02+i*.01,0),1,(i?-1:1)*t*.0007);show(r,charge*castFade*(i?.8:1))});
+  for(const f of castFeathers){const k=(t-f.start)/1100;if(k<0||k>1){f.mesh.visible=false;continue}
+    const a=f.angle+k*2.2,r=f.radius*(1-.35*k);billboard(f.mesh,new THREE.Vector3(Math.cos(a)*r,.1+k*2.1,Math.sin(a)*r),a);show(f.mesh,Math.sin(Math.PI*k)*.85)}
+  const [root,tip]=blade(t);
+  const glow=smooth(1300,1860,t)*(1-smooth(1900,2000,t));billboard(tipGlow,tip,t*.004);tipGlow.scale.setScalar(.7+.25*Math.sin(t*.025));show(tipGlow,glow*1.2);
+  // trail: one sample per game frame inside the swing windows, kept for the trace length
+  const win=TRAIL_WINDOWS.find(([a,b])=>t>=a&&t<b);trail.visible=!!win;
+  if(win){const now=Math.floor(t*FPS/1000),first=Math.max(Math.ceil(win[0]*FPS/1000),now-TRAIL_LEVEL),pairs=[];
+    for(let f=first;f<=now;f++)pairs.push(blade(f*1000/FPS));pairs.push([root,tip]);fillTrail(pairs)}
+  // slashes
+  let landed=0;
+  slashes.forEach((s,i)=>{const a=t-s.start,u=s.mesh.material.uniforms;
+    if(a<0){s.mesh.visible=s.spark.visible=false;return}landed++;
+    u.reveal.value=easeOut(a/85)*1.12;u.head.value=1.6*(1-smooth(60,140,a));
+    let level=a<120?1.3:.4+.9*Math.exp(-(a-120)/110);
+    const f=t-FINALE;if(f>=0)level=(.4+1.9*Math.exp(-f/120))*(1-smooth(0,650,f));
+    s.mesh.scale.setScalar((.85+.15*easeOut(a/120))*(f>0?1+.15*easeOut(f/300):1));show(s.mesh,level);
+    const k=a/230;billboard(s.spark,CHEST.clone().add(s.offset),i);s.spark.scale.setScalar(.5+1.2*easeOut(k));show(s.spark,k<1?1.3*(1-k):0);
+  });
+  // finale
+  const f=t-FINALE;
+  xGroup.quaternion.copy(camera.quaternion);
+  xBars.forEach(x=>{x.scale.set(.1+.9*easeOut(f/90),1+.5*easeOut(f/300),1);show(x,f>=0&&f<700?2.8*Math.exp(-f/240):0)});
+  billboard(core,CHEST,f*.0006);core.scale.setScalar(f<160?.6+2.4*easeOut(f/160):3-.8*smooth(160,900,f));show(core,f>=0&&f<900?2.4*Math.exp(-f/260):0);
+  const kb=f/500;billboard(bigBurst,CHEST,f*.001);bigBurst.scale.setScalar(1+2*easeOut(kb));show(bigBurst,f>=0&&kb<1?1.1*Math.pow(1-kb,1.5):0);
+  const ka=f/420;billboard(airRing,CHEST);airRing.scale.setScalar(.4+3.4*easeOut(ka));show(airRing,f>=0&&ka<1?.85*Math.pow(1-ka,1.6):0);
+  const kg=f/800;flat(groundRing,new THREE.Vector3(VICTIM.x,.03,VICTIM.z),.6+5.4*easeOut(kg),f*.0008);show(groundRing,f>=0&&kg<1?Math.pow(1-kg,1.2):0);
+  for(const p of feathers){const s=f/1000,k=f/p.life;if(f<0||k>=1){p.mesh.visible=false;continue}
+    const drag=2.2,pos=CHEST.clone().addScaledVector(p.v,(1-Math.exp(-drag*s))/drag);pos.y-=.35*s*s;
+    billboard(p.mesh,pos,p.rot+p.spin*s);p.mesh.scale.set(p.size*(.75+.25*Math.sin(s*8+p.phase)),p.size,1);show(p.mesh,1.25*(1-smooth(.55,1,k)))}
+  // victim: small jolts on each slash, pushed back by the finale
+  const jolt=slashes.reduce((m,s)=>{const a=t-s.start;return a>=0&&a<120?m+Math.sin(a*.12)*.035*(1-a/120):m},0);
+  const push=f>=0?.28*easeOut(f/180)*(1-smooth(500,1600,f)):0;
+  victim.group.position.set(VICTIM.x+jolt,0,VICTIM.z-push);
+  shake.set(0,0,0);if(f>=0&&f<320){const amp=.05*(1-f/320);shake.set(Math.sin(f*.9)*amp,Math.cos(f*1.3)*amp,0)}
+  phase.textContent=t<1880?'기 모으기':t<FINALE?`칠연참 ${landed}/7`:t<3800?'마무리 · 일곱 날개 폭발':'';
+}
+function render(){update();camera.position.add(shake);renderer.render(scene,camera);camera.position.sub(shake);
+  document.querySelector('#seek').value=Math.floor(time);document.querySelector('#clock').textContent=(time/1000).toFixed(2)+'초'}
+
+// ---------- controls ----------
+const playButton=document.querySelector('#play');
+const setPlaying=on=>{playing=on;playButton.textContent=on?'일시정지':'재생'};
+playButton.onclick=()=>setPlaying(!playing);
+document.querySelector('#restart').onclick=()=>{time=0;lastSound=-1;sound.stop();setPlaying(true)};
+document.querySelectorAll('[data-speed]').forEach(b=>b.onclick=()=>{speed=+b.dataset.speed;document.querySelectorAll('[data-speed]').forEach(x=>x.classList.toggle('on',x===b))});
+document.querySelector('#seek').oninput=e=>{time=+e.target.value;lastSound=time;setPlaying(false)};
+document.querySelector('#camera').onclick=home;
+document.querySelector('#sound').onclick=async e=>{
+  if(audible){audible=false;sound.stop();e.target.textContent='소리 켜기';return}
+  e.target.textContent='불러오는 중…';
+  try{await sound.enable();audible=true;e.target.textContent='소리 끄기';time=0;lastSound=-1;setPlaying(true)}
+  catch(error){e.target.textContent='소리 실패: '+error.message}
+};
+let last=performance.now();
+renderer.setAnimationLoop(ms=>{
+  const dt=Math.min(100,ms-last);last=ms;
+  if(playing){time+=dt*speed;if(time>=DURATION){time%=DURATION;lastSound=-1;sound.stop()}
+    if(audible)for(const e of soundEvents)if(e.time>lastSound&&e.time<=time)sound.play(e.name,speed);lastSound=time}
+  orbit.update();render();
+});
+// Verification aid: render one moment and summarise the drawn gold pixels (also works with the tab hidden).
+window.probe=t=>{setPlaying(false);time=t;render();
+  const gl=renderer.getContext(),w=gl.drawingBufferWidth,h=gl.drawingBufferHeight,px=new Uint8Array(w*h*4);gl.readPixels(0,0,w,h,gl.RGBA,gl.UNSIGNED_BYTE,px);
+  let n=0,white=0,r=0,g=0,b=0;for(let i=0;i<px.length;i+=4){const R0=px[i],G0=px[i+1],B0=px[i+2];if(R0>200&&G0>200&&B0>180)white++;if(R0>90&&R0>B0+50){n++;r+=R0;g+=G0;b+=B0}}
+  return {phase:document.querySelector('#phase').textContent,gold:n,white,avg:n?[Math.round(r/n),Math.round(g/n),Math.round(b/n)]:null,trail:trail.visible,
+    slashes:slashes.filter(s=>s.mesh.visible).length,feathers:feathers.filter(p=>p.mesh.visible).length,tip:blade(t)[1].toArray().map(v=>+v.toFixed(2))}};
+window.sevenfold={caster,victim,trail,blade,camera,scene,renderer,xBars,core,bigBurst,airRing};
+window.sevenfoldReady=true;
+</script>
+</body>
+</html>
