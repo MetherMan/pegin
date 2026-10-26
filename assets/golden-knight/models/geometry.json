@@ -1,0 +1,62 @@
+{
+  "design": "golden-knight-celestial-wings",
+  "note": "Pixel coordinates in the single-weapon Codex images (assets/golden-knight/concepts/celestial-*.png, 1024x1536). length = game units, matched to the current Twilight sword / longbow / staff.",
+  "weapons": [
+    {
+      "kind": "sword",
+      "source": "assets/golden-knight/concepts/celestial-sword.png",
+      "box": [196, 18, 828, 1472],
+      "tip_bottom": [24, 1465],
+      "length": 2.09,
+      "grip": [511, 1190],
+      "tip_y": 24,
+      "blade_root_y": 770,
+      "bevel_pixels": 34,
+      "grip_ends": [[511, 1128], [511, 1252]],
+      "grip_radii": [0.025, 0.025],
+      "exclude": [[489, 1128, 534, 1252]],
+      "likely_threshold": 50,
+      "solid_threshold": 115,
+      "close_pixels": 3,
+      "minimum_area": 120,
+      "minimum_hole": 70,
+      "outline_error": 0.7,
+      "mesh_step": 16
+    },
+    {
+      "kind": "longbow",
+      "source": "assets/golden-knight/concepts/celestial-longbow.png",
+      "box": [286, 16, 664, 1466],
+      "tip_bottom": [22, 1459],
+      "length": 2.0,
+      "grip": [400, 690],
+      "string_ends": [[626.5, 245], [626.5, 1140]],
+      "exclude": [[607, 240, 647, 1141]],
+      "likely_threshold": 50,
+      "solid_threshold": 115,
+      "close_pixels": 3,
+      "minimum_area": 120,
+      "minimum_hole": 70,
+      "outline_error": 0.7,
+      "mesh_step": 16
+    },
+    {
+      "kind": "staff",
+      "source": "assets/golden-knight/concepts/celestial-staff.png",
+      "box": [285, 8, 738, 1466],
+      "tip_bottom": [14, 1459],
+      "length": 1.81,
+      "grip": [511.5, 855],
+      "grip_ends": [[511.5, 720], [511.5, 990]],
+      "grip_radii": [0.0165, 0.0165],
+      "exclude": [[496, 720, 528, 990]],
+      "likely_threshold": 50,
+      "solid_threshold": 115,
+      "close_pixels": 3,
+      "minimum_area": 120,
+      "minimum_hole": 70,
+      "outline_error": 0.7,
+      "mesh_step": 16
+    }
+  ]
+}

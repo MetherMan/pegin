@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>금색 기사 컨셉</title>
+<style>
+:root{--bg:#0d0f16;--panel:#151925;--line:#2a3042;--text:#e9ecf4;--muted:#9aa3b8;--gold:#f0c45a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 "Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif}
+main{max-width:1300px;margin:auto;padding:20px}
+h1{margin:0 0 6px;font-size:22px}h1 span{color:var(--gold)}
+p.lead{margin:0 0 14px;color:var(--muted);max-width:900px}
+p.lead a{color:#ffd77a}
+figure{margin:0 0 18px;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+figure img{display:block;width:100%;height:auto;background:#000}
+figcaption{padding:10px 16px 14px}
+figcaption strong{display:block;font-size:17px;margin-bottom:2px}
+figcaption span{color:var(--muted)}
+.missing{padding:60px 16px;text-align:center;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1><span>금색 기사</span> 컨셉 그림</h1>
+<p class="lead">Codex 이미지 생성으로 뽑은 세 방향입니다. 한 장에 양손검·롱보우·스태프가 같이 있습니다. 하나(또는 섞어서)를 고르면 무기별 단독 그림을 다시 뽑아 트와일라잇 무기처럼 3D 모델로 만듭니다. 기존 무기에 색만 입힌 시안은 <a href="index.html">여기</a>.</p>
+<div id="list"></div>
+</main>
+<script>
+const CONCEPTS=[
+ ['golden-knight-01-solar-paladin.png','1 · 태양 성기사','왕실 금 · 흰 법랑 · 태양 원반과 빛살 · 사파이어 포인트'],
+ ['golden-knight-02-lion-crown.png','2 · 왕관 사자','묵직한 앤티크 금 · 사자 머리와 왕관 · 루비'],
+ ['golden-knight-03-celestial-wing.png','3 · 천상의 날개','밝은 금과 흰색 · 천사 날개 · 빛나는 흰 금빛 코어'],
+];
+const list=document.querySelector('#list');
+for(const [file,title,note] of CONCEPTS){
+  const f=document.createElement('figure');
+  f.innerHTML=`<img alt="${title}" src="concepts/${file}?v=${Date.now()}"><figcaption><strong>${title}</strong><span>${note}</span></figcaption>`;
+  f.querySelector('img').onerror=e=>{e.target.replaceWith(Object.assign(document.createElement('div'),{className:'missing',textContent:'아직 생성 중이거나 없음'}))};
+  list.append(f);
+}
+</script>
+</body>
+</html>

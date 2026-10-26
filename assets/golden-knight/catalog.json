@@ -1,0 +1,122 @@
+[
+ {
+  "kind": "sword",
+  "key": "ws_0078",
+  "item": 967,
+  "name": "성기사의 양손검",
+  "height": 1.902,
+  "textures": [
+   "Ws_0077.bmp"
+  ]
+ },
+ {
+  "kind": "sword",
+  "key": "ws_0081",
+  "item": 11424,
+  "name": "블랙나이트 양손검",
+  "height": 1.865,
+  "textures": [
+   "Ws_0077.bmp"
+  ]
+ },
+ {
+  "kind": "sword",
+  "key": "ws_0076",
+  "item": 11403,
+  "name": "레드나이트 양손검",
+  "height": 1.829,
+  "textures": [
+   "Ws_0072.bmp"
+  ]
+ },
+ {
+  "kind": "sword",
+  "key": "ws_0080",
+  "item": 1009,
+  "name": "데스나이트의 양손검",
+  "height": 1.857,
+  "textures": [
+   "Ws_0077.bmp"
+  ]
+ },
+ {
+  "kind": "bow",
+  "key": "wlb_0017",
+  "item": 3466,
+  "name": "성기사의 롱보우",
+  "height": 1.991,
+  "textures": [
+   "Wlb_0003.bmp"
+  ]
+ },
+ {
+  "kind": "bow",
+  "key": "wb_0040",
+  "item": 11739,
+  "name": "화이트헌터 롱보우",
+  "height": 1.578,
+  "textures": [
+   "Wb_0037.bmp"
+  ]
+ },
+ {
+  "kind": "bow",
+  "key": "wb_0038",
+  "item": 11718,
+  "name": "레드헌터 롱보우",
+  "height": 1.678,
+  "textures": [
+   "Wb_0037.bmp"
+  ]
+ },
+ {
+  "kind": "bow",
+  "key": "wlb_0020",
+  "item": 3529,
+  "name": "전사의 롱보우",
+  "height": 1.99,
+  "textures": [
+   "Wlb_0004.bmp"
+  ]
+ },
+ {
+  "kind": "staff",
+  "key": "ww_0015",
+  "item": 11865,
+  "name": "달의정령 스태프",
+  "height": 1.678,
+  "textures": [
+   "Ww_0002.tga"
+  ]
+ },
+ {
+  "kind": "staff",
+  "key": "ww_0002",
+  "item": 11844,
+  "name": "대지의정령 스태프",
+  "height": 0.698,
+  "textures": [
+   "Ww_0001.bmp"
+  ]
+ },
+ {
+  "kind": "staff",
+  "key": "wf_0032",
+  "item": 2668,
+  "name": "실버 스태프",
+  "height": 1.596,
+  "textures": [
+   "Wf_0027.tga"
+  ]
+ },
+ {
+  "kind": "staff",
+  "key": "wf_0031",
+  "item": 2689,
+  "name": "전기석 지팡이",
+  "height": 1.604,
+  "textures": [
+   "Wf_0027.tga"
+  ]
+ }
+]
