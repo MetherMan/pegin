@@ -5,11 +5,11 @@ sword. The game has a single skill motion per weapon (m_ths_mgc_A, a slow raise 
 spell casting), so the preview uses the real two-handed sword attack motions instead: A (diagonal
 downward cut, hit frame 9), B (rising cut, 12), C (thrust, 22) and the two-handed stance as idle.
 Effect textures: new additive sprites drawn here (X flash streak, star core, feather, light
-wing; the sword-energy arcs are drawn in the page along the real blade path) plus the game's own
-radial burst (vb0001_1 / ta_03) and ring (bwind03 / bwind01) recoloured along the same gold ramp
-as the Celestial weapon effects, and the sword's own gold trail texture (celestial_gold,
-cw_sword_trail.wtm). Sounds: two-handed sword swings and the normal hit (the 브레이크레볼루션
-vb_0002.wav is not in this client).
+wing, ground seal; the sword-energy arcs, star lines and sparks are drawn in the page) plus the
+game's own radial burst (vb0001_1 / ta_03) and ring (bwind03 / bwind01) recoloured along the same
+gold ramp as the Celestial weapon effects, and the sword's own gold trail texture (celestial_gold,
+cw_sword_trail.wtm). Sounds: two-handed sword swings (a = swing, b = hit), the normal hit, the
+meteor launch/hit and the lightning attack (the 브레이크레볼루션 vb_0002.wav is not in this client).
 Writes assets/golden-knight/skills/sevenfold/{actors.json, *.png}.
 """
 from pathlib import Path
@@ -25,7 +25,8 @@ from tuning import resource_reader
 from build_celestial_effects import gold
 
 O = R/'assets/golden-knight/skills/sevenfold'
-SOUNDS = ['m_swd_atk_1_b.wav', 'm_swd_atk_2_b.wav', 'm_swd_atk_3_b.wav', 'm_swd_atk_4_b.wav', 'attack100049.wav']
+SOUNDS = [*[f'm_swd_atk_{k}_{v}.wav' for k in (1, 2, 3, 4) for v in 'ab'], 'attack100049.wav', 'mm_meteor_launch.wav',
+          'mm_meteor_hit.wav', 'Elec_Attack.wav']
 
 
 def data_url(raw, mime):
@@ -123,6 +124,41 @@ def wing():
     return ramp_image(np.dstack([np.clip(a+glow*.6, 0, 255)]*3))
 
 
+def seal():
+    """Ground seal under the target: double outer ring with ticks, a broken rune ring, inner rings."""
+    s = 2048
+    img = Image.new('L', (s, s), 0)
+    d = ImageDraw.Draw(img)
+    c = s/2
+
+    def ring(r, w):
+        d.ellipse([c-r*s, c-r*s, c+r*s, c+r*s], outline=255, width=w)
+
+    def at(a, r):
+        return c+np.cos(a)*r*s, c+np.sin(a)*r*s
+    ring(.485, 12)
+    ring(.452, 6)
+    for k in range(144):
+        a = 2*np.pi*k/144
+        r0, r1 = (.456, .482) if k % 4 == 0 else (.461, .473)
+        d.line([at(a, r0), at(a, r1)], fill=220, width=5)
+    for k in range(28):
+        a0 = 360*k/28
+        d.arc([c-.405*s, c-.405*s, c+.405*s, c+.405*s], a0+2, a0+9.5, fill=235, width=10)
+        x, y = at(np.radians(a0+11.5), .405)
+        d.ellipse([x-8, y-8, x+8, y+8], fill=255)
+    ring(.365, 5)
+    ring(.2, 8)
+    ring(.178, 4)
+    for k in range(7):
+        a = 2*np.pi*k/7
+        d.line([at(a, .2), at(a, .365)], fill=200, width=4)
+    img = img.filter(ImageFilter.GaussianBlur(2)).resize((1024, 1024), Image.LANCZOS)
+    a = np.asarray(img, float)
+    glow = np.asarray(img.filter(ImageFilter.GaussianBlur(10)), float)
+    return ramp_image(np.dstack([np.clip(a*.9+glow*.9, 0, 255)]*3))
+
+
 def feather():
     s = 4*128
     img = Image.new('L', (s, s), 0)
@@ -164,6 +200,7 @@ def main():
     x_flash().save(O/'xflash.png')
     star().save(O/'star.png')
     wing().save(O/'wing.png')
+    seal().save(O/'seal.png')
     feather().save(O/'feather.png')
     recoloured(read, 'ta_03.wtm', .12).save(O/'burst.png')    # vb0001_1.wed radial burst
     recoloured(read, 'bwind01.wtm', .3).save(O/'ring.png')    # bwind03.wed ring
