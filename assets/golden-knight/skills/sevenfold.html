@@ -40,13 +40,13 @@ ol b{color:var(--text);font-weight:600}
 </div>
 <section>
 <div class="stage"><canvas id="view"></canvas><div class="phase" id="phase"></div></div>
-<div class="seekbar"><input id="seek" type="range" min="0" max="6000" step="1" value="0"><span id="clock">0.00초</span></div>
+<div class="seekbar"><input id="seek" type="range" min="0" max="4800" step="1" value="0"><span id="clock">0.00초</span></div>
 </section>
 <ol>
-<li><b>기 모으기 (0 ~ 0.6초)</b> · 몸에 금빛 기운이 감돌고, 발밑 고리와 깃털, 칼끝에 빛이 모입니다.</li>
-<li><b>칠연참 (0.6 ~ 2.56초)</b> · 0.28초마다 순간이동해 A·B·A·C·B·A·B로 벱니다. 지나간 길이 바닥에 별의 선으로 새겨지고, 벨 때마다 금빛 불꽃이 튀며 칼이 잠깐 멈칫합니다(타격 정지). 대상 주위로 깃털 소용돌이가 짙어집니다.</li>
-<li><b>천익 (2.56 ~ 3.07초)</b> · 정면으로 돌아오며 일곱 번째 선이 별을 완성합니다. 주변이 어두워지고 날개와 후광이 펼쳐지며, 잔상 일곱이 대상에게 빛줄기를 잇고 깃털이 안으로 빨려듭니다.</li>
-<li><b>마무리 (3.07초)</b> · 큰 내려베기, 하늘에서 내리꽂는 빛기둥, 화면 섬광, 잔상·검기·별 동시 폭발, X자 섬광, 불꽃 80개, 충격파, 잔상과 날개가 깃털로 흩어집니다.</li>
+<li><b>기 모으기 (0 ~ 0.42초)</b> · 몸에 금빛 기운이 감돌고, 발밑 고리와 깃털, 칼끝에 빛이 모입니다.</li>
+<li><b>칠연참 (0.42 ~ 1.89초)</b> · 0.21초마다 순간이동해 A·B·A·C·B·A·B로 벱니다. 지나간 길이 바닥에 별의 선으로 새겨지고, 벨 때마다 금빛 불꽃이 튀며 칼이 잠깐 멈칫합니다(타격 정지). 대상 주위로 깃털 소용돌이가 짙어집니다.</li>
+<li><b>천익 (1.89 ~ 2.29초)</b> · 정면으로 돌아오며 일곱 번째 선이 별을 완성합니다. 주변이 어두워지고 날개와 후광이 펼쳐지며, 잔상 일곱이 대상에게 빛줄기를 잇고 깃털이 안으로 빨려듭니다.</li>
+<li><b>마무리 (2.29초)</b> · 큰 내려베기, 하늘에서 내리꽂는 빛기둥, 화면 섬광, 잔상·검기·별 동시 폭발, X자 섬광, 불꽃 80개, 충격파, 잔상과 날개가 깃털로 흩어집니다.</li>
 </ol>
 </main>
 <script type="module">
@@ -57,17 +57,17 @@ import {NativeActor,NativeSound} from '../../../client-overlay/Tools/SkillColors
 const data=await (await fetch('sevenfold/actors.json')).json();
 const person=data.people['0'],BONE=data.weapons.atkA.bone;
 const up=new THREE.Vector3(0,1,0),ONE=new THREE.Vector3(1,1,1);
-const DURATION=6000,FPS=30,BG=0x0b121c,GLOW=.42;
+const DURATION=4800,FPS=30,BG=0x0b121c,GLOW=.42;
 const TARGET=new THREE.Vector3(0,0,0),CHEST=new THREE.Vector3(0,1.15,0);
 const RADIUS=2.5,START=new THREE.Vector3(0,0,5.0);
 const ROOT=.6092,TIP=1.6573;  // Equip/Trace.txt cw_sword blade line along the weapon's X
 // Played frame range, hit frame and the frames where the blade sweeps, per attack motion.
 const MOVES={atkA:{from:5,to:13,hit:9,w0:6.6,w1:11,sound:1},atkB:{from:7,to:15,hit:11,w0:8.6,w1:13.2,sound:2},atkC:{from:18,to:26,hit:22,w0:20,w1:22.4,thrust:true,sound:3}};
 const ORDER=['atkA','atkB','atkA','atkC','atkB','atkA','atkB'],SPOTS=[0,4,1,5,2,6,3];  // spot steps of 4 trace a {7/3} star
-const T0=600,PERIOD=280,RATE=34.5/1000,HITSTOP=55;  // strike spacing (ms), playback (frames per ms), freeze on each hit
+const T0=420,PERIOD=210,RATE=44/1000,HITSTOP=50;  // strike spacing (ms), playback (frames per ms), freeze on each hit
 const FS=T0+7*PERIOD;                                  // finale: blink to the front, slow raise, big cut
-const FINALE_KEYS=[[FS,1],[FS+440,7],[FS+507,9],[FS+627,9.1],[FS+700,10],[FS+1000,12],[FS+2000,43]];
-const FINALE_HIT=FS+507,FINALE_END=FS+2000;
+const FINALE_KEYS=[[FS,1],[FS+330,7],[FS+397,9],[FS+507,9.1],[FS+560,10],[FS+840,12],[FS+1740,43]];
+const FINALE_HIT=FS+397,FINALE_END=FS+1740;
 
 // ---------- renderer ----------
 const canvas=document.querySelector('#view');
@@ -259,14 +259,14 @@ const marks=strikes.map(s=>{
 const finaleArc=arcMesh(person.atkA,7.2,11,FRONT,FRONT_Q,.5,2.3);
 
 // ---------- the star: each blink between strike spots is a line of the seven-pointed star ----------
-const starLines=[...strikes.slice(1).map(s=>({a:strikes[s.i-1].pos,b:s.pos,time:s.start})),{a:strikes[6].pos,b:strikes[0].pos,time:FS+90}]
+const starLines=[...strikes.slice(1).map(s=>({a:strikes[s.i-1].pos,b:s.pos,time:s.start})),{a:strikes[6].pos,b:strikes[0].pos,time:FS+60}]
   .map(l=>({...l,mesh:beam()}));
 const starPoints=strikes.map(s=>({s,mesh:quad(T.ring)}));
 const seal=quad(T.seal);
 
 // ---------- one-off pieces ----------
 const castRings=[quad(T.ring,2.8,2.8),quad(T.ring,1.7,1.7)];
-const castFeathers=Array.from({length:8},(_,j)=>({mesh:quad(T.feather,.2,.2),start:40+j*55,angle:j*2.4,radius:.7+random()*.3}));
+const castFeathers=Array.from({length:8},(_,j)=>({mesh:quad(T.feather,.2,.2),start:30+j*38,angle:j*2.4,radius:.7+random()*.3}));
 const tipGlow=quad(T.burst,1,1,scene,true);
 const pillars=blinks.map(()=>[quad(T.xflash),quad(T.xflash)]),streaks=blinks.map(()=>quad(T.xflash));
 const hitBursts=strikes.map(()=>quad(T.burst,1,1,scene,true)),hitStars=strikes.map(()=>quad(T.star,1,1,scene,true));
@@ -293,8 +293,8 @@ ghosts.forEach(g=>addFeathers(6,g.chest,g.chest.clone().sub(CHEST).setY(0).norma
 addFeathers(18,CHEST,new THREE.Vector3(),3.8,FINALE_HIT,1700);
 addFeathers(14,new THREE.Vector3(0,1.9,RADIUS-.5),new THREE.Vector3(0,.6,.4),1.4,FINALE_HIT+520,1600);
 // feather vortex: circles the target during the dance, is drawn in while the finale gathers, then thrown out
-const vortex=Array.from({length:40},(_,j)=>({mesh:quad(T.feather),start:T0+j*45,a0:j*2.399,r0:2.6+random()*.9,y0:.25+random()*2.2,size:.17+random()*.12,spin:(random()-.5)*6,phase:random()*6.28}));
-function vortexAt(p,t){const s=(t-T0)/1000,g=smooth(FS,FINALE_HIT,t),a=p.a0+2.1*s+5*g*g,r=p.r0*(1-.78*g),y=p.y0*(1-.45*g)+.12*Math.sin(s*3+p.phase)+.5*g;
+const vortex=Array.from({length:40},(_,j)=>({mesh:quad(T.feather),start:T0+j*34,a0:j*2.399,r0:2.6+random()*.9,y0:.25+random()*2.2,size:.17+random()*.12,spin:(random()-.5)*6,phase:random()*6.28}));
+function vortexAt(p,t){const s=(t-T0)/1000,g=smooth(FS,FINALE_HIT,t),a=p.a0+2.6*s+5*g*g,r=p.r0*(1-.78*g),y=p.y0*(1-.45*g)+.12*Math.sin(s*3+p.phase)+.5*g;
   return new THREE.Vector3(Math.sin(a)*r,y,Math.cos(a)*r)}
 
 // sword trail (celestial_gold, same per-sample layout as the 평타 preview / native EtcEffect)
@@ -315,7 +315,7 @@ function fillTrail(pairs){
 // ---------- sound ----------
 const sound=new NativeSound(data.sounds);let audible=false,lastSound=-1;
 const soundEvents=[...blinks.map((b,k)=>({time:b.time,name:`m_swd_atk_${k%4+1}_a.wav`,rate:1.35})),...strikes.map(s=>({time:s.hit,name:`m_swd_atk_${s.move.sound}_b.wav`})),
-  {time:FS+40,name:'mm_meteor_launch.wav'},{time:FINALE_HIT-150,name:'Elec_Attack.wav'},{time:FINALE_HIT,name:'mm_meteor_hit.wav'},{time:FINALE_HIT,name:'attack100049.wav'},{time:FINALE_HIT+20,name:'m_swd_atk_4_b.wav'}];
+  {time:FS+30,name:'mm_meteor_launch.wav'},{time:FINALE_HIT-120,name:'Elec_Attack.wav'},{time:FINALE_HIT,name:'mm_meteor_hit.wav'},{time:FINALE_HIT,name:'attack100049.wav'},{time:FINALE_HIT+20,name:'m_swd_atk_4_b.wav'}];
 
 // ---------- timeline ----------
 let time=0,speed=1,playing=true,glowOn=true,shake=new THREE.Vector3(),posed='';
@@ -329,11 +329,11 @@ function update(){
   victim.update(t);
   const [root,tip]=blade(st.clip,st.f,st.pos,st.quat);
   // gathering at the start
-  const charge=smooth(0,450,t)*(1-smooth(T0,T0+300,t));
+  const charge=smooth(0,320,t)*(1-smooth(T0,T0+260,t));
   castRings.forEach((r,i)=>{flat(r,new THREE.Vector3(START.x,.02+i*.01,START.z),1,(i?-1:1)*t*.0012);show(r,charge*(i?.8:1))});
-  for(const f of castFeathers){const k=(t-f.start)/650;if(k<0||k>1){f.mesh.visible=false;continue}
+  for(const f of castFeathers){const k=(t-f.start)/480;if(k<0||k>1){f.mesh.visible=false;continue}
     const a=f.angle+k*2.4,r=f.radius*(1-.3*k);billboard(f.mesh,new THREE.Vector3(START.x+Math.cos(a)*r,.1+k*2.2,START.z+Math.sin(a)*r),a);show(f.mesh,Math.sin(Math.PI*k)*.9)}
-  const tipLevel=smooth(150,560,t)*(1-smooth(T0,T0+60,t))+smooth(FS+100,FINALE_HIT-40,t)*(1-smooth(FINALE_HIT,FINALE_HIT+80,t))*1.1;
+  const tipLevel=smooth(100,390,t)*(1-smooth(T0,T0+60,t))+smooth(FS+70,FINALE_HIT-40,t)*(1-smooth(FINALE_HIT,FINALE_HIT+80,t))*1.1;
   billboard(tipGlow,tip,t*.004);tipGlow.scale.setScalar(.8+.3*Math.sin(t*.03)+.6*smooth(FS,FINALE_HIT,t)*(F<0));show(tipGlow,tipLevel);
   // blinks: a pillar where the caster leaves and where he lands, and a streak between them
   blinks.forEach((b,k)=>{const a=t-b.time,[p0,p1]=pillars[k];
@@ -343,8 +343,8 @@ function update(){
     axisBillboard(streaks[k],b.from.clone().setY(1.1),b.to.clone().setY(1.1),.6);show(streaks[k],1.4*(1-a/140)*(a<140));
   });
   // the star on the ground: lines drawn in with each blink, points lit by each hit, the seal turning beneath
-  const starLevel=F<0?.45+.5*smooth(FS+90,FINALE_HIT,t):(.5+1.2*Math.exp(-F/160))*(1-smooth(300,1300,F));
-  starLines.forEach(l=>{const a=t-l.time;groundLine(l.mesh,l.a,l.b,.32);l.mesh.material.uniforms.reveal.value=easeOut(a/110)*1.04;
+  const starLevel=F<0?.45+.5*smooth(FS+60,FINALE_HIT,t):(.5+1.2*Math.exp(-F/160))*(1-smooth(300,1300,F));
+  starLines.forEach(l=>{const a=t-l.time;groundLine(l.mesh,l.a,l.b,.32);l.mesh.material.uniforms.reveal.value=easeOut(a/90)*1.04;
     show(l.mesh,a<0?0:Math.max(starLevel,1.6*(1-a/250)))});
   starPoints.forEach(p=>{const a=t-p.s.hit;flat(p.mesh,new THREE.Vector3(p.s.pos.x,.05,p.s.pos.z),.9+.5*easeOut(a/200),t*.002);show(p.mesh,a<0?0:Math.max(starLevel*.9,1.5*(1-a/300)))});
   flat(seal,new THREE.Vector3(0,.03,0),(RADIUS+.45)*2/.97,t*.00035);show(seal,(smooth(T0,T0+500,t)*.35+.4*smooth(FS,FINALE_HIT,t))*(F<0?1:0)+(F>=0?(.3+1*Math.exp(-F/200))*(1-smooth(400,1400,F)):0));
@@ -369,21 +369,21 @@ function update(){
   // afterimages: bright when left behind, settle, gather light before the finale, flash and vanish
   ghosts.forEach((g,i)=>{const a=t-g.leave;let l=a<0?0:.28+.8*Math.exp(-a/160);
     if(t>=FS)l=Math.max(l,.28+.32*smooth(FS,FINALE_HIT,t));if(F>=0)l=(.8+.5*Math.exp(-F/90))*(1-smooth(60,380,F));g.level(a<0?0:l);
-    axisBillboard(beams[i],g.tip,CHEST,.32);show(beams[i],t>=FS+120&&F<120?smooth(FS+120,FINALE_HIT-60,t)*.6*(F>0?1-F/120:1):0)});
+    axisBillboard(beams[i],g.tip,CHEST,.32);show(beams[i],t>=FS+80&&F<120?smooth(FS+80,FINALE_HIT-50,t)*.6*(F>0?1-F/120:1):0)});
   // light wings and halo: unfold behind the caster during the slow raise, flare on the hit, dissolve into feathers
   const sp=new THREE.Vector3().setFromMatrixPosition(boneAt(st.clip.bones.find(b=>b.name==='Bip01 Spine1'),st.f)).applyQuaternion(st.quat).add(st.pos);
-  const open=easeOut((t-FS-60)/360),wingLevel=t<FS+40||F>1100?0:(.7*open+.4*pulse(t,FINALE_HIT,40,350))*(1-smooth(500,1100,F));
+  const open=easeOut((t-FS-40)/270),wingLevel=t<FS+30||F>1100?0:(.7*open+.4*pulse(t,FINALE_HIT,40,350))*(1-smooth(500,1100,F));
   wings.forEach(w=>{w.pivot.position.copy(sp).add(new THREE.Vector3(w.side*.1,.15,.22).applyQuaternion(st.quat));w.pivot.quaternion.copy(st.quat).multiply(new THREE.Quaternion().setFromAxisAngle(up,-w.side*.42));
     w.hinge.rotation.z=w.side*(-1.25+1.4*open+.12*smooth(0,900,F));show(w.mesh,wingLevel)});
   halo.position.copy(sp).add(new THREE.Vector3(0,.72,.3).applyQuaternion(st.quat));halo.quaternion.copy(st.quat).multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,0,1),t*.002));
   halo.scale.setScalar(.5+.5*open+.25*pulse(t,FINALE_HIT,40,500));show(halo,wingLevel*.9);
   // the finale: world darkens while it gathers; big cut, sky pillar, screen flash, burst
-  dim.material.uniforms.amount.value=.6*smooth(FS,FS+380,t)*(F<0?1:1-smooth(80,900,F));
+  dim.material.uniforms.amount.value=.6*smooth(FS,FS+280,t)*(F<0?1:1-smooth(80,900,F));
   flash.material.uniforms.level.value=F>=0?.42*Math.exp(-F/90):0;flash.visible=F>=0&&F<700;
   const fr=st.finale?clamp01((st.f-7.2)/(11-7.2)):t>=FINALE_END?1:0;finaleArc.material.uniforms.reveal.value=fr>=1?1.05:fr;
   show(finaleArc,t<FS+440?0:F<0?1.3:(.5+1.1*Math.exp(-F/180))*(1-smooth(300,1100,F)));
   const skyTop=new THREE.Vector3(0,16,0),ground=new THREE.Vector3(0,-.2,0);
-  if(F<0){const k=clamp01((F+170)/170);skyBeam.material.uniforms.reveal.value=2;skyCore.visible=false;
+  if(F<0){const k=clamp01((F+140)/140);skyBeam.material.uniforms.reveal.value=2;skyCore.visible=false;
     axisBillboard(skyBeam,skyTop.clone().lerp(ground,k),skyTop,.35);show(skyBeam,k>0?1.1:0)}
   else{axisBillboard(skyBeam,ground,skyTop,.4+.9*easeOut(F/150)-.4*smooth(150,800,F));show(skyBeam,1.05*Math.exp(-F/300)*(1-smooth(500,950,F)));
     axisBillboard(skyCore,ground,skyTop,.18+.4*easeOut(F/120));show(skyCore,1.6*Math.exp(-F/200)*(1-smooth(300,700,F)))}
