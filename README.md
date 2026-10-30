@@ -35,6 +35,16 @@ runtime/python/python.exe -X utf8 distribution/father_update.py --root '<기존 
 
 모델·데미지·스킬 조사 기록은 `assets/twilight-set/README.md`, 작업과 검증 내역은 `WORKLOG.md`를 참고하세요.
 
+## 새 PC에서 작업 이어가기
+
+`runtime/`은 Git에 없지만 다시 받을 수 있습니다. 회사 PC는 2026-10-30 퇴사로 초기화하므로 그 PC의 `runtime/`과 위 실행 경로는 더 이상 없습니다.
+
+1. Git을 설치하고 Git Credential Manager로 GitHub에 로그인한 뒤 `git clone https://github.com/MetherMan/pegin.git`
+2. `Initialize.cmd` 실행: `runtime-manifest.json`의 릴리스 `dev-runtime-20260917`(약 1.6GB)에서 python·pylibs·qemu·client·server·VM 베이스를 받아 `runtime/`을 만들고 새 개발용 VM을 만듭니다. 개발용 계정·캐릭터는 새로 시작하며 아버지 설치본과는 무관합니다.
+3. 릴리스 이후 추가된 `capstone`(클라이언트 실행 파일 패치 스크립트용)은 내장 파이썬에 pip가 없으므로 다른 Python 3.12의 pip로 넣습니다: `pip install --target runtime/pylibs --python-version 3.12 --only-binary=:all: capstone==5.0.9`
+
+그 뒤 수정 → manifest 재생성 → main 푸시로 아버지 업데이트가 이어집니다.
+
 ## 140 스킬과 색상 설정
 
 카드 드래그 병합, 트와일라잇 아이콘 공통 금색 테두리, 밝은 청색 화살과 신규 원거리·흑마법 140 스킬 4종은 `assets/skills140/README.md`에 정리했습니다. 회사 PC에서 연결한 상위 `스킬 색상 설정.cmd`는 메테오·프로스트 색상을 실제 outputs 설치본과 저장소 배포 파일에 함께 저장합니다. 다른 PC에서는 연결 경로를 먼저 확인해야 합니다.
